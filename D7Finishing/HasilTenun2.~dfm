@@ -1,0 +1,719 @@
+object HasilTenun2Frm: THasilTenun2Frm
+  Left = 220
+  Top = 133
+  Width = 1292
+  Height = 582
+  Caption = 'Hasil Dari Finishing'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDefault
+  WindowState = wsMaximized
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 1276
+    Height = 544
+    ActivePage = TabSheet1
+    Align = alClient
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'Input'
+      OnShow = TabSheet1Show
+      object Panel3: TPanel
+        Left = 0
+        Top = 0
+        Width = 1273
+        Height = 516
+        Align = alLeft
+        TabOrder = 0
+        object Panel5: TPanel
+          Left = 1
+          Top = 474
+          Width = 1271
+          Height = 41
+          Align = alBottom
+          TabOrder = 0
+          DesignSize = (
+            1271
+            41)
+          object BitBtn2: TBitBtn
+            Left = 1076
+            Top = 8
+            Width = 75
+            Height = 25
+            Anchors = [akTop, akRight]
+            TabOrder = 0
+            Kind = bkClose
+          end
+          object Button1: TButton
+            Left = 16
+            Top = 8
+            Width = 75
+            Height = 25
+            Caption = '&Simpan'
+            TabOrder = 1
+            OnClick = Button1Click
+          end
+        end
+        object wwDBGrid1: TwwDBGrid
+          Left = 1
+          Top = 54
+          Width = 1271
+          Height = 420
+          DittoAttributes.DittoDirection = wwDittoPriorOrNext
+          DittoAttributes.ShortCutDittoRecord = 16457
+          ControlType.Strings = (
+            'KD_ITEM;CustomEdit;LookItem;F'
+            'ARAH;CustomEdit;LookArah;F')
+          Selected.Strings = (
+            'NO_ORDER'#9'20'#9'NO ORDER'#9'T'
+            'NO_REFF'#9'20'#9'NO REFF'#9'T'
+            'TANGGAL'#9'15'#9'TGL'#9'T'
+            'QTY'#9'5'#9'QTY'#9'T'
+            'NO_MESIN'#9'8'#9'NO_MESIN'#9'T'
+            'KONSTRUKSI'#9'50'#9'KONSTRUKSI'#9'T'
+            'LD'#9'5'#9'LD'#9'F'#9'B-GRADE'
+            'LT'#9'5'#9'LT'#9'F'#9'B-GRADE'
+            'LPT'#9'5'#9'LPT'#9'F'#9'B-GRADE'
+            'LRG'#9'5'#9'LRG'#9'F'#9'B-GRADE'
+            'WL'#9'5'#9'WL'#9'F'#9'B-GRADE'
+            'FLO'#9'5'#9'FLO'#9'F'#9'B-GRADE'
+            'NEPS'#9'5'#9'NEPS'#9'F'#9'B-GRADE'
+            'PP'#9'5'#9'PP'#9'F'#9'B-GRADE'
+            'WP'#9'5'#9'WP'#9'F'#9'B-GRADE'
+            'OJ'#9'5'#9'OJ'#9'F'#9'B-GRADE'
+            'CRT'#9'5'#9'CRT'#9'F'#9'B-GRADE'
+            'BTS'#9'5'#9'BTS'#9'F'#9'B-GRADE'
+            'BTB'#9'5'#9'BTB'#9'F'#9'B-GRADE'
+            'SC'#9'5'#9'SC'#9'F'#9'B-GRADE'
+            'SLL'#9'5'#9'SLL'#9'F'#9'B-GRADE'
+            'CK'#9'5'#9'CK'#9'F'#9'B-GRADE'
+            'CAJ'#9'5'#9'CAJ'#9'F'#9'B-GRADE'
+            'KTR'#9'5'#9'KTR'#9'F'#9'B-GRADE'
+            'PDK'#9'5'#9'PDK'#9'F'#9'B-GRADE'
+            'KP'#9'5'#9'KP'#9'F'#9'B-GRADE'
+            'MC'#9'5'#9'MC'#9'F'#9'B-GRADE'
+            'BOSK'#9'5'#9'BOSK'#9'F'#9'B-GRADE'
+            'KS'#9'5'#9'KS'#9'F'#9'B-GRADE'
+            'BO'#9'5'#9'BO'#9'F'#9'B-GRADE'
+            'FC'#9'5'#9'FC'#9'F'#9'B-GRADE'
+            'HK'#9'5'#9'HK'#9'F'#9'B-GRADE'
+            'WM'#9'5'#9'WM'#9'F'#9'B-GRADE'
+            'SBK'#9'5'#9'SBK'#9'F'#9'BS'
+            'UTS'#9'5'#9'UTS'#9'F'#9'BS'
+            'KNB'#9'5'#9'KNB'#9'F'#9'BS'
+            'QTY3'#9'5'#9'BK'#9'T'#9'JUMLAH'
+            'BGRADE'#9'5'#9'BGRADE'#9'F'#9'JUMLAH'
+            'QTY2'#9'5'#9'BS'#9'T'#9'JUMLAH'
+            'DITERIMA'#9'7'#9'TOTAL'#9'F'#9'JUMLAH'
+            'UTB'#9'5'#9'UTB'#9'F'#9'DATA'
+            'LBK'#9'5'#9'LBK'#9'F'#9'DATA'
+            'CUP'#9'5'#9'CUP'#9'F'#9'DATA')
+          IniAttributes.Enabled = True
+          IniAttributes.SaveToRegistry = True
+          IniAttributes.FileName = 'Pismatex Finishing'
+          IniAttributes.Delimiter = ';;'
+          TitleColor = clBtnFace
+          FixedCols = 5
+          ShowHorzScrollBar = True
+          Align = alClient
+          DataSource = dsDetail
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          KeyOptions = [dgEnterToTab, dgAllowDelete, dgAllowInsert]
+          Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgWordWrap, dgShowFooter, dgDblClickColSizing]
+          ParentFont = False
+          RowHeightPercent = 150
+          TabOrder = 1
+          TitleAlignment = taLeftJustify
+          TitleFont.Charset = ANSI_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'Lucida Sans'
+          TitleFont.Style = []
+          TitleLines = 3
+          TitleButtons = False
+          UseTFields = False
+          OnCalcCellColors = wwDBGrid1CalcCellColors
+          OnTitleButtonClick = wwDBGrid1TitleButtonClick
+          OnDblClick = wwDBGrid1DblClick
+          OnUpdateFooter = wwDBGrid1UpdateFooter
+        end
+        object Panel6: TPanel
+          Left = 1
+          Top = 1
+          Width = 1271
+          Height = 53
+          Align = alTop
+          Ctl3D = False
+          ParentCtl3D = False
+          TabOrder = 2
+          object Label6: TLabel
+            Left = 16
+            Top = 7
+            Width = 134
+            Height = 13
+            Caption = 'Cari No Order Hasil Finishing'
+          end
+          object Label10: TLabel
+            Left = 320
+            Top = 7
+            Width = 68
+            Height = 13
+            Caption = 'No. Seri Beam'
+            Visible = False
+          end
+          object Label11: TLabel
+            Left = 432
+            Top = 7
+            Width = 31
+            Height = 13
+            Caption = 'Lokasi'
+            Visible = False
+          end
+          object Label12: TLabel
+            Left = 216
+            Top = 7
+            Width = 76
+            Height = 13
+            Caption = 'Tanggal Potong'
+            Visible = False
+          end
+          object Label13: TLabel
+            Left = 528
+            Top = 7
+            Width = 23
+            Height = 13
+            Caption = 'Grup'
+            Visible = False
+          end
+          object Label14: TLabel
+            Left = 472
+            Top = 7
+            Width = 48
+            Height = 13
+            Caption = 'No. Mesin'
+            Visible = False
+          end
+          object Button2: TButton
+            Left = 128
+            Top = 24
+            Width = 75
+            Height = 25
+            Caption = '&Ambil Data'
+            TabOrder = 1
+            OnClick = Button2Click
+          end
+          object Edit1: TEdit
+            Left = 16
+            Top = 27
+            Width = 105
+            Height = 19
+            TabOrder = 0
+          end
+          object Edit2: TEdit
+            Left = 320
+            Top = 27
+            Width = 105
+            Height = 19
+            TabOrder = 3
+            Visible = False
+          end
+          object Edit3: TEdit
+            Left = 432
+            Top = 27
+            Width = 33
+            Height = 19
+            TabOrder = 4
+            Visible = False
+          end
+          object wwDBDateTimePicker2: TwwDBDateTimePicker
+            Left = 216
+            Top = 26
+            Width = 97
+            Height = 21
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Epoch = 1950
+            ShowButton = True
+            TabOrder = 2
+            DisplayFormat = 'dd mmm yyyy'
+            Visible = False
+          end
+          object Button3: TButton
+            Left = 568
+            Top = 24
+            Width = 75
+            Height = 25
+            Caption = 'Ambil &Data'
+            TabOrder = 7
+            Visible = False
+            OnClick = Button3Click
+          end
+          object Edit4: TEdit
+            Left = 528
+            Top = 27
+            Width = 33
+            Height = 19
+            TabOrder = 6
+            Visible = False
+          end
+          object Edit5: TEdit
+            Left = 472
+            Top = 27
+            Width = 33
+            Height = 19
+            TabOrder = 5
+            Visible = False
+          end
+          object BitBtn1: TBitBtn
+            Left = 656
+            Top = 24
+            Width = 75
+            Height = 25
+            Caption = '&Hapus Semua'
+            TabOrder = 8
+            OnClick = BitBtn1Click
+          end
+        end
+      end
+    end
+  end
+  object QDetail: TOracleDataSet
+    SQL.Strings = (
+      'select a.*, a.rowid from ipisma_db5.FINISH_REINSPECT_DET a'
+      'WHERE NO_REG =:NO_REG'
+      ':myorder')
+    Variables.Data = {
+      0300000002000000080000003A4D594F52444552010000000000000000000000
+      070000003A4E4F5F524547030000000000000000000000}
+    SequenceField.Field = 'NO_REG'
+    SequenceField.Sequence = 'ipisma_db5.REG_FINISH_REINSPECT'
+    QBEDefinition.QBEFieldDefs = {
+      040000003D0000000600000053415455414E0100000000000300000051545901
+      00000000000A00000054474C5F494E534552540100000000000A0000004F5052
+      5F494E53455254010000000000060000004E4F5F524547010000000000060000
+      004C4F4B4153490100000000000A0000004B4F4E535452554B53490100000000
+      0005000000434F52414B0100000000000700000054414E4747414C0100000000
+      0005000000534849465401000000000004000000475255500100000000000200
+      00004C44010000000000020000004C5401000000000002000000574C01000000
+      000002000000434B010000000000030000004352540100000000000200000050
+      5001000000000002000000575001000000000002000000534301000000000002
+      000000424F010000000000040000005154593201000000000004000000515459
+      330100000000000D0000004B445F4B4F4E535452554B53490100000000000800
+      00004B445F434F52414B010000000000030000004C424B010000000000030000
+      00534C4C010000000000070000004E4F5F524546460100000000000500000050
+      494C4948010000000000020000004F4A010000000000030000004C5054010000
+      000000030000004C52470100000000000300000043414A010000000000030000
+      0042544201000000000003000000555453010000000000030000004254530100
+      0000000003000000435550010000000000080000004E4F5F4F52444552010000
+      0000000200000050520100000000000D0000004E4F5F5245475F46494E495348
+      0100000000000300000050444B0100000000000300000053424B010000000000
+      030000004B4E42010000000000080000004E4F5F52455345500100000000000B
+      0000004D4553494E5F54454E554E010000000000080000004E4F5F4D4553494E
+      0100000000000B0000004B445F50524F44554B5349010000000000050000004E
+      4F5F504F010000000000090000004E4F5F44455341494E010000000000040000
+      004E455053010000000000030000004B5452010000000000020000004B500100
+      0000000003000000555442010000000000060000004247524144450100000000
+      00080000004449544552494D4101000000000003000000464C4F010000000000
+      020000004D4301000000000004000000424F534B010000000000020000004B53
+      01000000000002000000464301000000000002000000484B0100000000000200
+      0000574D010000000000}
+    QueryAllRecords = False
+    RefreshOptions = [roAfterInsert, roAfterUpdate]
+    CommitOnPost = False
+    CachedUpdates = True
+    Session = DMFrm.OS
+    BeforeOpen = QDetailBeforeOpen
+    BeforePost = QDetailBeforePost
+    OnCalcFields = QDetailCalcFields
+    OnNewRecord = QDetailNewRecord
+    Left = 480
+    Top = 200
+    object QDetailNO_REG: TFloatField
+      FieldName = 'NO_REG'
+    end
+    object QDetailNO_REG_FINISH: TFloatField
+      FieldName = 'NO_REG_FINISH'
+    end
+    object QDetailNO_REFF: TStringField
+      FieldName = 'NO_REFF'
+    end
+    object QDetailTANGGAL: TDateTimeField
+      FieldName = 'TANGGAL'
+    end
+    object QDetailNO_ORDER: TStringField
+      FieldName = 'NO_ORDER'
+      Size = 30
+    end
+    object QDetailKD_KONSTRUKSI: TStringField
+      FieldName = 'KD_KONSTRUKSI'
+      Size = 6
+    end
+    object QDetailKONSTRUKSI: TStringField
+      FieldName = 'KONSTRUKSI'
+      Size = 50
+    end
+    object QDetailKD_CORAK: TStringField
+      FieldName = 'KD_CORAK'
+      Size = 6
+    end
+    object QDetailCORAK: TStringField
+      FieldName = 'CORAK'
+      Size = 30
+    end
+    object QDetailSATUAN: TStringField
+      FieldName = 'SATUAN'
+      Size = 10
+    end
+    object QDetailQTY: TFloatField
+      FieldName = 'QTY'
+    end
+    object QDetailQTY2: TFloatField
+      FieldName = 'QTY2'
+    end
+    object QDetailQTY3: TFloatField
+      FieldName = 'QTY3'
+    end
+    object QDetailNO_RESEP: TStringField
+      FieldName = 'NO_RESEP'
+    end
+    object QDetailMESIN_TENUN: TStringField
+      FieldName = 'MESIN_TENUN'
+    end
+    object QDetailNO_MESIN: TStringField
+      FieldName = 'NO_MESIN'
+    end
+    object QDetailTGL_INSERT: TDateTimeField
+      FieldName = 'TGL_INSERT'
+    end
+    object QDetailOPR_INSERT: TStringField
+      FieldName = 'OPR_INSERT'
+      Size = 30
+    end
+    object QDetailLOKASI: TStringField
+      FieldName = 'LOKASI'
+      Size = 30
+    end
+    object QDetailGRUP: TStringField
+      FieldName = 'GRUP'
+      Size = 3
+    end
+    object QDetailSHIFT: TStringField
+      FieldName = 'SHIFT'
+      Size = 3
+    end
+    object QDetailPILIH: TStringField
+      FieldName = 'PILIH'
+      Size = 1
+    end
+    object QDetailKD_PRODUKSI: TStringField
+      FieldName = 'KD_PRODUKSI'
+      Size = 10
+    end
+    object QDetailNO_PO: TStringField
+      FieldName = 'NO_PO'
+      Size = 25
+    end
+    object QDetailNO_DESAIN: TStringField
+      FieldName = 'NO_DESAIN'
+      Size = 25
+    end
+    object QDetailLD: TFloatField
+      FieldName = 'LD'
+    end
+    object QDetailLT: TFloatField
+      FieldName = 'LT'
+    end
+    object QDetailLPT: TFloatField
+      FieldName = 'LPT'
+    end
+    object QDetailLRG: TFloatField
+      FieldName = 'LRG'
+    end
+    object QDetailWL: TFloatField
+      FieldName = 'WL'
+    end
+    object QDetailNEPS: TFloatField
+      FieldName = 'NEPS'
+    end
+    object QDetailPP: TFloatField
+      FieldName = 'PP'
+    end
+    object QDetailWP: TFloatField
+      FieldName = 'WP'
+    end
+    object QDetailOJ: TFloatField
+      FieldName = 'OJ'
+    end
+    object QDetailCRT: TFloatField
+      FieldName = 'CRT'
+    end
+    object QDetailBTS: TFloatField
+      FieldName = 'BTS'
+    end
+    object QDetailBTB: TFloatField
+      FieldName = 'BTB'
+    end
+    object QDetailSC: TFloatField
+      FieldName = 'SC'
+    end
+    object QDetailSLL: TFloatField
+      FieldName = 'SLL'
+    end
+    object QDetailCK: TFloatField
+      FieldName = 'CK'
+    end
+    object QDetailCAJ: TFloatField
+      FieldName = 'CAJ'
+    end
+    object QDetailKTR: TFloatField
+      FieldName = 'KTR'
+    end
+    object QDetailPDK: TFloatField
+      FieldName = 'PDK'
+    end
+    object QDetailKP: TFloatField
+      FieldName = 'KP'
+    end
+    object QDetailSBK: TFloatField
+      FieldName = 'SBK'
+    end
+    object QDetailUTS: TFloatField
+      FieldName = 'UTS'
+    end
+    object QDetailKNB: TFloatField
+      FieldName = 'KNB'
+    end
+    object QDetailUTB: TFloatField
+      FieldName = 'UTB'
+    end
+    object QDetailLBK: TFloatField
+      FieldName = 'LBK'
+    end
+    object QDetailCUP: TFloatField
+      FieldName = 'CUP'
+    end
+    object QDetailBGRADE: TFloatField
+      FieldName = 'BGRADE'
+    end
+    object QDetailDITERIMA: TFloatField
+      FieldName = 'DITERIMA'
+    end
+    object QDetailPR: TFloatField
+      FieldName = 'PR'
+    end
+    object QDetailFLO: TFloatField
+      FieldName = 'FLO'
+    end
+    object QDetailMC: TFloatField
+      FieldName = 'MC'
+    end
+    object QDetailBOSK: TFloatField
+      FieldName = 'BOSK'
+    end
+    object QDetailKS: TFloatField
+      FieldName = 'KS'
+    end
+    object QDetailBO: TFloatField
+      FieldName = 'BO'
+    end
+    object QDetailFC: TFloatField
+      FieldName = 'FC'
+    end
+    object QDetailHK: TFloatField
+      FieldName = 'HK'
+    end
+    object QDetailWM: TFloatField
+      FieldName = 'WM'
+    end
+  end
+  object dsDetail: TwwDataSource
+    DataSet = QDetail
+    Left = 792
+    Top = 8
+  end
+  object dsQBrowse: TwwDataSource
+    Left = 648
+  end
+  object dsMaster: TwwDataSource
+    Left = 1080
+    Top = 8
+  end
+  object QLookLokasiProses: TOracleDataSet
+    SQL.Strings = (
+      'select * from ipisma_db4.vbeam_isi'
+      'order by kode')
+    Session = DMFrm.OS
+    Left = 952
+    Top = 8
+    object QLookLokasiProsesKODE: TStringField
+      DisplayWidth = 12
+      FieldName = 'KODE'
+      Size = 61
+    end
+    object QLookLokasiProsesNO_SERI_BEAM: TStringField
+      DisplayLabel = 'NO SERI BEAM'
+      DisplayWidth = 30
+      FieldName = 'NO_SERI_BEAM'
+      Size = 30
+    end
+    object QLookLokasiProsesKONSTRUKSI: TStringField
+      DisplayWidth = 20
+      FieldName = 'KONSTRUKSI'
+      Size = 30
+    end
+    object QLookLokasiProsesCORAK: TStringField
+      DisplayWidth = 20
+      FieldName = 'CORAK'
+      Size = 50
+    end
+    object QLookLokasiProsesISI: TFloatField
+      DisplayWidth = 10
+      FieldName = 'ISI'
+      DisplayFormat = '0.0,0 %'
+    end
+    object QLookLokasiProsesLOKASI: TStringField
+      FieldName = 'LOKASI'
+      Visible = False
+      Size = 30
+    end
+    object QLookLokasiProsesPROSES: TStringField
+      FieldName = 'PROSES'
+      Visible = False
+      Size = 30
+    end
+  end
+  object QAmbilData: TOracleQuery
+    SQL.Strings = (
+      'begin'
+      'proc_ambil_Reinspect(:no_nota);'
+      'end;')
+    Session = DMFrm.OS
+    Variables.Data = {
+      0300000001000000080000003A4E4F5F4E4F5441050000000000000000000000}
+    Left = 752
+    Top = 144
+  end
+  object QAmbilData2: TOracleQuery
+    SQL.Strings = (
+      '')
+    Session = DMFrm.OS
+    Left = 928
+    Top = 144
+  end
+  object QHapus: TOracleQuery
+    SQL.Strings = (
+      'begin'
+      '  delete ipisma_db5.finish_reinspect_det where no_reg=:no_reg;'
+      '  commit;'
+      'end;')
+    Session = DMFrm.OS
+    Variables.Data = {0300000001000000070000003A4E4F5F524547030000000000000000000000}
+    Left = 864
+    Top = 32
+  end
+  object wwRecordViewDialog1: TwwRecordViewDialog
+    DataSource = dsDetail
+    BorderStyle = bsDialog
+    FormPosition.Left = 0
+    FormPosition.Top = 0
+    FormPosition.Width = 0
+    FormPosition.Height = 0
+    NavigatorButtons = []
+    Options = [rvoUseCustomControls, rvoShortenEditBox, rvoModalForm, rvoEnterToTab, rvoConfirmCancel, rvoCloseIsCancel, rvoMaximizeMemoWidth, rvoUseDateTimePicker]
+    ControlOptions = []
+    LabelFont.Charset = DEFAULT_CHARSET
+    LabelFont.Color = clWindowText
+    LabelFont.Height = -11
+    LabelFont.Name = 'MS Sans Serif'
+    LabelFont.Style = []
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    Caption = 'Record View'
+    Selected.Strings = (
+      'LD'#9'10'#9'LD'#9#9
+      'LB'#9'10'#9'LB'#9#9
+      'LT'#9'10'#9'LT'#9#9
+      'LK'#9'10'#9'LK'#9#9
+      'LL'#9'10'#9'LL'#9#9
+      'LP'#9'10'#9'LP'#9#9
+      'LR'#9'10'#9'LR'#9#9
+      'WL'#9'10'#9'WL'#9#9
+      'CB'#9'10'#9'CB'#9#9
+      'CK'#9'10'#9'CK'#9#9
+      'CRT'#9'10'#9'CRT'#9#9
+      '<New Line>'
+      'PD'#9'10'#9'PD'#9#9
+      'PL'#9'10'#9'PL'#9#9
+      'PP'#9'10'#9'PP'#9#9
+      'PS'#9'10'#9'PS'#9#9
+      'NG'#9'10'#9'NG'#9#9
+      'WP'#9'10'#9'WP'#9#9
+      'SLL'#9'10'#9'SLL'#9#9
+      '<New Line>'
+      'SC'#9'10'#9'SC'#9#9
+      'KS'#9'10'#9'KS'#9#9
+      'KP'#9'10'#9'KP'#9#9
+      'BO'#9'10'#9'BO'#9#9
+      'LN'#9'10'#9'LN'#9#9
+      'PR'#9'10'#9'PR'#9#9
+      '<New Line>'
+      'UTB'#9'10'#9'UTB'#9#9
+      'UTK'#9'10'#9'UTK'#9#9
+      'LBK'#9'10'#9'LBK'#9#9)
+    NavigatorFlat = True
+    Left = 701
+    Top = 1
+  end
+  object QDetail_Tot: TOracleDataSet
+    SQL.Strings = (
+      'select sum(a.qty)as qty,'
+      'sum(a.qty3)as bk,'
+      'sum(a.qty2)as bs,'
+      'sum(a.pr)as parah'
+      'from ipisma_db5.FINISH_REINSPECT_DET a'
+      'WHERE NO_REG =:NO_REG'
+      ':myorder'
+      '')
+    Variables.Data = {0300000001000000070000003A4E4F5F524547030000000000000000000000}
+    SequenceField.Field = 'NO_REG'
+    SequenceField.Sequence = 'ipisma_db5.REG_FINISH_REINSPECT'
+    QBEDefinition.QBEFieldDefs = {
+      04000000040000000300000051545901000000000002000000424B0100000000
+      00020000004253010000000000050000005041524148010000000000}
+    QueryAllRecords = False
+    RefreshOptions = [roAfterInsert, roAfterUpdate]
+    Session = DMFrm.OS
+    Left = 560
+    Top = 240
+    object QDetail_TotQTY: TFloatField
+      FieldName = 'QTY'
+    end
+    object QDetail_TotBK: TFloatField
+      FieldName = 'BK'
+    end
+    object QDetail_TotBS: TFloatField
+      FieldName = 'BS'
+    end
+    object QDetail_TotPARAH: TFloatField
+      FieldName = 'PARAH'
+    end
+  end
+end

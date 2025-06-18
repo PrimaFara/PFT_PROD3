@@ -1,0 +1,323 @@
+object MutasiJahitFrm: TMutasiJahitFrm
+  Left = 237
+  Top = 144
+  Width = 936
+  Height = 618
+  Caption = 'MutasiJahitFrm'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Position = poDefault
+  Visible = True
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 920
+    Height = 65
+    Align = alTop
+    TabOrder = 0
+    object BitBtn2: TBitBtn
+      Left = 312
+      Top = 24
+      Width = 75
+      Height = 25
+      Caption = '&Refresh'
+      ModalResult = 4
+      TabOrder = 0
+      OnClick = BitBtn2Click
+      Glyph.Data = {
+        DE010000424DDE01000000000000760000002800000024000000120000000100
+        0400000000006801000000000000000000001000000000000000000000000000
+        80000080000000808000800000008000800080800000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333444444
+        33333333333F8888883F33330000324334222222443333388F3833333388F333
+        000032244222222222433338F8833FFFFF338F3300003222222AAAAA22243338
+        F333F88888F338F30000322222A33333A2224338F33F8333338F338F00003222
+        223333333A224338F33833333338F38F00003222222333333A444338FFFF8F33
+        3338888300003AAAAAAA33333333333888888833333333330000333333333333
+        333333333333333333FFFFFF000033333333333344444433FFFF333333888888
+        00003A444333333A22222438888F333338F3333800003A2243333333A2222438
+        F38F333333833338000033A224333334422224338338FFFFF8833338000033A2
+        22444442222224338F3388888333FF380000333A2222222222AA243338FF3333
+        33FF88F800003333AA222222AA33A3333388FFFFFF8833830000333333AAAAAA
+        3333333333338888883333330000333333333333333333333333333333333333
+        0000}
+      NumGlyphs = 2
+    end
+    object wwDBDateTimePicker1: TwwDBDateTimePicker
+      Left = 24
+      Top = 24
+      Width = 121
+      Height = 21
+      CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+      CalendarAttributes.Font.Color = clWindowText
+      CalendarAttributes.Font.Height = -11
+      CalendarAttributes.Font.Name = 'MS Sans Serif'
+      CalendarAttributes.Font.Style = []
+      Epoch = 1950
+      ShowButton = True
+      TabOrder = 1
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 539
+    Width = 920
+    Height = 41
+    Align = alBottom
+    TabOrder = 1
+    DesignSize = (
+      920
+      41)
+    object BitBtn1: TBitBtn
+      Left = 840
+      Top = 8
+      Width = 75
+      Height = 25
+      Anchors = [akTop, akRight]
+      TabOrder = 0
+      Kind = bkClose
+    end
+  end
+  object wwDBGrid1: TwwDBGrid
+    Left = 0
+    Top = 65
+    Width = 920
+    Height = 474
+    Selected.Strings = (
+      'KONSTRUKSI'#9'22'#9'KONSTRUKSI'#9'F'
+      'CORAK'#9'19'#9'CORAK'#9'F'
+      'AWAL_BK'#9'4'#9'BK'#9'F'#9'AWAL'
+      'AWAL_BS'#9'4'#9'BS'#9'F'#9'AWAL'
+      'AWAL_PARAH'#9'4'#9'PR'#9'F'#9'AWAL'
+      'MASUK_BK'#9'4'#9'TENUN~BK'#9'F'#9'MASUK'
+      'MASUK_BS'#9'4'#9'TENUN~BS'#9'F'#9'MASUK'
+      'MASUK_PARAH'#9'4'#9'TENUN~PR'#9'F'#9'MASUK'
+      'MASUK_LAIN_BK'#9'4'#9'LAIN~BK'#9'F'#9'MASUK'
+      'MASUK_LAIN_BS'#9'4'#9'LAIN~BS'#9'F'#9'MASUK'
+      'MASUK_LAIN_PARAH'#9'4'#9'LAIN~PR'#9'F'#9'MASUK'
+      'KELUAR_LAIN_BK'#9'4'#9'LAIN~BK'#9'F'#9'KELUAR'
+      'KELUAR_LAIN_BS'#9'4'#9'LAIN~BS'#9'F'#9'KELUAR'
+      'KELUAR_LAIN_PARAH'#9'4'#9'LAIN~PR'#9'F'#9'KELUAR'
+      'INSP2_BK'#9'4'#9'INSP2~BK'#9'F'#9'KELUAR'
+      'INSP2_BS'#9'4'#9'INSP2~BS'#9'F'#9'KELUAR'
+      'INSP2_PARAH'#9'4'#9'INSP2~PR'#9'F'#9'KELUAR'
+      'KE_JAHIT_BK'#9'5'#9'KE JAHITt~BK'#9'F'#9'SERAH TERIMA'
+      'KE_JAHIT_BS'#9'5'#9'KE JAHIT~BS'#9'F'#9'SERAH TERIMA'
+      'KE_JAHIT_PARAH'#9'5'#9'KE JAHIT~PR'#9'F'#9'SERAH TERIMA'
+      'AKHIR_BK'#9'4'#9'BK'#9'F'#9'AKHIR'
+      'AKHIR_BS'#9'5'#9'BS'#9'F'#9'AKHIR'
+      'AKHIR_PARAH'#9'5'#9'PR'#9'F'#9'AKHIR')
+    IniAttributes.Delimiter = ';;'
+    TitleColor = clSkyBlue
+    FixedCols = 0
+    ShowHorzScrollBar = True
+    Align = alClient
+    Color = 8978431
+    DataSource = dsQData
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgWordWrap, dgDblClickColSizing]
+    ParentFont = False
+    TabOrder = 2
+    TitleAlignment = taCenter
+    TitleFont.Charset = ANSI_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Lucida Sans'
+    TitleFont.Style = [fsBold]
+    TitleLines = 4
+    TitleButtons = False
+    UseTFields = False
+  end
+  object wwDBDateTimePicker2: TwwDBDateTimePicker
+    Left = 176
+    Top = 24
+    Width = 121
+    Height = 21
+    CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+    CalendarAttributes.Font.Color = clWindowText
+    CalendarAttributes.Font.Height = -11
+    CalendarAttributes.Font.Name = 'MS Sans Serif'
+    CalendarAttributes.Font.Style = []
+    Epoch = 1950
+    ShowButton = True
+    TabOrder = 3
+  end
+  object QData: TOracleDataSet
+    SQL.Strings = (
+      'select a.konstruksi, '
+      'a.corak, '
+      'a.bk as awal_bk, '
+      'a.bs as awal_bs, '
+      'a.parah as awal_parah,'
+      'b.masuk_bk, '
+      'b.masuk_bs, '
+      'b.masuk_parah, '
+      'b.masuk_lain_bk, '
+      'b.masuk_lain_bs, '
+      'b.masuk_lain_parah, '
+      'b.keluar_lain_bk, '
+      'b.keluar_lain_bs, '
+      'b.keluar_lain_parah, '
+      'b.insp2_bk, '
+      'b.insp2_bs, '
+      'b.insp2_parah, '
+      'b.ke_jahit_bk, '
+      'b.ke_jahit_bs, '
+      'b.ke_jahit_parah'
+      'from ipisma_db05.tawal a'
+      
+        'left outer join ipisma_db05.tperjalan b on ((a.konstruksi=b.kons' +
+        'truksi) and (a.corak=b.corak))')
+    QBEDefinition.QBEFieldDefs = {
+      04000000140000000A0000004B4F4E535452554B534901000000000005000000
+      434F52414B010000000000080000004D4153554B5F424B010000000000080000
+      004D4153554B5F42530100000000000B0000004D4153554B5F50415241480100
+      000000000D0000004D4153554B5F4C41494E5F424B0100000000000D0000004D
+      4153554B5F4C41494E5F4253010000000000100000004D4153554B5F4C41494E
+      5F50415241480100000000000E0000004B454C5541525F4C41494E5F424B0100
+      000000000E0000004B454C5541525F4C41494E5F425301000000000011000000
+      4B454C5541525F4C41494E5F504152414801000000000008000000494E535032
+      5F424B01000000000008000000494E5350325F42530100000000000B00000049
+      4E5350325F50415241480100000000000B0000004B455F4A414849545F424B01
+      00000000000B0000004B455F4A414849545F42530100000000000E0000004B45
+      5F4A414849545F5041524148010000000000070000004157414C5F424B010000
+      000000070000004157414C5F42530100000000000A0000004157414C5F504152
+      4148010000000000}
+    Session = DMFrm.OS
+    OnCalcFields = QDataCalcFields
+    Left = 136
+    Top = 128
+    object QDataKONSTRUKSI: TStringField
+      FieldName = 'KONSTRUKSI'
+      Size = 30
+    end
+    object QDataCORAK: TStringField
+      FieldName = 'CORAK'
+      Size = 30
+    end
+    object QDataAWAL_BK: TFloatField
+      FieldName = 'AWAL_BK'
+      DisplayFormat = '#.#,#;(#.#,#)'
+    end
+    object QDataAWAL_BS: TFloatField
+      FieldName = 'AWAL_BS'
+      DisplayFormat = '#.#,#;(#.#,#)'
+    end
+    object QDataAWAL_PARAH: TFloatField
+      FieldName = 'AWAL_PARAH'
+      DisplayFormat = '#.#,#;(#.#,#)'
+    end
+    object QDataMASUK_BK: TFloatField
+      FieldName = 'MASUK_BK'
+      DisplayFormat = '#.#,#;(#.#,#)'
+    end
+    object QDataMASUK_BS: TFloatField
+      FieldName = 'MASUK_BS'
+      DisplayFormat = '#.#,#;(#.#,#)'
+    end
+    object QDataMASUK_PARAH: TFloatField
+      FieldName = 'MASUK_PARAH'
+      DisplayFormat = '#.#,#;(#.#,#)'
+    end
+    object QDataMASUK_LAIN_BK: TFloatField
+      FieldName = 'MASUK_LAIN_BK'
+      DisplayFormat = '#.#,#;(#.#,#)'
+    end
+    object QDataMASUK_LAIN_BS: TFloatField
+      FieldName = 'MASUK_LAIN_BS'
+      DisplayFormat = '#.#,#;(#.#,#)'
+    end
+    object QDataMASUK_LAIN_PARAH: TFloatField
+      FieldName = 'MASUK_LAIN_PARAH'
+      DisplayFormat = '#.#,#;(#.#,#)'
+    end
+    object QDataKELUAR_LAIN_BK: TFloatField
+      FieldName = 'KELUAR_LAIN_BK'
+      DisplayFormat = '#.#,#;(#.#,#)'
+    end
+    object QDataKELUAR_LAIN_BS: TFloatField
+      FieldName = 'KELUAR_LAIN_BS'
+      DisplayFormat = '#.#,#;(#.#,#)'
+    end
+    object QDataKELUAR_LAIN_PARAH: TFloatField
+      FieldName = 'KELUAR_LAIN_PARAH'
+      DisplayFormat = '#.#,#;(#.#,#)'
+    end
+    object QDataINSP2_BK: TFloatField
+      FieldName = 'INSP2_BK'
+      DisplayFormat = '#.#,#;(#.#,#)'
+    end
+    object QDataINSP2_BS: TFloatField
+      FieldName = 'INSP2_BS'
+      DisplayFormat = '#.#,#;(#.#,#)'
+    end
+    object QDataINSP2_PARAH: TFloatField
+      FieldName = 'INSP2_PARAH'
+      DisplayFormat = '#.#,#;(#.#,#)'
+    end
+    object QDataKE_JAHIT_BK: TFloatField
+      FieldName = 'KE_JAHIT_BK'
+      DisplayFormat = '#.#,#;(#.#,#)'
+    end
+    object QDataKE_JAHIT_BS: TFloatField
+      FieldName = 'KE_JAHIT_BS'
+      DisplayFormat = '#.#,#;(#.#,#)'
+    end
+    object QDataKE_JAHIT_PARAH: TFloatField
+      FieldName = 'KE_JAHIT_PARAH'
+      DisplayFormat = '#.#,#;(#.#,#)'
+    end
+    object QDataAKHIR_BK: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'AKHIR_BK'
+      DisplayFormat = '#.#,#;(#.#,#)'
+      Calculated = True
+    end
+    object QDataAKHIR_BS: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'AKHIR_BS'
+      DisplayFormat = '#.#,#;(#.#,#)'
+      Calculated = True
+    end
+    object QDataAKHIR_PARAH: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'AKHIR_PARAH'
+      DisplayFormat = '#.#,#;(#.#,#)'
+      Calculated = True
+    end
+  end
+  object dsQData: TwwDataSource
+    DataSet = QData
+    Left = 224
+    Top = 144
+  end
+  object QTutup: TOracleQuery
+    SQL.Strings = (
+      'begin'
+      '  commit;'
+      '  ipisma_db05.proc_awal(:pawal);'
+      '  ipisma_db05.proc_berjalan(:pawal, :pakhir);'
+      'end;')
+    Session = DMFrm.OS
+    Variables.Data = {
+      0300000002000000060000003A504157414C0C00000007000000786C06020101
+      0100000000070000003A50414B4849520C00000007000000786C060201010100
+      000000}
+    Left = 456
+    Top = 8
+  end
+end

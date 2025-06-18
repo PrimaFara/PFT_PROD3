@@ -1,0 +1,12930 @@
+object WOMitraFrm: TWOMitraFrm
+  Left = 257
+  Top = 136
+  Width = 1549
+  Height = 800
+  Caption = 'WO Mitra'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Position = poDefault
+  Scaled = False
+  Visible = True
+  WindowState = wsMaximized
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnResize = FormResize
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 1533
+    Height = 762
+    ActivePage = TabSheet2
+    Align = alClient
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = '&Input'
+      OnShow = TabSheet1Show
+      object PanelCenter: TPanel
+        Left = 0
+        Top = 0
+        Width = 1525
+        Height = 734
+        Align = alClient
+        BevelOuter = bvNone
+        TabOrder = 0
+        object PanelHeader: TPanel
+          Left = 0
+          Top = 0
+          Width = 1525
+          Height = 48
+          Align = alTop
+          BevelWidth = 2
+          Color = 10485760
+          TabOrder = 3
+          DesignSize = (
+            1525
+            48)
+          object DBText1: TDBText
+            Left = 1406
+            Top = 7
+            Width = 114
+            Height = 33
+            Alignment = taRightJustify
+            Anchors = [akTop, akRight]
+            AutoSize = True
+            DataField = 'NO_NOTA'
+            DataSource = dsQMaster
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clYellow
+            Font.Height = -24
+            Font.Name = 'Arial Black'
+            Font.Style = []
+            ParentFont = False
+            Transparent = True
+          end
+          object DBText2: TDBText
+            Left = 13
+            Top = 7
+            Width = 53
+            Height = 33
+            Color = clWhite
+            DataField = 'KD_TRANSAKSI'
+            DataSource = dsQTransaksi
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWhite
+            Font.Height = -24
+            Font.Name = 'Arial Black'
+            Font.Style = []
+            ParentColor = False
+            ParentFont = False
+            Transparent = True
+          end
+          object Label3: TLabel
+            Left = 72
+            Top = 7
+            Width = 8
+            Height = 33
+            Caption = '-'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWhite
+            Font.Height = -24
+            Font.Name = 'Arial Black'
+            Font.Style = []
+            ParentFont = False
+          end
+          object DBText3: TDBText
+            Left = 84
+            Top = 7
+            Width = 114
+            Height = 33
+            AutoSize = True
+            Color = clWhite
+            DataField = 'NAMA_TRANSAKSI'
+            DataSource = dsQTransaksi
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWhite
+            Font.Height = -24
+            Font.Name = 'Arial Black'
+            Font.Style = []
+            ParentColor = False
+            ParentFont = False
+            Transparent = True
+          end
+        end
+        object PanelFooter: TPanel
+          Left = 0
+          Top = 681
+          Width = 1525
+          Height = 53
+          Align = alBottom
+          BevelWidth = 2
+          Color = clSilver
+          TabOrder = 1
+          DesignSize = (
+            1525
+            53)
+          object BitBtn1: TBitBtn
+            Left = 1431
+            Top = 16
+            Width = 75
+            Height = 25
+            Anchors = [akTop, akRight]
+            TabOrder = 0
+            Kind = bkClose
+          end
+          object BitBtn2: TBitBtn
+            Left = 1351
+            Top = 16
+            Width = 75
+            Height = 25
+            Anchors = [akTop, akRight]
+            Caption = '&Print'
+            TabOrder = 1
+            OnClick = BitBtn2Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000130B0000130B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+              00033FFFFFFFFFFFFFFF0888888888888880777777777777777F088888888888
+              8880777777777777777F0000000000000000FFFFFFFFFFFFFFFF0F8F8F8F8F8F
+              8F80777777777777777F08F8F8F8F8F8F9F0777777777777777F0F8F8F8F8F8F
+              8F807777777777777F7F0000000000000000777777777777777F3330FFFFFFFF
+              03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+              03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+              33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
+              33333337FFFF7733333333300000033333333337777773333333}
+            NumGlyphs = 2
+          end
+          object cbPreview: TCheckBox
+            Left = 360
+            Top = 8
+            Width = 73
+            Height = 17
+            Caption = 'Preview'
+            Checked = True
+            State = cbChecked
+            TabOrder = 2
+          end
+          object RadioGroup1: TRadioGroup
+            Left = 191
+            Top = 4
+            Width = 153
+            Height = 41
+            Caption = 'Ukuran Ketas'
+            Columns = 2
+            ItemIndex = 1
+            Items.Strings = (
+              'A4'
+              'A5')
+            TabOrder = 3
+            Visible = False
+          end
+        end
+        object PanelTop: TPanel
+          Left = 0
+          Top = 48
+          Width = 1525
+          Height = 121
+          Align = alTop
+          BevelWidth = 2
+          Ctl3D = False
+          ParentCtl3D = False
+          TabOrder = 0
+          object Label11: TLabel
+            Left = 36
+            Top = 83
+            Width = 22
+            Height = 13
+            Caption = 'File :'
+          end
+          object Label1: TLabel
+            Left = 29
+            Top = 49
+            Width = 29
+            Height = 13
+            Caption = 'Mitra :'
+          end
+          object DBText7: TDBText
+            Left = 151
+            Top = 50
+            Width = 50
+            Height = 13
+            AutoSize = True
+            DataField = 'NAMA_MITRA'
+            DataSource = dsQMaster
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlue
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Label6: TLabel
+            Left = 695
+            Top = 30
+            Width = 45
+            Height = 13
+            Caption = 'Tanggal :'
+          end
+          object Label2: TLabel
+            Left = 471
+            Top = 29
+            Width = 23
+            Height = 13
+            Caption = 'Grup'
+          end
+          object Label4: TLabel
+            Left = 522
+            Top = 29
+            Width = 21
+            Height = 13
+            Caption = 'Shift'
+          end
+          object Label9: TLabel
+            Left = 441
+            Top = 96
+            Width = 41
+            Height = 13
+            Caption = 'Operator'
+          end
+          object Label8: TLabel
+            Left = 441
+            Top = 78
+            Width = 66
+            Height = 13
+            Caption = 'Tanggal Input'
+          end
+          object DBText5: TDBText
+            Left = 517
+            Top = 78
+            Width = 60
+            Height = 16
+            AutoSize = True
+            Color = clBlack
+            DataField = 'TGL_INSERT'
+            DataSource = dsQMaster
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clRed
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentColor = False
+            ParentFont = False
+            Transparent = True
+          end
+          object DBText6: TDBText
+            Left = 517
+            Top = 93
+            Width = 60
+            Height = 16
+            AutoSize = True
+            Color = clBlack
+            DataField = 'OPR_INSERT'
+            DataSource = dsQMaster
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clRed
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentColor = False
+            ParentFont = False
+            Transparent = True
+          end
+          object Label10: TLabel
+            Left = 12
+            Top = 17
+            Width = 47
+            Height = 13
+            Caption = 'No. SPB :'
+          end
+          object Button1: TButton
+            Left = 277
+            Top = 81
+            Width = 68
+            Height = 21
+            Caption = 'Load Data'
+            TabOrder = 0
+            OnClick = Button1Click
+          end
+          object Edit2: TEdit
+            Left = 71
+            Top = 81
+            Width = 195
+            Height = 19
+            ReadOnly = True
+            TabOrder = 1
+          end
+          object LookMitra: TwwDBLookupComboDlg
+            Left = 71
+            Top = 47
+            Width = 69
+            Height = 21
+            AutoSize = False
+            GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
+            GridColor = clWhite
+            GridTitleAlignment = taLeftJustify
+            Caption = 'Lookup'
+            MaxWidth = 0
+            MaxHeight = 209
+            UserButton1Caption = '&Refresh'
+            Selected.Strings = (
+              'KD_MITRA'#9'10'#9'KD_MITRA'#9'F'
+              'NAMA_MITRA'#9'50'#9'NAMA_MITRA'#9'F')
+            DataField = 'KD_MITRA'
+            DataSource = dsQMaster
+            LookupTable = DMFrm.QLookMitra
+            LookupField = 'KD_MITRA'
+            TabOrder = 2
+            AutoDropDown = False
+            ShowButton = True
+            AllowClearKey = False
+            OnCloseUp = LookMitraCloseUp
+            OnEnter = LookMitraEnter
+          end
+          object wwDBDateTimePicker1: TwwDBDateTimePicker
+            Left = 745
+            Top = 22
+            Width = 121
+            Height = 22
+            TabStop = False
+            BorderStyle = bsNone
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            DataField = 'TANGGAL'
+            DataSource = dsQMaster
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 3
+          end
+          object wwDBComboBox1: TwwDBComboBox
+            Left = 464
+            Top = 46
+            Width = 41
+            Height = 19
+            ShowButton = True
+            Style = csDropDown
+            MapList = False
+            AllowClearKey = False
+            DataField = 'GRUP'
+            DataSource = dsQMaster
+            DropDownCount = 8
+            ItemHeight = 0
+            Items.Strings = (
+              'A'
+              'B'
+              'C'
+              'D'
+              'E'
+              'F'
+              'G')
+            Sorted = False
+            TabOrder = 4
+            UnboundDataType = wwDefault
+          end
+          object wwDBComboBox2: TwwDBComboBox
+            Left = 515
+            Top = 46
+            Width = 41
+            Height = 19
+            ShowButton = True
+            Style = csDropDown
+            MapList = False
+            AllowClearKey = False
+            DataField = 'SHIFT'
+            DataSource = dsQMaster
+            DropDownCount = 8
+            ItemHeight = 0
+            Items.Strings = (
+              '0'
+              '1'
+              '2'
+              '3')
+            Sorted = False
+            TabOrder = 5
+            UnboundDataType = wwDefault
+          end
+          object wwDBEdit1: TwwDBEdit
+            Left = 71
+            Top = 14
+            Width = 121
+            Height = 19
+            DataField = 'NO_SPB'
+            DataSource = dsQMaster
+            TabOrder = 6
+            UnboundDataType = wwDefault
+            WantReturns = False
+            WordWrap = False
+          end
+        end
+        object PanelBanner: TPanel
+          Left = 0
+          Top = 169
+          Width = 1525
+          Height = 41
+          Align = alTop
+          BevelWidth = 2
+          Color = 12058623
+          TabOrder = 2
+          object wwDBNavigator1: TwwDBNavigator
+            Left = 1109
+            Top = 2
+            Width = 414
+            Height = 37
+            AutosizeStyle = asSizeNavButtons
+            DataSource = dsQMaster
+            RepeatInterval.InitialDelay = 500
+            RepeatInterval.Interval = 100
+            Align = alRight
+            Color = 12058623
+            object wwDBNavigator1Button2: TwwNavButton
+              Left = 0
+              Top = 0
+              Width = 42
+              Height = 37
+              Hint = 'Move to prior record'
+              ImageIndex = -1
+              NumGlyphs = 2
+              Spacing = 4
+              Transparent = False
+              Caption = 'wwDBNavigator1Button2'
+              Enabled = False
+              DisabledTextColors.ShadeColor = clGray
+              DisabledTextColors.HighlightColor = clBtnHighlight
+              Index = 0
+              Style = nbsPrior
+            end
+            object wwDBNavigator1Button3: TwwNavButton
+              Left = 42
+              Top = 0
+              Width = 42
+              Height = 37
+              Hint = 'Move to next record'
+              ImageIndex = -1
+              NumGlyphs = 2
+              Spacing = 4
+              Transparent = False
+              Caption = 'wwDBNavigator1Button3'
+              Enabled = False
+              DisabledTextColors.ShadeColor = clGray
+              DisabledTextColors.HighlightColor = clBtnHighlight
+              Index = 1
+              Style = nbsNext
+            end
+            object wwDBNavigator1Insert: TwwNavButton
+              Left = 84
+              Top = 0
+              Width = 42
+              Height = 37
+              Hint = 'Insert new record'
+              ImageIndex = -1
+              NumGlyphs = 2
+              Spacing = 4
+              Transparent = False
+              Caption = 'wwDBNavigator1Insert'
+              Enabled = False
+              DisabledTextColors.ShadeColor = clGray
+              DisabledTextColors.HighlightColor = clBtnHighlight
+              OnClick = wwDBNavigator1InsertClick
+              Index = 2
+              Style = nbsInsert
+            end
+            object wwDBNavigator1Edit: TwwNavButton
+              Left = 126
+              Top = 0
+              Width = 42
+              Height = 37
+              Hint = 'Edit current record'
+              ImageIndex = -1
+              NumGlyphs = 2
+              Spacing = 4
+              Transparent = False
+              Caption = 'wwDBNavigator1Edit'
+              Enabled = False
+              DisabledTextColors.ShadeColor = clGray
+              DisabledTextColors.HighlightColor = clBtnHighlight
+              Index = 3
+              Style = nbsEdit
+            end
+            object wwDBNavigator1Delete: TwwNavButton
+              Left = 168
+              Top = 0
+              Width = 41
+              Height = 37
+              Hint = 'Delete current record'
+              ImageIndex = -1
+              NumGlyphs = 2
+              Spacing = 4
+              Transparent = False
+              Caption = 'wwDBNavigator1Delete'
+              Enabled = False
+              DisabledTextColors.ShadeColor = clGray
+              DisabledTextColors.HighlightColor = clBtnHighlight
+              OnClick = wwDBNavigator1DeleteClick
+              Index = 4
+              Style = nbsDelete
+            end
+            object wwDBNavigator1Post: TwwNavButton
+              Left = 209
+              Top = 0
+              Width = 41
+              Height = 37
+              Hint = 'Post changes of current record'
+              ImageIndex = -1
+              NumGlyphs = 2
+              Spacing = 4
+              Transparent = False
+              Caption = 'wwDBNavigator1Post'
+              Enabled = False
+              DisabledTextColors.ShadeColor = clGray
+              DisabledTextColors.HighlightColor = clBtnHighlight
+              OnClick = wwDBNavigator1PostClick
+              Index = 5
+              Style = nbsPost
+            end
+            object wwDBNavigator1Cancel: TwwNavButton
+              Left = 250
+              Top = 0
+              Width = 41
+              Height = 37
+              Hint = 'Cancel changes made to current record'
+              ImageIndex = -1
+              NumGlyphs = 2
+              Spacing = 4
+              Transparent = False
+              Caption = 'wwDBNavigator1Cancel'
+              Enabled = False
+              DisabledTextColors.ShadeColor = clGray
+              DisabledTextColors.HighlightColor = clBtnHighlight
+              Index = 6
+              Style = nbsCancel
+            end
+            object wwDBNavigator1Refresh: TwwNavButton
+              Left = 291
+              Top = 0
+              Width = 41
+              Height = 37
+              Hint = 'Refresh the contents of the dataset'
+              ImageIndex = -1
+              NumGlyphs = 2
+              Spacing = 4
+              Transparent = False
+              Caption = 'wwDBNavigator1Refresh'
+              Enabled = False
+              DisabledTextColors.ShadeColor = clGray
+              DisabledTextColors.HighlightColor = clBtnHighlight
+              Index = 7
+              Style = nbsRefresh
+            end
+            object wwDBNavigator1Button: TwwNavButton
+              Left = 332
+              Top = 0
+              Width = 41
+              Height = 37
+              Hint = 'Search the dataset'
+              ImageIndex = -1
+              NumGlyphs = 2
+              ShowText = True
+              Spacing = 4
+              Transparent = False
+              Caption = 'Browse'
+              DisabledTextColors.ShadeColor = clGray
+              DisabledTextColors.HighlightColor = clBtnHighlight
+              OnClick = wwDBNavigator1ButtonClick
+              Index = 8
+              Style = nbsCustom
+            end
+            object wwDBNavigator1Button1: TwwNavButton
+              Left = 373
+              Top = 0
+              Width = 41
+              Height = 37
+              ImageIndex = -1
+              NumGlyphs = 1
+              Spacing = 4
+              Transparent = False
+              Caption = 'wwDBNavigator1Button1'
+              DisabledTextColors.ShadeColor = clGray
+              DisabledTextColors.HighlightColor = clBtnHighlight
+              Index = 9
+              Style = nbsCustom
+            end
+          end
+          object wwCheckBox1: TwwCheckBox
+            Left = 330
+            Top = 13
+            Width = 73
+            Height = 17
+            DisableThemes = False
+            AlwaysTransparent = False
+            ValueChecked = '1'
+            ValueUnchecked = '0'
+            DisplayValueChecked = 'True'
+            DisplayValueUnchecked = 'False'
+            NullAndBlankState = cbUnchecked
+            Caption = 'Posting'
+            DataField = 'ISPOST'
+            DataSource = dsQMaster
+            TabOrder = 1
+          end
+        end
+        object ListView1: TListView
+          Left = 8
+          Top = 216
+          Width = 887
+          Height = 321
+          BevelOuter = bvRaised
+          Columns = <>
+          GridLines = True
+          RowSelect = True
+          TabOrder = 4
+          ViewStyle = vsReport
+          OnClick = ListView1Click
+        end
+      end
+    end
+    object TabSheet5: TTabSheet
+      Caption = 'Edit'
+      ImageIndex = 4
+      OnShow = TabSheet5Show
+      object QuickRep1: TQuickRep
+        Left = 142
+        Top = 29
+        Width = 794
+        Height = 559
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        DataSet = QDetail
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        Functions.Strings = (
+          'PAGENUMBER'
+          'COLUMNNUMBER'
+          'REPORTTITLE')
+        Functions.DATA = (
+          '0'
+          '0'
+          #39#39)
+        Options = [FirstPageHeader, LastPageFooter]
+        Page.Columns = 1
+        Page.Orientation = poLandscape
+        Page.PaperSize = A5
+        Page.Values = (
+          127.000000000000000000
+          1480.000000000000000000
+          127.000000000000000000
+          2100.000000000000000000
+          200.660000000000000000
+          127.000000000000000000
+          0.000000000000000000)
+        PrinterSettings.Copies = 1
+        PrinterSettings.Duplex = False
+        PrinterSettings.FirstPage = 0
+        PrinterSettings.LastPage = 0
+        PrinterSettings.OutputBin = Auto
+        PrintIfEmpty = True
+        SnapToGrid = True
+        Units = Inches
+        Zoom = 100
+        object PageHeaderBand1: TQRBand
+          Left = 76
+          Top = 48
+          Width = 670
+          Height = 81
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            214.312500000000000000
+            1772.708333333333000000)
+          BandType = rbPageHeader
+          object Label22: TLabel
+            Left = 28
+            Top = 31
+            Width = 4
+            Height = 16
+          end
+          object Label23: TLabel
+            Left = 36
+            Top = 31
+            Width = 4
+            Height = 16
+          end
+          object QRDBText2: TQRDBText
+            Left = 536
+            Top = 18
+            Width = 77
+            Height = 24
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              63.500000000000000000
+              1418.166666666667000000
+              47.625000000000000000
+              203.729166666666700000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QMaster
+            DataField = 'NO_NOTA'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -19
+            Font.Name = 'Arial Narrow'
+            Font.Style = [fsBold]
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 14
+          end
+          object QRLabel2: TQRLabel
+            Left = 536
+            Top = 2
+            Width = 52
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1418.166666666667000000
+              5.291666666666667000
+              137.583333333333300000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'No. Nota'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRLabel26: TQRLabel
+            Left = 99
+            Top = 26
+            Width = 138
+            Height = 22
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              58.208333333333340000
+              261.937500000000000000
+              68.791666666666680000
+              365.125000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'Bligo Sapugarut, Pekalongan'
+            Color = clWhite
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Arial Narrow'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRImage4: TQRImage
+            Left = 1
+            Top = 2
+            Width = 69
+            Height = 47
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              124.354166666666700000
+              2.645833333333333000
+              5.291666666666667000
+              182.562500000000000000)
+            Picture.Data = {
+              07544269746D617022210000424D222100000000000036000000280000004100
+              00002B0000000100180000000000EC200000120B0000120B0000000000000000
+              0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFDFDFDE4E4E4F5F5F5FEFEFEFEFEFEFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFF9F8F8B7B3B0A09893BFA9AAF8F5F5F9FEFEF8FEFE
+              FEFEFFFFFDFFFFFFFFFFFFFFFFFFFCFEFFFEFEFFFFFDFFFFFFFFFFFFFFFFFFFF
+              FFFAFCFFF9FEFFF8FDFFF7FEFFF7FEFCF8FFFEF8FFFEFAFFFCFCFFFEFDFFFEFD
+              FFFFFEFFFFFFFFFFFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFFFDF7F3F1C2B5ABB59684B4998CE1CE
+              D1FBFAFBFFFEFFFEFFFFF8FFFDF7FDFEF6FCFEF5FBFEEBEFFBC5D4E4A9BBCAB3
+              C0D2B2BED4A0B3CE8CA2C58E99C9929DCA9AA4CEA4AED4ACB6D3B1B6D4C5CCE3
+              EBF0FAF4FAFFF8FEFFFBFFFEFCFFFCFDFFFEFEFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFEFEFEFCFAD7CEBFB8
+              937DC0886FC89D90BEACB0F0EDF3F3F3FCB7C1D78395B17785AB5E648C536387
+              697BA08392B0A1AFCFACBDDDAEC4DFAAC2DDADC5E1B0C2DF99A6C98895B9737B
+              AF535B95606999838BB08E98B4BFC7DEEFF4FFF3FAFFF8FCFFFDFFFFFEFFFEFF
+              FFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FEFDFDD3C1BDC09E8EC0917EB7837CB78084A16E817459779895B7C5CDE3D9E0
+              EFC6CBDEC3C7E5BCC2E6999FCB9098C68390C07D95C28093C58395C2909CCAB3
+              BFE9B5CBE7B4CDE0CADFF3B8C7E48695BE717CAD676DA08188B0C5CFE0E5EDF4
+              F7FEFEFBFDFEFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFCFFFFF5FCFEE0E5F48C83AC866886B6837ACB8968D08C6BB77E6AB98D8CB1
+              8FA67A5C89574D864A4B8F4A51A6424CAC4253AF3947A44448A84A4BAC4142A3
+              4443A94848AF4551A544579D4F63A07489B694A7C2BCD3E5C7DCED9BADC67887
+              AB6F76A69DA2CFDFE2F7F7FBFFF9FDFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFF7FEFFA9B7D4656F957F87ADCAC4DFC0AFCD937186B87F77C28067
+              CE8364C57A6BAC686E95647E76517F644A8E59499D554DA44D439C443999463E
+              A13A369A37389F353AA24146B1353BA5383FA237409C444AA0444C9C606EAD84
+              91C2C1D2F0BECCE87685AD616E9895A5C2E5F4F9F7FEFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCFDFF
+              FEFFFEF9FEFED3DCE5767DA87487A8C4D5E9B4C1E25F67A7424AA04F4AA66A4F
+              97946B91B77B7DCA8164D8855CD88362D3816DC37976A46A7796617D8F5D8486
+              579472498765468B50429A3A3EA53F44AC393A9E403FA44846AF4541B6413FB5
+              4244AA4C54B54C58AB6375B2ADC2E3C6DEEC8393B27378AEC0C7E0F3FBFEFBFE
+              FFFFFFFBFFFFFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFE
+              FFFCFDFEF6FCFCADB8CD69739EA7B5D5C1D2EF6C79B241479E363CA32F39A436
+              3DA74442AA493D926B518994677DB57978C77C6ECA7C68CC8268D38469D08167
+              CD7D6BC47C6FC27A73B26D74955F7E6C467F6346896649896F4E8F6B498B6948
+              915A40905447965349A74743AA454AAE3D4CA3707BC0ADB8DBA9B8D8626F9D9D
+              A2C4E9F0F8FDFDFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFCFEFEF3F7FC9FA3C27177ABC2CCEB9CAFCF5359AA3C3DA33938A93B3DB2
+              3B41B22D37A63339AB383DAB4442A44F4295564288745081986B88AE767DCA84
+              71D78663D8875BD38B59DC8A5CDD875ED57E63CE7B6FBE7877BC7679BC7272C2
+              7574BF7478B7737DAC738E946695714F985B4AA7454AAE3D3FAA474CA2899EC5
+              BED6E57B88A67D7EA8EAE9F7FCFEFFFEFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFAFDFED8DFEB8488AFACB4D4A7B4D76570AF4247A74747B73F44B53A3E
+              B0363BAA353EA5373EA63A3CAA393FB2353CB13537AD4040B33D3AA145419B51
+              4A926A5B91735B8676587F815674976A78AC7978B57F6FBE866DC7866ECD846A
+              D58766D3835ED88864D58763DB8B68D08471B77980956A908166A34743994048
+              AD4049AA5665AF94A1CCB4BBDA696C9AB9C0D2F4F8FEFDFFFFFEFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFFFFFFFF
+              FFFFFFFEFCFCFEE6EDF87279A2AFB8D7AEBFDB4F59A73F42B33E45B93D44B336
+              3CAC373FAC3F44B22E34A43B3EAD3939A82F33A6373EB73035AD3739AC353BAF
+              3D45B63B43AB414AAC494FB24449AC4A43A14944965851985B52895E517F6F57
+              7C805F7E9871879C71819D737E9F747FA87B7DAB7D82A27480916E8F79649A59
+              50AC4046AB404AAE3D44B84652B18499C3BCCCE36A7598BFC6D8F6FCFFFEFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFF9FAFF9298B994A8BEBECEE64B4FA54647B64146B93740B4
+              333AAF3942B3353EB04144BA3437B23839B2383FB12F39B2353EB53038AB363C
+              A9363CAE3D43AE4A50B74545AB4745A94948AB3F44A53B43A74247AB3D3FA444
+              44AF4645AF4746A5534CA350459359539A4D4791504C9A554C985A4D91574A96
+              4C48A14949AA4748B33F44B43747AC3548A84050AC8D9FC7B5C4DD6C739AD1D0
+              E7FCFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFEFEFFFFFCFFFFC3C7DD7679A5C9DDEC5566A53D46A63C40B3373D
+              B4323BAF3E40B2404BAB404DA53E49AA4347AE3B3F9B3B3EA32B37AF2F35B035
+              36A5363BAD2E36A93742AB3A44AD484DB9454BAE454EA1474CA54F53AF484DA2
+              454C9F3739A83A3EB6484DA34E4AA14C4DAD46509F45439C4944A13F3EB6464C
+              AA504CAA4643A3464DA24A4BA5423F9D3137A43541B03E47AC424EA1A4B6DBA8
+              B2D77C7AABEEF2F6FEFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFEEF1F87F82AAC1CDE57F8BBB3F4B9E4148AB39
+              3FAF4248B93A43AE5556AA7883B57A85AA818AB5858DB67C84AF565DAA404BB9
+              383FB63B3BAA3039A82E35A93641AB404DAF474EAC6B6FB48991B89097BC9397
+              BC9097B88791BA4B52A34F54B08188B59491B68E94BE8F9EB89395BC767CB54D
+              55AF6472AD9799C39C9DC89AA4C79B9EC49597C84C54A93645AA3642A035409F
+              4450A0B9CCE4818BB4AFB2D5F8FCFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFEFFFEC7CBE38A8EB9B9CAE04D51A2434BAC
+              4044AF3A42AF3842AE3F4DAE6F75AFECF4FEF8FFFFFCFEFFFCFEFFF6FCFF818C
+              BA3643A13239A93637A43139A8353CB0323EA73B49A94D51A4B9BBD9FCFDFFFE
+              FEFFFFFFFFFBFEFFEAF1F9525B9C565CA3E5E9F5FEFDFFFDFEFFFAFFFCFDFEFF
+              B1BEDB525AADA4B1D7FBFCFFFDFDFFFBFEFFFDFEFFECEAF9585EAA3340A5353E
+              A73D48B53D4CA2687BB3B8CBE66F76AFE8EFF8FDFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFF8FAFB8A8BABB0B8D97184AD4042
+              A53C40A94246B24048B33C45AF3846A97176B0F4F8FEFFFFFFFFFFFFFFFFFFFB
+              FDFF8691B63E4AA33E40B14141AE333CA93640AE3643AA3F4EAF545CAABCC0D7
+              FFFFFDFFFFFFFFFFFFFFFFFFF1F2F9535B9E5A5FA9EAEDF5FFFFFFFFFFFFFFFF
+              FAFEFFFFB3BFDB565AB5ACB3DDFEFFFFFFFFFFFFFFFFFFFFFFECE9F8575BA73E
+              48B34146BB3941B64254A85057B5A5B9D77382ADA9B2D2F7FBFFFEFEFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFEF2EFF89294B4D5E1F85D
+              66B04045AA3F45B0474CB74049B33B47B13D49B26C78B2F1F9FDFEFFFDFFFFFF
+              FFFFFFFDFEFF8E91B9454EA93A3EB13D3FAB353EA7353DA43543A7394BB24E5B
+              B2BABDD9FFFFFDFDFFFFFFFFFFFFFFFFF0F2F9555FA05863ADE4ECF5FFFFFFFE
+              FFFFFFFFFDFEFFFFB5C0D95654B8B3BAE6FDFFFFFFFFFFFEFFFFFFFFFFECEAF8
+              565FA5414AB14047B03D49AE3E46B2494DB37D8CC5B2C7E18896BAF0F8FDFBFE
+              FDFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFEFDD0CDE57B85A3
+              AAB8D74349AC3943A3383DAA4045B1333BA7333CA9353FAB6474ABEFFBFDFEFF
+              FCFFFFFFFFFFFFFDFEFF868BB64048A73A3EAC3A39A4313EA23641A3414DB034
+              44AB4653AFB2BAD8FDFFFFFAFFFFFFFFFFFFFFFFF1F5F9545E9C5664AAE3ECF5
+              FFFFFFFEFFFFFDFFFDFFFFFFB6BFD55454AFB4BCE4FDFFFFFFFFFFFCFFFEFDFF
+              FFEAEEF85562A0414FAC4A4FAC4851AB3F3BBD3F45A74952A2B4C6DF677798D6
+              DEEDFDFEFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFDFFFEA0A7
+              CD8091AF97A1CA474BB13B46AF444CB7383EAE3E43B54148B63C43AC6A77B7F6
+              FBFDFFFFFDFFFFFFFFFFFFFEFFFF8C94C34C54BC4149A63E3EA73C45AD3A4BAF
+              3D47AB484FB3535DB1B3BAD7FEFFFFFFFFFFFFFFFFFFFFFFF4F7F95962A15865
+              B1E5EBF5FFFFFEFFFFFFFFFFFFFFFFFFB5BDD65257A6B9C2E0FDFFFFFFFFFFFE
+              FFFFFFFFFFECF1F85662A7404AB34544AD4245AC3F46AF3D4AB34951ADC1CBE9
+              7888A6C6D0E4FFFFFEFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFD
+              FFFF969AC5A7B7D19299C63E3FA93C45B1393FAA3A3EAF363BAD3941B03F47AF
+              6E79BBF4FAFDFFFFFEFFFFFFFFFFFFFDFEFF8893BA4650AD43489F4F49AF4242
+              AE3B45A74349AA494BB05059B0B6BDD8FFFFFFFFFFFEFFFFFFFFFFFFF4F6F954
+              5C9B515CA9E4ECF4FFFFFEFFFFFFFFFFFEFEFFFFB6BFD85158A5B9C5E0FDFFFF
+              FFFFFFFDFFFFFFFFFFEAEFF8515DA13E48B04242AB3D3FA83E45AD3C48B24147
+              A596A0C89BAAC6C2CCE3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFCFEFE9194C1A4AECD979DC9403FAA3842AD3D44AE3D43B03C42B13B40
+              AF3F48AE7683C3F5FBFDFFFFFDFFFFFFFFFFFFFDFFFF929BC1505AAA7581B07D
+              7CB27C81B86B71AE5353A54D4DB0535EB5B6BFDAFFFFFCFFFFFFFFFFFFFFFFFF
+              F6F6F95A62A1525BAAE5EDF5FFFFFEFFFFFFFFFFFEFFFFFFBAC2D9565EAAB6C5
+              DFFDFFFFFFFFFFFEFFFFFFFFFFECF2F95A67AC424BB54344B04344AC4149B03D
+              46B0444CA79099C4A5B5CC97A1C0FEFEFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFEFFFF9FA2CB9BA5C69EA2CE4C49B13E47AE3A43AA3F46B33C
+              43AF4048B2414BAE7280BEF4FBFDFFFFFDFFFFFFFFFFFFFDFEFF8D93C04C589F
+              DBE9F5FBFEFFF9FEFEE9F0FA9898C6585CAE5563B7BAC5DFFFFFFDFFFFFEFFFF
+              FFFFFFFFF5F7F95C65A65561AEE2EBF5FFFFFCFFFFFFFFFFFFFEFFFFBAC1D955
+              59A6BBC8DEFDFFFFFFFFFFFDFFFFFFFFFFECF0F85662A63B45AD3F41AB4346AC
+              4047AF3641AC4149A68A92C2A7B7CEA1AAC7FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFEFFFEC6CAE47E89A5A7ADD24845AA3943A83D45AC
+              3940AB343BA7383FA84049AB707ABBF4FBFDFFFFFDFFFFFFFFFFFFFDFEFF8C93
+              C44A549AE1EBF4FFFFFFFFFFFDFAFEFAE9ECF6777CBC4E5DAEB7C1DCFFFFFEFF
+              FFFEFFFFFFFFFFFFF3F5F95E66A75461AEE5EBF5FFFFFDFFFFFFFFFFFEFEFFFF
+              B9C0DA545AA8B9C5DEFDFFFFFFFFFFFDFFFFFFFFFFECF1F85563A8424CB54445
+              AC3A3AA44047B13B46B04149A4959DC7A0B1C9BBC8DFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFEFCE0E5F58694AED4DEF45857A84042
+              AC343BA34147B03F44B04047B04148AA727DB9F1FAFDFFFFFEFFFFFFFFFFFFFC
+              FEFF959BCA595EA9E1ECF6FEFFFFFFFFFFFFFFFBFAFDFE919CC74F5AA7B8BEDB
+              FFFFFEFFFFFFFFFFFFFFFFFDF4F6F85E66A4535DA7E4ECF5FFFFFBFFFFFFFFFF
+              FFFFFFFFBCC2DE5E61AEBDC6E4FDFFFFFFFFFFFEFFFFFFFFFFE8ECF75058A042
+              49B44146AC3E42AD4249B0363FA44349A0B6BFE37D8BA8C7CFE0FDFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFEFFF3F6FB757CA4B9C8DE69
+              70A44943AF363DA73739A6393EAA343BA4444AAC6977B0F1F9FDFEFFFDFFFFFF
+              FFFFFFFAFEFF8890BD4C51A5DAE7F5FEFFFFFFFFFFFFFFFFF9FFFFACBADA555A
+              A6BABADEFCFFFDFEFFFFFFFFFFFFFFFDF5F9FB6C6FB35760A5E0EEF5FFFFFDFF
+              FEFFFFFFFFFBFFFDB2BED6525AA4B8C1DFFEFFFCFFFFFDFFFFFFFEFFFEE6F1F8
+              595FAB4244B33B44A53D47B23C43AF4146A5454A8FB8BFDA687091D9DEEAFBFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFDFFFBFEFFA9AFCD
+              979FC4B5BDD94E57A03440A53841AD3C44B03B46B04753B5727CB2F2F7FDFFFF
+              FEFFFFFFFFFFFFFAFDFF8991C049509EDFE5F5FFFFFFFFFFFFFEFFFDF9FEFE89
+              94C14D53A9A9B3D9F5FFFDFFFFFEFFFFFFFEFFFFEEF4FA575AA84E57ADD9E8F7
+              FBFFFEFFFFFFFFFFFFFEFFFFB2C1D74E5C9DB2BDDFFDFEFFFFFFFFFFFFFFFFFF
+              FDE8F0F85C63AC484AB73F4AAD3D4AAE4347BC4046A77C8ABBB9C5E39298BAF4
+              FAFDFBFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FEE2E3EF6F70A2CBD6E66577A33847A2404AB1353DAB3743AF3647A76D76AAF1
+              F8FDFDFFFDFFFFFEFFFFFFF8FEFF8390BB4C5999DFECF4FEFFFFFFFFFFFCFFFC
+              DCE5F36C76BC4D56B36E7DB5E7F7FAFEFFFEFDFFFFF9FFFFDAE8F5434E9B4854
+              AEA7BBDFF1FEFCFCFFFBFEFFFFFBFDFF7E89BD44529F7B85B8F3F8FCFCFEFDFD
+              FEFEFDFFFFC9D0E74D52A34245B13C44AB3948A74044B94650A9A8BBD5818EAE
+              B2B7D1FEFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFBFEFEA3A5C48B95B6B8C9E1465597424BA74047B3343CAD3D4AB1
+              6571AFE2F3FDEEFEFFEDFCFFF0FCFFEAF9FF7281BA32488BD2E7F4F4F9FFF5FC
+              FFD6E9F57280B13D47A4434DB24D5EA79DB1D4EFFBFFF0FCFFE0F0FB7081B039
+              469831419B5165A0D4E8F5EEFEFFEEFAFFB7BEE25256B53947AD4857A4AEB6D3
+              ECF9FBF2FBFEE0E9FD7C86BF444CA83A42AC3F47AF3A44A44046A26F7AB2B1BE
+              D3707A96EEF3F7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFCFFFDFFFDFFF8EFF4F7747BA8AFBDDA99A7CC424B964749B03F44
+              B43D43B4404CAB5B6DB25F77B16676BC6C7BC16B78BF444CAF344BAA6D86C17D
+              87CD6777B64D64A53B4BA63D49B5404AB1474FAD4B54A86472B16D81BB5063AA
+              3944A43038A2333CA93A45AA4F5CAB6678B2586AA542509D3C40A72E3EAB394A
+              AE4A52A65C6AAA6379AC4C5CA04652B33F4DB54049AE4348B04745AF556296CB
+              D6E98283AFC1C3D4FDFFFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFDFFFDFFFFFFFAFBFFFAD1D2EA73789BD2DEEC8994BF4A
+              4CA63D3BAE383AAC363FB03947AD3649AA3741B0383EB23C42B2373BB23241B3
+              2F43A53039A326369C3648AB303CAA2832A13843AC3940A63B3EAA3841AA3644
+              A63340AB3037AC2E33A92D35A7353BAF393FAF3540A23542A03340A2353CA130
+              3FAA3843B53F42B04049AE414FAD2E3D9E3B46AF3443A33A45A43E45A8494D9C
+              B5C0D99EA3C6918CB5F4F4FAFCFEFAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFDFDD4D6E07D81A8
+              ADB5D8AAB4D7565EA14847AD393EB0353CAF3A40B52730A32F38A9333EAC3742
+              AF2F3BAA2E37A72F39A92934A2333AA83F45B23A40AC4249B43A42A8373EA930
+              3AA8252F9F3039A8303BAB2631A22C31A2383DAD383FAB393EAA3139A1363EA6
+              323CA6323BA73236A7373DA93E42AA3A44A83B45AD3E43AE3C43A53E49975C67
+              A6B4BFDB99A0BF9395B6E5E6F1FFFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFF
+              FED9DCEA7571A8979CC3CED9EC6C74A83E459C3E42AC353AB23942BA2D3FA92F
+              41A8353BAE2A32A53138AA2B32A32F38A63238A7383DAC2F34A1353CA63840A7
+              3740A8323AA82F37A42D36A527309E222A9B333AA9353AAB3D42B03A42AB2A32
+              9B363EA52E3EA22E3EA8313AAB3B40B0343BA83F4CAE3440A4373AA94546A96F
+              75AFCBD6EC868BAE8C92ADEFF4F8FCFEFEFDFEFEFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFEFFFCFDFFFAE8E7F3918EBF8A88BCD3DDEE8A99BD4B569A444CAB3C42B3
+              3643B23D48B9393FB13A3DB13338AA3238AA373BAD3A41B03F47B33D41AF474F
+              B84149B13F48B2363EAA3C44AF2C33A1363BAB2B329F3C42AF3B3FB03A40AD34
+              3BA43B44AA3B46AD3343A63843AD3B44AF3E45B34045AF4449B2464FAF515CA6
+              8B93C0CCD3E68C91AE9291B4EEF2F7FBFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFEFEFDFEFFF1F2F5F89E9CBF7776A4B2C0D5B6C5E26F7C
+              AF4951A0494BAF4748B53C3EAD3A3FAA3536A43C40AD4144B0383EAC2C31A137
+              3BA94048B13841A93B42AB4144B0363CA73A41AC3D41AC3135A14247B43D44B1
+              3A42AE3840AA434CB33C44AC3940A73A41A93D43A84B4EB0464DA54E51A76E74
+              B8AAB4D9BBC9D56E788F9EA4BDF5F5FBFDFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFEFFFEFFFFFCFFFCFFFCFCFFFDDADCEA757CA88A
+              95B5D0DDECB9C1D87273AE4E4EA34248AB3B40A44046AB3A3DA63C40A74146B2
+              3D42B03940AB3F47B0373FA93E46AD474CB64247B33B3FAA4144AF383CA73B41
+              AC333BA7393EAA4149B2353DA63D43AC3C3FA54243A94649A74D51A6686CB3B1
+              B9D9D1DAEC8B91B6767AA2CDD5E1F2FCFEFDFFFBFEFFFEFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              EFF4F7A8ABC070739E888AB8C7D1E9C3D1EC7D89BC5C64A44950A04749A84444
+              AB474CB3454CB03D42A8494FB7464BB2464CB43E49AE3F4DB1424FB23E4BAE3B
+              46AB4049AD424AAD4248AC4B50B25055B55055B15B59AA6D71B68189BFB9C7E4
+              C5D9EC8B9BBB6F779CA1A8BEF1F4F9FDFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFCFDFCFCFDFEE6E6F5A2A6C3656F8E848DABABB7D1D2DDF2B6C5E18E
+              9DC47081B05A60A44B4E9B4C519D5356A75355A75051A8494BA64D4EA94A4BA6
+              5155AD4345A04541A74F4CB05250A755599B6F75A7919CBFA4B5CECFDDF1B3C0
+              D78891B66E73A29C9FC3E1E6F3F6FCFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFDFDFEFEFFFDFBFCFFEAEDF4C6C7DA8786B46C6F9E
+              8C93B59DA7C5C2D1E8D9E8F6C0CEDEBBCBDDB8C5DBA0ADC7939FBE959DC38A94
+              B9878FB88C94BB9AA3CCAFBCD6B8C8DBC3D0E0DAE7F3CDD9EA96A0B9838FB16A
+              7695848DA6C2CCD6E7ECF4FEFCFEFCFCFEFDFEFEFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFEFFFFFFFFFFFFF9FB
+              FEF0F2F9C2C3DB8C8FAF8085A8747EAD616F9F7783B598A4CEACB6E1BBC7EBC5
+              D8ECC4D7EAC2D6E8BBCDE1A2B4CB97A8C67E8DB8646F9D6B74A57B82B18288B4
+              B7C0D7EDF3FAF8FCFDFEFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFCFFFFF6FEFFFBFEFFFDFEFFFFFBFDFEE8F1F8CAD3E5ADB8CDABB6CCABB4CB
+              AAB3CBABB2D0A5ACCAA4ACCBA2A9CAA2ABC7A8AECCAEB3CEC5CCE1E8EDF5F4FD
+              FCF8FEFAFEFFFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFEFFFDFCFFFEFEFEFEFEFEFFFFFFFFFFFFFFFFFEFFFFFEFEFEFFFD
+              FFFFFFFFFEFFFFFEFFFFFDFFFFFDFFFFFEFFFEFBFFFFFEFFFCFDFDFDFEFEFDFF
+              FFFEFFFDFEFDFCFCFFFEFFFFFFFFFFFFFFFFFFFFFFFFFBFFFFFDFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00}
+            Stretch = True
+          end
+          object QRLabel27: TQRLabel
+            Left = 71
+            Top = 4
+            Width = 204
+            Height = 24
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              63.500000000000000000
+              187.854166666666700000
+              10.583333333333330000
+              539.750000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'PT.PISMATEX Textile Industry'
+            Color = clWhite
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -19
+            Font.Name = 'Arial Narrow'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 14
+          end
+        end
+        object TitleBand1: TQRBand
+          Left = 76
+          Top = 129
+          Width = 670
+          Height = 104
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            275.166666666666700000
+            1772.708333333333000000)
+          BandType = rbTitle
+          object QRDBText1: TQRDBText
+            Left = 258
+            Top = 0
+            Width = 154
+            Height = 26
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              68.791666666666670000
+              682.625000000000000000
+              0.000000000000000000
+              407.458333333333300000)
+            Alignment = taCenter
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QTransaksi
+            DataField = 'NAMA_TRANSAKSI'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -21
+            Font.Name = 'Arial Narrow'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 16
+          end
+          object QRDBText3: TQRDBText
+            Left = 572
+            Top = 36
+            Width = 64
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1513.416666666667000000
+              95.250000000000000000
+              169.333333333333300000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QMaster
+            DataField = 'TANGGAL'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Arial'
+            Font.Style = [fsBold]
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRLabel3: TQRLabel
+            Left = 524
+            Top = 36
+            Width = 46
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1386.416666666667000000
+              95.250000000000000000
+              121.708333333333300000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'Tanggal'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRDBText4: TQRDBText
+            Left = 572
+            Top = 58
+            Width = 38
+            Height = 18
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              47.625000000000000000
+              1513.416666666667000000
+              153.458333333333300000
+              100.541666666666700000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QMaster
+            DataField = 'GRUP'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Arial'
+            Font.Style = [fsBold]
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRDBText5: TQRDBText
+            Left = 572
+            Top = 82
+            Width = 39
+            Height = 18
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              47.625000000000000000
+              1513.416666666667000000
+              216.958333333333400000
+              103.187500000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QMaster
+            DataField = 'SHIFT'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Arial'
+            Font.Style = [fsBold]
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRLabel5: TQRLabel
+            Left = 524
+            Top = 82
+            Width = 27
+            Height = 18
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              47.625000000000000000
+              1386.416666666667000000
+              216.958333333333400000
+              71.437500000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'Shift'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRLabel6: TQRLabel
+            Left = 12
+            Top = 26
+            Width = 76
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              31.750000000000000000
+              68.791666666666680000
+              201.083333333333300000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'DIterima Dari'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRDBText6: TQRDBText
+            Left = 12
+            Top = 42
+            Width = 177
+            Height = 25
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              66.145833333333340000
+              31.750000000000000000
+              111.125000000000000000
+              468.312500000000100000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QMaster
+            DataField = 'NAMA_MITRA'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Arial'
+            Font.Style = [fsItalic]
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRLabel16: TQRLabel
+            Left = 524
+            Top = 58
+            Width = 29
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1386.416666666667000000
+              153.458333333333300000
+              76.729166666666680000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'Grup'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRLabel25: TQRLabel
+            Left = 11
+            Top = 80
+            Width = 28
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              29.104166666666670000
+              211.666666666666700000
+              74.083333333333340000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'SPB'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRDBText31: TQRDBText
+            Left = 59
+            Top = 80
+            Width = 54
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              156.104166666666700000
+              211.666666666666700000
+              142.875000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QMaster
+            DataField = 'NO_SPB'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Arial'
+            Font.Style = [fsBold]
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+        end
+        object ColumnHeaderBand1: TQRBand
+          Left = 76
+          Top = 233
+          Width = 670
+          Height = 23
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          BeforePrint = ColumnHeaderBand1BeforePrint
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            60.854166666666670000
+            1772.708333333333000000)
+          BandType = rbColumnHeader
+          object QRLabel8: TQRLabel
+            Left = 16
+            Top = 0
+            Width = 20
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              42.333333333333340000
+              0.000000000000000000
+              52.916666666666670000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'NO'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRLabel9: TQRLabel
+            Left = 64
+            Top = 0
+            Width = 84
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              169.333333333333300000
+              0.000000000000000000
+              222.250000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'KONSTRUKSI'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRLabel10: TQRLabel
+            Left = 394
+            Top = 0
+            Width = 27
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1042.458333333333000000
+              0.000000000000000000
+              71.437500000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'QTY'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRLabel12: TQRLabel
+            Left = 565
+            Top = 0
+            Width = 63
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1494.895833333333000000
+              0.000000000000000000
+              166.687500000000000000)
+            Alignment = taCenter
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'WARPING'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+        end
+        object DetailBand1: TQRBand
+          Left = 76
+          Top = 256
+          Width = 670
+          Height = 21
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            55.562500000000000000
+            1772.708333333333000000)
+          BandType = rbDetail
+          object QRDBText8: TQRDBText
+            Left = 64
+            Top = 0
+            Width = 84
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              169.333333333333300000
+              0.000000000000000000
+              222.250000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QDetail
+            DataField = 'KONSTRUKSI'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRDBText9: TQRDBText
+            Left = 382
+            Top = 0
+            Width = 56
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1010.708333333333000000
+              0.000000000000000000
+              148.166666666666700000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QDetail
+            DataField = 'POTONG'
+            Mask = '0.0,0;(0.0,0);'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRDBText11: TQRDBText
+            Left = 565
+            Top = 0
+            Width = 63
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1494.895833333333000000
+              0.000000000000000000
+              166.687500000000000000)
+            Alignment = taCenter
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QDetail
+            DataField = 'WARPING'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRSysData2: TQRSysData
+            Left = 5
+            Top = 0
+            Width = 44
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              13.229166666666670000
+              0.000000000000000000
+              116.416666666666700000)
+            Alignment = taCenter
+            AlignToBand = False
+            AutoSize = False
+            Color = clWhite
+            Data = qrsDetailNo
+            Transparent = False
+            FontSize = 10
+          end
+        end
+        object SummaryBand1: TQRBand
+          Left = 76
+          Top = 317
+          Width = 670
+          Height = 188
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = True
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            497.416666666666700000
+            1772.708333333333000000)
+          BandType = rbSummary
+          object QRDBText14: TQRDBText
+            Left = 64
+            Top = 96
+            Width = 201
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              169.333333333333300000
+              254.000000000000000000
+              531.812500000000000000)
+            Alignment = taCenter
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QMaster
+            DataField = 'TTD1'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Arial'
+            Font.Style = [fsUnderline]
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRDBText15: TQRDBText
+            Left = 272
+            Top = 96
+            Width = 201
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              719.666666666666800000
+              254.000000000000000000
+              531.812500000000000000)
+            Alignment = taCenter
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QMaster
+            DataField = 'TTD1'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Arial'
+            Font.Style = [fsUnderline]
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRDBText16: TQRDBText
+            Left = 64
+            Top = 40
+            Width = 201
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              169.333333333333300000
+              105.833333333333300000
+              531.812500000000000000)
+            Alignment = taCenter
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QTransaksi
+            DataField = 'DIV1'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRDBText17: TQRDBText
+            Left = 272
+            Top = 40
+            Width = 201
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              719.666666666666800000
+              105.833333333333300000
+              531.812500000000000000)
+            Alignment = taCenter
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QTransaksi
+            DataField = 'DIV2'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRDBText18: TQRDBText
+            Left = 272
+            Top = 113
+            Width = 201
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              719.666666666666800000
+              298.979166666666700000
+              531.812500000000000000)
+            Alignment = taCenter
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QTransaksi
+            DataField = 'DIV2'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRDBText19: TQRDBText
+            Left = 64
+            Top = 113
+            Width = 201
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              169.333333333333300000
+              298.979166666666700000
+              531.812500000000000000)
+            Alignment = taCenter
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QTransaksi
+            DataField = 'DIV1'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRLabel14: TQRLabel
+            Left = 64
+            Top = 16
+            Width = 99
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              169.333333333333300000
+              42.333333333333340000
+              261.937500000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'PEKALONGAN, '
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRDBText20: TQRDBText
+            Left = 168
+            Top = 16
+            Width = 25
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              444.500000000000000000
+              42.333333333333340000
+              66.145833333333340000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QMaster
+            DataField = 'TGL'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+        end
+        object PageFooterBand1: TQRBand
+          Left = 76
+          Top = 505
+          Width = 670
+          Height = 20
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            52.916666666666670000
+            1772.708333333333000000)
+          BandType = rbPageFooter
+          object QRDBText13: TQRDBText
+            Left = 0
+            Top = 0
+            Width = 36
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              0.000000000000000000
+              0.000000000000000000
+              95.250000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = DMFrm.QUserTime
+            DataField = 'VUSER'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRSysData1: TQRSysData
+            Left = 601
+            Top = 0
+            Width = 69
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1590.145833333333000000
+              0.000000000000000000
+              182.562500000000000000)
+            Alignment = taRightJustify
+            AlignToBand = True
+            AutoSize = True
+            Color = clWhite
+            Data = qrsPageNumber
+            Text = 'Hal '
+            Transparent = False
+            FontSize = 10
+          end
+          object QRDBText12: TQRDBText
+            Left = 299
+            Top = 0
+            Width = 71
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              791.104166666666700000
+              0.000000000000000000
+              187.854166666666700000)
+            Alignment = taCenter
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QTransaksi
+            DataField = 'DISTRIBUSI'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+        end
+        object QRGroup1: TQRGroup
+          Left = 76
+          Top = 256
+          Width = 670
+          Height = 0
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            0.000000000000000000
+            1772.708333333333000000)
+          FooterBand = QRBand1
+          Master = QuickRep1
+          ReprintOnNewPage = False
+        end
+        object QRBand1: TQRBand
+          Left = 76
+          Top = 277
+          Width = 670
+          Height = 40
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            105.833333333333300000
+            1772.708333333333000000)
+          BandType = rbGroupFooter
+          object QRLabel15: TQRLabel
+            Left = 305
+            Top = 8
+            Width = 59
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              806.979166666666700000
+              21.166666666666670000
+              156.104166666666700000)
+            Alignment = taCenter
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Caption = '** Akhir **'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRExpr1: TQRExpr
+            Left = 382
+            Top = 8
+            Width = 54
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1010.708333333333000000
+              21.166666666666670000
+              142.875000000000000000)
+            Alignment = taRightJustify
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            ResetAfterPrint = False
+            Transparent = False
+            WordWrap = True
+            Expression = 'SUM(QDetail.QTY_AKHIR)'
+            Mask = '0.0,0;(0.0,0);'
+            FontSize = 10
+          end
+        end
+      end
+      object wwDBGrid3: TwwDBGrid
+        Left = 0
+        Top = 210
+        Width = 1525
+        Height = 471
+        ControlType.Strings = (
+          'KD_KONSTRUKSI;CustomEdit;LookKonstruksi;F'
+          'KD_CORAK;CustomEdit;LookCorak;F'
+          'SATUAN;CustomEdit;LookSatuan;F'
+          'JENIS;CustomEdit;LookJenis;F'
+          'GRUP;CustomEdit;LookGrup;F'
+          'MESIN;CustomEdit;LookMesin;F'
+          'KD_PRODUKSI;CustomEdit;Look_KP;F')
+        Selected.Strings = (
+          'NO_URUT'#9'10'#9'NO_URUT'#9'F'
+          'NO_MESIN'#9'10'#9'NO_MESIN'#9'F'
+          'NO_BEAM'#9'15'#9'NO_BEAM'#9'F'
+          'KD_PRODUKSI'#9'8'#9'KP'#9'F'
+          'KONSTRUKSI'#9'35'#9'KONSTRUKSI'#9'F'
+          'NO_RESEP'#9'20'#9'NO_RESEP'#9'F'
+          'CORAK'#9'25'#9'CORAK'#9'F'
+          'POTONG'#9'10'#9'POTONG'#9'F'
+          'METER'#9'10'#9'METER'#9'F'
+          'KOREKSI'#9'8'#9'KOREKSI'#9'F'
+          'QTY_AKHIR'#9'10'#9'QTY AKHIR'#9'T'
+          'METER_AKHIR'#9'10'#9'METER_AKHIR'#9'F'
+          'WARPING'#9'25'#9'WARPING'#9'F'
+          'KETERANGAN'#9'30'#9'KETERANGAN'#9'F'
+          'JENIS'#9'15'#9'JENIS'#9'F')
+        IniAttributes.Delimiter = ';;'
+        TitleColor = clSkyBlue
+        FixedCols = 0
+        ShowHorzScrollBar = True
+        Align = alClient
+        DataSource = dsQDetail
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgWordWrap, dgShowFooter]
+        ParentFont = False
+        RowHeightPercent = 200
+        TabOrder = 0
+        TitleAlignment = taCenter
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Lucida Sans'
+        TitleFont.Style = [fsBold]
+        TitleLines = 3
+        TitleButtons = False
+        UseTFields = False
+        OnEnter = wwDBGrid3Enter
+        OnUpdateFooter = wwDBGrid3UpdateFooter
+      end
+      object Panel10: TPanel
+        Left = 0
+        Top = 0
+        Width = 1525
+        Height = 48
+        Align = alTop
+        BevelWidth = 2
+        Color = 10485760
+        TabOrder = 1
+        DesignSize = (
+          1525
+          48)
+        object DBText10: TDBText
+          Left = 1295
+          Top = 7
+          Width = 130
+          Height = 33
+          Alignment = taRightJustify
+          Anchors = [akTop, akRight]
+          AutoSize = True
+          DataField = 'NO_NOTA'
+          DataSource = dsQMaster
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clYellow
+          Font.Height = -24
+          Font.Name = 'Arial Black'
+          Font.Style = []
+          ParentFont = False
+          Transparent = True
+        end
+      end
+      object Panel11: TPanel
+        Left = 0
+        Top = 681
+        Width = 1525
+        Height = 53
+        Align = alBottom
+        BevelWidth = 2
+        Color = clSilver
+        TabOrder = 2
+        DesignSize = (
+          1525
+          53)
+        object BitBtn9: TBitBtn
+          Left = 1432
+          Top = 16
+          Width = 75
+          Height = 25
+          Anchors = [akTop, akRight]
+          TabOrder = 0
+          Kind = bkClose
+        end
+        object BitBtn10: TBitBtn
+          Left = 1352
+          Top = 16
+          Width = 75
+          Height = 25
+          Anchors = [akTop, akRight]
+          Caption = '&Print'
+          TabOrder = 1
+          OnClick = BitBtn2Click
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            04000000000000010000130B0000130B00001000000000000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+            00033FFFFFFFFFFFFFFF0888888888888880777777777777777F088888888888
+            8880777777777777777F0000000000000000FFFFFFFFFFFFFFFF0F8F8F8F8F8F
+            8F80777777777777777F08F8F8F8F8F8F9F0777777777777777F0F8F8F8F8F8F
+            8F807777777777777F7F0000000000000000777777777777777F3330FFFFFFFF
+            03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+            03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+            33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
+            33333337FFFF7733333333300000033333333337777773333333}
+          NumGlyphs = 2
+        end
+        object CheckBox1: TCheckBox
+          Left = 360
+          Top = 8
+          Width = 73
+          Height = 17
+          Caption = 'Preview'
+          Checked = True
+          State = cbChecked
+          TabOrder = 2
+        end
+        object RadioGroup2: TRadioGroup
+          Left = 191
+          Top = 4
+          Width = 153
+          Height = 41
+          Caption = 'Ukuran Ketas'
+          Columns = 2
+          ItemIndex = 1
+          Items.Strings = (
+            'A4'
+            'A5')
+          TabOrder = 3
+          Visible = False
+        end
+        object cbHarga: TCheckBox
+          Left = 424
+          Top = 8
+          Width = 86
+          Height = 17
+          Caption = 'Tanpa Harga'
+          TabOrder = 4
+          Visible = False
+        end
+      end
+      object Panel12: TPanel
+        Left = 0
+        Top = 169
+        Width = 1525
+        Height = 41
+        Align = alTop
+        BevelWidth = 2
+        Color = 12058623
+        TabOrder = 3
+        object Label25: TLabel
+          Left = 8
+          Top = 2
+          Width = 44
+          Height = 13
+          Caption = 'Cari Nota'
+        end
+        object wwDBNavigator2: TwwDBNavigator
+          Left = 1109
+          Top = 2
+          Width = 414
+          Height = 37
+          AutosizeStyle = asSizeNavButtons
+          DataSource = dsQMaster
+          RepeatInterval.InitialDelay = 500
+          RepeatInterval.Interval = 100
+          Align = alRight
+          Color = 12058623
+          object wwNavButton1: TwwNavButton
+            Left = 0
+            Top = 0
+            Width = 42
+            Height = 37
+            Hint = 'Move to prior record'
+            ImageIndex = -1
+            NumGlyphs = 2
+            Spacing = 4
+            Transparent = False
+            Caption = 'wwDBNavigator1Button2'
+            Enabled = False
+            DisabledTextColors.ShadeColor = clGray
+            DisabledTextColors.HighlightColor = clBtnHighlight
+            Index = 0
+            Style = nbsPrior
+          end
+          object wwNavButton2: TwwNavButton
+            Left = 42
+            Top = 0
+            Width = 42
+            Height = 37
+            Hint = 'Move to next record'
+            ImageIndex = -1
+            NumGlyphs = 2
+            Spacing = 4
+            Transparent = False
+            Caption = 'wwDBNavigator1Button3'
+            Enabled = False
+            DisabledTextColors.ShadeColor = clGray
+            DisabledTextColors.HighlightColor = clBtnHighlight
+            Index = 1
+            Style = nbsNext
+          end
+          object wwNavButton3: TwwNavButton
+            Left = 84
+            Top = 0
+            Width = 42
+            Height = 37
+            Hint = 'Insert new record'
+            ImageIndex = -1
+            NumGlyphs = 2
+            Spacing = 4
+            Transparent = False
+            Caption = 'wwDBNavigator1Insert'
+            Enabled = False
+            DisabledTextColors.ShadeColor = clGray
+            DisabledTextColors.HighlightColor = clBtnHighlight
+            Index = 2
+            Style = nbsInsert
+          end
+          object wwNavButton4: TwwNavButton
+            Left = 126
+            Top = 0
+            Width = 42
+            Height = 37
+            Hint = 'Edit current record'
+            ImageIndex = -1
+            NumGlyphs = 2
+            Spacing = 4
+            Transparent = False
+            Caption = 'wwDBNavigator1Edit'
+            Enabled = False
+            DisabledTextColors.ShadeColor = clGray
+            DisabledTextColors.HighlightColor = clBtnHighlight
+            Index = 3
+            Style = nbsEdit
+          end
+          object wwNavButton5: TwwNavButton
+            Left = 168
+            Top = 0
+            Width = 41
+            Height = 37
+            Hint = 'Delete current record'
+            ImageIndex = -1
+            NumGlyphs = 2
+            Spacing = 4
+            Transparent = False
+            Caption = 'wwDBNavigator1Delete'
+            Enabled = False
+            DisabledTextColors.ShadeColor = clGray
+            DisabledTextColors.HighlightColor = clBtnHighlight
+            OnClick = wwNavButton5Click
+            Index = 4
+            Style = nbsDelete
+          end
+          object wwNavButton6: TwwNavButton
+            Left = 209
+            Top = 0
+            Width = 41
+            Height = 37
+            Hint = 'Post changes of current record'
+            ImageIndex = -1
+            NumGlyphs = 2
+            Spacing = 4
+            Transparent = False
+            Caption = 'wwDBNavigator1Post'
+            Enabled = False
+            DisabledTextColors.ShadeColor = clGray
+            DisabledTextColors.HighlightColor = clBtnHighlight
+            Index = 5
+            Style = nbsPost
+          end
+          object wwNavButton7: TwwNavButton
+            Left = 250
+            Top = 0
+            Width = 41
+            Height = 37
+            Hint = 'Cancel changes made to current record'
+            ImageIndex = -1
+            NumGlyphs = 2
+            Spacing = 4
+            Transparent = False
+            Caption = 'wwDBNavigator1Cancel'
+            Enabled = False
+            DisabledTextColors.ShadeColor = clGray
+            DisabledTextColors.HighlightColor = clBtnHighlight
+            Index = 6
+            Style = nbsCancel
+          end
+          object wwNavButton8: TwwNavButton
+            Left = 291
+            Top = 0
+            Width = 41
+            Height = 37
+            Hint = 'Refresh the contents of the dataset'
+            ImageIndex = -1
+            NumGlyphs = 2
+            Spacing = 4
+            Transparent = False
+            Caption = 'wwDBNavigator1Refresh'
+            Enabled = False
+            DisabledTextColors.ShadeColor = clGray
+            DisabledTextColors.HighlightColor = clBtnHighlight
+            Index = 7
+            Style = nbsRefresh
+          end
+          object wwNavButton9: TwwNavButton
+            Left = 332
+            Top = 0
+            Width = 41
+            Height = 37
+            Hint = 'Search the dataset'
+            ImageIndex = -1
+            NumGlyphs = 2
+            ShowText = True
+            Spacing = 4
+            Transparent = False
+            Caption = 'Browse'
+            DisabledTextColors.ShadeColor = clGray
+            DisabledTextColors.HighlightColor = clBtnHighlight
+            OnClick = wwDBNavigator1ButtonClick
+            Index = 8
+            Style = nbsCustom
+          end
+          object wwNavButton10: TwwNavButton
+            Left = 373
+            Top = 0
+            Width = 41
+            Height = 37
+            ImageIndex = -1
+            NumGlyphs = 1
+            Spacing = 4
+            Transparent = False
+            Caption = 'wwDBNavigator1Button1'
+            DisabledTextColors.ShadeColor = clGray
+            DisabledTextColors.HighlightColor = clBtnHighlight
+            Index = 9
+            Style = nbsCustom
+          end
+        end
+        object Edit1: TEdit
+          Left = 8
+          Top = 18
+          Width = 129
+          Height = 19
+          Ctl3D = False
+          ParentCtl3D = False
+          TabOrder = 1
+        end
+        object wwCheckBox2: TwwCheckBox
+          Left = 144
+          Top = 16
+          Width = 73
+          Height = 17
+          DisableThemes = False
+          AlwaysTransparent = False
+          ValueChecked = '1'
+          ValueUnchecked = '0'
+          DisplayValueChecked = 'True'
+          DisplayValueUnchecked = 'False'
+          NullAndBlankState = cbUnchecked
+          Caption = 'Posting'
+          DataField = 'ISPOST'
+          DataSource = dsQMaster
+          TabOrder = 2
+        end
+      end
+      object Panel13: TPanel
+        Left = 0
+        Top = 48
+        Width = 1525
+        Height = 121
+        Align = alTop
+        BevelWidth = 2
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 4
+        object Label27: TLabel
+          Left = 29
+          Top = 49
+          Width = 29
+          Height = 13
+          Caption = 'Mitra :'
+        end
+        object DBText4: TDBText
+          Left = 151
+          Top = 50
+          Width = 50
+          Height = 13
+          AutoSize = True
+          DataField = 'NAMA_MITRA'
+          DataSource = dsQMaster
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlue
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label28: TLabel
+          Left = 695
+          Top = 30
+          Width = 45
+          Height = 13
+          Caption = 'Tanggal :'
+        end
+        object Label29: TLabel
+          Left = 471
+          Top = 29
+          Width = 23
+          Height = 13
+          Caption = 'Grup'
+        end
+        object Label30: TLabel
+          Left = 522
+          Top = 29
+          Width = 21
+          Height = 13
+          Caption = 'Shift'
+        end
+        object Label31: TLabel
+          Left = 441
+          Top = 96
+          Width = 41
+          Height = 13
+          Caption = 'Operator'
+        end
+        object Label32: TLabel
+          Left = 441
+          Top = 78
+          Width = 66
+          Height = 13
+          Caption = 'Tanggal Input'
+        end
+        object DBText8: TDBText
+          Left = 517
+          Top = 78
+          Width = 60
+          Height = 16
+          AutoSize = True
+          Color = clBlack
+          DataField = 'TGL_INSERT'
+          DataSource = dsQMaster
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clRed
+          Font.Height = -13
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+          Transparent = True
+        end
+        object DBText9: TDBText
+          Left = 517
+          Top = 93
+          Width = 60
+          Height = 16
+          AutoSize = True
+          Color = clBlack
+          DataField = 'OPR_INSERT'
+          DataSource = dsQMaster
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clRed
+          Font.Height = -13
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+          Transparent = True
+        end
+        object Label33: TLabel
+          Left = 12
+          Top = 17
+          Width = 47
+          Height = 13
+          Caption = 'No. SPB :'
+        end
+        object wwDBLookupComboDlg2: TwwDBLookupComboDlg
+          Left = 71
+          Top = 47
+          Width = 69
+          Height = 21
+          AutoSize = False
+          GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
+          GridColor = clWhite
+          GridTitleAlignment = taLeftJustify
+          Caption = 'Lookup'
+          MaxWidth = 0
+          MaxHeight = 209
+          UserButton1Caption = '&Refresh'
+          Selected.Strings = (
+            'KD_MITRA'#9'10'#9'KD_MITRA'#9'F'
+            'NAMA_MITRA'#9'50'#9'NAMA_MITRA'#9'F')
+          DataField = 'KD_MITRA'
+          DataSource = dsQMaster
+          LookupTable = DMFrm.QLookMitra
+          LookupField = 'KD_MITRA'
+          TabOrder = 0
+          AutoDropDown = False
+          ShowButton = True
+          AllowClearKey = False
+          OnCloseUp = LookMitraCloseUp
+          OnEnter = LookMitraEnter
+        end
+        object wwDBDateTimePicker3: TwwDBDateTimePicker
+          Left = 745
+          Top = 22
+          Width = 121
+          Height = 22
+          TabStop = False
+          BorderStyle = bsNone
+          CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+          CalendarAttributes.Font.Color = clWindowText
+          CalendarAttributes.Font.Height = -11
+          CalendarAttributes.Font.Name = 'MS Sans Serif'
+          CalendarAttributes.Font.Style = []
+          DataField = 'TANGGAL'
+          DataSource = dsQMaster
+          Epoch = 1950
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+          ShowButton = True
+          TabOrder = 1
+        end
+        object wwDBComboBox5: TwwDBComboBox
+          Left = 464
+          Top = 46
+          Width = 41
+          Height = 19
+          ShowButton = True
+          Style = csDropDown
+          MapList = False
+          AllowClearKey = False
+          DataField = 'GRUP'
+          DataSource = dsQMaster
+          DropDownCount = 8
+          ItemHeight = 0
+          Items.Strings = (
+            'A'
+            'B'
+            'C'
+            'D'
+            'E'
+            'F'
+            'G')
+          Sorted = False
+          TabOrder = 2
+          UnboundDataType = wwDefault
+        end
+        object wwDBComboBox6: TwwDBComboBox
+          Left = 515
+          Top = 46
+          Width = 41
+          Height = 19
+          ShowButton = True
+          Style = csDropDown
+          MapList = False
+          AllowClearKey = False
+          DataField = 'SHIFT'
+          DataSource = dsQMaster
+          DropDownCount = 8
+          ItemHeight = 0
+          Items.Strings = (
+            '0'
+            '1'
+            '2'
+            '3')
+          Sorted = False
+          TabOrder = 3
+          UnboundDataType = wwDefault
+        end
+        object wwDBEdit3: TwwDBEdit
+          Left = 71
+          Top = 14
+          Width = 166
+          Height = 19
+          DataField = 'NO_SPB'
+          DataSource = dsQMaster
+          TabOrder = 4
+          UnboundDataType = wwDefault
+          WantReturns = False
+          WordWrap = False
+        end
+        object VPotong: TCheckBox
+          Left = 696
+          Top = 64
+          Width = 97
+          Height = 17
+          Caption = 'Koreksi Potong'
+          TabOrder = 5
+        end
+      end
+      object Look_KP: TwwDBLookupComboDlg
+        Left = 263
+        Top = 271
+        Width = 69
+        Height = 21
+        AutoSize = False
+        GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
+        GridColor = clWhite
+        GridTitleAlignment = taLeftJustify
+        Caption = 'Lookup'
+        MaxWidth = 0
+        MaxHeight = 209
+        UserButton1Caption = '&Refresh'
+        Selected.Strings = (
+          'KD_PRODUKSI'#9'20'#9'KD PRODUKSI'#9'F'
+          'SUB_KELOMPOK'#9'30'#9'KONSTRUKSI'#9'F')
+        DataField = 'KD_PRODUKSI'
+        DataSource = dsQDetail
+        LookupTable = QLook_KP
+        LookupField = 'KD_PRODUKSI'
+        TabOrder = 6
+        AutoDropDown = False
+        ShowButton = True
+        AllowClearKey = False
+        OnCloseUp = Look_KPCloseUp
+        OnEnter = Look_KPEnter
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = '&Browse'
+      ImageIndex = 1
+      object LabelBanner: TLabel
+        Left = 0
+        Top = 52
+        Width = 1525
+        Height = 16
+        Align = alTop
+        Color = clSkyBlue
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -13
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Panel3: TPanel
+        Left = 0
+        Top = 0
+        Width = 1525
+        Height = 52
+        Align = alTop
+        BevelInner = bvLowered
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 0
+        object GroupBox1: TGroupBox
+          Left = 2
+          Top = 2
+          Width = 287
+          Height = 48
+          Align = alLeft
+          Caption = 'Filter Tanggal'
+          TabOrder = 0
+          TabStop = True
+          object Label5: TLabel
+            Left = 132
+            Top = 22
+            Width = 24
+            Height = 13
+            Caption = 'S/D'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object VTglAwal: TwwDBDateTimePicker
+            Left = 8
+            Top = 16
+            Width = 121
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 0
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAwalChange
+          end
+          object vTglAkhir: TwwDBDateTimePicker
+            Left = 160
+            Top = 16
+            Width = 121
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 1
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = vTglAkhirChange
+          end
+        end
+        object Panel4: TPanel
+          Left = 289
+          Top = 2
+          Width = 568
+          Height = 48
+          Align = alLeft
+          BevelOuter = bvNone
+          TabOrder = 1
+          object vOperand: TLabel
+            Left = 150
+            Top = 20
+            Width = 44
+            Height = 24
+            Cursor = crHandPoint
+            Alignment = taCenter
+            AutoSize = False
+            Caption = 'LIKE'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clNavy
+            Font.Height = -19
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            OnClick = vOperandClick
+          end
+          object cbTanggal: TCheckBox
+            Left = 200
+            Top = 5
+            Width = 129
+            Height = 17
+            Caption = 'Ikutkan Filter &Tanggal'
+            Checked = True
+            State = cbChecked
+            TabOrder = 1
+            OnClick = cbTanggalClick
+          end
+          object BitBtn3: TBitBtn
+            Left = 328
+            Top = 20
+            Width = 75
+            Height = 25
+            Caption = 'Filte&r'
+            Default = True
+            ModalResult = 1
+            TabOrder = 3
+            OnClick = BitBtn3Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+              555555555555555555555555555555555555555555FF55555555555559055555
+              55555555577FF5555555555599905555555555557777F5555555555599905555
+              555555557777FF5555555559999905555555555777777F555555559999990555
+              5555557777777FF5555557990599905555555777757777F55555790555599055
+              55557775555777FF5555555555599905555555555557777F5555555555559905
+              555555555555777FF5555555555559905555555555555777FF55555555555579
+              05555555555555777FF5555555555557905555555555555777FF555555555555
+              5990555555555555577755555555555555555555555555555555}
+            NumGlyphs = 2
+          end
+          object ECari: TEdit
+            Left = 200
+            Top = 23
+            Width = 121
+            Height = 19
+            Ctl3D = False
+            ParentCtl3D = False
+            TabOrder = 2
+          end
+          object cbOtomatis: TCheckBox
+            Left = 7
+            Top = 5
+            Width = 98
+            Height = 17
+            Caption = 'Cari &Otomatis'
+            TabOrder = 0
+            OnClick = cbOtomatisClick
+          end
+          object dbcField: TwwDBComboBox
+            Left = 8
+            Top = 23
+            Width = 137
+            Height = 19
+            ShowButton = True
+            Style = csDropDown
+            MapList = False
+            AllowClearKey = False
+            Color = clYellow
+            DropDownCount = 8
+            ItemHeight = 0
+            Items.Strings = (
+              'SEMUA KOLOM')
+            ItemIndex = 0
+            Sorted = False
+            TabOrder = 4
+            UnboundDataType = wwDefault
+            OnEnter = dbcFieldEnter
+          end
+          object BtnExport: TBitBtn
+            Left = 408
+            Top = 20
+            Width = 97
+            Height = 25
+            Caption = '&Export2Excel'
+            TabOrder = 5
+            OnClick = BtnExportClick
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+              00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+              00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+              00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+              0003737FFFFFFFFF7F7330099999999900333777777777777733}
+            NumGlyphs = 2
+          end
+        end
+      end
+      object wwDBGrid1xxxxx: TwwDBGrid
+        Left = 0
+        Top = 68
+        Width = 1525
+        Height = 666
+        DisableThemes = True
+        DisableThemesInTitle = True
+        ControlType.Strings = (
+          'ISAKTIF;CheckBox;1;0'
+          'ID_SUB_BAG;CustomEdit;LookBagian;F'
+          'ID_HAK;CustomEdit;LookJnsMenu;F')
+        PictureMasks.Strings = (
+          'ID_BAG'#9'*2{#,&}'#9'T'#9'T'
+          'KD_JNS_ITEM'#9'#,&'#9'T'#9'T'
+          'KD_SATUAN'#9'#,&'#9'T'#9'T'
+          'ID_USER'#9'*3{&,#}'#9'T'#9'T')
+        Selected.Strings = (
+          'NO_NOTA'#9'20'#9'NO_NOTA'#9'F'
+          'NO_SPB'#9'25'#9'NO_SPB'#9'F'
+          'NO_URUT'#9'3'#9'NO_URUT'#9'F'
+          'TANGGAL'#9'18'#9'TANGGAL'#9'F'
+          'NO_MESIN'#9'10'#9'NO_MESIN'#9'F'
+          'KD_MITRA'#9'4'#9'KODE'#9'F'#9'MITRA'
+          'NAMA_MITRA'#9'25'#9'NAMA'#9'F'#9'MITRA'
+          'NO_BEAM'#9'20'#9'NO_BEAM'#9'F'
+          'KD_KONSTRUKSI'#9'6'#9'KD_KONSTRUKSI'#9'F'
+          'KONSTRUKSI'#9'30'#9'KONSTRUKSI'#9'F'
+          'NO_RESEP'#9'25'#9'NO_RESEP'#9'F'
+          'KD_PRODUKSI'#9'5'#9'KD_PRODUKSI'#9'F'
+          'CORAK'#9'20'#9'CORAK'#9'F'
+          'POTONG'#9'10'#9'POTONG'#9'F'#9'QTY'
+          'METER'#9'10'#9'METER'#9'F'#9'QTY'
+          'KOREKSI'#9'10'#9'KOREKSI'#9'F'
+          'QTY_AKHIR'#9'10'#9'QTY_AKHIR'#9'F'
+          'METER_AKHIR'#9'10'#9'METER_AKHIR'#9'F'
+          'WARPING'#9'20'#9'WARPING'#9'F'
+          'KET_DETAIL'#9'25'#9'KETERANGAN'#9'F'
+          'TGL_INSERT'#9'18'#9'TGL_INSERT'#9'F'
+          'MESIN'#9'30'#9'MESIN'#9'F'
+          'RES'#9'30'#9'RES'#9'F')
+        IniAttributes.Enabled = True
+        IniAttributes.SaveToRegistry = True
+        IniAttributes.FileName = 'Pismatex Master'
+        IniAttributes.Delimiter = ';;'
+        IniAttributes.CheckNewFields = True
+        ExportOptions.ExportType = wwgetHTML
+        ExportOptions.Options = [esoShowHeader, esoShowFooter, esoShowTitle, esoDblQuoteFields, esoBestColFit, esoShowRecordNo, esoShowAlternating]
+        TitleColor = clSkyBlue
+        FixedCols = 0
+        ShowHorzScrollBar = True
+        Align = alClient
+        DataSource = dsQBrowse
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgPerfectRowFit, dgShowFooter, dgTrailingEllipsis, dgDblClickColSizing]
+        ParentFont = False
+        ReadOnly = True
+        RowHeightPercent = 125
+        TabOrder = 1
+        TitleAlignment = taCenter
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Lucida Sans'
+        TitleFont.Style = [fsBold]
+        TitleLines = 3
+        TitleButtons = True
+        UseTFields = False
+        OnTitleButtonClick = wwDBGrid1xxxxxTitleButtonClick
+        OnEnter = wwDBGrid1xxxxxEnter
+        OnUpdateFooter = wwDBGrid1xxxxxUpdateFooter
+        PaintOptions.AlternatingRowColor = clMoneyGreen
+        PaintOptions.ActiveRecordColor = clGreen
+        GroupFieldName = 'NO_NOTA'
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'Rekap Per Mitra'
+      ImageIndex = 2
+      OnShow = TabSheet3Show
+      object Label14: TLabel
+        Left = 0
+        Top = 52
+        Width = 1525
+        Height = 16
+        Align = alTop
+        Color = clSkyBlue
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -13
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object WebBrowser1: TWebBrowser
+        Left = 0
+        Top = 68
+        Width = 1525
+        Height = 666
+        Align = alClient
+        TabOrder = 3
+        OnDocumentComplete = WebBrowser1DocumentComplete
+        ControlData = {
+          4C0000009D9D0000D54400000000000000000000000000000000000000000000
+          000000004C000000000000000000000001000000E0D057007335CF11AE690800
+          2B2E126208000000000000004C0000000114020000000000C000000000000046
+          8000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000100000000000000000000000000000000000000}
+      end
+      object QuickRep3: TQuickRep
+        Left = 46
+        Top = 129
+        Width = 794
+        Height = 529
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Frame.Width = 2
+        DataSet = QPerMitra
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        Functions.Strings = (
+          'PAGENUMBER'
+          'COLUMNNUMBER'
+          'REPORTTITLE')
+        Functions.DATA = (
+          '0'
+          '0'
+          #39#39)
+        Options = [LastPageFooter]
+        Page.Columns = 1
+        Page.Orientation = poPortrait
+        Page.PaperSize = Default
+        Page.Values = (
+          50.800000000000000000
+          1399.540000000000000000
+          50.800000000000000000
+          2100.580000000000000000
+          50.800000000000000000
+          50.800000000000000000
+          0.000000000000000000)
+        PrinterSettings.Copies = 1
+        PrinterSettings.Duplex = False
+        PrinterSettings.FirstPage = 0
+        PrinterSettings.LastPage = 0
+        PrinterSettings.OutputBin = Auto
+        PrintIfEmpty = True
+        SnapToGrid = True
+        Units = Inches
+        Zoom = 100
+        object QRBand7: TQRBand
+          Left = 19
+          Top = 19
+          Width = 756
+          Height = 137
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = []
+          ForceNewColumn = False
+          ForceNewPage = False
+          ParentFont = False
+          Size.Values = (
+            362.479166666666700000
+            2000.250000000000000000)
+          BandType = rbTitle
+          object Label15: TLabel
+            Left = 28
+            Top = 43
+            Width = 4
+            Height = 18
+          end
+          object QRLabel32: TQRLabel
+            Left = 102
+            Top = 28
+            Width = 138
+            Height = 22
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              58.208333333333330000
+              269.875000000000000000
+              74.083333333333330000
+              365.125000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'Bligo Sapugarut, Pekalongan'
+            Color = clWhite
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Arial Narrow'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRImage1: TQRImage
+            Left = 4
+            Top = 4
+            Width = 69
+            Height = 47
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              124.354166666666700000
+              10.583333333333330000
+              10.583333333333330000
+              182.562500000000000000)
+            Picture.Data = {
+              07544269746D617022210000424D222100000000000036000000280000004100
+              00002B0000000100180000000000EC200000120B0000120B0000000000000000
+              0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFDFDFDE4E4E4F5F5F5FEFEFEFEFEFEFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFF9F8F8B7B3B0A09893BFA9AAF8F5F5F9FEFEF8FEFE
+              FEFEFFFFFDFFFFFFFFFFFFFFFFFFFCFEFFFEFEFFFFFDFFFFFFFFFFFFFFFFFFFF
+              FFFAFCFFF9FEFFF8FDFFF7FEFFF7FEFCF8FFFEF8FFFEFAFFFCFCFFFEFDFFFEFD
+              FFFFFEFFFFFFFFFFFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFFFDF7F3F1C2B5ABB59684B4998CE1CE
+              D1FBFAFBFFFEFFFEFFFFF8FFFDF7FDFEF6FCFEF5FBFEEBEFFBC5D4E4A9BBCAB3
+              C0D2B2BED4A0B3CE8CA2C58E99C9929DCA9AA4CEA4AED4ACB6D3B1B6D4C5CCE3
+              EBF0FAF4FAFFF8FEFFFBFFFEFCFFFCFDFFFEFEFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFEFEFEFCFAD7CEBFB8
+              937DC0886FC89D90BEACB0F0EDF3F3F3FCB7C1D78395B17785AB5E648C536387
+              697BA08392B0A1AFCFACBDDDAEC4DFAAC2DDADC5E1B0C2DF99A6C98895B9737B
+              AF535B95606999838BB08E98B4BFC7DEEFF4FFF3FAFFF8FCFFFDFFFFFEFFFEFF
+              FFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FEFDFDD3C1BDC09E8EC0917EB7837CB78084A16E817459779895B7C5CDE3D9E0
+              EFC6CBDEC3C7E5BCC2E6999FCB9098C68390C07D95C28093C58395C2909CCAB3
+              BFE9B5CBE7B4CDE0CADFF3B8C7E48695BE717CAD676DA08188B0C5CFE0E5EDF4
+              F7FEFEFBFDFEFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFCFFFFF5FCFEE0E5F48C83AC866886B6837ACB8968D08C6BB77E6AB98D8CB1
+              8FA67A5C89574D864A4B8F4A51A6424CAC4253AF3947A44448A84A4BAC4142A3
+              4443A94848AF4551A544579D4F63A07489B694A7C2BCD3E5C7DCED9BADC67887
+              AB6F76A69DA2CFDFE2F7F7FBFFF9FDFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFF7FEFFA9B7D4656F957F87ADCAC4DFC0AFCD937186B87F77C28067
+              CE8364C57A6BAC686E95647E76517F644A8E59499D554DA44D439C443999463E
+              A13A369A37389F353AA24146B1353BA5383FA237409C444AA0444C9C606EAD84
+              91C2C1D2F0BECCE87685AD616E9895A5C2E5F4F9F7FEFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCFDFF
+              FEFFFEF9FEFED3DCE5767DA87487A8C4D5E9B4C1E25F67A7424AA04F4AA66A4F
+              97946B91B77B7DCA8164D8855CD88362D3816DC37976A46A7796617D8F5D8486
+              579472498765468B50429A3A3EA53F44AC393A9E403FA44846AF4541B6413FB5
+              4244AA4C54B54C58AB6375B2ADC2E3C6DEEC8393B27378AEC0C7E0F3FBFEFBFE
+              FFFFFFFBFFFFFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFE
+              FFFCFDFEF6FCFCADB8CD69739EA7B5D5C1D2EF6C79B241479E363CA32F39A436
+              3DA74442AA493D926B518994677DB57978C77C6ECA7C68CC8268D38469D08167
+              CD7D6BC47C6FC27A73B26D74955F7E6C467F6346896649896F4E8F6B498B6948
+              915A40905447965349A74743AA454AAE3D4CA3707BC0ADB8DBA9B8D8626F9D9D
+              A2C4E9F0F8FDFDFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFCFEFEF3F7FC9FA3C27177ABC2CCEB9CAFCF5359AA3C3DA33938A93B3DB2
+              3B41B22D37A63339AB383DAB4442A44F4295564288745081986B88AE767DCA84
+              71D78663D8875BD38B59DC8A5CDD875ED57E63CE7B6FBE7877BC7679BC7272C2
+              7574BF7478B7737DAC738E946695714F985B4AA7454AAE3D3FAA474CA2899EC5
+              BED6E57B88A67D7EA8EAE9F7FCFEFFFEFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFAFDFED8DFEB8488AFACB4D4A7B4D76570AF4247A74747B73F44B53A3E
+              B0363BAA353EA5373EA63A3CAA393FB2353CB13537AD4040B33D3AA145419B51
+              4A926A5B91735B8676587F815674976A78AC7978B57F6FBE866DC7866ECD846A
+              D58766D3835ED88864D58763DB8B68D08471B77980956A908166A34743994048
+              AD4049AA5665AF94A1CCB4BBDA696C9AB9C0D2F4F8FEFDFFFFFEFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFFFFFFFF
+              FFFFFFFEFCFCFEE6EDF87279A2AFB8D7AEBFDB4F59A73F42B33E45B93D44B336
+              3CAC373FAC3F44B22E34A43B3EAD3939A82F33A6373EB73035AD3739AC353BAF
+              3D45B63B43AB414AAC494FB24449AC4A43A14944965851985B52895E517F6F57
+              7C805F7E9871879C71819D737E9F747FA87B7DAB7D82A27480916E8F79649A59
+              50AC4046AB404AAE3D44B84652B18499C3BCCCE36A7598BFC6D8F6FCFFFEFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFF9FAFF9298B994A8BEBECEE64B4FA54647B64146B93740B4
+              333AAF3942B3353EB04144BA3437B23839B2383FB12F39B2353EB53038AB363C
+              A9363CAE3D43AE4A50B74545AB4745A94948AB3F44A53B43A74247AB3D3FA444
+              44AF4645AF4746A5534CA350459359539A4D4791504C9A554C985A4D91574A96
+              4C48A14949AA4748B33F44B43747AC3548A84050AC8D9FC7B5C4DD6C739AD1D0
+              E7FCFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFEFEFFFFFCFFFFC3C7DD7679A5C9DDEC5566A53D46A63C40B3373D
+              B4323BAF3E40B2404BAB404DA53E49AA4347AE3B3F9B3B3EA32B37AF2F35B035
+              36A5363BAD2E36A93742AB3A44AD484DB9454BAE454EA1474CA54F53AF484DA2
+              454C9F3739A83A3EB6484DA34E4AA14C4DAD46509F45439C4944A13F3EB6464C
+              AA504CAA4643A3464DA24A4BA5423F9D3137A43541B03E47AC424EA1A4B6DBA8
+              B2D77C7AABEEF2F6FEFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFEEF1F87F82AAC1CDE57F8BBB3F4B9E4148AB39
+              3FAF4248B93A43AE5556AA7883B57A85AA818AB5858DB67C84AF565DAA404BB9
+              383FB63B3BAA3039A82E35A93641AB404DAF474EAC6B6FB48991B89097BC9397
+              BC9097B88791BA4B52A34F54B08188B59491B68E94BE8F9EB89395BC767CB54D
+              55AF6472AD9799C39C9DC89AA4C79B9EC49597C84C54A93645AA3642A035409F
+              4450A0B9CCE4818BB4AFB2D5F8FCFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFEFFFEC7CBE38A8EB9B9CAE04D51A2434BAC
+              4044AF3A42AF3842AE3F4DAE6F75AFECF4FEF8FFFFFCFEFFFCFEFFF6FCFF818C
+              BA3643A13239A93637A43139A8353CB0323EA73B49A94D51A4B9BBD9FCFDFFFE
+              FEFFFFFFFFFBFEFFEAF1F9525B9C565CA3E5E9F5FEFDFFFDFEFFFAFFFCFDFEFF
+              B1BEDB525AADA4B1D7FBFCFFFDFDFFFBFEFFFDFEFFECEAF9585EAA3340A5353E
+              A73D48B53D4CA2687BB3B8CBE66F76AFE8EFF8FDFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFF8FAFB8A8BABB0B8D97184AD4042
+              A53C40A94246B24048B33C45AF3846A97176B0F4F8FEFFFFFFFFFFFFFFFFFFFB
+              FDFF8691B63E4AA33E40B14141AE333CA93640AE3643AA3F4EAF545CAABCC0D7
+              FFFFFDFFFFFFFFFFFFFFFFFFF1F2F9535B9E5A5FA9EAEDF5FFFFFFFFFFFFFFFF
+              FAFEFFFFB3BFDB565AB5ACB3DDFEFFFFFFFFFFFFFFFFFFFFFFECE9F8575BA73E
+              48B34146BB3941B64254A85057B5A5B9D77382ADA9B2D2F7FBFFFEFEFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFEF2EFF89294B4D5E1F85D
+              66B04045AA3F45B0474CB74049B33B47B13D49B26C78B2F1F9FDFEFFFDFFFFFF
+              FFFFFFFDFEFF8E91B9454EA93A3EB13D3FAB353EA7353DA43543A7394BB24E5B
+              B2BABDD9FFFFFDFDFFFFFFFFFFFFFFFFF0F2F9555FA05863ADE4ECF5FFFFFFFE
+              FFFFFFFFFDFEFFFFB5C0D95654B8B3BAE6FDFFFFFFFFFFFEFFFFFFFFFFECEAF8
+              565FA5414AB14047B03D49AE3E46B2494DB37D8CC5B2C7E18896BAF0F8FDFBFE
+              FDFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFEFDD0CDE57B85A3
+              AAB8D74349AC3943A3383DAA4045B1333BA7333CA9353FAB6474ABEFFBFDFEFF
+              FCFFFFFFFFFFFFFDFEFF868BB64048A73A3EAC3A39A4313EA23641A3414DB034
+              44AB4653AFB2BAD8FDFFFFFAFFFFFFFFFFFFFFFFF1F5F9545E9C5664AAE3ECF5
+              FFFFFFFEFFFFFDFFFDFFFFFFB6BFD55454AFB4BCE4FDFFFFFFFFFFFCFFFEFDFF
+              FFEAEEF85562A0414FAC4A4FAC4851AB3F3BBD3F45A74952A2B4C6DF677798D6
+              DEEDFDFEFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFDFFFEA0A7
+              CD8091AF97A1CA474BB13B46AF444CB7383EAE3E43B54148B63C43AC6A77B7F6
+              FBFDFFFFFDFFFFFFFFFFFFFEFFFF8C94C34C54BC4149A63E3EA73C45AD3A4BAF
+              3D47AB484FB3535DB1B3BAD7FEFFFFFFFFFFFFFFFFFFFFFFF4F7F95962A15865
+              B1E5EBF5FFFFFEFFFFFFFFFFFFFFFFFFB5BDD65257A6B9C2E0FDFFFFFFFFFFFE
+              FFFFFFFFFFECF1F85662A7404AB34544AD4245AC3F46AF3D4AB34951ADC1CBE9
+              7888A6C6D0E4FFFFFEFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFD
+              FFFF969AC5A7B7D19299C63E3FA93C45B1393FAA3A3EAF363BAD3941B03F47AF
+              6E79BBF4FAFDFFFFFEFFFFFFFFFFFFFDFEFF8893BA4650AD43489F4F49AF4242
+              AE3B45A74349AA494BB05059B0B6BDD8FFFFFFFFFFFEFFFFFFFFFFFFF4F6F954
+              5C9B515CA9E4ECF4FFFFFEFFFFFFFFFFFEFEFFFFB6BFD85158A5B9C5E0FDFFFF
+              FFFFFFFDFFFFFFFFFFEAEFF8515DA13E48B04242AB3D3FA83E45AD3C48B24147
+              A596A0C89BAAC6C2CCE3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFCFEFE9194C1A4AECD979DC9403FAA3842AD3D44AE3D43B03C42B13B40
+              AF3F48AE7683C3F5FBFDFFFFFDFFFFFFFFFFFFFDFFFF929BC1505AAA7581B07D
+              7CB27C81B86B71AE5353A54D4DB0535EB5B6BFDAFFFFFCFFFFFFFFFFFFFFFFFF
+              F6F6F95A62A1525BAAE5EDF5FFFFFEFFFFFFFFFFFEFFFFFFBAC2D9565EAAB6C5
+              DFFDFFFFFFFFFFFEFFFFFFFFFFECF2F95A67AC424BB54344B04344AC4149B03D
+              46B0444CA79099C4A5B5CC97A1C0FEFEFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFEFFFF9FA2CB9BA5C69EA2CE4C49B13E47AE3A43AA3F46B33C
+              43AF4048B2414BAE7280BEF4FBFDFFFFFDFFFFFFFFFFFFFDFEFF8D93C04C589F
+              DBE9F5FBFEFFF9FEFEE9F0FA9898C6585CAE5563B7BAC5DFFFFFFDFFFFFEFFFF
+              FFFFFFFFF5F7F95C65A65561AEE2EBF5FFFFFCFFFFFFFFFFFFFEFFFFBAC1D955
+              59A6BBC8DEFDFFFFFFFFFFFDFFFFFFFFFFECF0F85662A63B45AD3F41AB4346AC
+              4047AF3641AC4149A68A92C2A7B7CEA1AAC7FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFEFFFEC6CAE47E89A5A7ADD24845AA3943A83D45AC
+              3940AB343BA7383FA84049AB707ABBF4FBFDFFFFFDFFFFFFFFFFFFFDFEFF8C93
+              C44A549AE1EBF4FFFFFFFFFFFDFAFEFAE9ECF6777CBC4E5DAEB7C1DCFFFFFEFF
+              FFFEFFFFFFFFFFFFF3F5F95E66A75461AEE5EBF5FFFFFDFFFFFFFFFFFEFEFFFF
+              B9C0DA545AA8B9C5DEFDFFFFFFFFFFFDFFFFFFFFFFECF1F85563A8424CB54445
+              AC3A3AA44047B13B46B04149A4959DC7A0B1C9BBC8DFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFEFCE0E5F58694AED4DEF45857A84042
+              AC343BA34147B03F44B04047B04148AA727DB9F1FAFDFFFFFEFFFFFFFFFFFFFC
+              FEFF959BCA595EA9E1ECF6FEFFFFFFFFFFFFFFFBFAFDFE919CC74F5AA7B8BEDB
+              FFFFFEFFFFFFFFFFFFFFFFFDF4F6F85E66A4535DA7E4ECF5FFFFFBFFFFFFFFFF
+              FFFFFFFFBCC2DE5E61AEBDC6E4FDFFFFFFFFFFFEFFFFFFFFFFE8ECF75058A042
+              49B44146AC3E42AD4249B0363FA44349A0B6BFE37D8BA8C7CFE0FDFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFEFFF3F6FB757CA4B9C8DE69
+              70A44943AF363DA73739A6393EAA343BA4444AAC6977B0F1F9FDFEFFFDFFFFFF
+              FFFFFFFAFEFF8890BD4C51A5DAE7F5FEFFFFFFFFFFFFFFFFF9FFFFACBADA555A
+              A6BABADEFCFFFDFEFFFFFFFFFFFFFFFDF5F9FB6C6FB35760A5E0EEF5FFFFFDFF
+              FEFFFFFFFFFBFFFDB2BED6525AA4B8C1DFFEFFFCFFFFFDFFFFFFFEFFFEE6F1F8
+              595FAB4244B33B44A53D47B23C43AF4146A5454A8FB8BFDA687091D9DEEAFBFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFDFFFBFEFFA9AFCD
+              979FC4B5BDD94E57A03440A53841AD3C44B03B46B04753B5727CB2F2F7FDFFFF
+              FEFFFFFFFFFFFFFAFDFF8991C049509EDFE5F5FFFFFFFFFFFFFEFFFDF9FEFE89
+              94C14D53A9A9B3D9F5FFFDFFFFFEFFFFFFFEFFFFEEF4FA575AA84E57ADD9E8F7
+              FBFFFEFFFFFFFFFFFFFEFFFFB2C1D74E5C9DB2BDDFFDFEFFFFFFFFFFFFFFFFFF
+              FDE8F0F85C63AC484AB73F4AAD3D4AAE4347BC4046A77C8ABBB9C5E39298BAF4
+              FAFDFBFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FEE2E3EF6F70A2CBD6E66577A33847A2404AB1353DAB3743AF3647A76D76AAF1
+              F8FDFDFFFDFFFFFEFFFFFFF8FEFF8390BB4C5999DFECF4FEFFFFFFFFFFFCFFFC
+              DCE5F36C76BC4D56B36E7DB5E7F7FAFEFFFEFDFFFFF9FFFFDAE8F5434E9B4854
+              AEA7BBDFF1FEFCFCFFFBFEFFFFFBFDFF7E89BD44529F7B85B8F3F8FCFCFEFDFD
+              FEFEFDFFFFC9D0E74D52A34245B13C44AB3948A74044B94650A9A8BBD5818EAE
+              B2B7D1FEFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFBFEFEA3A5C48B95B6B8C9E1465597424BA74047B3343CAD3D4AB1
+              6571AFE2F3FDEEFEFFEDFCFFF0FCFFEAF9FF7281BA32488BD2E7F4F4F9FFF5FC
+              FFD6E9F57280B13D47A4434DB24D5EA79DB1D4EFFBFFF0FCFFE0F0FB7081B039
+              469831419B5165A0D4E8F5EEFEFFEEFAFFB7BEE25256B53947AD4857A4AEB6D3
+              ECF9FBF2FBFEE0E9FD7C86BF444CA83A42AC3F47AF3A44A44046A26F7AB2B1BE
+              D3707A96EEF3F7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFCFFFDFFFDFFF8EFF4F7747BA8AFBDDA99A7CC424B964749B03F44
+              B43D43B4404CAB5B6DB25F77B16676BC6C7BC16B78BF444CAF344BAA6D86C17D
+              87CD6777B64D64A53B4BA63D49B5404AB1474FAD4B54A86472B16D81BB5063AA
+              3944A43038A2333CA93A45AA4F5CAB6678B2586AA542509D3C40A72E3EAB394A
+              AE4A52A65C6AAA6379AC4C5CA04652B33F4DB54049AE4348B04745AF556296CB
+              D6E98283AFC1C3D4FDFFFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFDFFFDFFFFFFFAFBFFFAD1D2EA73789BD2DEEC8994BF4A
+              4CA63D3BAE383AAC363FB03947AD3649AA3741B0383EB23C42B2373BB23241B3
+              2F43A53039A326369C3648AB303CAA2832A13843AC3940A63B3EAA3841AA3644
+              A63340AB3037AC2E33A92D35A7353BAF393FAF3540A23542A03340A2353CA130
+              3FAA3843B53F42B04049AE414FAD2E3D9E3B46AF3443A33A45A43E45A8494D9C
+              B5C0D99EA3C6918CB5F4F4FAFCFEFAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFDFDD4D6E07D81A8
+              ADB5D8AAB4D7565EA14847AD393EB0353CAF3A40B52730A32F38A9333EAC3742
+              AF2F3BAA2E37A72F39A92934A2333AA83F45B23A40AC4249B43A42A8373EA930
+              3AA8252F9F3039A8303BAB2631A22C31A2383DAD383FAB393EAA3139A1363EA6
+              323CA6323BA73236A7373DA93E42AA3A44A83B45AD3E43AE3C43A53E49975C67
+              A6B4BFDB99A0BF9395B6E5E6F1FFFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFF
+              FED9DCEA7571A8979CC3CED9EC6C74A83E459C3E42AC353AB23942BA2D3FA92F
+              41A8353BAE2A32A53138AA2B32A32F38A63238A7383DAC2F34A1353CA63840A7
+              3740A8323AA82F37A42D36A527309E222A9B333AA9353AAB3D42B03A42AB2A32
+              9B363EA52E3EA22E3EA8313AAB3B40B0343BA83F4CAE3440A4373AA94546A96F
+              75AFCBD6EC868BAE8C92ADEFF4F8FCFEFEFDFEFEFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFEFFFCFDFFFAE8E7F3918EBF8A88BCD3DDEE8A99BD4B569A444CAB3C42B3
+              3643B23D48B9393FB13A3DB13338AA3238AA373BAD3A41B03F47B33D41AF474F
+              B84149B13F48B2363EAA3C44AF2C33A1363BAB2B329F3C42AF3B3FB03A40AD34
+              3BA43B44AA3B46AD3343A63843AD3B44AF3E45B34045AF4449B2464FAF515CA6
+              8B93C0CCD3E68C91AE9291B4EEF2F7FBFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFEFEFDFEFFF1F2F5F89E9CBF7776A4B2C0D5B6C5E26F7C
+              AF4951A0494BAF4748B53C3EAD3A3FAA3536A43C40AD4144B0383EAC2C31A137
+              3BA94048B13841A93B42AB4144B0363CA73A41AC3D41AC3135A14247B43D44B1
+              3A42AE3840AA434CB33C44AC3940A73A41A93D43A84B4EB0464DA54E51A76E74
+              B8AAB4D9BBC9D56E788F9EA4BDF5F5FBFDFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFEFFFEFFFFFCFFFCFFFCFCFFFDDADCEA757CA88A
+              95B5D0DDECB9C1D87273AE4E4EA34248AB3B40A44046AB3A3DA63C40A74146B2
+              3D42B03940AB3F47B0373FA93E46AD474CB64247B33B3FAA4144AF383CA73B41
+              AC333BA7393EAA4149B2353DA63D43AC3C3FA54243A94649A74D51A6686CB3B1
+              B9D9D1DAEC8B91B6767AA2CDD5E1F2FCFEFDFFFBFEFFFEFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              EFF4F7A8ABC070739E888AB8C7D1E9C3D1EC7D89BC5C64A44950A04749A84444
+              AB474CB3454CB03D42A8494FB7464BB2464CB43E49AE3F4DB1424FB23E4BAE3B
+              46AB4049AD424AAD4248AC4B50B25055B55055B15B59AA6D71B68189BFB9C7E4
+              C5D9EC8B9BBB6F779CA1A8BEF1F4F9FDFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFCFDFCFCFDFEE6E6F5A2A6C3656F8E848DABABB7D1D2DDF2B6C5E18E
+              9DC47081B05A60A44B4E9B4C519D5356A75355A75051A8494BA64D4EA94A4BA6
+              5155AD4345A04541A74F4CB05250A755599B6F75A7919CBFA4B5CECFDDF1B3C0
+              D78891B66E73A29C9FC3E1E6F3F6FCFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFDFDFEFEFFFDFBFCFFEAEDF4C6C7DA8786B46C6F9E
+              8C93B59DA7C5C2D1E8D9E8F6C0CEDEBBCBDDB8C5DBA0ADC7939FBE959DC38A94
+              B9878FB88C94BB9AA3CCAFBCD6B8C8DBC3D0E0DAE7F3CDD9EA96A0B9838FB16A
+              7695848DA6C2CCD6E7ECF4FEFCFEFCFCFEFDFEFEFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFEFFFFFFFFFFFFF9FB
+              FEF0F2F9C2C3DB8C8FAF8085A8747EAD616F9F7783B598A4CEACB6E1BBC7EBC5
+              D8ECC4D7EAC2D6E8BBCDE1A2B4CB97A8C67E8DB8646F9D6B74A57B82B18288B4
+              B7C0D7EDF3FAF8FCFDFEFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFCFFFFF6FEFFFBFEFFFDFEFFFFFBFDFEE8F1F8CAD3E5ADB8CDABB6CCABB4CB
+              AAB3CBABB2D0A5ACCAA4ACCBA2A9CAA2ABC7A8AECCAEB3CEC5CCE1E8EDF5F4FD
+              FCF8FEFAFEFFFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFEFFFDFCFFFEFEFEFEFEFEFFFFFFFFFFFFFFFFFEFFFFFEFEFEFFFD
+              FFFFFFFFFEFFFFFEFFFFFDFFFFFDFFFFFEFFFEFBFFFFFEFFFCFDFDFDFEFEFDFF
+              FFFEFFFDFEFDFCFCFFFEFFFFFFFFFFFFFFFFFFFFFFFFFBFFFFFDFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00}
+            Stretch = True
+          end
+          object QRLabel33: TQRLabel
+            Left = 74
+            Top = 6
+            Width = 204
+            Height = 24
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              63.500000000000000000
+              195.791666666666700000
+              15.875000000000000000
+              539.750000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'PT.PISMATEX Textile Industry'
+            Color = clWhite
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -19
+            Font.Name = 'Arial Narrow'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 14
+          end
+          object QRLabel37: TQRLabel
+            Left = 125
+            Top = 87
+            Width = 505
+            Height = 23
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              60.854166666666670000
+              330.729166666666700000
+              230.187500000000000000
+              1336.145833333333000000)
+            Alignment = taCenter
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'R E K A P  P E N E R I M A N   T E N U N   P E R  M I T R A'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -19
+            Font.Name = 'Arial'
+            Font.Style = [fsBold]
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 14
+          end
+        end
+        object QRBand8: TQRBand
+          Left = 19
+          Top = 156
+          Width = 756
+          Height = 25
+          Frame.Color = clBlack
+          Frame.DrawTop = True
+          Frame.DrawBottom = True
+          Frame.DrawLeft = True
+          Frame.DrawRight = True
+          AlignToBottom = False
+          BeforePrint = ColumnHeaderBand1BeforePrint
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            66.145833333333330000
+            2000.250000000000000000)
+          BandType = rbColumnHeader
+          object QRLabel39: TQRLabel
+            Left = 6
+            Top = 5
+            Width = 40
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              15.875000000000000000
+              13.229166666666670000
+              105.833333333333300000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'MITRA'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRLabel40: TQRLabel
+            Left = 523
+            Top = 5
+            Width = 97
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1383.770833333333000000
+              13.229166666666670000
+              256.645833333333300000)
+            Alignment = taRightJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'JUMLAH MESIN'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRLabel41: TQRLabel
+            Left = 669
+            Top = 4
+            Width = 56
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1770.062500000000000000
+              10.583333333333330000
+              148.166666666666700000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'POTONG'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRShape15: TQRShape
+            Left = 507
+            Top = 0
+            Width = 1
+            Height = 31
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              82.020833333333340000
+              1341.437500000000000000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRShape16: TQRShape
+            Left = 636
+            Top = 0
+            Width = 1
+            Height = 28
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              74.083333333333340000
+              1682.750000000000000000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRLabel43: TQRLabel
+            Left = 283
+            Top = 5
+            Width = 84
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              748.770833333333300000
+              13.229166666666670000
+              222.250000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'KONSTRUKSI'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRShape1: TQRShape
+            Left = 143
+            Top = 0
+            Width = 1
+            Height = 31
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              82.020833333333340000
+              378.354166666666700000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+        end
+        object QRGroup3: TQRGroup
+          Left = 19
+          Top = 181
+          Width = 756
+          Height = 0
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            0.000000000000000000
+            2000.250000000000000000)
+          FooterBand = QRBand10
+          Master = QuickRep3
+          ReprintOnNewPage = False
+        end
+        object QRBand9: TQRBand
+          Left = 19
+          Top = 233
+          Width = 756
+          Height = 29
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = True
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            76.729166666666670000
+            2000.250000000000000000)
+          BandType = rbPageFooter
+          object QRDBText36: TQRDBText
+            Left = 0
+            Top = 8
+            Width = 36
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              0.000000000000000000
+              21.166666666666670000
+              95.250000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = DMFrm.QUserTime
+            DataField = 'VUSER'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRSysData4: TQRSysData
+            Left = 687
+            Top = 8
+            Width = 69
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1817.687500000000000000
+              21.166666666666670000
+              182.562500000000000000)
+            Alignment = taRightJustify
+            AlignToBand = True
+            AutoSize = True
+            Color = clWhite
+            Data = qrsPageNumber
+            Text = 'Hal '
+            Transparent = False
+            FontSize = 10
+          end
+          object QRDBText37: TQRDBText
+            Left = 342
+            Top = 8
+            Width = 71
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              904.875000000000000000
+              21.166666666666670000
+              187.854166666666700000)
+            Alignment = taCenter
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QTransaksi
+            DataField = 'DISTRIBUSI'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+        end
+        object QRBand10: TQRBand
+          Left = 19
+          Top = 206
+          Width = 756
+          Height = 27
+          Frame.Color = clBlack
+          Frame.DrawTop = True
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            71.437500000000000000
+            2000.250000000000000000)
+          BandType = rbGroupFooter
+          object QRDBText38: TQRDBText
+            Left = 691
+            Top = 3
+            Width = 56
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1828.270833333333000000
+              7.937500000000000000
+              148.166666666666700000)
+            Alignment = taRightJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QPerMitra_Tot
+            DataField = 'POTONG'
+            Mask = '0.0,0;(0.0,0);'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRDBText39: TQRDBText
+            Left = 567
+            Top = 3
+            Width = 63
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1500.187500000000000000
+              7.937500000000000000
+              166.687500000000000000)
+            Alignment = taRightJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QPerMitra_Tot
+            DataField = 'QTY_MSN'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+        end
+        object QRBand11: TQRBand
+          Left = 19
+          Top = 181
+          Width = 756
+          Height = 25
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = True
+          Frame.DrawRight = True
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            66.145833333333330000
+            2000.250000000000000000)
+          BandType = rbDetail
+          object QRDBText40: TQRDBText
+            Left = 691
+            Top = 3
+            Width = 56
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1828.270833333333000000
+              7.937500000000000000
+              148.166666666666700000)
+            Alignment = taRightJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QPerMitra
+            DataField = 'POTONG'
+            Mask = '0.0,0;(0.0,0);'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRDBText41: TQRDBText
+            Left = 567
+            Top = 3
+            Width = 63
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1500.187500000000000000
+              7.937500000000000000
+              166.687500000000000000)
+            Alignment = taRightJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QPerMitra
+            DataField = 'QTY_MSN'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRDBText42: TQRDBText
+            Left = 6
+            Top = 3
+            Width = 85
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              15.875000000000000000
+              7.937500000000000000
+              224.895833333333300000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QPerMitra
+            DataField = 'NAMA_MITRA'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRShape18: TQRShape
+            Left = 507
+            Top = 0
+            Width = 1
+            Height = 26
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              68.791666666666680000
+              1341.437500000000000000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRShape5: TQRShape
+            Left = 636
+            Top = 0
+            Width = 1
+            Height = 26
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              68.791666666666680000
+              1682.750000000000000000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRDBText44: TQRDBText
+            Left = 148
+            Top = 3
+            Width = 84
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              391.583333333333300000
+              7.937500000000000000
+              222.250000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QPerMitra
+            DataField = 'KONSTRUKSI'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRShape2: TQRShape
+            Left = 143
+            Top = 0
+            Width = 1
+            Height = 26
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              68.791666666666680000
+              378.354166666666700000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+        end
+      end
+      object wwDBGrid1: TwwDBGrid
+        Left = 0
+        Top = 68
+        Width = 1525
+        Height = 666
+        DisableThemes = True
+        DisableThemesInTitle = True
+        ControlType.Strings = (
+          'ISAKTIF;CheckBox;1;0'
+          'ID_SUB_BAG;CustomEdit;LookBagian;F'
+          'ID_HAK;CustomEdit;LookJnsMenu;F')
+        PictureMasks.Strings = (
+          'ID_BAG'#9'*2{#,&}'#9'T'#9'T'
+          'KD_JNS_ITEM'#9'#,&'#9'T'#9'T'
+          'KD_SATUAN'#9'#,&'#9'T'#9'T'
+          'ID_USER'#9'*3{&,#}'#9'T'#9'T')
+        Selected.Strings = (
+          'KD_PRODUKSI'#9'10'#9'KODE PRODUKSI'#9'F'
+          'NAMA_MITRA'#9'25'#9'MITRA'#9'F'
+          'KONSTRUKSI'#9'25'#9'KONSTRUKSI'#9'F'
+          'QTY_MSN'#9'10'#9'JML GULUNG'#9'F'
+          'POTONG'#9'10'#9'POTONG'#9'F'#9'QTY KONVERSI'
+          'METER'#9'10'#9'METER'#9'F'#9'QTY KONVERSI')
+        IniAttributes.Enabled = True
+        IniAttributes.SaveToRegistry = True
+        IniAttributes.FileName = 'Pismatex Master'
+        IniAttributes.Delimiter = ';;'
+        IniAttributes.CheckNewFields = True
+        ExportOptions.ExportType = wwgetHTML
+        ExportOptions.Options = [esoShowHeader, esoShowFooter, esoShowTitle, esoDblQuoteFields, esoBestColFit, esoShowRecordNo, esoShowAlternating]
+        TitleColor = clSkyBlue
+        FixedCols = 0
+        ShowHorzScrollBar = True
+        Align = alClient
+        DataSource = DsPerMitra
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgPerfectRowFit, dgShowFooter, dgTrailingEllipsis, dgDblClickColSizing]
+        ParentFont = False
+        ReadOnly = True
+        RowHeightPercent = 125
+        TabOrder = 0
+        TitleAlignment = taCenter
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Lucida Sans'
+        TitleFont.Style = [fsBold]
+        TitleLines = 3
+        TitleButtons = True
+        UseTFields = False
+        OnTitleButtonClick = wwDBGrid1xxxxxTitleButtonClick
+        OnEnter = wwDBGrid1Enter
+        OnUpdateFooter = wwDBGrid1UpdateFooter
+        PaintOptions.AlternatingRowColor = clMoneyGreen
+        PaintOptions.ActiveRecordColor = clGreen
+        GroupFieldName = 'NAMA_MITRA'
+      end
+      object Panel7: TPanel
+        Left = 0
+        Top = 0
+        Width = 1525
+        Height = 52
+        Align = alTop
+        BevelInner = bvLowered
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 1
+        object GroupBox3: TGroupBox
+          Left = 2
+          Top = 2
+          Width = 375
+          Height = 48
+          Align = alLeft
+          Caption = 'Filter Tanggal'
+          TabOrder = 0
+          TabStop = True
+          object Label7: TLabel
+            Left = 129
+            Top = 22
+            Width = 24
+            Height = 13
+            Caption = 'S/D'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object vTglAwal3: TwwDBDateTimePicker
+            Left = 8
+            Top = 16
+            Width = 113
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 0
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = vTglAwal3Change
+          end
+          object vTglAkhir3: TwwDBDateTimePicker
+            Left = 163
+            Top = 16
+            Width = 113
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 1
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = vTglAkhir3Change
+          end
+          object BitBtn7: TBitBtn
+            Left = 284
+            Top = 15
+            Width = 75
+            Height = 25
+            Caption = 'Refres&h'
+            TabOrder = 2
+            OnClick = BitBtn7Click
+            Kind = bkRetry
+          end
+        end
+        object Panel8: TPanel
+          Left = 377
+          Top = 2
+          Width = 642
+          Height = 48
+          Align = alLeft
+          BevelOuter = bvNone
+          TabOrder = 1
+          DesignSize = (
+            642
+            48)
+          object Label13: TLabel
+            Left = 156
+            Top = 20
+            Width = 44
+            Height = 24
+            Cursor = crHandPoint
+            Alignment = taCenter
+            AutoSize = False
+            Caption = 'LIKE'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clNavy
+            Font.Height = -19
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            OnClick = vOperandClick
+          end
+          object BitBtn4: TBitBtn
+            Left = 337
+            Top = 17
+            Width = 75
+            Height = 25
+            Caption = 'Filte&r'
+            Default = True
+            ModalResult = 1
+            TabOrder = 0
+            OnClick = BitBtn4Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+              555555555555555555555555555555555555555555FF55555555555559055555
+              55555555577FF5555555555599905555555555557777F5555555555599905555
+              555555557777FF5555555559999905555555555777777F555555559999990555
+              5555557777777FF5555557990599905555555777757777F55555790555599055
+              55557775555777FF5555555555599905555555555557777F5555555555559905
+              555555555555777FF5555555555559905555555555555777FF55555555555579
+              05555555555555777FF5555555555557905555555555555777FF555555555555
+              5990555555555555577755555555555555555555555555555555}
+            NumGlyphs = 2
+          end
+          object BtnExport3: TBitBtn
+            Left = 420
+            Top = 17
+            Width = 97
+            Height = 25
+            Caption = '&Export2Excel'
+            TabOrder = 1
+            OnClick = BtnExport3Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+              00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+              00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+              00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+              0003737FFFFFFFFF7F7330099999999900333777777777777733}
+            NumGlyphs = 2
+          end
+          object BitBtn8: TBitBtn
+            Left = 526
+            Top = 16
+            Width = 83
+            Height = 25
+            Anchors = [akTop, akRight]
+            Caption = '&Print LPB'
+            TabOrder = 2
+            OnClick = BitBtn8Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000130B0000130B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+              00033FFFFFFFFFFFFFFF0888888888888880777777777777777F088888888888
+              8880777777777777777F0000000000000000FFFFFFFFFFFFFFFF0F8F8F8F8F8F
+              8F80777777777777777F08F8F8F8F8F8F9F0777777777777777F0F8F8F8F8F8F
+              8F807777777777777F7F0000000000000000777777777777777F3330FFFFFFFF
+              03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+              03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+              33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
+              33333337FFFF7733333333300000033333333337777773333333}
+            NumGlyphs = 2
+          end
+          object cbOtomatis2: TCheckBox
+            Left = 11
+            Top = 5
+            Width = 98
+            Height = 17
+            Caption = 'Cari &Otomatis'
+            TabOrder = 3
+            OnClick = cbOtomatis2Click
+          end
+          object dbcField2: TwwDBComboBox
+            Left = 11
+            Top = 23
+            Width = 137
+            Height = 19
+            ShowButton = True
+            Style = csDropDown
+            MapList = False
+            AllowClearKey = False
+            Color = clYellow
+            DropDownCount = 8
+            ItemHeight = 0
+            Items.Strings = (
+              'SEMUA KOLOM')
+            ItemIndex = 0
+            Sorted = False
+            TabOrder = 4
+            UnboundDataType = wwDefault
+            OnEnter = dbcField2Enter
+          end
+          object ECari2: TEdit
+            Left = 206
+            Top = 23
+            Width = 121
+            Height = 19
+            Ctl3D = False
+            ParentCtl3D = False
+            TabOrder = 5
+          end
+          object cbTanggal2: TCheckBox
+            Left = 207
+            Top = 5
+            Width = 129
+            Height = 17
+            Caption = 'Ikutkan Filter &Tanggal'
+            Checked = True
+            State = cbChecked
+            TabOrder = 6
+            OnClick = cbTanggal2Click
+          end
+        end
+      end
+    end
+    object TabSheet4: TTabSheet
+      Caption = 'Rekap Per Corak'
+      ImageIndex = 3
+      TabVisible = False
+      OnShow = TabSheet4Show
+      object Label20: TLabel
+        Left = 0
+        Top = 52
+        Width = 1525
+        Height = 16
+        Align = alTop
+        Color = clSkyBlue
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -13
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object QuickRep2: TQuickRep
+        Left = 38
+        Top = 81
+        Width = 794
+        Height = 529
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Frame.Width = 2
+        DataSet = QPerCorak
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        Functions.Strings = (
+          'PAGENUMBER'
+          'COLUMNNUMBER'
+          'REPORTTITLE')
+        Functions.DATA = (
+          '0'
+          '0'
+          #39#39)
+        Options = [LastPageFooter]
+        Page.Columns = 1
+        Page.Orientation = poPortrait
+        Page.PaperSize = Default
+        Page.Values = (
+          50.800000000000000000
+          1399.540000000000000000
+          50.800000000000000000
+          2100.580000000000000000
+          254.000000000000000000
+          254.000000000000000000
+          0.000000000000000000)
+        PrinterSettings.Copies = 1
+        PrinterSettings.Duplex = False
+        PrinterSettings.FirstPage = 0
+        PrinterSettings.LastPage = 0
+        PrinterSettings.OutputBin = Auto
+        PrintIfEmpty = True
+        SnapToGrid = True
+        Units = Inches
+        Zoom = 100
+        object QRBand2: TQRBand
+          Left = 96
+          Top = 19
+          Width = 602
+          Height = 137
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = []
+          ForceNewColumn = False
+          ForceNewPage = False
+          ParentFont = False
+          Size.Values = (
+            362.479166666666700000
+            1592.791666666667000000)
+          BandType = rbTitle
+          object Label12: TLabel
+            Left = 28
+            Top = 43
+            Width = 4
+            Height = 18
+          end
+          object QRLabel11: TQRLabel
+            Left = 102
+            Top = 28
+            Width = 138
+            Height = 22
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              58.208333333333340000
+              269.875000000000000000
+              74.083333333333340000
+              365.125000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'Bligo Sapugarut, Pekalongan'
+            Color = clWhite
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Arial Narrow'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRImage2: TQRImage
+            Left = 4
+            Top = 4
+            Width = 69
+            Height = 47
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              124.354166666666700000
+              10.583333333333330000
+              10.583333333333330000
+              182.562500000000000000)
+            Picture.Data = {
+              07544269746D617022210000424D222100000000000036000000280000004100
+              00002B0000000100180000000000EC200000120B0000120B0000000000000000
+              0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFDFDFDE4E4E4F5F5F5FEFEFEFEFEFEFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFF9F8F8B7B3B0A09893BFA9AAF8F5F5F9FEFEF8FEFE
+              FEFEFFFFFDFFFFFFFFFFFFFFFFFFFCFEFFFEFEFFFFFDFFFFFFFFFFFFFFFFFFFF
+              FFFAFCFFF9FEFFF8FDFFF7FEFFF7FEFCF8FFFEF8FFFEFAFFFCFCFFFEFDFFFEFD
+              FFFFFEFFFFFFFFFFFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFFFDF7F3F1C2B5ABB59684B4998CE1CE
+              D1FBFAFBFFFEFFFEFFFFF8FFFDF7FDFEF6FCFEF5FBFEEBEFFBC5D4E4A9BBCAB3
+              C0D2B2BED4A0B3CE8CA2C58E99C9929DCA9AA4CEA4AED4ACB6D3B1B6D4C5CCE3
+              EBF0FAF4FAFFF8FEFFFBFFFEFCFFFCFDFFFEFEFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFEFEFEFCFAD7CEBFB8
+              937DC0886FC89D90BEACB0F0EDF3F3F3FCB7C1D78395B17785AB5E648C536387
+              697BA08392B0A1AFCFACBDDDAEC4DFAAC2DDADC5E1B0C2DF99A6C98895B9737B
+              AF535B95606999838BB08E98B4BFC7DEEFF4FFF3FAFFF8FCFFFDFFFFFEFFFEFF
+              FFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FEFDFDD3C1BDC09E8EC0917EB7837CB78084A16E817459779895B7C5CDE3D9E0
+              EFC6CBDEC3C7E5BCC2E6999FCB9098C68390C07D95C28093C58395C2909CCAB3
+              BFE9B5CBE7B4CDE0CADFF3B8C7E48695BE717CAD676DA08188B0C5CFE0E5EDF4
+              F7FEFEFBFDFEFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFCFFFFF5FCFEE0E5F48C83AC866886B6837ACB8968D08C6BB77E6AB98D8CB1
+              8FA67A5C89574D864A4B8F4A51A6424CAC4253AF3947A44448A84A4BAC4142A3
+              4443A94848AF4551A544579D4F63A07489B694A7C2BCD3E5C7DCED9BADC67887
+              AB6F76A69DA2CFDFE2F7F7FBFFF9FDFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFF7FEFFA9B7D4656F957F87ADCAC4DFC0AFCD937186B87F77C28067
+              CE8364C57A6BAC686E95647E76517F644A8E59499D554DA44D439C443999463E
+              A13A369A37389F353AA24146B1353BA5383FA237409C444AA0444C9C606EAD84
+              91C2C1D2F0BECCE87685AD616E9895A5C2E5F4F9F7FEFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCFDFF
+              FEFFFEF9FEFED3DCE5767DA87487A8C4D5E9B4C1E25F67A7424AA04F4AA66A4F
+              97946B91B77B7DCA8164D8855CD88362D3816DC37976A46A7796617D8F5D8486
+              579472498765468B50429A3A3EA53F44AC393A9E403FA44846AF4541B6413FB5
+              4244AA4C54B54C58AB6375B2ADC2E3C6DEEC8393B27378AEC0C7E0F3FBFEFBFE
+              FFFFFFFBFFFFFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFE
+              FFFCFDFEF6FCFCADB8CD69739EA7B5D5C1D2EF6C79B241479E363CA32F39A436
+              3DA74442AA493D926B518994677DB57978C77C6ECA7C68CC8268D38469D08167
+              CD7D6BC47C6FC27A73B26D74955F7E6C467F6346896649896F4E8F6B498B6948
+              915A40905447965349A74743AA454AAE3D4CA3707BC0ADB8DBA9B8D8626F9D9D
+              A2C4E9F0F8FDFDFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFCFEFEF3F7FC9FA3C27177ABC2CCEB9CAFCF5359AA3C3DA33938A93B3DB2
+              3B41B22D37A63339AB383DAB4442A44F4295564288745081986B88AE767DCA84
+              71D78663D8875BD38B59DC8A5CDD875ED57E63CE7B6FBE7877BC7679BC7272C2
+              7574BF7478B7737DAC738E946695714F985B4AA7454AAE3D3FAA474CA2899EC5
+              BED6E57B88A67D7EA8EAE9F7FCFEFFFEFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFAFDFED8DFEB8488AFACB4D4A7B4D76570AF4247A74747B73F44B53A3E
+              B0363BAA353EA5373EA63A3CAA393FB2353CB13537AD4040B33D3AA145419B51
+              4A926A5B91735B8676587F815674976A78AC7978B57F6FBE866DC7866ECD846A
+              D58766D3835ED88864D58763DB8B68D08471B77980956A908166A34743994048
+              AD4049AA5665AF94A1CCB4BBDA696C9AB9C0D2F4F8FEFDFFFFFEFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFFFFFFFF
+              FFFFFFFEFCFCFEE6EDF87279A2AFB8D7AEBFDB4F59A73F42B33E45B93D44B336
+              3CAC373FAC3F44B22E34A43B3EAD3939A82F33A6373EB73035AD3739AC353BAF
+              3D45B63B43AB414AAC494FB24449AC4A43A14944965851985B52895E517F6F57
+              7C805F7E9871879C71819D737E9F747FA87B7DAB7D82A27480916E8F79649A59
+              50AC4046AB404AAE3D44B84652B18499C3BCCCE36A7598BFC6D8F6FCFFFEFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFF9FAFF9298B994A8BEBECEE64B4FA54647B64146B93740B4
+              333AAF3942B3353EB04144BA3437B23839B2383FB12F39B2353EB53038AB363C
+              A9363CAE3D43AE4A50B74545AB4745A94948AB3F44A53B43A74247AB3D3FA444
+              44AF4645AF4746A5534CA350459359539A4D4791504C9A554C985A4D91574A96
+              4C48A14949AA4748B33F44B43747AC3548A84050AC8D9FC7B5C4DD6C739AD1D0
+              E7FCFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFEFEFFFFFCFFFFC3C7DD7679A5C9DDEC5566A53D46A63C40B3373D
+              B4323BAF3E40B2404BAB404DA53E49AA4347AE3B3F9B3B3EA32B37AF2F35B035
+              36A5363BAD2E36A93742AB3A44AD484DB9454BAE454EA1474CA54F53AF484DA2
+              454C9F3739A83A3EB6484DA34E4AA14C4DAD46509F45439C4944A13F3EB6464C
+              AA504CAA4643A3464DA24A4BA5423F9D3137A43541B03E47AC424EA1A4B6DBA8
+              B2D77C7AABEEF2F6FEFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFEEF1F87F82AAC1CDE57F8BBB3F4B9E4148AB39
+              3FAF4248B93A43AE5556AA7883B57A85AA818AB5858DB67C84AF565DAA404BB9
+              383FB63B3BAA3039A82E35A93641AB404DAF474EAC6B6FB48991B89097BC9397
+              BC9097B88791BA4B52A34F54B08188B59491B68E94BE8F9EB89395BC767CB54D
+              55AF6472AD9799C39C9DC89AA4C79B9EC49597C84C54A93645AA3642A035409F
+              4450A0B9CCE4818BB4AFB2D5F8FCFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFEFFFEC7CBE38A8EB9B9CAE04D51A2434BAC
+              4044AF3A42AF3842AE3F4DAE6F75AFECF4FEF8FFFFFCFEFFFCFEFFF6FCFF818C
+              BA3643A13239A93637A43139A8353CB0323EA73B49A94D51A4B9BBD9FCFDFFFE
+              FEFFFFFFFFFBFEFFEAF1F9525B9C565CA3E5E9F5FEFDFFFDFEFFFAFFFCFDFEFF
+              B1BEDB525AADA4B1D7FBFCFFFDFDFFFBFEFFFDFEFFECEAF9585EAA3340A5353E
+              A73D48B53D4CA2687BB3B8CBE66F76AFE8EFF8FDFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFF8FAFB8A8BABB0B8D97184AD4042
+              A53C40A94246B24048B33C45AF3846A97176B0F4F8FEFFFFFFFFFFFFFFFFFFFB
+              FDFF8691B63E4AA33E40B14141AE333CA93640AE3643AA3F4EAF545CAABCC0D7
+              FFFFFDFFFFFFFFFFFFFFFFFFF1F2F9535B9E5A5FA9EAEDF5FFFFFFFFFFFFFFFF
+              FAFEFFFFB3BFDB565AB5ACB3DDFEFFFFFFFFFFFFFFFFFFFFFFECE9F8575BA73E
+              48B34146BB3941B64254A85057B5A5B9D77382ADA9B2D2F7FBFFFEFEFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFEF2EFF89294B4D5E1F85D
+              66B04045AA3F45B0474CB74049B33B47B13D49B26C78B2F1F9FDFEFFFDFFFFFF
+              FFFFFFFDFEFF8E91B9454EA93A3EB13D3FAB353EA7353DA43543A7394BB24E5B
+              B2BABDD9FFFFFDFDFFFFFFFFFFFFFFFFF0F2F9555FA05863ADE4ECF5FFFFFFFE
+              FFFFFFFFFDFEFFFFB5C0D95654B8B3BAE6FDFFFFFFFFFFFEFFFFFFFFFFECEAF8
+              565FA5414AB14047B03D49AE3E46B2494DB37D8CC5B2C7E18896BAF0F8FDFBFE
+              FDFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFEFDD0CDE57B85A3
+              AAB8D74349AC3943A3383DAA4045B1333BA7333CA9353FAB6474ABEFFBFDFEFF
+              FCFFFFFFFFFFFFFDFEFF868BB64048A73A3EAC3A39A4313EA23641A3414DB034
+              44AB4653AFB2BAD8FDFFFFFAFFFFFFFFFFFFFFFFF1F5F9545E9C5664AAE3ECF5
+              FFFFFFFEFFFFFDFFFDFFFFFFB6BFD55454AFB4BCE4FDFFFFFFFFFFFCFFFEFDFF
+              FFEAEEF85562A0414FAC4A4FAC4851AB3F3BBD3F45A74952A2B4C6DF677798D6
+              DEEDFDFEFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFDFFFEA0A7
+              CD8091AF97A1CA474BB13B46AF444CB7383EAE3E43B54148B63C43AC6A77B7F6
+              FBFDFFFFFDFFFFFFFFFFFFFEFFFF8C94C34C54BC4149A63E3EA73C45AD3A4BAF
+              3D47AB484FB3535DB1B3BAD7FEFFFFFFFFFFFFFFFFFFFFFFF4F7F95962A15865
+              B1E5EBF5FFFFFEFFFFFFFFFFFFFFFFFFB5BDD65257A6B9C2E0FDFFFFFFFFFFFE
+              FFFFFFFFFFECF1F85662A7404AB34544AD4245AC3F46AF3D4AB34951ADC1CBE9
+              7888A6C6D0E4FFFFFEFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFD
+              FFFF969AC5A7B7D19299C63E3FA93C45B1393FAA3A3EAF363BAD3941B03F47AF
+              6E79BBF4FAFDFFFFFEFFFFFFFFFFFFFDFEFF8893BA4650AD43489F4F49AF4242
+              AE3B45A74349AA494BB05059B0B6BDD8FFFFFFFFFFFEFFFFFFFFFFFFF4F6F954
+              5C9B515CA9E4ECF4FFFFFEFFFFFFFFFFFEFEFFFFB6BFD85158A5B9C5E0FDFFFF
+              FFFFFFFDFFFFFFFFFFEAEFF8515DA13E48B04242AB3D3FA83E45AD3C48B24147
+              A596A0C89BAAC6C2CCE3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFCFEFE9194C1A4AECD979DC9403FAA3842AD3D44AE3D43B03C42B13B40
+              AF3F48AE7683C3F5FBFDFFFFFDFFFFFFFFFFFFFDFFFF929BC1505AAA7581B07D
+              7CB27C81B86B71AE5353A54D4DB0535EB5B6BFDAFFFFFCFFFFFFFFFFFFFFFFFF
+              F6F6F95A62A1525BAAE5EDF5FFFFFEFFFFFFFFFFFEFFFFFFBAC2D9565EAAB6C5
+              DFFDFFFFFFFFFFFEFFFFFFFFFFECF2F95A67AC424BB54344B04344AC4149B03D
+              46B0444CA79099C4A5B5CC97A1C0FEFEFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFEFFFF9FA2CB9BA5C69EA2CE4C49B13E47AE3A43AA3F46B33C
+              43AF4048B2414BAE7280BEF4FBFDFFFFFDFFFFFFFFFFFFFDFEFF8D93C04C589F
+              DBE9F5FBFEFFF9FEFEE9F0FA9898C6585CAE5563B7BAC5DFFFFFFDFFFFFEFFFF
+              FFFFFFFFF5F7F95C65A65561AEE2EBF5FFFFFCFFFFFFFFFFFFFEFFFFBAC1D955
+              59A6BBC8DEFDFFFFFFFFFFFDFFFFFFFFFFECF0F85662A63B45AD3F41AB4346AC
+              4047AF3641AC4149A68A92C2A7B7CEA1AAC7FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFEFFFEC6CAE47E89A5A7ADD24845AA3943A83D45AC
+              3940AB343BA7383FA84049AB707ABBF4FBFDFFFFFDFFFFFFFFFFFFFDFEFF8C93
+              C44A549AE1EBF4FFFFFFFFFFFDFAFEFAE9ECF6777CBC4E5DAEB7C1DCFFFFFEFF
+              FFFEFFFFFFFFFFFFF3F5F95E66A75461AEE5EBF5FFFFFDFFFFFFFFFFFEFEFFFF
+              B9C0DA545AA8B9C5DEFDFFFFFFFFFFFDFFFFFFFFFFECF1F85563A8424CB54445
+              AC3A3AA44047B13B46B04149A4959DC7A0B1C9BBC8DFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFEFCE0E5F58694AED4DEF45857A84042
+              AC343BA34147B03F44B04047B04148AA727DB9F1FAFDFFFFFEFFFFFFFFFFFFFC
+              FEFF959BCA595EA9E1ECF6FEFFFFFFFFFFFFFFFBFAFDFE919CC74F5AA7B8BEDB
+              FFFFFEFFFFFFFFFFFFFFFFFDF4F6F85E66A4535DA7E4ECF5FFFFFBFFFFFFFFFF
+              FFFFFFFFBCC2DE5E61AEBDC6E4FDFFFFFFFFFFFEFFFFFFFFFFE8ECF75058A042
+              49B44146AC3E42AD4249B0363FA44349A0B6BFE37D8BA8C7CFE0FDFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFEFFF3F6FB757CA4B9C8DE69
+              70A44943AF363DA73739A6393EAA343BA4444AAC6977B0F1F9FDFEFFFDFFFFFF
+              FFFFFFFAFEFF8890BD4C51A5DAE7F5FEFFFFFFFFFFFFFFFFF9FFFFACBADA555A
+              A6BABADEFCFFFDFEFFFFFFFFFFFFFFFDF5F9FB6C6FB35760A5E0EEF5FFFFFDFF
+              FEFFFFFFFFFBFFFDB2BED6525AA4B8C1DFFEFFFCFFFFFDFFFFFFFEFFFEE6F1F8
+              595FAB4244B33B44A53D47B23C43AF4146A5454A8FB8BFDA687091D9DEEAFBFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFDFFFBFEFFA9AFCD
+              979FC4B5BDD94E57A03440A53841AD3C44B03B46B04753B5727CB2F2F7FDFFFF
+              FEFFFFFFFFFFFFFAFDFF8991C049509EDFE5F5FFFFFFFFFFFFFEFFFDF9FEFE89
+              94C14D53A9A9B3D9F5FFFDFFFFFEFFFFFFFEFFFFEEF4FA575AA84E57ADD9E8F7
+              FBFFFEFFFFFFFFFFFFFEFFFFB2C1D74E5C9DB2BDDFFDFEFFFFFFFFFFFFFFFFFF
+              FDE8F0F85C63AC484AB73F4AAD3D4AAE4347BC4046A77C8ABBB9C5E39298BAF4
+              FAFDFBFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FEE2E3EF6F70A2CBD6E66577A33847A2404AB1353DAB3743AF3647A76D76AAF1
+              F8FDFDFFFDFFFFFEFFFFFFF8FEFF8390BB4C5999DFECF4FEFFFFFFFFFFFCFFFC
+              DCE5F36C76BC4D56B36E7DB5E7F7FAFEFFFEFDFFFFF9FFFFDAE8F5434E9B4854
+              AEA7BBDFF1FEFCFCFFFBFEFFFFFBFDFF7E89BD44529F7B85B8F3F8FCFCFEFDFD
+              FEFEFDFFFFC9D0E74D52A34245B13C44AB3948A74044B94650A9A8BBD5818EAE
+              B2B7D1FEFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFBFEFEA3A5C48B95B6B8C9E1465597424BA74047B3343CAD3D4AB1
+              6571AFE2F3FDEEFEFFEDFCFFF0FCFFEAF9FF7281BA32488BD2E7F4F4F9FFF5FC
+              FFD6E9F57280B13D47A4434DB24D5EA79DB1D4EFFBFFF0FCFFE0F0FB7081B039
+              469831419B5165A0D4E8F5EEFEFFEEFAFFB7BEE25256B53947AD4857A4AEB6D3
+              ECF9FBF2FBFEE0E9FD7C86BF444CA83A42AC3F47AF3A44A44046A26F7AB2B1BE
+              D3707A96EEF3F7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFCFFFDFFFDFFF8EFF4F7747BA8AFBDDA99A7CC424B964749B03F44
+              B43D43B4404CAB5B6DB25F77B16676BC6C7BC16B78BF444CAF344BAA6D86C17D
+              87CD6777B64D64A53B4BA63D49B5404AB1474FAD4B54A86472B16D81BB5063AA
+              3944A43038A2333CA93A45AA4F5CAB6678B2586AA542509D3C40A72E3EAB394A
+              AE4A52A65C6AAA6379AC4C5CA04652B33F4DB54049AE4348B04745AF556296CB
+              D6E98283AFC1C3D4FDFFFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFDFFFDFFFFFFFAFBFFFAD1D2EA73789BD2DEEC8994BF4A
+              4CA63D3BAE383AAC363FB03947AD3649AA3741B0383EB23C42B2373BB23241B3
+              2F43A53039A326369C3648AB303CAA2832A13843AC3940A63B3EAA3841AA3644
+              A63340AB3037AC2E33A92D35A7353BAF393FAF3540A23542A03340A2353CA130
+              3FAA3843B53F42B04049AE414FAD2E3D9E3B46AF3443A33A45A43E45A8494D9C
+              B5C0D99EA3C6918CB5F4F4FAFCFEFAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFDFDD4D6E07D81A8
+              ADB5D8AAB4D7565EA14847AD393EB0353CAF3A40B52730A32F38A9333EAC3742
+              AF2F3BAA2E37A72F39A92934A2333AA83F45B23A40AC4249B43A42A8373EA930
+              3AA8252F9F3039A8303BAB2631A22C31A2383DAD383FAB393EAA3139A1363EA6
+              323CA6323BA73236A7373DA93E42AA3A44A83B45AD3E43AE3C43A53E49975C67
+              A6B4BFDB99A0BF9395B6E5E6F1FFFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFF
+              FED9DCEA7571A8979CC3CED9EC6C74A83E459C3E42AC353AB23942BA2D3FA92F
+              41A8353BAE2A32A53138AA2B32A32F38A63238A7383DAC2F34A1353CA63840A7
+              3740A8323AA82F37A42D36A527309E222A9B333AA9353AAB3D42B03A42AB2A32
+              9B363EA52E3EA22E3EA8313AAB3B40B0343BA83F4CAE3440A4373AA94546A96F
+              75AFCBD6EC868BAE8C92ADEFF4F8FCFEFEFDFEFEFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFEFFFCFDFFFAE8E7F3918EBF8A88BCD3DDEE8A99BD4B569A444CAB3C42B3
+              3643B23D48B9393FB13A3DB13338AA3238AA373BAD3A41B03F47B33D41AF474F
+              B84149B13F48B2363EAA3C44AF2C33A1363BAB2B329F3C42AF3B3FB03A40AD34
+              3BA43B44AA3B46AD3343A63843AD3B44AF3E45B34045AF4449B2464FAF515CA6
+              8B93C0CCD3E68C91AE9291B4EEF2F7FBFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFEFEFDFEFFF1F2F5F89E9CBF7776A4B2C0D5B6C5E26F7C
+              AF4951A0494BAF4748B53C3EAD3A3FAA3536A43C40AD4144B0383EAC2C31A137
+              3BA94048B13841A93B42AB4144B0363CA73A41AC3D41AC3135A14247B43D44B1
+              3A42AE3840AA434CB33C44AC3940A73A41A93D43A84B4EB0464DA54E51A76E74
+              B8AAB4D9BBC9D56E788F9EA4BDF5F5FBFDFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFEFFFEFFFFFCFFFCFFFCFCFFFDDADCEA757CA88A
+              95B5D0DDECB9C1D87273AE4E4EA34248AB3B40A44046AB3A3DA63C40A74146B2
+              3D42B03940AB3F47B0373FA93E46AD474CB64247B33B3FAA4144AF383CA73B41
+              AC333BA7393EAA4149B2353DA63D43AC3C3FA54243A94649A74D51A6686CB3B1
+              B9D9D1DAEC8B91B6767AA2CDD5E1F2FCFEFDFFFBFEFFFEFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              EFF4F7A8ABC070739E888AB8C7D1E9C3D1EC7D89BC5C64A44950A04749A84444
+              AB474CB3454CB03D42A8494FB7464BB2464CB43E49AE3F4DB1424FB23E4BAE3B
+              46AB4049AD424AAD4248AC4B50B25055B55055B15B59AA6D71B68189BFB9C7E4
+              C5D9EC8B9BBB6F779CA1A8BEF1F4F9FDFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFCFDFCFCFDFEE6E6F5A2A6C3656F8E848DABABB7D1D2DDF2B6C5E18E
+              9DC47081B05A60A44B4E9B4C519D5356A75355A75051A8494BA64D4EA94A4BA6
+              5155AD4345A04541A74F4CB05250A755599B6F75A7919CBFA4B5CECFDDF1B3C0
+              D78891B66E73A29C9FC3E1E6F3F6FCFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFDFDFEFEFFFDFBFCFFEAEDF4C6C7DA8786B46C6F9E
+              8C93B59DA7C5C2D1E8D9E8F6C0CEDEBBCBDDB8C5DBA0ADC7939FBE959DC38A94
+              B9878FB88C94BB9AA3CCAFBCD6B8C8DBC3D0E0DAE7F3CDD9EA96A0B9838FB16A
+              7695848DA6C2CCD6E7ECF4FEFCFEFCFCFEFDFEFEFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFEFFFFFFFFFFFFF9FB
+              FEF0F2F9C2C3DB8C8FAF8085A8747EAD616F9F7783B598A4CEACB6E1BBC7EBC5
+              D8ECC4D7EAC2D6E8BBCDE1A2B4CB97A8C67E8DB8646F9D6B74A57B82B18288B4
+              B7C0D7EDF3FAF8FCFDFEFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFCFFFFF6FEFFFBFEFFFDFEFFFFFBFDFEE8F1F8CAD3E5ADB8CDABB6CCABB4CB
+              AAB3CBABB2D0A5ACCAA4ACCBA2A9CAA2ABC7A8AECCAEB3CEC5CCE1E8EDF5F4FD
+              FCF8FEFAFEFFFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFEFFFDFCFFFEFEFEFEFEFEFFFFFFFFFFFFFFFFFEFFFFFEFEFEFFFD
+              FFFFFFFFFEFFFFFEFFFFFDFFFFFDFFFFFEFFFEFBFFFFFEFFFCFDFDFDFEFEFDFF
+              FFFEFFFDFEFDFCFCFFFEFFFFFFFFFFFFFFFFFFFFFFFFFBFFFFFDFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00}
+            Stretch = True
+          end
+          object QRLabel13: TQRLabel
+            Left = 74
+            Top = 6
+            Width = 204
+            Height = 24
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              63.500000000000000000
+              195.791666666666700000
+              15.875000000000000000
+              539.750000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'PT.PISMATEX Textile Industry'
+            Color = clWhite
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -19
+            Font.Name = 'Arial Narrow'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 14
+          end
+          object QRLabel17: TQRLabel
+            Left = 44
+            Top = 87
+            Width = 513
+            Height = 23
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              60.854166666666670000
+              116.416666666666700000
+              230.187500000000000000
+              1357.312500000000000000)
+            Alignment = taCenter
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'R E K A P  P E N E R I M A N   T E N U N   P E R  C O R A K'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -19
+            Font.Name = 'Arial'
+            Font.Style = [fsBold]
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 14
+          end
+        end
+        object QRBand3: TQRBand
+          Left = 96
+          Top = 156
+          Width = 602
+          Height = 25
+          Frame.Color = clBlack
+          Frame.DrawTop = True
+          Frame.DrawBottom = True
+          Frame.DrawLeft = True
+          Frame.DrawRight = True
+          AlignToBottom = False
+          BeforePrint = ColumnHeaderBand1BeforePrint
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            66.145833333333330000
+            1592.791666666667000000)
+          BandType = rbColumnHeader
+          object QRLabel18: TQRLabel
+            Left = 126
+            Top = 4
+            Width = 47
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              333.375000000000000000
+              10.583333333333330000
+              124.354166666666700000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'CORAK'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRLabel20: TQRLabel
+            Left = 403
+            Top = 4
+            Width = 56
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1066.270833333333000000
+              10.583333333333330000
+              148.166666666666700000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'POTONG'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRShape6: TQRShape
+            Left = 281
+            Top = 0
+            Width = 1
+            Height = 31
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              82.020833333333340000
+              743.479166666666800000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+        end
+        object QRGroup2: TQRGroup
+          Left = 96
+          Top = 181
+          Width = 602
+          Height = 0
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            0.000000000000000000
+            1592.791666666667000000)
+          FooterBand = QRBand5
+          Master = QuickRep2
+          ReprintOnNewPage = False
+        end
+        object QRBand4: TQRBand
+          Left = 96
+          Top = 233
+          Width = 602
+          Height = 29
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = True
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            76.729166666666670000
+            1592.791666666667000000)
+          BandType = rbPageFooter
+          object QRDBText21: TQRDBText
+            Left = 0
+            Top = 8
+            Width = 36
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              0.000000000000000000
+              21.166666666666670000
+              95.250000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = DMFrm.QUserTime
+            DataField = 'VUSER'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRSysData3: TQRSysData
+            Left = 533
+            Top = 8
+            Width = 69
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1410.229166666667000000
+              21.166666666666670000
+              182.562500000000000000)
+            Alignment = taRightJustify
+            AlignToBand = True
+            AutoSize = True
+            Color = clWhite
+            Data = qrsPageNumber
+            Text = 'Hal '
+            Transparent = False
+            FontSize = 10
+          end
+          object QRDBText22: TQRDBText
+            Left = 265
+            Top = 8
+            Width = 71
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              701.145833333333300000
+              21.166666666666670000
+              187.854166666666700000)
+            Alignment = taCenter
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QTransaksi
+            DataField = 'DISTRIBUSI'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+        end
+        object QRBand5: TQRBand
+          Left = 96
+          Top = 206
+          Width = 602
+          Height = 27
+          Frame.Color = clBlack
+          Frame.DrawTop = True
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            71.437500000000000000
+            1592.791666666667000000)
+          BandType = rbGroupFooter
+          object QRDBText23: TQRDBText
+            Left = 531
+            Top = 3
+            Width = 56
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1404.937500000000000000
+              7.937500000000000000
+              148.166666666666700000)
+            Alignment = taRightJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QPerCorak_Tot
+            DataField = 'POTONG'
+            Mask = '0.0,0;(0.0,0);'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+        end
+        object QRBand6: TQRBand
+          Left = 96
+          Top = 181
+          Width = 602
+          Height = 25
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = True
+          Frame.DrawRight = True
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            66.145833333333330000
+            1592.791666666667000000)
+          BandType = rbDetail
+          object QRDBText25: TQRDBText
+            Left = 531
+            Top = 3
+            Width = 56
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1404.937500000000000000
+              7.937500000000000000
+              148.166666666666700000)
+            Alignment = taRightJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QPerCorak
+            DataField = 'POTONG'
+            Mask = '0.0,0;(0.0,0);'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRDBText27: TQRDBText
+            Left = 6
+            Top = 3
+            Width = 47
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              15.875000000000000000
+              7.937500000000000000
+              124.354166666666700000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QPerCorak
+            DataField = 'CORAK'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRShape9: TQRShape
+            Left = 281
+            Top = 0
+            Width = 1
+            Height = 26
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              68.791666666666680000
+              743.479166666666800000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+        end
+      end
+      object wwDBGrid2: TwwDBGrid
+        Left = 0
+        Top = 68
+        Width = 1525
+        Height = 666
+        DisableThemes = True
+        DisableThemesInTitle = True
+        ControlType.Strings = (
+          'ISAKTIF;CheckBox;1;0'
+          'ID_SUB_BAG;CustomEdit;LookBagian;F'
+          'ID_HAK;CustomEdit;LookJnsMenu;F')
+        PictureMasks.Strings = (
+          'ID_BAG'#9'*2{#,&}'#9'T'#9'T'
+          'KD_JNS_ITEM'#9'#,&'#9'T'#9'T'
+          'KD_SATUAN'#9'#,&'#9'T'#9'T'
+          'ID_USER'#9'*3{&,#}'#9'T'#9'T')
+        Selected.Strings = (
+          'CORAK'#9'25'#9'CORAK'#9'F'
+          'POTONG'#9'20'#9'POTONG'#9'F'#9'QTY')
+        IniAttributes.Enabled = True
+        IniAttributes.SaveToRegistry = True
+        IniAttributes.FileName = 'Pismatex Master'
+        IniAttributes.Delimiter = ';;'
+        IniAttributes.CheckNewFields = True
+        ExportOptions.ExportType = wwgetHTML
+        ExportOptions.Options = [esoShowHeader, esoShowFooter, esoShowTitle, esoDblQuoteFields, esoBestColFit, esoShowRecordNo, esoShowAlternating]
+        TitleColor = clSkyBlue
+        FixedCols = 0
+        ShowHorzScrollBar = True
+        Align = alClient
+        DataSource = DsPerCorak
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgPerfectRowFit, dgShowFooter, dgTrailingEllipsis, dgDblClickColSizing]
+        ParentFont = False
+        ReadOnly = True
+        RowHeightPercent = 125
+        TabOrder = 0
+        TitleAlignment = taCenter
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Lucida Sans'
+        TitleFont.Style = [fsBold]
+        TitleLines = 3
+        TitleButtons = True
+        UseTFields = False
+        OnTitleButtonClick = wwDBGrid1xxxxxTitleButtonClick
+        OnEnter = wwDBGrid2Enter
+        PaintOptions.AlternatingRowColor = clMoneyGreen
+        PaintOptions.ActiveRecordColor = clGreen
+      end
+      object Panel5: TPanel
+        Left = 0
+        Top = 0
+        Width = 1525
+        Height = 52
+        Align = alTop
+        BevelInner = bvLowered
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 1
+        object GroupBox2: TGroupBox
+          Left = 2
+          Top = 2
+          Width = 287
+          Height = 48
+          Align = alLeft
+          Caption = 'Filter Tanggal'
+          TabOrder = 0
+          TabStop = True
+          object Label18: TLabel
+            Left = 129
+            Top = 22
+            Width = 24
+            Height = 13
+            Caption = 'S/D'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object VTglAwal2: TwwDBDateTimePicker
+            Left = 8
+            Top = 16
+            Width = 113
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 0
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAwal2Change
+          end
+          object VTglakhir2: TwwDBDateTimePicker
+            Left = 163
+            Top = 16
+            Width = 113
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 1
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglakhir2Change
+          end
+        end
+        object Panel6: TPanel
+          Left = 289
+          Top = 2
+          Width = 592
+          Height = 48
+          Align = alLeft
+          BevelOuter = bvNone
+          TabOrder = 1
+          DesignSize = (
+            592
+            48)
+          object BtnExport2: TBitBtn
+            Left = 88
+            Top = 12
+            Width = 97
+            Height = 25
+            Caption = '&Export2Excel'
+            TabOrder = 0
+            OnClick = BtnExport2Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+              00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+              00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+              00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+              0003737FFFFFFFFF7F7330099999999900333777777777777733}
+            NumGlyphs = 2
+          end
+          object BitBtn6: TBitBtn
+            Left = 192
+            Top = 11
+            Width = 75
+            Height = 25
+            Anchors = [akTop, akRight]
+            Caption = '&Print'
+            TabOrder = 1
+            OnClick = BitBtn6Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000130B0000130B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+              00033FFFFFFFFFFFFFFF0888888888888880777777777777777F088888888888
+              8880777777777777777F0000000000000000FFFFFFFFFFFFFFFF0F8F8F8F8F8F
+              8F80777777777777777F08F8F8F8F8F8F9F0777777777777777F0F8F8F8F8F8F
+              8F807777777777777F7F0000000000000000777777777777777F3330FFFFFFFF
+              03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+              03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+              33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
+              33333337FFFF7733333333300000033333333337777773333333}
+            NumGlyphs = 2
+          end
+          object BitBtn5: TBitBtn
+            Left = 8
+            Top = 12
+            Width = 75
+            Height = 25
+            Caption = 'Filte&r'
+            Default = True
+            ModalResult = 1
+            TabOrder = 2
+            OnClick = BitBtn5Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+              555555555555555555555555555555555555555555FF55555555555559055555
+              55555555577FF5555555555599905555555555557777F5555555555599905555
+              555555557777FF5555555559999905555555555777777F555555559999990555
+              5555557777777FF5555557990599905555555777757777F55555790555599055
+              55557775555777FF5555555555599905555555555557777F5555555555559905
+              555555555555777FF5555555555559905555555555555777FF55555555555579
+              05555555555555777FF5555555555557905555555555555777FF555555555555
+              5990555555555555577755555555555555555555555555555555}
+            NumGlyphs = 2
+          end
+        end
+      end
+    end
+    object TabSheet6: TTabSheet
+      Caption = 'Rekap Per No Beam'
+      ImageIndex = 5
+      TabVisible = False
+      OnShow = TabSheet6Show
+      object Label19: TLabel
+        Left = 0
+        Top = 52
+        Width = 1525
+        Height = 16
+        Align = alTop
+        Color = clSkyBlue
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -13
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object QuickRep4: TQuickRep
+        Left = 54
+        Top = 83
+        Width = 794
+        Height = 529
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Frame.Width = 2
+        DataSet = QPer_Beam
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        Functions.Strings = (
+          'PAGENUMBER'
+          'COLUMNNUMBER'
+          'REPORTTITLE')
+        Functions.DATA = (
+          '0'
+          '0'
+          #39#39)
+        Options = [LastPageFooter]
+        Page.Columns = 1
+        Page.Orientation = poPortrait
+        Page.PaperSize = Default
+        Page.Values = (
+          50.800000000000000000
+          1399.540000000000000000
+          50.800000000000000000
+          2100.580000000000000000
+          254.000000000000000000
+          254.000000000000000000
+          0.000000000000000000)
+        PrinterSettings.Copies = 1
+        PrinterSettings.Duplex = False
+        PrinterSettings.FirstPage = 0
+        PrinterSettings.LastPage = 0
+        PrinterSettings.OutputBin = Auto
+        PrintIfEmpty = True
+        SnapToGrid = True
+        Units = Inches
+        Zoom = 100
+        object QRBand12: TQRBand
+          Left = 96
+          Top = 19
+          Width = 602
+          Height = 137
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = []
+          ForceNewColumn = False
+          ForceNewPage = False
+          ParentFont = False
+          Size.Values = (
+            362.479166666666700000
+            1592.791666666667000000)
+          BandType = rbTitle
+          object Label17: TLabel
+            Left = 28
+            Top = 43
+            Width = 4
+            Height = 18
+          end
+          object QRLabel19: TQRLabel
+            Left = 102
+            Top = 28
+            Width = 138
+            Height = 22
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              58.208333333333340000
+              269.875000000000000000
+              74.083333333333340000
+              365.125000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'Bligo Sapugarut, Pekalongan'
+            Color = clWhite
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Arial Narrow'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRImage3: TQRImage
+            Left = 4
+            Top = 4
+            Width = 69
+            Height = 47
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              124.354166666666700000
+              10.583333333333330000
+              10.583333333333330000
+              182.562500000000000000)
+            Picture.Data = {
+              07544269746D617022210000424D222100000000000036000000280000004100
+              00002B0000000100180000000000EC200000120B0000120B0000000000000000
+              0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFDFDFDE4E4E4F5F5F5FEFEFEFEFEFEFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFF9F8F8B7B3B0A09893BFA9AAF8F5F5F9FEFEF8FEFE
+              FEFEFFFFFDFFFFFFFFFFFFFFFFFFFCFEFFFEFEFFFFFDFFFFFFFFFFFFFFFFFFFF
+              FFFAFCFFF9FEFFF8FDFFF7FEFFF7FEFCF8FFFEF8FFFEFAFFFCFCFFFEFDFFFEFD
+              FFFFFEFFFFFFFFFFFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFFFDF7F3F1C2B5ABB59684B4998CE1CE
+              D1FBFAFBFFFEFFFEFFFFF8FFFDF7FDFEF6FCFEF5FBFEEBEFFBC5D4E4A9BBCAB3
+              C0D2B2BED4A0B3CE8CA2C58E99C9929DCA9AA4CEA4AED4ACB6D3B1B6D4C5CCE3
+              EBF0FAF4FAFFF8FEFFFBFFFEFCFFFCFDFFFEFEFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFEFEFEFCFAD7CEBFB8
+              937DC0886FC89D90BEACB0F0EDF3F3F3FCB7C1D78395B17785AB5E648C536387
+              697BA08392B0A1AFCFACBDDDAEC4DFAAC2DDADC5E1B0C2DF99A6C98895B9737B
+              AF535B95606999838BB08E98B4BFC7DEEFF4FFF3FAFFF8FCFFFDFFFFFEFFFEFF
+              FFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FEFDFDD3C1BDC09E8EC0917EB7837CB78084A16E817459779895B7C5CDE3D9E0
+              EFC6CBDEC3C7E5BCC2E6999FCB9098C68390C07D95C28093C58395C2909CCAB3
+              BFE9B5CBE7B4CDE0CADFF3B8C7E48695BE717CAD676DA08188B0C5CFE0E5EDF4
+              F7FEFEFBFDFEFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFCFFFFF5FCFEE0E5F48C83AC866886B6837ACB8968D08C6BB77E6AB98D8CB1
+              8FA67A5C89574D864A4B8F4A51A6424CAC4253AF3947A44448A84A4BAC4142A3
+              4443A94848AF4551A544579D4F63A07489B694A7C2BCD3E5C7DCED9BADC67887
+              AB6F76A69DA2CFDFE2F7F7FBFFF9FDFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFF7FEFFA9B7D4656F957F87ADCAC4DFC0AFCD937186B87F77C28067
+              CE8364C57A6BAC686E95647E76517F644A8E59499D554DA44D439C443999463E
+              A13A369A37389F353AA24146B1353BA5383FA237409C444AA0444C9C606EAD84
+              91C2C1D2F0BECCE87685AD616E9895A5C2E5F4F9F7FEFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCFDFF
+              FEFFFEF9FEFED3DCE5767DA87487A8C4D5E9B4C1E25F67A7424AA04F4AA66A4F
+              97946B91B77B7DCA8164D8855CD88362D3816DC37976A46A7796617D8F5D8486
+              579472498765468B50429A3A3EA53F44AC393A9E403FA44846AF4541B6413FB5
+              4244AA4C54B54C58AB6375B2ADC2E3C6DEEC8393B27378AEC0C7E0F3FBFEFBFE
+              FFFFFFFBFFFFFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFE
+              FFFCFDFEF6FCFCADB8CD69739EA7B5D5C1D2EF6C79B241479E363CA32F39A436
+              3DA74442AA493D926B518994677DB57978C77C6ECA7C68CC8268D38469D08167
+              CD7D6BC47C6FC27A73B26D74955F7E6C467F6346896649896F4E8F6B498B6948
+              915A40905447965349A74743AA454AAE3D4CA3707BC0ADB8DBA9B8D8626F9D9D
+              A2C4E9F0F8FDFDFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFCFEFEF3F7FC9FA3C27177ABC2CCEB9CAFCF5359AA3C3DA33938A93B3DB2
+              3B41B22D37A63339AB383DAB4442A44F4295564288745081986B88AE767DCA84
+              71D78663D8875BD38B59DC8A5CDD875ED57E63CE7B6FBE7877BC7679BC7272C2
+              7574BF7478B7737DAC738E946695714F985B4AA7454AAE3D3FAA474CA2899EC5
+              BED6E57B88A67D7EA8EAE9F7FCFEFFFEFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFAFDFED8DFEB8488AFACB4D4A7B4D76570AF4247A74747B73F44B53A3E
+              B0363BAA353EA5373EA63A3CAA393FB2353CB13537AD4040B33D3AA145419B51
+              4A926A5B91735B8676587F815674976A78AC7978B57F6FBE866DC7866ECD846A
+              D58766D3835ED88864D58763DB8B68D08471B77980956A908166A34743994048
+              AD4049AA5665AF94A1CCB4BBDA696C9AB9C0D2F4F8FEFDFFFFFEFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFFFFFFFF
+              FFFFFFFEFCFCFEE6EDF87279A2AFB8D7AEBFDB4F59A73F42B33E45B93D44B336
+              3CAC373FAC3F44B22E34A43B3EAD3939A82F33A6373EB73035AD3739AC353BAF
+              3D45B63B43AB414AAC494FB24449AC4A43A14944965851985B52895E517F6F57
+              7C805F7E9871879C71819D737E9F747FA87B7DAB7D82A27480916E8F79649A59
+              50AC4046AB404AAE3D44B84652B18499C3BCCCE36A7598BFC6D8F6FCFFFEFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFF9FAFF9298B994A8BEBECEE64B4FA54647B64146B93740B4
+              333AAF3942B3353EB04144BA3437B23839B2383FB12F39B2353EB53038AB363C
+              A9363CAE3D43AE4A50B74545AB4745A94948AB3F44A53B43A74247AB3D3FA444
+              44AF4645AF4746A5534CA350459359539A4D4791504C9A554C985A4D91574A96
+              4C48A14949AA4748B33F44B43747AC3548A84050AC8D9FC7B5C4DD6C739AD1D0
+              E7FCFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFEFEFFFFFCFFFFC3C7DD7679A5C9DDEC5566A53D46A63C40B3373D
+              B4323BAF3E40B2404BAB404DA53E49AA4347AE3B3F9B3B3EA32B37AF2F35B035
+              36A5363BAD2E36A93742AB3A44AD484DB9454BAE454EA1474CA54F53AF484DA2
+              454C9F3739A83A3EB6484DA34E4AA14C4DAD46509F45439C4944A13F3EB6464C
+              AA504CAA4643A3464DA24A4BA5423F9D3137A43541B03E47AC424EA1A4B6DBA8
+              B2D77C7AABEEF2F6FEFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFEEF1F87F82AAC1CDE57F8BBB3F4B9E4148AB39
+              3FAF4248B93A43AE5556AA7883B57A85AA818AB5858DB67C84AF565DAA404BB9
+              383FB63B3BAA3039A82E35A93641AB404DAF474EAC6B6FB48991B89097BC9397
+              BC9097B88791BA4B52A34F54B08188B59491B68E94BE8F9EB89395BC767CB54D
+              55AF6472AD9799C39C9DC89AA4C79B9EC49597C84C54A93645AA3642A035409F
+              4450A0B9CCE4818BB4AFB2D5F8FCFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFEFFFEC7CBE38A8EB9B9CAE04D51A2434BAC
+              4044AF3A42AF3842AE3F4DAE6F75AFECF4FEF8FFFFFCFEFFFCFEFFF6FCFF818C
+              BA3643A13239A93637A43139A8353CB0323EA73B49A94D51A4B9BBD9FCFDFFFE
+              FEFFFFFFFFFBFEFFEAF1F9525B9C565CA3E5E9F5FEFDFFFDFEFFFAFFFCFDFEFF
+              B1BEDB525AADA4B1D7FBFCFFFDFDFFFBFEFFFDFEFFECEAF9585EAA3340A5353E
+              A73D48B53D4CA2687BB3B8CBE66F76AFE8EFF8FDFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFF8FAFB8A8BABB0B8D97184AD4042
+              A53C40A94246B24048B33C45AF3846A97176B0F4F8FEFFFFFFFFFFFFFFFFFFFB
+              FDFF8691B63E4AA33E40B14141AE333CA93640AE3643AA3F4EAF545CAABCC0D7
+              FFFFFDFFFFFFFFFFFFFFFFFFF1F2F9535B9E5A5FA9EAEDF5FFFFFFFFFFFFFFFF
+              FAFEFFFFB3BFDB565AB5ACB3DDFEFFFFFFFFFFFFFFFFFFFFFFECE9F8575BA73E
+              48B34146BB3941B64254A85057B5A5B9D77382ADA9B2D2F7FBFFFEFEFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFEF2EFF89294B4D5E1F85D
+              66B04045AA3F45B0474CB74049B33B47B13D49B26C78B2F1F9FDFEFFFDFFFFFF
+              FFFFFFFDFEFF8E91B9454EA93A3EB13D3FAB353EA7353DA43543A7394BB24E5B
+              B2BABDD9FFFFFDFDFFFFFFFFFFFFFFFFF0F2F9555FA05863ADE4ECF5FFFFFFFE
+              FFFFFFFFFDFEFFFFB5C0D95654B8B3BAE6FDFFFFFFFFFFFEFFFFFFFFFFECEAF8
+              565FA5414AB14047B03D49AE3E46B2494DB37D8CC5B2C7E18896BAF0F8FDFBFE
+              FDFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFEFDD0CDE57B85A3
+              AAB8D74349AC3943A3383DAA4045B1333BA7333CA9353FAB6474ABEFFBFDFEFF
+              FCFFFFFFFFFFFFFDFEFF868BB64048A73A3EAC3A39A4313EA23641A3414DB034
+              44AB4653AFB2BAD8FDFFFFFAFFFFFFFFFFFFFFFFF1F5F9545E9C5664AAE3ECF5
+              FFFFFFFEFFFFFDFFFDFFFFFFB6BFD55454AFB4BCE4FDFFFFFFFFFFFCFFFEFDFF
+              FFEAEEF85562A0414FAC4A4FAC4851AB3F3BBD3F45A74952A2B4C6DF677798D6
+              DEEDFDFEFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFDFFFEA0A7
+              CD8091AF97A1CA474BB13B46AF444CB7383EAE3E43B54148B63C43AC6A77B7F6
+              FBFDFFFFFDFFFFFFFFFFFFFEFFFF8C94C34C54BC4149A63E3EA73C45AD3A4BAF
+              3D47AB484FB3535DB1B3BAD7FEFFFFFFFFFFFFFFFFFFFFFFF4F7F95962A15865
+              B1E5EBF5FFFFFEFFFFFFFFFFFFFFFFFFB5BDD65257A6B9C2E0FDFFFFFFFFFFFE
+              FFFFFFFFFFECF1F85662A7404AB34544AD4245AC3F46AF3D4AB34951ADC1CBE9
+              7888A6C6D0E4FFFFFEFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFD
+              FFFF969AC5A7B7D19299C63E3FA93C45B1393FAA3A3EAF363BAD3941B03F47AF
+              6E79BBF4FAFDFFFFFEFFFFFFFFFFFFFDFEFF8893BA4650AD43489F4F49AF4242
+              AE3B45A74349AA494BB05059B0B6BDD8FFFFFFFFFFFEFFFFFFFFFFFFF4F6F954
+              5C9B515CA9E4ECF4FFFFFEFFFFFFFFFFFEFEFFFFB6BFD85158A5B9C5E0FDFFFF
+              FFFFFFFDFFFFFFFFFFEAEFF8515DA13E48B04242AB3D3FA83E45AD3C48B24147
+              A596A0C89BAAC6C2CCE3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFCFEFE9194C1A4AECD979DC9403FAA3842AD3D44AE3D43B03C42B13B40
+              AF3F48AE7683C3F5FBFDFFFFFDFFFFFFFFFFFFFDFFFF929BC1505AAA7581B07D
+              7CB27C81B86B71AE5353A54D4DB0535EB5B6BFDAFFFFFCFFFFFFFFFFFFFFFFFF
+              F6F6F95A62A1525BAAE5EDF5FFFFFEFFFFFFFFFFFEFFFFFFBAC2D9565EAAB6C5
+              DFFDFFFFFFFFFFFEFFFFFFFFFFECF2F95A67AC424BB54344B04344AC4149B03D
+              46B0444CA79099C4A5B5CC97A1C0FEFEFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFEFFFF9FA2CB9BA5C69EA2CE4C49B13E47AE3A43AA3F46B33C
+              43AF4048B2414BAE7280BEF4FBFDFFFFFDFFFFFFFFFFFFFDFEFF8D93C04C589F
+              DBE9F5FBFEFFF9FEFEE9F0FA9898C6585CAE5563B7BAC5DFFFFFFDFFFFFEFFFF
+              FFFFFFFFF5F7F95C65A65561AEE2EBF5FFFFFCFFFFFFFFFFFFFEFFFFBAC1D955
+              59A6BBC8DEFDFFFFFFFFFFFDFFFFFFFFFFECF0F85662A63B45AD3F41AB4346AC
+              4047AF3641AC4149A68A92C2A7B7CEA1AAC7FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFEFFFEC6CAE47E89A5A7ADD24845AA3943A83D45AC
+              3940AB343BA7383FA84049AB707ABBF4FBFDFFFFFDFFFFFFFFFFFFFDFEFF8C93
+              C44A549AE1EBF4FFFFFFFFFFFDFAFEFAE9ECF6777CBC4E5DAEB7C1DCFFFFFEFF
+              FFFEFFFFFFFFFFFFF3F5F95E66A75461AEE5EBF5FFFFFDFFFFFFFFFFFEFEFFFF
+              B9C0DA545AA8B9C5DEFDFFFFFFFFFFFDFFFFFFFFFFECF1F85563A8424CB54445
+              AC3A3AA44047B13B46B04149A4959DC7A0B1C9BBC8DFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFEFCE0E5F58694AED4DEF45857A84042
+              AC343BA34147B03F44B04047B04148AA727DB9F1FAFDFFFFFEFFFFFFFFFFFFFC
+              FEFF959BCA595EA9E1ECF6FEFFFFFFFFFFFFFFFBFAFDFE919CC74F5AA7B8BEDB
+              FFFFFEFFFFFFFFFFFFFFFFFDF4F6F85E66A4535DA7E4ECF5FFFFFBFFFFFFFFFF
+              FFFFFFFFBCC2DE5E61AEBDC6E4FDFFFFFFFFFFFEFFFFFFFFFFE8ECF75058A042
+              49B44146AC3E42AD4249B0363FA44349A0B6BFE37D8BA8C7CFE0FDFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFEFFF3F6FB757CA4B9C8DE69
+              70A44943AF363DA73739A6393EAA343BA4444AAC6977B0F1F9FDFEFFFDFFFFFF
+              FFFFFFFAFEFF8890BD4C51A5DAE7F5FEFFFFFFFFFFFFFFFFF9FFFFACBADA555A
+              A6BABADEFCFFFDFEFFFFFFFFFFFFFFFDF5F9FB6C6FB35760A5E0EEF5FFFFFDFF
+              FEFFFFFFFFFBFFFDB2BED6525AA4B8C1DFFEFFFCFFFFFDFFFFFFFEFFFEE6F1F8
+              595FAB4244B33B44A53D47B23C43AF4146A5454A8FB8BFDA687091D9DEEAFBFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFDFFFBFEFFA9AFCD
+              979FC4B5BDD94E57A03440A53841AD3C44B03B46B04753B5727CB2F2F7FDFFFF
+              FEFFFFFFFFFFFFFAFDFF8991C049509EDFE5F5FFFFFFFFFFFFFEFFFDF9FEFE89
+              94C14D53A9A9B3D9F5FFFDFFFFFEFFFFFFFEFFFFEEF4FA575AA84E57ADD9E8F7
+              FBFFFEFFFFFFFFFFFFFEFFFFB2C1D74E5C9DB2BDDFFDFEFFFFFFFFFFFFFFFFFF
+              FDE8F0F85C63AC484AB73F4AAD3D4AAE4347BC4046A77C8ABBB9C5E39298BAF4
+              FAFDFBFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FEE2E3EF6F70A2CBD6E66577A33847A2404AB1353DAB3743AF3647A76D76AAF1
+              F8FDFDFFFDFFFFFEFFFFFFF8FEFF8390BB4C5999DFECF4FEFFFFFFFFFFFCFFFC
+              DCE5F36C76BC4D56B36E7DB5E7F7FAFEFFFEFDFFFFF9FFFFDAE8F5434E9B4854
+              AEA7BBDFF1FEFCFCFFFBFEFFFFFBFDFF7E89BD44529F7B85B8F3F8FCFCFEFDFD
+              FEFEFDFFFFC9D0E74D52A34245B13C44AB3948A74044B94650A9A8BBD5818EAE
+              B2B7D1FEFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFBFEFEA3A5C48B95B6B8C9E1465597424BA74047B3343CAD3D4AB1
+              6571AFE2F3FDEEFEFFEDFCFFF0FCFFEAF9FF7281BA32488BD2E7F4F4F9FFF5FC
+              FFD6E9F57280B13D47A4434DB24D5EA79DB1D4EFFBFFF0FCFFE0F0FB7081B039
+              469831419B5165A0D4E8F5EEFEFFEEFAFFB7BEE25256B53947AD4857A4AEB6D3
+              ECF9FBF2FBFEE0E9FD7C86BF444CA83A42AC3F47AF3A44A44046A26F7AB2B1BE
+              D3707A96EEF3F7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFCFFFDFFFDFFF8EFF4F7747BA8AFBDDA99A7CC424B964749B03F44
+              B43D43B4404CAB5B6DB25F77B16676BC6C7BC16B78BF444CAF344BAA6D86C17D
+              87CD6777B64D64A53B4BA63D49B5404AB1474FAD4B54A86472B16D81BB5063AA
+              3944A43038A2333CA93A45AA4F5CAB6678B2586AA542509D3C40A72E3EAB394A
+              AE4A52A65C6AAA6379AC4C5CA04652B33F4DB54049AE4348B04745AF556296CB
+              D6E98283AFC1C3D4FDFFFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFDFFFDFFFFFFFAFBFFFAD1D2EA73789BD2DEEC8994BF4A
+              4CA63D3BAE383AAC363FB03947AD3649AA3741B0383EB23C42B2373BB23241B3
+              2F43A53039A326369C3648AB303CAA2832A13843AC3940A63B3EAA3841AA3644
+              A63340AB3037AC2E33A92D35A7353BAF393FAF3540A23542A03340A2353CA130
+              3FAA3843B53F42B04049AE414FAD2E3D9E3B46AF3443A33A45A43E45A8494D9C
+              B5C0D99EA3C6918CB5F4F4FAFCFEFAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFDFDD4D6E07D81A8
+              ADB5D8AAB4D7565EA14847AD393EB0353CAF3A40B52730A32F38A9333EAC3742
+              AF2F3BAA2E37A72F39A92934A2333AA83F45B23A40AC4249B43A42A8373EA930
+              3AA8252F9F3039A8303BAB2631A22C31A2383DAD383FAB393EAA3139A1363EA6
+              323CA6323BA73236A7373DA93E42AA3A44A83B45AD3E43AE3C43A53E49975C67
+              A6B4BFDB99A0BF9395B6E5E6F1FFFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFF
+              FED9DCEA7571A8979CC3CED9EC6C74A83E459C3E42AC353AB23942BA2D3FA92F
+              41A8353BAE2A32A53138AA2B32A32F38A63238A7383DAC2F34A1353CA63840A7
+              3740A8323AA82F37A42D36A527309E222A9B333AA9353AAB3D42B03A42AB2A32
+              9B363EA52E3EA22E3EA8313AAB3B40B0343BA83F4CAE3440A4373AA94546A96F
+              75AFCBD6EC868BAE8C92ADEFF4F8FCFEFEFDFEFEFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFEFFFCFDFFFAE8E7F3918EBF8A88BCD3DDEE8A99BD4B569A444CAB3C42B3
+              3643B23D48B9393FB13A3DB13338AA3238AA373BAD3A41B03F47B33D41AF474F
+              B84149B13F48B2363EAA3C44AF2C33A1363BAB2B329F3C42AF3B3FB03A40AD34
+              3BA43B44AA3B46AD3343A63843AD3B44AF3E45B34045AF4449B2464FAF515CA6
+              8B93C0CCD3E68C91AE9291B4EEF2F7FBFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFEFEFDFEFFF1F2F5F89E9CBF7776A4B2C0D5B6C5E26F7C
+              AF4951A0494BAF4748B53C3EAD3A3FAA3536A43C40AD4144B0383EAC2C31A137
+              3BA94048B13841A93B42AB4144B0363CA73A41AC3D41AC3135A14247B43D44B1
+              3A42AE3840AA434CB33C44AC3940A73A41A93D43A84B4EB0464DA54E51A76E74
+              B8AAB4D9BBC9D56E788F9EA4BDF5F5FBFDFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFEFFFEFFFFFCFFFCFFFCFCFFFDDADCEA757CA88A
+              95B5D0DDECB9C1D87273AE4E4EA34248AB3B40A44046AB3A3DA63C40A74146B2
+              3D42B03940AB3F47B0373FA93E46AD474CB64247B33B3FAA4144AF383CA73B41
+              AC333BA7393EAA4149B2353DA63D43AC3C3FA54243A94649A74D51A6686CB3B1
+              B9D9D1DAEC8B91B6767AA2CDD5E1F2FCFEFDFFFBFEFFFEFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              EFF4F7A8ABC070739E888AB8C7D1E9C3D1EC7D89BC5C64A44950A04749A84444
+              AB474CB3454CB03D42A8494FB7464BB2464CB43E49AE3F4DB1424FB23E4BAE3B
+              46AB4049AD424AAD4248AC4B50B25055B55055B15B59AA6D71B68189BFB9C7E4
+              C5D9EC8B9BBB6F779CA1A8BEF1F4F9FDFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFCFDFCFCFDFEE6E6F5A2A6C3656F8E848DABABB7D1D2DDF2B6C5E18E
+              9DC47081B05A60A44B4E9B4C519D5356A75355A75051A8494BA64D4EA94A4BA6
+              5155AD4345A04541A74F4CB05250A755599B6F75A7919CBFA4B5CECFDDF1B3C0
+              D78891B66E73A29C9FC3E1E6F3F6FCFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFDFDFEFEFFFDFBFCFFEAEDF4C6C7DA8786B46C6F9E
+              8C93B59DA7C5C2D1E8D9E8F6C0CEDEBBCBDDB8C5DBA0ADC7939FBE959DC38A94
+              B9878FB88C94BB9AA3CCAFBCD6B8C8DBC3D0E0DAE7F3CDD9EA96A0B9838FB16A
+              7695848DA6C2CCD6E7ECF4FEFCFEFCFCFEFDFEFEFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFEFFFFFFFFFFFFF9FB
+              FEF0F2F9C2C3DB8C8FAF8085A8747EAD616F9F7783B598A4CEACB6E1BBC7EBC5
+              D8ECC4D7EAC2D6E8BBCDE1A2B4CB97A8C67E8DB8646F9D6B74A57B82B18288B4
+              B7C0D7EDF3FAF8FCFDFEFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFCFFFFF6FEFFFBFEFFFDFEFFFFFBFDFEE8F1F8CAD3E5ADB8CDABB6CCABB4CB
+              AAB3CBABB2D0A5ACCAA4ACCBA2A9CAA2ABC7A8AECCAEB3CEC5CCE1E8EDF5F4FD
+              FCF8FEFAFEFFFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFEFFFDFCFFFEFEFEFEFEFEFFFFFFFFFFFFFFFFFEFFFFFEFEFEFFFD
+              FFFFFFFFFEFFFFFEFFFFFDFFFFFDFFFFFEFFFEFBFFFFFEFFFCFDFDFDFEFEFDFF
+              FFFEFFFDFEFDFCFCFFFEFFFFFFFFFFFFFFFFFFFFFFFFFBFFFFFDFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00}
+            Stretch = True
+          end
+          object QRLabel21: TQRLabel
+            Left = 74
+            Top = 6
+            Width = 204
+            Height = 24
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              63.500000000000000000
+              195.791666666666700000
+              15.875000000000000000
+              539.750000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'PT.PISMATEX Textile Industry'
+            Color = clWhite
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -19
+            Font.Name = 'Arial Narrow'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 14
+          end
+          object QRLabel22: TQRLabel
+            Left = 44
+            Top = 87
+            Width = 514
+            Height = 23
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              60.854166666666670000
+              116.416666666666700000
+              230.187500000000000000
+              1359.958333333333000000)
+            Alignment = taCenter
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'R E K A P  P E N E R I M A N   T E N U N   P E R  NO BEAM'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -19
+            Font.Name = 'Arial'
+            Font.Style = [fsBold]
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 14
+          end
+        end
+        object QRBand13: TQRBand
+          Left = 96
+          Top = 156
+          Width = 602
+          Height = 25
+          Frame.Color = clBlack
+          Frame.DrawTop = True
+          Frame.DrawBottom = True
+          Frame.DrawLeft = True
+          Frame.DrawRight = True
+          AlignToBottom = False
+          BeforePrint = ColumnHeaderBand1BeforePrint
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            66.145833333333330000
+            1592.791666666667000000)
+          BandType = rbColumnHeader
+          object QRLabel24: TQRLabel
+            Left = 355
+            Top = 4
+            Width = 62
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              939.270833333333400000
+              10.583333333333330000
+              164.041666666666700000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'NO BEAM'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRShape3: TQRShape
+            Left = 281
+            Top = 0
+            Width = 1
+            Height = 31
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              82.020833333333340000
+              743.479166666666800000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRLabel23: TQRLabel
+            Left = 126
+            Top = 4
+            Width = 40
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              333.375000000000000000
+              10.583333333333330000
+              105.833333333333300000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'MITRA'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRLabel51: TQRLabel
+            Left = 523
+            Top = 4
+            Width = 56
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1383.770833333333000000
+              10.583333333333330000
+              148.166666666666700000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'POTONG'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+        end
+        object QRGroup4: TQRGroup
+          Left = 96
+          Top = 181
+          Width = 602
+          Height = 0
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            0.000000000000000000
+            1592.791666666667000000)
+          FooterBand = QRBand15
+          Master = QuickRep4
+          ReprintOnNewPage = False
+        end
+        object QRBand14: TQRBand
+          Left = 96
+          Top = 233
+          Width = 602
+          Height = 29
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = True
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            76.729166666666670000
+            1592.791666666667000000)
+          BandType = rbPageFooter
+          object QRDBText24: TQRDBText
+            Left = 0
+            Top = 8
+            Width = 36
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              0.000000000000000000
+              21.166666666666670000
+              95.250000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = DMFrm.QUserTime
+            DataField = 'VUSER'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRSysData5: TQRSysData
+            Left = 533
+            Top = 8
+            Width = 69
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1410.229166666667000000
+              21.166666666666670000
+              182.562500000000000000)
+            Alignment = taRightJustify
+            AlignToBand = True
+            AutoSize = True
+            Color = clWhite
+            Data = qrsPageNumber
+            Text = 'Hal '
+            Transparent = False
+            FontSize = 10
+          end
+          object QRDBText26: TQRDBText
+            Left = 265
+            Top = 8
+            Width = 71
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              701.145833333333300000
+              21.166666666666670000
+              187.854166666666700000)
+            Alignment = taCenter
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QTransaksi
+            DataField = 'DISTRIBUSI'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+        end
+        object QRBand15: TQRBand
+          Left = 96
+          Top = 206
+          Width = 602
+          Height = 27
+          Frame.Color = clBlack
+          Frame.DrawTop = True
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            71.437500000000000000
+            1592.791666666667000000)
+          BandType = rbGroupFooter
+          object QRDBText28: TQRDBText
+            Left = 523
+            Top = 3
+            Width = 56
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1383.770833333333000000
+              7.937500000000000000
+              148.166666666666700000)
+            Alignment = taRightJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QPerCorak_Tot
+            DataField = 'POTONG'
+            Mask = '0.0,0;(0.0,0);'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+        end
+        object QRBand16: TQRBand
+          Left = 96
+          Top = 181
+          Width = 602
+          Height = 25
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = True
+          Frame.DrawRight = True
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            66.145833333333330000
+            1592.791666666667000000)
+          BandType = rbDetail
+          object QRDBText29: TQRDBText
+            Left = 355
+            Top = 3
+            Width = 65
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              939.270833333333400000
+              7.937500000000000000
+              171.979166666666700000)
+            Alignment = taRightJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QPer_Beam
+            DataField = 'NO_BEAM'
+            Mask = '0.0,0;(0.0,0);'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRDBText30: TQRDBText
+            Left = 6
+            Top = 3
+            Width = 85
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              15.875000000000000000
+              7.937500000000000000
+              224.895833333333300000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QPer_Beam
+            DataField = 'NAMA_MITRA'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRShape4: TQRShape
+            Left = 281
+            Top = 0
+            Width = 1
+            Height = 26
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              68.791666666666680000
+              743.479166666666800000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRDBText53: TQRDBText
+            Left = 523
+            Top = 3
+            Width = 56
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1383.770833333333000000
+              7.937500000000000000
+              148.166666666666700000)
+            Alignment = taRightJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QPer_Beam
+            DataField = 'POTONG'
+            Mask = '0.0,0;(0.0,0);'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+        end
+      end
+      object Panel9: TPanel
+        Left = 0
+        Top = 0
+        Width = 1525
+        Height = 52
+        Align = alTop
+        BevelInner = bvLowered
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 0
+        object GroupBox4: TGroupBox
+          Left = 2
+          Top = 2
+          Width = 368
+          Height = 48
+          Align = alLeft
+          Caption = 'Filter Tanggal'
+          TabOrder = 0
+          TabStop = True
+          object Label16: TLabel
+            Left = 129
+            Top = 22
+            Width = 24
+            Height = 13
+            Caption = 'S/D'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object VTglAwal4: TwwDBDateTimePicker
+            Left = 8
+            Top = 16
+            Width = 113
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 0
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAwal4Change
+          end
+          object VTglAkhir4: TwwDBDateTimePicker
+            Left = 163
+            Top = 16
+            Width = 113
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 1
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAkhir4Change
+          end
+          object BitBtn14: TBitBtn
+            Left = 283
+            Top = 15
+            Width = 75
+            Height = 25
+            Caption = 'Refres&h'
+            TabOrder = 2
+            OnClick = BitBtn14Click
+            Kind = bkRetry
+          end
+        end
+        object Panel14: TPanel
+          Left = 370
+          Top = 2
+          Width = 604
+          Height = 48
+          Align = alLeft
+          BevelOuter = bvNone
+          TabOrder = 1
+          DesignSize = (
+            604
+            48)
+          object Label21: TLabel
+            Left = 156
+            Top = 20
+            Width = 44
+            Height = 24
+            Cursor = crHandPoint
+            Alignment = taCenter
+            AutoSize = False
+            Caption = 'LIKE'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clNavy
+            Font.Height = -19
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            OnClick = vOperandClick
+          end
+          object BitBtn11: TBitBtn
+            Left = 337
+            Top = 19
+            Width = 75
+            Height = 25
+            Caption = 'Filte&r'
+            Default = True
+            ModalResult = 1
+            TabOrder = 0
+            OnClick = BitBtn11Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+              555555555555555555555555555555555555555555FF55555555555559055555
+              55555555577FF5555555555599905555555555557777F5555555555599905555
+              555555557777FF5555555559999905555555555777777F555555559999990555
+              5555557777777FF5555557990599905555555777757777F55555790555599055
+              55557775555777FF5555555555599905555555555557777F5555555555559905
+              555555555555777FF5555555555559905555555555555777FF55555555555579
+              05555555555555777FF5555555555557905555555555555777FF555555555555
+              5990555555555555577755555555555555555555555555555555}
+            NumGlyphs = 2
+          end
+          object BtnExport4: TBitBtn
+            Left = 417
+            Top = 19
+            Width = 97
+            Height = 25
+            Caption = '&Export2Excel'
+            TabOrder = 1
+            OnClick = BtnExport3Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+              00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+              00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+              00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+              0003737FFFFFFFFF7F7330099999999900333777777777777733}
+            NumGlyphs = 2
+          end
+          object BitBtn13: TBitBtn
+            Left = 520
+            Top = 19
+            Width = 75
+            Height = 25
+            Anchors = [akTop, akRight]
+            Caption = '&Print'
+            TabOrder = 2
+            OnClick = BitBtn13Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000130B0000130B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+              00033FFFFFFFFFFFFFFF0888888888888880777777777777777F088888888888
+              8880777777777777777F0000000000000000FFFFFFFFFFFFFFFF0F8F8F8F8F8F
+              8F80777777777777777F08F8F8F8F8F8F9F0777777777777777F0F8F8F8F8F8F
+              8F807777777777777F7F0000000000000000777777777777777F3330FFFFFFFF
+              03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+              03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+              33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
+              33333337FFFF7733333333300000033333333337777773333333}
+            NumGlyphs = 2
+          end
+          object cbOtomatis3: TCheckBox
+            Left = 11
+            Top = 5
+            Width = 98
+            Height = 17
+            Caption = 'Cari &Otomatis'
+            TabOrder = 3
+            OnClick = cbOtomatis2Click
+          end
+          object dbcField3: TwwDBComboBox
+            Left = 11
+            Top = 23
+            Width = 137
+            Height = 19
+            ShowButton = True
+            Style = csDropDown
+            MapList = False
+            AllowClearKey = False
+            Color = clYellow
+            DropDownCount = 8
+            ItemHeight = 0
+            Items.Strings = (
+              'SEMUA KOLOM')
+            ItemIndex = 0
+            Sorted = False
+            TabOrder = 4
+            UnboundDataType = wwDefault
+            OnEnter = dbcField2Enter
+          end
+          object ECari3: TEdit
+            Left = 206
+            Top = 23
+            Width = 121
+            Height = 19
+            Ctl3D = False
+            ParentCtl3D = False
+            TabOrder = 5
+          end
+          object cbTanggal3: TCheckBox
+            Left = 207
+            Top = 5
+            Width = 129
+            Height = 17
+            Caption = 'Ikutkan Filter &Tanggal'
+            Checked = True
+            State = cbChecked
+            TabOrder = 6
+            OnClick = cbTanggal2Click
+          end
+        end
+      end
+      object wwDBGrid4: TwwDBGrid
+        Left = 0
+        Top = 68
+        Width = 1525
+        Height = 666
+        DisableThemes = True
+        DisableThemesInTitle = True
+        ControlType.Strings = (
+          'ISAKTIF;CheckBox;1;0'
+          'ID_SUB_BAG;CustomEdit;LookBagian;F'
+          'ID_HAK;CustomEdit;LookJnsMenu;F')
+        PictureMasks.Strings = (
+          'ID_BAG'#9'*2{#,&}'#9'T'#9'T'
+          'KD_JNS_ITEM'#9'#,&'#9'T'#9'T'
+          'KD_SATUAN'#9'#,&'#9'T'#9'T'
+          'ID_USER'#9'*3{&,#}'#9'T'#9'T')
+        Selected.Strings = (
+          'NAMA_MITRA'#9'30'#9'MITRA'#9'F'
+          'NO_BEAM'#9'10'#9'NO_BEAM'#9'F'
+          'POTONG'#9'10'#9'POTONG'#9'F')
+        IniAttributes.Enabled = True
+        IniAttributes.SaveToRegistry = True
+        IniAttributes.FileName = 'Pismatex Master'
+        IniAttributes.Delimiter = ';;'
+        IniAttributes.CheckNewFields = True
+        ExportOptions.ExportType = wwgetHTML
+        ExportOptions.Options = [esoShowHeader, esoShowFooter, esoShowTitle, esoDblQuoteFields, esoBestColFit, esoShowRecordNo, esoShowAlternating]
+        TitleColor = clSkyBlue
+        FixedCols = 0
+        ShowHorzScrollBar = True
+        Align = alClient
+        DataSource = dsQPer_Beam
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgPerfectRowFit, dgShowFooter, dgTrailingEllipsis, dgDblClickColSizing]
+        ParentFont = False
+        ReadOnly = True
+        RowHeightPercent = 125
+        TabOrder = 1
+        TitleAlignment = taCenter
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Lucida Sans'
+        TitleFont.Style = [fsBold]
+        TitleLines = 3
+        TitleButtons = True
+        UseTFields = False
+        OnTitleButtonClick = wwDBGrid1xxxxxTitleButtonClick
+        OnEnter = wwDBGrid2Enter
+        PaintOptions.AlternatingRowColor = clMoneyGreen
+        PaintOptions.ActiveRecordColor = clGreen
+        GroupFieldName = 'NAMA_MITRA'
+      end
+    end
+    object TabSheet8: TTabSheet
+      Caption = 'Rekap Per No Resep'
+      ImageIndex = 7
+      TabVisible = False
+      OnShow = TabSheet8Show
+      object Label37: TLabel
+        Left = 0
+        Top = 52
+        Width = 1525
+        Height = 16
+        Align = alTop
+        Color = clSkyBlue
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -13
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object QuickRep6: TQuickRep
+        Left = 86
+        Top = 75
+        Width = 794
+        Height = 529
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Frame.Width = 2
+        DataSet = QPerResep
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        Functions.Strings = (
+          'PAGENUMBER'
+          'COLUMNNUMBER'
+          'REPORTTITLE')
+        Functions.DATA = (
+          '0'
+          '0'
+          #39#39)
+        Options = [LastPageFooter]
+        Page.Columns = 1
+        Page.Orientation = poPortrait
+        Page.PaperSize = Default
+        Page.Values = (
+          50.800000000000000000
+          1399.540000000000000000
+          50.800000000000000000
+          2100.580000000000000000
+          254.000000000000000000
+          254.000000000000000000
+          0.000000000000000000)
+        PrinterSettings.Copies = 1
+        PrinterSettings.Duplex = False
+        PrinterSettings.FirstPage = 0
+        PrinterSettings.LastPage = 0
+        PrinterSettings.OutputBin = Auto
+        PrintIfEmpty = True
+        SnapToGrid = True
+        Units = Inches
+        Zoom = 100
+        object QRBand22: TQRBand
+          Left = 96
+          Top = 19
+          Width = 602
+          Height = 137
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = []
+          ForceNewColumn = False
+          ForceNewPage = False
+          ParentFont = False
+          Size.Values = (
+            362.479166666666700000
+            1592.791666666667000000)
+          BandType = rbTitle
+          object Label36: TLabel
+            Left = 28
+            Top = 43
+            Width = 4
+            Height = 18
+          end
+          object QRLabel30: TQRLabel
+            Left = 102
+            Top = 28
+            Width = 138
+            Height = 22
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              58.208333333333340000
+              269.875000000000000000
+              74.083333333333340000
+              365.125000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'Bligo Sapugarut, Pekalongan'
+            Color = clWhite
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Arial Narrow'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRImage6: TQRImage
+            Left = 4
+            Top = 4
+            Width = 69
+            Height = 47
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              124.354166666666700000
+              10.583333333333330000
+              10.583333333333330000
+              182.562500000000000000)
+            Picture.Data = {
+              07544269746D617022210000424D222100000000000036000000280000004100
+              00002B0000000100180000000000EC200000120B0000120B0000000000000000
+              0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFDFDFDE4E4E4F5F5F5FEFEFEFEFEFEFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFF9F8F8B7B3B0A09893BFA9AAF8F5F5F9FEFEF8FEFE
+              FEFEFFFFFDFFFFFFFFFFFFFFFFFFFCFEFFFEFEFFFFFDFFFFFFFFFFFFFFFFFFFF
+              FFFAFCFFF9FEFFF8FDFFF7FEFFF7FEFCF8FFFEF8FFFEFAFFFCFCFFFEFDFFFEFD
+              FFFFFEFFFFFFFFFFFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFFFDF7F3F1C2B5ABB59684B4998CE1CE
+              D1FBFAFBFFFEFFFEFFFFF8FFFDF7FDFEF6FCFEF5FBFEEBEFFBC5D4E4A9BBCAB3
+              C0D2B2BED4A0B3CE8CA2C58E99C9929DCA9AA4CEA4AED4ACB6D3B1B6D4C5CCE3
+              EBF0FAF4FAFFF8FEFFFBFFFEFCFFFCFDFFFEFEFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFEFEFEFCFAD7CEBFB8
+              937DC0886FC89D90BEACB0F0EDF3F3F3FCB7C1D78395B17785AB5E648C536387
+              697BA08392B0A1AFCFACBDDDAEC4DFAAC2DDADC5E1B0C2DF99A6C98895B9737B
+              AF535B95606999838BB08E98B4BFC7DEEFF4FFF3FAFFF8FCFFFDFFFFFEFFFEFF
+              FFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FEFDFDD3C1BDC09E8EC0917EB7837CB78084A16E817459779895B7C5CDE3D9E0
+              EFC6CBDEC3C7E5BCC2E6999FCB9098C68390C07D95C28093C58395C2909CCAB3
+              BFE9B5CBE7B4CDE0CADFF3B8C7E48695BE717CAD676DA08188B0C5CFE0E5EDF4
+              F7FEFEFBFDFEFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFCFFFFF5FCFEE0E5F48C83AC866886B6837ACB8968D08C6BB77E6AB98D8CB1
+              8FA67A5C89574D864A4B8F4A51A6424CAC4253AF3947A44448A84A4BAC4142A3
+              4443A94848AF4551A544579D4F63A07489B694A7C2BCD3E5C7DCED9BADC67887
+              AB6F76A69DA2CFDFE2F7F7FBFFF9FDFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFF7FEFFA9B7D4656F957F87ADCAC4DFC0AFCD937186B87F77C28067
+              CE8364C57A6BAC686E95647E76517F644A8E59499D554DA44D439C443999463E
+              A13A369A37389F353AA24146B1353BA5383FA237409C444AA0444C9C606EAD84
+              91C2C1D2F0BECCE87685AD616E9895A5C2E5F4F9F7FEFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCFDFF
+              FEFFFEF9FEFED3DCE5767DA87487A8C4D5E9B4C1E25F67A7424AA04F4AA66A4F
+              97946B91B77B7DCA8164D8855CD88362D3816DC37976A46A7796617D8F5D8486
+              579472498765468B50429A3A3EA53F44AC393A9E403FA44846AF4541B6413FB5
+              4244AA4C54B54C58AB6375B2ADC2E3C6DEEC8393B27378AEC0C7E0F3FBFEFBFE
+              FFFFFFFBFFFFFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFE
+              FFFCFDFEF6FCFCADB8CD69739EA7B5D5C1D2EF6C79B241479E363CA32F39A436
+              3DA74442AA493D926B518994677DB57978C77C6ECA7C68CC8268D38469D08167
+              CD7D6BC47C6FC27A73B26D74955F7E6C467F6346896649896F4E8F6B498B6948
+              915A40905447965349A74743AA454AAE3D4CA3707BC0ADB8DBA9B8D8626F9D9D
+              A2C4E9F0F8FDFDFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFCFEFEF3F7FC9FA3C27177ABC2CCEB9CAFCF5359AA3C3DA33938A93B3DB2
+              3B41B22D37A63339AB383DAB4442A44F4295564288745081986B88AE767DCA84
+              71D78663D8875BD38B59DC8A5CDD875ED57E63CE7B6FBE7877BC7679BC7272C2
+              7574BF7478B7737DAC738E946695714F985B4AA7454AAE3D3FAA474CA2899EC5
+              BED6E57B88A67D7EA8EAE9F7FCFEFFFEFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFAFDFED8DFEB8488AFACB4D4A7B4D76570AF4247A74747B73F44B53A3E
+              B0363BAA353EA5373EA63A3CAA393FB2353CB13537AD4040B33D3AA145419B51
+              4A926A5B91735B8676587F815674976A78AC7978B57F6FBE866DC7866ECD846A
+              D58766D3835ED88864D58763DB8B68D08471B77980956A908166A34743994048
+              AD4049AA5665AF94A1CCB4BBDA696C9AB9C0D2F4F8FEFDFFFFFEFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFFFFFFFF
+              FFFFFFFEFCFCFEE6EDF87279A2AFB8D7AEBFDB4F59A73F42B33E45B93D44B336
+              3CAC373FAC3F44B22E34A43B3EAD3939A82F33A6373EB73035AD3739AC353BAF
+              3D45B63B43AB414AAC494FB24449AC4A43A14944965851985B52895E517F6F57
+              7C805F7E9871879C71819D737E9F747FA87B7DAB7D82A27480916E8F79649A59
+              50AC4046AB404AAE3D44B84652B18499C3BCCCE36A7598BFC6D8F6FCFFFEFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFF9FAFF9298B994A8BEBECEE64B4FA54647B64146B93740B4
+              333AAF3942B3353EB04144BA3437B23839B2383FB12F39B2353EB53038AB363C
+              A9363CAE3D43AE4A50B74545AB4745A94948AB3F44A53B43A74247AB3D3FA444
+              44AF4645AF4746A5534CA350459359539A4D4791504C9A554C985A4D91574A96
+              4C48A14949AA4748B33F44B43747AC3548A84050AC8D9FC7B5C4DD6C739AD1D0
+              E7FCFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFEFEFFFFFCFFFFC3C7DD7679A5C9DDEC5566A53D46A63C40B3373D
+              B4323BAF3E40B2404BAB404DA53E49AA4347AE3B3F9B3B3EA32B37AF2F35B035
+              36A5363BAD2E36A93742AB3A44AD484DB9454BAE454EA1474CA54F53AF484DA2
+              454C9F3739A83A3EB6484DA34E4AA14C4DAD46509F45439C4944A13F3EB6464C
+              AA504CAA4643A3464DA24A4BA5423F9D3137A43541B03E47AC424EA1A4B6DBA8
+              B2D77C7AABEEF2F6FEFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFEEF1F87F82AAC1CDE57F8BBB3F4B9E4148AB39
+              3FAF4248B93A43AE5556AA7883B57A85AA818AB5858DB67C84AF565DAA404BB9
+              383FB63B3BAA3039A82E35A93641AB404DAF474EAC6B6FB48991B89097BC9397
+              BC9097B88791BA4B52A34F54B08188B59491B68E94BE8F9EB89395BC767CB54D
+              55AF6472AD9799C39C9DC89AA4C79B9EC49597C84C54A93645AA3642A035409F
+              4450A0B9CCE4818BB4AFB2D5F8FCFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFEFFFEC7CBE38A8EB9B9CAE04D51A2434BAC
+              4044AF3A42AF3842AE3F4DAE6F75AFECF4FEF8FFFFFCFEFFFCFEFFF6FCFF818C
+              BA3643A13239A93637A43139A8353CB0323EA73B49A94D51A4B9BBD9FCFDFFFE
+              FEFFFFFFFFFBFEFFEAF1F9525B9C565CA3E5E9F5FEFDFFFDFEFFFAFFFCFDFEFF
+              B1BEDB525AADA4B1D7FBFCFFFDFDFFFBFEFFFDFEFFECEAF9585EAA3340A5353E
+              A73D48B53D4CA2687BB3B8CBE66F76AFE8EFF8FDFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFF8FAFB8A8BABB0B8D97184AD4042
+              A53C40A94246B24048B33C45AF3846A97176B0F4F8FEFFFFFFFFFFFFFFFFFFFB
+              FDFF8691B63E4AA33E40B14141AE333CA93640AE3643AA3F4EAF545CAABCC0D7
+              FFFFFDFFFFFFFFFFFFFFFFFFF1F2F9535B9E5A5FA9EAEDF5FFFFFFFFFFFFFFFF
+              FAFEFFFFB3BFDB565AB5ACB3DDFEFFFFFFFFFFFFFFFFFFFFFFECE9F8575BA73E
+              48B34146BB3941B64254A85057B5A5B9D77382ADA9B2D2F7FBFFFEFEFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFEF2EFF89294B4D5E1F85D
+              66B04045AA3F45B0474CB74049B33B47B13D49B26C78B2F1F9FDFEFFFDFFFFFF
+              FFFFFFFDFEFF8E91B9454EA93A3EB13D3FAB353EA7353DA43543A7394BB24E5B
+              B2BABDD9FFFFFDFDFFFFFFFFFFFFFFFFF0F2F9555FA05863ADE4ECF5FFFFFFFE
+              FFFFFFFFFDFEFFFFB5C0D95654B8B3BAE6FDFFFFFFFFFFFEFFFFFFFFFFECEAF8
+              565FA5414AB14047B03D49AE3E46B2494DB37D8CC5B2C7E18896BAF0F8FDFBFE
+              FDFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFEFDD0CDE57B85A3
+              AAB8D74349AC3943A3383DAA4045B1333BA7333CA9353FAB6474ABEFFBFDFEFF
+              FCFFFFFFFFFFFFFDFEFF868BB64048A73A3EAC3A39A4313EA23641A3414DB034
+              44AB4653AFB2BAD8FDFFFFFAFFFFFFFFFFFFFFFFF1F5F9545E9C5664AAE3ECF5
+              FFFFFFFEFFFFFDFFFDFFFFFFB6BFD55454AFB4BCE4FDFFFFFFFFFFFCFFFEFDFF
+              FFEAEEF85562A0414FAC4A4FAC4851AB3F3BBD3F45A74952A2B4C6DF677798D6
+              DEEDFDFEFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFDFFFEA0A7
+              CD8091AF97A1CA474BB13B46AF444CB7383EAE3E43B54148B63C43AC6A77B7F6
+              FBFDFFFFFDFFFFFFFFFFFFFEFFFF8C94C34C54BC4149A63E3EA73C45AD3A4BAF
+              3D47AB484FB3535DB1B3BAD7FEFFFFFFFFFFFFFFFFFFFFFFF4F7F95962A15865
+              B1E5EBF5FFFFFEFFFFFFFFFFFFFFFFFFB5BDD65257A6B9C2E0FDFFFFFFFFFFFE
+              FFFFFFFFFFECF1F85662A7404AB34544AD4245AC3F46AF3D4AB34951ADC1CBE9
+              7888A6C6D0E4FFFFFEFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFD
+              FFFF969AC5A7B7D19299C63E3FA93C45B1393FAA3A3EAF363BAD3941B03F47AF
+              6E79BBF4FAFDFFFFFEFFFFFFFFFFFFFDFEFF8893BA4650AD43489F4F49AF4242
+              AE3B45A74349AA494BB05059B0B6BDD8FFFFFFFFFFFEFFFFFFFFFFFFF4F6F954
+              5C9B515CA9E4ECF4FFFFFEFFFFFFFFFFFEFEFFFFB6BFD85158A5B9C5E0FDFFFF
+              FFFFFFFDFFFFFFFFFFEAEFF8515DA13E48B04242AB3D3FA83E45AD3C48B24147
+              A596A0C89BAAC6C2CCE3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFCFEFE9194C1A4AECD979DC9403FAA3842AD3D44AE3D43B03C42B13B40
+              AF3F48AE7683C3F5FBFDFFFFFDFFFFFFFFFFFFFDFFFF929BC1505AAA7581B07D
+              7CB27C81B86B71AE5353A54D4DB0535EB5B6BFDAFFFFFCFFFFFFFFFFFFFFFFFF
+              F6F6F95A62A1525BAAE5EDF5FFFFFEFFFFFFFFFFFEFFFFFFBAC2D9565EAAB6C5
+              DFFDFFFFFFFFFFFEFFFFFFFFFFECF2F95A67AC424BB54344B04344AC4149B03D
+              46B0444CA79099C4A5B5CC97A1C0FEFEFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFEFFFF9FA2CB9BA5C69EA2CE4C49B13E47AE3A43AA3F46B33C
+              43AF4048B2414BAE7280BEF4FBFDFFFFFDFFFFFFFFFFFFFDFEFF8D93C04C589F
+              DBE9F5FBFEFFF9FEFEE9F0FA9898C6585CAE5563B7BAC5DFFFFFFDFFFFFEFFFF
+              FFFFFFFFF5F7F95C65A65561AEE2EBF5FFFFFCFFFFFFFFFFFFFEFFFFBAC1D955
+              59A6BBC8DEFDFFFFFFFFFFFDFFFFFFFFFFECF0F85662A63B45AD3F41AB4346AC
+              4047AF3641AC4149A68A92C2A7B7CEA1AAC7FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFEFFFEC6CAE47E89A5A7ADD24845AA3943A83D45AC
+              3940AB343BA7383FA84049AB707ABBF4FBFDFFFFFDFFFFFFFFFFFFFDFEFF8C93
+              C44A549AE1EBF4FFFFFFFFFFFDFAFEFAE9ECF6777CBC4E5DAEB7C1DCFFFFFEFF
+              FFFEFFFFFFFFFFFFF3F5F95E66A75461AEE5EBF5FFFFFDFFFFFFFFFFFEFEFFFF
+              B9C0DA545AA8B9C5DEFDFFFFFFFFFFFDFFFFFFFFFFECF1F85563A8424CB54445
+              AC3A3AA44047B13B46B04149A4959DC7A0B1C9BBC8DFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFEFCE0E5F58694AED4DEF45857A84042
+              AC343BA34147B03F44B04047B04148AA727DB9F1FAFDFFFFFEFFFFFFFFFFFFFC
+              FEFF959BCA595EA9E1ECF6FEFFFFFFFFFFFFFFFBFAFDFE919CC74F5AA7B8BEDB
+              FFFFFEFFFFFFFFFFFFFFFFFDF4F6F85E66A4535DA7E4ECF5FFFFFBFFFFFFFFFF
+              FFFFFFFFBCC2DE5E61AEBDC6E4FDFFFFFFFFFFFEFFFFFFFFFFE8ECF75058A042
+              49B44146AC3E42AD4249B0363FA44349A0B6BFE37D8BA8C7CFE0FDFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFEFFF3F6FB757CA4B9C8DE69
+              70A44943AF363DA73739A6393EAA343BA4444AAC6977B0F1F9FDFEFFFDFFFFFF
+              FFFFFFFAFEFF8890BD4C51A5DAE7F5FEFFFFFFFFFFFFFFFFF9FFFFACBADA555A
+              A6BABADEFCFFFDFEFFFFFFFFFFFFFFFDF5F9FB6C6FB35760A5E0EEF5FFFFFDFF
+              FEFFFFFFFFFBFFFDB2BED6525AA4B8C1DFFEFFFCFFFFFDFFFFFFFEFFFEE6F1F8
+              595FAB4244B33B44A53D47B23C43AF4146A5454A8FB8BFDA687091D9DEEAFBFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFDFFFBFEFFA9AFCD
+              979FC4B5BDD94E57A03440A53841AD3C44B03B46B04753B5727CB2F2F7FDFFFF
+              FEFFFFFFFFFFFFFAFDFF8991C049509EDFE5F5FFFFFFFFFFFFFEFFFDF9FEFE89
+              94C14D53A9A9B3D9F5FFFDFFFFFEFFFFFFFEFFFFEEF4FA575AA84E57ADD9E8F7
+              FBFFFEFFFFFFFFFFFFFEFFFFB2C1D74E5C9DB2BDDFFDFEFFFFFFFFFFFFFFFFFF
+              FDE8F0F85C63AC484AB73F4AAD3D4AAE4347BC4046A77C8ABBB9C5E39298BAF4
+              FAFDFBFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FEE2E3EF6F70A2CBD6E66577A33847A2404AB1353DAB3743AF3647A76D76AAF1
+              F8FDFDFFFDFFFFFEFFFFFFF8FEFF8390BB4C5999DFECF4FEFFFFFFFFFFFCFFFC
+              DCE5F36C76BC4D56B36E7DB5E7F7FAFEFFFEFDFFFFF9FFFFDAE8F5434E9B4854
+              AEA7BBDFF1FEFCFCFFFBFEFFFFFBFDFF7E89BD44529F7B85B8F3F8FCFCFEFDFD
+              FEFEFDFFFFC9D0E74D52A34245B13C44AB3948A74044B94650A9A8BBD5818EAE
+              B2B7D1FEFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFBFEFEA3A5C48B95B6B8C9E1465597424BA74047B3343CAD3D4AB1
+              6571AFE2F3FDEEFEFFEDFCFFF0FCFFEAF9FF7281BA32488BD2E7F4F4F9FFF5FC
+              FFD6E9F57280B13D47A4434DB24D5EA79DB1D4EFFBFFF0FCFFE0F0FB7081B039
+              469831419B5165A0D4E8F5EEFEFFEEFAFFB7BEE25256B53947AD4857A4AEB6D3
+              ECF9FBF2FBFEE0E9FD7C86BF444CA83A42AC3F47AF3A44A44046A26F7AB2B1BE
+              D3707A96EEF3F7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFCFFFDFFFDFFF8EFF4F7747BA8AFBDDA99A7CC424B964749B03F44
+              B43D43B4404CAB5B6DB25F77B16676BC6C7BC16B78BF444CAF344BAA6D86C17D
+              87CD6777B64D64A53B4BA63D49B5404AB1474FAD4B54A86472B16D81BB5063AA
+              3944A43038A2333CA93A45AA4F5CAB6678B2586AA542509D3C40A72E3EAB394A
+              AE4A52A65C6AAA6379AC4C5CA04652B33F4DB54049AE4348B04745AF556296CB
+              D6E98283AFC1C3D4FDFFFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFDFFFDFFFFFFFAFBFFFAD1D2EA73789BD2DEEC8994BF4A
+              4CA63D3BAE383AAC363FB03947AD3649AA3741B0383EB23C42B2373BB23241B3
+              2F43A53039A326369C3648AB303CAA2832A13843AC3940A63B3EAA3841AA3644
+              A63340AB3037AC2E33A92D35A7353BAF393FAF3540A23542A03340A2353CA130
+              3FAA3843B53F42B04049AE414FAD2E3D9E3B46AF3443A33A45A43E45A8494D9C
+              B5C0D99EA3C6918CB5F4F4FAFCFEFAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFDFDD4D6E07D81A8
+              ADB5D8AAB4D7565EA14847AD393EB0353CAF3A40B52730A32F38A9333EAC3742
+              AF2F3BAA2E37A72F39A92934A2333AA83F45B23A40AC4249B43A42A8373EA930
+              3AA8252F9F3039A8303BAB2631A22C31A2383DAD383FAB393EAA3139A1363EA6
+              323CA6323BA73236A7373DA93E42AA3A44A83B45AD3E43AE3C43A53E49975C67
+              A6B4BFDB99A0BF9395B6E5E6F1FFFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFF
+              FED9DCEA7571A8979CC3CED9EC6C74A83E459C3E42AC353AB23942BA2D3FA92F
+              41A8353BAE2A32A53138AA2B32A32F38A63238A7383DAC2F34A1353CA63840A7
+              3740A8323AA82F37A42D36A527309E222A9B333AA9353AAB3D42B03A42AB2A32
+              9B363EA52E3EA22E3EA8313AAB3B40B0343BA83F4CAE3440A4373AA94546A96F
+              75AFCBD6EC868BAE8C92ADEFF4F8FCFEFEFDFEFEFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFEFFFCFDFFFAE8E7F3918EBF8A88BCD3DDEE8A99BD4B569A444CAB3C42B3
+              3643B23D48B9393FB13A3DB13338AA3238AA373BAD3A41B03F47B33D41AF474F
+              B84149B13F48B2363EAA3C44AF2C33A1363BAB2B329F3C42AF3B3FB03A40AD34
+              3BA43B44AA3B46AD3343A63843AD3B44AF3E45B34045AF4449B2464FAF515CA6
+              8B93C0CCD3E68C91AE9291B4EEF2F7FBFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFEFEFDFEFFF1F2F5F89E9CBF7776A4B2C0D5B6C5E26F7C
+              AF4951A0494BAF4748B53C3EAD3A3FAA3536A43C40AD4144B0383EAC2C31A137
+              3BA94048B13841A93B42AB4144B0363CA73A41AC3D41AC3135A14247B43D44B1
+              3A42AE3840AA434CB33C44AC3940A73A41A93D43A84B4EB0464DA54E51A76E74
+              B8AAB4D9BBC9D56E788F9EA4BDF5F5FBFDFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFEFFFEFFFFFCFFFCFFFCFCFFFDDADCEA757CA88A
+              95B5D0DDECB9C1D87273AE4E4EA34248AB3B40A44046AB3A3DA63C40A74146B2
+              3D42B03940AB3F47B0373FA93E46AD474CB64247B33B3FAA4144AF383CA73B41
+              AC333BA7393EAA4149B2353DA63D43AC3C3FA54243A94649A74D51A6686CB3B1
+              B9D9D1DAEC8B91B6767AA2CDD5E1F2FCFEFDFFFBFEFFFEFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              EFF4F7A8ABC070739E888AB8C7D1E9C3D1EC7D89BC5C64A44950A04749A84444
+              AB474CB3454CB03D42A8494FB7464BB2464CB43E49AE3F4DB1424FB23E4BAE3B
+              46AB4049AD424AAD4248AC4B50B25055B55055B15B59AA6D71B68189BFB9C7E4
+              C5D9EC8B9BBB6F779CA1A8BEF1F4F9FDFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFCFDFCFCFDFEE6E6F5A2A6C3656F8E848DABABB7D1D2DDF2B6C5E18E
+              9DC47081B05A60A44B4E9B4C519D5356A75355A75051A8494BA64D4EA94A4BA6
+              5155AD4345A04541A74F4CB05250A755599B6F75A7919CBFA4B5CECFDDF1B3C0
+              D78891B66E73A29C9FC3E1E6F3F6FCFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFDFDFEFEFFFDFBFCFFEAEDF4C6C7DA8786B46C6F9E
+              8C93B59DA7C5C2D1E8D9E8F6C0CEDEBBCBDDB8C5DBA0ADC7939FBE959DC38A94
+              B9878FB88C94BB9AA3CCAFBCD6B8C8DBC3D0E0DAE7F3CDD9EA96A0B9838FB16A
+              7695848DA6C2CCD6E7ECF4FEFCFEFCFCFEFDFEFEFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFEFFFFFFFFFFFFF9FB
+              FEF0F2F9C2C3DB8C8FAF8085A8747EAD616F9F7783B598A4CEACB6E1BBC7EBC5
+              D8ECC4D7EAC2D6E8BBCDE1A2B4CB97A8C67E8DB8646F9D6B74A57B82B18288B4
+              B7C0D7EDF3FAF8FCFDFEFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFCFFFFF6FEFFFBFEFFFDFEFFFFFBFDFEE8F1F8CAD3E5ADB8CDABB6CCABB4CB
+              AAB3CBABB2D0A5ACCAA4ACCBA2A9CAA2ABC7A8AECCAEB3CEC5CCE1E8EDF5F4FD
+              FCF8FEFAFEFFFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFEFFFDFCFFFEFEFEFEFEFEFFFFFFFFFFFFFFFFFEFFFFFEFEFEFFFD
+              FFFFFFFFFEFFFFFEFFFFFDFFFFFDFFFFFEFFFEFBFFFFFEFFFCFDFDFDFEFEFDFF
+              FFFEFFFDFEFDFCFCFFFEFFFFFFFFFFFFFFFFFFFFFFFFFBFFFFFDFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00}
+            Stretch = True
+          end
+          object QRLabel31: TQRLabel
+            Left = 74
+            Top = 6
+            Width = 204
+            Height = 24
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              63.500000000000000000
+              195.791666666666700000
+              15.875000000000000000
+              539.750000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'PT.PISMATEX Textile Industry'
+            Color = clWhite
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -19
+            Font.Name = 'Arial Narrow'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 14
+          end
+          object QRLabel34: TQRLabel
+            Left = 75
+            Top = 71
+            Width = 451
+            Height = 23
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              60.854166666666670000
+              198.437500000000000000
+              187.854166666666700000
+              1193.270833333333000000)
+            Alignment = taCenter
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'R E K A P  P E N E R I M A N   T E N U N   M I T R A '
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -19
+            Font.Name = 'Arial'
+            Font.Style = [fsBold]
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 14
+          end
+          object QRLabel38: TQRLabel
+            Left = 219
+            Top = 97
+            Width = 163
+            Height = 23
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              60.854166666666670000
+              579.437500000000000000
+              256.645833333333300000
+              431.270833333333300000)
+            Alignment = taCenter
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'P E R  N O  R E S E P '
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Arial'
+            Font.Style = [fsBold]
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 12
+          end
+        end
+        object QRBand23: TQRBand
+          Left = 96
+          Top = 156
+          Width = 602
+          Height = 25
+          Frame.Color = clBlack
+          Frame.DrawTop = True
+          Frame.DrawBottom = True
+          Frame.DrawLeft = True
+          Frame.DrawRight = True
+          AlignToBottom = False
+          BeforePrint = ColumnHeaderBand1BeforePrint
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            66.145833333333330000
+            1592.791666666667000000)
+          BandType = rbColumnHeader
+          object QRLabel35: TQRLabel
+            Left = 126
+            Top = 4
+            Width = 69
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              333.375000000000000000
+              10.583333333333330000
+              182.562500000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'NO RESEP'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRLabel36: TQRLabel
+            Left = 403
+            Top = 4
+            Width = 56
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1066.270833333333000000
+              10.583333333333330000
+              148.166666666666700000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'POTONG'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRShape10: TQRShape
+            Left = 281
+            Top = 0
+            Width = 1
+            Height = 31
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              82.020833333333340000
+              743.479166666666800000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+        end
+        object QRGroup6: TQRGroup
+          Left = 96
+          Top = 181
+          Width = 602
+          Height = 0
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            0.000000000000000000
+            1592.791666666667000000)
+          FooterBand = QRBand25
+          Master = QuickRep6
+          ReprintOnNewPage = False
+        end
+        object QRBand24: TQRBand
+          Left = 96
+          Top = 233
+          Width = 602
+          Height = 29
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = True
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            76.729166666666670000
+            1592.791666666667000000)
+          BandType = rbPageFooter
+          object QRDBText35: TQRDBText
+            Left = 0
+            Top = 8
+            Width = 36
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              0.000000000000000000
+              21.166666666666670000
+              95.250000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = DMFrm.QUserTime
+            DataField = 'VUSER'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRSysData7: TQRSysData
+            Left = 533
+            Top = 8
+            Width = 69
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1410.229166666667000000
+              21.166666666666670000
+              182.562500000000000000)
+            Alignment = taRightJustify
+            AlignToBand = True
+            AutoSize = True
+            Color = clWhite
+            Data = qrsPageNumber
+            Text = 'Hal '
+            Transparent = False
+            FontSize = 10
+          end
+          object QRDBText43: TQRDBText
+            Left = 265
+            Top = 8
+            Width = 71
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              701.145833333333300000
+              21.166666666666670000
+              187.854166666666700000)
+            Alignment = taCenter
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QTransaksi
+            DataField = 'DISTRIBUSI'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+        end
+        object QRBand25: TQRBand
+          Left = 96
+          Top = 206
+          Width = 602
+          Height = 27
+          Frame.Color = clBlack
+          Frame.DrawTop = True
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            71.437500000000000000
+            1592.791666666667000000)
+          BandType = rbGroupFooter
+          object QRDBText45: TQRDBText
+            Left = 531
+            Top = 3
+            Width = 56
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1404.937500000000000000
+              7.937500000000000000
+              148.166666666666700000)
+            Alignment = taRightJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QPerResep_Tot
+            DataField = 'POTONG'
+            Mask = '0.0,0;(0.0,0);'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+        end
+        object QRBand26: TQRBand
+          Left = 96
+          Top = 181
+          Width = 602
+          Height = 25
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = True
+          Frame.DrawRight = True
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            66.145833333333330000
+            1592.791666666667000000)
+          BandType = rbDetail
+          object QRDBText46: TQRDBText
+            Left = 531
+            Top = 3
+            Width = 56
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1404.937500000000000000
+              7.937500000000000000
+              148.166666666666700000)
+            Alignment = taRightJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QPerResep
+            DataField = 'POTONG'
+            Mask = '0.0,0;(0.0,0);'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRDBText47: TQRDBText
+            Left = 6
+            Top = 3
+            Width = 72
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              15.875000000000000000
+              7.937500000000000000
+              190.500000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QPerResep
+            DataField = 'NO_RESEP'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRShape11: TQRShape
+            Left = 281
+            Top = 0
+            Width = 1
+            Height = 26
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              68.791666666666680000
+              743.479166666666800000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+        end
+      end
+      object Panel17: TPanel
+        Left = 0
+        Top = 0
+        Width = 1525
+        Height = 52
+        Align = alTop
+        BevelInner = bvLowered
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 0
+        object GroupBox6: TGroupBox
+          Left = 2
+          Top = 2
+          Width = 287
+          Height = 48
+          Align = alLeft
+          Caption = 'Filter Tanggal'
+          TabOrder = 0
+          TabStop = True
+          object Label26: TLabel
+            Left = 131
+            Top = 22
+            Width = 24
+            Height = 13
+            Caption = 'S/D'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object VTglAwal6: TwwDBDateTimePicker
+            Left = 6
+            Top = 16
+            Width = 125
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 0
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAwal6Change
+          end
+          object VTglAkhir6: TwwDBDateTimePicker
+            Left = 156
+            Top = 16
+            Width = 124
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 1
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAkhir6Change
+          end
+        end
+        object Panel18: TPanel
+          Left = 289
+          Top = 2
+          Width = 592
+          Height = 48
+          Align = alLeft
+          BevelOuter = bvNone
+          TabOrder = 1
+          DesignSize = (
+            592
+            48)
+          object BitBtn12: TBitBtn
+            Left = 88
+            Top = 13
+            Width = 97
+            Height = 25
+            Caption = '&Export2Excel'
+            TabOrder = 0
+            OnClick = BitBtn12Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+              00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+              00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+              00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+              0003737FFFFFFFFF7F7330099999999900333777777777777733}
+            NumGlyphs = 2
+          end
+          object BitBtn18: TBitBtn
+            Left = 192
+            Top = 13
+            Width = 75
+            Height = 25
+            Anchors = [akTop, akRight]
+            Caption = '&Print'
+            TabOrder = 1
+            OnClick = BitBtn18Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000130B0000130B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+              00033FFFFFFFFFFFFFFF0888888888888880777777777777777F088888888888
+              8880777777777777777F0000000000000000FFFFFFFFFFFFFFFF0F8F8F8F8F8F
+              8F80777777777777777F08F8F8F8F8F8F9F0777777777777777F0F8F8F8F8F8F
+              8F807777777777777F7F0000000000000000777777777777777F3330FFFFFFFF
+              03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+              03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+              33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
+              33333337FFFF7733333333300000033333333337777773333333}
+            NumGlyphs = 2
+          end
+          object BitBtn19: TBitBtn
+            Left = 8
+            Top = 13
+            Width = 75
+            Height = 25
+            Caption = 'Filte&r'
+            Default = True
+            ModalResult = 1
+            TabOrder = 2
+            OnClick = BitBtn19Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+              555555555555555555555555555555555555555555FF55555555555559055555
+              55555555577FF5555555555599905555555555557777F5555555555599905555
+              555555557777FF5555555559999905555555555777777F555555559999990555
+              5555557777777FF5555557990599905555555777757777F55555790555599055
+              55557775555777FF5555555555599905555555555557777F5555555555559905
+              555555555555777FF5555555555559905555555555555777FF55555555555579
+              05555555555555777FF5555555555557905555555555555777FF555555555555
+              5990555555555555577755555555555555555555555555555555}
+            NumGlyphs = 2
+          end
+        end
+      end
+      object wwDBGrid6: TwwDBGrid
+        Left = 0
+        Top = 68
+        Width = 1525
+        Height = 666
+        DisableThemes = True
+        DisableThemesInTitle = True
+        ControlType.Strings = (
+          'ISAKTIF;CheckBox;1;0'
+          'ID_SUB_BAG;CustomEdit;LookBagian;F'
+          'ID_HAK;CustomEdit;LookJnsMenu;F')
+        PictureMasks.Strings = (
+          'ID_BAG'#9'*2{#,&}'#9'T'#9'T'
+          'KD_JNS_ITEM'#9'#,&'#9'T'#9'T'
+          'KD_SATUAN'#9'#,&'#9'T'#9'T'
+          'ID_USER'#9'*3{&,#}'#9'T'#9'T')
+        Selected.Strings = (
+          'NO_RESEP'#9'50'#9'NO_RESEP'#9'F'
+          'POTONG'#9'20'#9'POTONG'#9'F'#9'QTY')
+        IniAttributes.Enabled = True
+        IniAttributes.SaveToRegistry = True
+        IniAttributes.FileName = 'Pismatex Master'
+        IniAttributes.Delimiter = ';;'
+        IniAttributes.CheckNewFields = True
+        ExportOptions.ExportType = wwgetHTML
+        ExportOptions.Options = [esoShowHeader, esoShowFooter, esoShowTitle, esoDblQuoteFields, esoBestColFit, esoShowRecordNo, esoShowAlternating]
+        TitleColor = clSkyBlue
+        FixedCols = 0
+        ShowHorzScrollBar = True
+        Align = alClient
+        DataSource = DsQPerResep
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgPerfectRowFit, dgShowFooter, dgTrailingEllipsis, dgDblClickColSizing]
+        ParentFont = False
+        ReadOnly = True
+        RowHeightPercent = 125
+        TabOrder = 1
+        TitleAlignment = taCenter
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Lucida Sans'
+        TitleFont.Style = [fsBold]
+        TitleLines = 3
+        TitleButtons = True
+        UseTFields = False
+        OnTitleButtonClick = wwDBGrid1xxxxxTitleButtonClick
+        OnEnter = wwDBGrid2Enter
+        PaintOptions.AlternatingRowColor = clMoneyGreen
+        PaintOptions.ActiveRecordColor = clGreen
+      end
+    end
+    object TabSheet7: TTabSheet
+      Caption = 'Browse Beam WO Mitra'
+      ImageIndex = 6
+      TabVisible = False
+      object Label35: TLabel
+        Left = 0
+        Top = 64
+        Width = 1525
+        Height = 16
+        Align = alTop
+        Color = clSkyBlue
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -13
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object QuickRep5: TQuickRep
+        Left = 54
+        Top = 94
+        Width = 794
+        Height = 529
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Frame.Width = 2
+        DataSet = QSisaWO
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        Functions.Strings = (
+          'PAGENUMBER'
+          'COLUMNNUMBER'
+          'REPORTTITLE')
+        Functions.DATA = (
+          '0'
+          '0'
+          #39#39)
+        Options = [LastPageFooter]
+        Page.Columns = 1
+        Page.Orientation = poPortrait
+        Page.PaperSize = Default
+        Page.Values = (
+          50.800000000000000000
+          1399.540000000000000000
+          50.800000000000000000
+          2100.580000000000000000
+          254.000000000000000000
+          254.000000000000000000
+          0.000000000000000000)
+        PrinterSettings.Copies = 1
+        PrinterSettings.Duplex = False
+        PrinterSettings.FirstPage = 0
+        PrinterSettings.LastPage = 0
+        PrinterSettings.OutputBin = Auto
+        PrintIfEmpty = True
+        SnapToGrid = True
+        Units = Inches
+        Zoom = 100
+        object QRBand17: TQRBand
+          Left = 96
+          Top = 19
+          Width = 602
+          Height = 150
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          BeforePrint = QRBand17BeforePrint
+          Color = clWhite
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = []
+          ForceNewColumn = False
+          ForceNewPage = False
+          ParentFont = False
+          Size.Values = (
+            396.875000000000000000
+            1592.791666666667000000)
+          BandType = rbTitle
+          object Label34: TLabel
+            Left = 28
+            Top = 43
+            Width = 4
+            Height = 18
+          end
+          object QRLabel1: TQRLabel
+            Left = 102
+            Top = 28
+            Width = 138
+            Height = 22
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              58.208333333333340000
+              269.875000000000000000
+              74.083333333333340000
+              365.125000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'Bligo Sapugarut, Pekalongan'
+            Color = clWhite
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Arial Narrow'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRImage5: TQRImage
+            Left = 4
+            Top = 4
+            Width = 69
+            Height = 47
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              124.354166666666700000
+              10.583333333333330000
+              10.583333333333330000
+              182.562500000000000000)
+            Picture.Data = {
+              07544269746D617022210000424D222100000000000036000000280000004100
+              00002B0000000100180000000000EC200000120B0000120B0000000000000000
+              0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFDFDFDE4E4E4F5F5F5FEFEFEFEFEFEFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFF9F8F8B7B3B0A09893BFA9AAF8F5F5F9FEFEF8FEFE
+              FEFEFFFFFDFFFFFFFFFFFFFFFFFFFCFEFFFEFEFFFFFDFFFFFFFFFFFFFFFFFFFF
+              FFFAFCFFF9FEFFF8FDFFF7FEFFF7FEFCF8FFFEF8FFFEFAFFFCFCFFFEFDFFFEFD
+              FFFFFEFFFFFFFFFFFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFFFDF7F3F1C2B5ABB59684B4998CE1CE
+              D1FBFAFBFFFEFFFEFFFFF8FFFDF7FDFEF6FCFEF5FBFEEBEFFBC5D4E4A9BBCAB3
+              C0D2B2BED4A0B3CE8CA2C58E99C9929DCA9AA4CEA4AED4ACB6D3B1B6D4C5CCE3
+              EBF0FAF4FAFFF8FEFFFBFFFEFCFFFCFDFFFEFEFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFEFEFEFCFAD7CEBFB8
+              937DC0886FC89D90BEACB0F0EDF3F3F3FCB7C1D78395B17785AB5E648C536387
+              697BA08392B0A1AFCFACBDDDAEC4DFAAC2DDADC5E1B0C2DF99A6C98895B9737B
+              AF535B95606999838BB08E98B4BFC7DEEFF4FFF3FAFFF8FCFFFDFFFFFEFFFEFF
+              FFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FEFDFDD3C1BDC09E8EC0917EB7837CB78084A16E817459779895B7C5CDE3D9E0
+              EFC6CBDEC3C7E5BCC2E6999FCB9098C68390C07D95C28093C58395C2909CCAB3
+              BFE9B5CBE7B4CDE0CADFF3B8C7E48695BE717CAD676DA08188B0C5CFE0E5EDF4
+              F7FEFEFBFDFEFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFCFFFFF5FCFEE0E5F48C83AC866886B6837ACB8968D08C6BB77E6AB98D8CB1
+              8FA67A5C89574D864A4B8F4A51A6424CAC4253AF3947A44448A84A4BAC4142A3
+              4443A94848AF4551A544579D4F63A07489B694A7C2BCD3E5C7DCED9BADC67887
+              AB6F76A69DA2CFDFE2F7F7FBFFF9FDFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFF7FEFFA9B7D4656F957F87ADCAC4DFC0AFCD937186B87F77C28067
+              CE8364C57A6BAC686E95647E76517F644A8E59499D554DA44D439C443999463E
+              A13A369A37389F353AA24146B1353BA5383FA237409C444AA0444C9C606EAD84
+              91C2C1D2F0BECCE87685AD616E9895A5C2E5F4F9F7FEFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCFDFF
+              FEFFFEF9FEFED3DCE5767DA87487A8C4D5E9B4C1E25F67A7424AA04F4AA66A4F
+              97946B91B77B7DCA8164D8855CD88362D3816DC37976A46A7796617D8F5D8486
+              579472498765468B50429A3A3EA53F44AC393A9E403FA44846AF4541B6413FB5
+              4244AA4C54B54C58AB6375B2ADC2E3C6DEEC8393B27378AEC0C7E0F3FBFEFBFE
+              FFFFFFFBFFFFFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFE
+              FFFCFDFEF6FCFCADB8CD69739EA7B5D5C1D2EF6C79B241479E363CA32F39A436
+              3DA74442AA493D926B518994677DB57978C77C6ECA7C68CC8268D38469D08167
+              CD7D6BC47C6FC27A73B26D74955F7E6C467F6346896649896F4E8F6B498B6948
+              915A40905447965349A74743AA454AAE3D4CA3707BC0ADB8DBA9B8D8626F9D9D
+              A2C4E9F0F8FDFDFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFCFEFEF3F7FC9FA3C27177ABC2CCEB9CAFCF5359AA3C3DA33938A93B3DB2
+              3B41B22D37A63339AB383DAB4442A44F4295564288745081986B88AE767DCA84
+              71D78663D8875BD38B59DC8A5CDD875ED57E63CE7B6FBE7877BC7679BC7272C2
+              7574BF7478B7737DAC738E946695714F985B4AA7454AAE3D3FAA474CA2899EC5
+              BED6E57B88A67D7EA8EAE9F7FCFEFFFEFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFAFDFED8DFEB8488AFACB4D4A7B4D76570AF4247A74747B73F44B53A3E
+              B0363BAA353EA5373EA63A3CAA393FB2353CB13537AD4040B33D3AA145419B51
+              4A926A5B91735B8676587F815674976A78AC7978B57F6FBE866DC7866ECD846A
+              D58766D3835ED88864D58763DB8B68D08471B77980956A908166A34743994048
+              AD4049AA5665AF94A1CCB4BBDA696C9AB9C0D2F4F8FEFDFFFFFEFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFFFFFFFF
+              FFFFFFFEFCFCFEE6EDF87279A2AFB8D7AEBFDB4F59A73F42B33E45B93D44B336
+              3CAC373FAC3F44B22E34A43B3EAD3939A82F33A6373EB73035AD3739AC353BAF
+              3D45B63B43AB414AAC494FB24449AC4A43A14944965851985B52895E517F6F57
+              7C805F7E9871879C71819D737E9F747FA87B7DAB7D82A27480916E8F79649A59
+              50AC4046AB404AAE3D44B84652B18499C3BCCCE36A7598BFC6D8F6FCFFFEFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFF9FAFF9298B994A8BEBECEE64B4FA54647B64146B93740B4
+              333AAF3942B3353EB04144BA3437B23839B2383FB12F39B2353EB53038AB363C
+              A9363CAE3D43AE4A50B74545AB4745A94948AB3F44A53B43A74247AB3D3FA444
+              44AF4645AF4746A5534CA350459359539A4D4791504C9A554C985A4D91574A96
+              4C48A14949AA4748B33F44B43747AC3548A84050AC8D9FC7B5C4DD6C739AD1D0
+              E7FCFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFEFEFFFFFCFFFFC3C7DD7679A5C9DDEC5566A53D46A63C40B3373D
+              B4323BAF3E40B2404BAB404DA53E49AA4347AE3B3F9B3B3EA32B37AF2F35B035
+              36A5363BAD2E36A93742AB3A44AD484DB9454BAE454EA1474CA54F53AF484DA2
+              454C9F3739A83A3EB6484DA34E4AA14C4DAD46509F45439C4944A13F3EB6464C
+              AA504CAA4643A3464DA24A4BA5423F9D3137A43541B03E47AC424EA1A4B6DBA8
+              B2D77C7AABEEF2F6FEFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFEEF1F87F82AAC1CDE57F8BBB3F4B9E4148AB39
+              3FAF4248B93A43AE5556AA7883B57A85AA818AB5858DB67C84AF565DAA404BB9
+              383FB63B3BAA3039A82E35A93641AB404DAF474EAC6B6FB48991B89097BC9397
+              BC9097B88791BA4B52A34F54B08188B59491B68E94BE8F9EB89395BC767CB54D
+              55AF6472AD9799C39C9DC89AA4C79B9EC49597C84C54A93645AA3642A035409F
+              4450A0B9CCE4818BB4AFB2D5F8FCFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFEFFFEC7CBE38A8EB9B9CAE04D51A2434BAC
+              4044AF3A42AF3842AE3F4DAE6F75AFECF4FEF8FFFFFCFEFFFCFEFFF6FCFF818C
+              BA3643A13239A93637A43139A8353CB0323EA73B49A94D51A4B9BBD9FCFDFFFE
+              FEFFFFFFFFFBFEFFEAF1F9525B9C565CA3E5E9F5FEFDFFFDFEFFFAFFFCFDFEFF
+              B1BEDB525AADA4B1D7FBFCFFFDFDFFFBFEFFFDFEFFECEAF9585EAA3340A5353E
+              A73D48B53D4CA2687BB3B8CBE66F76AFE8EFF8FDFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFF8FAFB8A8BABB0B8D97184AD4042
+              A53C40A94246B24048B33C45AF3846A97176B0F4F8FEFFFFFFFFFFFFFFFFFFFB
+              FDFF8691B63E4AA33E40B14141AE333CA93640AE3643AA3F4EAF545CAABCC0D7
+              FFFFFDFFFFFFFFFFFFFFFFFFF1F2F9535B9E5A5FA9EAEDF5FFFFFFFFFFFFFFFF
+              FAFEFFFFB3BFDB565AB5ACB3DDFEFFFFFFFFFFFFFFFFFFFFFFECE9F8575BA73E
+              48B34146BB3941B64254A85057B5A5B9D77382ADA9B2D2F7FBFFFEFEFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFEF2EFF89294B4D5E1F85D
+              66B04045AA3F45B0474CB74049B33B47B13D49B26C78B2F1F9FDFEFFFDFFFFFF
+              FFFFFFFDFEFF8E91B9454EA93A3EB13D3FAB353EA7353DA43543A7394BB24E5B
+              B2BABDD9FFFFFDFDFFFFFFFFFFFFFFFFF0F2F9555FA05863ADE4ECF5FFFFFFFE
+              FFFFFFFFFDFEFFFFB5C0D95654B8B3BAE6FDFFFFFFFFFFFEFFFFFFFFFFECEAF8
+              565FA5414AB14047B03D49AE3E46B2494DB37D8CC5B2C7E18896BAF0F8FDFBFE
+              FDFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFEFDD0CDE57B85A3
+              AAB8D74349AC3943A3383DAA4045B1333BA7333CA9353FAB6474ABEFFBFDFEFF
+              FCFFFFFFFFFFFFFDFEFF868BB64048A73A3EAC3A39A4313EA23641A3414DB034
+              44AB4653AFB2BAD8FDFFFFFAFFFFFFFFFFFFFFFFF1F5F9545E9C5664AAE3ECF5
+              FFFFFFFEFFFFFDFFFDFFFFFFB6BFD55454AFB4BCE4FDFFFFFFFFFFFCFFFEFDFF
+              FFEAEEF85562A0414FAC4A4FAC4851AB3F3BBD3F45A74952A2B4C6DF677798D6
+              DEEDFDFEFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFDFFFEA0A7
+              CD8091AF97A1CA474BB13B46AF444CB7383EAE3E43B54148B63C43AC6A77B7F6
+              FBFDFFFFFDFFFFFFFFFFFFFEFFFF8C94C34C54BC4149A63E3EA73C45AD3A4BAF
+              3D47AB484FB3535DB1B3BAD7FEFFFFFFFFFFFFFFFFFFFFFFF4F7F95962A15865
+              B1E5EBF5FFFFFEFFFFFFFFFFFFFFFFFFB5BDD65257A6B9C2E0FDFFFFFFFFFFFE
+              FFFFFFFFFFECF1F85662A7404AB34544AD4245AC3F46AF3D4AB34951ADC1CBE9
+              7888A6C6D0E4FFFFFEFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFD
+              FFFF969AC5A7B7D19299C63E3FA93C45B1393FAA3A3EAF363BAD3941B03F47AF
+              6E79BBF4FAFDFFFFFEFFFFFFFFFFFFFDFEFF8893BA4650AD43489F4F49AF4242
+              AE3B45A74349AA494BB05059B0B6BDD8FFFFFFFFFFFEFFFFFFFFFFFFF4F6F954
+              5C9B515CA9E4ECF4FFFFFEFFFFFFFFFFFEFEFFFFB6BFD85158A5B9C5E0FDFFFF
+              FFFFFFFDFFFFFFFFFFEAEFF8515DA13E48B04242AB3D3FA83E45AD3C48B24147
+              A596A0C89BAAC6C2CCE3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFCFEFE9194C1A4AECD979DC9403FAA3842AD3D44AE3D43B03C42B13B40
+              AF3F48AE7683C3F5FBFDFFFFFDFFFFFFFFFFFFFDFFFF929BC1505AAA7581B07D
+              7CB27C81B86B71AE5353A54D4DB0535EB5B6BFDAFFFFFCFFFFFFFFFFFFFFFFFF
+              F6F6F95A62A1525BAAE5EDF5FFFFFEFFFFFFFFFFFEFFFFFFBAC2D9565EAAB6C5
+              DFFDFFFFFFFFFFFEFFFFFFFFFFECF2F95A67AC424BB54344B04344AC4149B03D
+              46B0444CA79099C4A5B5CC97A1C0FEFEFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFEFFFF9FA2CB9BA5C69EA2CE4C49B13E47AE3A43AA3F46B33C
+              43AF4048B2414BAE7280BEF4FBFDFFFFFDFFFFFFFFFFFFFDFEFF8D93C04C589F
+              DBE9F5FBFEFFF9FEFEE9F0FA9898C6585CAE5563B7BAC5DFFFFFFDFFFFFEFFFF
+              FFFFFFFFF5F7F95C65A65561AEE2EBF5FFFFFCFFFFFFFFFFFFFEFFFFBAC1D955
+              59A6BBC8DEFDFFFFFFFFFFFDFFFFFFFFFFECF0F85662A63B45AD3F41AB4346AC
+              4047AF3641AC4149A68A92C2A7B7CEA1AAC7FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFEFFFEC6CAE47E89A5A7ADD24845AA3943A83D45AC
+              3940AB343BA7383FA84049AB707ABBF4FBFDFFFFFDFFFFFFFFFFFFFDFEFF8C93
+              C44A549AE1EBF4FFFFFFFFFFFDFAFEFAE9ECF6777CBC4E5DAEB7C1DCFFFFFEFF
+              FFFEFFFFFFFFFFFFF3F5F95E66A75461AEE5EBF5FFFFFDFFFFFFFFFFFEFEFFFF
+              B9C0DA545AA8B9C5DEFDFFFFFFFFFFFDFFFFFFFFFFECF1F85563A8424CB54445
+              AC3A3AA44047B13B46B04149A4959DC7A0B1C9BBC8DFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFEFCE0E5F58694AED4DEF45857A84042
+              AC343BA34147B03F44B04047B04148AA727DB9F1FAFDFFFFFEFFFFFFFFFFFFFC
+              FEFF959BCA595EA9E1ECF6FEFFFFFFFFFFFFFFFBFAFDFE919CC74F5AA7B8BEDB
+              FFFFFEFFFFFFFFFFFFFFFFFDF4F6F85E66A4535DA7E4ECF5FFFFFBFFFFFFFFFF
+              FFFFFFFFBCC2DE5E61AEBDC6E4FDFFFFFFFFFFFEFFFFFFFFFFE8ECF75058A042
+              49B44146AC3E42AD4249B0363FA44349A0B6BFE37D8BA8C7CFE0FDFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFEFFF3F6FB757CA4B9C8DE69
+              70A44943AF363DA73739A6393EAA343BA4444AAC6977B0F1F9FDFEFFFDFFFFFF
+              FFFFFFFAFEFF8890BD4C51A5DAE7F5FEFFFFFFFFFFFFFFFFF9FFFFACBADA555A
+              A6BABADEFCFFFDFEFFFFFFFFFFFFFFFDF5F9FB6C6FB35760A5E0EEF5FFFFFDFF
+              FEFFFFFFFFFBFFFDB2BED6525AA4B8C1DFFEFFFCFFFFFDFFFFFFFEFFFEE6F1F8
+              595FAB4244B33B44A53D47B23C43AF4146A5454A8FB8BFDA687091D9DEEAFBFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFDFFFBFEFFA9AFCD
+              979FC4B5BDD94E57A03440A53841AD3C44B03B46B04753B5727CB2F2F7FDFFFF
+              FEFFFFFFFFFFFFFAFDFF8991C049509EDFE5F5FFFFFFFFFFFFFEFFFDF9FEFE89
+              94C14D53A9A9B3D9F5FFFDFFFFFEFFFFFFFEFFFFEEF4FA575AA84E57ADD9E8F7
+              FBFFFEFFFFFFFFFFFFFEFFFFB2C1D74E5C9DB2BDDFFDFEFFFFFFFFFFFFFFFFFF
+              FDE8F0F85C63AC484AB73F4AAD3D4AAE4347BC4046A77C8ABBB9C5E39298BAF4
+              FAFDFBFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FEE2E3EF6F70A2CBD6E66577A33847A2404AB1353DAB3743AF3647A76D76AAF1
+              F8FDFDFFFDFFFFFEFFFFFFF8FEFF8390BB4C5999DFECF4FEFFFFFFFFFFFCFFFC
+              DCE5F36C76BC4D56B36E7DB5E7F7FAFEFFFEFDFFFFF9FFFFDAE8F5434E9B4854
+              AEA7BBDFF1FEFCFCFFFBFEFFFFFBFDFF7E89BD44529F7B85B8F3F8FCFCFEFDFD
+              FEFEFDFFFFC9D0E74D52A34245B13C44AB3948A74044B94650A9A8BBD5818EAE
+              B2B7D1FEFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFBFEFEA3A5C48B95B6B8C9E1465597424BA74047B3343CAD3D4AB1
+              6571AFE2F3FDEEFEFFEDFCFFF0FCFFEAF9FF7281BA32488BD2E7F4F4F9FFF5FC
+              FFD6E9F57280B13D47A4434DB24D5EA79DB1D4EFFBFFF0FCFFE0F0FB7081B039
+              469831419B5165A0D4E8F5EEFEFFEEFAFFB7BEE25256B53947AD4857A4AEB6D3
+              ECF9FBF2FBFEE0E9FD7C86BF444CA83A42AC3F47AF3A44A44046A26F7AB2B1BE
+              D3707A96EEF3F7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFCFFFDFFFDFFF8EFF4F7747BA8AFBDDA99A7CC424B964749B03F44
+              B43D43B4404CAB5B6DB25F77B16676BC6C7BC16B78BF444CAF344BAA6D86C17D
+              87CD6777B64D64A53B4BA63D49B5404AB1474FAD4B54A86472B16D81BB5063AA
+              3944A43038A2333CA93A45AA4F5CAB6678B2586AA542509D3C40A72E3EAB394A
+              AE4A52A65C6AAA6379AC4C5CA04652B33F4DB54049AE4348B04745AF556296CB
+              D6E98283AFC1C3D4FDFFFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFDFFFDFFFFFFFAFBFFFAD1D2EA73789BD2DEEC8994BF4A
+              4CA63D3BAE383AAC363FB03947AD3649AA3741B0383EB23C42B2373BB23241B3
+              2F43A53039A326369C3648AB303CAA2832A13843AC3940A63B3EAA3841AA3644
+              A63340AB3037AC2E33A92D35A7353BAF393FAF3540A23542A03340A2353CA130
+              3FAA3843B53F42B04049AE414FAD2E3D9E3B46AF3443A33A45A43E45A8494D9C
+              B5C0D99EA3C6918CB5F4F4FAFCFEFAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFDFDD4D6E07D81A8
+              ADB5D8AAB4D7565EA14847AD393EB0353CAF3A40B52730A32F38A9333EAC3742
+              AF2F3BAA2E37A72F39A92934A2333AA83F45B23A40AC4249B43A42A8373EA930
+              3AA8252F9F3039A8303BAB2631A22C31A2383DAD383FAB393EAA3139A1363EA6
+              323CA6323BA73236A7373DA93E42AA3A44A83B45AD3E43AE3C43A53E49975C67
+              A6B4BFDB99A0BF9395B6E5E6F1FFFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFF
+              FED9DCEA7571A8979CC3CED9EC6C74A83E459C3E42AC353AB23942BA2D3FA92F
+              41A8353BAE2A32A53138AA2B32A32F38A63238A7383DAC2F34A1353CA63840A7
+              3740A8323AA82F37A42D36A527309E222A9B333AA9353AAB3D42B03A42AB2A32
+              9B363EA52E3EA22E3EA8313AAB3B40B0343BA83F4CAE3440A4373AA94546A96F
+              75AFCBD6EC868BAE8C92ADEFF4F8FCFEFEFDFEFEFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFEFFFCFDFFFAE8E7F3918EBF8A88BCD3DDEE8A99BD4B569A444CAB3C42B3
+              3643B23D48B9393FB13A3DB13338AA3238AA373BAD3A41B03F47B33D41AF474F
+              B84149B13F48B2363EAA3C44AF2C33A1363BAB2B329F3C42AF3B3FB03A40AD34
+              3BA43B44AA3B46AD3343A63843AD3B44AF3E45B34045AF4449B2464FAF515CA6
+              8B93C0CCD3E68C91AE9291B4EEF2F7FBFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFEFEFDFEFFF1F2F5F89E9CBF7776A4B2C0D5B6C5E26F7C
+              AF4951A0494BAF4748B53C3EAD3A3FAA3536A43C40AD4144B0383EAC2C31A137
+              3BA94048B13841A93B42AB4144B0363CA73A41AC3D41AC3135A14247B43D44B1
+              3A42AE3840AA434CB33C44AC3940A73A41A93D43A84B4EB0464DA54E51A76E74
+              B8AAB4D9BBC9D56E788F9EA4BDF5F5FBFDFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFEFFFEFFFFFCFFFCFFFCFCFFFDDADCEA757CA88A
+              95B5D0DDECB9C1D87273AE4E4EA34248AB3B40A44046AB3A3DA63C40A74146B2
+              3D42B03940AB3F47B0373FA93E46AD474CB64247B33B3FAA4144AF383CA73B41
+              AC333BA7393EAA4149B2353DA63D43AC3C3FA54243A94649A74D51A6686CB3B1
+              B9D9D1DAEC8B91B6767AA2CDD5E1F2FCFEFDFFFBFEFFFEFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              EFF4F7A8ABC070739E888AB8C7D1E9C3D1EC7D89BC5C64A44950A04749A84444
+              AB474CB3454CB03D42A8494FB7464BB2464CB43E49AE3F4DB1424FB23E4BAE3B
+              46AB4049AD424AAD4248AC4B50B25055B55055B15B59AA6D71B68189BFB9C7E4
+              C5D9EC8B9BBB6F779CA1A8BEF1F4F9FDFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFCFDFCFCFDFEE6E6F5A2A6C3656F8E848DABABB7D1D2DDF2B6C5E18E
+              9DC47081B05A60A44B4E9B4C519D5356A75355A75051A8494BA64D4EA94A4BA6
+              5155AD4345A04541A74F4CB05250A755599B6F75A7919CBFA4B5CECFDDF1B3C0
+              D78891B66E73A29C9FC3E1E6F3F6FCFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFDFDFEFEFFFDFBFCFFEAEDF4C6C7DA8786B46C6F9E
+              8C93B59DA7C5C2D1E8D9E8F6C0CEDEBBCBDDB8C5DBA0ADC7939FBE959DC38A94
+              B9878FB88C94BB9AA3CCAFBCD6B8C8DBC3D0E0DAE7F3CDD9EA96A0B9838FB16A
+              7695848DA6C2CCD6E7ECF4FEFCFEFCFCFEFDFEFEFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFEFFFFFFFFFFFFF9FB
+              FEF0F2F9C2C3DB8C8FAF8085A8747EAD616F9F7783B598A4CEACB6E1BBC7EBC5
+              D8ECC4D7EAC2D6E8BBCDE1A2B4CB97A8C67E8DB8646F9D6B74A57B82B18288B4
+              B7C0D7EDF3FAF8FCFDFEFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFCFFFFF6FEFFFBFEFFFDFEFFFFFBFDFEE8F1F8CAD3E5ADB8CDABB6CCABB4CB
+              AAB3CBABB2D0A5ACCAA4ACCBA2A9CAA2ABC7A8AECCAEB3CEC5CCE1E8EDF5F4FD
+              FCF8FEFAFEFFFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFEFFFDFCFFFEFEFEFEFEFEFFFFFFFFFFFFFFFFFEFFFFFEFEFEFFFD
+              FFFFFFFFFEFFFFFEFFFFFDFFFFFDFFFFFEFFFEFBFFFFFEFFFCFDFDFDFEFEFDFF
+              FFFEFFFDFEFDFCFCFFFEFFFFFFFFFFFFFFFFFFFFFFFFFBFFFFFDFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00}
+            Stretch = True
+          end
+          object QRLabel4: TQRLabel
+            Left = 74
+            Top = 6
+            Width = 204
+            Height = 24
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              63.500000000000000000
+              195.791666666666700000
+              15.875000000000000000
+              539.750000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'PT.PISMATEX Textile Industry'
+            Color = clWhite
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -19
+            Font.Name = 'Arial Narrow'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 14
+          end
+          object QRLabel7: TQRLabel
+            Left = 125
+            Top = 87
+            Width = 352
+            Height = 23
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              60.854166666666670000
+              330.729166666666700000
+              230.187500000000000000
+              931.333333333333300000)
+            Alignment = taCenter
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'S I S A  P O T O N G  B E A M  M I T R A'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -19
+            Font.Name = 'Arial'
+            Font.Style = [fsBold]
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 14
+          end
+          object QRLabel53: TQRLabel
+            Left = 260
+            Top = 112
+            Width = 81
+            Height = 19
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              50.270833333333330000
+              687.916666666666700000
+              296.333333333333300000
+              214.312500000000000000)
+            Alignment = taCenter
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'QRLabel53'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 12
+          end
+        end
+        object QRBand18: TQRBand
+          Left = 96
+          Top = 169
+          Width = 602
+          Height = 26
+          Frame.Color = clBlack
+          Frame.DrawTop = True
+          Frame.DrawBottom = True
+          Frame.DrawLeft = True
+          Frame.DrawRight = True
+          AlignToBottom = False
+          BeforePrint = ColumnHeaderBand1BeforePrint
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            68.791666666666670000
+            1592.791666666667000000)
+          BandType = rbColumnHeader
+          object QRLabel28: TQRLabel
+            Left = 434
+            Top = 5
+            Width = 54
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1148.291666666667000000
+              13.229166666666670000
+              142.875000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'NO BEAM'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -12
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 9
+          end
+          object QRShape7: TQRShape
+            Left = 182
+            Top = 0
+            Width = 1
+            Height = 31
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              82.020833333333340000
+              481.541666666666700000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRLabel29: TQRLabel
+            Left = 51
+            Top = 4
+            Width = 36
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              134.937500000000000000
+              10.583333333333330000
+              95.250000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'MITRA'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -12
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 9
+          end
+          object QRLabel48: TQRLabel
+            Left = 223
+            Top = 4
+            Width = 63
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              590.020833333333400000
+              10.583333333333330000
+              166.687500000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'NO RESEP'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -12
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 9
+          end
+          object QRLabel49: TQRLabel
+            Left = 343
+            Top = 5
+            Width = 59
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              907.520833333333400000
+              13.229166666666670000
+              156.104166666666700000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'NO MESIN'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -12
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 9
+          end
+          object QRShape14: TQRShape
+            Left = 328
+            Top = 0
+            Width = 1
+            Height = 24
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              63.500000000000000000
+              867.833333333333500000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRShape17: TQRShape
+            Left = 416
+            Top = 0
+            Width = 1
+            Height = 25
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              66.145833333333340000
+              1100.666666666667000000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRShape19: TQRShape
+            Left = 506
+            Top = 1
+            Width = 1
+            Height = 25
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              66.145833333333340000
+              1338.791666666667000000
+              2.645833333333333000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRLabel50: TQRLabel
+            Left = 539
+            Top = 4
+            Width = 24
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1426.104166666667000000
+              10.583333333333330000
+              63.500000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'QTY'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -12
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 9
+          end
+        end
+        object QRGroup5: TQRGroup
+          Left = 96
+          Top = 195
+          Width = 602
+          Height = 0
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            0.000000000000000000
+            1592.791666666667000000)
+          FooterBand = QRBand20
+          Master = QuickRep5
+          ReprintOnNewPage = False
+        end
+        object QRBand19: TQRBand
+          Left = 96
+          Top = 247
+          Width = 602
+          Height = 29
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = True
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            76.729166666666670000
+            1592.791666666667000000)
+          BandType = rbPageFooter
+          object QRDBText7: TQRDBText
+            Left = 0
+            Top = 8
+            Width = 36
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              0.000000000000000000
+              21.166666666666670000
+              95.250000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = DMFrm.QUserTime
+            DataField = 'VUSER'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRSysData6: TQRSysData
+            Left = 533
+            Top = 8
+            Width = 69
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1410.229166666667000000
+              21.166666666666670000
+              182.562500000000000000)
+            Alignment = taRightJustify
+            AlignToBand = True
+            AutoSize = True
+            Color = clWhite
+            Data = qrsPageNumber
+            Text = 'Hal '
+            Transparent = False
+            FontSize = 10
+          end
+          object QRDBText10: TQRDBText
+            Left = 265
+            Top = 8
+            Width = 71
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              701.145833333333300000
+              21.166666666666670000
+              187.854166666666700000)
+            Alignment = taCenter
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QTransaksi
+            DataField = 'DISTRIBUSI'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+        end
+        object QRBand20: TQRBand
+          Left = 96
+          Top = 220
+          Width = 602
+          Height = 27
+          Frame.Color = clBlack
+          Frame.DrawTop = True
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            71.437500000000000000
+            1592.791666666667000000)
+          BandType = rbGroupFooter
+          object QRExpr6: TQRExpr
+            Left = 549
+            Top = 4
+            Width = 43
+            Height = 18
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              47.625000000000000000
+              1452.562500000000000000
+              10.583333333333330000
+              113.770833333333300000)
+            Alignment = taRightJustify
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            Master = QuickRep5
+            ResetAfterPrint = False
+            Transparent = False
+            WordWrap = True
+            Expression = 'SUM(QSisaTOTWO.TOT_WO)'
+            Mask = '0.0,0;(0.0,0);'
+            FontSize = 10
+          end
+          object QRLabel55: TQRLabel
+            Left = 280
+            Top = 4
+            Width = 29
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              740.833333333333400000
+              10.583333333333330000
+              76.729166666666680000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'Total'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+        end
+        object QRBand21: TQRBand
+          Left = 96
+          Top = 195
+          Width = 602
+          Height = 25
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = True
+          Frame.DrawRight = True
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            66.145833333333330000
+            1592.791666666667000000)
+          BandType = rbDetail
+          object QRDBText33: TQRDBText
+            Left = 549
+            Top = 3
+            Width = 45
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1452.562500000000000000
+              7.937500000000000000
+              119.062500000000000000)
+            Alignment = taCenter
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QSisaWO
+            DataField = 'QTY'
+            Mask = '0.0,0;(0.0,0);'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRDBText34: TQRDBText
+            Left = 8
+            Top = 3
+            Width = 128
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              21.166666666666670000
+              7.937500000000000000
+              338.666666666666700000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QSisaWO
+            DataField = 'NAMA_MITRA'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRShape8: TQRShape
+            Left = 182
+            Top = 0
+            Width = 1
+            Height = 26
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              68.791666666666680000
+              481.541666666666700000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRDBText54: TQRDBText
+            Left = 433
+            Top = 3
+            Width = 55
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1145.645833333333000000
+              7.937500000000000000
+              145.520833333333300000)
+            Alignment = taCenter
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QSisaWO
+            DataField = 'NO_BEAM'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRDBText56: TQRDBText
+            Left = 189
+            Top = 3
+            Width = 132
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              500.062500000000100000
+              7.937500000000000000
+              349.250000000000000000)
+            Alignment = taCenter
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QSisaWO
+            DataField = 'NO_RESEP'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRDBText57: TQRDBText
+            Left = 339
+            Top = 3
+            Width = 68
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              896.937500000000000000
+              7.937500000000000000
+              179.916666666666700000)
+            Alignment = taCenter
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QSisaWO
+            DataField = 'NO_MESIN'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRShape22: TQRShape
+            Left = 328
+            Top = -2
+            Width = 1
+            Height = 27
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              71.437500000000000000
+              867.833333333333500000
+              -5.291666666666667000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRShape23: TQRShape
+            Left = 416
+            Top = -2
+            Width = 1
+            Height = 27
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              71.437500000000000000
+              1100.666666666667000000
+              -5.291666666666667000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRShape24: TQRShape
+            Left = 506
+            Top = -2
+            Width = 1
+            Height = 27
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              71.437500000000000000
+              1338.791666666667000000
+              -5.291666666666667000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+        end
+        object QRShape27: TQRShape
+          Left = 96
+          Top = 193
+          Width = 601
+          Height = 1
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          Size.Values = (
+            2.645833333333333000
+            254.000000000000000000
+            510.645833333333300000
+            1590.145833333333000000)
+          Shape = qrsRectangle
+        end
+      end
+      object Panel15: TPanel
+        Left = 0
+        Top = 0
+        Width = 1525
+        Height = 64
+        Align = alTop
+        BevelInner = bvLowered
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 0
+        object GroupBox5: TGroupBox
+          Left = 2
+          Top = 2
+          Width = 399
+          Height = 60
+          Align = alLeft
+          Caption = 'Filter Tanggal'
+          TabOrder = 0
+          TabStop = True
+          object Label24: TLabel
+            Left = 238
+            Top = 26
+            Width = 24
+            Height = 13
+            Caption = 'S/D'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object VTglAwal5: TwwDBDateTimePicker
+            Left = 100
+            Top = 20
+            Width = 136
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 0
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAwal5Change
+          end
+          object VTglAkhir5: TwwDBDateTimePicker
+            Left = 263
+            Top = 20
+            Width = 132
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 1
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAkhir5Change
+          end
+          object rgTanggal: TLMDRadioGroup
+            Left = 5
+            Top = 17
+            Width = 90
+            Height = 36
+            Align = alCustom
+            Bevel.Mode = bmWindows
+            BtnAlignment.Alignment = agCenterLeft
+            CaptionFont.Charset = DEFAULT_CHARSET
+            CaptionFont.Color = clNavy
+            CaptionFont.Height = -11
+            CaptionFont.Name = 'MS Sans Serif'
+            CaptionFont.Style = []
+            CaptionParentFont = False
+            Items.Strings = (
+              'Tgl Mutasi'
+              'Tgl Terima')
+            TabOrder = 2
+            ItemIndex = 0
+          end
+        end
+        object Panel16: TPanel
+          Left = 401
+          Top = 2
+          Width = 607
+          Height = 60
+          Align = alLeft
+          BevelOuter = bvNone
+          TabOrder = 1
+          DesignSize = (
+            607
+            60)
+          object vOperand5: TLabel
+            Left = 156
+            Top = 20
+            Width = 44
+            Height = 24
+            Cursor = crHandPoint
+            Alignment = taCenter
+            AutoSize = False
+            Caption = 'LIKE'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clNavy
+            Font.Height = -19
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            OnClick = vOperandClick
+          end
+          object BitBtn15: TBitBtn
+            Left = 337
+            Top = 16
+            Width = 75
+            Height = 25
+            Caption = 'Filte&r'
+            Default = True
+            ModalResult = 1
+            TabOrder = 0
+            OnClick = BitBtn11Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+              555555555555555555555555555555555555555555FF55555555555559055555
+              55555555577FF5555555555599905555555555557777F5555555555599905555
+              555555557777FF5555555559999905555555555777777F555555559999990555
+              5555557777777FF5555557990599905555555777757777F55555790555599055
+              55557775555777FF5555555555599905555555555557777F5555555555559905
+              555555555555777FF5555555555559905555555555555777FF55555555555579
+              05555555555555777FF5555555555557905555555555555777FF555555555555
+              5990555555555555577755555555555555555555555555555555}
+            NumGlyphs = 2
+          end
+          object BitBtn16: TBitBtn
+            Left = 417
+            Top = 16
+            Width = 97
+            Height = 25
+            Caption = '&Export2Excel'
+            TabOrder = 1
+            OnClick = BitBtn16Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+              00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+              00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+              00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+              0003737FFFFFFFFF7F7330099999999900333777777777777733}
+            NumGlyphs = 2
+          end
+          object BitBtn17: TBitBtn
+            Left = 523
+            Top = 16
+            Width = 75
+            Height = 25
+            Anchors = [akTop, akRight]
+            Caption = '&Print'
+            TabOrder = 2
+            OnClick = BitBtn17Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000130B0000130B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+              00033FFFFFFFFFFFFFFF0888888888888880777777777777777F088888888888
+              8880777777777777777F0000000000000000FFFFFFFFFFFFFFFF0F8F8F8F8F8F
+              8F80777777777777777F08F8F8F8F8F8F9F0777777777777777F0F8F8F8F8F8F
+              8F807777777777777F7F0000000000000000777777777777777F3330FFFFFFFF
+              03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+              03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+              33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
+              33333337FFFF7733333333300000033333333337777773333333}
+            NumGlyphs = 2
+          end
+          object cbOtomatis5: TCheckBox
+            Left = 11
+            Top = 5
+            Width = 98
+            Height = 17
+            Caption = 'Cari &Otomatis'
+            TabOrder = 3
+            OnClick = cbOtomatis2Click
+          end
+          object dbcField5: TwwDBComboBox
+            Left = 11
+            Top = 23
+            Width = 137
+            Height = 19
+            ShowButton = True
+            Style = csDropDown
+            MapList = False
+            AllowClearKey = False
+            Color = clYellow
+            DropDownCount = 8
+            ItemHeight = 0
+            Items.Strings = (
+              'SEMUA KOLOM')
+            ItemIndex = 0
+            Sorted = False
+            TabOrder = 4
+            UnboundDataType = wwDefault
+            OnEnter = dbcField5Enter
+          end
+          object ECari5: TEdit
+            Left = 206
+            Top = 23
+            Width = 121
+            Height = 19
+            Ctl3D = False
+            ParentCtl3D = False
+            TabOrder = 5
+          end
+          object cbTanggal5: TCheckBox
+            Left = 207
+            Top = 5
+            Width = 129
+            Height = 17
+            Caption = 'Ikutkan Filter &Tanggal'
+            Checked = True
+            State = cbChecked
+            TabOrder = 6
+            OnClick = cbTanggal5Click
+          end
+        end
+      end
+      object wwDBGrid5: TwwDBGrid
+        Left = 0
+        Top = 80
+        Width = 1525
+        Height = 654
+        DisableThemes = True
+        DisableThemesInTitle = True
+        ControlType.Strings = (
+          'ISAKTIF;CheckBox;1;0'
+          'ID_SUB_BAG;CustomEdit;LookBagian;F'
+          'ID_HAK;CustomEdit;LookJnsMenu;F')
+        PictureMasks.Strings = (
+          'ID_BAG'#9'*2{#,&}'#9'T'#9'T'
+          'KD_JNS_ITEM'#9'#,&'#9'T'#9'T'
+          'KD_SATUAN'#9'#,&'#9'T'#9'T'
+          'ID_USER'#9'*3{&,#}'#9'T'#9'T')
+        Selected.Strings = (
+          'NAMA_MITRA'#9'25'#9'Nama Mitra'#9'F'
+          'TANGGAL'#9'12'#9'Tanggal~Mutasi'#9'F'
+          'TGL_TERIMA'#9'15'#9'Tanggal~Terima'#9'F'
+          'NO_RESEP'#9'15'#9'No Resep'#9'F'
+          'NO_BEAM'#9'15'#9'No Beam'#9'F'#9'BEAM'
+          'NO_SERI_BEAM'#9'20'#9'No Seri Beam'#9'F'#9'BEAM'
+          'KONSTRUKSI'#9'30'#9'Konstruksi'#9'F'
+          'CORAK'#9'15'#9'Corak'#9'F'
+          'NO_MESIN'#9'10'#9'No Mesin'#9'F'
+          'QTY'#9'10'#9'QTY WO~(POTONG BEAM)'#9'F')
+        IniAttributes.Enabled = True
+        IniAttributes.SaveToRegistry = True
+        IniAttributes.FileName = 'Pismatex Master'
+        IniAttributes.Delimiter = ';;'
+        IniAttributes.CheckNewFields = True
+        ExportOptions.ExportType = wwgetHTML
+        ExportOptions.Options = [esoShowHeader, esoShowFooter, esoShowTitle, esoDblQuoteFields, esoBestColFit, esoShowRecordNo, esoShowAlternating]
+        TitleColor = clSkyBlue
+        FixedCols = 0
+        ShowHorzScrollBar = True
+        Align = alClient
+        DataSource = dsQSisaWO
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgPerfectRowFit, dgShowFooter, dgTrailingEllipsis, dgDblClickColSizing]
+        ParentFont = False
+        ReadOnly = True
+        RowHeightPercent = 125
+        TabOrder = 2
+        TitleAlignment = taCenter
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Lucida Sans'
+        TitleFont.Style = [fsBold]
+        TitleLines = 3
+        TitleButtons = True
+        UseTFields = False
+        OnTitleButtonClick = wwDBGrid1xxxxxTitleButtonClick
+        OnUpdateFooter = wwDBGrid5UpdateFooter
+        PaintOptions.AlternatingRowColor = clMoneyGreen
+        PaintOptions.ActiveRecordColor = clGreen
+        GroupFieldName = 'NAMA_MITRA'
+      end
+    end
+    object TabSheet9: TTabSheet
+      Caption = 'Sisa Stok Potong Beam WO Mitra'
+      ImageIndex = 8
+      TabVisible = False
+      object Label41: TLabel
+        Left = 0
+        Top = 52
+        Width = 1525
+        Height = 16
+        Align = alTop
+        Color = clSkyBlue
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -13
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object QuickRep7: TQuickRep
+        Left = 14
+        Top = 67
+        Width = 794
+        Height = 529
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Frame.Width = 2
+        DataSet = QSisaWO_det
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        Functions.Strings = (
+          'PAGENUMBER'
+          'COLUMNNUMBER'
+          'REPORTTITLE')
+        Functions.DATA = (
+          '0'
+          '0'
+          #39#39)
+        Options = [LastPageFooter]
+        Page.Columns = 1
+        Page.Orientation = poPortrait
+        Page.PaperSize = Default
+        Page.Values = (
+          50.800000000000000000
+          1399.540000000000000000
+          50.800000000000000000
+          2100.580000000000000000
+          63.500000000000000000
+          63.500000000000000000
+          0.000000000000000000)
+        PrinterSettings.Copies = 1
+        PrinterSettings.Duplex = False
+        PrinterSettings.FirstPage = 0
+        PrinterSettings.LastPage = 0
+        PrinterSettings.OutputBin = Auto
+        PrintIfEmpty = True
+        SnapToGrid = True
+        Units = Inches
+        Zoom = 100
+        object QRBand27: TQRBand
+          Left = 24
+          Top = 19
+          Width = 746
+          Height = 150
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          BeforePrint = QRBand27BeforePrint
+          Color = clWhite
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = []
+          ForceNewColumn = False
+          ForceNewPage = False
+          ParentFont = False
+          Size.Values = (
+            396.875000000000000000
+            1973.791666666667000000)
+          BandType = rbTitle
+          object Label39: TLabel
+            Left = 28
+            Top = 43
+            Width = 4
+            Height = 18
+          end
+          object QRLabel42: TQRLabel
+            Left = 102
+            Top = 28
+            Width = 138
+            Height = 22
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              58.208333333333340000
+              269.875000000000000000
+              74.083333333333340000
+              365.125000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'Bligo Sapugarut, Pekalongan'
+            Color = clWhite
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Arial Narrow'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+          object QRImage7: TQRImage
+            Left = 4
+            Top = 4
+            Width = 69
+            Height = 47
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              124.354166666666700000
+              10.583333333333330000
+              10.583333333333330000
+              182.562500000000000000)
+            Picture.Data = {
+              07544269746D617022210000424D222100000000000036000000280000004100
+              00002B0000000100180000000000EC200000120B0000120B0000000000000000
+              0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFDFDFDE4E4E4F5F5F5FEFEFEFEFEFEFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFF9F8F8B7B3B0A09893BFA9AAF8F5F5F9FEFEF8FEFE
+              FEFEFFFFFDFFFFFFFFFFFFFFFFFFFCFEFFFEFEFFFFFDFFFFFFFFFFFFFFFFFFFF
+              FFFAFCFFF9FEFFF8FDFFF7FEFFF7FEFCF8FFFEF8FFFEFAFFFCFCFFFEFDFFFEFD
+              FFFFFEFFFFFFFFFFFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFFFDF7F3F1C2B5ABB59684B4998CE1CE
+              D1FBFAFBFFFEFFFEFFFFF8FFFDF7FDFEF6FCFEF5FBFEEBEFFBC5D4E4A9BBCAB3
+              C0D2B2BED4A0B3CE8CA2C58E99C9929DCA9AA4CEA4AED4ACB6D3B1B6D4C5CCE3
+              EBF0FAF4FAFFF8FEFFFBFFFEFCFFFCFDFFFEFEFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFEFEFEFCFAD7CEBFB8
+              937DC0886FC89D90BEACB0F0EDF3F3F3FCB7C1D78395B17785AB5E648C536387
+              697BA08392B0A1AFCFACBDDDAEC4DFAAC2DDADC5E1B0C2DF99A6C98895B9737B
+              AF535B95606999838BB08E98B4BFC7DEEFF4FFF3FAFFF8FCFFFDFFFFFEFFFEFF
+              FFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FEFDFDD3C1BDC09E8EC0917EB7837CB78084A16E817459779895B7C5CDE3D9E0
+              EFC6CBDEC3C7E5BCC2E6999FCB9098C68390C07D95C28093C58395C2909CCAB3
+              BFE9B5CBE7B4CDE0CADFF3B8C7E48695BE717CAD676DA08188B0C5CFE0E5EDF4
+              F7FEFEFBFDFEFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFCFFFFF5FCFEE0E5F48C83AC866886B6837ACB8968D08C6BB77E6AB98D8CB1
+              8FA67A5C89574D864A4B8F4A51A6424CAC4253AF3947A44448A84A4BAC4142A3
+              4443A94848AF4551A544579D4F63A07489B694A7C2BCD3E5C7DCED9BADC67887
+              AB6F76A69DA2CFDFE2F7F7FBFFF9FDFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFF7FEFFA9B7D4656F957F87ADCAC4DFC0AFCD937186B87F77C28067
+              CE8364C57A6BAC686E95647E76517F644A8E59499D554DA44D439C443999463E
+              A13A369A37389F353AA24146B1353BA5383FA237409C444AA0444C9C606EAD84
+              91C2C1D2F0BECCE87685AD616E9895A5C2E5F4F9F7FEFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCFDFF
+              FEFFFEF9FEFED3DCE5767DA87487A8C4D5E9B4C1E25F67A7424AA04F4AA66A4F
+              97946B91B77B7DCA8164D8855CD88362D3816DC37976A46A7796617D8F5D8486
+              579472498765468B50429A3A3EA53F44AC393A9E403FA44846AF4541B6413FB5
+              4244AA4C54B54C58AB6375B2ADC2E3C6DEEC8393B27378AEC0C7E0F3FBFEFBFE
+              FFFFFFFBFFFFFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFE
+              FFFCFDFEF6FCFCADB8CD69739EA7B5D5C1D2EF6C79B241479E363CA32F39A436
+              3DA74442AA493D926B518994677DB57978C77C6ECA7C68CC8268D38469D08167
+              CD7D6BC47C6FC27A73B26D74955F7E6C467F6346896649896F4E8F6B498B6948
+              915A40905447965349A74743AA454AAE3D4CA3707BC0ADB8DBA9B8D8626F9D9D
+              A2C4E9F0F8FDFDFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFCFEFEF3F7FC9FA3C27177ABC2CCEB9CAFCF5359AA3C3DA33938A93B3DB2
+              3B41B22D37A63339AB383DAB4442A44F4295564288745081986B88AE767DCA84
+              71D78663D8875BD38B59DC8A5CDD875ED57E63CE7B6FBE7877BC7679BC7272C2
+              7574BF7478B7737DAC738E946695714F985B4AA7454AAE3D3FAA474CA2899EC5
+              BED6E57B88A67D7EA8EAE9F7FCFEFFFEFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFAFDFED8DFEB8488AFACB4D4A7B4D76570AF4247A74747B73F44B53A3E
+              B0363BAA353EA5373EA63A3CAA393FB2353CB13537AD4040B33D3AA145419B51
+              4A926A5B91735B8676587F815674976A78AC7978B57F6FBE866DC7866ECD846A
+              D58766D3835ED88864D58763DB8B68D08471B77980956A908166A34743994048
+              AD4049AA5665AF94A1CCB4BBDA696C9AB9C0D2F4F8FEFDFFFFFEFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFFFFFFFF
+              FFFFFFFEFCFCFEE6EDF87279A2AFB8D7AEBFDB4F59A73F42B33E45B93D44B336
+              3CAC373FAC3F44B22E34A43B3EAD3939A82F33A6373EB73035AD3739AC353BAF
+              3D45B63B43AB414AAC494FB24449AC4A43A14944965851985B52895E517F6F57
+              7C805F7E9871879C71819D737E9F747FA87B7DAB7D82A27480916E8F79649A59
+              50AC4046AB404AAE3D44B84652B18499C3BCCCE36A7598BFC6D8F6FCFFFEFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFF9FAFF9298B994A8BEBECEE64B4FA54647B64146B93740B4
+              333AAF3942B3353EB04144BA3437B23839B2383FB12F39B2353EB53038AB363C
+              A9363CAE3D43AE4A50B74545AB4745A94948AB3F44A53B43A74247AB3D3FA444
+              44AF4645AF4746A5534CA350459359539A4D4791504C9A554C985A4D91574A96
+              4C48A14949AA4748B33F44B43747AC3548A84050AC8D9FC7B5C4DD6C739AD1D0
+              E7FCFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFEFEFFFFFCFFFFC3C7DD7679A5C9DDEC5566A53D46A63C40B3373D
+              B4323BAF3E40B2404BAB404DA53E49AA4347AE3B3F9B3B3EA32B37AF2F35B035
+              36A5363BAD2E36A93742AB3A44AD484DB9454BAE454EA1474CA54F53AF484DA2
+              454C9F3739A83A3EB6484DA34E4AA14C4DAD46509F45439C4944A13F3EB6464C
+              AA504CAA4643A3464DA24A4BA5423F9D3137A43541B03E47AC424EA1A4B6DBA8
+              B2D77C7AABEEF2F6FEFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFEEF1F87F82AAC1CDE57F8BBB3F4B9E4148AB39
+              3FAF4248B93A43AE5556AA7883B57A85AA818AB5858DB67C84AF565DAA404BB9
+              383FB63B3BAA3039A82E35A93641AB404DAF474EAC6B6FB48991B89097BC9397
+              BC9097B88791BA4B52A34F54B08188B59491B68E94BE8F9EB89395BC767CB54D
+              55AF6472AD9799C39C9DC89AA4C79B9EC49597C84C54A93645AA3642A035409F
+              4450A0B9CCE4818BB4AFB2D5F8FCFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFEFFFEC7CBE38A8EB9B9CAE04D51A2434BAC
+              4044AF3A42AF3842AE3F4DAE6F75AFECF4FEF8FFFFFCFEFFFCFEFFF6FCFF818C
+              BA3643A13239A93637A43139A8353CB0323EA73B49A94D51A4B9BBD9FCFDFFFE
+              FEFFFFFFFFFBFEFFEAF1F9525B9C565CA3E5E9F5FEFDFFFDFEFFFAFFFCFDFEFF
+              B1BEDB525AADA4B1D7FBFCFFFDFDFFFBFEFFFDFEFFECEAF9585EAA3340A5353E
+              A73D48B53D4CA2687BB3B8CBE66F76AFE8EFF8FDFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFF8FAFB8A8BABB0B8D97184AD4042
+              A53C40A94246B24048B33C45AF3846A97176B0F4F8FEFFFFFFFFFFFFFFFFFFFB
+              FDFF8691B63E4AA33E40B14141AE333CA93640AE3643AA3F4EAF545CAABCC0D7
+              FFFFFDFFFFFFFFFFFFFFFFFFF1F2F9535B9E5A5FA9EAEDF5FFFFFFFFFFFFFFFF
+              FAFEFFFFB3BFDB565AB5ACB3DDFEFFFFFFFFFFFFFFFFFFFFFFECE9F8575BA73E
+              48B34146BB3941B64254A85057B5A5B9D77382ADA9B2D2F7FBFFFEFEFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFEF2EFF89294B4D5E1F85D
+              66B04045AA3F45B0474CB74049B33B47B13D49B26C78B2F1F9FDFEFFFDFFFFFF
+              FFFFFFFDFEFF8E91B9454EA93A3EB13D3FAB353EA7353DA43543A7394BB24E5B
+              B2BABDD9FFFFFDFDFFFFFFFFFFFFFFFFF0F2F9555FA05863ADE4ECF5FFFFFFFE
+              FFFFFFFFFDFEFFFFB5C0D95654B8B3BAE6FDFFFFFFFFFFFEFFFFFFFFFFECEAF8
+              565FA5414AB14047B03D49AE3E46B2494DB37D8CC5B2C7E18896BAF0F8FDFBFE
+              FDFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFEFDD0CDE57B85A3
+              AAB8D74349AC3943A3383DAA4045B1333BA7333CA9353FAB6474ABEFFBFDFEFF
+              FCFFFFFFFFFFFFFDFEFF868BB64048A73A3EAC3A39A4313EA23641A3414DB034
+              44AB4653AFB2BAD8FDFFFFFAFFFFFFFFFFFFFFFFF1F5F9545E9C5664AAE3ECF5
+              FFFFFFFEFFFFFDFFFDFFFFFFB6BFD55454AFB4BCE4FDFFFFFFFFFFFCFFFEFDFF
+              FFEAEEF85562A0414FAC4A4FAC4851AB3F3BBD3F45A74952A2B4C6DF677798D6
+              DEEDFDFEFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFDFFFEA0A7
+              CD8091AF97A1CA474BB13B46AF444CB7383EAE3E43B54148B63C43AC6A77B7F6
+              FBFDFFFFFDFFFFFFFFFFFFFEFFFF8C94C34C54BC4149A63E3EA73C45AD3A4BAF
+              3D47AB484FB3535DB1B3BAD7FEFFFFFFFFFFFFFFFFFFFFFFF4F7F95962A15865
+              B1E5EBF5FFFFFEFFFFFFFFFFFFFFFFFFB5BDD65257A6B9C2E0FDFFFFFFFFFFFE
+              FFFFFFFFFFECF1F85662A7404AB34544AD4245AC3F46AF3D4AB34951ADC1CBE9
+              7888A6C6D0E4FFFFFEFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFD
+              FFFF969AC5A7B7D19299C63E3FA93C45B1393FAA3A3EAF363BAD3941B03F47AF
+              6E79BBF4FAFDFFFFFEFFFFFFFFFFFFFDFEFF8893BA4650AD43489F4F49AF4242
+              AE3B45A74349AA494BB05059B0B6BDD8FFFFFFFFFFFEFFFFFFFFFFFFF4F6F954
+              5C9B515CA9E4ECF4FFFFFEFFFFFFFFFFFEFEFFFFB6BFD85158A5B9C5E0FDFFFF
+              FFFFFFFDFFFFFFFFFFEAEFF8515DA13E48B04242AB3D3FA83E45AD3C48B24147
+              A596A0C89BAAC6C2CCE3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFCFEFE9194C1A4AECD979DC9403FAA3842AD3D44AE3D43B03C42B13B40
+              AF3F48AE7683C3F5FBFDFFFFFDFFFFFFFFFFFFFDFFFF929BC1505AAA7581B07D
+              7CB27C81B86B71AE5353A54D4DB0535EB5B6BFDAFFFFFCFFFFFFFFFFFFFFFFFF
+              F6F6F95A62A1525BAAE5EDF5FFFFFEFFFFFFFFFFFEFFFFFFBAC2D9565EAAB6C5
+              DFFDFFFFFFFFFFFEFFFFFFFFFFECF2F95A67AC424BB54344B04344AC4149B03D
+              46B0444CA79099C4A5B5CC97A1C0FEFEFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFEFFFF9FA2CB9BA5C69EA2CE4C49B13E47AE3A43AA3F46B33C
+              43AF4048B2414BAE7280BEF4FBFDFFFFFDFFFFFFFFFFFFFDFEFF8D93C04C589F
+              DBE9F5FBFEFFF9FEFEE9F0FA9898C6585CAE5563B7BAC5DFFFFFFDFFFFFEFFFF
+              FFFFFFFFF5F7F95C65A65561AEE2EBF5FFFFFCFFFFFFFFFFFFFEFFFFBAC1D955
+              59A6BBC8DEFDFFFFFFFFFFFDFFFFFFFFFFECF0F85662A63B45AD3F41AB4346AC
+              4047AF3641AC4149A68A92C2A7B7CEA1AAC7FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFEFFFEC6CAE47E89A5A7ADD24845AA3943A83D45AC
+              3940AB343BA7383FA84049AB707ABBF4FBFDFFFFFDFFFFFFFFFFFFFDFEFF8C93
+              C44A549AE1EBF4FFFFFFFFFFFDFAFEFAE9ECF6777CBC4E5DAEB7C1DCFFFFFEFF
+              FFFEFFFFFFFFFFFFF3F5F95E66A75461AEE5EBF5FFFFFDFFFFFFFFFFFEFEFFFF
+              B9C0DA545AA8B9C5DEFDFFFFFFFFFFFDFFFFFFFFFFECF1F85563A8424CB54445
+              AC3A3AA44047B13B46B04149A4959DC7A0B1C9BBC8DFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFEFEFCE0E5F58694AED4DEF45857A84042
+              AC343BA34147B03F44B04047B04148AA727DB9F1FAFDFFFFFEFFFFFFFFFFFFFC
+              FEFF959BCA595EA9E1ECF6FEFFFFFFFFFFFFFFFBFAFDFE919CC74F5AA7B8BEDB
+              FFFFFEFFFFFFFFFFFFFFFFFDF4F6F85E66A4535DA7E4ECF5FFFFFBFFFFFFFFFF
+              FFFFFFFFBCC2DE5E61AEBDC6E4FDFFFFFFFFFFFEFFFFFFFFFFE8ECF75058A042
+              49B44146AC3E42AD4249B0363FA44349A0B6BFE37D8BA8C7CFE0FDFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFEFFF3F6FB757CA4B9C8DE69
+              70A44943AF363DA73739A6393EAA343BA4444AAC6977B0F1F9FDFEFFFDFFFFFF
+              FFFFFFFAFEFF8890BD4C51A5DAE7F5FEFFFFFFFFFFFFFFFFF9FFFFACBADA555A
+              A6BABADEFCFFFDFEFFFFFFFFFFFFFFFDF5F9FB6C6FB35760A5E0EEF5FFFFFDFF
+              FEFFFFFFFFFBFFFDB2BED6525AA4B8C1DFFEFFFCFFFFFDFFFFFFFEFFFEE6F1F8
+              595FAB4244B33B44A53D47B23C43AF4146A5454A8FB8BFDA687091D9DEEAFBFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFDFFFBFEFFA9AFCD
+              979FC4B5BDD94E57A03440A53841AD3C44B03B46B04753B5727CB2F2F7FDFFFF
+              FEFFFFFFFFFFFFFAFDFF8991C049509EDFE5F5FFFFFFFFFFFFFEFFFDF9FEFE89
+              94C14D53A9A9B3D9F5FFFDFFFFFEFFFFFFFEFFFFEEF4FA575AA84E57ADD9E8F7
+              FBFFFEFFFFFFFFFFFFFEFFFFB2C1D74E5C9DB2BDDFFDFEFFFFFFFFFFFFFFFFFF
+              FDE8F0F85C63AC484AB73F4AAD3D4AAE4347BC4046A77C8ABBB9C5E39298BAF4
+              FAFDFBFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FEE2E3EF6F70A2CBD6E66577A33847A2404AB1353DAB3743AF3647A76D76AAF1
+              F8FDFDFFFDFFFFFEFFFFFFF8FEFF8390BB4C5999DFECF4FEFFFFFFFFFFFCFFFC
+              DCE5F36C76BC4D56B36E7DB5E7F7FAFEFFFEFDFFFFF9FFFFDAE8F5434E9B4854
+              AEA7BBDFF1FEFCFCFFFBFEFFFFFBFDFF7E89BD44529F7B85B8F3F8FCFCFEFDFD
+              FEFEFDFFFFC9D0E74D52A34245B13C44AB3948A74044B94650A9A8BBD5818EAE
+              B2B7D1FEFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFBFEFEA3A5C48B95B6B8C9E1465597424BA74047B3343CAD3D4AB1
+              6571AFE2F3FDEEFEFFEDFCFFF0FCFFEAF9FF7281BA32488BD2E7F4F4F9FFF5FC
+              FFD6E9F57280B13D47A4434DB24D5EA79DB1D4EFFBFFF0FCFFE0F0FB7081B039
+              469831419B5165A0D4E8F5EEFEFFEEFAFFB7BEE25256B53947AD4857A4AEB6D3
+              ECF9FBF2FBFEE0E9FD7C86BF444CA83A42AC3F47AF3A44A44046A26F7AB2B1BE
+              D3707A96EEF3F7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFCFFFDFFFDFFF8EFF4F7747BA8AFBDDA99A7CC424B964749B03F44
+              B43D43B4404CAB5B6DB25F77B16676BC6C7BC16B78BF444CAF344BAA6D86C17D
+              87CD6777B64D64A53B4BA63D49B5404AB1474FAD4B54A86472B16D81BB5063AA
+              3944A43038A2333CA93A45AA4F5CAB6678B2586AA542509D3C40A72E3EAB394A
+              AE4A52A65C6AAA6379AC4C5CA04652B33F4DB54049AE4348B04745AF556296CB
+              D6E98283AFC1C3D4FDFFFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFDFFFDFFFFFFFAFBFFFAD1D2EA73789BD2DEEC8994BF4A
+              4CA63D3BAE383AAC363FB03947AD3649AA3741B0383EB23C42B2373BB23241B3
+              2F43A53039A326369C3648AB303CAA2832A13843AC3940A63B3EAA3841AA3644
+              A63340AB3037AC2E33A92D35A7353BAF393FAF3540A23542A03340A2353CA130
+              3FAA3843B53F42B04049AE414FAD2E3D9E3B46AF3443A33A45A43E45A8494D9C
+              B5C0D99EA3C6918CB5F4F4FAFCFEFAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFDFDD4D6E07D81A8
+              ADB5D8AAB4D7565EA14847AD393EB0353CAF3A40B52730A32F38A9333EAC3742
+              AF2F3BAA2E37A72F39A92934A2333AA83F45B23A40AC4249B43A42A8373EA930
+              3AA8252F9F3039A8303BAB2631A22C31A2383DAD383FAB393EAA3139A1363EA6
+              323CA6323BA73236A7373DA93E42AA3A44A83B45AD3E43AE3C43A53E49975C67
+              A6B4BFDB99A0BF9395B6E5E6F1FFFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFF
+              FED9DCEA7571A8979CC3CED9EC6C74A83E459C3E42AC353AB23942BA2D3FA92F
+              41A8353BAE2A32A53138AA2B32A32F38A63238A7383DAC2F34A1353CA63840A7
+              3740A8323AA82F37A42D36A527309E222A9B333AA9353AAB3D42B03A42AB2A32
+              9B363EA52E3EA22E3EA8313AAB3B40B0343BA83F4CAE3440A4373AA94546A96F
+              75AFCBD6EC868BAE8C92ADEFF4F8FCFEFEFDFEFEFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFEFFFCFDFFFAE8E7F3918EBF8A88BCD3DDEE8A99BD4B569A444CAB3C42B3
+              3643B23D48B9393FB13A3DB13338AA3238AA373BAD3A41B03F47B33D41AF474F
+              B84149B13F48B2363EAA3C44AF2C33A1363BAB2B329F3C42AF3B3FB03A40AD34
+              3BA43B44AA3B46AD3343A63843AD3B44AF3E45B34045AF4449B2464FAF515CA6
+              8B93C0CCD3E68C91AE9291B4EEF2F7FBFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFEFEFDFEFFF1F2F5F89E9CBF7776A4B2C0D5B6C5E26F7C
+              AF4951A0494BAF4748B53C3EAD3A3FAA3536A43C40AD4144B0383EAC2C31A137
+              3BA94048B13841A93B42AB4144B0363CA73A41AC3D41AC3135A14247B43D44B1
+              3A42AE3840AA434CB33C44AC3940A73A41A93D43A84B4EB0464DA54E51A76E74
+              B8AAB4D9BBC9D56E788F9EA4BDF5F5FBFDFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFEFFFEFFFFFCFFFCFFFCFCFFFDDADCEA757CA88A
+              95B5D0DDECB9C1D87273AE4E4EA34248AB3B40A44046AB3A3DA63C40A74146B2
+              3D42B03940AB3F47B0373FA93E46AD474CB64247B33B3FAA4144AF383CA73B41
+              AC333BA7393EAA4149B2353DA63D43AC3C3FA54243A94649A74D51A6686CB3B1
+              B9D9D1DAEC8B91B6767AA2CDD5E1F2FCFEFDFFFBFEFFFEFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              EFF4F7A8ABC070739E888AB8C7D1E9C3D1EC7D89BC5C64A44950A04749A84444
+              AB474CB3454CB03D42A8494FB7464BB2464CB43E49AE3F4DB1424FB23E4BAE3B
+              46AB4049AD424AAD4248AC4B50B25055B55055B15B59AA6D71B68189BFB9C7E4
+              C5D9EC8B9BBB6F779CA1A8BEF1F4F9FDFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFCFDFCFCFDFEE6E6F5A2A6C3656F8E848DABABB7D1D2DDF2B6C5E18E
+              9DC47081B05A60A44B4E9B4C519D5356A75355A75051A8494BA64D4EA94A4BA6
+              5155AD4345A04541A74F4CB05250A755599B6F75A7919CBFA4B5CECFDDF1B3C0
+              D78891B66E73A29C9FC3E1E6F3F6FCFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFDFDFEFEFFFDFBFCFFEAEDF4C6C7DA8786B46C6F9E
+              8C93B59DA7C5C2D1E8D9E8F6C0CEDEBBCBDDB8C5DBA0ADC7939FBE959DC38A94
+              B9878FB88C94BB9AA3CCAFBCD6B8C8DBC3D0E0DAE7F3CDD9EA96A0B9838FB16A
+              7695848DA6C2CCD6E7ECF4FEFCFEFCFCFEFDFEFEFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFEFFFFFFFFFFFFF9FB
+              FEF0F2F9C2C3DB8C8FAF8085A8747EAD616F9F7783B598A4CEACB6E1BBC7EBC5
+              D8ECC4D7EAC2D6E8BBCDE1A2B4CB97A8C67E8DB8646F9D6B74A57B82B18288B4
+              B7C0D7EDF3FAF8FCFDFEFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFCFFFFF6FEFFFBFEFFFDFEFFFFFBFDFEE8F1F8CAD3E5ADB8CDABB6CCABB4CB
+              AAB3CBABB2D0A5ACCAA4ACCBA2A9CAA2ABC7A8AECCAEB3CEC5CCE1E8EDF5F4FD
+              FCF8FEFAFEFFFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFEFFFDFCFFFEFEFEFEFEFEFFFFFFFFFFFFFFFFFEFFFFFEFEFEFFFD
+              FFFFFFFFFEFFFFFEFFFFFDFFFFFDFFFFFEFFFEFBFFFFFEFFFCFDFDFDFEFEFDFF
+              FFFEFFFDFEFDFCFCFFFEFFFFFFFFFFFFFFFFFFFFFFFFFBFFFFFDFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFF00}
+            Stretch = True
+          end
+          object QRLabel44: TQRLabel
+            Left = 74
+            Top = 6
+            Width = 204
+            Height = 24
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              63.500000000000000000
+              195.791666666666700000
+              15.875000000000000000
+              539.750000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'PT.PISMATEX Textile Industry'
+            Color = clWhite
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -19
+            Font.Name = 'Arial Narrow'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 14
+          end
+          object QRLabel45: TQRLabel
+            Left = 197
+            Top = 87
+            Width = 352
+            Height = 23
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              60.854166666666670000
+              521.229166666666700000
+              230.187500000000000000
+              931.333333333333300000)
+            Alignment = taCenter
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'S I S A  P O T O N G  B E A M  M I T R A'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -19
+            Font.Name = 'Arial'
+            Font.Style = [fsBold]
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 14
+          end
+          object QRLabel46: TQRLabel
+            Left = 340
+            Top = 112
+            Width = 65
+            Height = 19
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              50.270833333333330000
+              899.583333333333300000
+              296.333333333333300000
+              171.979166666666700000)
+            Alignment = taCenter
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'QRLabel46'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+        end
+        object QRBand28: TQRBand
+          Left = 24
+          Top = 169
+          Width = 746
+          Height = 26
+          Frame.Color = clBlack
+          Frame.DrawTop = True
+          Frame.DrawBottom = True
+          Frame.DrawLeft = True
+          Frame.DrawRight = True
+          AlignToBottom = False
+          BeforePrint = ColumnHeaderBand1BeforePrint
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            68.791666666666670000
+            1973.791666666667000000)
+          BandType = rbColumnHeader
+          object QRLabel47: TQRLabel
+            Left = 489
+            Top = 5
+            Width = 48
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1293.812500000000000000
+              13.229166666666670000
+              127.000000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'NO BEAM'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRShape12: TQRShape
+            Left = 117
+            Top = 0
+            Width = 1
+            Height = 31
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              82.020833333333320000
+              309.562500000000000000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRLabel54: TQRLabel
+            Left = 51
+            Top = 4
+            Width = 32
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              134.937500000000000000
+              10.583333333333330000
+              84.666666666666680000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'MITRA'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRLabel56: TQRLabel
+            Left = 351
+            Top = 4
+            Width = 51
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              928.687500000000000000
+              10.583333333333330000
+              134.937500000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'NO RESEP'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRLabel57: TQRLabel
+            Left = 428
+            Top = 5
+            Width = 49
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1132.416666666667000000
+              13.229166666666670000
+              129.645833333333300000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'NO MESIN'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRShape13: TQRShape
+            Left = 217
+            Top = 0
+            Width = 1
+            Height = 24
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              63.500000000000000000
+              574.145833333333300000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRShape28: TQRShape
+            Left = 480
+            Top = 0
+            Width = 1
+            Height = 25
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              66.145833333333320000
+              1270.000000000000000000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRShape29: TQRShape
+            Left = 546
+            Top = 1
+            Width = 1
+            Height = 25
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              66.145833333333320000
+              1444.625000000000000000
+              2.645833333333333000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRLabel58: TQRLabel
+            Left = 711
+            Top = 4
+            Width = 25
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1881.187500000000000000
+              10.583333333333330000
+              66.145833333333340000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'SISA'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRLabel59: TQRLabel
+            Left = 667
+            Top = 4
+            Width = 23
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1764.770833333333000000
+              10.583333333333330000
+              60.854166666666680000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'QTY'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRLabel60: TQRLabel
+            Left = 556
+            Top = 4
+            Width = 33
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1471.083333333333000000
+              10.583333333333330000
+              87.312500000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'AWAL'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRShape30: TQRShape
+            Left = 595
+            Top = 0
+            Width = 1
+            Height = 25
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              66.145833333333320000
+              1574.270833333333000000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRShape31: TQRShape
+            Left = 699
+            Top = 0
+            Width = 1
+            Height = 25
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              66.145833333333320000
+              1849.437500000000000000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRLabel62: TQRLabel
+            Left = 136
+            Top = 4
+            Width = 62
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              359.833333333333400000
+              10.583333333333330000
+              164.041666666666700000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'TGL MUTASI'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRLabel63: TQRLabel
+            Left = 235
+            Top = 4
+            Width = 61
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              621.770833333333400000
+              10.583333333333330000
+              161.395833333333300000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'TGL TERIMA'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRShape39: TQRShape
+            Left = 424
+            Top = 0
+            Width = 1
+            Height = 25
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              66.145833333333320000
+              1121.833333333333000000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRShape40: TQRShape
+            Left = 321
+            Top = 0
+            Width = 1
+            Height = 25
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              66.145833333333320000
+              849.312500000000000000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRLabel64: TQRLabel
+            Left = 599
+            Top = 4
+            Width = 53
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1584.854166666667000000
+              10.583333333333330000
+              140.229166666666700000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'QTY LALU'
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRShape43: TQRShape
+            Left = 655
+            Top = 0
+            Width = 1
+            Height = 25
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              66.145833333333320000
+              1733.020833333333000000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+        end
+        object QRGroup7: TQRGroup
+          Left = 24
+          Top = 195
+          Width = 746
+          Height = 0
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            0.000000000000000000
+            1973.791666666667000000)
+          FooterBand = QRBand30
+          Master = QuickRep7
+          ReprintOnNewPage = False
+        end
+        object QRBand29: TQRBand
+          Left = 24
+          Top = 247
+          Width = 746
+          Height = 29
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = True
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            76.729166666666670000
+            1973.791666666667000000)
+          BandType = rbPageFooter
+          object QRDBText32: TQRDBText
+            Left = 0
+            Top = 8
+            Width = 36
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              0.000000000000000000
+              21.166666666666670000
+              95.250000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = DMFrm.QUserTime
+            DataField = 'VUSER'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRSysData8: TQRSysData
+            Left = 677
+            Top = 8
+            Width = 69
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1791.229166666667000000
+              21.166666666666670000
+              182.562500000000000000)
+            Alignment = taRightJustify
+            AlignToBand = True
+            AutoSize = True
+            Color = clWhite
+            Data = qrsPageNumber
+            Text = 'Hal '
+            Transparent = False
+            FontSize = 10
+          end
+          object QRDBText48: TQRDBText
+            Left = 337
+            Top = 8
+            Width = 71
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              891.645833333333300000
+              21.166666666666670000
+              187.854166666666700000)
+            Alignment = taCenter
+            AlignToBand = True
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QTransaksi
+            DataField = 'DISTRIBUSI'
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+        end
+        object QRBand30: TQRBand
+          Left = 24
+          Top = 220
+          Width = 746
+          Height = 27
+          Frame.Color = clBlack
+          Frame.DrawTop = True
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            71.437500000000000000
+            1973.791666666667000000)
+          BandType = rbGroupFooter
+          object QRLabel61: TQRLabel
+            Left = 280
+            Top = 4
+            Width = 29
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              740.833333333333400000
+              10.583333333333330000
+              76.729166666666680000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Caption = 'Total'
+            Color = clWhite
+            Transparent = False
+            WordWrap = True
+            FontSize = 10
+          end
+        end
+        object QRBand31: TQRBand
+          Left = 24
+          Top = 195
+          Width = 746
+          Height = 25
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = True
+          Frame.DrawRight = True
+          AlignToBottom = False
+          Color = clWhite
+          ForceNewColumn = False
+          ForceNewPage = False
+          Size.Values = (
+            66.145833333333330000
+            1973.791666666667000000)
+          BandType = rbDetail
+          object QRDBText49: TQRDBText
+            Left = 706
+            Top = 3
+            Width = 36
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1867.958333333333000000
+              7.937500000000000000
+              95.250000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QSisaWO_det
+            DataField = 'SISA_PTG_BEAM'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            Mask = '0.0,0;(0.0,0);'
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRDBText50: TQRDBText
+            Left = 8
+            Top = 3
+            Width = 103
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              21.166666666666670000
+              7.937500000000000000
+              272.520833333333300000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QSisaWO_det
+            DataField = 'NAMA_MITRA'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRShape32: TQRShape
+            Left = 117
+            Top = 0
+            Width = 1
+            Height = 26
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              68.791666666666680000
+              309.562500000000000000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRDBText51: TQRDBText
+            Left = 668
+            Top = 3
+            Width = 23
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1767.416666666667000000
+              7.937500000000000000
+              60.854166666666680000)
+            Alignment = taRightJustify
+            AlignToBand = False
+            AutoSize = True
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QSisaWO_det
+            DataField = 'QTY'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            Mask = '0.0,0;(0.0,0);'
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRDBText52: TQRDBText
+            Left = 483
+            Top = 3
+            Width = 60
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1277.937500000000000000
+              7.937500000000000000
+              158.750000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QSisaWO_det
+            DataField = 'NO_BEAM'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRDBText58: TQRDBText
+            Left = 555
+            Top = 3
+            Width = 36
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1468.437500000000000000
+              7.937500000000000000
+              95.250000000000000000)
+            Alignment = taRightJustify
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QSisaWO_det
+            DataField = 'JML_POTONG'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            Mask = '0.0,0;(0.0,0);'
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRDBText59: TQRDBText
+            Left = 326
+            Top = 3
+            Width = 93
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              862.541666666666800000
+              7.937500000000000000
+              246.062500000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QSisaWO_det
+            DataField = 'NO_RESEP'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRDBText60: TQRDBText
+            Left = 428
+            Top = 3
+            Width = 42
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1132.416666666667000000
+              7.937500000000000000
+              111.125000000000000000)
+            Alignment = taCenter
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QSisaWO_det
+            DataField = 'NO_MESIN'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRShape33: TQRShape
+            Left = 217
+            Top = -2
+            Width = 1
+            Height = 27
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              71.437500000000000000
+              574.145833333333300000
+              -5.291666666666667000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRShape34: TQRShape
+            Left = 480
+            Top = -2
+            Width = 1
+            Height = 27
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              71.437500000000000000
+              1270.000000000000000000
+              -5.291666666666667000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRShape35: TQRShape
+            Left = 546
+            Top = -2
+            Width = 1
+            Height = 27
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              71.437500000000000000
+              1444.625000000000000000
+              -5.291666666666667000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRShape36: TQRShape
+            Left = 595
+            Top = -2
+            Width = 1
+            Height = 27
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              71.437500000000000000
+              1574.270833333333000000
+              -5.291666666666667000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRShape37: TQRShape
+            Left = 699
+            Top = -2
+            Width = 1
+            Height = 27
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              71.437500000000000000
+              1849.437500000000000000
+              -5.291666666666667000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRShape41: TQRShape
+            Left = 321
+            Top = -2
+            Width = 1
+            Height = 27
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              71.437500000000000000
+              849.312500000000000000
+              -5.291666666666667000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRShape42: TQRShape
+            Left = 424
+            Top = -2
+            Width = 1
+            Height = 27
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              71.437500000000000000
+              1121.833333333333000000
+              -5.291666666666667000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRDBText61: TQRDBText
+            Left = 222
+            Top = 3
+            Width = 94
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              587.375000000000000000
+              7.937500000000000000
+              248.708333333333300000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QSisaWO_det
+            DataField = 'TGL_TERIMA'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRDBText62: TQRDBText
+            Left = 121
+            Top = 3
+            Width = 94
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              320.145833333333300000
+              7.937500000000000000
+              248.708333333333300000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QSisaWO_det
+            DataField = 'TANGGAL'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+          object QRShape44: TQRShape
+            Left = 655
+            Top = 0
+            Width = 1
+            Height = 25
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              66.145833333333320000
+              1733.020833333333000000
+              0.000000000000000000
+              2.645833333333333000)
+            Shape = qrsRectangle
+          end
+          object QRDBText63: TQRDBText
+            Left = 609
+            Top = 3
+            Width = 36
+            Height = 17
+            Frame.Color = clBlack
+            Frame.DrawTop = False
+            Frame.DrawBottom = False
+            Frame.DrawLeft = False
+            Frame.DrawRight = False
+            Size.Values = (
+              44.979166666666670000
+              1611.312500000000000000
+              7.937500000000000000
+              95.250000000000000000)
+            Alignment = taLeftJustify
+            AlignToBand = False
+            AutoSize = False
+            AutoStretch = False
+            Color = clWhite
+            DataSet = QSisaWO_det
+            DataField = 'QTY_SISA_LL'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            Mask = '0.0,0;(0.0,0);'
+            ParentFont = False
+            Transparent = False
+            WordWrap = True
+            FontSize = 8
+          end
+        end
+        object QRShape38: TQRShape
+          Left = 26
+          Top = 193
+          Width = 741
+          Height = 1
+          Frame.Color = clBlack
+          Frame.DrawTop = False
+          Frame.DrawBottom = False
+          Frame.DrawLeft = False
+          Frame.DrawRight = False
+          Size.Values = (
+            2.645833333333333000
+            68.791666666666680000
+            510.645833333333300000
+            1960.562500000000000000)
+          Shape = qrsRectangle
+        end
+      end
+      object wwDBGrid7: TwwDBGrid
+        Left = 0
+        Top = 68
+        Width = 1525
+        Height = 666
+        DisableThemes = True
+        DisableThemesInTitle = True
+        ControlType.Strings = (
+          'ISAKTIF;CheckBox;1;0'
+          'ID_SUB_BAG;CustomEdit;LookBagian;F'
+          'ID_HAK;CustomEdit;LookJnsMenu;F')
+        PictureMasks.Strings = (
+          'ID_BAG'#9'*2{#,&}'#9'T'#9'T'
+          'KD_JNS_ITEM'#9'#,&'#9'T'#9'T'
+          'KD_SATUAN'#9'#,&'#9'T'#9'T'
+          'ID_USER'#9'*3{&,#}'#9'T'#9'T')
+        Selected.Strings = (
+          'NAMA_MITRA'#9'25'#9'NAMA MITRA'#9'F'#9'MITRA'
+          'KD_MITRA'#9'4'#9'KODE MITRA'#9'F'#9'MITRA'
+          'TANGGAL'#9'15'#9'TANGGAL~MUTASI'#9'F'
+          'TGL_TERIMA'#9'18'#9'TANGGAL~TERIMA'#9'F'
+          'NO_RESEP'#9'20'#9'NO RESEP'#9'F'
+          'NO_BEAM'#9'10'#9'NO BEAM'#9'F'#9'BEAM'
+          'NO_SERI_BEAM'#9'20'#9'NO SERI BEAM'#9'F'#9'BEAM'
+          'KONSTRUKSI'#9'50'#9'KONSTRUKSI'#9'F'
+          'CORAK'#9'20'#9'CORAK'#9'F'
+          'NO_MESIN'#9'10'#9'NO MESIN'#9'F'
+          'JML_POTONG'#9'10'#9'QTY AWAL'#9'F'#9'JUMLAH POTONG BEAM'
+          'QTY_SISA_LL'#9'10'#9'QTY SISA LALU'#9'F'#9'JUMLAH POTONG BEAM'
+          'QTY'#9'10'#9'QTY WO'#9'F'#9'JUMLAH POTONG BEAM'
+          'SISA_PTG_BEAM'#9'10'#9'SISA AKHIR'#9'F'#9'JUMLAH POTONG BEAM')
+        IniAttributes.Enabled = True
+        IniAttributes.SaveToRegistry = True
+        IniAttributes.FileName = 'Pismatex Master'
+        IniAttributes.Delimiter = ';;'
+        IniAttributes.CheckNewFields = True
+        ExportOptions.ExportType = wwgetHTML
+        ExportOptions.Options = [esoShowHeader, esoShowFooter, esoShowTitle, esoDblQuoteFields, esoBestColFit, esoShowRecordNo, esoShowAlternating]
+        TitleColor = clSkyBlue
+        FixedCols = 0
+        ShowHorzScrollBar = True
+        Align = alClient
+        DataSource = dSQSisaWO_det
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgPerfectRowFit, dgShowFooter, dgTrailingEllipsis, dgDblClickColSizing]
+        ParentFont = False
+        ReadOnly = True
+        RowHeightPercent = 125
+        TabOrder = 0
+        TitleAlignment = taCenter
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Lucida Sans'
+        TitleFont.Style = [fsBold]
+        TitleLines = 3
+        TitleButtons = True
+        UseTFields = False
+        OnTitleButtonClick = wwDBGrid1xxxxxTitleButtonClick
+        PaintOptions.AlternatingRowColor = clMoneyGreen
+        PaintOptions.ActiveRecordColor = clGreen
+        GroupFieldName = 'NAMA_MITRA'
+      end
+      object Panel19: TPanel
+        Left = 0
+        Top = 0
+        Width = 1525
+        Height = 52
+        Align = alTop
+        BevelInner = bvLowered
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 1
+        object GroupBox7: TGroupBox
+          Left = 2
+          Top = 2
+          Width = 287
+          Height = 48
+          Align = alLeft
+          Caption = 'Filter Tanggal Mutasi'
+          TabOrder = 0
+          TabStop = True
+          object Label38: TLabel
+            Left = 129
+            Top = 22
+            Width = 24
+            Height = 13
+            Caption = 'S/D'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object VTglAwal7: TwwDBDateTimePicker
+            Left = 8
+            Top = 16
+            Width = 113
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 0
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAwal7Change
+          end
+          object VTglAkhir7: TwwDBDateTimePicker
+            Left = 163
+            Top = 16
+            Width = 113
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 1
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAkhir7Change
+          end
+        end
+        object Panel20: TPanel
+          Left = 289
+          Top = 2
+          Width = 604
+          Height = 48
+          Align = alLeft
+          BevelOuter = bvNone
+          TabOrder = 1
+          DesignSize = (
+            604
+            48)
+          object vOperand7: TLabel
+            Left = 156
+            Top = 20
+            Width = 44
+            Height = 24
+            Cursor = crHandPoint
+            Alignment = taCenter
+            AutoSize = False
+            Caption = 'LIKE'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clNavy
+            Font.Height = -19
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            OnClick = vOperand7Click
+          end
+          object BitBtn20: TBitBtn
+            Left = 337
+            Top = 16
+            Width = 75
+            Height = 25
+            Caption = 'Filte&r'
+            Default = True
+            ModalResult = 1
+            TabOrder = 0
+            OnClick = BitBtn20Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+              555555555555555555555555555555555555555555FF55555555555559055555
+              55555555577FF5555555555599905555555555557777F5555555555599905555
+              555555557777FF5555555559999905555555555777777F555555559999990555
+              5555557777777FF5555557990599905555555777757777F55555790555599055
+              55557775555777FF5555555555599905555555555557777F5555555555559905
+              555555555555777FF5555555555559905555555555555777FF55555555555579
+              05555555555555777FF5555555555557905555555555555777FF555555555555
+              5990555555555555577755555555555555555555555555555555}
+            NumGlyphs = 2
+          end
+          object BitBtn21: TBitBtn
+            Left = 417
+            Top = 16
+            Width = 97
+            Height = 25
+            Caption = '&Export2Excel'
+            TabOrder = 1
+            OnClick = BitBtn21Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+              00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+              00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+              00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+              0003737FFFFFFFFF7F7330099999999900333777777777777733}
+            NumGlyphs = 2
+          end
+          object BitBtn22: TBitBtn
+            Left = 520
+            Top = 16
+            Width = 75
+            Height = 25
+            Anchors = [akTop, akRight]
+            Caption = '&Print'
+            TabOrder = 2
+            OnClick = BitBtn22Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000130B0000130B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+              00033FFFFFFFFFFFFFFF0888888888888880777777777777777F088888888888
+              8880777777777777777F0000000000000000FFFFFFFFFFFFFFFF0F8F8F8F8F8F
+              8F80777777777777777F08F8F8F8F8F8F9F0777777777777777F0F8F8F8F8F8F
+              8F807777777777777F7F0000000000000000777777777777777F3330FFFFFFFF
+              03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+              03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+              33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
+              33333337FFFF7733333333300000033333333337777773333333}
+            NumGlyphs = 2
+          end
+          object cbOtomatis7: TCheckBox
+            Left = 11
+            Top = 5
+            Width = 98
+            Height = 17
+            Caption = 'Cari &Otomatis'
+            TabOrder = 3
+            OnClick = cbOtomatis7Click
+          end
+          object dbcField7: TwwDBComboBox
+            Left = 11
+            Top = 23
+            Width = 137
+            Height = 19
+            ShowButton = True
+            Style = csDropDown
+            MapList = False
+            AllowClearKey = False
+            Color = clYellow
+            DropDownCount = 8
+            ItemHeight = 0
+            Items.Strings = (
+              'SEMUA KOLOM')
+            ItemIndex = 0
+            Sorted = False
+            TabOrder = 4
+            UnboundDataType = wwDefault
+            OnEnter = dbcField7Enter
+          end
+          object ECari7: TEdit
+            Left = 206
+            Top = 23
+            Width = 121
+            Height = 19
+            Ctl3D = False
+            ParentCtl3D = False
+            TabOrder = 5
+          end
+          object cbTanggal7: TCheckBox
+            Left = 207
+            Top = 5
+            Width = 129
+            Height = 17
+            Caption = 'Ikutkan Filter &Tanggal'
+            Checked = True
+            State = cbChecked
+            TabOrder = 6
+            OnClick = cbTanggal7Click
+          end
+        end
+      end
+    end
+    object TabSheet10: TTabSheet
+      Caption = 'Info Sisa Akhir Turun Beam Mitra'
+      ImageIndex = 9
+      TabVisible = False
+      object Label43: TLabel
+        Left = 0
+        Top = 52
+        Width = 1525
+        Height = 16
+        Align = alTop
+        Color = clSkyBlue
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -13
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Panel21: TPanel
+        Left = 0
+        Top = 0
+        Width = 1525
+        Height = 52
+        Align = alTop
+        BevelInner = bvLowered
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 0
+        object GroupBox8: TGroupBox
+          Left = 2
+          Top = 2
+          Width = 287
+          Height = 48
+          Align = alLeft
+          Caption = 'Filter Tanggal Turun'
+          TabOrder = 0
+          TabStop = True
+          object Label40: TLabel
+            Left = 129
+            Top = 22
+            Width = 24
+            Height = 13
+            Caption = 'S/D'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object VTglAwal8: TwwDBDateTimePicker
+            Left = 8
+            Top = 16
+            Width = 113
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 0
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAwal8Change
+          end
+          object VTglAkhir8: TwwDBDateTimePicker
+            Left = 163
+            Top = 16
+            Width = 113
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 1
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAkhir8Change
+          end
+        end
+        object Panel22: TPanel
+          Left = 289
+          Top = 2
+          Width = 604
+          Height = 48
+          Align = alLeft
+          BevelOuter = bvNone
+          TabOrder = 1
+          DesignSize = (
+            604
+            48)
+          object vOperand8: TLabel
+            Left = 156
+            Top = 20
+            Width = 44
+            Height = 24
+            Cursor = crHandPoint
+            Alignment = taCenter
+            AutoSize = False
+            Caption = 'LIKE'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clNavy
+            Font.Height = -19
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            OnClick = vOperand7Click
+          end
+          object BitBtn23: TBitBtn
+            Left = 337
+            Top = 16
+            Width = 75
+            Height = 25
+            Caption = 'Filte&r'
+            Default = True
+            ModalResult = 1
+            TabOrder = 0
+            OnClick = BitBtn23Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+              555555555555555555555555555555555555555555FF55555555555559055555
+              55555555577FF5555555555599905555555555557777F5555555555599905555
+              555555557777FF5555555559999905555555555777777F555555559999990555
+              5555557777777FF5555557990599905555555777757777F55555790555599055
+              55557775555777FF5555555555599905555555555557777F5555555555559905
+              555555555555777FF5555555555559905555555555555777FF55555555555579
+              05555555555555777FF5555555555557905555555555555777FF555555555555
+              5990555555555555577755555555555555555555555555555555}
+            NumGlyphs = 2
+          end
+          object BitBtn24: TBitBtn
+            Left = 417
+            Top = 16
+            Width = 97
+            Height = 25
+            Caption = '&Export2Excel'
+            TabOrder = 1
+            OnClick = BitBtn24Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+              00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+              00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+              00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+              0003737FFFFFFFFF7F7330099999999900333777777777777733}
+            NumGlyphs = 2
+          end
+          object BitBtn25: TBitBtn
+            Left = 520
+            Top = 16
+            Width = 75
+            Height = 25
+            Anchors = [akTop, akRight]
+            Caption = '&Print'
+            TabOrder = 2
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000130B0000130B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+              00033FFFFFFFFFFFFFFF0888888888888880777777777777777F088888888888
+              8880777777777777777F0000000000000000FFFFFFFFFFFFFFFF0F8F8F8F8F8F
+              8F80777777777777777F08F8F8F8F8F8F9F0777777777777777F0F8F8F8F8F8F
+              8F807777777777777F7F0000000000000000777777777777777F3330FFFFFFFF
+              03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+              03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+              33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
+              33333337FFFF7733333333300000033333333337777773333333}
+            NumGlyphs = 2
+          end
+          object cbOtomatis8: TCheckBox
+            Left = 11
+            Top = 5
+            Width = 98
+            Height = 17
+            Caption = 'Cari &Otomatis'
+            TabOrder = 3
+            OnClick = cbOtomatis8Click
+          end
+          object dbcField8: TwwDBComboBox
+            Left = 11
+            Top = 23
+            Width = 137
+            Height = 19
+            ShowButton = True
+            Style = csDropDown
+            MapList = False
+            AllowClearKey = False
+            Color = clYellow
+            DropDownCount = 8
+            ItemHeight = 0
+            Items.Strings = (
+              'SEMUA KOLOM')
+            ItemIndex = 0
+            Sorted = False
+            TabOrder = 4
+            UnboundDataType = wwDefault
+            OnEnter = dbcField8Enter
+          end
+          object ECari8: TEdit
+            Left = 206
+            Top = 23
+            Width = 121
+            Height = 19
+            Ctl3D = False
+            ParentCtl3D = False
+            TabOrder = 5
+          end
+          object cbTanggal8: TCheckBox
+            Left = 207
+            Top = 5
+            Width = 129
+            Height = 17
+            Caption = 'Ikutkan Filter &Tanggal'
+            Checked = True
+            State = cbChecked
+            TabOrder = 6
+            OnClick = cbTanggal8Click
+          end
+        end
+      end
+      object wwDBGrid8: TwwDBGrid
+        Left = 0
+        Top = 68
+        Width = 1525
+        Height = 666
+        DisableThemes = True
+        DisableThemesInTitle = True
+        ControlType.Strings = (
+          'ISAKTIF;CheckBox;1;0'
+          'ID_SUB_BAG;CustomEdit;LookBagian;F'
+          'ID_HAK;CustomEdit;LookJnsMenu;F')
+        PictureMasks.Strings = (
+          'ID_BAG'#9'*2{#,&}'#9'T'#9'T'
+          'KD_JNS_ITEM'#9'#,&'#9'T'#9'T'
+          'KD_SATUAN'#9'#,&'#9'T'#9'T'
+          'ID_USER'#9'*3{&,#}'#9'T'#9'T')
+        Selected.Strings = (
+          'KD_MITRA'#9'4'#9'KODE'#9'F'#9'MITRA'
+          'NAMA_MITRA'#9'20'#9'NAMA'#9'F'#9'MITRA'
+          'TGL_TERIMA'#9'15'#9'TANGGAL~TURUN'#9'F'
+          'NO_RESEP'#9'20'#9'NO RESEP'#9'F'
+          'NO_BEAM'#9'10'#9'NO. BEAM'#9'F'
+          'NO_SERI_BEAM'#9'20'#9'NO. SERI BEAM'#9'F'
+          'KONSTRUKSI'#9'25'#9'KONSTRUKSI'#9'F'
+          'CORAK'#9'20'#9'CORAK'#9'F'
+          'JML_POTONG'#9'10'#9'QTY AWAL'#9'F'#9'JUMLAH POTONG BEAM'
+          'QTY'#9'10'#9'QTY WO'#9'F'#9'JUMLAH POTONG BEAM'
+          'SISA_PTG_BEAM'#9'10'#9'SISA AKHIR'#9'F'#9'JUMLAH POTONG BEAM'
+          'PROSES_TUJUAN'#9'25'#9'KETERANGAN'#9'F')
+        IniAttributes.Enabled = True
+        IniAttributes.SaveToRegistry = True
+        IniAttributes.FileName = 'Pismatex Master'
+        IniAttributes.Delimiter = ';;'
+        IniAttributes.CheckNewFields = True
+        ExportOptions.ExportType = wwgetHTML
+        ExportOptions.Options = [esoShowHeader, esoShowFooter, esoShowTitle, esoDblQuoteFields, esoBestColFit, esoShowRecordNo, esoShowAlternating]
+        TitleColor = clSkyBlue
+        FixedCols = 0
+        ShowHorzScrollBar = True
+        Align = alClient
+        DataSource = dSQSisaWO_det2
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgPerfectRowFit, dgShowFooter, dgTrailingEllipsis, dgDblClickColSizing]
+        ParentFont = False
+        ReadOnly = True
+        RowHeightPercent = 125
+        TabOrder = 1
+        TitleAlignment = taCenter
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Lucida Sans'
+        TitleFont.Style = [fsBold]
+        TitleLines = 3
+        TitleButtons = True
+        UseTFields = False
+        OnTitleButtonClick = wwDBGrid1xxxxxTitleButtonClick
+        PaintOptions.AlternatingRowColor = clMoneyGreen
+        PaintOptions.ActiveRecordColor = clGreen
+        GroupFieldName = 'NAMA_MITRA'
+      end
+    end
+  end
+  object QMaster: TOracleDataSet
+    SQL.Strings = (
+      'select a.*, a.rowid from ipisma_db5.Hasil_Tenun_Mitra a'
+      'where no_spb like :no_spb and kd_transaksi = :kd_transaksi')
+    Variables.Data = {
+      0300000002000000070000003A4E4F5F5350420500000000000000000000000D
+      0000003A4B445F5452414E53414B5349050000000000000000000000}
+    SequenceField.Field = 'NO_REG'
+    SequenceField.Sequence = 'IPISMA_DB5.REG_HASIL_MITRA'
+    SequenceField.ApplyMoment = amOnNewRecord
+    QBEDefinition.QBEFieldDefs = {
+      040000000E000000060000004E4F5F5245470100000000000A0000004B455445
+      52414E47414E0100000000000A00000054474C5F494E53455254010000000000
+      0A0000004F50525F494E53455254010000000000060000004953504F53540100
+      0000000004000000475255500100000000000500000053484946540100000000
+      00060000004E4F5F535042010000000000080000004B445F4D49545241010000
+      0000000A0000004E414D415F4D495452410100000000000700000054414E4747
+      414C010000000000070000004E4F5F4E4F54410100000000000C0000004B445F
+      5452414E53414B53490100000000000A0000004E4F54415F5052494E54010000
+      000000}
+    QueryAllRecords = False
+    RefreshOptions = [roAfterInsert, roAfterUpdate]
+    BeforeQuery = QMasterBeforeQuery
+    Session = DMFrm.OS
+    BeforeEdit = QMasterBeforeEdit
+    BeforePost = QMasterBeforePost
+    BeforeDelete = QMasterBeforeDelete
+    OnNewRecord = QMasterNewRecord
+    Left = 730
+    Top = 177
+    object QMasterNO_REG: TFloatField
+      FieldName = 'NO_REG'
+      Required = True
+    end
+    object QMasterNO_SPB: TStringField
+      FieldName = 'NO_SPB'
+      Size = 30
+    end
+    object QMasterKD_MITRA: TStringField
+      FieldName = 'KD_MITRA'
+      Size = 4
+    end
+    object QMasterNAMA_MITRA: TStringField
+      FieldName = 'NAMA_MITRA'
+      Size = 25
+    end
+    object QMasterGRUP: TStringField
+      FieldName = 'GRUP'
+      Size = 3
+    end
+    object QMasterSHIFT: TStringField
+      FieldName = 'SHIFT'
+      Size = 3
+    end
+    object QMasterTANGGAL: TDateTimeField
+      FieldName = 'TANGGAL'
+    end
+    object QMasterISPOST: TStringField
+      FieldName = 'ISPOST'
+      Size = 1
+    end
+    object QMasterTGL_INSERT: TDateTimeField
+      FieldName = 'TGL_INSERT'
+    end
+    object QMasterOPR_INSERT: TStringField
+      FieldName = 'OPR_INSERT'
+      Size = 30
+    end
+    object QMasterKETERANGAN: TStringField
+      FieldName = 'KETERANGAN'
+      Size = 255
+    end
+    object QMasterNO_NOTA: TStringField
+      FieldName = 'NO_NOTA'
+    end
+    object QMasterKD_TRANSAKSI: TStringField
+      FieldName = 'KD_TRANSAKSI'
+      Size = 3
+    end
+    object QMasterNOTA_PRINT: TStringField
+      FieldName = 'NOTA_PRINT'
+      Size = 255
+    end
+  end
+  object QDetail: TOracleDataSet
+    SQL.Strings = (
+      'select a.*,rowid from ipisma_db5.hasil_tenun_mitra_det a'
+      'where a.no_reg=:no_reg'
+      'order by no_urut'
+      '')
+    Variables.Data = {0300000001000000070000003A4E4F5F524547040000000000000000000000}
+    SequenceField.Field = 'NO_REG_DET'
+    SequenceField.Sequence = 'IPISMA_DB5.REG_HASIL_MITRA_DET'
+    SequenceField.ApplyMoment = amOnNewRecord
+    QBEDefinition.QBEFieldDefs = {
+      04000000130000000A0000004B45544552414E47414E0100000000000A000000
+      4B4F4E535452554B5349010000000000080000004E4F5F4D4553494E01000000
+      0000070000004E4F5F4245414D0100000000000A0000004E4F5F5245475F4445
+      54010000000000060000004E4F5F524547010000000000070000004E4F5F5552
+      555401000000000005000000434F52414B01000000000006000000504F544F4E
+      470100000000000700000057415250494E47010000000000050000004D455349
+      4E010000000000070000004B4F52454B5349010000000000090000005154595F
+      414B484952010000000000080000004E4F5F5245534550010000000000030000
+      005245530100000000000B0000004B445F50524F44554B534901000000000005
+      0000004A454E4953010000000000050000004D455445520100000000000B0000
+      004D455445525F414B484952010000000000}
+    Master = QMaster
+    MasterFields = 'NO_REG'
+    DetailFields = 'NO_REG'
+    Session = DMFrm.OS
+    Detachable = True
+    BeforeEdit = QDetailBeforeEdit
+    BeforeDelete = QDetailBeforeDelete
+    OnNewRecord = QDetailNewRecord
+    Left = 602
+    Top = 297
+    object QDetailNO_REG_DET: TFloatField
+      FieldName = 'NO_REG_DET'
+    end
+    object QDetailNO_REG: TFloatField
+      FieldName = 'NO_REG'
+    end
+    object QDetailNO_URUT: TFloatField
+      FieldName = 'NO_URUT'
+    end
+    object QDetailNO_MESIN: TStringField
+      FieldName = 'NO_MESIN'
+      Size = 24
+    end
+    object QDetailNO_BEAM: TStringField
+      FieldName = 'NO_BEAM'
+      Size = 52
+    end
+    object QDetailKONSTRUKSI: TStringField
+      FieldName = 'KONSTRUKSI'
+      Size = 50
+    end
+    object QDetailCORAK: TStringField
+      FieldName = 'CORAK'
+      Size = 25
+    end
+    object QDetailKOREKSI: TFloatField
+      FieldName = 'KOREKSI'
+      OnChange = QDetailKOREKSIChange
+    end
+    object QDetailPOTONG: TFloatField
+      FieldName = 'POTONG'
+      DisplayFormat = '0.0,0;(0.0,0); '
+    end
+    object QDetailWARPING: TStringField
+      FieldName = 'WARPING'
+      Size = 25
+    end
+    object QDetailKETERANGAN: TStringField
+      FieldName = 'KETERANGAN'
+      Size = 30
+    end
+    object QDetailQTY_AKHIR: TFloatField
+      FieldName = 'QTY_AKHIR'
+      DisplayFormat = '0.0,0;(0.0,0); '
+    end
+    object QDetailNO_RESEP: TStringField
+      FieldName = 'NO_RESEP'
+      Size = 25
+    end
+    object QDetailMETER: TFloatField
+      FieldName = 'METER'
+    end
+    object QDetailMETER_AKHIR: TFloatField
+      FieldName = 'METER_AKHIR'
+    end
+    object QDetailJENIS: TStringField
+      FieldName = 'JENIS'
+      Size = 30
+    end
+    object QDetailKD_PRODUKSI: TStringField
+      FieldName = 'KD_PRODUKSI'
+    end
+  end
+  object dsQDetail: TwwDataSource
+    DataSet = QDetail
+    Left = 1250
+    Top = 209
+  end
+  object dsQMaster: TwwDataSource
+    DataSet = QMaster
+    Left = 1264
+    Top = 592
+  end
+  object QTransaksi: TOracleDataSet
+    SQL.Strings = (
+      'select * from ipisma_db5.transaksi'
+      'where kd_transaksi=:kd_transaksi')
+    Variables.Data = {
+      03000000010000000D0000003A4B445F5452414E53414B534905000000040000
+      003931310000000000}
+    QBEDefinition.QBEFieldDefs = {
+      04000000140000000E0000004E414D415F5452414E53414B5349010000000000
+      0C0000004B445F5452414E53414B534901000000000006000000505245464958
+      01000000000005000000504C494E450100000000000700000050484541444552
+      010000000000060000004B445F44495601000000000004000000545444310100
+      0000000004000000545444320100000000000400000054544433010000000000
+      0400000054544434010000000000040000004449563101000000000004000000
+      4449563201000000000004000000444956330100000000000400000044495634
+      010000000000040000004A414231010000000000040000004A41423201000000
+      0000040000004A414233010000000000040000004A4142340100000000000A00
+      0000444953545249425553490100000000000800000053494E4F505349530000
+      00000000}
+    Session = DMFrm.OS
+    Left = 962
+    Top = 353
+    object QTransaksiNAMA_TRANSAKSI: TStringField
+      FieldName = 'NAMA_TRANSAKSI'
+      Size = 50
+    end
+    object QTransaksiKD_TRANSAKSI: TStringField
+      FieldName = 'KD_TRANSAKSI'
+      Required = True
+      Size = 3
+    end
+    object QTransaksiTTD1: TStringField
+      FieldName = 'TTD1'
+      Size = 30
+    end
+    object QTransaksiTTD2: TStringField
+      FieldName = 'TTD2'
+      Size = 30
+    end
+    object QTransaksiTTD3: TStringField
+      FieldName = 'TTD3'
+      Size = 30
+    end
+    object QTransaksiTTD4: TStringField
+      FieldName = 'TTD4'
+      Size = 30
+    end
+    object QTransaksiDIV1: TStringField
+      FieldName = 'DIV1'
+      Size = 30
+    end
+    object QTransaksiDIV2: TStringField
+      FieldName = 'DIV2'
+      Size = 30
+    end
+    object QTransaksiDIV3: TStringField
+      FieldName = 'DIV3'
+      Size = 30
+    end
+    object QTransaksiDIV4: TStringField
+      FieldName = 'DIV4'
+      Size = 30
+    end
+    object QTransaksiJAB1: TStringField
+      FieldName = 'JAB1'
+      Size = 30
+    end
+    object QTransaksiJAB2: TStringField
+      FieldName = 'JAB2'
+      Size = 30
+    end
+    object QTransaksiJAB3: TStringField
+      FieldName = 'JAB3'
+      Size = 30
+    end
+    object QTransaksiJAB4: TStringField
+      FieldName = 'JAB4'
+      Size = 30
+    end
+    object QTransaksiDISTRIBUSI: TStringField
+      FieldName = 'DISTRIBUSI'
+      Size = 80
+    end
+  end
+  object dsQTransaksi: TwwDataSource
+    DataSet = QTransaksi
+    Left = 976
+    Top = 432
+  end
+  object FNo_Urut: TOracleDataSet
+    SQL.Strings = (
+      'select ipisma_db5.fno_urut_p3(:pkode,:ptgl) as no_nota from dual')
+    Variables.Data = {
+      0300000002000000060000003A504B4F44450500000004000000393131000000
+      0000050000003A5054474C0C0000000700000078720C0C01010100000000}
+    QBEDefinition.QBEFieldDefs = {0400000001000000070000004E4F5F4E4F5441010000000000}
+    BeforeQuery = FNo_UrutBeforeQuery
+    Session = DMFrm.OS
+    Left = 816
+    Top = 208
+    object FNo_UrutNO_NOTA: TStringField
+      FieldName = 'NO_NOTA'
+      Size = 4000
+    end
+  end
+  object LookMaster: TwwLookupDialog
+    Selected.Strings = (
+      'NO_NOTA'#9'16'#9'NO NOTA'#9'F'
+      'TGL'#9'12'#9'TGL'#9#9
+      'STATUS'#9'10'#9'STATUS'#9#9
+      'ISPOST'#9'1'#9'POST'#9#9
+      'GRUP'#9'3'#9'GRUP'#9'F'
+      'SHIFT'#9'3'#9'SHIFT'#9'F')
+    GridTitleAlignment = taLeftJustify
+    GridColor = clWhite
+    GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
+    LookupTable = QMaster
+    Caption = 'Lookup'
+    MaxWidth = 0
+    MaxHeight = 209
+    CharCase = ecNormal
+    Left = 985
+    Top = 304
+  end
+  object QBrowse: TOracleDataSet
+    SQL.Strings = (
+      'select * from ipisma_db5.vhasil_tenun_mitra2'
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000003100000077686572
+      652074616E6767616C3D746F5F64617465287379736461746529206F72646572
+      206279206E6F5F72657365700000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000001D0000000A00000054474C5F494E534552540100000000000A000000
+      4F50525F494E5345525401000000000004000000475255500100000000000500
+      000053484946540100000000000A0000004B4F4E535452554B53490100000000
+      00060000004953504F53540100000000000A0000004B45545F44455441494C01
+      0000000000060000004E4F5F535042010000000000080000004B445F4D495452
+      410100000000000A0000004E414D415F4D49545241010000000000080000004E
+      4F5F4D4553494E010000000000070000004E4F5F4245414D0100000000000700
+      000054414E4747414C01000000000005000000434F52414B0100000000000700
+      00004E4F5F5552555401000000000006000000504F544F4E4701000000000007
+      00000057415250494E470100000000000A0000004E4F5F5245475F4445540100
+      00000000060000004E4F5F524547010000000000070000004B4F52454B534901
+      0000000000090000005154595F414B484952010000000000070000004E4F5F4E
+      4F5441010000000000080000004E4F5F52455345500100000000000300000052
+      4553010000000000050000004D4553494E0100000000000B0000004B445F5052
+      4F44554B53490100000000000C0000004B445F5452414E53414B534901000000
+      0000050000004D455445520100000000000B0000004D455445525F414B484952
+      010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    AfterScroll = QBrowseAfterScroll
+    Left = 1248
+    Top = 145
+    object QBrowseNO_REG: TFloatField
+      FieldName = 'NO_REG'
+      Required = True
+    end
+    object QBrowseNO_REG_DET: TFloatField
+      FieldName = 'NO_REG_DET'
+    end
+    object QBrowseNO_NOTA: TStringField
+      FieldName = 'NO_NOTA'
+    end
+    object QBrowseKD_TRANSAKSI: TStringField
+      FieldName = 'KD_TRANSAKSI'
+      Size = 3
+    end
+    object QBrowseNO_SPB: TStringField
+      FieldName = 'NO_SPB'
+      Size = 30
+    end
+    object QBrowseNO_URUT: TFloatField
+      FieldName = 'NO_URUT'
+    end
+    object QBrowseKD_MITRA: TStringField
+      FieldName = 'KD_MITRA'
+      Size = 4
+    end
+    object QBrowseNAMA_MITRA: TStringField
+      FieldName = 'NAMA_MITRA'
+      Size = 25
+    end
+    object QBrowseGRUP: TStringField
+      FieldName = 'GRUP'
+      Size = 3
+    end
+    object QBrowseSHIFT: TStringField
+      FieldName = 'SHIFT'
+      Size = 3
+    end
+    object QBrowseISPOST: TStringField
+      FieldName = 'ISPOST'
+      Size = 1
+    end
+    object QBrowseTANGGAL: TDateTimeField
+      FieldName = 'TANGGAL'
+    end
+    object QBrowseTGL_INSERT: TDateTimeField
+      FieldName = 'TGL_INSERT'
+    end
+    object QBrowseOPR_INSERT: TStringField
+      FieldName = 'OPR_INSERT'
+      Size = 30
+    end
+    object QBrowseNO_MESIN: TStringField
+      FieldName = 'NO_MESIN'
+      Size = 24
+    end
+    object QBrowseNO_BEAM: TStringField
+      FieldName = 'NO_BEAM'
+      Size = 52
+    end
+    object QBrowseKD_KONSTRUKSI: TStringField
+      FieldName = 'KD_KONSTRUKSI'
+      Size = 6
+    end
+    object QBrowseKONSTRUKSI: TStringField
+      FieldName = 'KONSTRUKSI'
+      Size = 50
+    end
+    object QBrowseNO_RESEP: TStringField
+      FieldName = 'NO_RESEP'
+      Size = 30
+    end
+    object QBrowseRES: TStringField
+      FieldName = 'RES'
+      Size = 100
+    end
+    object QBrowseKD_PRODUKSI: TStringField
+      FieldName = 'KD_PRODUKSI'
+    end
+    object QBrowseMESIN: TStringField
+      FieldName = 'MESIN'
+      Size = 30
+    end
+    object QBrowseCORAK: TStringField
+      FieldName = 'CORAK'
+      Size = 25
+    end
+    object QBrowsePOTONG: TFloatField
+      FieldName = 'POTONG'
+    end
+    object QBrowseMETER: TFloatField
+      FieldName = 'METER'
+    end
+    object QBrowseKOREKSI: TFloatField
+      FieldName = 'KOREKSI'
+    end
+    object QBrowseQTY_AKHIR: TFloatField
+      FieldName = 'QTY_AKHIR'
+    end
+    object QBrowseMETER_AKHIR: TFloatField
+      FieldName = 'METER_AKHIR'
+    end
+    object QBrowseWARPING: TStringField
+      FieldName = 'WARPING'
+      Size = 25
+    end
+    object QBrowseKET_DETAIL: TStringField
+      FieldName = 'KET_DETAIL'
+      Size = 50
+    end
+  end
+  object dsQBrowse: TwwDataSource
+    DataSet = QBrowse
+    Left = 901
+    Top = 168
+  end
+  object QBrowseTotal: TOracleDataSet
+    SQL.Strings = (
+      
+        'select sum(potong) as potong, sum(meter) as meter, sum(koreksi) ' +
+        'as koreksi, sum(qty_akhir) as qty_akhir, sum(meter_akhir) as met' +
+        'er_akhir '
+      'from ipisma_db5.vhasil_tenun_mitra2'
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000000500000006000000504F544F4E47010000000000090000005154595F
+      414B484952010000000000070000004B4F52454B534901000000000005000000
+      4D455445520100000000000B0000004D455445525F414B484952010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 1340
+    Top = 153
+    object QBrowseTotalPOTONG: TFloatField
+      FieldName = 'POTONG'
+    end
+    object QBrowseTotalQTY_AKHIR: TFloatField
+      FieldName = 'QTY_AKHIR'
+    end
+    object QBrowseTotalKOREKSI: TFloatField
+      FieldName = 'KOREKSI'
+    end
+    object QBrowseTotalMETER: TFloatField
+      FieldName = 'METER'
+    end
+    object QBrowseTotalMETER_AKHIR: TFloatField
+      FieldName = 'METER_AKHIR'
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '*.xls'
+    Filter = 'Excel Files|*.xls'
+    Options = [ofEnableSizing]
+    Title = 'Select Excel files'
+    Left = 1160
+    Top = 328
+  end
+  object QInsertDetail: TOracleQuery
+    Session = DMFrm.OS
+    Left = 1117
+    Top = 312
+  end
+  object QPerCorak_Tot: TOracleDataSet
+    SQL.Strings = (
+      'select '
+      'sum (qty_akhir) as potong'
+      'from ipisma_db5.vhasil_tenun_mitra2'
+      'where tanggal>=:pawal and tanggal<=:pakhir'
+      ':myparam')
+    Variables.Data = {
+      0300000003000000080000003A4D59504152414D010000000000000000000000
+      060000003A504157414C0C0000000000000000000000070000003A50414B4849
+      520C0000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {040000000100000006000000504F544F4E47010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 908
+    Top = 561
+    object QPerCorak_TotPOTONG: TFloatField
+      FieldName = 'POTONG'
+      DisplayFormat = '0.0,0;(0.0,0);'
+    end
+  end
+  object DsPerCorak: TwwDataSource
+    DataSet = QPerCorak
+    Left = 1097
+    Top = 592
+  end
+  object QPerCorak: TOracleDataSet
+    SQL.Strings = (
+      'select '
+      'distinct (corak) as corak,'
+      'sum (qty_akhir) as potong'
+      'from ipisma_db5.vhasil_tenun_mitra2'
+      'where tanggal>=:pawal and tanggal<=:pakhir'
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000003000000080000003A4D59504152414D010000000F00000067726F75
+      7020627920636F72616B0000000000060000003A504157414C0C000000000000
+      0000000000070000003A50414B4849520C0000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000000200000006000000504F544F4E4701000000000005000000434F5241
+      4B010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 792
+    Top = 561
+    object QPerCorakCORAK: TStringField
+      FieldName = 'CORAK'
+      Size = 25
+    end
+    object QPerCorakPOTONG: TFloatField
+      FieldName = 'POTONG'
+      DisplayFormat = '0.0,0;(0.0,0);'
+    end
+  end
+  object QPerMitra: TOracleDataSet
+    SQL.Strings = (
+      'select * from ipisma_db5.vhasil_tenun_permitra2'
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000000700000006000000504F544F4E470100000000000A0000004B4F4E53
+      5452554B53490100000000000A0000004E414D415F4D49545241010000000000
+      070000005154595F4D534E010000000000050000004D45544552010000000000
+      0B0000004B445F50524F44554B53490100000000000A0000004E4F54415F5052
+      494E54010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 684
+    Top = 305
+    object QPerMitraNAMA_MITRA: TStringField
+      FieldName = 'NAMA_MITRA'
+      Size = 25
+    end
+    object QPerMitraKONSTRUKSI: TStringField
+      FieldName = 'KONSTRUKSI'
+      Size = 50
+    end
+    object QPerMitraQTY_MSN: TFloatField
+      FieldName = 'QTY_MSN'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QPerMitraPOTONG: TFloatField
+      FieldName = 'POTONG'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QPerMitraMETER: TFloatField
+      FieldName = 'METER'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QPerMitraKD_PRODUKSI: TStringField
+      FieldName = 'KD_PRODUKSI'
+      Size = 10
+    end
+    object QPerMitraNOTA_PRINT: TStringField
+      FieldName = 'NOTA_PRINT'
+      Size = 30
+    end
+  end
+  object QPerMitra_Tot: TOracleDataSet
+    SQL.Strings = (
+      'select '
+      'sum(qty_msn) as qty_msn,'
+      'sum (potong) as potong,'
+      'sum (meter) as meter'
+      'from ipisma_db5.vhasil_tenun_permitra2'
+      ':myparam')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000000300000006000000504F544F4E47010000000000070000005154595F
+      4D534E010000000000050000004D45544552010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 764
+    Top = 337
+    object QPerMitra_TotQTY_MSN: TFloatField
+      FieldName = 'QTY_MSN'
+    end
+    object QPerMitra_TotPOTONG: TFloatField
+      FieldName = 'POTONG'
+      DisplayFormat = '0.0,0;(0.0,0);'
+    end
+    object QPerMitra_TotMETER: TFloatField
+      FieldName = 'METER'
+    end
+  end
+  object DsPerMitra: TwwDataSource
+    DataSet = QPerMitra
+    Left = 1269
+    Top = 520
+  end
+  object QDeleteDetail: TOracleQuery
+    Session = DMFrm.OS
+    Left = 1029
+    Top = 304
+  end
+  object QTotal: TOracleDataSet
+    SQL.Strings = (
+      
+        'select sum(potong) as potong, sum(meter) as meter, sum(koreksi) ' +
+        'as koreksi, sum(qty_akhir) as qty_akhir, sum(meter_akhir) as met' +
+        'er_akhir'
+      'from ipisma_db5.hasil_tenun_mitra_det a'
+      'where a.no_reg = :no_reg')
+    Variables.Data = {0300000001000000070000003A4E4F5F524547030000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000000500000006000000504F544F4E47010000000000050000004D455445
+      52010000000000070000004B4F52454B5349010000000000090000005154595F
+      414B4849520100000000000B0000004D455445525F414B484952010000000000}
+    Session = DMFrm.OS
+    Left = 1025
+    Top = 480
+    object QTotalPOTONG: TFloatField
+      FieldName = 'POTONG'
+      DisplayFormat = '0.0,0;(0.0,0);'
+    end
+    object QTotalMETER: TFloatField
+      FieldName = 'METER'
+    end
+    object QTotalKOREKSI: TFloatField
+      FieldName = 'KOREKSI'
+    end
+    object QTotalQTY_AKHIR: TFloatField
+      FieldName = 'QTY_AKHIR'
+    end
+    object QTotalMETER_AKHIR: TFloatField
+      FieldName = 'METER_AKHIR'
+    end
+  end
+  object QProc_PerMitra: TOracleQuery
+    SQL.Strings = (
+      'begin'
+      '  ipisma_db5.proc_produksi_mitra2(:pawal,:pakhir);'
+      'end;')
+    Session = DMFrm.OS
+    Variables.Data = {
+      0300000002000000060000003A504157414C0C00000000000000000000000700
+      00003A50414B4849520C0000000000000000000000}
+    Left = 677
+    Top = 368
+  end
+  object QPer_Beam: TOracleDataSet
+    SQL.Strings = (
+      'select * from ipisma_db5.hasil_tenun_mitra_beam'
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000000300000006000000504F544F4E470100000000000A0000004E414D41
+      5F4D49545241010000000000070000004E4F5F4245414D010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 948
+    Top = 185
+    object QPer_BeamNAMA_MITRA: TStringField
+      FieldName = 'NAMA_MITRA'
+      Size = 25
+    end
+    object QPer_BeamNO_BEAM: TStringField
+      FieldName = 'NO_BEAM'
+      Size = 52
+    end
+    object QPer_BeamPOTONG: TFloatField
+      FieldName = 'POTONG'
+      DisplayFormat = '0.0,0;(0.0,0);'
+    end
+  end
+  object QPer_Beam_Tot: TOracleDataSet
+    SQL.Strings = (
+      'select '
+      'sum (potong) as potong'
+      'from ipisma_db5.hasil_tenun_mitra_beam'
+      ':myparam')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {040000000100000006000000504F544F4E47010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 1028
+    Top = 185
+    object QPer_Beam_TotPOTONG: TFloatField
+      FieldName = 'POTONG'
+      DisplayFormat = '0.0,0;(0.0,0);'
+    end
+  end
+  object dsQPer_Beam: TwwDataSource
+    DataSet = QPer_Beam
+    Left = 957
+    Top = 240
+  end
+  object QProc_PerBeam: TOracleQuery
+    SQL.Strings = (
+      'begin'
+      '  ipisma_db5.proc_produksi_mitra_beam(:pawal,:pakhir);'
+      'end;')
+    Session = DMFrm.OS
+    Variables.Data = {
+      0300000002000000060000003A504157414C0C00000000000000000000000700
+      00003A50414B4849520C0000000000000000000000}
+    Left = 1061
+    Top = 240
+  end
+  object QSisaWO: TOracleDataSet
+    SQL.Strings = (
+      'select * from ipisma_db5.vinfo_sisa_potong_beam_wo '
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000000F0000000A0000004E414D415F4D4954524101000000000007000000
+      4E4F5F4245414D010000000000080000004B445F4D4954524101000000000007
+      00000054414E4747414C010000000000080000004E4F5F524553455001000000
+      00000C0000004E4F5F534552495F4245414D0100000000000A0000004B4F4E53
+      5452554B534901000000000005000000434F52414B0100000000000D0000004C
+      4F4B4153495F54554A55414E010000000000080000004E4F5F4D4553494E0100
+      000000000A0000004A4D4C5F504F544F4E470100000000000300000051545901
+      00000000000D000000534953415F5054475F4245414D0100000000000A000000
+      54474C5F544552494D410100000000000B0000005154595F534953415F4C4C01
+      0000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 916
+    Top = 441
+    object QSisaWOKD_MITRA: TStringField
+      FieldName = 'KD_MITRA'
+      Size = 4
+    end
+    object QSisaWONAMA_MITRA: TStringField
+      FieldName = 'NAMA_MITRA'
+      Size = 25
+    end
+    object QSisaWOTANGGAL: TDateTimeField
+      FieldName = 'TANGGAL'
+    end
+    object QSisaWONO_RESEP: TStringField
+      FieldName = 'NO_RESEP'
+    end
+    object QSisaWONO_BEAM: TStringField
+      FieldName = 'NO_BEAM'
+    end
+    object QSisaWONO_SERI_BEAM: TStringField
+      FieldName = 'NO_SERI_BEAM'
+      Required = True
+      Size = 30
+    end
+    object QSisaWOKONSTRUKSI: TStringField
+      FieldName = 'KONSTRUKSI'
+      Size = 50
+    end
+    object QSisaWOCORAK: TStringField
+      FieldName = 'CORAK'
+      Size = 50
+    end
+    object QSisaWOLOKASI_TUJUAN: TStringField
+      FieldName = 'LOKASI_TUJUAN'
+      Size = 30
+    end
+    object QSisaWONO_MESIN: TStringField
+      FieldName = 'NO_MESIN'
+      Size = 24
+    end
+    object QSisaWOJML_POTONG: TFloatField
+      FieldName = 'JML_POTONG'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QSisaWOQTY: TFloatField
+      FieldName = 'QTY'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QSisaWOSISA_PTG_BEAM: TFloatField
+      FieldName = 'SISA_PTG_BEAM'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QSisaWOTGL_TERIMA: TDateTimeField
+      FieldName = 'TGL_TERIMA'
+    end
+  end
+  object dsQSisaWO: TwwDataSource
+    DataSet = QSisaWO
+    Left = 1029
+    Top = 112
+  end
+  object QSisaTOTWO: TOracleDataSet
+    SQL.Strings = (
+      'select'
+      'sum(qty) as TOT_WO'
+      'from ipisma_db5.vinfo_sisa_potong_beam_wo'
+      ':myparam'
+      ''
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {040000000100000006000000544F545F574F010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 1164
+    Top = 265
+    object QSisaTOTWOTOT_WO: TFloatField
+      FieldName = 'TOT_WO'
+      DisplayFormat = '0.0,0;(0.0,0);'
+    end
+  end
+  object QAmbilResep: TOracleDataSet
+    SQL.Strings = (
+      'select * from ipisma_db5.vmutasi_beam_naik_mesin_mitra'
+      'where no_resep LIKE :resep and konstruksi like :konstruksi'
+      'and (lokasi_tujuan =:mitra or proses_tujuan =:mitra)'
+      '')
+    Variables.Data = {
+      0300000003000000060000003A52455345500500000000000000000000000B00
+      00003A4B4F4E535452554B534905000000100000003330732054522078203330
+      732054520000000000060000003A4D49545241050000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      0400000009000000070000004E4F5F4245414D010000000000070000004E4F5F
+      4E4F54410100000000000C0000004E4F5F534552495F4245414D010000000000
+      05000000434F52414B0100000000000A0000004B4F4E535452554B5349010000
+      0000000600000049445F524142010000000000080000004E4F5F524553455001
+      00000000000700000054414E4747414C010000000000020000004B5001000000
+      0000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 1164
+    Top = 513
+    object QAmbilResepNO_NOTA: TStringField
+      FieldName = 'NO_NOTA'
+      Size = 16
+    end
+    object QAmbilResepNO_SERI_BEAM: TStringField
+      FieldName = 'NO_SERI_BEAM'
+      Required = True
+      Size = 30
+    end
+    object QAmbilResepNO_BEAM: TStringField
+      FieldName = 'NO_BEAM'
+    end
+    object QAmbilResepCORAK: TStringField
+      FieldName = 'CORAK'
+      Size = 50
+    end
+    object QAmbilResepKONSTRUKSI: TStringField
+      FieldName = 'KONSTRUKSI'
+      Size = 50
+    end
+    object QAmbilResepID_RAB: TFloatField
+      FieldName = 'ID_RAB'
+    end
+    object QAmbilResepNO_RESEP: TStringField
+      FieldName = 'NO_RESEP'
+    end
+    object QAmbilResepKP: TStringField
+      FieldName = 'KP'
+    end
+    object QAmbilResepTANGGAL: TDateTimeField
+      FieldName = 'TANGGAL'
+      Required = True
+    end
+  end
+  object QPerResep: TOracleDataSet
+    SQL.Strings = (
+      'select '
+      'distinct (no_resep) as no_resep,'
+      'sum (qty_akhir) as potong'
+      'from ipisma_db5.vhasil_tenun_mitra'
+      'where tanggal>=:pawal and tanggal<=:pakhir'
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000003000000080000003A4D59504152414D010000001200000067726F75
+      70206279206E6F5F72657365700000000000060000003A504157414C0C000000
+      070000007876080101010100000000070000003A50414B4849520C0000000700
+      00007876081E01010100000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000000200000006000000504F544F4E47010000000000080000004E4F5F52
+      45534550010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 1108
+    Top = 505
+    object QPerResepNO_RESEP: TStringField
+      FieldName = 'NO_RESEP'
+      Size = 100
+    end
+    object QPerResepPOTONG: TFloatField
+      FieldName = 'POTONG'
+      DisplayFormat = '0.0,0;(0.0,0);'
+    end
+  end
+  object DsQPerResep: TwwDataSource
+    DataSet = QPerResep
+    Left = 913
+    Top = 376
+  end
+  object QPerResep_Tot: TOracleDataSet
+    SQL.Strings = (
+      'select '
+      'sum (qty_akhir) as potong'
+      'from ipisma_db5.vhasil_tenun_mitra'
+      'where tanggal>=:pawal and tanggal<=:pakhir'
+      ':myparam')
+    Variables.Data = {
+      0300000003000000080000003A4D59504152414D010000000000000000000000
+      060000003A504157414C0C0000000000000000000000070000003A50414B4849
+      520C0000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {040000000100000006000000504F544F4E47010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 908
+    Top = 329
+    object QPerResep_TotPOTONG: TFloatField
+      FieldName = 'POTONG'
+      DisplayFormat = '0.0,0;(0.0,0);'
+    end
+  end
+  object QSisaWO_det: TOracleDataSet
+    SQL.Strings = (
+      'select * from ipisma_db5.vinfo_sisa_saldo_ptg_beam_wo'
+      ':myparam order by tgl_terima'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000000F0000000A0000004E414D415F4D4954524101000000000007000000
+      4E4F5F4245414D010000000000080000004B445F4D4954524101000000000007
+      00000054414E4747414C010000000000080000004E4F5F524553455001000000
+      00000C0000004E4F5F534552495F4245414D0100000000000A0000004B4F4E53
+      5452554B534901000000000005000000434F52414B0100000000000D0000004C
+      4F4B4153495F54554A55414E010000000000080000004E4F5F4D4553494E0100
+      00000000030000005154590100000000000A0000004A4D4C5F504F544F4E4701
+      00000000000D000000534953415F5054475F4245414D0100000000000B000000
+      5154595F534953415F4C4C0100000000000A00000054474C5F544552494D4101
+      0000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 1052
+    Top = 369
+    object QSisaWO_detNO_RESEP: TStringField
+      FieldName = 'NO_RESEP'
+    end
+    object QSisaWO_detKD_MITRA: TStringField
+      FieldName = 'KD_MITRA'
+      Size = 4
+    end
+    object QSisaWO_detNAMA_MITRA: TStringField
+      FieldName = 'NAMA_MITRA'
+      Size = 25
+    end
+    object QSisaWO_detTANGGAL: TDateTimeField
+      FieldName = 'TANGGAL'
+    end
+    object QSisaWO_detTGL_TERIMA: TDateTimeField
+      FieldName = 'TGL_TERIMA'
+    end
+    object QSisaWO_detNO_BEAM: TStringField
+      FieldName = 'NO_BEAM'
+    end
+    object QSisaWO_detNO_SERI_BEAM: TStringField
+      FieldName = 'NO_SERI_BEAM'
+      Size = 30
+    end
+    object QSisaWO_detKONSTRUKSI: TStringField
+      FieldName = 'KONSTRUKSI'
+      Size = 50
+    end
+    object QSisaWO_detCORAK: TStringField
+      FieldName = 'CORAK'
+      Size = 50
+    end
+    object QSisaWO_detLOKASI_TUJUAN: TStringField
+      FieldName = 'LOKASI_TUJUAN'
+      Size = 30
+    end
+    object QSisaWO_detNO_MESIN: TStringField
+      FieldName = 'NO_MESIN'
+      Size = 24
+    end
+    object QSisaWO_detJML_POTONG: TFloatField
+      FieldName = 'JML_POTONG'
+    end
+    object QSisaWO_detQTY: TFloatField
+      FieldName = 'QTY'
+    end
+    object QSisaWO_detSISA_PTG_BEAM: TFloatField
+      FieldName = 'SISA_PTG_BEAM'
+    end
+    object QSisaWO_detQTY_SISA_LL: TFloatField
+      FieldName = 'QTY_SISA_LL'
+    end
+  end
+  object dSQSisaWO_det: TwwDataSource
+    DataSet = QSisaWO_det
+    Left = 965
+    Top = 144
+  end
+  object QSisaWO_det_Tot: TOracleDataSet
+    SQL.Strings = (
+      'select'
+      'jml_potong as TOT_QTY,'
+      'sum(qty) as TOT_WO,'
+      'jml_potong- sum(qty) as TOT_SISA'
+      'from ipisma_db5.vinfo_sisa_saldo_ptg_beam_wo'
+      ':myparam'
+      'group by jml_potong'
+      ''
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000000300000007000000544F545F51545901000000000006000000544F54
+      5F574F01000000000008000000544F545F53495341010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 1164
+    Top = 201
+    object QSisaWO_det_TotTOT_QTY: TFloatField
+      FieldName = 'TOT_QTY'
+      DisplayFormat = '0.0,0;(0.0,0);'
+    end
+    object QSisaWO_det_TotTOT_WO: TFloatField
+      FieldName = 'TOT_WO'
+      DisplayFormat = '0.0,0;(0.0,0);'
+    end
+    object QSisaWO_det_TotTOT_SISA: TFloatField
+      FieldName = 'TOT_SISA'
+      DisplayFormat = '0.0,0;(0.0,0);'
+    end
+  end
+  object QProc_Sisa: TOracleQuery
+    SQL.Strings = (
+      'begin'
+      '  ipisma_db5.proc_sisa_potong_beam(:pawal,:pakhir);'
+      'end;')
+    Session = DMFrm.OS
+    Variables.Data = {
+      0300000002000000060000003A504157414C0C00000000000000000000000700
+      00003A50414B4849520C0000000000000000000000}
+    Left = 1109
+    Top = 168
+  end
+  object QSisaWO_det2: TOracleDataSet
+    SQL.Strings = (
+      'select * from ipisma_db5.vhasil_tenun_mitra_sisa_ptg2'
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000000D0000000A0000004E414D415F4D4954524101000000000007000000
+      4E4F5F4245414D010000000000080000004B445F4D4954524101000000000008
+      0000004E4F5F52455345500100000000000C0000004E4F5F534552495F424541
+      4D0100000000000A0000004B4F4E535452554B53490100000000000500000043
+      4F52414B010000000000030000005154590100000000000A0000004A4D4C5F50
+      4F544F4E470100000000000D000000534953415F5054475F4245414D01000000
+      00000D0000004C4F4B4153495F54554A55414E0100000000000A00000054474C
+      5F544552494D410100000000000D00000050524F5345535F54554A55414E0100
+      00000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 1252
+    Top = 337
+    object QSisaWO_det2NO_RESEP: TStringField
+      FieldName = 'NO_RESEP'
+    end
+    object QSisaWO_det2KD_MITRA: TStringField
+      FieldName = 'KD_MITRA'
+      Size = 4
+    end
+    object QSisaWO_det2NAMA_MITRA: TStringField
+      FieldName = 'NAMA_MITRA'
+      Size = 25
+    end
+    object QSisaWO_det2NO_BEAM: TStringField
+      FieldName = 'NO_BEAM'
+    end
+    object QSisaWO_det2NO_SERI_BEAM: TStringField
+      FieldName = 'NO_SERI_BEAM'
+      Size = 30
+    end
+    object QSisaWO_det2KONSTRUKSI: TStringField
+      FieldName = 'KONSTRUKSI'
+      Size = 50
+    end
+    object QSisaWO_det2CORAK: TStringField
+      FieldName = 'CORAK'
+      Size = 50
+    end
+    object QSisaWO_det2JML_POTONG: TFloatField
+      FieldName = 'JML_POTONG'
+      DisplayFormat = '#,0.00;(#,0.00);-'
+    end
+    object QSisaWO_det2QTY: TFloatField
+      FieldName = 'QTY'
+      DisplayFormat = '#,0.00;(#,0.00);-'
+    end
+    object QSisaWO_det2SISA_PTG_BEAM: TFloatField
+      FieldName = 'SISA_PTG_BEAM'
+      DisplayFormat = '#,0.00;(#,0.00);-'
+    end
+    object QSisaWO_det2TGL_TERIMA: TDateTimeField
+      FieldName = 'TGL_TERIMA'
+    end
+    object QSisaWO_det2LOKASI_TUJUAN: TStringField
+      FieldName = 'LOKASI_TUJUAN'
+      Size = 30
+    end
+    object QSisaWO_det2PROSES_TUJUAN: TStringField
+      FieldName = 'PROSES_TUJUAN'
+      Size = 30
+    end
+  end
+  object dSQSisaWO_det2: TwwDataSource
+    DataSet = QSisaWO_det2
+    Left = 1069
+    Top = 440
+  end
+  object QProc_Sisa2: TOracleQuery
+    SQL.Strings = (
+      'begin'
+      '  ipisma_db5.proc_sisa_potong_beam21(:pawal,:pakhir);'
+      'end;')
+    Session = DMFrm.OS
+    Variables.Data = {
+      0300000002000000060000003A504157414C0C00000000000000000000000700
+      00003A50414B4849520C0000000000000000000000}
+    Left = 1245
+    Top = 264
+  end
+  object QambilKP: TOracleDataSet
+    SQL.Strings = (
+      'select * from ipisma_db5.vDesain_kp'
+      'where no_order LIKE :resep ')
+    Variables.Data = {0300000001000000060000003A5245534550050000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000002B000000070000004E4F5F4E4F544101000000000005000000434F52
+      414B0100000000000A0000004B4F4E535452554B534901000000000002000000
+      4B50010000000000090000004E4F5F44455341494E0100000000000600000049
+      53504F53540100000000000300000054474C010000000000080000004E4F5F4F
+      524445520100000000000900000054474C5F4F524445520100000000000D0000
+      004B445F4B4F4E535452554B5349010000000000080000004B445F434F52414B
+      0100000000000A0000004B45544552414E47414E0100000000000A0000004A4D
+      4C5F504F544F4E47010000000000080000004A4D4C5F4B4F4449010000000000
+      05000000524C555349010000000000060000005250414B414E01000000000009
+      0000004E4C5553495F4F5247010000000000050000004E544550490100000000
+      00050000004E4B554B55010000000000050000004E4C55534901000000000006
+      0000004E50414B414E0100000000000800000044494D5F4C5553490100000000
+      000900000044494D5F50414B414E0100000000000500000044494D5F50010000
+      0000000500000044494D5F4C010000000000070000004E4B4F54414B31010000
+      000000070000004E4B4F54414B32010000000000060000004E53495349520100
+      00000000050000004E5049434B01000000000005000000564552534901000000
+      00000A00000054474C5F494E534552540100000000000A0000004F50525F494E
+      534552540100000000000600000047414D4241520100000000000F000000544F
+      4C4552414E53495F57415354450100000000000A00000053555355545F4C5553
+      490100000000000B00000053555355545F50414B414E01000000000008000000
+      50524F504F5253490100000000000E00000054474C315F52454E435F50524F44
+      0100000000000E00000054474C325F52454E435F50524F440100000000000400
+      00004A4D4C43010000000000070000004E50414B414E32010000000000070000
+      004E535052494E47010000000000070000004E50414B414E33010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 1164
+    Top = 457
+    object QambilKPNO_DESAIN: TFloatField
+      FieldName = 'NO_DESAIN'
+      Required = True
+    end
+    object QambilKPISPOST: TStringField
+      FieldName = 'ISPOST'
+      Size = 1
+    end
+    object QambilKPNO_NOTA: TStringField
+      FieldName = 'NO_NOTA'
+      Size = 16
+    end
+    object QambilKPTGL: TDateTimeField
+      FieldName = 'TGL'
+    end
+    object QambilKPNO_ORDER: TStringField
+      FieldName = 'NO_ORDER'
+    end
+    object QambilKPTGL_ORDER: TDateTimeField
+      FieldName = 'TGL_ORDER'
+    end
+    object QambilKPKD_KONSTRUKSI: TStringField
+      FieldName = 'KD_KONSTRUKSI'
+      Size = 6
+    end
+    object QambilKPKD_CORAK: TStringField
+      FieldName = 'KD_CORAK'
+      Size = 6
+    end
+    object QambilKPKETERANGAN: TStringField
+      FieldName = 'KETERANGAN'
+      Size = 255
+    end
+    object QambilKPJML_POTONG: TFloatField
+      FieldName = 'JML_POTONG'
+    end
+    object QambilKPJML_KODI: TFloatField
+      FieldName = 'JML_KODI'
+    end
+    object QambilKPRLUSI: TFloatField
+      FieldName = 'RLUSI'
+    end
+    object QambilKPRPAKAN: TFloatField
+      FieldName = 'RPAKAN'
+    end
+    object QambilKPNLUSI_ORG: TFloatField
+      FieldName = 'NLUSI_ORG'
+    end
+    object QambilKPNTEPI: TFloatField
+      FieldName = 'NTEPI'
+    end
+    object QambilKPNKUKU: TFloatField
+      FieldName = 'NKUKU'
+    end
+    object QambilKPNLUSI: TFloatField
+      FieldName = 'NLUSI'
+    end
+    object QambilKPNPAKAN: TFloatField
+      FieldName = 'NPAKAN'
+    end
+    object QambilKPDIM_LUSI: TFloatField
+      FieldName = 'DIM_LUSI'
+    end
+    object QambilKPDIM_PAKAN: TFloatField
+      FieldName = 'DIM_PAKAN'
+    end
+    object QambilKPDIM_P: TFloatField
+      FieldName = 'DIM_P'
+    end
+    object QambilKPDIM_L: TFloatField
+      FieldName = 'DIM_L'
+    end
+    object QambilKPNKOTAK1: TFloatField
+      FieldName = 'NKOTAK1'
+    end
+    object QambilKPNKOTAK2: TFloatField
+      FieldName = 'NKOTAK2'
+    end
+    object QambilKPNSISIR: TFloatField
+      FieldName = 'NSISIR'
+    end
+    object QambilKPNPICK: TFloatField
+      FieldName = 'NPICK'
+    end
+    object QambilKPVERSI: TStringField
+      FieldName = 'VERSI'
+      Size = 18
+    end
+    object QambilKPTGL_INSERT: TDateTimeField
+      FieldName = 'TGL_INSERT'
+    end
+    object QambilKPOPR_INSERT: TStringField
+      FieldName = 'OPR_INSERT'
+      Size = 30
+    end
+    object QambilKPGAMBAR: TStringField
+      FieldName = 'GAMBAR'
+      Size = 255
+    end
+    object QambilKPKONSTRUKSI: TStringField
+      FieldName = 'KONSTRUKSI'
+      Size = 50
+    end
+    object QambilKPCORAK: TStringField
+      FieldName = 'CORAK'
+      Size = 50
+    end
+    object QambilKPTOLERANSI_WASTE: TFloatField
+      FieldName = 'TOLERANSI_WASTE'
+    end
+    object QambilKPSUSUT_LUSI: TFloatField
+      FieldName = 'SUSUT_LUSI'
+    end
+    object QambilKPSUSUT_PAKAN: TFloatField
+      FieldName = 'SUSUT_PAKAN'
+    end
+    object QambilKPPROPORSI: TFloatField
+      FieldName = 'PROPORSI'
+    end
+    object QambilKPTGL1_RENC_PROD: TDateTimeField
+      FieldName = 'TGL1_RENC_PROD'
+    end
+    object QambilKPTGL2_RENC_PROD: TDateTimeField
+      FieldName = 'TGL2_RENC_PROD'
+    end
+    object QambilKPKP: TStringField
+      FieldName = 'KP'
+    end
+    object QambilKPJMLC: TFloatField
+      FieldName = 'JMLC'
+    end
+    object QambilKPNPAKAN2: TFloatField
+      FieldName = 'NPAKAN2'
+    end
+    object QambilKPNSPRING: TFloatField
+      FieldName = 'NSPRING'
+    end
+    object QambilKPNPAKAN3: TFloatField
+      FieldName = 'NPAKAN3'
+    end
+  end
+  object QLook_KP: TOracleDataSet
+    SQL.Strings = (
+      'select * from ipisma_db5.KD_PRODUKSI_MITRA'
+      ''
+      '')
+    QBEDefinition.QBEFieldDefs = {
+      04000000030000000B0000004B445F50524F44554B53490100000000000D0000
+      004B445F4B4F4E535452554B53490100000000000C0000005355425F4B454C4F
+      4D504F4B010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 1156
+    Top = 393
+    object QLook_KPKD_PRODUKSI: TStringField
+      DisplayLabel = 'KD PRODUKSI'
+      DisplayWidth = 20
+      FieldName = 'KD_PRODUKSI'
+      Required = True
+    end
+    object QLook_KPSUB_KELOMPOK: TStringField
+      DisplayLabel = 'KONSTRUKSI'
+      DisplayWidth = 30
+      FieldName = 'SUB_KELOMPOK'
+      Size = 50
+    end
+    object QLook_KPKD_KONSTRUKSI: TStringField
+      FieldName = 'KD_KONSTRUKSI'
+      Visible = False
+      Size = 6
+    end
+  end
+  object FNo_Urut_LPB: TOracleDataSet
+    SQL.Strings = (
+      
+        'select ipisma_db5.FNO_URUT_LPB_INSP(:pkode, :ptgl) as no_lpb fro' +
+        'm dual')
+    Variables.Data = {
+      0300000002000000060000003A504B4F44450500000004000000393131000000
+      0000050000003A5054474C0C0000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {0400000001000000060000004E4F5F4C5042010000000000}
+    BeforeQuery = FNo_UrutBeforeQuery
+    Session = DMFrm.OS
+    Left = 816
+    Top = 264
+    object FNo_Urut_LPBNO_LPB: TStringField
+      FieldName = 'NO_LPB'
+      Size = 4000
+    end
+  end
+end

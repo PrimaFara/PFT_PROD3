@@ -1,0 +1,846 @@
+unit Main;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Menus, LMDCustomComponent, LMDContainerComponent, LMDBaseDialog,
+  LMDAboutDlg, ComCtrls, ExtCtrls, jpeg;
+
+type
+  TMainFrm = class(TForm)
+    MainMenu1: TMainMenu;
+    File1: TMenuItem;
+    Login1: TMenuItem;
+    Exit1: TMenuItem;
+    ransaksi1: TMenuItem;
+    SerahTerimaKeFinishing1: TMenuItem;
+    SerahTerimakeGudangJadi1: TMenuItem;
+    N3: TMenuItem;
+    PermintaanBarangLelang1: TMenuItem;
+    NotaJualLelang1: TMenuItem;
+    SuratJalanJualLelang1: TMenuItem;
+    Laporan1: TMenuItem;
+    GantiPassword1: TMenuItem;
+    Window1: TMenuItem;
+    OrderBarangJualLelang1: TMenuItem;
+    HasilReinspect: TMenuItem;
+    OrderPengeuaranBarang1: TMenuItem;
+    PPC1: TMenuItem;
+    N1: TMenuItem;
+    N4: TMenuItem;
+    N2: TMenuItem;
+    KeluarLain21: TMenuItem;
+    MasukLain21: TMenuItem;
+    Mutasi1: TMenuItem;
+    Finishing1: TMenuItem;
+    HasilOpening1: TMenuItem;
+    HasilShearing1: TMenuItem;
+    HasilBakarBulu1: TMenuItem;
+    HasilDesizing1: TMenuItem;
+    HasilWashing1: TMenuItem;
+    HasilStenter1: TMenuItem;
+    HasilCalender1: TMenuItem;
+    Master1: TMenuItem;
+    PotonganBS1: TMenuItem;
+    PotonganBSPerOperator1: TMenuItem;
+    HasilInspecting1: TMenuItem;
+    SerahKeFinish1: TMenuItem;
+    LokasiProsesdiFinishing1: TMenuItem;
+    About1: TMenuItem;
+    Close1: TMenuItem;
+    MyAbout: TLMDAboutDlg;
+    Opening1: TMenuItem;
+    Shearing2: TMenuItem;
+    BakarBulu2: TMenuItem;
+    Desizing2: TMenuItem;
+    Washing2: TMenuItem;
+    Stenter2: TMenuItem;
+    Calender2: TMenuItem;
+    SerahTerimaHasilOpening1: TMenuItem;
+    TerimaDariInspecting2: TMenuItem;
+    FormasiPerOperator1: TMenuItem;
+    InfoWIPFinishing1: TMenuItem;
+    LaporanProduksi1: TMenuItem;
+    SerahHasilShearing: TMenuItem;
+    SerahHasilBakarBulu: TMenuItem;
+    SerahHasilDesizing: TMenuItem;
+    SerahHasilWashing: TMenuItem;
+    SerahHasilStenter: TMenuItem;
+    SerahHasilCalender: TMenuItem;
+    TerimaDariMitra1: TMenuItem;
+    ReInspecting1: TMenuItem;
+    TerimaDariTenun: TMenuItem;
+    UnpostNota1: TMenuItem;
+    HasilInspectingMitra1: TMenuItem;
+    LaporanProduksiFashion1: TMenuItem;
+    TerimaDariTenun1: TMenuItem;
+    SerahKeJetDyeing1: TMenuItem;
+    TerimaDariJetDyeing1: TMenuItem;
+    SerahTerimaJetDyeing1: TMenuItem;
+    erimaNonSarung1: TMenuItem;
+    N915SerahKain1: TMenuItem;
+    InfoStok1: TMenuItem;
+    N917SerahNonSarungKeJetDyeing1: TMenuItem;
+    NonSarung1: TMenuItem;
+    Koreksi1: TMenuItem;
+    InfoStokReinspect1: TMenuItem;
+    N919Koreksi1: TMenuItem;
+    StatusBar1: TStatusBar;
+    SerahGDJadiLJR: TMenuItem;
+    LAPORANMUTASISTOKINSPEK: TMenuItem;
+    HasilPreset: TMenuItem;
+    PengeluaranPreset1: TMenuItem;
+    HasilPreset2: TMenuItem;
+    SerahKeKemas1: TMenuItem;
+    HasilBSParah: TMenuItem;
+    HasilCabutWarnaMitra1: TMenuItem;
+    N996KirimExCWKeFinishing1: TMenuItem;
+    KirimKePrinting1: TMenuItem;
+    N921HasilBakarBuluKainGrey1: TMenuItem;
+    N922terimadariprinting1: TMenuItem;
+    N904RekapKirimInspek1: TMenuItem;
+    N905RekapKirimFinishing1: TMenuItem;
+    N906RekapKirimReInspek1: TMenuItem;
+    N990RekapPengirimanDariTenun1: TMenuItem;
+    InfoWIPFinishing2: TMenuItem;
+    ResetTabel1: TMenuItem;
+    Splitter1: TSplitter;
+    StockFinishing1: TMenuItem;
+    FinishPemasukan: TMenuItem;
+    Backup1: TMenuItem;
+    LaporanTenunInspect1: TMenuItem;
+    SarungFinish1: TMenuItem;
+    PrintingFinish1: TMenuItem;
+    PemotonganReInspecting1: TMenuItem;
+    R03Koreksi1: TMenuItem;
+    R02PrintingFinishProses1: TMenuItem;
+    N908KirimkeReinspecting1: TMenuItem;
+    R05Retur1: TMenuItem;
+    R06PemasukanLainlain1: TMenuItem;
+    MENDINGGREY: TMenuItem;
+    PermintaanUnpost1: TMenuItem;
+    EksekusiUnpost1: TMenuItem;
+    M04HIPOInspecting1: TMenuItem;
+    Image1: TImage;
+    HasilReinspectMitra1: TMenuItem;
+    M04FOLDING1: TMenuItem;
+    LaporanProduksiQA1: TMenuItem;
+    procedure FormCreate(Sender: TObject);
+    procedure Exit1Click(Sender: TObject);
+    procedure GantiPassword1Click(Sender: TObject);
+    procedure SerahTerimaKeFinishing1Click(Sender: TObject);
+    procedure HasilJahit1Click(Sender: TObject);
+    procedure HasilKemas1Click(Sender: TObject);
+    procedure HsilLipat1Click(Sender: TObject);
+    procedure SerahTerimakeGudangJadi1Click(Sender: TObject);
+    procedure PermintaanBarangLelang1Click(Sender: TObject);
+    procedure OrderBarangJualLelang1Click(Sender: TObject);
+    procedure SuratJalanJualLelang1Click(Sender: TObject);
+    procedure MutasiBarangdiJahit1Click(Sender: TObject);
+    procedure MutasiBarangdiLipat1Click(Sender: TObject);
+    procedure MutasiBarangdiKemas1Click(Sender: TObject);
+    procedure KeluarLain21Click(Sender: TObject);
+    procedure MasukLain21Click(Sender: TObject);
+    procedure Mutasi1Click(Sender: TObject);
+    procedure HasilOpening1Click(Sender: TObject);
+    procedure HasilShearing1Click(Sender: TObject);
+    procedure PotonganBS1Click(Sender: TObject);
+    procedure PotonganBSPerOperator1Click(Sender: TObject);
+    procedure HasilBakarBulu1Click(Sender: TObject);
+    procedure HasilInspecting1Click(Sender: TObject);
+    procedure SerahKeFinish1Click(Sender: TObject);
+    procedure HasilCalender1Click(Sender: TObject);
+    procedure HasilStenter1Click(Sender: TObject);
+    procedure HasilDesizing1Click(Sender: TObject);
+    procedure LokasiProsesdiFinishing1Click(Sender: TObject);
+    procedure About1Click(Sender: TObject);
+    procedure Close1Click(Sender: TObject);
+    procedure TerimaDariInspecting2Click(Sender: TObject);
+    procedure FormasiPerOperator1Click(Sender: TObject);
+    procedure SerahTerimaHasilOpening1Click(Sender: TObject);
+    procedure InfoWIPFinishing1Click(Sender: TObject);
+    procedure HasilWashing1Click(Sender: TObject);
+    procedure SerahHasilShearingClick(Sender: TObject);
+    procedure SerahHasilBakarBuluClick(Sender: TObject);
+    procedure SerahHasilDesizingClick(Sender: TObject);
+    procedure SerahHasilWashingClick(Sender: TObject);
+    procedure SerahHasilStenterClick(Sender: TObject);
+    procedure SerahHasilCalenderClick(Sender: TObject);
+    procedure TerimaDariMitra1Click(Sender: TObject);
+    procedure TerimaDariTenunClick(Sender: TObject);
+    procedure UnpostNota1Click(Sender: TObject);
+    procedure HasilInspectingMitra1Click(Sender: TObject);
+    procedure LaporanProduksiFashion1Click(Sender: TObject);
+    procedure TerimaDariTenun1Click(Sender: TObject);
+    procedure SerahKeJetDyeing1Click(Sender: TObject);
+    procedure TerimaDariJetDyeing1Click(Sender: TObject);
+    procedure TerimaNonSarung1Click(Sender: TObject);
+    procedure SerahKain1Click(Sender: TObject);
+    procedure InfoStok1Click(Sender: TObject);
+    procedure N917SerahNonSarungKeJetDyeing1Click(Sender: TObject);
+    procedure Koreksi1Click(Sender: TObject);
+    procedure InfoStokReinspect1Click(Sender: TObject);
+    procedure N919Koreksi1Click(Sender: TObject);
+    procedure SerahGDJadiLJRClick(Sender: TObject);
+    procedure LAPORANMUTASISTOKINSPEKClick(Sender: TObject);
+    procedure HasilPresetClick(Sender: TObject);
+    procedure HasilPreset2Click(Sender: TObject);
+    procedure SerahKeKemas1Click(Sender: TObject);
+    procedure HasilBSParahClick(Sender: TObject);
+    procedure HasilCabutWarnaMitra1Click(Sender: TObject);
+    procedure N996KirimExCWKeFinishing1Click(Sender: TObject);
+    procedure KirimKePrinting1Click(Sender: TObject);
+    procedure N921HasilBakarBuluKainGrey1Click(Sender: TObject);
+    procedure N922terimadariprinting1Click(Sender: TObject);
+    procedure N904RekapKirimInspek1Click(Sender: TObject);
+    procedure N905RekapKirimFinishing1Click(Sender: TObject);
+    procedure N906RekapKirimReInspek1Click(Sender: TObject);
+    procedure N990RekapPengirimanDariTenun1Click(Sender: TObject);
+    procedure InfoWIPFinishing2Click(Sender: TObject);
+    procedure ResetTabel1Click(Sender: TObject);
+   // procedure Pemasukan1Click(Sender: TObject);
+   // procedure StockFinishing1Click(Sender: TObject);
+    procedure FinishPemasukanClick(Sender: TObject);
+    procedure Backup1Click(Sender: TObject);
+    procedure LaporanTenunInspect1Click(Sender: TObject);
+    procedure SarungFinish1Click(Sender: TObject);
+    procedure PrintingFinish1Click(Sender: TObject);
+    procedure R02PrintingFinishProses1Click(Sender: TObject);
+    procedure N908KirimkeReinspecting1Click(Sender: TObject);
+    procedure MENDINGGREYClick(Sender: TObject);
+    procedure PemotonganReInspecting1Click(Sender: TObject);
+    procedure R03Koreksi1Click(Sender: TObject);
+    procedure PermintaanUnpost1Click(Sender: TObject);
+    procedure EksekusiUnpost1Click(Sender: TObject);
+    procedure M04HIPOInspecting1Click(Sender: TObject);
+    procedure R05Retur1Click(Sender: TObject);
+    procedure HasilReinspectMitra1Click(Sender: TObject);
+    procedure M04FOLDING1Click(Sender: TObject);
+    procedure LaporanProduksiQA1Click(Sender: TObject);
+  private
+    { Private declarations }
+    mychar : String;
+  public
+    { Public declarations }
+    vkd_lokasi, vrab : String;
+  end;
+
+var
+  MainFrm: TMainFrm;
+
+implementation
+
+uses DM, TerimaDariFinishing, HasilJahit, HasilKemas,
+  HasilLipat, SerahTerimaKeGDJadi, PermintaanJualBarang, OrderJual,
+  SJJual, MutasiJahit, MutasiLipat, MutasiKemas, TerimaDariFinishing2,
+  KeluarLain, TerimaDariFinishing3, FinishOpening, FinishShearing,
+  PotonganBS, PotonganBS_Operator, FinishBakar, FinishWashing, SerahKeOpening,
+  SerahHasilOpening, SerahHasilShearing, SerahHasilBakar, SerahHasilDesizing,
+  SerahHasilWashing, SerahHasilStenter, SerahHasilCalender,
+  FinishCalender, FinishStenter, FinishDesizing, TerimaDrInspecting,TerimaDrFinishing,
+  InfoWIPFinishing, LapProduksi, WOMitra, InfoWIPFashion,SerahKeJetDyeingFin, TerimaDariDyeing,
+  Formasi_Operator, InspectingMitra, TerimaDariTenun,Koreksi,KoreksiIns, TerimaNonSarung,SerahKainKeOpening,InfoStokInspecting,InfoStokReinspect,SerahNonSarungKeJD,SerahTerimaKeGDJadiLJR ,
+  LaporanMutasiStokInspek, HasilPreset, HasilPreset2, SerahKeKemas,
+  HasilBSParah, HasilCWMitra, SerahExCWKeFinishing, SerahKePrinting,
+  BakarBuluGrey, CalenderGrey, RekapKirimInspek, RekapKirimFinishing,
+  RekapKirimReInspek, RekapTerimaDariTenun, InfoWIPFinishing1, Reset,
+  FinishPemasukan, Refresh, LapTenunInspect, TerimaDariFinishing4,
+  ReinspectPrintingProses,SerahKeReinspectNewPalapa, mending,
+  ReinspecPemotongan, ReinspecKoreksi, PermintaanUnpost, Unpost, InspectingHipo,
+  DefectReinspect, ReinspecPajitex, foldinginsp;
+
+{$R *.dfm}
+
+procedure TMainFrm.FormCreate(Sender: TObject);
+var
+   vtgl_aplikasi, vtgl_aplikasi_baru : String;
+   vipaddr, vlogin_windows : String;
+begin
+DMFrm.OS.LogonPassword:='';
+   if DMFrm.OL.Execute then
+   begin
+       if not DMFrm.OS.Connected then
+            Application.Terminate
+       else
+       begin
+          DMFrm.QHak_jam.Close;
+          DMFrm.QHak_jam.Open;
+          DMFrm.QUserTime.Close;
+          DMFrm.QUserTime.Open;
+
+              vtgl_aplikasi:=FormatDateTime('dd mmmm yyyy HH:MM',FileDateToDateTime(FileAge(Application.ExeName)));
+              vtgl_aplikasi_baru:=FormatDateTime('dd mmmm yyyy HH:MM',DMFrm.QHak_jamTGL_APLIKASI.AsDateTime);
+
+              StatusBar1.Panels[0].Text:=vlogin_windows+'/'+UpperCase(DMFrm.OS.LogonUsername)+' ('+
+                DMFrm.QUserTimeVUSER.AsString+')@'+
+                UpperCase(DMFrm.OS.LogonDatabase);
+
+              StatusBar1.Panels[1].Text:='';
+              StatusBar1.Panels[2].Text:='Aplikasi Tanggal : '+vtgl_aplikasi;
+
+              StatusBar1.Panels[3].Text:='Last Login : '+
+                FormatDateTime('dd mmm yyyy hh:mm', DMFrm.QUserTimeVTGL.AsDateTime)+', Login : '+
+                FormatDateTime('dd mmm yyyy hh:mm', DMFrm.QUserTimeVTGL.AsDateTime);
+
+             if FileDateToDateTime(FileAge(Application.ExeName))<DMFrm.QHak_jamTGL_APLIKASI.AsDateTime then
+             begin
+                  ShowMessage('Aplikasi anda tgl :'+vtgl_aplikasi+#13+'Ada Aplikasi Baru tgl : '+vtgl_aplikasi_baru+
+                    #13+'MOHON ANDA COPY APLIKASI BARU di SERVER 192.168.1.53 di Folder SIMPIS!. User & Pass : gjduduk');
+                   Application.Terminate;
+              end;
+       end;
+       ;
+   end
+   else
+    Application.Terminate;
+end;
+procedure TMainFrm.Exit1Click(Sender: TObject);
+begin
+  close;
+end;
+
+procedure TMainFrm.GantiPassword1Click(Sender: TObject);
+begin
+  if DMFrm.OL.SetPassword then
+    ShowMessage('Ganti Password Sukses !');
+end;
+
+procedure TMainFrm.SerahTerimaKeFinishing1Click(Sender: TObject);
+begin
+//  TerimaDariFinishingFrm:=TTerimaDariFinishingFrm.Create(Self);
+ // TerimaDariFinishingFrm.Show;
+end;
+
+procedure TMainFrm.HasilJahit1Click(Sender: TObject);
+begin
+  HasilJahitFrm:=THasilJahitFrm.Create(Self);
+  HasilJahitFrm.Show;
+end;
+
+procedure TMainFrm.HasilKemas1Click(Sender: TObject);
+begin
+  HasilKemasFrm:=THasilKemasFrm.Create(Self);
+  HasilKemasFrm.Show;
+end;
+
+procedure TMainFrm.HsilLipat1Click(Sender: TObject);
+begin
+  HasilLipatFrm:=THasilLipatFrm.Create(Self);
+  HasilLipatFrm.Show;
+end;
+
+procedure TMainFrm.SerahTerimakeGudangJadi1Click(Sender: TObject);
+begin
+  SerahTerimaKeGDJadiFrm:=TSerahTerimaKeGDJadiFrm.Create(Self);
+  SerahTerimaKeGDJadiFrm.Show;
+end;
+
+procedure TMainFrm.PermintaanBarangLelang1Click(Sender: TObject);
+begin
+  PermintaanJualBarangFrm:=TPermintaanJualBarangFrm.Create(Self);
+  PermintaanJualBarangFrm.Show;
+end;
+
+procedure TMainFrm.OrderBarangJualLelang1Click(Sender: TObject);
+begin
+  OrderJualFrm:=TOrderJualFrm.Create(Self);
+  OrderJualFrm.Show;
+end;
+
+procedure TMainFrm.SuratJalanJualLelang1Click(Sender: TObject);
+begin
+  SJJualFrm:=TSJJualFrm.Create(Self);
+  SJJualFrm.Show;
+end;
+
+procedure TMainFrm.MutasiBarangdiJahit1Click(Sender: TObject);
+begin
+  MutasiJahitFrm:=TMutasiJahitFrm.Create(Self);
+  MutasiJahitFrm.Show;
+end;
+
+procedure TMainFrm.MutasiBarangdiLipat1Click(Sender: TObject);
+begin
+  MutasiLipatFrm:=TMutasiLipatFrm.Create(Self);
+  MutasiLipatFrm.Show;
+end;
+
+procedure TMainFrm.MutasiBarangdiKemas1Click(Sender: TObject);
+begin
+  MutasiKemasFrm:=TMutasiKemasFrm.Create(Self);
+  MutasiKemasFrm.Show;
+end;
+
+procedure TMainFrm.KeluarLain21Click(Sender: TObject);
+begin
+  KeluarLainFrm:=TKeluarLainFrm.Create(Self);
+  KeluarLainFrm.Show;
+end;
+
+procedure TMainFrm.MasukLain21Click(Sender: TObject);
+begin
+  TerimaDariFinishing3Frm:=TTerimaDariFinishing3Frm.Create(Self);
+  TerimaDariFinishing3Frm.Show;
+
+end;
+
+procedure TMainFrm.Mutasi1Click(Sender: TObject);
+begin
+  MutasiJahitFrm:=TMutasiJahitFrm.Create(Self);
+  MutasiJahitFrm.Show;
+
+end;
+
+procedure TMainFrm.HasilOpening1Click(Sender: TObject);
+begin
+  FinishOpeningFrm:=TFinishOpeningFrm.Create(Self);
+  FinishOpeningFrm.Show;
+end;
+
+procedure TMainFrm.HasilShearing1Click(Sender: TObject);
+begin
+  FinishShearingFrm:=TFinishShearingFrm.Create(Self);
+  FinishShearingFrm.Show;
+end;
+
+procedure TMainFrm.PotonganBS1Click(Sender: TObject);
+begin
+  PotonganBSFrm:=TPotonganBSFrm.Create(Self);
+  PotonganBSFrm.Show;
+end;
+
+procedure TMainFrm.PotonganBSPerOperator1Click(Sender: TObject);
+begin
+  PotonganBS_OperatorFrm:=TPotonganBS_OperatorFrm.Create(Self);
+  PotonganBS_OperatorFrm.Show;
+end;
+
+procedure TMainFrm.HasilBakarBulu1Click(Sender: TObject);
+begin
+  FinishBakarFrm:=TFinishBakarFrm.Create(Self);
+  FinishBakarFrm.Show;
+end;
+
+procedure TMainFrm.HasilInspecting1Click(Sender: TObject);
+begin
+  TerimaDariFinishingFrm:=TTerimaDariFinishingFrm.Create(Self);
+  TerimaDariFinishingFrm.Show;
+end;
+
+procedure TMainFrm.SerahKeFinish1Click(Sender: TObject);
+begin
+    SerahKeOpeningFrm:=TSerahKeOpeningFrm.Create(Self);
+    SerahKeOpeningFrm.Show;
+end;
+
+procedure TMainFrm.HasilCalender1Click(Sender: TObject);
+begin
+    FinishCalenderFrm:=TFinishCalenderFrm.Create(Self);
+    FinishCalenderFrm.Show;
+end;
+
+procedure TMainFrm.HasilStenter1Click(Sender: TObject);
+begin
+    FinishStenterFrm:=TFinishStenterFrm.Create(Self);
+    FinishStenterFrm.Show;
+end;
+
+procedure TMainFrm.HasilDesizing1Click(Sender: TObject);
+begin
+    FinishDesizingFrm:=TFinishDesizingFrm.Create(Self);
+    FinishDesizingFrm.Show;
+end;
+
+procedure TMainFrm.LokasiProsesdiFinishing1Click(Sender: TObject);
+begin
+  mychar:=(Sender as TMenuItem).Caption;
+  Delete(mychar,Pos('&',mychar),1);
+  DMFrm.vkd_lokasi:=copy(mychar,1,2);
+  DMFrm.QLokasiProses.Close;
+  DMFrm.QLokasiProses.Open;
+  DMFrm.RVLokasiProses.Execute;
+end;
+
+procedure TMainFrm.About1Click(Sender: TObject);
+begin
+MyAbout.Execute;
+end;
+
+procedure TMainFrm.Close1Click(Sender: TObject);
+begin
+Close;
+end;
+
+procedure TMainFrm.TerimaDariInspecting2Click(Sender: TObject);
+begin
+    TerimaDrInspectingFrm:=TTerimaDrInspectingFrm.Create(Self);
+    TerimaDrInspectingFrm.Show;
+end;
+
+procedure TMainFrm.FormasiPerOperator1Click(Sender: TObject);
+begin
+  Formasi_OperatorFrm:=TFormasi_OperatorFrm.Create(Self);
+  Formasi_OperatorFrm.Show;
+end;
+
+procedure TMainFrm.SerahTerimaHasilOpening1Click(Sender: TObject);
+begin
+  SerahHasilOpeningFrm:=TSerahHasilOpeningFrm.Create(Self);
+  SerahHasilOpeningFrm.Show;
+end;
+
+procedure TMainFrm.InfoWIPFinishing1Click(Sender: TObject);
+begin
+    InfoWIPFinishingFrm:=TInfoWIPFinishingFrm.Create(Self);
+    InfoWIPFinishingFrm.Show;
+end;
+
+procedure TMainFrm.HasilWashing1Click(Sender: TObject);
+begin
+FinishWashingFrm:=TFinishWashingFrm.Create(Self);
+FinishWashingFrm.Show;
+end;
+
+procedure TMainFrm.SerahHasilShearingClick(Sender: TObject);
+begin
+SerahHasilShearingFrm:=TSerahHasilShearingFrm.Create(Self);
+SerahHasilShearingFrm.Show;
+end;
+
+procedure TMainFrm.SerahHasilBakarBuluClick(Sender: TObject);
+begin
+SerahHasilBakarFrm:=TSerahHasilBakarFrm.Create(Self);
+SerahHasilBakarFrm.Show;
+end;
+
+procedure TMainFrm.SerahHasilDesizingClick(Sender: TObject);
+begin
+SerahHasilDesizingFrm:=TSerahHasilDesizingFrm.Create(Self);
+SerahHasilDesizingFrm.Show;
+end;
+
+procedure TMainFrm.SerahHasilWashingClick(Sender: TObject);
+begin
+SerahHasilWashingFrm:=TSerahHasilWashingFrm.Create(Self);
+SerahHasilWashingFrm.Show;
+end;
+
+procedure TMainFrm.SerahHasilStenterClick(Sender: TObject);
+begin
+SerahHasilStenterFrm:=TSerahHasilStenterFrm.Create(Self);
+SerahHasilStenterFrm.Show;
+end;
+
+procedure TMainFrm.SerahHasilCalenderClick(Sender: TObject);
+begin
+SerahHasilCalenderFrm:=TSerahHasilCalenderFrm.Create(Self);
+SerahHasilCalenderFrm.Show;
+end;
+
+procedure TMainFrm.TerimaDariMitra1Click(Sender: TObject);
+begin
+WOMitraFrm:=TWOMitraFrm.Create(Self);
+WOMitraFrm.Show;
+end;
+
+procedure TMainFrm.TerimaDariTenunClick(Sender: TObject);
+begin
+TerimaDrFinishingFrm:=TTerimaDrFinishingFrm.Create(Self);
+TerimaDrFinishingFrm.Show;
+end;
+
+procedure TMainFrm.UnpostNota1Click(Sender: TObject);
+var
+  vnota : String;
+begin
+  if InputQuery('UNPOST Nota','No. Nota : ',vnota) then
+  begin
+     DMFrm.QUnPost.Close;
+     DMFrm.QUnPost.SetVariable('no_nota',vnota);
+     DMFrm.QUnPost.Execute;
+     ShowMessage('OK');
+  end;
+end;
+
+procedure TMainFrm.HasilInspectingMitra1Click(Sender: TObject);
+begin
+InspectingMitraFrm:=TInspectingMitraFrm.Create(Self);
+InspectingMitraFrm.Show;
+end;
+
+procedure TMainFrm.LaporanProduksiFashion1Click(Sender: TObject);
+begin
+InfoWIPFashionFrm:=TInfoWIPFashionFrm.Create(Self);
+InfoWIPFashionFrm.Show;
+end;
+
+procedure TMainFrm.TerimaDariTenun1Click(Sender: TObject);
+begin
+TerimaDariTenunFrm:=TTerimaDariTenunFrm.Create(Self);
+TerimaDariTenunFrm.Show;
+end;
+
+procedure TMainFrm.SerahKeJetDyeing1Click(Sender: TObject);
+begin
+SerahKeJetDyeingFinFrm:=TSerahKeJetDyeingFinFrm.Create(Self);
+SerahKeJetDyeingFinFrm.Show;
+end;
+
+procedure TMainFrm.TerimaDariJetDyeing1Click(Sender: TObject);
+begin
+TerimaDariDyeingFrm:=TTerimaDariDyeingFrm.Create(Self);
+TerimaDariDyeingFrm.Show;
+end;
+
+procedure TMainFrm.TerimaNonSarung1Click(Sender: TObject);
+begin
+TerimaNonSarungFrm:=TTerimaNonSarungFrm.Create(Self);
+TerimaNonSarungFrm.Show;
+end;
+
+procedure TMainFrm.SerahKain1Click(Sender: TObject);
+begin
+SerahKainKeOpeningFrm:=TSerahKainKeOpeningFrm.Create(Self);
+SerahKainKeOpeningFrm.Show;
+end;
+
+procedure TMainFrm.InfoStok1Click(Sender: TObject);
+begin
+InfoStokInspectingFrm:=TInfoStokInspectingFrm.Create(Self);
+InfoStokInspectingFrm.Show;
+end;
+
+procedure TMainFrm.N917SerahNonSarungKeJetDyeing1Click(Sender: TObject);
+begin
+SerahNonSarungKeJDFrm:=TSerahNonSarungKeJDFrm.Create(Self);
+SerahNonSarungKeJDFrm.Show;
+end;
+
+procedure TMainFrm.Koreksi1Click(Sender: TObject);
+begin
+    KoreksiFrm:=TKoreksiFrm.Create(Self);
+    KoreksiFrm.Show;
+end;
+
+procedure TMainFrm.InfoStokReinspect1Click(Sender: TObject);
+begin
+    InfoStokReinspectFrm:=TInfoStokReinspectFrm.Create(Self);
+    InfoStokReinspectFrm.Show;
+end;
+
+procedure TMainFrm.N919Koreksi1Click(Sender: TObject);
+begin
+     KoreksiInsFrm:=TKoreksiInsFrm.Create(Self);
+     KoreksiInsFrm.Show;
+end;
+
+procedure TMainFrm.SerahGDJadiLJRClick(Sender: TObject);
+begin
+    SerahTerimaKeGDJadiLJRFrm:=TSerahTerimaKeGDJadiLJRFrm.Create(Self);
+    SerahTerimaKeGDJadiLJRFrm.Show;
+end;
+
+procedure TMainFrm.LAPORANMUTASISTOKINSPEKClick(Sender: TObject);
+begin
+    LaporanMutasiStokInspekFrm:=TLaporanMutasiStokInspekFrm.Create(Self);
+    LaporanMutasiStokInspekFrm.Show;
+end;
+
+procedure TMainFrm.HasilPresetClick(Sender: TObject);
+begin
+    HasilPresetFrm:=THasilPresetFrm.Create(Self);
+    HasilPresetFrm.Show;
+end;
+
+procedure TMainFrm.HasilPreset2Click(Sender: TObject);
+begin
+    HasilPreset2Frm:=THasilPreset2Frm.Create(Self);
+    HasilPreset2Frm.Show;
+end;
+
+procedure TMainFrm.SerahKeKemas1Click(Sender: TObject);
+begin
+    SerahKeKemasFrm:=TSerahKeKemasFrm.Create(Self);
+    SerahKeKemasFrm.Show;
+end;
+
+procedure TMainFrm.HasilBSParahClick(Sender: TObject);
+begin
+    HasilBSParahFrm:=THasilBSParahFrm.Create(Self);
+    HasilBSParahFrm.Show;
+end;
+
+procedure TMainFrm.HasilCabutWarnaMitra1Click(Sender: TObject);
+begin
+    HasilCWMitraFrm:=THasilCWMitraFrm.Create(Self);
+    HasilCWMitraFrm.Show;
+end;
+
+procedure TMainFrm.N996KirimExCWKeFinishing1Click(Sender: TObject);
+begin
+    SerahExCWKeFinishingFrm:=TSerahExCWKeFinishingFrm.Create(Self);
+    SerahExCWKeFinishingFrm.Show;
+end;
+
+procedure TMainFrm.KirimKePrinting1Click(Sender: TObject);
+begin
+    SerahKePrintingFrm:=TSerahKePrintingFrm.Create(Self);
+    SerahKePrintingFrm.Show;
+end;
+
+procedure TMainFrm.N921HasilBakarBuluKainGrey1Click(Sender: TObject);
+begin
+  BakarBuluGreyFrm:=TBakarBuluGreyFrm.Create(Self);
+  BakarBuluGreyFrm.Show;
+end;
+
+procedure TMainFrm.N922terimadariprinting1Click(Sender: TObject);
+begin
+  CalenderGreyFrm:=TCalenderGreyFrm.Create(Self);
+  CalenderGreyFrm.Show;
+end;
+
+procedure TMainFrm.N904RekapKirimInspek1Click(Sender: TObject);
+begin
+    RekapKirimInspekFrm:=TRekapKirimInspekFrm.Create(Self);
+    RekapKirimInspekFrm.Show;
+end;
+
+procedure TMainFrm.N905RekapKirimFinishing1Click(Sender: TObject);
+begin
+    RekapKirimFinishingFrm:=TRekapKirimFinishingFrm.Create(Self);
+    RekapKirimFinishingFrm.Show;
+end;
+
+procedure TMainFrm.N906RekapKirimReInspek1Click(Sender: TObject);
+begin
+    RekapKirimReInspekFrm:=TRekapKirimReInspekFrm.Create(Self);
+    RekapKirimReInspekFrm.Show;
+end;
+
+procedure TMainFrm.N990RekapPengirimanDariTenun1Click(Sender: TObject);
+begin
+    RekapTerimaDariTenunFrm:=TRekapTerimaDariTenunFrm.Create(Self);
+    RekapTerimaDariTenunFrm.Show;
+end;
+
+procedure TMainFrm.InfoWIPFinishing2Click(Sender: TObject);
+begin
+    InfoWIPFinishing1Frm:=TInfoWIPFinishing1Frm.Create(Self);
+    InfoWIPFinishing1Frm.Show;
+end;
+
+procedure TMainFrm.ResetTabel1Click(Sender: TObject);
+begin
+  ResetFrm:=TResetFrm.Create(Self);
+  ResetFrm.ShowModal;
+  ResetFrm.Free;
+end;
+
+procedure TMainFrm.FinishPemasukanClick(Sender: TObject);
+begin
+   FinishPemasukanFrm:=TFinishPemasukanFrm.Create(Self);
+   FinishPemasukanFrm.Show;
+end;
+
+procedure TMainFrm.Backup1Click(Sender: TObject);
+begin
+  DLFrm:=TDLFrm.Create(Self);
+  DLFrm.ShowModal;
+  DLFrm.Free;
+end;
+
+procedure TMainFrm.LaporanTenunInspect1Click(Sender: TObject);
+begin
+  LapTenunInspectFrm:=TLapTenunInspectFrm.Create(Self);
+  LapTenunInspectFrm.Show;  
+end;
+
+procedure TMainFrm.SarungFinish1Click(Sender: TObject);
+begin
+  TerimaDariFinishing2Frm:=TTerimaDariFinishing2Frm.Create(Self);
+  TerimaDariFinishing2Frm.Show;
+end;
+
+procedure TMainFrm.PrintingFinish1Click(Sender: TObject);
+begin
+  TerimaDariFinishing4Frm:=TTerimaDariFinishing4Frm.Create(Self);
+  TerimaDariFinishing4Frm.Show;
+end;
+
+procedure TMainFrm.R02PrintingFinishProses1Click(Sender: TObject);
+begin
+  ReinspectPrintingProsesFrm:=TReinspectPrintingProsesFrm.Create(Self);
+  ReinspectPrintingProsesFrm.Show;
+end;
+
+procedure TMainFrm.N908KirimkeReinspecting1Click(Sender: TObject);
+begin
+  SerahKeReinspectFrm:=TSerahKeReinspectFrm.Create(Self);
+  SerahKeReinspectFrm.Show;
+end;
+
+procedure TMainFrm.MENDINGGREYClick(Sender: TObject);
+begin
+  MendingFrm:=TMendingFrm.Create(Self);
+  MendingFrm.Show;
+end;
+
+procedure TMainFrm.PemotonganReInspecting1Click(Sender: TObject);
+begin
+  ReinspecPemotonganFrm:=TReinspecPemotonganFrm.Create(Self);
+  ReinspecPemotonganFrm.Show;
+end;
+
+procedure TMainFrm.R03Koreksi1Click(Sender: TObject);
+begin
+  ReinspecKoreksiFrm:=TReinspecKoreksiFrm.Create(Self);
+  ReinspecKoreksiFrm.Show;
+end;
+
+procedure TMainFrm.PermintaanUnpost1Click(Sender: TObject);
+begin
+  PermintaanUnpostFrm:=TPermintaanUnpostFrm.Create(Application);
+  PermintaanUnpostFrm.Caption:='Permintaan Unpost Bukti';
+  PermintaanUnpostFrm.Show;
+end;
+
+procedure TMainFrm.EksekusiUnpost1Click(Sender: TObject);
+begin
+  UnpostFrm:=TUnpostFrm.Create(Application);
+  UnpostFrm.Caption:='Eksekusi Unpost Bukti';
+  UnpostFrm.Show;
+end;
+
+procedure TMainFrm.M04HIPOInspecting1Click(Sender: TObject);
+begin
+  InspectingHipoFrm:=TInspectingHipoFrm.Create(Self);
+  InspectingHipoFrm.Show;
+end;
+
+procedure TMainFrm.R05Retur1Click(Sender: TObject);
+begin
+  DefectReinspectFrm:=TDefectReinspectFrm.Create(Self);
+  DefectReinspectFrm.Show;
+end;
+
+procedure TMainFrm.HasilReinspectMitra1Click(Sender: TObject);
+begin
+  ReinspecPajitexFrm:=TReinspecPajitexFrm.Create(Self);
+  ReinspecPajitexFrm.Show;                             
+end;
+
+procedure TMainFrm.M04FOLDING1Click(Sender: TObject);
+begin
+  foldinginspFrm:=TfoldinginspFrm.Create(Self);
+  foldinginspFrm.Show;
+end;
+
+procedure TMainFrm.LaporanProduksiQA1Click(Sender: TObject);
+begin
+  LapProduksiFrm:=TLapProduksiFrm.Create(Self);
+  LapProduksiFrm.Show;
+end;
+
+end.

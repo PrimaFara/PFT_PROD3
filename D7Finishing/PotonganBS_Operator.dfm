@@ -1,0 +1,4162 @@
+object PotonganBS_OperatorFrm: TPotonganBS_OperatorFrm
+  Left = 211
+  Top = 111
+  Width = 1144
+  Height = 627
+  Caption = 'Rekap Data Potongan BS'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Position = poDefault
+  Scaled = False
+  Visible = True
+  WindowState = wsMaximized
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PanelLeft: TPanel
+    Left = 0
+    Top = 32
+    Width = 97
+    Height = 536
+    Align = alLeft
+    BevelOuter = bvNone
+    Color = 4605440
+    TabOrder = 0
+  end
+  object PageControl1: TPageControl
+    Left = 97
+    Top = 32
+    Width = 942
+    Height = 536
+    ActivePage = TabSheet4
+    Align = alClient
+    TabOrder = 1
+    object TabSheet4: TTabSheet
+      Caption = 'Rekap Data Potongan BS'
+      ImageIndex = 3
+      object LabelBanner2: TLabel
+        Left = 0
+        Top = 52
+        Width = 934
+        Height = 16
+        Align = alTop
+        Color = clSkyBlue
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -13
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Panel6: TPanel
+        Left = 0
+        Top = 0
+        Width = 934
+        Height = 52
+        Align = alTop
+        BevelInner = bvLowered
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 0
+        object GroupBox2: TGroupBox
+          Left = 2
+          Top = 2
+          Width = 287
+          Height = 48
+          Align = alLeft
+          Caption = 'Filter Tanggal'
+          TabOrder = 0
+          TabStop = True
+          object Label12: TLabel
+            Left = 132
+            Top = 22
+            Width = 24
+            Height = 13
+            Caption = 'S/D'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object VTglAwal2: TwwDBDateTimePicker
+            Left = 8
+            Top = 16
+            Width = 121
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 0
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAwal2Change
+          end
+          object vTglAkhir2: TwwDBDateTimePicker
+            Left = 160
+            Top = 16
+            Width = 121
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 1
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = vTglAkhir2Change
+          end
+        end
+        object Panel7: TPanel
+          Left = 289
+          Top = 2
+          Width = 568
+          Height = 48
+          Align = alLeft
+          BevelOuter = bvNone
+          TabOrder = 1
+          object vOperand2: TLabel
+            Left = 150
+            Top = 20
+            Width = 44
+            Height = 24
+            Cursor = crHandPoint
+            Alignment = taCenter
+            AutoSize = False
+            Caption = 'LIKE'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clNavy
+            Font.Height = -19
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            OnClick = vOperand2Click
+          end
+          object cbTanggal2: TCheckBox
+            Left = 200
+            Top = 5
+            Width = 129
+            Height = 17
+            Caption = 'Ikutkan Filter &Tanggal'
+            Checked = True
+            State = cbChecked
+            TabOrder = 1
+            OnClick = cbTanggal2Click
+          end
+          object BitBtn6: TBitBtn
+            Left = 328
+            Top = 20
+            Width = 75
+            Height = 25
+            Caption = 'Filte&r'
+            Default = True
+            ModalResult = 1
+            TabOrder = 3
+            OnClick = BitBtn6Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+              555555555555555555555555555555555555555555FF55555555555559055555
+              55555555577FF5555555555599905555555555557777F5555555555599905555
+              555555557777FF5555555559999905555555555777777F555555559999990555
+              5555557777777FF5555557990599905555555777757777F55555790555599055
+              55557775555777FF5555555555599905555555555557777F5555555555559905
+              555555555555777FF5555555555559905555555555555777FF55555555555579
+              05555555555555777FF5555555555557905555555555555777FF555555555555
+              5990555555555555577755555555555555555555555555555555}
+            NumGlyphs = 2
+          end
+          object ECari2: TEdit
+            Left = 200
+            Top = 23
+            Width = 121
+            Height = 19
+            Ctl3D = False
+            ParentCtl3D = False
+            TabOrder = 2
+          end
+          object cbOtomatis2: TCheckBox
+            Left = 7
+            Top = 5
+            Width = 98
+            Height = 17
+            Caption = 'Cari &Otomatis'
+            TabOrder = 0
+            OnClick = cbOtomatis2Click
+          end
+          object dbcField2: TwwDBComboBox
+            Left = 8
+            Top = 23
+            Width = 137
+            Height = 19
+            ShowButton = True
+            Style = csDropDown
+            MapList = False
+            AllowClearKey = False
+            Color = clYellow
+            DropDownCount = 8
+            ItemHeight = 0
+            Items.Strings = (
+              'SEMUA KOLOM')
+            ItemIndex = 0
+            Sorted = False
+            TabOrder = 4
+            UnboundDataType = wwDefault
+            OnEnter = dbcField2Enter
+          end
+          object BtnExport2: TBitBtn
+            Left = 408
+            Top = 20
+            Width = 97
+            Height = 25
+            Caption = '&Export2Excel'
+            TabOrder = 5
+            OnClick = BtnExport2Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+              00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+              00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+              00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+              0003737FFFFFFFFF7F7330099999999900333777777777777733}
+            NumGlyphs = 2
+          end
+        end
+      end
+      object wwDBGrid2: TwwDBGrid
+        Left = 0
+        Top = 68
+        Width = 934
+        Height = 440
+        Selected.Strings = (
+          'NIK'#9'7'#9'NIK'#9'F'#9'OPERATOR'
+          'OPR_TENUN'#9'22'#9'OPERATOR TENUN'#9'F'#9'OPERATOR'
+          'LOKASI'#9'3'#9'LOKASI'#9'F'
+          'GRUP'#9'5'#9'GRUP'#9'F'
+          'TANGGAL'#9'12'#9'TANGGAL'#9'F'#9'DARI TENUN'
+          'PROSES'#9'7'#9'NO MESIN'#9'F'#9'DARI TENUN'
+          'KONSTRUKSI'#9'30'#9'KONSTRUKSI'#9'F'
+          'QTY'#9'12'#9'QTY'#9'F'#9'DARI TENUN'
+          'LD'#9'4'#9'LD'#9'F'#9'DEFECT B-GRADE'
+          'LB'#9'4'#9'LB'#9'F'#9'DEFECT B-GRADE'
+          'LT'#9'4'#9'LT'#9'F'#9'DEFECT B-GRADE'
+          'LK'#9'4'#9'LK'#9'F'#9'DEFECT B-GRADE'
+          'PL'#9'4'#9'FPK'#9'F'#9'DEFECT B-GRADE'
+          'LL'#9'4'#9'FLS'#9'F'#9'DEFECT B-GRADE'
+          'LPT'#9'4'#9'LPT'#9'F'#9'DEFECT B-GRADE'
+          'LRG'#9'4'#9'LRG'#9'F'#9'DEFECT B-GRADE'
+          'WL'#9'4'#9'WL'#9'F'#9'DEFECT B-GRADE'
+          'CKK'#9'4'#9'CK'#9'F'#9'DEFECT B-GRADE'
+          'OJ'#9'4'#9'OJ'#9'F'#9'DEFECT B-GRADE'
+          'CRT'#9'4'#9'CRT'#9'F'#9'DEFECT B-GRADE'
+          'CAJ'#9'4'#9'CAJ'#9'F'#9'DEFECT B-GRADE'
+          'PD'#9'4'#9'PD'#9'F'#9'DEFECT B-GRADE'
+          'PKP'#9'4'#9'PP'#9'F'#9'DEFECT B-GRADE'
+          'NG'#9'4'#9'BTS'#9'F'#9'DEFECT B-GRADE'
+          'BTB'#9'4'#9'BTB'#9'F'#9'DEFECT B-GRADE'
+          'WP'#9'4'#9'WP'#9'F'#9'DEFECT B-GRADE'
+          'SC'#9'4'#9'SC'#9'F'#9'DEFECT B-GRADE'
+          'KP'#9'4'#9'KP'#9'F'#9'DEFECT B-GRADE'
+          'BO'#9'4'#9'BO'#9'F'#9'DEFECT B-GRADE'
+          'TCS'#9'4'#9'KTR'#9'F'#9'DEFECT B-GRADE'
+          'SLL'#9'4'#9'SLL'#9'F'#9'DEFECT B-GRADE'
+          'KS'#9'4'#9'KS'#9'F'#9'BS'
+          'ANR'#9'4'#9'ANR'#9'F'#9'BS'
+          'UTS'#9'4'#9'UTS'#9'F'#9'BS'
+          'KBR'#9'4'#9'KBR'#9'F'#9'BS'
+          'PEMOTONG_BS'#9'10'#9'POTONGAN~DATA BS'#9'F'
+          'QTY2'#9'12'#9'BS'#9'F'#9'DITERIMA'
+          'QTY3'#9'12'#9'BK'#9'F'#9'DITERIMA'
+          'PR'#9'12'#9'PARAH'#9'F'#9'DITERIMA'
+          'UTB'#9'12'#9'PJG'#9'F'#9'DATA'
+          'LBK'#9'12'#9'LBR'#9'F'#9'DATA'
+          'CUP'#9'12'#9'CUP'#9'F'#9'DATA')
+        IniAttributes.Enabled = True
+        IniAttributes.SaveToRegistry = True
+        IniAttributes.FileName = 'Pismatex Finishing'
+        IniAttributes.Delimiter = ';;'
+        ExportOptions.ExportType = wwgetSYLK
+        TitleColor = clSkyBlue
+        FixedCols = 2
+        ShowHorzScrollBar = True
+        Align = alClient
+        DataSource = dsQBrowse_Det
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgWordWrap, dgShowFooter, dgDblClickColSizing]
+        ParentFont = False
+        TabOrder = 1
+        TitleAlignment = taCenter
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Lucida Sans'
+        TitleFont.Style = [fsBold]
+        TitleLines = 3
+        TitleButtons = True
+        UseTFields = False
+        OnTitleButtonClick = wwDBGrid2TitleButtonClick
+        OnUpdateFooter = wwDBGrid2UpdateFooter
+        PaintOptions.AlternatingRowColor = clMoneyGreen
+        PaintOptions.ActiveRecordColor = clGreen
+        GroupFieldName = 'OPR_TENUN'
+      end
+    end
+    object TabSheet1: TTabSheet
+      Caption = 'Rekap Per Operator'
+      ImageIndex = 1
+      object LabelBanner1: TLabel
+        Left = 0
+        Top = 52
+        Width = 934
+        Height = 16
+        Align = alTop
+        Color = clSkyBlue
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -13
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object wwDBGrid1: TwwDBGrid
+        Left = 0
+        Top = 68
+        Width = 934
+        Height = 440
+        Selected.Strings = (
+          'NIK'#9'7'#9'NIK'#9'F'#9'OPERATOR'
+          'OPR_TENUN'#9'22'#9'OPERATOR TENUN'#9'F'#9'OPERATOR'
+          'QTY'#9'12'#9'QTY'#9'F'#9'DARI TENUN'
+          'LD'#9'4'#9'LD'#9'F'#9'DEFECT B-GRADE'
+          'LB'#9'4'#9'LB'#9'F'#9'DEFECT B-GRADE'
+          'LT'#9'4'#9'LT'#9'F'#9'DEFECT B-GRADE'
+          'LK'#9'4'#9'LK'#9'F'#9'DEFECT B-GRADE'
+          'PL'#9'4'#9'FPK'#9'F'#9'DEFECT B-GRADE'
+          'LL'#9'4'#9'FLS'#9'F'#9'DEFECT B-GRADE'
+          'LPT'#9'4'#9'LPT'#9'F'#9'DEFECT B-GRADE'
+          'LRG'#9'4'#9'LRG'#9'F'#9'DEFECT B-GRADE'
+          'WL'#9'4'#9'WL'#9'F'#9'DEFECT B-GRADE'
+          'CKK'#9'4'#9'CK'#9'F'#9'DEFECT B-GRADE'
+          'OJ'#9'4'#9'OJ'#9'F'#9'DEFECT B-GRADE'
+          'CRT'#9'4'#9'CRT'#9'F'#9'DEFECT B-GRADE'
+          'CAJ'#9'4'#9'CAJ'#9'F'#9'DEFECT B-GRADE'
+          'PD'#9'4'#9'PD'#9'F'#9'DEFECT B-GRADE'
+          'PKP'#9'4'#9'PP'#9'F'#9'DEFECT B-GRADE'
+          'NG'#9'4'#9'BTS'#9'F'#9'DEFECT B-GRADE'
+          'BTB'#9'4'#9'BTB'#9'F'#9'DEFECT B-GRADE'
+          'WP'#9'4'#9'WP'#9'F'#9'DEFECT B-GRADE'
+          'SC'#9'4'#9'SC'#9'F'#9'DEFECT B-GRADE'
+          'KP'#9'4'#9'KP'#9'F'#9'DEFECT B-GRADE'
+          'BO'#9'4'#9'BO'#9'F'#9'DEFECT B-GRADE'
+          'TCS'#9'4'#9'KTR'#9'F'#9'DEFECT B-GRADE'
+          'SLL'#9'4'#9'SLL'#9'F'#9'DEFECT B-GRADE'
+          'KS'#9'4'#9'KS'#9'F'#9'BS'
+          'ANR'#9'4'#9'ANR'#9'F'#9'BS'
+          'UTS'#9'4'#9'UTS'#9'F'#9'BS'
+          'KBR'#9'4'#9'KBR'#9'F'#9'BS'
+          'PEMOTONG_BS'#9'10'#9'POTONGAN~DATA BS'#9'F'
+          'QTY2'#9'12'#9'BS'#9'F'#9'DITERIMA'
+          'QTY3'#9'12'#9'BK'#9'F'#9'DITERIMA'
+          'PR'#9'12'#9'PARAH'#9'F'#9'DITERIMA'
+          'UTB'#9'12'#9'PJG'#9'F'#9'DATA'
+          'LBK'#9'12'#9'LBR'#9'F'#9'DATA'
+          'CUP'#9'12'#9'CUP'#9'F'#9'DATA')
+        IniAttributes.Enabled = True
+        IniAttributes.SaveToRegistry = True
+        IniAttributes.FileName = 'Pismatex Finishing'
+        IniAttributes.Delimiter = ';;'
+        ExportOptions.ExportType = wwgetSYLK
+        TitleColor = clSkyBlue
+        FixedCols = 2
+        ShowHorzScrollBar = True
+        Align = alClient
+        DataSource = dsQBrowse_Opr
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgWordWrap, dgShowFooter, dgDblClickColSizing]
+        ParentFont = False
+        TabOrder = 0
+        TitleAlignment = taCenter
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Lucida Sans'
+        TitleFont.Style = [fsBold]
+        TitleLines = 3
+        TitleButtons = True
+        UseTFields = False
+        OnUpdateFooter = wwDBGrid1UpdateFooter
+        PaintOptions.AlternatingRowColor = clMoneyGreen
+        PaintOptions.ActiveRecordColor = clGreen
+        GroupFieldName = 'OPR_TENUN'
+      end
+      object Panel3: TPanel
+        Left = 0
+        Top = 0
+        Width = 934
+        Height = 52
+        Align = alTop
+        BevelInner = bvLowered
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 1
+        object GroupBox1: TGroupBox
+          Left = 2
+          Top = 2
+          Width = 287
+          Height = 48
+          Align = alLeft
+          Caption = 'Filter Tanggal'
+          TabOrder = 0
+          TabStop = True
+          object Label1: TLabel
+            Left = 132
+            Top = 22
+            Width = 24
+            Height = 13
+            Caption = 'S/D'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object VTglAwal1: TwwDBDateTimePicker
+            Left = 8
+            Top = 16
+            Width = 121
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 0
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAwal1Change
+          end
+          object VTglAkhir1: TwwDBDateTimePicker
+            Left = 160
+            Top = 16
+            Width = 121
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 1
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAkhir1Change
+          end
+        end
+        object Panel4: TPanel
+          Left = 289
+          Top = 2
+          Width = 568
+          Height = 48
+          Align = alLeft
+          BevelOuter = bvNone
+          TabOrder = 1
+          object vOperand1: TLabel
+            Left = 150
+            Top = 20
+            Width = 44
+            Height = 24
+            Cursor = crHandPoint
+            Alignment = taCenter
+            AutoSize = False
+            Caption = 'LIKE'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clNavy
+            Font.Height = -19
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            OnClick = vOperand1Click
+          end
+          object cbTanggal1: TCheckBox
+            Left = 200
+            Top = 5
+            Width = 129
+            Height = 17
+            Caption = 'Ikutkan Filter &Tanggal'
+            Checked = True
+            State = cbChecked
+            TabOrder = 1
+            OnClick = cbTanggal1Click
+          end
+          object BitBtn1: TBitBtn
+            Left = 328
+            Top = 20
+            Width = 75
+            Height = 25
+            Caption = 'Filte&r'
+            Default = True
+            ModalResult = 1
+            TabOrder = 3
+            OnClick = BitBtn1Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+              555555555555555555555555555555555555555555FF55555555555559055555
+              55555555577FF5555555555599905555555555557777F5555555555599905555
+              555555557777FF5555555559999905555555555777777F555555559999990555
+              5555557777777FF5555557990599905555555777757777F55555790555599055
+              55557775555777FF5555555555599905555555555557777F5555555555559905
+              555555555555777FF5555555555559905555555555555777FF55555555555579
+              05555555555555777FF5555555555557905555555555555777FF555555555555
+              5990555555555555577755555555555555555555555555555555}
+            NumGlyphs = 2
+          end
+          object ECari1: TEdit
+            Left = 200
+            Top = 23
+            Width = 121
+            Height = 19
+            Ctl3D = False
+            ParentCtl3D = False
+            TabOrder = 2
+          end
+          object cbOtomatis1: TCheckBox
+            Left = 7
+            Top = 5
+            Width = 98
+            Height = 17
+            Caption = 'Cari &Otomatis'
+            TabOrder = 0
+            OnClick = cbOtomatis1Click
+          end
+          object dbcField1: TwwDBComboBox
+            Left = 8
+            Top = 23
+            Width = 137
+            Height = 19
+            ShowButton = True
+            Style = csDropDown
+            MapList = False
+            AllowClearKey = False
+            Color = clYellow
+            DropDownCount = 8
+            ItemHeight = 0
+            Items.Strings = (
+              'SEMUA KOLOM')
+            ItemIndex = 0
+            Sorted = False
+            TabOrder = 4
+            UnboundDataType = wwDefault
+            OnEnter = dbcField1Enter
+          end
+          object BitBtn2: TBitBtn
+            Left = 408
+            Top = 20
+            Width = 97
+            Height = 25
+            Caption = '&Export2Excel'
+            TabOrder = 5
+            OnClick = BitBtn2Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+              00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+              00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+              00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+              0003737FFFFFFFFF7F7330099999999900333777777777777733}
+            NumGlyphs = 2
+          end
+        end
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Rekap Per Lokasi/Grup'
+      ImageIndex = 2
+      object LabelBanner3: TLabel
+        Left = 0
+        Top = 52
+        Width = 934
+        Height = 16
+        Align = alTop
+        Color = clSkyBlue
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -13
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Panel8: TPanel
+        Left = 0
+        Top = 0
+        Width = 934
+        Height = 52
+        Align = alTop
+        BevelInner = bvLowered
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 0
+        object GroupBox3: TGroupBox
+          Left = 2
+          Top = 2
+          Width = 287
+          Height = 48
+          Align = alLeft
+          Caption = 'Filter Tanggal'
+          TabOrder = 0
+          TabStop = True
+          object Label2: TLabel
+            Left = 132
+            Top = 22
+            Width = 24
+            Height = 13
+            Caption = 'S/D'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object VTglAwal3: TwwDBDateTimePicker
+            Left = 8
+            Top = 16
+            Width = 121
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 0
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAwal3Change
+          end
+          object VTglAkhir3: TwwDBDateTimePicker
+            Left = 160
+            Top = 16
+            Width = 121
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 1
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAkhir3Change
+          end
+        end
+        object Panel9: TPanel
+          Left = 289
+          Top = 2
+          Width = 568
+          Height = 48
+          Align = alLeft
+          BevelOuter = bvNone
+          TabOrder = 1
+          object vOperand3: TLabel
+            Left = 150
+            Top = 20
+            Width = 44
+            Height = 24
+            Cursor = crHandPoint
+            Alignment = taCenter
+            AutoSize = False
+            Caption = 'LIKE'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clNavy
+            Font.Height = -19
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            OnClick = vOperand3Click
+          end
+          object cbTanggal3: TCheckBox
+            Left = 200
+            Top = 5
+            Width = 129
+            Height = 17
+            Caption = 'Ikutkan Filter &Tanggal'
+            Checked = True
+            State = cbChecked
+            TabOrder = 1
+            OnClick = cbTanggal3Click
+          end
+          object BitBtn3: TBitBtn
+            Left = 328
+            Top = 20
+            Width = 75
+            Height = 25
+            Caption = 'Filte&r'
+            Default = True
+            ModalResult = 1
+            TabOrder = 3
+            OnClick = BitBtn3Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+              555555555555555555555555555555555555555555FF55555555555559055555
+              55555555577FF5555555555599905555555555557777F5555555555599905555
+              555555557777FF5555555559999905555555555777777F555555559999990555
+              5555557777777FF5555557990599905555555777757777F55555790555599055
+              55557775555777FF5555555555599905555555555557777F5555555555559905
+              555555555555777FF5555555555559905555555555555777FF55555555555579
+              05555555555555777FF5555555555557905555555555555777FF555555555555
+              5990555555555555577755555555555555555555555555555555}
+            NumGlyphs = 2
+          end
+          object ECari3: TEdit
+            Left = 200
+            Top = 23
+            Width = 121
+            Height = 19
+            Ctl3D = False
+            ParentCtl3D = False
+            TabOrder = 2
+          end
+          object cbOtomatis3: TCheckBox
+            Left = 7
+            Top = 5
+            Width = 98
+            Height = 17
+            Caption = 'Cari &Otomatis'
+            TabOrder = 0
+            OnClick = cbOtomatis3Click
+          end
+          object dbcField3: TwwDBComboBox
+            Left = 8
+            Top = 23
+            Width = 137
+            Height = 19
+            ShowButton = True
+            Style = csDropDown
+            MapList = False
+            AllowClearKey = False
+            Color = clYellow
+            DropDownCount = 8
+            ItemHeight = 0
+            Items.Strings = (
+              'SEMUA KOLOM')
+            ItemIndex = 0
+            Sorted = False
+            TabOrder = 4
+            UnboundDataType = wwDefault
+            OnEnter = dbcField3Enter
+          end
+          object BitBtn4: TBitBtn
+            Left = 408
+            Top = 20
+            Width = 97
+            Height = 25
+            Caption = '&Export2Excel'
+            TabOrder = 5
+            OnClick = BitBtn4Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+              00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+              00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+              00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+              0003737FFFFFFFFF7F7330099999999900333777777777777733}
+            NumGlyphs = 2
+          end
+        end
+      end
+      object wwDBGrid3: TwwDBGrid
+        Left = 0
+        Top = 68
+        Width = 934
+        Height = 440
+        Selected.Strings = (
+          'LOKASI'#9'3'#9'LOKASI'#9'F'
+          'GRUP'#9'3'#9'GRUP'#9'F'
+          'QTY'#9'12'#9'QTY'#9'F'#9'DARI TENUN'
+          'LD'#9'4'#9'LD'#9'F'#9'DEFECT B-GRADE'
+          'LB'#9'4'#9'LB'#9'F'#9'DEFECT B-GRADE'
+          'LT'#9'4'#9'LT'#9'F'#9'DEFECT B-GRADE'
+          'LK'#9'4'#9'LK'#9'F'#9'DEFECT B-GRADE'
+          'PL'#9'4'#9'FPK'#9'F'#9'DEFECT B-GRADE'
+          'LL'#9'4'#9'FLS'#9'F'#9'DEFECT B-GRADE'
+          'LPT'#9'4'#9'LPT'#9'F'#9'DEFECT B-GRADE'
+          'LRG'#9'4'#9'LRG'#9'F'#9'DEFECT B-GRADE'
+          'WL'#9'4'#9'WL'#9'F'#9'DEFECT B-GRADE'
+          'CKK'#9'4'#9'CK'#9'F'#9'DEFECT B-GRADE'
+          'OJ'#9'4'#9'OJ'#9'F'#9'DEFECT B-GRADE'
+          'CRT'#9'4'#9'CRT'#9'F'#9'DEFECT B-GRADE'
+          'CAJ'#9'4'#9'CAJ'#9'F'#9'DEFECT B-GRADE'
+          'PD'#9'4'#9'PD'#9'F'#9'DEFECT B-GRADE'
+          'PKP'#9'4'#9'PP'#9'F'#9'DEFECT B-GRADE'
+          'NG'#9'4'#9'BTS'#9'F'#9'DEFECT B-GRADE'
+          'BTB'#9'4'#9'BTB'#9'F'#9'DEFECT B-GRADE'
+          'WP'#9'4'#9'WP'#9'F'#9'DEFECT B-GRADE'
+          'SC'#9'4'#9'SC'#9'F'#9'DEFECT B-GRADE'
+          'KP'#9'4'#9'KP'#9'F'#9'DEFECT B-GRADE'
+          'BO'#9'4'#9'BO'#9'F'#9'DEFECT B-GRADE'
+          'TCS'#9'4'#9'KTR'#9'F'#9'DEFECT B-GRADE'
+          'SLL'#9'4'#9'SLL'#9'F'#9'DEFECT B-GRADE'
+          'KS'#9'4'#9'KS'#9'F'#9'BS'
+          'ANR'#9'4'#9'ANR'#9'F'#9'BS'
+          'UTS'#9'4'#9'UTS'#9'F'#9'BS'
+          'KBR'#9'4'#9'KBR'#9'F'#9'BS'
+          'PEMOTONG_BS'#9'10'#9'POTONGAN~DATA BS'#9'F'
+          'QTY2'#9'12'#9'BS'#9'F'#9'DITERIMA'
+          'QTY3'#9'12'#9'BK'#9'F'#9'DITERIMA'
+          'PR'#9'12'#9'PARAH'#9'F'#9'DITERIMA'
+          'UTB'#9'12'#9'PJG'#9'F'#9'DATA'
+          'LBK'#9'12'#9'LBR'#9'F'#9'DATA'
+          'CUP'#9'12'#9'CUP'#9'F'#9'DATA')
+        IniAttributes.Enabled = True
+        IniAttributes.SaveToRegistry = True
+        IniAttributes.FileName = 'Pismatex Finishing'
+        IniAttributes.Delimiter = ';;'
+        ExportOptions.ExportType = wwgetSYLK
+        TitleColor = clSkyBlue
+        FixedCols = 2
+        ShowHorzScrollBar = True
+        Align = alClient
+        DataSource = dsQBrowse_Grup
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgWordWrap, dgShowFooter, dgDblClickColSizing]
+        ParentFont = False
+        TabOrder = 1
+        TitleAlignment = taCenter
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Lucida Sans'
+        TitleFont.Style = [fsBold]
+        TitleLines = 3
+        TitleButtons = True
+        UseTFields = False
+        PaintOptions.AlternatingRowColor = clMoneyGreen
+        PaintOptions.ActiveRecordColor = clGreen
+        GroupFieldName = 'LOKASI'
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'Rekap Per Lokasi/Konstruksi'
+      ImageIndex = 3
+      object LabelBanner4: TLabel
+        Left = 0
+        Top = 52
+        Width = 934
+        Height = 16
+        Align = alTop
+        Color = clSkyBlue
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -13
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object wwDBGrid4: TwwDBGrid
+        Left = 0
+        Top = 68
+        Width = 934
+        Height = 440
+        Selected.Strings = (
+          'LOKASI'#9'3'#9'LOKASI'#9'F'
+          'KONSTRUKSI'#9'30'#9'KONSTRUKSI'#9'F'
+          'QTY'#9'12'#9'QTY'#9'F'#9'DARI TENUN'
+          'LD'#9'4'#9'LD'#9'F'#9'DEFECT B-GRADE'
+          'LB'#9'4'#9'LB'#9'F'#9'DEFECT B-GRADE'
+          'LT'#9'4'#9'LT'#9'F'#9'DEFECT B-GRADE'
+          'LK'#9'4'#9'LK'#9'F'#9'DEFECT B-GRADE'
+          'PL'#9'4'#9'FPK'#9'F'#9'DEFECT B-GRADE'
+          'LL'#9'4'#9'FLS'#9'F'#9'DEFECT B-GRADE'
+          'LPT'#9'4'#9'LPT'#9'F'#9'DEFECT B-GRADE'
+          'LRG'#9'4'#9'LRG'#9'F'#9'DEFECT B-GRADE'
+          'WL'#9'4'#9'WL'#9'F'#9'DEFECT B-GRADE'
+          'CKK'#9'4'#9'CK'#9'F'#9'DEFECT B-GRADE'
+          'OJ'#9'4'#9'OJ'#9'F'#9'DEFECT B-GRADE'
+          'CRT'#9'4'#9'CRT'#9'F'#9'DEFECT B-GRADE'
+          'CAJ'#9'4'#9'CAJ'#9'F'#9'DEFECT B-GRADE'
+          'PD'#9'4'#9'PD'#9'F'#9'DEFECT B-GRADE'
+          'PKP'#9'4'#9'PP'#9'F'#9'DEFECT B-GRADE'
+          'NG'#9'4'#9'BTS'#9'F'#9'DEFECT B-GRADE'
+          'BTB'#9'4'#9'BTB'#9'F'#9'DEFECT B-GRADE'
+          'WP'#9'4'#9'WP'#9'F'#9'DEFECT B-GRADE'
+          'SC'#9'4'#9'SC'#9'F'#9'DEFECT B-GRADE'
+          'KP'#9'4'#9'KP'#9'F'#9'DEFECT B-GRADE'
+          'BO'#9'4'#9'BO'#9'F'#9'DEFECT B-GRADE'
+          'TCS'#9'4'#9'KTR'#9'F'#9'DEFECT B-GRADE'
+          'SLL'#9'4'#9'SLL'#9'F'#9'DEFECT B-GRADE'
+          'KS'#9'4'#9'KS'#9'F'#9'BS'
+          'ANR'#9'4'#9'ANR'#9'F'#9'BS'
+          'UTS'#9'4'#9'UTS'#9'F'#9'BS'
+          'KBR'#9'4'#9'KBR'#9'F'#9'BS'
+          'PEMOTONG_BS'#9'10'#9'POTONGAN~DATA BS'#9'F'
+          'QTY2'#9'12'#9'BS'#9'F'#9'DITERIMA'
+          'QTY3'#9'12'#9'BK'#9'F'#9'DITERIMA'
+          'PR'#9'12'#9'PARAH'#9'F'#9'DITERIMA'
+          'UTB'#9'12'#9'PJG'#9'F'#9'DATA'
+          'LBK'#9'12'#9'LBR'#9'F'#9'DATA'
+          'CUP'#9'12'#9'CUP'#9'F'#9'DATA')
+        IniAttributes.Enabled = True
+        IniAttributes.SaveToRegistry = True
+        IniAttributes.FileName = 'Pismatex Finishing'
+        IniAttributes.Delimiter = ';;'
+        ExportOptions.ExportType = wwgetSYLK
+        TitleColor = clSkyBlue
+        FixedCols = 2
+        ShowHorzScrollBar = True
+        Align = alClient
+        DataSource = dsQBrowse_Kons
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgWordWrap, dgShowFooter, dgDblClickColSizing]
+        ParentFont = False
+        TabOrder = 0
+        TitleAlignment = taCenter
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Lucida Sans'
+        TitleFont.Style = [fsBold]
+        TitleLines = 3
+        TitleButtons = True
+        UseTFields = False
+        PaintOptions.AlternatingRowColor = clMoneyGreen
+        PaintOptions.ActiveRecordColor = clGreen
+        GroupFieldName = 'LOKASI'
+      end
+      object Panel10: TPanel
+        Left = 0
+        Top = 0
+        Width = 934
+        Height = 52
+        Align = alTop
+        BevelInner = bvLowered
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 1
+        object GroupBox4: TGroupBox
+          Left = 2
+          Top = 2
+          Width = 287
+          Height = 48
+          Align = alLeft
+          Caption = 'Filter Tanggal'
+          TabOrder = 0
+          TabStop = True
+          object Label3: TLabel
+            Left = 132
+            Top = 22
+            Width = 24
+            Height = 13
+            Caption = 'S/D'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object VTglAwal4: TwwDBDateTimePicker
+            Left = 8
+            Top = 16
+            Width = 121
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 0
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAwal4Change
+          end
+          object VTglAkhir4: TwwDBDateTimePicker
+            Left = 160
+            Top = 16
+            Width = 121
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 1
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAkhir4Change
+          end
+        end
+        object Panel11: TPanel
+          Left = 289
+          Top = 2
+          Width = 568
+          Height = 48
+          Align = alLeft
+          BevelOuter = bvNone
+          TabOrder = 1
+          object vOperand4: TLabel
+            Left = 150
+            Top = 20
+            Width = 44
+            Height = 24
+            Cursor = crHandPoint
+            Alignment = taCenter
+            AutoSize = False
+            Caption = 'LIKE'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clNavy
+            Font.Height = -19
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            OnClick = vOperand4Click
+          end
+          object cbTanggal4: TCheckBox
+            Left = 200
+            Top = 5
+            Width = 129
+            Height = 17
+            Caption = 'Ikutkan Filter &Tanggal'
+            Checked = True
+            State = cbChecked
+            TabOrder = 1
+            OnClick = cbTanggal4Click
+          end
+          object BitBtn5: TBitBtn
+            Left = 328
+            Top = 20
+            Width = 75
+            Height = 25
+            Caption = 'Filte&r'
+            Default = True
+            ModalResult = 1
+            TabOrder = 3
+            OnClick = BitBtn5Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+              555555555555555555555555555555555555555555FF55555555555559055555
+              55555555577FF5555555555599905555555555557777F5555555555599905555
+              555555557777FF5555555559999905555555555777777F555555559999990555
+              5555557777777FF5555557990599905555555777757777F55555790555599055
+              55557775555777FF5555555555599905555555555557777F5555555555559905
+              555555555555777FF5555555555559905555555555555777FF55555555555579
+              05555555555555777FF5555555555557905555555555555777FF555555555555
+              5990555555555555577755555555555555555555555555555555}
+            NumGlyphs = 2
+          end
+          object ECari4: TEdit
+            Left = 200
+            Top = 23
+            Width = 121
+            Height = 19
+            Ctl3D = False
+            ParentCtl3D = False
+            TabOrder = 2
+          end
+          object cbOtomatis4: TCheckBox
+            Left = 7
+            Top = 5
+            Width = 98
+            Height = 17
+            Caption = 'Cari &Otomatis'
+            TabOrder = 0
+            OnClick = cbOtomatis4Click
+          end
+          object dbcField4: TwwDBComboBox
+            Left = 8
+            Top = 23
+            Width = 137
+            Height = 19
+            ShowButton = True
+            Style = csDropDown
+            MapList = False
+            AllowClearKey = False
+            Color = clYellow
+            DropDownCount = 8
+            ItemHeight = 0
+            Items.Strings = (
+              'SEMUA KOLOM')
+            ItemIndex = 0
+            Sorted = False
+            TabOrder = 4
+            UnboundDataType = wwDefault
+            OnEnter = dbcField4Enter
+          end
+          object BitBtn7: TBitBtn
+            Left = 408
+            Top = 20
+            Width = 97
+            Height = 25
+            Caption = '&Export2Excel'
+            TabOrder = 5
+            OnClick = BitBtn7Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+              00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+              00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+              00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+              0003737FFFFFFFFF7F7330099999999900333777777777777733}
+            NumGlyphs = 2
+          end
+        end
+      end
+    end
+    object TabSheet5: TTabSheet
+      Caption = 'Rekap Per Konstruksi'
+      ImageIndex = 4
+      object LabelBanner5: TLabel
+        Left = 0
+        Top = 52
+        Width = 934
+        Height = 16
+        Align = alTop
+        Color = clSkyBlue
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -13
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Panel12: TPanel
+        Left = 0
+        Top = 0
+        Width = 934
+        Height = 52
+        Align = alTop
+        BevelInner = bvLowered
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 0
+        object GroupBox5: TGroupBox
+          Left = 2
+          Top = 2
+          Width = 287
+          Height = 48
+          Align = alLeft
+          Caption = 'Filter Tanggal'
+          TabOrder = 0
+          TabStop = True
+          object Label5: TLabel
+            Left = 132
+            Top = 22
+            Width = 24
+            Height = 13
+            Caption = 'S/D'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object VTglAwal5: TwwDBDateTimePicker
+            Left = 8
+            Top = 16
+            Width = 121
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 0
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAwal5Change
+          end
+          object VTglAkhir5: TwwDBDateTimePicker
+            Left = 160
+            Top = 16
+            Width = 121
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 1
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAkhir5Change
+          end
+        end
+        object Panel13: TPanel
+          Left = 289
+          Top = 2
+          Width = 568
+          Height = 48
+          Align = alLeft
+          BevelOuter = bvNone
+          TabOrder = 1
+          object vOperand5: TLabel
+            Left = 150
+            Top = 20
+            Width = 44
+            Height = 24
+            Cursor = crHandPoint
+            Alignment = taCenter
+            AutoSize = False
+            Caption = 'LIKE'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clNavy
+            Font.Height = -19
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            OnClick = vOperand5Click
+          end
+          object cbTanggal5: TCheckBox
+            Left = 200
+            Top = 5
+            Width = 129
+            Height = 17
+            Caption = 'Ikutkan Filter &Tanggal'
+            Checked = True
+            State = cbChecked
+            TabOrder = 1
+            OnClick = cbTanggal5Click
+          end
+          object BitBtn8: TBitBtn
+            Left = 328
+            Top = 20
+            Width = 75
+            Height = 25
+            Caption = 'Filte&r'
+            Default = True
+            ModalResult = 1
+            TabOrder = 3
+            OnClick = BitBtn8Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+              555555555555555555555555555555555555555555FF55555555555559055555
+              55555555577FF5555555555599905555555555557777F5555555555599905555
+              555555557777FF5555555559999905555555555777777F555555559999990555
+              5555557777777FF5555557990599905555555777757777F55555790555599055
+              55557775555777FF5555555555599905555555555557777F5555555555559905
+              555555555555777FF5555555555559905555555555555777FF55555555555579
+              05555555555555777FF5555555555557905555555555555777FF555555555555
+              5990555555555555577755555555555555555555555555555555}
+            NumGlyphs = 2
+          end
+          object ECari5: TEdit
+            Left = 200
+            Top = 23
+            Width = 121
+            Height = 19
+            Ctl3D = False
+            ParentCtl3D = False
+            TabOrder = 2
+          end
+          object cbOtomatis5: TCheckBox
+            Left = 7
+            Top = 5
+            Width = 98
+            Height = 17
+            Caption = 'Cari &Otomatis'
+            TabOrder = 0
+            OnClick = cbOtomatis5Click
+          end
+          object dbcField5: TwwDBComboBox
+            Left = 8
+            Top = 23
+            Width = 137
+            Height = 19
+            ShowButton = True
+            Style = csDropDown
+            MapList = False
+            AllowClearKey = False
+            Color = clYellow
+            DropDownCount = 8
+            ItemHeight = 0
+            Items.Strings = (
+              'SEMUA KOLOM')
+            ItemIndex = 0
+            Sorted = False
+            TabOrder = 4
+            UnboundDataType = wwDefault
+            OnEnter = dbcField5Enter
+          end
+          object BitBtn9: TBitBtn
+            Left = 408
+            Top = 20
+            Width = 97
+            Height = 25
+            Caption = '&Export2Excel'
+            TabOrder = 5
+            OnClick = BitBtn9Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+              00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+              00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+              00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+              0003737FFFFFFFFF7F7330099999999900333777777777777733}
+            NumGlyphs = 2
+          end
+        end
+      end
+      object wwDBGrid5: TwwDBGrid
+        Left = 0
+        Top = 68
+        Width = 934
+        Height = 440
+        Selected.Strings = (
+          'KONSTRUKSI'#9'30'#9'KONSTRUKSI'#9'F'
+          'QTY'#9'12'#9'QTY'#9'F'#9'DARI TENUN'
+          'LD'#9'4'#9'LD'#9'F'#9'DEFECT B-GRADE'
+          'LB'#9'4'#9'LB'#9'F'#9'DEFECT B-GRADE'
+          'LT'#9'4'#9'LT'#9'F'#9'DEFECT B-GRADE'
+          'LK'#9'4'#9'LK'#9'F'#9'DEFECT B-GRADE'
+          'PL'#9'4'#9'FPK'#9'F'#9'DEFECT B-GRADE'
+          'LL'#9'4'#9'FLS'#9'F'#9'DEFECT B-GRADE'
+          'LPT'#9'4'#9'LPT'#9'F'#9'DEFECT B-GRADE'
+          'LRG'#9'4'#9'LRG'#9'F'#9'DEFECT B-GRADE'
+          'WL'#9'4'#9'WL'#9'F'#9'DEFECT B-GRADE'
+          'CKK'#9'4'#9'CK'#9'F'#9'DEFECT B-GRADE'
+          'OJ'#9'4'#9'OJ'#9'F'#9'DEFECT B-GRADE'
+          'CRT'#9'4'#9'CRT'#9'F'#9'DEFECT B-GRADE'
+          'CAJ'#9'4'#9'CAJ'#9'F'#9'DEFECT B-GRADE'
+          'PD'#9'4'#9'PD'#9'F'#9'DEFECT B-GRADE'
+          'PKP'#9'4'#9'PP'#9'F'#9'DEFECT B-GRADE'
+          'NG'#9'4'#9'BTS'#9'F'#9'DEFECT B-GRADE'
+          'BTB'#9'4'#9'BTB'#9'F'#9'DEFECT B-GRADE'
+          'WP'#9'4'#9'WP'#9'F'#9'DEFECT B-GRADE'
+          'SC'#9'4'#9'SC'#9'F'#9'DEFECT B-GRADE'
+          'KP'#9'4'#9'KP'#9'F'#9'DEFECT B-GRADE'
+          'BO'#9'4'#9'BO'#9'F'#9'DEFECT B-GRADE'
+          'TCS'#9'4'#9'KTR'#9'F'#9'DEFECT B-GRADE'
+          'SLL'#9'4'#9'SLL'#9'F'#9'DEFECT B-GRADE'
+          'KS'#9'4'#9'KS'#9'F'#9'BS'
+          'ANR'#9'4'#9'ANR'#9'F'#9'BS'
+          'UTS'#9'4'#9'UTS'#9'F'#9'BS'
+          'KBR'#9'4'#9'KBR'#9'F'#9'BS'
+          'PEMOTONG_BS'#9'10'#9'POTONGAN~DATA BS'#9'F'
+          'QTY2'#9'12'#9'BS'#9'F'#9'DITERIMA'
+          'QTY3'#9'12'#9'BK'#9'F'#9'DITERIMA'
+          'PR'#9'12'#9'PARAH'#9'F'#9'DITERIMA'
+          'UTB'#9'12'#9'PJG'#9'F'#9'DATA'
+          'LBK'#9'12'#9'LBR'#9'F'#9'DATA'
+          'CUP'#9'12'#9'CUP'#9'F'#9'DATA')
+        IniAttributes.Enabled = True
+        IniAttributes.SaveToRegistry = True
+        IniAttributes.FileName = 'Pismatex Finishing'
+        IniAttributes.Delimiter = ';;'
+        ExportOptions.ExportType = wwgetSYLK
+        TitleColor = clSkyBlue
+        FixedCols = 2
+        ShowHorzScrollBar = True
+        Align = alClient
+        DataSource = dsQBrowse_Kons2
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgWordWrap, dgShowFooter, dgDblClickColSizing]
+        ParentFont = False
+        TabOrder = 1
+        TitleAlignment = taCenter
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Lucida Sans'
+        TitleFont.Style = [fsBold]
+        TitleLines = 3
+        TitleButtons = True
+        UseTFields = False
+        PaintOptions.AlternatingRowColor = clMoneyGreen
+        PaintOptions.ActiveRecordColor = clGreen
+        GroupFieldName = 'LOKASI'
+      end
+    end
+    object TabSheet6: TTabSheet
+      Caption = 'Rekap Per Lokasi/Mesin'
+      ImageIndex = 5
+      object LabelBanner6: TLabel
+        Left = 0
+        Top = 52
+        Width = 934
+        Height = 16
+        Align = alTop
+        Color = clSkyBlue
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -13
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Panel14: TPanel
+        Left = 0
+        Top = 0
+        Width = 934
+        Height = 52
+        Align = alTop
+        BevelInner = bvLowered
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 0
+        object GroupBox6: TGroupBox
+          Left = 2
+          Top = 2
+          Width = 287
+          Height = 48
+          Align = alLeft
+          Caption = 'Filter Tanggal'
+          TabOrder = 0
+          TabStop = True
+          object Label4: TLabel
+            Left = 132
+            Top = 22
+            Width = 24
+            Height = 13
+            Caption = 'S/D'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object VTglAwal6: TwwDBDateTimePicker
+            Left = 8
+            Top = 16
+            Width = 121
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 0
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAwal6Change
+          end
+          object VTglAkhir6: TwwDBDateTimePicker
+            Left = 160
+            Top = 16
+            Width = 121
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 1
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAkhir6Change
+          end
+        end
+        object Panel15: TPanel
+          Left = 289
+          Top = 2
+          Width = 568
+          Height = 48
+          Align = alLeft
+          BevelOuter = bvNone
+          TabOrder = 1
+          object vOperand6: TLabel
+            Left = 150
+            Top = 20
+            Width = 44
+            Height = 24
+            Cursor = crHandPoint
+            Alignment = taCenter
+            AutoSize = False
+            Caption = 'LIKE'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clNavy
+            Font.Height = -19
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            OnClick = vOperand6Click
+          end
+          object cbTanggal6: TCheckBox
+            Left = 200
+            Top = 5
+            Width = 129
+            Height = 17
+            Caption = 'Ikutkan Filter &Tanggal'
+            Checked = True
+            State = cbChecked
+            TabOrder = 1
+            OnClick = cbTanggal6Click
+          end
+          object BitBtn10: TBitBtn
+            Left = 328
+            Top = 20
+            Width = 75
+            Height = 25
+            Caption = 'Filte&r'
+            Default = True
+            ModalResult = 1
+            TabOrder = 3
+            OnClick = BitBtn10Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+              555555555555555555555555555555555555555555FF55555555555559055555
+              55555555577FF5555555555599905555555555557777F5555555555599905555
+              555555557777FF5555555559999905555555555777777F555555559999990555
+              5555557777777FF5555557990599905555555777757777F55555790555599055
+              55557775555777FF5555555555599905555555555557777F5555555555559905
+              555555555555777FF5555555555559905555555555555777FF55555555555579
+              05555555555555777FF5555555555557905555555555555777FF555555555555
+              5990555555555555577755555555555555555555555555555555}
+            NumGlyphs = 2
+          end
+          object ECari6: TEdit
+            Left = 200
+            Top = 23
+            Width = 121
+            Height = 19
+            Ctl3D = False
+            ParentCtl3D = False
+            TabOrder = 2
+          end
+          object cbOtomatis6: TCheckBox
+            Left = 7
+            Top = 5
+            Width = 98
+            Height = 17
+            Caption = 'Cari &Otomatis'
+            TabOrder = 0
+            OnClick = cbOtomatis6Click
+          end
+          object dbcField6: TwwDBComboBox
+            Left = 8
+            Top = 23
+            Width = 137
+            Height = 19
+            ShowButton = True
+            Style = csDropDown
+            MapList = False
+            AllowClearKey = False
+            Color = clYellow
+            DropDownCount = 8
+            ItemHeight = 0
+            Items.Strings = (
+              'SEMUA KOLOM')
+            ItemIndex = 0
+            Sorted = False
+            TabOrder = 4
+            UnboundDataType = wwDefault
+            OnEnter = dbcField6Enter
+          end
+          object BitBtn11: TBitBtn
+            Left = 408
+            Top = 20
+            Width = 97
+            Height = 25
+            Caption = '&Export2Excel'
+            TabOrder = 5
+            OnClick = BitBtn11Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+              00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+              00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+              00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+              0003737FFFFFFFFF7F7330099999999900333777777777777733}
+            NumGlyphs = 2
+          end
+        end
+      end
+      object wwDBGrid6: TwwDBGrid
+        Left = 0
+        Top = 68
+        Width = 934
+        Height = 440
+        Selected.Strings = (
+          'LOKASI'#9'3'#9'LOKASI'#9'F'
+          'GRUP'#9'3'#9'GRUP'#9'F'
+          'PROSES'#9'3'#9'MESIN'#9'F'
+          'QTY'#9'12'#9'QTY'#9'F'#9'DARI TENUN'
+          'LD'#9'4'#9'LD'#9'F'#9'DEFECT B-GRADE'
+          'LB'#9'4'#9'LB'#9'F'#9'DEFECT B-GRADE'
+          'LT'#9'4'#9'LT'#9'F'#9'DEFECT B-GRADE'
+          'LK'#9'4'#9'LK'#9'F'#9'DEFECT B-GRADE'
+          'PL'#9'4'#9'FPK'#9'F'#9'DEFECT B-GRADE'
+          'LL'#9'4'#9'FLS'#9'F'#9'DEFECT B-GRADE'
+          'LPT'#9'4'#9'LPT'#9'F'#9'DEFECT B-GRADE'
+          'LRG'#9'4'#9'LRG'#9'F'#9'DEFECT B-GRADE'
+          'WL'#9'4'#9'WL'#9'F'#9'DEFECT B-GRADE'
+          'CKK'#9'4'#9'CK'#9'F'#9'DEFECT B-GRADE'
+          'OJ'#9'4'#9'OJ'#9'F'#9'DEFECT B-GRADE'
+          'CRT'#9'4'#9'CRT'#9'F'#9'DEFECT B-GRADE'
+          'CAJ'#9'4'#9'CAJ'#9'F'#9'DEFECT B-GRADE'
+          'PD'#9'4'#9'PD'#9'F'#9'DEFECT B-GRADE'
+          'PKP'#9'4'#9'PP'#9'F'#9'DEFECT B-GRADE'
+          'NG'#9'4'#9'BTS'#9'F'#9'DEFECT B-GRADE'
+          'BTB'#9'4'#9'BTB'#9'F'#9'DEFECT B-GRADE'
+          'WP'#9'4'#9'WP'#9'F'#9'DEFECT B-GRADE'
+          'SC'#9'4'#9'SC'#9'F'#9'DEFECT B-GRADE'
+          'KP'#9'4'#9'KP'#9'F'#9'DEFECT B-GRADE'
+          'BO'#9'4'#9'BO'#9'F'#9'DEFECT B-GRADE'
+          'TCS'#9'4'#9'KTR'#9'F'#9'DEFECT B-GRADE'
+          'SLL'#9'4'#9'SLL'#9'F'#9'DEFECT B-GRADE'
+          'KS'#9'4'#9'KS'#9'F'#9'BS'
+          'ANR'#9'4'#9'ANR'#9'F'#9'BS'
+          'UTS'#9'4'#9'UTS'#9'F'#9'BS'
+          'KBR'#9'4'#9'KBR'#9'F'#9'BS'
+          'PEMOTONG_BS'#9'10'#9'POTONGAN~DATA BS'#9'F'
+          'QTY2'#9'12'#9'BS'#9'F'#9'DITERIMA'
+          'QTY3'#9'12'#9'BK'#9'F'#9'DITERIMA'
+          'PR'#9'12'#9'PARAH'#9'F'#9'DITERIMA'
+          'UTB'#9'12'#9'PJG'#9'F'#9'DATA'
+          'LBK'#9'12'#9'LBR'#9'F'#9'DATA'
+          'CUP'#9'12'#9'CUP'#9'F'#9'DATA')
+        IniAttributes.Enabled = True
+        IniAttributes.SaveToRegistry = True
+        IniAttributes.FileName = 'Pismatex Finishing'
+        IniAttributes.Delimiter = ';;'
+        ExportOptions.ExportType = wwgetSYLK
+        TitleColor = clSkyBlue
+        FixedCols = 2
+        ShowHorzScrollBar = True
+        Align = alClient
+        DataSource = dsQBrowse_Mesin
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgWordWrap, dgShowFooter, dgDblClickColSizing]
+        ParentFont = False
+        TabOrder = 1
+        TitleAlignment = taCenter
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Lucida Sans'
+        TitleFont.Style = [fsBold]
+        TitleLines = 3
+        TitleButtons = True
+        UseTFields = False
+        PaintOptions.AlternatingRowColor = clMoneyGreen
+        PaintOptions.ActiveRecordColor = clGreen
+        GroupFieldName = 'LOKASI'
+      end
+    end
+    object TabSheet7: TTabSheet
+      Caption = 'Rekap Per Formasi/Operator'
+      ImageIndex = 6
+      object LabelBanner7: TLabel
+        Left = 0
+        Top = 52
+        Width = 934
+        Height = 16
+        Align = alTop
+        Color = clSkyBlue
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -13
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object wwDBGrid7: TwwDBGrid
+        Left = 0
+        Top = 68
+        Width = 934
+        Height = 440
+        Selected.Strings = (
+          'FORMASI'#9'20'#9'FORMASI'#9'F'
+          'LOKASI'#9'3'#9'LOKASI'#9'F'
+          'GRUP'#9'3'#9'GRUP'#9'F'
+          'PROSES'#9'3'#9'MESIN'#9'F'
+          'QTY'#9'12'#9'QTY'#9'F'#9'DARI TENUN'
+          'LD'#9'4'#9'LD'#9'F'#9'DEFECT B-GRADE'
+          'LB'#9'4'#9'LB'#9'F'#9'DEFECT B-GRADE'
+          'LT'#9'4'#9'LT'#9'F'#9'DEFECT B-GRADE'
+          'LK'#9'4'#9'LK'#9'F'#9'DEFECT B-GRADE'
+          'PL'#9'4'#9'FPK'#9'F'#9'DEFECT B-GRADE'
+          'LL'#9'4'#9'FLS'#9'F'#9'DEFECT B-GRADE'
+          'LPT'#9'4'#9'LPT'#9'F'#9'DEFECT B-GRADE'
+          'LRG'#9'4'#9'LRG'#9'F'#9'DEFECT B-GRADE'
+          'WL'#9'4'#9'WL'#9'F'#9'DEFECT B-GRADE'
+          'CKK'#9'4'#9'CK'#9'F'#9'DEFECT B-GRADE'
+          'OJ'#9'4'#9'OJ'#9'F'#9'DEFECT B-GRADE'
+          'CRT'#9'4'#9'CRT'#9'F'#9'DEFECT B-GRADE'
+          'CAJ'#9'4'#9'CAJ'#9'F'#9'DEFECT B-GRADE'
+          'PD'#9'4'#9'PD'#9'F'#9'DEFECT B-GRADE'
+          'PKP'#9'4'#9'PP'#9'F'#9'DEFECT B-GRADE'
+          'NG'#9'4'#9'BTS'#9'F'#9'DEFECT B-GRADE'
+          'BTB'#9'4'#9'BTB'#9'F'#9'DEFECT B-GRADE'
+          'WP'#9'4'#9'WP'#9'F'#9'DEFECT B-GRADE'
+          'SC'#9'4'#9'SC'#9'F'#9'DEFECT B-GRADE'
+          'KP'#9'4'#9'KP'#9'F'#9'DEFECT B-GRADE'
+          'BO'#9'4'#9'BO'#9'F'#9'DEFECT B-GRADE'
+          'TCS'#9'4'#9'KTR'#9'F'#9'DEFECT B-GRADE'
+          'SLL'#9'4'#9'SLL'#9'F'#9'DEFECT B-GRADE'
+          'KS'#9'4'#9'KS'#9'F'#9'BS'
+          'ANR'#9'4'#9'ANR'#9'F'#9'BS'
+          'UTS'#9'4'#9'UTS'#9'F'#9'BS'
+          'KBR'#9'4'#9'KBR'#9'F'#9'BS'
+          'PEMOTONG_BS'#9'10'#9'POTONGAN~DATA BS'#9'F'
+          'QTY2'#9'12'#9'BS'#9'F'#9'DITERIMA'
+          'QTY3'#9'12'#9'BK'#9'F'#9'DITERIMA'
+          'PR'#9'12'#9'PARAH'#9'F'#9'DITERIMA'
+          'UTB'#9'12'#9'PJG'#9'F'#9'DATA'
+          'LBK'#9'12'#9'LBR'#9'F'#9'DATA'
+          'CUP'#9'12'#9'CUP'#9'F'#9'DATA')
+        IniAttributes.Enabled = True
+        IniAttributes.SaveToRegistry = True
+        IniAttributes.FileName = 'Pismatex Finishing'
+        IniAttributes.Delimiter = ';;'
+        ExportOptions.ExportType = wwgetSYLK
+        TitleColor = clSkyBlue
+        FixedCols = 2
+        ShowHorzScrollBar = True
+        Align = alClient
+        DataSource = dsQBrowse_Formasi
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgWordWrap, dgShowFooter, dgDblClickColSizing]
+        ParentFont = False
+        TabOrder = 0
+        TitleAlignment = taCenter
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Lucida Sans'
+        TitleFont.Style = [fsBold]
+        TitleLines = 3
+        TitleButtons = True
+        UseTFields = False
+        PaintOptions.AlternatingRowColor = clMoneyGreen
+        PaintOptions.ActiveRecordColor = clGreen
+        GroupFieldName = 'FORMASI'
+      end
+      object Panel16: TPanel
+        Left = 0
+        Top = 0
+        Width = 934
+        Height = 52
+        Align = alTop
+        BevelInner = bvLowered
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 1
+        object GroupBox7: TGroupBox
+          Left = 2
+          Top = 2
+          Width = 287
+          Height = 48
+          Align = alLeft
+          Caption = 'Filter Tanggal'
+          TabOrder = 0
+          TabStop = True
+          object Label6: TLabel
+            Left = 132
+            Top = 22
+            Width = 24
+            Height = 13
+            Caption = 'S/D'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object VTglAwal7: TwwDBDateTimePicker
+            Left = 8
+            Top = 16
+            Width = 121
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 0
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAwal7Change
+          end
+          object VTglAkhir7: TwwDBDateTimePicker
+            Left = 160
+            Top = 16
+            Width = 121
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 1
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAkhir7Change
+          end
+        end
+        object Panel17: TPanel
+          Left = 289
+          Top = 2
+          Width = 568
+          Height = 48
+          Align = alLeft
+          BevelOuter = bvNone
+          TabOrder = 1
+          object vOperand7: TLabel
+            Left = 150
+            Top = 20
+            Width = 44
+            Height = 24
+            Cursor = crHandPoint
+            Alignment = taCenter
+            AutoSize = False
+            Caption = 'LIKE'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clNavy
+            Font.Height = -19
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            OnClick = vOperand7Click
+          end
+          object cbTanggal7: TCheckBox
+            Left = 200
+            Top = 5
+            Width = 129
+            Height = 17
+            Caption = 'Ikutkan Filter &Tanggal'
+            Checked = True
+            State = cbChecked
+            TabOrder = 1
+            OnClick = cbTanggal7Click
+          end
+          object BitBtn12: TBitBtn
+            Left = 328
+            Top = 20
+            Width = 75
+            Height = 25
+            Caption = 'Filte&r'
+            Default = True
+            ModalResult = 1
+            TabOrder = 3
+            OnClick = BitBtn12Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+              555555555555555555555555555555555555555555FF55555555555559055555
+              55555555577FF5555555555599905555555555557777F5555555555599905555
+              555555557777FF5555555559999905555555555777777F555555559999990555
+              5555557777777FF5555557990599905555555777757777F55555790555599055
+              55557775555777FF5555555555599905555555555557777F5555555555559905
+              555555555555777FF5555555555559905555555555555777FF55555555555579
+              05555555555555777FF5555555555557905555555555555777FF555555555555
+              5990555555555555577755555555555555555555555555555555}
+            NumGlyphs = 2
+          end
+          object ECari7: TEdit
+            Left = 200
+            Top = 23
+            Width = 121
+            Height = 19
+            Ctl3D = False
+            ParentCtl3D = False
+            TabOrder = 2
+          end
+          object cbOtomatis7: TCheckBox
+            Left = 7
+            Top = 5
+            Width = 98
+            Height = 17
+            Caption = 'Cari &Otomatis'
+            TabOrder = 0
+            OnClick = cbOtomatis7Click
+          end
+          object dbcField7: TwwDBComboBox
+            Left = 8
+            Top = 23
+            Width = 137
+            Height = 19
+            ShowButton = True
+            Style = csDropDown
+            MapList = False
+            AllowClearKey = False
+            Color = clYellow
+            DropDownCount = 8
+            ItemHeight = 0
+            Items.Strings = (
+              'SEMUA KOLOM')
+            ItemIndex = 0
+            Sorted = False
+            TabOrder = 4
+            UnboundDataType = wwDefault
+            OnEnter = dbcField7Enter
+          end
+          object BitBtn13: TBitBtn
+            Left = 408
+            Top = 20
+            Width = 97
+            Height = 25
+            Caption = '&Export2Excel'
+            TabOrder = 5
+            OnClick = BitBtn11Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+              00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+              00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+              00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+              0003737FFFFFFFFF7F7330099999999900333777777777777733}
+            NumGlyphs = 2
+          end
+        end
+      end
+    end
+  end
+  object Panel5: TPanel
+    Left = 1039
+    Top = 32
+    Width = 97
+    Height = 536
+    Align = alRight
+    BevelOuter = bvNone
+    Color = 4605440
+    TabOrder = 2
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1136
+    Height = 32
+    Align = alTop
+    BevelOuter = bvNone
+    Color = 4605440
+    TabOrder = 3
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 568
+    Width = 1136
+    Height = 32
+    Align = alBottom
+    BevelOuter = bvNone
+    Color = 4605440
+    TabOrder = 4
+  end
+  object QBrowse_Det: TOracleDataSet
+    SQL.Strings = (
+      
+        'select * from (select * from ipisma_db5.vrekap_hasil_potong_bs_o' +
+        'pr)'
+      ':myparam')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000D0000006F726465
+      72206279204E494B0000000000}
+    QBEDefinition.QBEFieldDefs = {
+      0400000029000000040000004752555001000000000003000000515459010000
+      000000090000004F50525F54454E554E0100000000000600000050524F534553
+      0100000000000700000054414E4747414C010000000000030000004E494B0100
+      00000000020000004C44010000000000020000004C4201000000000002000000
+      4C54010000000000020000004C4B010000000000020000004C4C010000000000
+      02000000574C0100000000000300000043525401000000000002000000504401
+      000000000002000000504C010000000000020000004E47010000000000020000
+      005750010000000000020000005343010000000000020000004B530100000000
+      00020000004B5001000000000002000000424F01000000000004000000515459
+      3201000000000004000000515459330100000000000200000050520100000000
+      0003000000555442010000000000030000004C424B0100000000000300000053
+      4C4C010000000000030000005443530100000000000300000043555001000000
+      0000020000004F4A010000000000030000004C5054010000000000030000004C
+      524701000000000003000000434B4B0100000000000300000043414A01000000
+      000003000000504B500100000000000300000042544201000000000003000000
+      414E5201000000000003000000555453010000000000030000004B4252010000
+      000000060000004C4F4B4153490100000000000A0000004B4F4E535452554B53
+      49010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    AfterScroll = QBrowse_DetAfterScroll
+    OnCalcFields = QBrowse_DetCalcFields
+    Left = 116
+    Top = 177
+    object QBrowse_DetNIK: TStringField
+      FieldName = 'NIK'
+      Size = 10
+    end
+    object QBrowse_DetOPR_TENUN: TStringField
+      FieldName = 'OPR_TENUN'
+      Size = 50
+    end
+    object QBrowse_DetPROSES: TStringField
+      FieldName = 'PROSES'
+      Size = 30
+    end
+    object QBrowse_DetTANGGAL: TDateTimeField
+      FieldName = 'TANGGAL'
+    end
+    object QBrowse_DetGRUP: TStringField
+      FieldName = 'GRUP'
+      Size = 3
+    end
+    object QBrowse_DetQTY: TFloatField
+      FieldName = 'QTY'
+    end
+    object QBrowse_DetLD: TFloatField
+      FieldName = 'LD'
+    end
+    object QBrowse_DetLB: TFloatField
+      FieldName = 'LB'
+    end
+    object QBrowse_DetLT: TFloatField
+      FieldName = 'LT'
+    end
+    object QBrowse_DetLK: TFloatField
+      FieldName = 'LK'
+    end
+    object QBrowse_DetPL: TFloatField
+      FieldName = 'PL'
+    end
+    object QBrowse_DetLL: TFloatField
+      FieldName = 'LL'
+    end
+    object QBrowse_DetLPT: TFloatField
+      FieldName = 'LPT'
+    end
+    object QBrowse_DetLRG: TFloatField
+      FieldName = 'LRG'
+    end
+    object QBrowse_DetWL: TFloatField
+      FieldName = 'WL'
+    end
+    object QBrowse_DetCKK: TFloatField
+      FieldName = 'CKK'
+    end
+    object QBrowse_DetOJ: TFloatField
+      FieldName = 'OJ'
+    end
+    object QBrowse_DetCRT: TFloatField
+      FieldName = 'CRT'
+    end
+    object QBrowse_DetCAJ: TFloatField
+      FieldName = 'CAJ'
+    end
+    object QBrowse_DetPD: TFloatField
+      FieldName = 'PD'
+    end
+    object QBrowse_DetPKP: TFloatField
+      FieldName = 'PKP'
+    end
+    object QBrowse_DetNG: TFloatField
+      FieldName = 'NG'
+    end
+    object QBrowse_DetBTB: TFloatField
+      FieldName = 'BTB'
+    end
+    object QBrowse_DetWP: TFloatField
+      FieldName = 'WP'
+    end
+    object QBrowse_DetSC: TFloatField
+      FieldName = 'SC'
+    end
+    object QBrowse_DetKP: TFloatField
+      FieldName = 'KP'
+    end
+    object QBrowse_DetBO: TFloatField
+      FieldName = 'BO'
+    end
+    object QBrowse_DetTCS: TFloatField
+      FieldName = 'TCS'
+    end
+    object QBrowse_DetSLL: TFloatField
+      FieldName = 'SLL'
+    end
+    object QBrowse_DetKS: TFloatField
+      FieldName = 'KS'
+    end
+    object QBrowse_DetANR: TFloatField
+      FieldName = 'ANR'
+    end
+    object QBrowse_DetUTS: TFloatField
+      FieldName = 'UTS'
+    end
+    object QBrowse_DetKBR: TFloatField
+      FieldName = 'KBR'
+    end
+    object QBrowse_DetQTY2: TFloatField
+      FieldName = 'QTY2'
+    end
+    object QBrowse_DetQTY3: TFloatField
+      FieldName = 'QTY3'
+    end
+    object QBrowse_DetPR: TFloatField
+      FieldName = 'PR'
+    end
+    object QBrowse_DetUTB: TIntegerField
+      FieldName = 'UTB'
+    end
+    object QBrowse_DetLBK: TIntegerField
+      FieldName = 'LBK'
+    end
+    object QBrowse_DetCUP: TIntegerField
+      FieldName = 'CUP'
+    end
+    object QBrowse_DetPEMOTONG_BS: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'PEMOTONG_BS'
+      Calculated = True
+    end
+    object QBrowse_DetLOKASI: TStringField
+      FieldName = 'LOKASI'
+      Size = 30
+    end
+    object QBrowse_DetKONSTRUKSI: TStringField
+      FieldName = 'KONSTRUKSI'
+      Size = 50
+    end
+  end
+  object dsQBrowse_Det: TwwDataSource
+    DataSet = QBrowse_Det
+    Left = 197
+    Top = 176
+  end
+  object QBrowseTotal_Det: TOracleDataSet
+    SQL.Strings = (
+      
+        'select sum(qty) as total from (select * from ipisma_db5.vrekap_h' +
+        'asil_potong_bs_opr)'
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000D0000006F726465
+      72206279204E494B0000000000}
+    QBEDefinition.QBEFieldDefs = {040000000100000005000000544F54414C010000000000}
+    Session = DMFrm.OS
+    Left = 169
+    Top = 208
+    object QBrowseTotal_DetTOTAL: TFloatField
+      FieldName = 'TOTAL'
+    end
+  end
+  object QBSBK_TOT: TOracleDataSet
+    SQL.Strings = (
+      'select '
+      'sum(qty2) as total_BS,'
+      'sum(qty3) as total_BK,'
+      'sum(pr) as total_PR'
+      'from (select * from ipisma_db5.vrekap_hasil_potong_bs_opr) '
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000000300000008000000544F54414C5F425301000000000008000000544F
+      54414C5F424B01000000000008000000544F54414C5F5052010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 164
+    Top = 257
+    object QBSBK_TOTTOTAL_BS: TFloatField
+      FieldName = 'TOTAL_BS'
+    end
+    object QBSBK_TOTTOTAL_BK: TFloatField
+      FieldName = 'TOTAL_BK'
+    end
+    object QBSBK_TOTTOTAL_PR: TFloatField
+      FieldName = 'TOTAL_PR'
+    end
+  end
+  object QBrowse_Opr: TOracleDataSet
+    SQL.Strings = (
+      'select nik, '
+      'opr_tenun, '
+      'sum(qty) as qty, '
+      'sum(ld) as ld, '
+      'sum(lb) as lb, '
+      'sum(lt) as lt, '
+      'sum(lk) as lk, '
+      'sum(pl) as pl, '
+      'sum(ll) as ll, '
+      'sum(lpt) as lpt, '
+      'sum(lrg) as lrg, '
+      'sum(wl) as wl, '
+      'sum(ckk) as ckk, '
+      'sum(oj) as oj, '
+      'sum(crt) as crt, '
+      'sum(caj) as caj, '
+      'sum(pd) as pd, '
+      'sum(pkp) as pkp, '
+      'sum(ng) as ng, '
+      'sum(btb) as btb, '
+      'sum(wp) as wp, '
+      'sum(sc) as sc, '
+      'sum(kp) as kp, '
+      'sum(bo) as bo, '
+      'sum(tcs) as tcs, '
+      'sum(sll) as sll, '
+      'sum(ks) as ks, '
+      'sum(anr) as anr, '
+      'sum(uts) as uts, '
+      'sum(kbr) as kbr, '
+      'sum(qty2) as qty2, '
+      'sum(qty3) as qty3, '
+      'sum(pr) as pr, '
+      'sum(utb) as utb, '
+      'sum(lbk) as lbk, '
+      'sum(cup) as cup'
+      'from '
+      '(select nik, '
+      'opr_tenun, '
+      'tanggal, '
+      'qty, '
+      'ld, '
+      'lb, '
+      'lt, '
+      'lk, '
+      'pl, '
+      'll, '
+      'lpt, '
+      'lrg, '
+      'wl, '
+      'ckk, '
+      'oj, '
+      'crt, '
+      'caj, '
+      'pd, '
+      'pkp, '
+      'ng, '
+      'btb, '
+      'wp, '
+      'sc, '
+      'kp, '
+      'bo, '
+      'tcs, '
+      'sll, '
+      'ks, '
+      'anr, '
+      'uts, '
+      'kbr, '
+      'qty2, '
+      'qty3, '
+      'pr, '
+      'utb, '
+      'lbk, '
+      'cup from ipisma_db5.vrekap_hasil_potong_bs_opr :myparam)'
+      'group by nik, opr_tenun'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000D0000006F726465
+      72206279204E494B0000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000002400000003000000515459010000000000090000004F50525F54454E
+      554E010000000000030000004E494B010000000000020000004C440100000000
+      00020000004C42010000000000020000004C54010000000000020000004C4B01
+      0000000000020000004C4C01000000000002000000574C010000000000030000
+      0043525401000000000002000000504401000000000002000000504C01000000
+      0000020000004E47010000000000020000005750010000000000020000005343
+      010000000000020000004B53010000000000020000004B500100000000000200
+      0000424F01000000000004000000515459320100000000000400000051545933
+      0100000000000200000050520100000000000300000055544201000000000003
+      0000004C424B01000000000003000000534C4C01000000000003000000544353
+      01000000000003000000435550010000000000020000004F4A01000000000003
+      0000004C5054010000000000030000004C524701000000000003000000434B4B
+      0100000000000300000043414A01000000000003000000504B50010000000000
+      0300000042544201000000000003000000414E52010000000000030000005554
+      53010000000000030000004B4252010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    AfterScroll = QBrowse_OprAfterScroll
+    OnCalcFields = QBrowse_OprCalcFields
+    Left = 332
+    Top = 177
+    object QBrowse_OprNIK: TStringField
+      FieldName = 'NIK'
+      Size = 10
+    end
+    object QBrowse_OprOPR_TENUN: TStringField
+      FieldName = 'OPR_TENUN'
+      Size = 50
+    end
+    object QBrowse_OprQTY: TFloatField
+      FieldName = 'QTY'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprLD: TFloatField
+      FieldName = 'LD'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprLB: TFloatField
+      FieldName = 'LB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprLT: TFloatField
+      FieldName = 'LT'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprLK: TFloatField
+      FieldName = 'LK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprPL: TFloatField
+      FieldName = 'PL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprLL: TFloatField
+      FieldName = 'LL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprLPT: TFloatField
+      FieldName = 'LPT'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprLRG: TFloatField
+      FieldName = 'LRG'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprWL: TFloatField
+      FieldName = 'WL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprCKK: TFloatField
+      FieldName = 'CKK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprOJ: TFloatField
+      FieldName = 'OJ'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprCRT: TFloatField
+      FieldName = 'CRT'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprCAJ: TFloatField
+      FieldName = 'CAJ'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprPD: TFloatField
+      FieldName = 'PD'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprPKP: TFloatField
+      FieldName = 'PKP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprNG: TFloatField
+      FieldName = 'NG'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprBTB: TFloatField
+      FieldName = 'BTB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprWP: TFloatField
+      FieldName = 'WP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprSC: TFloatField
+      FieldName = 'SC'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprKP: TFloatField
+      FieldName = 'KP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprBO: TFloatField
+      FieldName = 'BO'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprTCS: TFloatField
+      FieldName = 'TCS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprSLL: TFloatField
+      FieldName = 'SLL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprKS: TFloatField
+      FieldName = 'KS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprANR: TFloatField
+      FieldName = 'ANR'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprUTS: TFloatField
+      FieldName = 'UTS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprKBR: TFloatField
+      FieldName = 'KBR'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprQTY2: TFloatField
+      FieldName = 'QTY2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprQTY3: TFloatField
+      FieldName = 'QTY3'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprPR: TFloatField
+      FieldName = 'PR'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprUTB: TFloatField
+      FieldName = 'UTB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprLBK: TFloatField
+      FieldName = 'LBK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprCUP: TFloatField
+      FieldName = 'CUP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_OprPEMOTONG_BS: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'PEMOTONG_BS'
+      Calculated = True
+    end
+  end
+  object dsQBrowse_Opr: TwwDataSource
+    DataSet = QBrowse_Opr
+    Left = 397
+    Top = 176
+  end
+  object QBrowseTotal_Opr: TOracleDataSet
+    SQL.Strings = (
+      
+        'select sum(qty) as total from (select * from ipisma_db5.vrekap_h' +
+        'asil_potong_bs_opr)'
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000D0000006F726465
+      72206279204E494B0000000000}
+    QBEDefinition.QBEFieldDefs = {040000000100000005000000544F54414C010000000000}
+    Session = DMFrm.OS
+    Left = 369
+    Top = 208
+    object QBrowseTotal_OprTOTAL: TFloatField
+      FieldName = 'TOTAL'
+    end
+  end
+  object QTOT_Opr: TOracleDataSet
+    SQL.Strings = (
+      'select '
+      'sum(qty2) as total_BS,'
+      'sum(qty3) as total_BK,'
+      'sum(pr) as total_PR'
+      'from (select * from ipisma_db5.vrekap_hasil_potong_bs_opr) '
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000000300000008000000544F54414C5F425301000000000008000000544F
+      54414C5F424B01000000000008000000544F54414C5F5052010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 364
+    Top = 257
+    object QTOT_OprTOTAL_BS: TFloatField
+      FieldName = 'TOTAL_BS'
+    end
+    object QTOT_OprTOTAL_BK: TFloatField
+      FieldName = 'TOTAL_BK'
+    end
+    object QTOT_OprTOTAL_PR: TFloatField
+      FieldName = 'TOTAL_PR'
+    end
+  end
+  object QBrowse_Grup: TOracleDataSet
+    SQL.Strings = (
+      'select lokasi, grup, '
+      'sum(qty) as qty, '
+      'sum(ld) as ld, '
+      'sum(lb) as lb, '
+      'sum(lt) as lt, '
+      'sum(lk) as lk, '
+      'sum(pl) as pl, '
+      'sum(ll) as ll, '
+      'sum(lpt) as lpt, '
+      'sum(lrg) as lrg, '
+      'sum(wl) as wl, '
+      'sum(ckk) as ckk, '
+      'sum(oj) as oj, '
+      'sum(crt) as crt, '
+      'sum(caj) as caj, '
+      'sum(pd) as pd, '
+      'sum(pkp) as pkp, '
+      'sum(ng) as ng, '
+      'sum(btb) as btb, '
+      'sum(wp) as wp, '
+      'sum(sc) as sc, '
+      'sum(kp) as kp, '
+      'sum(bo) as bo, '
+      'sum(tcs) as tcs, '
+      'sum(sll) as sll, '
+      'sum(ks) as ks, '
+      'sum(anr) as anr, '
+      'sum(uts) as uts, '
+      'sum(kbr) as kbr, '
+      'sum(qty2) as qty2, '
+      'sum(qty3) as qty3, '
+      'sum(pr) as pr, '
+      'sum(utb) as utb, '
+      'sum(lbk) as lbk, '
+      'sum(cup) as cup'
+      'from '
+      '(select lokasi, grup, '
+      'tanggal, '
+      'qty, '
+      'ld, '
+      'lb, '
+      'lt, '
+      'lk, '
+      'pl, '
+      'll, '
+      'lpt, '
+      'lrg, '
+      'wl, '
+      'ckk, '
+      'oj, '
+      'crt, '
+      'caj, '
+      'pd, '
+      'pkp, '
+      'ng, '
+      'btb, '
+      'wp, '
+      'sc, '
+      'kp, '
+      'bo, '
+      'tcs, '
+      'sll, '
+      'ks, '
+      'anr, '
+      'uts, '
+      'kbr, '
+      'qty2, '
+      'qty3, '
+      'pr, '
+      'utb, '
+      'lbk, '
+      'cup from ipisma_db5.vrekap_hasil_potong_bs_opr :myparam)'
+      'group by lokasi, grup'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000D0000006F726465
+      72206279204E494B0000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000002400000003000000515459010000000000020000004C440100000000
+      00020000004C42010000000000020000004C54010000000000020000004C4B01
+      0000000000020000004C4C01000000000002000000574C010000000000030000
+      0043525401000000000002000000504401000000000002000000504C01000000
+      0000020000004E47010000000000020000005750010000000000020000005343
+      010000000000020000004B53010000000000020000004B500100000000000200
+      0000424F01000000000004000000515459320100000000000400000051545933
+      0100000000000200000050520100000000000300000055544201000000000003
+      0000004C424B01000000000003000000534C4C01000000000003000000544353
+      01000000000003000000435550010000000000020000004F4A01000000000003
+      0000004C5054010000000000030000004C524701000000000003000000434B4B
+      0100000000000300000043414A01000000000003000000504B50010000000000
+      0300000042544201000000000003000000414E52010000000000030000005554
+      53010000000000030000004B4252010000000000040000004752555001000000
+      0000060000004C4F4B415349010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    AfterScroll = QBrowse_GrupAfterScroll
+    OnCalcFields = QBrowse_GrupCalcFields
+    Left = 516
+    Top = 177
+    object QBrowse_GrupGRUP: TStringField
+      FieldName = 'GRUP'
+      Size = 3
+    end
+    object QBrowse_GrupQTY: TFloatField
+      FieldName = 'QTY'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupLD: TFloatField
+      FieldName = 'LD'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupLB: TFloatField
+      FieldName = 'LB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupLT: TFloatField
+      FieldName = 'LT'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupLK: TFloatField
+      FieldName = 'LK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupPL: TFloatField
+      FieldName = 'PL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupLL: TFloatField
+      FieldName = 'LL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupLPT: TFloatField
+      FieldName = 'LPT'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupLRG: TFloatField
+      FieldName = 'LRG'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupWL: TFloatField
+      FieldName = 'WL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupCKK: TFloatField
+      FieldName = 'CKK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupOJ: TFloatField
+      FieldName = 'OJ'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupCRT: TFloatField
+      FieldName = 'CRT'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupCAJ: TFloatField
+      FieldName = 'CAJ'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupPD: TFloatField
+      FieldName = 'PD'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupPKP: TFloatField
+      FieldName = 'PKP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupNG: TFloatField
+      FieldName = 'NG'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupBTB: TFloatField
+      FieldName = 'BTB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupWP: TFloatField
+      FieldName = 'WP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupSC: TFloatField
+      FieldName = 'SC'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupKP: TFloatField
+      FieldName = 'KP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupBO: TFloatField
+      FieldName = 'BO'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupTCS: TFloatField
+      FieldName = 'TCS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupSLL: TFloatField
+      FieldName = 'SLL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupKS: TFloatField
+      FieldName = 'KS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupANR: TFloatField
+      FieldName = 'ANR'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupUTS: TFloatField
+      FieldName = 'UTS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupKBR: TFloatField
+      FieldName = 'KBR'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupQTY2: TFloatField
+      FieldName = 'QTY2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupQTY3: TFloatField
+      FieldName = 'QTY3'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupPR: TFloatField
+      FieldName = 'PR'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupUTB: TFloatField
+      FieldName = 'UTB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupLBK: TFloatField
+      FieldName = 'LBK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupCUP: TFloatField
+      FieldName = 'CUP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_GrupPEMOTONG_BS: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'PEMOTONG_BS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+      Calculated = True
+    end
+    object QBrowse_GrupLOKASI: TStringField
+      FieldName = 'LOKASI'
+      Size = 30
+    end
+  end
+  object dsQBrowse_Grup: TwwDataSource
+    DataSet = QBrowse_Grup
+    Left = 581
+    Top = 176
+  end
+  object QBrowseTotal_Grup: TOracleDataSet
+    SQL.Strings = (
+      
+        'select sum(qty) as total from (select * from ipisma_db5.vrekap_h' +
+        'asil_potong_bs_opr)'
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000D0000006F726465
+      72206279204E494B0000000000}
+    QBEDefinition.QBEFieldDefs = {040000000100000005000000544F54414C010000000000}
+    Session = DMFrm.OS
+    Left = 553
+    Top = 208
+    object QBrowseTotal_GrupTOTAL: TFloatField
+      FieldName = 'TOTAL'
+    end
+  end
+  object QTOT_Grup: TOracleDataSet
+    SQL.Strings = (
+      'select '
+      'sum(qty2) as total_BS,'
+      'sum(qty3) as total_BK,'
+      'sum(pr) as total_PR'
+      'from (select * from ipisma_db5.vrekap_hasil_potong_bs_opr) '
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000000300000008000000544F54414C5F425301000000000008000000544F
+      54414C5F424B01000000000008000000544F54414C5F5052010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 556
+    Top = 257
+    object QTOT_GrupTOTAL_BS: TFloatField
+      FieldName = 'TOTAL_BS'
+    end
+    object QTOT_GrupTOTAL_BK: TFloatField
+      FieldName = 'TOTAL_BK'
+    end
+    object QTOT_GrupTOTAL_PR: TFloatField
+      FieldName = 'TOTAL_PR'
+    end
+  end
+  object QBrowse_Kons: TOracleDataSet
+    SQL.Strings = (
+      'select lokasi, konstruksi, '
+      'sum(qty) as qty, '
+      'sum(ld) as ld, '
+      'sum(lb) as lb, '
+      'sum(lt) as lt, '
+      'sum(lk) as lk, '
+      'sum(pl) as pl, '
+      'sum(ll) as ll, '
+      'sum(lpt) as lpt, '
+      'sum(lrg) as lrg, '
+      'sum(wl) as wl, '
+      'sum(ckk) as ckk, '
+      'sum(oj) as oj, '
+      'sum(crt) as crt, '
+      'sum(caj) as caj, '
+      'sum(pd) as pd, '
+      'sum(pkp) as pkp, '
+      'sum(ng) as ng, '
+      'sum(btb) as btb, '
+      'sum(wp) as wp, '
+      'sum(sc) as sc, '
+      'sum(kp) as kp, '
+      'sum(bo) as bo, '
+      'sum(tcs) as tcs, '
+      'sum(sll) as sll, '
+      'sum(ks) as ks, '
+      'sum(anr) as anr, '
+      'sum(uts) as uts, '
+      'sum(kbr) as kbr, '
+      'sum(qty2) as qty2, '
+      'sum(qty3) as qty3, '
+      'sum(pr) as pr, '
+      'sum(utb) as utb, '
+      'sum(lbk) as lbk, '
+      'sum(cup) as cup'
+      'from '
+      '(select lokasi, konstruksi, '
+      'tanggal, '
+      'qty, '
+      'ld, '
+      'lb, '
+      'lt, '
+      'lk, '
+      'pl, '
+      'll, '
+      'lpt, '
+      'lrg, '
+      'wl, '
+      'ckk, '
+      'oj, '
+      'crt, '
+      'caj, '
+      'pd, '
+      'pkp, '
+      'ng, '
+      'btb, '
+      'wp, '
+      'sc, '
+      'kp, '
+      'bo, '
+      'tcs, '
+      'sll, '
+      'ks, '
+      'anr, '
+      'uts, '
+      'kbr, '
+      'qty2, '
+      'qty3, '
+      'pr, '
+      'utb, '
+      'lbk, '
+      'cup from ipisma_db5.vrekap_hasil_potong_bs_opr :myparam)'
+      'group by lokasi, konstruksi'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000D0000006F726465
+      72206279204E494B0000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000002400000003000000515459010000000000020000004C440100000000
+      00020000004C42010000000000020000004C54010000000000020000004C4B01
+      0000000000020000004C4C01000000000002000000574C010000000000030000
+      0043525401000000000002000000504401000000000002000000504C01000000
+      0000020000004E47010000000000020000005750010000000000020000005343
+      010000000000020000004B53010000000000020000004B500100000000000200
+      0000424F01000000000004000000515459320100000000000400000051545933
+      0100000000000200000050520100000000000300000055544201000000000003
+      0000004C424B01000000000003000000534C4C01000000000003000000544353
+      01000000000003000000435550010000000000020000004F4A01000000000003
+      0000004C5054010000000000030000004C524701000000000003000000434B4B
+      0100000000000300000043414A01000000000003000000504B50010000000000
+      0300000042544201000000000003000000414E52010000000000030000005554
+      53010000000000030000004B4252010000000000060000004C4F4B4153490100
+      000000000A0000004B4F4E535452554B5349010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    AfterScroll = QBrowse_KonsAfterScroll
+    OnCalcFields = QBrowse_KonsCalcFields
+    Left = 684
+    Top = 177
+    object QBrowse_KonsPEMOTONG_BS: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'PEMOTONG_BS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+      Calculated = True
+    end
+    object QBrowse_KonsLOKASI: TStringField
+      FieldName = 'LOKASI'
+      Size = 30
+    end
+    object QBrowse_KonsKONSTRUKSI: TStringField
+      FieldName = 'KONSTRUKSI'
+      Size = 50
+    end
+    object QBrowse_KonsQTY: TFloatField
+      FieldName = 'QTY'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsLD: TFloatField
+      FieldName = 'LD'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsLB: TFloatField
+      FieldName = 'LB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsLT: TFloatField
+      FieldName = 'LT'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsLK: TFloatField
+      FieldName = 'LK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsPL: TFloatField
+      FieldName = 'PL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsLL: TFloatField
+      FieldName = 'LL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsLPT: TFloatField
+      FieldName = 'LPT'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsLRG: TFloatField
+      FieldName = 'LRG'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsWL: TFloatField
+      FieldName = 'WL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsCKK: TFloatField
+      FieldName = 'CKK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsOJ: TFloatField
+      FieldName = 'OJ'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsCRT: TFloatField
+      FieldName = 'CRT'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsCAJ: TFloatField
+      FieldName = 'CAJ'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsPD: TFloatField
+      FieldName = 'PD'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsPKP: TFloatField
+      FieldName = 'PKP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsNG: TFloatField
+      FieldName = 'NG'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsBTB: TFloatField
+      FieldName = 'BTB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsWP: TFloatField
+      FieldName = 'WP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsSC: TFloatField
+      FieldName = 'SC'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsKP: TFloatField
+      FieldName = 'KP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsBO: TFloatField
+      FieldName = 'BO'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsTCS: TFloatField
+      FieldName = 'TCS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsSLL: TFloatField
+      FieldName = 'SLL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsKS: TFloatField
+      FieldName = 'KS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsANR: TFloatField
+      FieldName = 'ANR'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsUTS: TFloatField
+      FieldName = 'UTS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsKBR: TFloatField
+      FieldName = 'KBR'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsQTY2: TFloatField
+      FieldName = 'QTY2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsQTY3: TFloatField
+      FieldName = 'QTY3'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsPR: TFloatField
+      FieldName = 'PR'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsUTB: TFloatField
+      FieldName = 'UTB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsLBK: TFloatField
+      FieldName = 'LBK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_KonsCUP: TFloatField
+      FieldName = 'CUP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+  end
+  object dsQBrowse_Kons: TwwDataSource
+    DataSet = QBrowse_Kons
+    Left = 749
+    Top = 176
+  end
+  object QBrowseTotal_Kons: TOracleDataSet
+    SQL.Strings = (
+      
+        'select sum(qty) as total from (select * from ipisma_db5.vrekap_h' +
+        'asil_potong_bs_opr)'
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000D0000006F726465
+      72206279204E494B0000000000}
+    QBEDefinition.QBEFieldDefs = {040000000100000005000000544F54414C010000000000}
+    Session = DMFrm.OS
+    Left = 721
+    Top = 208
+    object QBrowseTotal_KonsTOTAL: TFloatField
+      FieldName = 'TOTAL'
+    end
+  end
+  object QTOT_Kons: TOracleDataSet
+    SQL.Strings = (
+      'select '
+      'sum(qty2) as total_BS,'
+      'sum(qty3) as total_BK,'
+      'sum(pr) as total_PR'
+      'from (select * from ipisma_db5.vrekap_hasil_potong_bs_opr) '
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000000300000008000000544F54414C5F425301000000000008000000544F
+      54414C5F424B01000000000008000000544F54414C5F5052010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 724
+    Top = 257
+    object QTOT_KonsTOTAL_BS: TFloatField
+      FieldName = 'TOTAL_BS'
+    end
+    object QTOT_KonsTOTAL_BK: TFloatField
+      FieldName = 'TOTAL_BK'
+    end
+    object QTOT_KonsTOTAL_PR: TFloatField
+      FieldName = 'TOTAL_PR'
+    end
+  end
+  object QBrowse_Kons2: TOracleDataSet
+    SQL.Strings = (
+      'select konstruksi, '
+      'sum(qty) as qty, '
+      'sum(ld) as ld, '
+      'sum(lb) as lb, '
+      'sum(lt) as lt, '
+      'sum(lk) as lk, '
+      'sum(pl) as pl, '
+      'sum(ll) as ll, '
+      'sum(lpt) as lpt, '
+      'sum(lrg) as lrg, '
+      'sum(wl) as wl, '
+      'sum(ckk) as ckk, '
+      'sum(oj) as oj, '
+      'sum(crt) as crt, '
+      'sum(caj) as caj, '
+      'sum(pd) as pd, '
+      'sum(pkp) as pkp, '
+      'sum(ng) as ng, '
+      'sum(btb) as btb, '
+      'sum(wp) as wp, '
+      'sum(sc) as sc, '
+      'sum(kp) as kp, '
+      'sum(bo) as bo, '
+      'sum(tcs) as tcs, '
+      'sum(sll) as sll, '
+      'sum(ks) as ks, '
+      'sum(anr) as anr, '
+      'sum(uts) as uts, '
+      'sum(kbr) as kbr, '
+      'sum(qty2) as qty2, '
+      'sum(qty3) as qty3, '
+      'sum(pr) as pr, '
+      'sum(utb) as utb, '
+      'sum(lbk) as lbk, '
+      'sum(cup) as cup'
+      'from '
+      '(select konstruksi, '
+      'tanggal, '
+      'qty, '
+      'ld, '
+      'lb, '
+      'lt, '
+      'lk, '
+      'pl, '
+      'll, '
+      'lpt, '
+      'lrg, '
+      'wl, '
+      'ckk, '
+      'oj, '
+      'crt, '
+      'caj, '
+      'pd, '
+      'pkp, '
+      'ng, '
+      'btb, '
+      'wp, '
+      'sc, '
+      'kp, '
+      'bo, '
+      'tcs, '
+      'sll, '
+      'ks, '
+      'anr, '
+      'uts, '
+      'kbr, '
+      'qty2, '
+      'qty3, '
+      'pr, '
+      'utb, '
+      'lbk, '
+      'cup from ipisma_db5.vrekap_hasil_potong_bs_opr :myparam)'
+      'group by konstruksi'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000D0000006F726465
+      72206279204E494B0000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000002400000003000000515459010000000000020000004C440100000000
+      00020000004C42010000000000020000004C54010000000000020000004C4B01
+      0000000000020000004C4C01000000000002000000574C010000000000030000
+      0043525401000000000002000000504401000000000002000000504C01000000
+      0000020000004E47010000000000020000005750010000000000020000005343
+      010000000000020000004B53010000000000020000004B500100000000000200
+      0000424F01000000000004000000515459320100000000000400000051545933
+      0100000000000200000050520100000000000300000055544201000000000003
+      0000004C424B01000000000003000000534C4C01000000000003000000544353
+      01000000000003000000435550010000000000020000004F4A01000000000003
+      0000004C5054010000000000030000004C524701000000000003000000434B4B
+      0100000000000300000043414A01000000000003000000504B50010000000000
+      0300000042544201000000000003000000414E52010000000000030000005554
+      53010000000000030000004B4252010000000000060000004C4F4B4153490100
+      000000000A0000004B4F4E535452554B5349010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    AfterScroll = QBrowse_Kons2AfterScroll
+    OnCalcFields = QBrowse_Kons2CalcFields
+    Left = 612
+    Top = 337
+    object QBrowse_Kons2PEMOTONG_BS: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'PEMOTONG_BS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+      Calculated = True
+    end
+    object QBrowse_Kons2KONSTRUKSI: TStringField
+      FieldName = 'KONSTRUKSI'
+      Size = 50
+    end
+    object QBrowse_Kons2QTY: TFloatField
+      FieldName = 'QTY'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2LD: TFloatField
+      FieldName = 'LD'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2LB: TFloatField
+      FieldName = 'LB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2LT: TFloatField
+      FieldName = 'LT'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2LK: TFloatField
+      FieldName = 'LK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2PL: TFloatField
+      FieldName = 'PL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2LL: TFloatField
+      FieldName = 'LL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2LPT: TFloatField
+      FieldName = 'LPT'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2LRG: TFloatField
+      FieldName = 'LRG'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2WL: TFloatField
+      FieldName = 'WL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2CKK: TFloatField
+      FieldName = 'CKK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2OJ: TFloatField
+      FieldName = 'OJ'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2CRT: TFloatField
+      FieldName = 'CRT'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2CAJ: TFloatField
+      FieldName = 'CAJ'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2PD: TFloatField
+      FieldName = 'PD'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2PKP: TFloatField
+      FieldName = 'PKP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2NG: TFloatField
+      FieldName = 'NG'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2BTB: TFloatField
+      FieldName = 'BTB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2WP: TFloatField
+      FieldName = 'WP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2SC: TFloatField
+      FieldName = 'SC'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2KP: TFloatField
+      FieldName = 'KP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2BO: TFloatField
+      FieldName = 'BO'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2TCS: TFloatField
+      FieldName = 'TCS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2SLL: TFloatField
+      FieldName = 'SLL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2KS: TFloatField
+      FieldName = 'KS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2ANR: TFloatField
+      FieldName = 'ANR'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2UTS: TFloatField
+      FieldName = 'UTS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2KBR: TFloatField
+      FieldName = 'KBR'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2QTY2: TFloatField
+      FieldName = 'QTY2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2QTY3: TFloatField
+      FieldName = 'QTY3'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2PR: TFloatField
+      FieldName = 'PR'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2UTB: TFloatField
+      FieldName = 'UTB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2LBK: TFloatField
+      FieldName = 'LBK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_Kons2CUP: TFloatField
+      FieldName = 'CUP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+  end
+  object dsQBrowse_Kons2: TwwDataSource
+    DataSet = QBrowse_Kons2
+    Left = 677
+    Top = 336
+  end
+  object QBrowseTotal_Kons2: TOracleDataSet
+    SQL.Strings = (
+      
+        'select sum(qty) as total from (select * from ipisma_db5.vrekap_h' +
+        'asil_potong_bs_opr)'
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000D0000006F726465
+      72206279204E494B0000000000}
+    QBEDefinition.QBEFieldDefs = {040000000100000005000000544F54414C010000000000}
+    Session = DMFrm.OS
+    Left = 649
+    Top = 368
+    object QBrowseTotal_Kons2TOTAL: TFloatField
+      FieldName = 'TOTAL'
+    end
+  end
+  object QTOT_Kons2: TOracleDataSet
+    SQL.Strings = (
+      'select '
+      'sum(qty2) as total_BS,'
+      'sum(qty3) as total_BK,'
+      'sum(pr) as total_PR'
+      'from (select * from ipisma_db5.vrekap_hasil_potong_bs_opr) '
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000000300000008000000544F54414C5F425301000000000008000000544F
+      54414C5F424B01000000000008000000544F54414C5F5052010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 652
+    Top = 417
+    object QTOT_Kons2TOTAL_BS: TFloatField
+      FieldName = 'TOTAL_BS'
+    end
+    object QTOT_Kons2TOTAL_BK: TFloatField
+      FieldName = 'TOTAL_BK'
+    end
+    object QTOT_Kons2TOTAL_PR: TFloatField
+      FieldName = 'TOTAL_PR'
+    end
+  end
+  object QBrowse_Mesin: TOracleDataSet
+    SQL.Strings = (
+      'select lokasi, grup, proses, '
+      'sum(qty) as qty, '
+      'sum(ld) as ld, '
+      'sum(lb) as lb, '
+      'sum(lt) as lt, '
+      'sum(lk) as lk, '
+      'sum(pl) as pl, '
+      'sum(ll) as ll, '
+      'sum(lpt) as lpt, '
+      'sum(lrg) as lrg, '
+      'sum(wl) as wl, '
+      'sum(ckk) as ckk, '
+      'sum(oj) as oj, '
+      'sum(crt) as crt, '
+      'sum(caj) as caj, '
+      'sum(pd) as pd, '
+      'sum(pkp) as pkp, '
+      'sum(ng) as ng, '
+      'sum(btb) as btb, '
+      'sum(wp) as wp, '
+      'sum(sc) as sc, '
+      'sum(kp) as kp, '
+      'sum(bo) as bo, '
+      'sum(tcs) as tcs, '
+      'sum(sll) as sll, '
+      'sum(ks) as ks, '
+      'sum(anr) as anr, '
+      'sum(uts) as uts, '
+      'sum(kbr) as kbr, '
+      'sum(qty2) as qty2, '
+      'sum(qty3) as qty3, '
+      'sum(pr) as pr, '
+      'sum(utb) as utb, '
+      'sum(lbk) as lbk, '
+      'sum(cup) as cup'
+      'from '
+      '(select lokasi, grup, proses, '
+      'tanggal, '
+      'qty, '
+      'ld, '
+      'lb, '
+      'lt, '
+      'lk, '
+      'pl, '
+      'll, '
+      'lpt, '
+      'lrg, '
+      'wl, '
+      'ckk, '
+      'oj, '
+      'crt, '
+      'caj, '
+      'pd, '
+      'pkp, '
+      'ng, '
+      'btb, '
+      'wp, '
+      'sc, '
+      'kp, '
+      'bo, '
+      'tcs, '
+      'sll, '
+      'ks, '
+      'anr, '
+      'uts, '
+      'kbr, '
+      'qty2, '
+      'qty3, '
+      'pr, '
+      'utb, '
+      'lbk, '
+      'cup from ipisma_db5.vrekap_hasil_potong_bs_opr :myparam)'
+      'group by lokasi,  grup, proses'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000D0000006F726465
+      72206279204E494B0000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000002500000003000000515459010000000000020000004C440100000000
+      00020000004C42010000000000020000004C54010000000000020000004C4B01
+      0000000000020000004C4C01000000000002000000574C010000000000030000
+      0043525401000000000002000000504401000000000002000000504C01000000
+      0000020000004E47010000000000020000005750010000000000020000005343
+      010000000000020000004B53010000000000020000004B500100000000000200
+      0000424F01000000000004000000515459320100000000000400000051545933
+      0100000000000200000050520100000000000300000055544201000000000003
+      0000004C424B01000000000003000000534C4C01000000000003000000544353
+      01000000000003000000435550010000000000020000004F4A01000000000003
+      0000004C5054010000000000030000004C524701000000000003000000434B4B
+      0100000000000300000043414A01000000000003000000504B50010000000000
+      0300000042544201000000000003000000414E52010000000000030000005554
+      53010000000000030000004B4252010000000000060000004C4F4B4153490100
+      000000000600000050524F534553010000000000040000004752555001000000
+      0000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    AfterScroll = QBrowse_MesinAfterScroll
+    OnCalcFields = QBrowse_MesinCalcFields
+    Left = 772
+    Top = 345
+    object QBrowse_MesinPEMOTONG_BS: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'PEMOTONG_BS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+      Calculated = True
+    end
+    object QBrowse_MesinLOKASI: TStringField
+      FieldName = 'LOKASI'
+      Size = 30
+    end
+    object QBrowse_MesinPROSES: TStringField
+      FieldName = 'PROSES'
+      Size = 30
+    end
+    object QBrowse_MesinGRUP: TStringField
+      FieldName = 'GRUP'
+      Size = 3
+    end
+    object QBrowse_MesinQTY: TFloatField
+      FieldName = 'QTY'
+    end
+    object QBrowse_MesinLD: TFloatField
+      FieldName = 'LD'
+    end
+    object QBrowse_MesinLB: TFloatField
+      FieldName = 'LB'
+    end
+    object QBrowse_MesinLT: TFloatField
+      FieldName = 'LT'
+    end
+    object QBrowse_MesinLK: TFloatField
+      FieldName = 'LK'
+    end
+    object QBrowse_MesinPL: TFloatField
+      FieldName = 'PL'
+    end
+    object QBrowse_MesinLL: TFloatField
+      FieldName = 'LL'
+    end
+    object QBrowse_MesinLPT: TFloatField
+      FieldName = 'LPT'
+    end
+    object QBrowse_MesinLRG: TFloatField
+      FieldName = 'LRG'
+    end
+    object QBrowse_MesinWL: TFloatField
+      FieldName = 'WL'
+    end
+    object QBrowse_MesinCKK: TFloatField
+      FieldName = 'CKK'
+    end
+    object QBrowse_MesinOJ: TFloatField
+      FieldName = 'OJ'
+    end
+    object QBrowse_MesinCRT: TFloatField
+      FieldName = 'CRT'
+    end
+    object QBrowse_MesinCAJ: TFloatField
+      FieldName = 'CAJ'
+    end
+    object QBrowse_MesinPD: TFloatField
+      FieldName = 'PD'
+    end
+    object QBrowse_MesinPKP: TFloatField
+      FieldName = 'PKP'
+    end
+    object QBrowse_MesinNG: TFloatField
+      FieldName = 'NG'
+    end
+    object QBrowse_MesinBTB: TFloatField
+      FieldName = 'BTB'
+    end
+    object QBrowse_MesinWP: TFloatField
+      FieldName = 'WP'
+    end
+    object QBrowse_MesinSC: TFloatField
+      FieldName = 'SC'
+    end
+    object QBrowse_MesinKP: TFloatField
+      FieldName = 'KP'
+    end
+    object QBrowse_MesinBO: TFloatField
+      FieldName = 'BO'
+    end
+    object QBrowse_MesinTCS: TFloatField
+      FieldName = 'TCS'
+    end
+    object QBrowse_MesinSLL: TFloatField
+      FieldName = 'SLL'
+    end
+    object QBrowse_MesinKS: TFloatField
+      FieldName = 'KS'
+    end
+    object QBrowse_MesinANR: TFloatField
+      FieldName = 'ANR'
+    end
+    object QBrowse_MesinUTS: TFloatField
+      FieldName = 'UTS'
+    end
+    object QBrowse_MesinKBR: TFloatField
+      FieldName = 'KBR'
+    end
+    object QBrowse_MesinQTY2: TFloatField
+      FieldName = 'QTY2'
+    end
+    object QBrowse_MesinQTY3: TFloatField
+      FieldName = 'QTY3'
+    end
+    object QBrowse_MesinPR: TFloatField
+      FieldName = 'PR'
+    end
+    object QBrowse_MesinUTB: TFloatField
+      FieldName = 'UTB'
+    end
+    object QBrowse_MesinLBK: TFloatField
+      FieldName = 'LBK'
+    end
+    object QBrowse_MesinCUP: TFloatField
+      FieldName = 'CUP'
+    end
+  end
+  object dsQBrowse_Mesin: TwwDataSource
+    DataSet = QBrowse_Mesin
+    Left = 837
+    Top = 344
+  end
+  object QBrowseTotal_Mesin: TOracleDataSet
+    SQL.Strings = (
+      
+        'select sum(qty) as total from (select * from ipisma_db5.vrekap_h' +
+        'asil_potong_bs_opr)'
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000D0000006F726465
+      72206279204E494B0000000000}
+    QBEDefinition.QBEFieldDefs = {040000000100000005000000544F54414C010000000000}
+    Session = DMFrm.OS
+    Left = 809
+    Top = 376
+    object QBrowseTotal_MesinTOTAL: TFloatField
+      FieldName = 'TOTAL'
+    end
+  end
+  object QTOT_Mesin: TOracleDataSet
+    SQL.Strings = (
+      'select '
+      'sum(qty2) as total_BS,'
+      'sum(qty3) as total_BK,'
+      'sum(pr) as total_PR'
+      'from (select * from ipisma_db5.vrekap_hasil_potong_bs_opr) '
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000000300000008000000544F54414C5F425301000000000008000000544F
+      54414C5F424B01000000000008000000544F54414C5F5052010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 812
+    Top = 425
+    object QTOT_MesinTOTAL_BS: TFloatField
+      FieldName = 'TOTAL_BS'
+    end
+    object QTOT_MesinTOTAL_BK: TFloatField
+      FieldName = 'TOTAL_BK'
+    end
+    object QTOT_MesinTOTAL_PR: TFloatField
+      FieldName = 'TOTAL_PR'
+    end
+  end
+  object QBrowse_Formasi: TOracleDataSet
+    SQL.Strings = (
+      'select formasi, lokasi, grup, proses, '
+      'sum(qty) as qty, '
+      'sum(ld) as ld, '
+      'sum(lb) as lb, '
+      'sum(lt) as lt, '
+      'sum(lk) as lk, '
+      'sum(pl) as pl, '
+      'sum(ll) as ll, '
+      'sum(lpt) as lpt, '
+      'sum(lrg) as lrg, '
+      'sum(wl) as wl, '
+      'sum(ckk) as ckk, '
+      'sum(oj) as oj, '
+      'sum(crt) as crt, '
+      'sum(caj) as caj, '
+      'sum(pd) as pd, '
+      'sum(pkp) as pkp, '
+      'sum(ng) as ng, '
+      'sum(btb) as btb, '
+      'sum(wp) as wp, '
+      'sum(sc) as sc, '
+      'sum(kp) as kp, '
+      'sum(bo) as bo, '
+      'sum(tcs) as tcs, '
+      'sum(sll) as sll, '
+      'sum(ks) as ks, '
+      'sum(anr) as anr, '
+      'sum(uts) as uts, '
+      'sum(kbr) as kbr, '
+      'sum(qty2) as qty2, '
+      'sum(qty3) as qty3, '
+      'sum(pr) as pr, '
+      'sum(utb) as utb, '
+      'sum(lbk) as lbk, '
+      'sum(cup) as cup'
+      'from '
+      '(select formasi, lokasi, grup, proses, '
+      'tanggal, '
+      'qty, '
+      'ld, '
+      'lb, '
+      'lt, '
+      'lk, '
+      'pl, '
+      'll, '
+      'lpt, '
+      'lrg, '
+      'wl, '
+      'ckk, '
+      'oj, '
+      'crt, '
+      'caj, '
+      'pd, '
+      'pkp, '
+      'ng, '
+      'btb, '
+      'wp, '
+      'sc, '
+      'kp, '
+      'bo, '
+      'tcs, '
+      'sll, '
+      'ks, '
+      'anr, '
+      'uts, '
+      'kbr, '
+      'qty2, '
+      'qty3, '
+      'pr, '
+      'utb, '
+      'lbk, '
+      'cup from ipisma_db5.vrekap_hasil_potong_bs_formasi :myparam)'
+      'group by formasi, lokasi,  grup, proses'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D01000000110000006F726465
+      7220627920464F524D4153490000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000002600000003000000515459010000000000020000004C440100000000
+      00020000004C42010000000000020000004C54010000000000020000004C4B01
+      0000000000020000004C4C01000000000002000000574C010000000000030000
+      0043525401000000000002000000504401000000000002000000504C01000000
+      0000020000004E47010000000000020000005750010000000000020000005343
+      010000000000020000004B53010000000000020000004B500100000000000200
+      0000424F01000000000004000000515459320100000000000400000051545933
+      0100000000000200000050520100000000000300000055544201000000000003
+      0000004C424B01000000000003000000534C4C01000000000003000000544353
+      01000000000003000000435550010000000000020000004F4A01000000000003
+      0000004C5054010000000000030000004C524701000000000003000000434B4B
+      0100000000000300000043414A01000000000003000000504B50010000000000
+      0300000042544201000000000003000000414E52010000000000030000005554
+      53010000000000030000004B4252010000000000060000004C4F4B4153490100
+      000000000600000050524F534553010000000000040000004752555001000000
+      000007000000464F524D415349010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    AfterScroll = QBrowse_FormasiAfterScroll
+    OnCalcFields = QBrowse_FormasiCalcFields
+    Left = 436
+    Top = 353
+    object QBrowse_FormasiPEMOTONG_BS: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'PEMOTONG_BS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+      Calculated = True
+    end
+    object QBrowse_FormasiFORMASI: TStringField
+      FieldName = 'FORMASI'
+    end
+    object QBrowse_FormasiLOKASI: TStringField
+      FieldName = 'LOKASI'
+      Size = 30
+    end
+    object QBrowse_FormasiGRUP: TStringField
+      FieldName = 'GRUP'
+      Size = 3
+    end
+    object QBrowse_FormasiPROSES: TStringField
+      FieldName = 'PROSES'
+      Size = 30
+    end
+    object QBrowse_FormasiQTY: TFloatField
+      FieldName = 'QTY'
+    end
+    object QBrowse_FormasiLD: TFloatField
+      FieldName = 'LD'
+    end
+    object QBrowse_FormasiLB: TFloatField
+      FieldName = 'LB'
+    end
+    object QBrowse_FormasiLT: TFloatField
+      FieldName = 'LT'
+    end
+    object QBrowse_FormasiLK: TFloatField
+      FieldName = 'LK'
+    end
+    object QBrowse_FormasiPL: TFloatField
+      FieldName = 'PL'
+    end
+    object QBrowse_FormasiLL: TFloatField
+      FieldName = 'LL'
+    end
+    object QBrowse_FormasiLPT: TFloatField
+      FieldName = 'LPT'
+    end
+    object QBrowse_FormasiLRG: TFloatField
+      FieldName = 'LRG'
+    end
+    object QBrowse_FormasiWL: TFloatField
+      FieldName = 'WL'
+    end
+    object QBrowse_FormasiCKK: TFloatField
+      FieldName = 'CKK'
+    end
+    object QBrowse_FormasiOJ: TFloatField
+      FieldName = 'OJ'
+    end
+    object QBrowse_FormasiCRT: TFloatField
+      FieldName = 'CRT'
+    end
+    object QBrowse_FormasiCAJ: TFloatField
+      FieldName = 'CAJ'
+    end
+    object QBrowse_FormasiPD: TFloatField
+      FieldName = 'PD'
+    end
+    object QBrowse_FormasiPKP: TFloatField
+      FieldName = 'PKP'
+    end
+    object QBrowse_FormasiNG: TFloatField
+      FieldName = 'NG'
+    end
+    object QBrowse_FormasiBTB: TFloatField
+      FieldName = 'BTB'
+    end
+    object QBrowse_FormasiWP: TFloatField
+      FieldName = 'WP'
+    end
+    object QBrowse_FormasiSC: TFloatField
+      FieldName = 'SC'
+    end
+    object QBrowse_FormasiKP: TFloatField
+      FieldName = 'KP'
+    end
+    object QBrowse_FormasiBO: TFloatField
+      FieldName = 'BO'
+    end
+    object QBrowse_FormasiTCS: TFloatField
+      FieldName = 'TCS'
+    end
+    object QBrowse_FormasiSLL: TFloatField
+      FieldName = 'SLL'
+    end
+    object QBrowse_FormasiKS: TFloatField
+      FieldName = 'KS'
+    end
+    object QBrowse_FormasiANR: TFloatField
+      FieldName = 'ANR'
+    end
+    object QBrowse_FormasiUTS: TFloatField
+      FieldName = 'UTS'
+    end
+    object QBrowse_FormasiKBR: TFloatField
+      FieldName = 'KBR'
+    end
+    object QBrowse_FormasiQTY2: TFloatField
+      FieldName = 'QTY2'
+    end
+    object QBrowse_FormasiQTY3: TFloatField
+      FieldName = 'QTY3'
+    end
+    object QBrowse_FormasiPR: TFloatField
+      FieldName = 'PR'
+    end
+    object QBrowse_FormasiUTB: TFloatField
+      FieldName = 'UTB'
+    end
+    object QBrowse_FormasiLBK: TFloatField
+      FieldName = 'LBK'
+    end
+    object QBrowse_FormasiCUP: TFloatField
+      FieldName = 'CUP'
+    end
+  end
+  object dsQBrowse_Formasi: TwwDataSource
+    DataSet = QBrowse_Formasi
+    Left = 501
+    Top = 352
+  end
+  object QBrowseTotal_Formasi: TOracleDataSet
+    SQL.Strings = (
+      
+        'select sum(qty) as total from (select * from ipisma_db5.vrekap_h' +
+        'asil_potong_bs_formasi)'
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000D0000006F726465
+      72206279204E494B0000000000}
+    QBEDefinition.QBEFieldDefs = {040000000100000005000000544F54414C010000000000}
+    Session = DMFrm.OS
+    Left = 473
+    Top = 384
+    object QBrowseTotal_FormasiTOTAL: TFloatField
+      FieldName = 'TOTAL'
+    end
+  end
+  object QTOT_Formasi: TOracleDataSet
+    SQL.Strings = (
+      'select '
+      'sum(qty2) as total_BS,'
+      'sum(qty3) as total_BK,'
+      'sum(pr) as total_PR'
+      'from (select * from ipisma_db5.vrekap_hasil_potong_bs_formasi) '
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000000300000008000000544F54414C5F425301000000000008000000544F
+      54414C5F424B01000000000008000000544F54414C5F5052010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 476
+    Top = 433
+    object QTOT_FormasiTOTAL_BS: TFloatField
+      FieldName = 'TOTAL_BS'
+    end
+    object QTOT_FormasiTOTAL_BK: TFloatField
+      FieldName = 'TOTAL_BK'
+    end
+    object QTOT_FormasiTOTAL_PR: TFloatField
+      FieldName = 'TOTAL_PR'
+    end
+  end
+end

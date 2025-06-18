@@ -1,0 +1,320 @@
+unit HasilWOMitra;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Grids, Wwdbigrd, Wwdbgrid, DB, Wwdatsrc, OracleData, ExtCtrls,
+  Buttons, StdCtrls, wwdblook, Wwdbdlg, wwdbdatetimepicker, QRCtrls,
+  QuickRpt, wwcheckbox;
+
+type
+  THasilWOMitraFrm = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    QBrowse: TOracleDataSet;
+    QBrowsePROSES: TStringField;
+    QBrowseLOKASI: TStringField;
+    dsQBrowse: TwwDataSource;
+    wwDBGrid2: TwwDBGrid;
+    BitBtn1: TBitBtn;
+    BtnFind: TSpeedButton;
+    BtnOk2: TSpeedButton;
+    BtnExport: TBitBtn;
+    Label15: TLabel;
+    vTglAwal: TwwDBDateTimePicker;
+    Label16: TLabel;
+    vTglAkhir: TwwDBDateTimePicker;
+    Label17: TLabel;
+    QBrowseNO_REG: TFloatField;
+    QBrowseNO_NOTA: TStringField;
+    QBrowseA1: TFloatField;
+    QBrowseA2: TFloatField;
+    QBrowseB1: TFloatField;
+    QBrowseB2: TFloatField;
+    QBrowseC1: TFloatField;
+    QBrowseC2: TFloatField;
+    QBrowseD1: TFloatField;
+    QBrowseD2: TFloatField;
+    QBrowseTOTAL: TFloatField;
+    QBrowseTGL1: TDateTimeField;
+    QBrowseTGL2: TDateTimeField;
+    QTotal: TOracleDataSet;
+    QTotalTOTAL: TFloatField;
+    QTotalA1: TFloatField;
+    QTotalA2: TFloatField;
+    QTotalB1: TFloatField;
+    QTotalB2: TFloatField;
+    QTotalC1: TFloatField;
+    QTotalC2: TFloatField;
+    QTotalD1: TFloatField;
+    QTotalD2: TFloatField;
+    QuickRep1: TQuickRep;
+    TitleBand1: TQRBand;
+    ColumnHeaderBand1: TQRBand;
+    DetailBand1: TQRBand;
+    SummaryBand1: TQRBand;
+    QRLabel1: TQRLabel;
+    QRLabel2: TQRLabel;
+    QRLabel3: TQRLabel;
+    QRLabel4: TQRLabel;
+    QRLabel5: TQRLabel;
+    QRLabel6: TQRLabel;
+    QRLabel7: TQRLabel;
+    QRExpr1: TQRExpr;
+    QRExpr2: TQRExpr;
+    QRExpr3: TQRExpr;
+    QRExpr4: TQRExpr;
+    QRDBText1: TQRDBText;
+    QRDBText2: TQRDBText;
+    QRSysData1: TQRSysData;
+    QRExpr5: TQRExpr;
+    QRExpr6: TQRExpr;
+    QRExpr7: TQRExpr;
+    QRExpr8: TQRExpr;
+    QRExpr9: TQRExpr;
+    QRShape1: TQRShape;
+    QRLabel8: TQRLabel;
+    QRDBText3: TQRDBText;
+    QRLabel9: TQRLabel;
+    QRLabel10: TQRLabel;
+    QRLPeriode: TQRLabel;
+    QRShape2: TQRShape;
+    BitBtn2: TBitBtn;
+    wwCheckBox1: TwwCheckBox;
+    RadioGroup1: TRadioGroup;
+    Edit1: TEdit;
+    QBrowseNO_SERI_BEAM: TStringField;
+    QLookBeam: TOracleDataSet;
+    QLookBeamTANGGAL: TDateTimeField;
+    QLookBeamNO_SERI_BEAM: TStringField;
+    QLookBeamKONSTRUKSI: TStringField;
+    QLookBeamCORAK: TStringField;
+    QLookBeamLOKASI: TStringField;
+    LookBeam: TwwDBLookupCombo;
+    QLookBeamISI: TFloatField;
+    procedure BtnFindClick(Sender: TObject);
+    procedure BtnOk2Click(Sender: TObject);
+    procedure BtnExportClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure QBrowseNewRecord(DataSet: TDataSet);
+    procedure QBrowseBeforeInsert(DataSet: TDataSet);
+    procedure QBrowseBeforeQuery(Sender: TOracleDataSet);
+    procedure QTotalBeforeQuery(Sender: TOracleDataSet);
+    procedure wwDBGrid2UpdateFooter(Sender: TObject);
+    procedure QBrowseBeforePost(DataSet: TDataSet);
+    procedure QBrowseAfterScroll(DataSet: TDataSet);
+    procedure QuickRep1BeforePrint(Sender: TCustomQuickRep;
+      var PrintReport: Boolean);
+    procedure BitBtn2Click(Sender: TObject);
+    procedure wwCheckBox1Click(Sender: TObject);
+    procedure Edit1Change(Sender: TObject);
+    procedure wwDBGrid2TitleButtonClick(Sender: TObject;
+      AFieldName: String);
+    procedure LookBeamEnter(Sender: TObject);
+  private
+    { Private declarations }
+    vnota, vlokasi,vfilter2 : String;
+  public
+    { Public declarations }
+  end;
+
+var
+  HasilWOMitraFrm: THasilWOMitraFrm;
+
+implementation
+
+uses DM, HasilTenun, WOMitra;
+
+{$R *.dfm}
+
+procedure THasilWOMitraFrm.BtnFindClick(Sender: TObject);
+begin
+  if not QBrowse.QBEMode then
+  begin
+    wwDBGrid2.Options:=wwDBGrid2.Options-[dgRowSelect,dgAlwaysShowSelection];
+    QBrowse.QBEMode:=TRUE;
+  end
+  else
+    QBrowse.ClearQBE;
+
+end;
+
+procedure THasilWOMitraFrm.BtnOk2Click(Sender: TObject);
+begin
+  if QBrowse.QBEMode then
+  begin
+    QBrowse.ExecuteQBE;
+    wwDBGrid2.Options:=wwDBGrid2.Options+[dgRowSelect,dgAlwaysShowSelection];
+  end;
+
+end;
+
+procedure THasilWOMitraFrm.BtnExportClick(Sender: TObject);
+begin
+  if QBrowse.Active then
+  begin
+     DMFrm.SaveDialog1.DefaultExt:='XLK';
+     DMFrm.SaveDialog1.Filter:='Excel files (*.XLK)|*.XLK';
+     DMFrm.SaveDialog1.FileName:='HASIL TENUN MITRA';
+     wwDBGrid2.ExportOptions.TitleName:='HASIL TENUN MITRA';
+       if DMFrm.SaveDialog1.Execute then
+       begin
+         try
+         wwDBGrid2.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
+         wwDBGrid2.ExportOptions.Save;
+         ShowMessage('Simpan Sukses !');
+         except
+         ShowMessage('Simpan Gagal !');
+         end;
+       end;
+  end
+  else
+    ShowMessage('Tabel belum di-OPEN !');
+
+end;
+
+procedure THasilWOMitraFrm.FormShow(Sender: TObject);
+begin
+  QBrowse.Open;
+end;
+
+procedure THasilWOMitraFrm.QBrowseNewRecord(DataSet: TDataSet);
+begin
+  QBrowseNO_REG.AsInteger:=HasilTenunFrm.QMasterNO_REG.AsInteger;
+  if vnota<>'' then
+    QBrowseNO_NOTA.AsString:=vnota;
+  if vlokasi<>'' then
+    QBrowseLOKASI.AsString:=vlokasi
+end;
+
+procedure THasilWOMitraFrm.QBrowseBeforeInsert(DataSet: TDataSet);
+begin
+  vnota:=QBrowseNO_NOTA.AsString;
+  vlokasi:=QBrowseLOKASI.AsString;
+end;
+
+procedure THasilWOMitraFrm.QBrowseBeforeQuery(Sender: TOracleDataSet);
+begin
+  QBrowse.SetVariable('no_reg',WOMitraFrm.QMasterNO_REG.AsInteger);
+  if RadioGroup1.ItemIndex=0 then
+    QBrowse.SetVariable('vorder',' order by substr(a.proses,3,2),substr(a.proses,1,1)')
+    else
+    QBrowse.SetVariable('vorder',' order by substr(a.proses,4,2),substr(a.proses,1,2)')
+end;
+
+procedure THasilWOMitraFrm.QTotalBeforeQuery(Sender: TOracleDataSet);
+begin
+  QTotal.SetVariable('no_reg',WOMitraFrm.QMasterNO_REG.AsInteger);
+
+end;
+
+procedure THasilWOMitraFrm.wwDBGrid2UpdateFooter(Sender: TObject);
+begin
+  QTotal.Close;
+  QTotal.Open;
+  wwDBGrid2.ColumnByName('A1').FooterValue:=FormatFloat('#,#',QTotalA1.AsFloat);
+  wwDBGrid2.ColumnByName('A2').FooterValue:=FormatFloat('#,#',QTotalA2.AsFloat);
+  wwDBGrid2.ColumnByName('B1').FooterValue:=FormatFloat('#,#',QTotalB1.AsFloat);
+  wwDBGrid2.ColumnByName('B2').FooterValue:=FormatFloat('#,#',QTotalB2.AsFloat);
+  wwDBGrid2.ColumnByName('C1').FooterValue:=FormatFloat('#,#',QTotalC1.AsFloat);
+  wwDBGrid2.ColumnByName('C2').FooterValue:=FormatFloat('#,#',QTotalC2.AsFloat);
+  wwDBGrid2.ColumnByName('D1').FooterValue:=FormatFloat('#,#',QTotalD1.AsFloat);
+  wwDBGrid2.ColumnByName('D2').FooterValue:=FormatFloat('#,#',QTotalD2.AsFloat);
+  wwDBGrid2.ColumnByName('TOTAL').FooterValue:=FormatFloat('#,#',QTotalTOTAL.AsFloat);
+end;
+
+procedure THasilWOMitraFrm.QBrowseBeforePost(DataSet: TDataSet);
+begin
+  QBrowseTGL1.AsDateTime:=Trunc(vTglAwal.Date);
+  QBrowseTGL2.AsDateTime:=Trunc(vTglAkhir.Date);
+  QBrowseTOTAL.AsFloat:=QBrowseA1.AsFloat+
+    QBrowseA2.AsFloat+
+    QBrowseB1.AsFloat+
+    QBrowseB2.AsFloat+
+    QBrowseC1.AsFloat+
+    QBrowseC2.AsFloat+
+    QBrowseD1.AsFloat+
+    QBrowseD2.AsFloat;
+end;
+
+procedure THasilWOMitraFrm.QBrowseAfterScroll(DataSet: TDataSet);
+begin
+  wwDBGrid2UpdateFooter(nil);
+end;
+
+procedure THasilWOMitraFrm.QuickRep1BeforePrint(Sender: TCustomQuickRep;
+  var PrintReport: Boolean);
+begin
+  QRLPeriode.Caption:=vTglAwal.Text+' dan '+vTglAkhir.Text;
+end;
+
+procedure THasilWOMitraFrm.BitBtn2Click(Sender: TObject);
+begin
+  QuickRep1.Preview;
+end;
+
+procedure THasilWOMitraFrm.wwCheckBox1Click(Sender: TObject);
+begin
+  if wwCheckBox1.Checked then
+        wwDBGrid2.Options:=wwDBGrid2.Options-[dgRowSelect,dgAlwaysShowSelection]
+  else
+    wwDBGrid2.Options:=wwDBGrid2.Options+[dgRowSelect,dgAlwaysShowSelection];
+end;
+
+procedure THasilWOMitraFrm.Edit1Change(Sender: TObject);
+begin
+  if not QBrowse.IsEmpty then
+  begin
+      QBrowse.Locate('PROSES',Edit1.Text,[loPartialKey]);
+  end;
+end;
+
+procedure THasilWOMitraFrm.wwDBGrid2TitleButtonClick(Sender: TObject;
+  AFieldName: String );
+  var
+  vorder: String;
+begin
+ {if QBrowse.FieldByName(AFieldName).FieldKind=fkData then
+  begin
+    vorder:='order by '+AFieldName;
+    BtnOk2Click(Nil);
+  end
+  else
+    ShowMessage('Maaf, tidak bisa Urut menurut kolom '+AFieldName+' !');
+     }
+    //
+  if ((Sender as TwwDBGrid).ColumnByName(AFieldName).FieldName<>'') then
+  begin
+     if (Sender as TwwDBGrid).DataSource.DataSet.FieldByName(AFieldName).FieldKind=fkData then
+        begin
+          if vorder=' ASC' then
+              vorder:=' DESC'
+          else
+              vorder:=' ASC';
+          (Sender as TwwDBGrid).DataSource.DataSet.DisableControls;
+          (Sender as TwwDBGrid).DataSource.DataSet.Close;
+          ((Sender as TwwDBGrid).DataSource.DataSet as TOracleDataSet).SetVariable('myparam',vfilter2+' order by '+(Sender as TwwDBGrid).ColumnByName(AFieldName).FieldName+vorder);
+          (Sender as TwwDBGrid).DataSource.DataSet.Open;
+          (Sender as TwwDBGrid).DataSource.DataSet.EnableControls;
+        end
+        else
+          ShowMessage('Maaf, tidak bisa diurutkan menurut '+AFieldName+' !');
+  end
+  else
+  ShowMessage('Maaf, tidak bisa diurutkan menurut '+AFieldName+' !');
+
+      //
+
+    end;
+
+procedure THasilWOMitraFrm.LookBeamEnter(Sender: TObject);
+begin
+  QLookBeam.Close;
+  QLookBeam.SetVariable('plokasi',QBrowseLOKASI.AsString);
+  QLookBeam.SetVariable('pproses',QBrowsePROSES.AsString);
+  QLookBeam.SetVariable('ptgl',vTglAwal.Date);
+  QLookBeam.Open;
+end;
+
+end.

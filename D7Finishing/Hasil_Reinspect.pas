@@ -1,0 +1,486 @@
+unit TerimaDariFinishing2;
+                                                    
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ExtCtrls, StdCtrls, Grids, Wwdbigrd, Wwdbgrid, DB, Wwdatsrc,
+  OracleData, wwSpeedButton, wwDBNavigator, wwclearpanel, Buttons, DBCtrls,
+  wwcheckbox, wwdblook, Wwdbdlg, wwdbdatetimepicker, Mask, wwdbedit,
+  Wwdotdot, Wwdbcomb, wwDialog, wwidlg, QRCtrls, QuickRpt, Printers, Oracle,
+  ComCtrls;
+
+type
+  THasil_ReinspectFrm = class(TForm)
+    PanelLeft: TPanel;
+    PanelRight: TPanel;
+    QMaster: TOracleDataSet;
+    QDetail: TOracleDataSet;
+    dsQDetail: TwwDataSource;
+    dsQMaster: TwwDataSource;
+    QDetailNO_REG_DETAIL: TFloatField;
+    QDetailNO_REG: TFloatField;
+    QDetailKONSTRUKSI: TStringField;
+    QDetailCORAK: TStringField;
+    QDetailMUTU: TStringField;
+    QDetailSATUAN: TStringField;
+    QMasterNO_REG: TFloatField;
+    QMasterTGL: TDateTimeField;
+    QMasterNO_KONTRAK: TStringField;
+    QMasterKETERANGAN: TStringField;
+    QMasterKD_REKANAN: TFloatField;
+    QMasterSTATUS: TStringField;
+    QMasterKD_TRANSAKSI: TStringField;
+    QMasterTTD1: TStringField;
+    QMasterTTD2: TStringField;
+    QMasterTTD3: TStringField;
+    QMasterREKANAN: TStringField;
+    QMasterISPOST: TStringField;
+    QTransaksi: TOracleDataSet;
+    QTransaksiNAMA_TRANSAKSI: TStringField;
+    QTransaksiKD_TRANSAKSI: TStringField;
+    QTransaksiTTD1: TStringField;
+    QTransaksiTTD2: TStringField;
+    QTransaksiTTD3: TStringField;
+    QTransaksiTTD4: TStringField;
+    QTransaksiDIV1: TStringField;
+    QTransaksiDIV2: TStringField;
+    QTransaksiDIV3: TStringField;
+    QTransaksiDIV4: TStringField;
+    QTransaksiJAB1: TStringField;
+    QTransaksiJAB2: TStringField;
+    QTransaksiJAB3: TStringField;
+    QTransaksiJAB4: TStringField;
+    QTransaksiDISTRIBUSI: TStringField;
+    dsQTransaksi: TwwDataSource;
+    FNo_Urut: TOracleDataSet;
+    FNo_UrutNO_NOTA: TStringField;
+    QDetailKD_KONSTRUKSI: TStringField;
+    QDetailKD_CORAK: TStringField;
+    LookMaster: TwwLookupDialog;
+    QMasterNO_NOTA: TStringField;
+    QMasterGRUP: TStringField;
+    QMasterSHIFT: TStringField;
+    QDetailNIK: TStringField;
+    QDetailNO_SERI_BEAM: TStringField;
+    QDetailKD_ITEM: TStringField;
+    QDetailQTY: TFloatField;
+    QDetailKETERANGAN: TStringField;
+    QDetailJENIS: TStringField;
+    QTotal: TOracleDataSet;
+    QTotalTOTAL: TFloatField;
+    QAmbilData: TOracleQuery;
+    QDetailQTY2: TFloatField;
+    QDetailQTY3: TFloatField;
+    QMasterNO_BUKTI: TStringField;
+    QMasterTGL_INSERT: TDateTimeField;
+    QMasterOPR_INSERT: TStringField;
+    PageControl1: TPageControl;
+    TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
+    PanelCenter: TPanel;
+    QuickRep1: TQuickRep;
+    PageHeaderBand1: TQRBand;
+    QRLabel1: TQRLabel;
+    QRDBText2: TQRDBText;
+    QRLabel2: TQRLabel;
+    TitleBand1: TQRBand;
+    QRDBText1: TQRDBText;
+    QRDBText3: TQRDBText;
+    QRLabel3: TQRLabel;
+    QRDBText4: TQRDBText;
+    QRDBText5: TQRDBText;
+    QRLabel5: TQRLabel;
+    QRLabel6: TQRLabel;
+    QRLabel16: TQRLabel;
+    QRDBText6: TQRDBText;
+    ColumnHeaderBand1: TQRBand;
+    QRLabel8: TQRLabel;
+    QRLabel9: TQRLabel;
+    QRLabel10: TQRLabel;
+    qrlHarga: TQRLabel;
+    QRLabel4: TQRLabel;
+    QRLabel7: TQRLabel;
+    DetailBand1: TQRBand;
+    QRDBText8: TQRDBText;
+    QRDBHarga: TQRDBText;
+    QRSysData2: TQRSysData;
+    QRDBText7: TQRDBText;
+    QRDBText9: TQRDBText;
+    QRDBText10: TQRDBText;
+    SummaryBand1: TQRBand;
+    QRDBText14: TQRDBText;
+    QRDBText15: TQRDBText;
+    QRDBText16: TQRDBText;
+    QRDBText17: TQRDBText;
+    QRDBText18: TQRDBText;
+    QRDBText19: TQRDBText;
+    QRLabel14: TQRLabel;
+    QRDBText20: TQRDBText;
+    PageFooterBand1: TQRBand;
+    QRDBText13: TQRDBText;
+    QRSysData1: TQRSysData;
+    QRGroup1: TQRGroup;
+    QRBand1: TQRBand;
+    QRLabel15: TQRLabel;
+    QRExpr1: TQRExpr;
+    QRShape1: TQRShape;
+    QRExpr2: TQRExpr;
+    QRExpr3: TQRExpr;
+    PanelHeader: TPanel;
+    DBText1: TDBText;
+    DBText2: TDBText;
+    DBText3: TDBText;
+    Label7: TLabel;
+    PanelFooter: TPanel;
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+    cbPreview: TCheckBox;
+    RadioGroup1: TRadioGroup;
+    cbHarga: TCheckBox;
+    BitBtn3: TBitBtn;
+    BitBtn4: TBitBtn;
+    PanelTop: TPanel;
+    Label3: TLabel;
+    Label6: TLabel;
+    DBText4: TDBText;
+    Label2: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    DBText5: TDBText;
+    DBText6: TDBText;
+    wwDBDateTimePicker1: TwwDBDateTimePicker;
+    wwDBComboBox1: TwwDBComboBox;
+    wwDBComboBox2: TwwDBComboBox;
+    wwDBEdit1: TwwDBEdit;
+    look_op: TwwDBLookupComboDlg;
+    wwDBGrid1: TwwDBGrid;
+    PanelBanner: TPanel;
+    Label1: TLabel;
+    wwDBNavigator1: TwwDBNavigator;
+    wwDBNavigator1Button2: TwwNavButton;
+    wwDBNavigator1Button3: TwwNavButton;
+    wwDBNavigator1Insert: TwwNavButton;
+    wwDBNavigator1Edit: TwwNavButton;
+    wwDBNavigator1Delete: TwwNavButton;
+    wwDBNavigator1Post: TwwNavButton;
+    wwDBNavigator1Cancel: TwwNavButton;
+    wwDBNavigator1Refresh: TwwNavButton;
+    wwDBNavigator1Button: TwwNavButton;
+    wwDBNavigator1Button1: TwwNavButton;
+    Edit1: TEdit;
+    wwCheckBox1: TwwCheckBox;
+    LookKonstruksi: TwwDBLookupComboDlg;
+    LookCorak: TwwDBLookupComboDlg;
+    LookSatuan: TwwDBComboBox;
+    LookJenis: TwwDBComboBox;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Panel5: TPanel;
+    QBrowse: TOracleDataSet;
+    QBrowseNO_REG: TFloatField;
+    QBrowseTGL: TDateTimeField;
+    QBrowseNO_NOTA: TStringField;
+    QBrowseGRUP: TStringField;
+    QBrowseSHIFT: TStringField;
+    QBrowseJENIS: TStringField;
+    QBrowseKD_KONSTRUKSI: TStringField;
+    QBrowseKONSTRUKSI: TStringField;
+    QBrowseKD_CORAK: TStringField;
+    QBrowseCORAK: TStringField;
+    QBrowseKODI_BK: TFloatField;
+    QBrowsePCS_BK: TFloatField;
+    QBrowseKODI_BS: TFloatField;
+    QBrowsePCS_BS: TFloatField;
+    QBrowseKODI_BS_PARAH: TFloatField;
+    QBrowsePCS_BS_PARAH: TFloatField;
+    QBrowseKETERANGAN: TStringField;
+    Panel3: TPanel;
+    GroupBox1: TGroupBox;
+    Label10: TLabel;
+    VTglAwal: TwwDBDateTimePicker;
+    vTglAkhir: TwwDBDateTimePicker;
+    Panel4: TPanel;
+    vOperand: TLabel;
+    cbTanggal: TCheckBox;
+    BitBtn5: TBitBtn;
+    ECari: TEdit;
+    cbOtomatis: TCheckBox;
+    dbcField: TwwDBComboBox;
+    BtnExport: TBitBtn;
+    LabelBanner: TLabel;
+    dsQBrowse: TwwDataSource;
+    wwDBGrid1xxxxx: TwwDBGrid;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormResize(Sender: TObject);
+    procedure wwDBGrid1Enter(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure QMasterNewRecord(DataSet: TDataSet);
+    procedure LookRekananEnter(Sender: TObject);
+    procedure LookRekananClick(Sender: TObject);
+    procedure QMasterBeforePost(DataSet: TDataSet);
+    procedure QDetailBeforeEdit(DataSet: TDataSet);
+    procedure LookKonstruksiEnter(Sender: TObject);
+    procedure LookCorakEnter(Sender: TObject);
+    procedure LookKonstruksiCloseUp(Sender: TObject; LookupTable,
+      FillTable: TDataSet; modified: Boolean);
+    procedure LookCorakCloseUp(Sender: TObject; LookupTable,
+      FillTable: TDataSet; modified: Boolean);
+    procedure Edit1KeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure wwDBNavigator1ButtonClick(Sender: TObject);
+    procedure QDetailNewRecord(DataSet: TDataSet);
+    procedure BitBtn2Click(Sender: TObject);
+    procedure ColumnHeaderBand1BeforePrint(Sender: TQRCustomBand;
+      var PrintBand: Boolean);
+    procedure FNo_UrutBeforeQuery(Sender: TOracleDataSet);
+    procedure QMasterBeforeQuery(Sender: TOracleDataSet);
+    procedure QTotalBeforeOpen(DataSet: TDataSet);
+    procedure wwDBGrid1UpdateFooter(Sender: TObject);
+    procedure BitBtn4Click(Sender: TObject);
+    procedure BitBtn3Click(Sender: TObject);
+    procedure look_opEnter(Sender: TObject);
+    procedure TabSheet1Show(Sender: TObject);
+    procedure TabSheet2Show(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Hasil_ReinspectFrm: THasil_ReinspectFrm;
+
+implementation
+
+uses DM, Math, HasilTenun2,DateUtils;
+
+{$R *.dfm}
+
+procedure THasil_ReinspectFrm.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  Action:=caFree;
+  Hasil_ReinspectFrm:=Nil;
+end;
+
+procedure THasil_ReinspectFrm.FormResize(Sender: TObject);
+begin
+  PanelLeft.Width:=round((Width-PanelCenter.Width)/2)-4;
+{  Caption:=IntToStr(width)+', '+IntToStr(PanelLeft.Width)+', '+IntToStr(PanelCenter.Width)+
+    ', '+IntToStr(PanelRight.Width);    }
+end;
+
+procedure THasil_ReinspectFrm.wwDBGrid1Enter(Sender: TObject);
+begin
+  If QMaster.State<> dsBrowse then QMaster.Post;
+end;
+
+procedure THasil_ReinspectFrm.FormCreate(Sender: TObject);
+begin
+ QTransaksi.SetVariable('kd_transaksi','992');
+ QTransaksi.Open;
+ Caption:=QTransaksiNAMA_TRANSAKSI.AsString;
+ QMaster.Open;
+ QDetail.Open;
+end;
+
+procedure THasil_ReinspectFrm.QMasterNewRecord(DataSet: TDataSet);
+begin
+  QMasterKD_TRANSAKSI.AsString:=QTransaksiKD_TRANSAKSI.AsString;
+  QMasterTTD1.AsString:=QTransaksiTTD1.AsString;
+  QMasterTTD2.AsString:=QTransaksiTTD2.AsString;
+  QMasterTTD3.AsString:=QTransaksiTTD3.AsString;
+  QMasterISPOST.AsString:='0';
+  QMasterTGL.AsDateTime:=Trunc(Date);
+end;
+
+procedure THasil_ReinspectFrm.LookRekananEnter(Sender: TObject);
+begin
+ DMFrm.QRekanan.Open;
+end;
+
+procedure THasil_ReinspectFrm.LookRekananClick(Sender: TObject);
+begin
+   DMFrm.QRekanan.Close;
+   DMFrm.QRekanan.Open;
+end;
+
+procedure THasil_ReinspectFrm.QMasterBeforePost(DataSet: TDataSet);
+begin
+  if (QMasterISPOST.AsString='1') and (QMasterNO_NOTA.AsString='') then
+  begin
+      FNo_Urut.Close;
+      FNo_Urut.Open;
+      QMasterNO_NOTA.AsString:=FNo_UrutNO_NOTA.AsString;
+  end;
+end;
+
+procedure THasil_ReinspectFrm.QDetailBeforeEdit(DataSet: TDataSet);
+begin
+  if QMasterISPOST.AsString='1' then
+  begin
+    ShowMessage('Maaf, sudah di-POSTING, tidak bisa diedit !...');
+    DataSet.Cancel;
+  end;
+
+end;
+
+procedure THasil_ReinspectFrm.LookKonstruksiEnter(Sender: TObject);
+begin
+  DMFrm.QKonstruksi.Open;
+end;
+
+procedure THasil_ReinspectFrm.LookCorakEnter(Sender: TObject);
+begin
+  DMFrm.QCorak.Open;
+end;
+
+procedure THasil_ReinspectFrm.LookKonstruksiCloseUp(Sender: TObject;
+  LookupTable, FillTable: TDataSet; modified: Boolean);
+begin
+  if modified then
+   QDetailKONSTRUKSI.AsString:=DMFrm.QKonstruksiNAMA_KONSTRUKSI.AsString;
+end;
+
+procedure THasil_ReinspectFrm.LookCorakCloseUp(Sender: TObject; LookupTable,
+  FillTable: TDataSet; modified: Boolean);
+begin
+  If modified then
+    QDetailCORAK.AsString:=DMFrm.QCorakNAMA_CORAK.AsString;
+end;
+
+procedure THasil_ReinspectFrm.Edit1KeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if key=13 then
+  begin
+     QMaster.Close;
+     QMaster.SetVariable('no_nota','%'+Edit1.Text+'%');
+     QMaster.Open;
+  end;
+end;
+
+procedure THasil_ReinspectFrm.wwDBNavigator1ButtonClick(Sender: TObject);
+begin
+  QDetail.Close;
+  LookMaster.Execute;
+  QDetail.Open;
+end;
+
+procedure THasil_ReinspectFrm.QDetailNewRecord(DataSet: TDataSet);
+begin
+  QDetailSATUAN.AsString:='POTONG';
+  QDetailMUTU.AsString:='BK';
+  QDetailJENIS.AsString:='PALEKAT';
+  QDetailKD_CORAK.AsString:='000';
+  QDetailCORAK.AsString:='-';
+end;
+
+procedure THasil_ReinspectFrm.BitBtn2Click(Sender: TObject);
+begin
+ DMFrm.QUserTime.Close;
+ DMFrm.QUserTime.Open;
+ if cbPreview.Checked then
+   QuickRep1.Preview
+   else
+     QuickRep1.Print;
+end;
+
+procedure THasil_ReinspectFrm.ColumnHeaderBand1BeforePrint(
+  Sender: TQRCustomBand; var PrintBand: Boolean);
+begin
+//  qrlHarga.Enabled:=not cbHarga.Checked;
+//  QRDBHarga.Enabled:=not cbHarga.Checked;
+end;
+
+procedure THasil_ReinspectFrm.FNo_UrutBeforeQuery(
+  Sender: TOracleDataSet);
+begin
+  FNo_Urut.SetVariable('pkode',QTransaksiKD_TRANSAKSI.AsString);
+  FNo_Urut.SetVariable('ptgl',QMasterTGL.AsDateTime);
+end;
+
+procedure THasil_ReinspectFrm.QMasterBeforeQuery(
+  Sender: TOracleDataSet);
+begin
+  QMaster.SetVariable('kd_transaksi',QTransaksiKD_TRANSAKSI.AsString);
+end;
+
+procedure THasil_ReinspectFrm.QTotalBeforeOpen(DataSet: TDataSet);
+begin
+  QTotal.SetVariable('no_reg',QMasterNO_REG.AsInteger);
+end;
+
+procedure THasil_ReinspectFrm.wwDBGrid1UpdateFooter(Sender: TObject);
+begin
+  QTotal.Close;
+  QTotal.Open;
+  wwDBGrid1.ColumnByName('QTY').FooterValue:=FormatFloat('#.#,#',QTotalTOTAL.AsFloat);
+end;
+
+procedure THasil_ReinspectFrm.BitBtn4Click(Sender: TObject);
+begin
+  wwDBGrid1Enter(nil);
+  HasilTenun2Frm:=THasilTenun2Frm.Create(Self);
+  HasilTenun2Frm.QDetail.Close;
+  HasilTenun2Frm.QDetail.Open;
+  HasilTenun2Frm.QMaster.Close;
+  HasilTenun2Frm.QMaster.SetVariable('no_reg',HasilTenun2Frm.QDetailNO_REG_TENUN.AsInteger);
+  HasilTenun2Frm.QMaster.Open;
+  HasilTenun2Frm.ShowModal;
+  HasilTenun2Frm.Free;
+end;
+
+procedure THasil_ReinspectFrm.BitBtn3Click(Sender: TObject);
+begin
+  if QMasterISPOST.AsString='1' then
+    ShowMessage('Maaf, sudah di-Posting !')
+    else
+    begin
+      QAmbilData.Close;
+      QAmbilData.SetVariable('no_reg',QMasterNO_REG.AsInteger);
+      QAmbilData.Execute;
+      QDetail.Close;
+      QDetail.Open;
+    end;
+
+end;
+
+procedure THasil_ReinspectFrm.look_opEnter(Sender: TObject);
+begin
+DMFrm.QOp_Inspect.Open;
+end;
+
+procedure THasil_ReinspectFrm.TabSheet1Show(Sender: TObject);
+begin
+ QTransaksi.SetVariable('kd_transaksi','898');
+ QTransaksi.Open;
+ Caption:=QTransaksiNAMA_TRANSAKSI.AsString;
+ QMaster.Close;
+ QDetail.Close;
+ QMaster.Open;
+ QDetail.Open;
+end;
+
+procedure THasil_ReinspectFrm.TabSheet2Show(Sender: TObject);
+begin
+ //vfilter:=' where (TGL>=to_date('''+FormatDateTime('dd/mm/yyyy',VTglAwal.Date)+''',''dd/mm/yyyy'') and TGL<=(to_date('''+FormatDateTime('dd/mm/yyyy',VTglAkhir.Date)+''',''dd/mm/yyyy'')+1-1/86400))';
+  //QBrowse.Open;
+end;
+
+procedure THasil_ReinspectFrm.FormShow(Sender: TObject);
+begin
+  vTglAwal.CalendarAttributes.PopupYearOptions.NumberColumns:=1;
+  vTglAwal.CalendarAttributes.PopupYearOptions.StartYear:=YearOf(Date())-2;
+  vTglAwal.Date:=Trunc(date());
+
+  vTglAkhir.CalendarAttributes.PopupYearOptions.NumberColumns:=1;
+  vTglAkhir.CalendarAttributes.PopupYearOptions.StartYear:=YearOf(Date())-2;
+  vTglAkhir.Date:=Trunc(date());
+end;
+
+end.

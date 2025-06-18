@@ -1,0 +1,494 @@
+object MainFrm: TMainFrm
+  Left = 229
+  Top = 125
+  Width = 768
+  Height = 554
+  Caption = 'Produksi 3'
+  Color = 4605440
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsMDIForm
+  Menu = MainMenu1
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  WindowMenu = Window1
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Splitter1: TSplitter
+    Left = 0
+    Top = 0
+    Height = 477
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 477
+    Width = 752
+    Height = 19
+    Panels = <
+      item
+        Alignment = taRightJustify
+        Text = 'Status 1'
+        Width = 150
+      end
+      item
+        Alignment = taRightJustify
+        Text = 'Status 2'
+        Width = 250
+      end
+      item
+        Alignment = taRightJustify
+        Text = 'Status 3'
+        Width = 250
+      end
+      item
+        Alignment = taRightJustify
+        Text = 'Status 4'
+        Width = 50
+      end>
+  end
+  object MainMenu1: TMainMenu
+    Left = 200
+    Top = 32
+    object File1: TMenuItem
+      Caption = 'File'
+      object Login1: TMenuItem
+        Caption = 'Login'
+        OnClick = FormCreate
+      end
+      object GantiPassword1: TMenuItem
+        Caption = 'Ganti Password'
+        OnClick = GantiPassword1Click
+      end
+      object PermintaanUnpost1: TMenuItem
+        Caption = 'Permintaan Unpost'
+        OnClick = PermintaanUnpost1Click
+      end
+      object EksekusiUnpost1: TMenuItem
+        Caption = 'Eksekusi Unpost'
+        OnClick = EksekusiUnpost1Click
+      end
+      object UnpostNota1: TMenuItem
+        Caption = 'Unpost Nota'
+        Visible = False
+        OnClick = UnpostNota1Click
+      end
+      object Exit1: TMenuItem
+        Caption = 'Exit'
+        OnClick = Exit1Click
+      end
+    end
+    object Master1: TMenuItem
+      Caption = 'Master'
+      object PotonganBS1: TMenuItem
+        Caption = 'Potongan BS'
+        OnClick = PotonganBS1Click
+      end
+      object LokasiProsesdiFinishing1: TMenuItem
+        Caption = '60. Lokasi/Proses di Finishing'
+        OnClick = LokasiProsesdiFinishing1Click
+      end
+      object FormasiPerOperator1: TMenuItem
+        Caption = 'Formasi Per Operator'
+        OnClick = FormasiPerOperator1Click
+      end
+    end
+    object ransaksi1: TMenuItem
+      Caption = 'Transaksi'
+      RadioItem = True
+      object SerahTerimaKeFinishing1: TMenuItem
+        Caption = 'Inspecting'
+        OnClick = SerahTerimaKeFinishing1Click
+        object TerimaDariTenun1: TMenuItem
+          Caption = '912. Terima Dari Tenun'
+          OnClick = TerimaDariTenun1Click
+        end
+        object HasilInspectingMitra1: TMenuItem
+          Caption = '913. Hasil Inspecting Mitra'
+          OnClick = HasilInspectingMitra1Click
+        end
+        object N915SerahKain1: TMenuItem
+          Caption = '915. Kirim Non Sarung'
+          OnClick = SerahKain1Click
+        end
+        object SerahKeFinish1: TMenuItem
+          Caption = '900. Kirim Ke Finishing'
+          OnClick = SerahKeFinish1Click
+        end
+        object N904RekapKirimInspek1: TMenuItem
+          Caption = '904. Rekap Kirim Dari Inspek'
+          OnClick = N904RekapKirimInspek1Click
+        end
+        object N990RekapPengirimanDariTenun1: TMenuItem
+          Caption = '990. Rekap Pengiriman Dari Tenun'
+          OnClick = N990RekapPengirimanDariTenun1Click
+        end
+        object HasilInspecting1: TMenuItem
+          Caption = '991. Hasil Inspecting'
+          OnClick = HasilInspecting1Click
+        end
+        object HasilCabutWarnaMitra1: TMenuItem
+          Caption = '992. Hasil Cabut Warna Mitra'
+          OnClick = HasilCabutWarnaMitra1Click
+        end
+        object KirimKePrinting1: TMenuItem
+          Caption = '993. Kirim Ke Printing'
+          OnClick = KirimKePrinting1Click
+        end
+        object SerahKeKemas1: TMenuItem
+          Caption = '995. Kirim Ke Kemas'
+          OnClick = SerahKeKemas1Click
+        end
+        object N996KirimExCWKeFinishing1: TMenuItem
+          Caption = '996. Kirim Ex CW Ke Finishing'
+          OnClick = N996KirimExCWKeFinishing1Click
+        end
+        object HasilBSParah: TMenuItem
+          Caption = '999. Hasil BS Parah Inspecting'
+          OnClick = HasilBSParahClick
+        end
+        object N919Koreksi1: TMenuItem
+          Caption = '919. Koreksi'
+          OnClick = N919Koreksi1Click
+        end
+        object MENDINGGREY: TMenuItem
+          Caption = 'M03. Mending Grey'
+          OnClick = MENDINGGREYClick
+        end
+        object InfoStok1: TMenuItem
+          Caption = 'Info Stok Inspecting'
+          OnClick = InfoStok1Click
+        end
+        object LAPORANMUTASISTOKINSPEK: TMenuItem
+          Caption = 'LAPORAN MUTASI STOK INSPEKTING'
+          Visible = False
+          OnClick = LAPORANMUTASISTOKINSPEKClick
+        end
+      end
+      object Finishing1: TMenuItem
+        Caption = 'Finishing'
+        object StockFinishing1: TMenuItem
+          Caption = 'Stock Finishing (coming soon)'
+          Visible = False
+          object FinishPemasukan: TMenuItem
+            Caption = 'Pemasukan'
+            OnClick = FinishPemasukanClick
+          end
+        end
+        object TerimaDariInspecting2: TMenuItem
+          Caption = '901. Terima Dari  Inspecting'
+          OnClick = TerimaDariInspecting2Click
+        end
+        object Opening1: TMenuItem
+          Caption = 'Opening'
+          object HasilOpening1: TMenuItem
+            Caption = '891. Hasil Opening'
+            OnClick = HasilOpening1Click
+          end
+          object SerahTerimaHasilOpening1: TMenuItem
+            Caption = '902. Serah Terima Hasil Opening'
+            Visible = False
+            OnClick = SerahTerimaHasilOpening1Click
+          end
+        end
+        object Shearing2: TMenuItem
+          Caption = 'Shearing'
+          object HasilShearing1: TMenuItem
+            Caption = '892. Hasil Shearing'
+            OnClick = HasilShearing1Click
+          end
+          object SerahHasilShearing: TMenuItem
+            Caption = '903. Serah Hasil Shearing'
+            Visible = False
+            OnClick = SerahHasilShearingClick
+          end
+        end
+        object BakarBulu2: TMenuItem
+          Caption = 'Bakar Bulu'
+          object HasilBakarBulu1: TMenuItem
+            Caption = '893. Hasil Bakar Bulu'
+            OnClick = HasilBakarBulu1Click
+          end
+          object SerahHasilBakarBulu: TMenuItem
+            Caption = '904. Serah Hasil  Bakar Bulu'
+            Visible = False
+            OnClick = SerahHasilBakarBuluClick
+          end
+          object N921HasilBakarBuluKainGrey1: TMenuItem
+            Caption = '921. Hasil Bakar Bulu Kain Grey'
+            OnClick = N921HasilBakarBuluKainGrey1Click
+          end
+        end
+        object Desizing2: TMenuItem
+          Caption = 'Desizing'
+          Visible = False
+          object HasilDesizing1: TMenuItem
+            Caption = '894. Hasil Desizing'
+            OnClick = HasilDesizing1Click
+          end
+          object SerahHasilDesizing: TMenuItem
+            Caption = '905. Serah Hasil Desizing'
+            Visible = False
+            OnClick = SerahHasilDesizingClick
+          end
+        end
+        object Washing2: TMenuItem
+          Caption = 'Washing'
+          object HasilWashing1: TMenuItem
+            Caption = '895. Hasil Washing'
+            OnClick = HasilWashing1Click
+          end
+          object SerahHasilWashing: TMenuItem
+            Caption = '906. Serah Hasil Washing'
+            Visible = False
+            OnClick = SerahHasilWashingClick
+          end
+        end
+        object Stenter2: TMenuItem
+          Caption = 'Stenter'
+          object HasilStenter1: TMenuItem
+            Caption = '896. Hasil Stenter'
+            OnClick = HasilStenter1Click
+          end
+          object SerahHasilStenter: TMenuItem
+            Caption = '907. Serah Hasil Stenter'
+            Visible = False
+            OnClick = SerahHasilStenterClick
+          end
+        end
+        object Calender2: TMenuItem
+          Caption = 'Calender'
+          object HasilCalender1: TMenuItem
+            Caption = '897. Hasil Calender'
+            OnClick = HasilCalender1Click
+          end
+          object N922terimadariprinting1: TMenuItem
+            Caption = '922. Terima Dari Printing'
+            OnClick = N922terimadariprinting1Click
+          end
+        end
+        object PengeluaranPreset1: TMenuItem
+          Caption = 'Pengeluaran Preset'
+          object HasilPreset: TMenuItem
+            Caption = '902. Serah Ke QA'
+            OnClick = HasilPresetClick
+          end
+          object HasilPreset2: TMenuItem
+            Caption = '903. Serah Ke Printing'
+            OnClick = HasilPreset2Click
+          end
+        end
+        object N905RekapKirimFinishing1: TMenuItem
+          Caption = '905. Rekap Kirim Dari Finishing'
+          OnClick = N905RekapKirimFinishing1Click
+        end
+        object SerahHasilCalender: TMenuItem
+          Caption = '908. Kirim Ke ReInspecting'
+          OnClick = SerahHasilCalenderClick
+        end
+        object Koreksi1: TMenuItem
+          Caption = '918. Koreksi'
+          OnClick = Koreksi1Click
+        end
+        object InfoWIPFinishing2: TMenuItem
+          Caption = 'Info WIP Finishing'
+          OnClick = InfoWIPFinishing2Click
+        end
+        object InfoWIPFinishing1: TMenuItem
+          Caption = 'Laporan Produksi Finishing'
+          OnClick = InfoWIPFinishing1Click
+        end
+        object NonSarung1: TMenuItem
+          Caption = 'Non Sarung'
+          object erimaNonSarung1: TMenuItem
+            Caption = '916. Terima Non Sarung'
+            OnClick = TerimaNonSarung1Click
+          end
+          object N917SerahNonSarungKeJetDyeing1: TMenuItem
+            Caption = '917. Serah Non Sarung'
+            OnClick = N917SerahNonSarungKeJetDyeing1Click
+          end
+          object LaporanProduksiFashion1: TMenuItem
+            Caption = 'Laporan Produksi Non Sarung'
+            OnClick = LaporanProduksiFashion1Click
+          end
+        end
+        object SerahTerimaJetDyeing1: TMenuItem
+          Caption = 'Jet Dyeing'
+          object SerahKeJetDyeing1: TMenuItem
+            Caption = 'Serah Ke Jet Dyeing'
+            OnClick = SerahKeJetDyeing1Click
+          end
+          object TerimaDariJetDyeing1: TMenuItem
+            Caption = 'Terima Dari Jet Dyeing'
+            OnClick = TerimaDariJetDyeing1Click
+          end
+        end
+        object N908KirimkeReinspecting1: TMenuItem
+          Caption = '908. Kirim ke Reinspecting tidak jadi'
+          Visible = False
+          OnClick = N908KirimkeReinspecting1Click
+        end
+      end
+      object ReInspecting1: TMenuItem
+        Caption = 'Inspect Finish'
+        object TerimaDariTenun: TMenuItem
+          Caption = '909. Terima Dari Finishing'
+          OnClick = TerimaDariTenunClick
+        end
+        object HasilReinspect: TMenuItem
+          Caption = 'Hasil Inspect Finish'
+          object SarungFinish1: TMenuItem
+            Caption = '898. &Sarung Finish'
+            OnClick = SarungFinish1Click
+          end
+          object PrintingFinish1: TMenuItem
+            Caption = 'R01. &Printing Finish Global'
+            OnClick = PrintingFinish1Click
+          end
+          object R02PrintingFinishProses1: TMenuItem
+            Caption = 'R02. Printing Finish Per Proses'
+            OnClick = R02PrintingFinishProses1Click
+          end
+          object PemotonganReInspecting1: TMenuItem
+            Caption = 'R03. &Potong Kain'
+            OnClick = PemotonganReInspecting1Click
+          end
+          object R03Koreksi1: TMenuItem
+            Caption = 'R04. &Koreksi'
+            OnClick = R03Koreksi1Click
+          end
+          object R05Retur1: TMenuItem
+            Caption = 'R05. &Retur (on process)'
+            Visible = False
+          end
+          object R06PemasukanLainlain1: TMenuItem
+            Caption = 'R06. &Pemasukan Lain-lain (on process)'
+            Visible = False
+          end
+        end
+        object SerahTerimakeGudangJadi1: TMenuItem
+          Caption = '994. Kirim ke Jahit'
+          OnClick = SerahTerimakeGudangJadi1Click
+        end
+        object N906RekapKirimReInspek1: TMenuItem
+          Caption = '906. Rekap Kirim Dari Inspect Finish'
+          OnClick = N906RekapKirimReInspek1Click
+        end
+        object SerahGDJadiLJR: TMenuItem
+          Caption = 'Serah Terima QA -> Kemas'
+          OnClick = SerahGDJadiLJRClick
+        end
+        object InfoStokReinspect1: TMenuItem
+          Caption = 'Info Stok Reinspect'
+          OnClick = InfoStokReinspect1Click
+        end
+      end
+      object TerimaDariMitra1: TMenuItem
+        Caption = 'Penerimaan Tenun Mitra'
+        OnClick = TerimaDariMitra1Click
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object MasukLain21: TMenuItem
+        Caption = 'Masuk Lain2'
+        Visible = False
+        OnClick = MasukLain21Click
+      end
+      object KeluarLain21: TMenuItem
+        Caption = 'Keluar Lain2'
+        Visible = False
+        OnClick = KeluarLain21Click
+      end
+      object N3: TMenuItem
+        Caption = '-'
+      end
+      object PermintaanBarangLelang1: TMenuItem
+        Caption = 'Permintaan Barang Dijual/ Lelang'
+        Visible = False
+        OnClick = PermintaanBarangLelang1Click
+      end
+    end
+    object PPC1: TMenuItem
+      Caption = 'PPC'
+      RadioItem = True
+      Visible = False
+      object OrderBarangJualLelang1: TMenuItem
+        Caption = 'Order Barang Jual/ Lelang'
+        OnClick = OrderBarangJualLelang1Click
+      end
+      object SuratJalanJualLelang1: TMenuItem
+        Caption = 'Surat Jalan Jual/ Lelang'
+        OnClick = SuratJalanJualLelang1Click
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object OrderPengeuaranBarang1: TMenuItem
+        Caption = 'Order Pengeluaran Barang'
+      end
+      object N4: TMenuItem
+        Caption = '-'
+      end
+      object NotaJualLelang1: TMenuItem
+        Caption = 'Nota Jual/ Lelang'
+      end
+    end
+    object Laporan1: TMenuItem
+      Caption = 'Laporan'
+      RadioItem = True
+      object Mutasi1: TMenuItem
+        Caption = 'Mutasi'
+        Visible = False
+        OnClick = Mutasi1Click
+      end
+      object PotonganBSPerOperator1: TMenuItem
+        Caption = 'Rekap Data Potongan BS'
+        OnClick = PotonganBSPerOperator1Click
+      end
+      object LaporanProduksi1: TMenuItem
+        Caption = 'Laporan Produksi QA'
+        OnClick = LaporanProduksi1Click
+      end
+      object LaporanTenunInspect1: TMenuItem
+        Caption = 'Laporan Tenun != Inspect'
+        OnClick = LaporanTenunInspect1Click
+      end
+    end
+    object Window1: TMenuItem
+      Caption = 'Window'
+      object ResetTabel1: TMenuItem
+        Caption = 'Reset Tabel'
+        OnClick = ResetTabel1Click
+      end
+      object Backup1: TMenuItem
+        Caption = 'Backup'
+        OnClick = Backup1Click
+      end
+      object About1: TMenuItem
+        Caption = 'About'
+        OnClick = About1Click
+      end
+      object Close1: TMenuItem
+        Caption = 'Close'
+        OnClick = Close1Click
+      end
+    end
+  end
+  object MyAbout: TLMDAboutDlg
+    Appname = 'S I M P I S'#13#10'Sistem Informasi Manajemen Pismatex'
+    AppNameSize = 14
+    CaptionTitle = 'PT. Pismatex Textile Industry'
+    Copyright = 'Hak cipta milik PT. Pismatex Textile Industry'
+    Description = 'Create and design by www.cipsoft-indonesia.com'
+    UseDefault = True
+    UseResInfo = True
+    UseResVersionInfoStyle = vsFileBuild
+    Left = 288
+    Top = 32
+  end
+end
