@@ -1638,6 +1638,22 @@ type
     QBrowse_rekap4_totP_M_BELANG2: TFloatField;
     QBrowse_rekap4_totM_RUSAK2: TFloatField;
     QBrowse_rekap4_totP_M_RUSAK2: TFloatField;
+    QBrowse_Loom1M_BELANG2: TFloatField;
+    QBrowse_Loom1P_M_BELANG2: TFloatField;
+    QBrowse_Loom1M_RUSAK2: TFloatField;
+    QBrowse_Loom1P_M_RUSAK2: TFloatField;
+    QBrowse_Loom1_totM_BELANG2: TFloatField;
+    QBrowse_Loom1_totP_M_BELANG2: TFloatField;
+    QBrowse_Loom1_totM_RUSAK2: TFloatField;
+    QBrowse_Loom1_totP_M_RUSAK2: TFloatField;
+    QBrowse_Loom2M_BELANG2: TFloatField;
+    QBrowse_Loom2P_M_BELANG2: TFloatField;
+    QBrowse_Loom2M_RUSAK2: TFloatField;
+    QBrowse_Loom2P_M_RUSAK2: TFloatField;
+    QBrowse_Loom2_totM_BELANG2: TFloatField;
+    QBrowse_Loom2_totP_M_BELANG2: TFloatField;
+    QBrowse_Loom2_totM_RUSAK2: TFloatField;
+    QBrowse_Loom2_totP_M_RUSAK2: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -3340,7 +3356,7 @@ begin
 
   wwDBGrid10.ColumnByName('E_STAMPING2').FooterValue := FormatFloat('0.0,0;(0.0,0);', QBrowse_Loom3_totE_STAMPING2.AsFloat);
   wwDBGrid10.ColumnByName('M_BELANG2').FooterValue := FormatFloat('0.0,0;(0.0,0);', QBrowse_Loom3_totM_BELANG2.AsFloat);
-  wwDBGrid10.ColumnByName('M_RUSAK2').FooterValue := FormatFloat('0.0,0;(0.0,0);', QBrowse_Loom3_totM_RUSAK2.AsFloat);
+ // wwDBGrid10.ColumnByName('M_RUSAK2').FooterValue := FormatFloat('0.0,0;(0.0,0);', QBrowse_Loom3_totM_RUSAK2.AsFloat);
 end;
 
 // ------------------------------------------------------KP PERSEN----------------------------------------------------------------
@@ -3490,7 +3506,7 @@ begin
 
     wwDBGrid9.ColumnByName('P_E_STAMPING2').FooterValue := FormatFloat('0.0,0;(0.0,0);', (QBrowse_rekap4_totE_STAMPING2.AsFloat/QBrowse_rekap4_totHSL_PROD.AsFloat)*100);
     wwDBGrid9.ColumnByName('P_M_BELANG2').FooterValue := FormatFloat('0.0,0;(0.0,0);', (QBrowse_rekap4_totM_BELANG2.AsFloat/QBrowse_rekap4_totHSL_PROD.AsFloat)*100);
-    wwDBGrid9.ColumnByName('P_M_RUSAK2').FooterValue := FormatFloat('0.0,0;(0.0,0);', (QBrowse_rekap4_totM_RUSAK2.AsFloat/QBrowse_rekap4_totHSL_PROD.AsFloat)*100);
+    //wwDBGrid9.ColumnByName('P_M_RUSAK2').FooterValue := FormatFloat('0.0,0;(0.0,0);', (QBrowse_rekap4_totM_RUSAK2.AsFloat/QBrowse_rekap4_totHSL_PROD.AsFloat)*100);
 end;
 
 // ------------------------------------------------------KP END------------------------------------------------------------------
@@ -3641,6 +3657,7 @@ begin
   wwDBGrid11.ColumnByName('KNB').FooterValue      := FormatFloat('0.0,0;(0.0,0);', QBrowse_Loom1_totKNB.AsFloat);
 
   wwDBGrid11.ColumnByName('E_STAMPING2').FooterValue := FormatFloat('0.0,0;(0.0,0);', QBrowse_Loom1_totE_STAMPING2.AsFloat);
+  wwDBGrid11.ColumnByName('M_BELANG2').FooterValue := FormatFloat('0.0,0;(0.0,0);', QBrowse_Loom1_totM_BELANG2.AsFloat);
 end;
 
 // ------------------------------------------------------LOOM %------------------------------------------------------------------
@@ -3789,6 +3806,7 @@ begin
     wwDBGrid12.ColumnByName('P_KNB').FooterValue      := FormatFloat('0.0,0;(0.0,0);', (QBrowse_Loom2_totKNB.AsFloat/QBrowse_Loom2_totHSL_PROD.AsFloat)*100);
 
     wwDBGrid12.ColumnByName('P_E_STAMPING2').FooterValue := FormatFloat('0.0,0;(0.0,0);', (QBrowse_Loom2_totE_STAMPING2.AsFloat/QBrowse_Loom2_totHSL_PROD.AsFloat)*100);
+    wwDBGrid12.ColumnByName('P_M_BELANG2').FooterValue := FormatFloat('0.0,0;(0.0,0);', (QBrowse_Loom2_totM_BELANG2.AsFloat/QBrowse_Loom2_totHSL_PROD.AsFloat)*100);
 end;
 
 // ------------------------------------------------------LOOM END----------------------------------------------------------------

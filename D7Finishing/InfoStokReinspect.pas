@@ -379,6 +379,9 @@ type
     Label13: TLabel;
     DBText7: TDBText;
     BitBtn1: TBitBtn;
+    Label14: TLabel;
+    Label17: TLabel;
+    Label15: TLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure ColumnHeaderBand1BeforePrint(Sender: TQRCustomBand;
@@ -867,6 +870,9 @@ begin
   QRiwayatTransaksi.Open;
   QRiwayatTransaksi_tot.Open;
   QRiwayatTransaksi.EnableControls;
+
+  Label15.Caption:=QWIPnSSUAI_IN.AsString;
+  Label17.Caption:=QWIPnSSUAI_OUT.AsString;
 
   wwDBGrid2.ColumnByName('IN_BK').FooterValue := FormatFloat('0.0,0;(0.0,0);-', QRiwayatTransaksi_totIN_BK.AsFloat);
   wwDBGrid2.ColumnByName('IN_BS').FooterValue := FormatFloat('0.0,0;(0.0,0);-', QRiwayatTransaksi_totIN_BS.AsFloat);
