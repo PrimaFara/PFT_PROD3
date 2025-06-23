@@ -303,6 +303,7 @@ begin
     //bs
     QDetailQTY2.AsFloat:=
     (QDetailSBK.AsFloat    +
+    QDetailKNT.AsFloat     + // LUBANG
     QDetailUTS.AsFloat     +
     QDetailKNB.AsFloat     +
 
@@ -313,7 +314,7 @@ begin
     QDetailBS_TK.AsFloat   +
 
     QDetailAFL.AsFloat     + // AFFAL
-    //QDetailLB.AsFloat      + // AFFAL TIDAK LANGSUNG
+    //QDetailLB.AsFloat    + // AFFAL TIDAK LANGSUNG
     QDetailKECOES_BS.AsFloat);
 
     //bs parah
@@ -358,6 +359,7 @@ begin
     //bs
     QDetailQTY2.AsFloat:=
     (QDetailSBK.AsFloat    +
+    QDetailKNT.AsFloat     + // LUBANG
     QDetailUTS.AsFloat     +
     QDetailKNB.AsFloat     +
 

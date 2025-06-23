@@ -107,6 +107,7 @@ object HasilTenunMitraFrm: THasilTenunMitraFrm
             'KECOES_BG'#9'6'#9'CACAT MENDING'#9'F'#9'DEFECT B-GRADE'
             'KBR'#9'6'#9'KMBG RSK'#9'F'#9'DEFECT B-GRADE'
             'SBK'#9'10'#9'RSK / SBK / LUB'#9'F'#9'BS'
+            'KNT'#9'10'#9'LBG'#9'F'#9'BS'
             'UTS'#9'6'#9'UTS'#9'F'#9'BS'
             'KNB'#9'6'#9'KNB'#9'F'#9'BS'
             'BS_FLS'#9'6'#9'SLL'#9'F'#9'BS'
@@ -123,7 +124,7 @@ object HasilTenunMitraFrm: THasilTenunMitraFrm
             'QTY2'#9'6'#9'BS'#9'F'#9'DITERIMA'
             'PJG'#9'6'#9'PJG'#9'F'#9'DATA'
             'LBR'#9'6'#9'LBR'#9'F'#9'DATA'
-            'CUP'#9'6'#9'CUP'#9'F'#9'DATA')
+            'KETERANGAN'#9'15'#9'KETERANGAN'#9'F')
           IniAttributes.Enabled = True
           IniAttributes.SaveToRegistry = True
           IniAttributes.FileName = 'Finishing'
