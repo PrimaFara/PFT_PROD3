@@ -295,6 +295,7 @@ type
     procedure VTglAwal2Change(Sender: TObject);
     procedure VTglAkhir2Change(Sender: TObject);
     procedure BitBtn11Click(Sender: TObject);
+    procedure BitBtn12Click(Sender: TObject);
   private
     { Private declarations }
     vTab,vfilter,vorder : string;
@@ -753,6 +754,29 @@ begin
   wwDBGrid3.ColumnByName('QTY_GULUNG').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QPerKonstruksiKemas_TotQTY_GULUNG.AsFloat);
   wwDBGrid3.ColumnByName('QTY_POTONG').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QPerKonstruksiKemas_TotQTY_POTONG.AsFloat);
 
+end;
+
+procedure TTerimaDrFinishingFrm.BitBtn12Click(Sender: TObject);
+begin
+          if QBrowse.Active then
+          begin
+             DMFrm.SaveDialog1.DefaultExt:='XLK';
+             DMFrm.SaveDialog1.Filter:='Excel files (*.XLK)|*.XLK';
+             DMFrm.SaveDialog1.FileName:=Caption;
+             wwDBGrid3.ExportOptions.TitleName:=Caption;
+               if DMFrm.SaveDialog1.Execute then
+               begin
+                 try
+                 wwDBGrid3.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
+                 wwDBGrid3.ExportOptions.Save;
+                 ShowMessage('Simpan Sukses !');
+                 except
+                 ShowMessage('Simpan Gagal !');
+                 end;
+               end;
+          end
+          else
+            ShowMessage('Tabel belum di-OPEN !');
 end;
 
 end.

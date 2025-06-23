@@ -291,7 +291,6 @@ object HasilTenunFrm: THasilTenunFrm
           ControlType.Strings = (
             'KD_ITEM;CustomEdit;LookItem;F'
             'ARAH;CustomEdit;LookArah;F'
-            'KD_PRODUKSI;CustomEdit;Look_KP;F'
             'NO_SERI_BEAM;CustomEdit;LookBeam;F')
           Selected.Strings = (
             'NO_URUT'#9'5'#9'URUT'#9'T'
@@ -570,6 +569,7 @@ object HasilTenunFrm: THasilTenunFrm
           LookupTable = DMFrm.QKP_Hasil_Inspect
           LookupField = 'KP'
           TabOrder = 4
+          Visible = False
           AutoDropDown = False
           ShowButton = True
           AllowClearKey = False
