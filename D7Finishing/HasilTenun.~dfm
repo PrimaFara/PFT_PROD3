@@ -304,7 +304,7 @@ object HasilTenunFrm: THasilTenunFrm
             'PROSES'#9'5'#9'NO MESIN'#9'F'#9'DATA BEAM'
             'NO_SERI_BEAM'#9'15'#9'NO SERI BEAM'#9'F'#9'DATA BEAM'
             'NO_DESAIN'#9'15'#9'NO RESEP'#9'F'#9'DATA BEAM'
-            'KD_PRODUKSI'#9'6'#9'KP'#9'F'#9'DATA BEAM'
+            'KD_PRODUKSI'#9'6'#9'KP'#9'T'#9'DATA BEAM'
             'KONSTRUKSI'#9'15'#9'KONSTRUKSI'#9'T'#9'DATA BEAM'
             'MESIN'#9'15'#9'LOOM'#9'T'#9'DATA BEAM'
             'CORAK'#9'12'#9'CORAK'#9'T'#9'DATA BEAM'

@@ -979,6 +979,7 @@ object HasilTenunFrm: THasilTenunFrm
     end
     object QDetailKD_PRODUKSI: TStringField
       FieldName = 'KD_PRODUKSI'
+      ReadOnly = True
       Size = 10
     end
     object QDetailJENIS: TStringField
