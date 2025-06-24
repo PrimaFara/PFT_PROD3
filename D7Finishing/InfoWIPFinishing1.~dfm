@@ -2,7 +2,7 @@ object InfoWIPFinishing1Frm: TInfoWIPFinishing1Frm
   Left = 211
   Top = 122
   Width = 1141
-  Height = 600
+  Height = 739
   Caption = 'Info WIP Finishing'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -24,7 +24,7 @@ object InfoWIPFinishing1Frm: TInfoWIPFinishing1Frm
     Left = 0
     Top = 41
     Width = 1125
-    Height = 521
+    Height = 660
     ActivePage = TabSheet3
     Align = alClient
     TabOrder = 0
@@ -2088,7 +2088,7 @@ object InfoWIPFinishing1Frm: TInfoWIPFinishing1Frm
         Left = 0
         Top = 52
         Width = 1117
-        Height = 441
+        Height = 580
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -2156,16 +2156,6 @@ object InfoWIPFinishing1Frm: TInfoWIPFinishing1Frm
       Caption = '&Riwayat Transaksi'
       ImageIndex = 3
       OnShow = TabSheet4Show
-      object Button1: TButton
-        Left = 408
-        Top = 232
-        Width = 75
-        Height = 25
-        Caption = '&Keterangan'
-        TabOrder = 0
-        TabStop = False
-        Visible = False
-      end
       object Panel1: TPanel
         Left = 0
         Top = 0
@@ -2182,7 +2172,7 @@ object InfoWIPFinishing1Frm: TInfoWIPFinishing1Frm
         Font.Style = []
         ParentCtl3D = False
         ParentFont = False
-        TabOrder = 1
+        TabOrder = 0
         object Label8: TLabel
           Left = 8
           Top = 13
@@ -2257,14 +2247,14 @@ object InfoWIPFinishing1Frm: TInfoWIPFinishing1Frm
       end
       object Panel7: TPanel
         Left = 0
-        Top = 449
+        Top = 588
         Width = 1117
         Height = 44
         Align = alBottom
         BevelInner = bvLowered
         Ctl3D = False
         ParentCtl3D = False
-        TabOrder = 2
+        TabOrder = 1
         object DBText6: TDBText
           Left = 530
           Top = 11
@@ -2322,7 +2312,7 @@ object InfoWIPFinishing1Frm: TInfoWIPFinishing1Frm
         Align = alTop
         BevelOuter = bvNone
         Color = clMoneyGreen
-        TabOrder = 3
+        TabOrder = 2
         object Label7: TLabel
           Left = 448
           Top = 16
@@ -2352,7 +2342,7 @@ object InfoWIPFinishing1Frm: TInfoWIPFinishing1Frm
         Left = 0
         Top = 138
         Width = 1117
-        Height = 311
+        Height = 450
         ControlType.Strings = (
           'ISAKTIF;CheckBox;1;0'
           'ID_HAK;CustomEdit;LookJnsMenu;F')
@@ -2392,7 +2382,7 @@ object InfoWIPFinishing1Frm: TInfoWIPFinishing1Frm
         Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgWordWrap, dgPerfectRowFit, dgShowFooter, dgTrailingEllipsis, dgDblClickColSizing]
         ParentFont = False
         RowHeightPercent = 125
-        TabOrder = 4
+        TabOrder = 3
         TitleAlignment = taLeftJustify
         TitleFont.Charset = ANSI_CHARSET
         TitleFont.Color = clWindowText
@@ -4460,7 +4450,7 @@ object InfoWIPFinishing1Frm: TInfoWIPFinishing1Frm
         Left = 0
         Top = 52
         Width = 1117
-        Height = 441
+        Height = 580
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -6587,7 +6577,7 @@ object InfoWIPFinishing1Frm: TInfoWIPFinishing1Frm
         Left = 0
         Top = 52
         Width = 1117
-        Height = 441
+        Height = 580
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (

@@ -725,7 +725,7 @@ end;
 procedure TKoreksiFrm.TabSheet1Show(Sender: TObject);
 begin
          QMaster.Close;
-         QMaster.SetVariable('no_nota',QBrowseNO_NOTA.AsString);
+         //QMaster.SetVariable('no_nota',QBrowseNO_NOTA.AsString);
          QMaster.SetVariable('no_reg',QBrowseNO_REG.AsInteger);
          QMaster.Open;
          QDetail.Close;

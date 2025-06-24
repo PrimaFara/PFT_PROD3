@@ -158,9 +158,9 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333320000
+              58.208333333333330000
               269.875000000000000000
-              74.083333333333320000
+              74.083333333333330000
               365.125000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -681,7 +681,7 @@ object KoreksiFrm: TKoreksiFrm
               44.979166666666670000
               1616.604166666667000000
               216.958333333333300000
-              92.604166666666680000)
+              92.604166666666670000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -710,10 +710,10 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666660000
-              664.104166666666600000
+              60.854166666666670000
+              664.104166666666700000
               158.750000000000000000
-              672.041666666666600000)
+              672.041666666666700000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -742,7 +742,7 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawRight = False
             Size.Values = (
               50.270833333333330000
-              804.333333333333200000
+              804.333333333333300000
               222.250000000000000000
               116.416666666666700000)
             Alignment = taLeftJustify
@@ -806,7 +806,7 @@ object KoreksiFrm: TKoreksiFrm
             Size.Values = (
               52.916666666666670000
               1613.958333333333000000
-              84.666666666666680000
+              84.666666666666670000
               209.020833333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -836,7 +836,7 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333320000
+              58.208333333333330000
               1619.250000000000000000
               2.645833333333333000
               111.125000000000000000)
@@ -925,7 +925,7 @@ object KoreksiFrm: TKoreksiFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666660000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -1068,7 +1068,7 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              981.604166666666800000
+              981.604166666666700000
               7.937500000000000000
               145.520833333333300000)
             Alignment = taRightJustify
@@ -1126,9 +1126,9 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              679.979166666666800000
+              679.979166666666700000
               190.500000000000000000
-              74.083333333333320000)
+              74.083333333333330000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -1160,7 +1160,7 @@ object KoreksiFrm: TKoreksiFrm
               44.979166666666670000
               1230.312500000000000000
               190.500000000000000000
-              74.083333333333320000)
+              74.083333333333330000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -1222,7 +1222,7 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              677.333333333333200000
+              677.333333333333300000
               359.833333333333300000
               79.375000000000000000)
             Alignment = taCenter
@@ -1589,7 +1589,7 @@ object KoreksiFrm: TKoreksiFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            68.791666666666660000
+            68.791666666666670000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -1635,7 +1635,7 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              989.541666666666800000
+              989.541666666666700000
               10.583333333333330000
               140.229166666666700000)
             Alignment = taRightJustify
@@ -3546,10 +3546,10 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              66.145833333333340000
+              66.145833333333330000
               526.520833333333300000
               179.916666666666700000
-              947.208333333333400000)
+              947.208333333333300000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -3578,7 +3578,7 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              923.395833333333400000
+              923.395833333333300000
               312.208333333333300000
               153.458333333333300000)
             Alignment = taCenter
@@ -3608,8 +3608,8 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666660000
-              740.833333333333400000
+              60.854166666666670000
+              740.833333333333300000
               248.708333333333300000
               515.937500000000000000)
             Alignment = taCenter
@@ -3728,7 +3728,7 @@ object KoreksiFrm: TKoreksiFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666660000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText16: TQRDBText

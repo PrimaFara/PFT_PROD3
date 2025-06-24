@@ -420,7 +420,6 @@ type
     QWIPQTY_KODI: TFloatField;
     QWIP_TotQTY_KODI: TFloatField;
     TabSheet4: TTabSheet;
-    Button1: TButton;
     Panel1: TPanel;
     Label8: TLabel;
     DBText1: TDBText;
