@@ -1,7 +1,7 @@
 object InfoStokReinspectFrm: TInfoStokReinspectFrm
-  Left = 393
-  Top = 211
-  Width = 1364
+  Left = 188
+  Top = 161
+  Width = 1300
   Height = 685
   Caption = 'Info Stok ReInspecting'
   Color = clBtnFace
@@ -31,7 +31,7 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1348
+    Width = 1284
     Height = 49
     Align = alTop
     BevelOuter = bvNone
@@ -56,7 +56,7 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
   object Panel2: TPanel
     Left = 0
     Top = 615
-    Width = 1348
+    Width = 1284
     Height = 32
     Align = alBottom
     BevelOuter = bvNone
@@ -66,7 +66,7 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
   object PageControl1: TPageControl
     Left = 0
     Top = 49
-    Width = 1348
+    Width = 1284
     Height = 566
     ActivePage = TabSheet2
     Align = alClient
@@ -154,7 +154,7 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
               ForceNewPage = False
               Size.Values = (
                 500.062500000000000000
-                3122.083333333334000000)
+                3122.083333333333000000)
               BandType = rbSummary
               object QRLabel175: TQRLabel
                 Left = 7
@@ -1189,8 +1189,8 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
               ForceNewColumn = False
               ForceNewPage = False
               Size.Values = (
-                68.791666666666680000
-                3122.083333333334000000)
+                68.791666666666670000
+                3122.083333333333000000)
               BandType = rbDetail
               object QRDBText133: TQRDBText
                 Left = 314
@@ -2565,8 +2565,8 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
               ForceNewPage = False
               ParentFont = False
               Size.Values = (
-                597.958333333333400000
-                3122.083333333334000000)
+                597.958333333333300000
+                3122.083333333333000000)
               BandType = rbTitle
               object QRShape1: TQRShape
                 Left = 0
@@ -2596,10 +2596,10 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
                 Frame.DrawLeft = False
                 Frame.DrawRight = False
                 Size.Values = (
-                  60.854166666666680000
+                  60.854166666666670000
                   1148.291666666667000000
                   161.395833333333300000
-                  822.854166666666800000)
+                  822.854166666666700000)
                 Alignment = taCenter
                 AlignToBand = True
                 AutoSize = True
@@ -4945,7 +4945,7 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
               ForceNewPage = False
               Size.Values = (
                 63.500000000000000000
-                3122.083333333334000000)
+                3122.083333333333000000)
               BandType = rbPageFooter
               object QRDBText141: TQRDBText
                 Left = 7
@@ -5289,7 +5289,7 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
       object Panel3: TPanel
         Left = 0
         Top = 0
-        Width = 1340
+        Width = 1276
         Height = 52
         Align = alTop
         BevelInner = bvLowered
@@ -5483,7 +5483,7 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
       object wwDBGrid8: TwwDBGrid
         Left = 0
         Top = 52
-        Width = 1340
+        Width = 1276
         Height = 486
         DisableThemes = True
         DisableThemesInTitle = True
@@ -5568,7 +5568,7 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
       object wwDBGrid2: TwwDBGrid
         Left = 0
         Top = 138
-        Width = 1340
+        Width = 1276
         Height = 356
         ControlType.Strings = (
           'ISAKTIF;CheckBox;1;0'
@@ -5627,21 +5627,21 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
       object Panel7: TPanel
         Left = 0
         Top = 97
-        Width = 1340
+        Width = 1276
         Height = 41
         Align = alTop
         BevelOuter = bvNone
         Color = clMoneyGreen
         TabOrder = 1
         object Label5: TLabel
-          Left = 448
+          Left = 208
           Top = 16
           Width = 53
           Height = 13
           Caption = 'Saldo Awal'
         end
         object DBText5: TDBText
-          Left = 609
+          Left = 369
           Top = 11
           Width = 79
           Height = 22
@@ -5658,7 +5658,7 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
           ParentFont = False
         end
         object DBText4: TDBText
-          Left = 817
+          Left = 577
           Top = 11
           Width = 79
           Height = 22
@@ -5675,14 +5675,14 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
           ParentFont = False
         end
         object Label7: TLabel
-          Left = 576
+          Left = 336
           Top = 16
           Width = 14
           Height = 13
           Caption = 'BK'
         end
         object Label10: TLabel
-          Left = 784
+          Left = 544
           Top = 16
           Width = 14
           Height = 13
@@ -5692,7 +5692,7 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
       object Panel6: TPanel
         Left = 0
         Top = 494
-        Width = 1340
+        Width = 1276
         Height = 44
         Align = alBottom
         BevelInner = bvLowered
@@ -5700,7 +5700,7 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
         ParentCtl3D = False
         TabOrder = 2
         object DBText6: TDBText
-          Left = 609
+          Left = 377
           Top = 11
           Width = 79
           Height = 22
@@ -5717,28 +5717,28 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
           ParentFont = False
         end
         object Label6: TLabel
-          Left = 448
+          Left = 216
           Top = 16
           Width = 54
           Height = 13
           Caption = 'Saldo Akhir'
         end
         object Label12: TLabel
-          Left = 576
+          Left = 344
           Top = 16
           Width = 14
           Height = 13
           Caption = 'BK'
         end
         object Label13: TLabel
-          Left = 784
+          Left = 552
           Top = 16
           Width = 14
           Height = 13
           Caption = 'BS'
         end
         object DBText7: TDBText
-          Left = 817
+          Left = 585
           Top = 11
           Width = 79
           Height = 22
@@ -5750,6 +5750,39 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clRed
           Font.Height = -19
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label14: TLabel
+          Left = 816
+          Top = 16
+          Width = 61
+          Height = 13
+          Caption = 'Penyesuaian'
+        end
+        object Label17: TLabel
+          Left = 1048
+          Top = 16
+          Width = 22
+          Height = 18
+          Caption = 'BK'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlue
+          Font.Height = -15
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label15: TLabel
+          Left = 912
+          Top = 16
+          Width = 22
+          Height = 18
+          Caption = 'BK'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlue
+          Font.Height = -15
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           ParentFont = False
@@ -5782,7 +5815,7 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
       object Panel5: TPanel
         Left = 0
         Top = 0
-        Width = 1340
+        Width = 1276
         Height = 97
         Align = alTop
         BevelOuter = bvNone

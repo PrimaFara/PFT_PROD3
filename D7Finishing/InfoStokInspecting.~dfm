@@ -1,6 +1,6 @@
 object InfoStokInspectingFrm: TInfoStokInspectingFrm
-  Left = 217
-  Top = 116
+  Left = 269
+  Top = 134
   Width = 1146
   Height = 613
   Caption = 'Info Stok Inspecting'
@@ -1190,7 +1190,7 @@ object InfoStokInspectingFrm: TInfoStokInspectingFrm
               ForceNewColumn = False
               ForceNewPage = False
               Size.Values = (
-                68.791666666666660000
+                68.791666666666670000
                 3122.083333333333000000)
               BandType = rbDetail
               object QRDBText133: TQRDBText
@@ -2566,7 +2566,7 @@ object InfoStokInspectingFrm: TInfoStokInspectingFrm
               ForceNewPage = False
               ParentFont = False
               Size.Values = (
-                597.958333333333400000
+                597.958333333333300000
                 3122.083333333333000000)
               BandType = rbTitle
               object QRShape1: TQRShape
@@ -2597,7 +2597,7 @@ object InfoStokInspectingFrm: TInfoStokInspectingFrm
                 Frame.DrawLeft = False
                 Frame.DrawRight = False
                 Size.Values = (
-                  60.854166666666660000
+                  60.854166666666670000
                   1352.020833333333000000
                   161.395833333333300000
                   418.041666666666700000)
@@ -7292,7 +7292,7 @@ object InfoStokInspectingFrm: TInfoStokInspectingFrm
               ForceNewPage = False
               ParentFont = False
               Size.Values = (
-                597.958333333333400000
+                597.958333333333300000
                 2635.250000000000000000)
               BandType = rbTitle
               object QRShape86: TQRShape
@@ -7340,10 +7340,10 @@ object InfoStokInspectingFrm: TInfoStokInspectingFrm
                 Frame.DrawLeft = False
                 Frame.DrawRight = False
                 Size.Values = (
-                  60.854166666666660000
+                  60.854166666666670000
                   1010.708333333333000000
                   161.395833333333300000
-                  613.833333333333400000)
+                  613.833333333333300000)
                 Alignment = taCenter
                 AlignToBand = True
                 AutoSize = True
@@ -10802,7 +10802,7 @@ object InfoStokInspectingFrm: TInfoStokInspectingFrm
               ForceNewColumn = False
               ForceNewPage = False
               Size.Values = (
-                66.145833333333340000
+                66.145833333333330000
                 2635.250000000000000000)
               BandType = rbDetail
               object QRDBText85: TQRDBText
@@ -11805,7 +11805,7 @@ object InfoStokInspectingFrm: TInfoStokInspectingFrm
               ForceNewPage = False
               ParentFont = False
               Size.Values = (
-                597.958333333333400000
+                597.958333333333300000
                 2635.250000000000000000)
               BandType = rbTitle
               object QRShape63: TQRShape
@@ -11853,10 +11853,10 @@ object InfoStokInspectingFrm: TInfoStokInspectingFrm
                 Frame.DrawLeft = False
                 Frame.DrawRight = False
                 Size.Values = (
-                  60.854166666666660000
+                  60.854166666666670000
                   1010.708333333333000000
                   161.395833333333300000
-                  613.833333333333400000)
+                  613.833333333333300000)
                 Alignment = taCenter
                 AlignToBand = True
                 AutoSize = True
@@ -15315,7 +15315,7 @@ object InfoStokInspectingFrm: TInfoStokInspectingFrm
               ForceNewColumn = False
               ForceNewPage = False
               Size.Values = (
-                66.145833333333340000
+                66.145833333333330000
                 2635.250000000000000000)
               BandType = rbDetail
               object QRDBText92: TQRDBText

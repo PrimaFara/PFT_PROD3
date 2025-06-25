@@ -2364,7 +2364,7 @@ object InfoWIPFinishing1Frm: TInfoWIPFinishing1Frm
           'OUT_BK'#9'10'#9'KELUAR'#9'F')
         IniAttributes.Enabled = True
         IniAttributes.SaveToRegistry = True
-        IniAttributes.FileName = 'Pismatex Master'
+        IniAttributes.FileName = 'Finishing'
         IniAttributes.Delimiter = ';;'
         IniAttributes.CheckNewFields = True
         ExportOptions.ExportType = wwgetHTML

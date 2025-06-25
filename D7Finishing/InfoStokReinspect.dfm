@@ -5593,7 +5593,7 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
           'OUT_BS'#9'10'#9'BS'#9'F'#9'KELUAR')
         IniAttributes.Enabled = True
         IniAttributes.SaveToRegistry = True
-        IniAttributes.FileName = 'Pismatex Master'
+        IniAttributes.FileName = 'Finishing'
         IniAttributes.Delimiter = ';;'
         IniAttributes.CheckNewFields = True
         ExportOptions.ExportType = wwgetHTML
