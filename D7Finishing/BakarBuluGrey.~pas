@@ -12,8 +12,6 @@ uses
 
 type
   TBakarBuluGreyFrm = class(TForm)
-    PanelLeft: TPanel;
-    PanelRight: TPanel;
     QMaster: TOracleDataSet;
     QDetail: TOracleDataSet;
     dsQDetail: TwwDataSource;
@@ -35,8 +33,6 @@ type
     QTransaksiJAB4: TStringField;
     QTransaksiDISTRIBUSI: TStringField;
     dsQTransaksi: TwwDataSource;
-    Panel1: TPanel;
-    Panel2: TPanel;
     FNo_Urut: TOracleDataSet;
     FNo_UrutNO_NOTA: TStringField;
     LookMaster: TwwLookupDialog;
@@ -404,6 +400,7 @@ type
     QAmbilBatchKP_FINISH: TStringField;
     QAmbilBatchKD_KONSTRUKSI_1: TStringField;
     QAmbilBatchKONSTRUKSI_1: TStringField;
+    QPerKonstruksiKD_PRODUKSI: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -517,7 +514,7 @@ end;
 
 procedure TBakarBuluGreyFrm.FormResize(Sender: TObject);
 begin
-  PanelLeft.Width:=round((Width-PanelCenter.Width)/2)-4;
+  // PanelLeft.Width:=round((Width-PanelCenter.Width)/2)-4;
 {  Caption:=IntToStr(width)+', '+IntToStr(PanelLeft.Width)+', '+IntToStr(PanelCenter.Width)+
     ', '+IntToStr(PanelRight.Width);    }
 end;

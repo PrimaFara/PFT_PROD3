@@ -2786,7 +2786,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333330000
+            66.145833333333340000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -2977,7 +2977,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666680000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -3013,7 +3013,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             FontSize = 8
           end
           object QRSysData1: TQRSysData
-            Left = 687
+            Left = -54
             Top = 8
             Width = 69
             Height = 17
@@ -3048,9 +3048,9 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              883.708333333333300000
+              883.708333333333400000
               21.166666666666670000
-              232.833333333333300000)
+              232.833333333333400000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = False
@@ -3083,7 +3083,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            320.145833333333300000
+            320.145833333333400000
             2000.250000000000000000)
           BandType = rbGroupFooter
           object QRDBText4: TQRDBText
@@ -3337,7 +3337,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333330000
+            66.145833333333340000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText5: TQRDBText
@@ -4490,7 +4490,8 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             'MESIN;CustomEdit;LookMesin;F'
             'NO_RESEP;CustomEdit;LookAmbil;F'
             'KD_PRODUKSI;CustomEdit;LookKdProd;F'
-            'MITRA;CustomEdit;LookBeam;F')
+            'MITRA;CustomEdit;LookBeam;F'
+            'TGL_INSPECT;CustomEdit;wwDBDateTimePicker2;F')
           Selected.Strings = (
             'NO_RESEP'#9'22'#9'NO. RESEP'#9'F'
             'KD_PRODUKSI'#9'8'#9'KODE PROD'#9'F'
@@ -4500,7 +4501,8 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             'KONSTRUKSI'#9'25'#9'NAMA'#9'T'#9'KONSTRUKSI'
             'MITRA'#9'15'#9'MITRA'#9'F'
             'CORAK'#9'15'#9'CORAK'#9'T'
-            'MESIN'#9'8'#9'NO. MESIN'#9'T'
+            'TGL_PTG'#9'15'#9'TGL POTONG'#9'F'
+            'MESIN'#9'8'#9'NO. MESIN'#9'F'
             'MESIN_TENUN'#9'15'#9'NAMA MESIN'#9'T'
             'KETERANGAN'#9'15'#9'KETERANGAN'#9'F')
           IniAttributes.FileName = 'Finishing'
@@ -4717,6 +4719,30 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
           AllowClearKey = False
           OnCloseUp = LookBeamCloseUp
           OnEnter = LookBeamEnter
+        end
+        object wwDBDateTimePicker2: TwwDBDateTimePicker
+          Left = 884
+          Top = 148
+          Width = 121
+          Height = 22
+          TabStop = False
+          BorderStyle = bsNone
+          CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+          CalendarAttributes.Font.Color = clWindowText
+          CalendarAttributes.Font.Height = -11
+          CalendarAttributes.Font.Name = 'MS Sans Serif'
+          CalendarAttributes.Font.Style = []
+          DataField = 'TGL'
+          DataSource = dsQMaster
+          Epoch = 1950
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+          ShowButton = True
+          TabOrder = 14
         end
       end
     end
@@ -4981,6 +5007,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
           'NO_RESEP'#9'25'#9'NO. RESEP'#9'F'
           'NO_ORDER'#9'20'#9'NO. ORDER'#9'F'
           'TGL'#9'18'#9'TANGGAL'#9'F'
+          'TGL_PTG'#9'18'#9'TGL POTONG'#9'F'
           'KD_PRODUKSI'#9'15'#9'KODE PROD'#9'F'
           'KD_KONSTRUKSI'#9'6'#9'KODE'#9'F'#9'KONSTRUKSI'
           'KONSTRUKSI'#9'30'#9'NAMA'#9'T'#9'KONSTRUKSI'
@@ -5151,7 +5178,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
+              60.854166666666680000
               452.437500000000000000
               201.083333333333300000
               1092.729166666667000000)
@@ -5182,9 +5209,9 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333320000
+              58.208333333333340000
               269.875000000000000000
-              74.083333333333320000
+              74.083333333333340000
               365.125000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -5528,9 +5555,9 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333330000
-              931.333333333333300000
-              264.583333333333300000
+              58.208333333333340000
+              931.333333333333400000
+              264.583333333333400000
               137.583333333333300000)
             Alignment = taCenter
             AlignToBand = True
@@ -5593,7 +5620,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
               44.979166666666670000
               1664.229166666667000000
               23.812500000000000000
-              66.145833333333320000)
+              66.145833333333340000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -5643,8 +5670,8 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              336.020833333333300000
-              42.333333333333330000
+              336.020833333333400000
+              42.333333333333340000
               222.250000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -5694,7 +5721,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             Size.Values = (
               44.979166666666670000
               1074.208333333333000000
-              74.083333333333320000
+              74.083333333333340000
               92.604166666666680000)
             Alignment = taRightJustify
             AlignToBand = False
@@ -5837,7 +5864,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             Size.Values = (
               44.979166666666670000
               1415.520833333333000000
-              74.083333333333320000
+              74.083333333333340000
               92.604166666666680000)
             Alignment = taRightJustify
             AlignToBand = False
@@ -5921,7 +5948,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             Size.Values = (
               44.979166666666670000
               1669.520833333333000000
-              42.333333333333330000
+              42.333333333333340000
               238.125000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -5987,7 +6014,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666680000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText14: TQRDBText
@@ -6094,7 +6121,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            391.583333333333300000
+            391.583333333333400000
             2000.250000000000000000)
           BandType = rbGroupFooter
           object QRLabel22: TQRLabel
@@ -6110,7 +6137,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             Size.Values = (
               63.500000000000000000
               1547.812500000000000000
-              97.895833333333320000
+              97.895833333333340000
               201.083333333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -6135,7 +6162,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             Size.Values = (
               63.500000000000000000
               1457.854166666667000000
-              296.333333333333300000
+              296.333333333333400000
               394.229166666666700000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -6364,7 +6391,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333330000
+            66.145833333333340000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText19: TQRDBText
@@ -6992,7 +7019,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
     SequenceField.Sequence = 'ipisma_db5.REG_SERAH_OPENING_DET'
     SequenceField.ApplyMoment = amOnNewRecord
     QBEDefinition.QBEFieldDefs = {
-      04000000180000000D0000004E4F5F5245475F44455441494C01000000000006
+      04000000190000000D0000004E4F5F5245475F44455441494C01000000000006
       0000004E4F5F5245470100000000000A00000054474C5F494E53455254010000
       0000000A0000004F50525F494E534552540100000000000A0000004B45544552
       414E47414E0100000000000A0000005154595F47554C554E470100000000000A
@@ -7006,7 +7033,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
       44554B53490100000000000B0000004D4553494E5F54454E554E010000000000
       0B00000054474C5F494E5350454354010000000000050000004E4F5F504F0100
       00000000090000004E4F5F44455341494E010000000000050000004D49545241
-      010000000000}
+      0100000000000700000054474C5F505447010000000000}
     Master = QMaster
     MasterFields = 'NO_REG'
     DetailFields = 'NO_REG'
@@ -7104,6 +7131,9 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
     object QDetailMITRA: TStringField
       FieldName = 'MITRA'
       Size = 25
+    end
+    object QDetailTGL_PTG: TDateTimeField
+      FieldName = 'TGL_PTG'
     end
   end
   object dsQDetail: TwwDataSource
@@ -7253,7 +7283,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
       652074676C3D746F5F64617465287379736461746529206F7264657220627920
       4E4F5F4E4F54410000000000}
     QBEDefinition.QBEFieldDefs = {
-      0400000026000000070000004E4F5F4E4F54410100000000000A00000054474C
+      0400000027000000070000004E4F5F4E4F54410100000000000A00000054474C
       5F494E534552540100000000000A0000004F50525F494E534552540100000000
       00060000004E4F5F5245470100000000000300000054474C0100000000000400
       0000475255500100000000000500000053484946540100000000000A0000004B
@@ -7274,7 +7304,8 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
       4A55414E0100000000000C0000005154595F4B4F4E5645525349010000000000
       090000004D4553494E5F4445540100000000000F0000004D4553494E5F54454E
       554E5F444554010000000000040000004D555455010000000000080000004E4F
-      5F4241544348010000000000050000004D49545241010000000000}
+      5F4241544348010000000000050000004D495452410100000000000700000054
+      474C5F505447010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -7417,6 +7448,12 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
     object QBrowseMITRA2: TStringField
       FieldName = 'MITRA'
       Size = 25
+    end
+    object QBrowseTGL_INSPECT: TDateTimeField
+      FieldName = 'TGL_INSPECT'
+    end
+    object QBrowseTGL_PTG: TDateTimeField
+      FieldName = 'TGL_PTG'
     end
   end
   object dsQBrowse: TwwDataSource

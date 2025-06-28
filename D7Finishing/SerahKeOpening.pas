@@ -380,6 +380,10 @@ type
     QBrowseMitra: TOracleDataSet;
     QBrowseMitraNAMA_MITRA: TStringField;
     QBrowseMITRA2: TStringField;
+    wwDBDateTimePicker2: TwwDBDateTimePicker;
+    QBrowseTGL_INSPECT: TDateTimeField;
+    QBrowseTGL_PTG: TDateTimeField;
+    QDetailTGL_PTG: TDateTimeField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
