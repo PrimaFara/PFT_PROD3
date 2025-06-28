@@ -4491,7 +4491,8 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             'NO_RESEP;CustomEdit;LookAmbil;F'
             'KD_PRODUKSI;CustomEdit;LookKdProd;F'
             'MITRA;CustomEdit;LookBeam;F'
-            'TGL_INSPECT;CustomEdit;wwDBDateTimePicker2;F')
+            'TGL_INSPECT;CustomEdit;wwDBDateTimePicker2;F'
+            'TGL_PTG;CustomEdit;wwDBDateTimePicker2;F')
           Selected.Strings = (
             'NO_RESEP'#9'22'#9'NO. RESEP'#9'F'
             'KD_PRODUKSI'#9'8'#9'KODE PROD'#9'F'

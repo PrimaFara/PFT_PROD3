@@ -4849,7 +4849,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
         object Panel4: TPanel
           Left = 289
           Top = 2
-          Width = 592
+          Width = 752
           Height = 48
           Align = alLeft
           BevelOuter = bvNone
@@ -4883,7 +4883,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             OnClick = cbTanggalClick
           end
           object BitBtn3: TBitBtn
-            Left = 328
+            Left = 456
             Top = 20
             Width = 75
             Height = 25
@@ -4946,7 +4946,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             OnEnter = dbcFieldEnter
           end
           object BtnExport: TBitBtn
-            Left = 408
+            Left = 536
             Top = 20
             Width = 97
             Height = 25
@@ -4969,7 +4969,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             NumGlyphs = 2
           end
           object Button1: TButton
-            Left = 512
+            Left = 640
             Top = 20
             Width = 75
             Height = 25
@@ -4983,6 +4983,24 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             TabOrder = 6
             Visible = False
             OnClick = Button1Click
+          end
+          object RTgl5: TRadioGroup
+            Left = 333
+            Top = -1
+            Width = 108
+            Height = 49
+            Caption = 'Tanggal : '
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clNavy
+            Font.Height = -9
+            Font.Name = 'Small Fonts'
+            Font.Style = []
+            ItemIndex = 0
+            Items.Strings = (
+              'Tgl Proses'
+              'Tgl Potong')
+            ParentFont = False
+            TabOrder = 7
           end
         end
       end
@@ -6788,7 +6806,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             592
             48)
           object BitBtn5: TBitBtn
-            Left = 7
+            Left = 143
             Top = 15
             Width = 75
             Height = 25
@@ -6813,7 +6831,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             NumGlyphs = 2
           end
           object BtnExport2: TBitBtn
-            Left = 87
+            Left = 223
             Top = 15
             Width = 97
             Height = 25
@@ -6836,13 +6854,14 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             NumGlyphs = 2
           end
           object BitBtn6: TBitBtn
-            Left = 191
+            Left = 327
             Top = 14
             Width = 75
             Height = 25
             Anchors = [akTop, akRight]
             Caption = '&Print'
             TabOrder = 2
+            Visible = False
             OnClick = BitBtn6Click
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
@@ -6858,6 +6877,24 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
               33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
               33333337FFFF7733333333300000033333333337777773333333}
             NumGlyphs = 2
+          end
+          object RTgl6: TRadioGroup
+            Left = 21
+            Top = -1
+            Width = 108
+            Height = 49
+            Caption = 'Tanggal : '
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clNavy
+            Font.Height = -9
+            Font.Name = 'Small Fonts'
+            Font.Style = []
+            ItemIndex = 0
+            Items.Strings = (
+              'Tgl Proses'
+              'Tgl Potong')
+            ParentFont = False
+            TabOrder = 3
           end
         end
       end
@@ -7680,16 +7717,17 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
         'otong'
       'from ipisma_db5.vserah_finish_opening'
       
-        'where trunc (tgl)>=:pawal and (tgl)<=:pakhir and kd_transaksi = ' +
-        #39'900'#39' and kd_produksi NOT LIKE '#39'%PG%'#39' '
+        'where trunc (:ptgl)>=:pawal and (:ptgl)<=:pakhir and kd_transaks' +
+        'i = '#39'900'#39' and kd_produksi NOT LIKE '#39'%PG%'#39' '
       ':myparam'
       'order by kd_produksi ASC'
       '')
     Variables.Data = {
-      0300000003000000080000003A4D59504152414D010000002100000067726F75
+      0300000004000000080000003A4D59504152414D010000002100000067726F75
       70206279206B6F6E737472756B73692C206B645F70726F64756B736900000000
       00060000003A504157414C0C0000000700000078780101010101000000000700
-      00003A50414B4849520C000000070000007878011F01010100000000}
+      00003A50414B4849520C000000070000007878011F0101010000000005000000
+      3A5054474C010000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
       04000000030000000A0000004B4F4E535452554B53490100000000000B000000
       4B445F50524F44554B53490100000000000A0000005154595F504F544F4E4701
@@ -7721,15 +7759,15 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
       'select sum(qty_potong) as qty_potong'
       'from ipisma_db5.vserah_finish_opening'
       
-        'where trunc (tgl)>=:pawal and (tgl)<=:pakhir and kd_transaksi = ' +
-        #39'900'#39' and kd_produksi NOT LIKE '#39'%PG%'#39' '
+        'where trunc (:ptgl)>=:pawal and (:ptgl)<=:pakhir and kd_transaks' +
+        'i = '#39'900'#39' and kd_produksi NOT LIKE '#39'%PG%'#39' '
       ''
       ''
       '')
     Variables.Data = {
-      0300000002000000060000003A504157414C0C00000007000000787801010101
+      0300000003000000060000003A504157414C0C00000007000000787801010101
       0100000000070000003A50414B4849520C000000070000007878011F01010100
-      000000}
+      000000050000003A5054474C010000000000000000000000}
     QBEDefinition.QBEFieldDefs = {04000000010000000A0000005154595F504F544F4E47010000000000}
     QueryAllRecords = False
     CountAllRecords = True
