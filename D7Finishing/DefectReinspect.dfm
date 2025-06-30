@@ -4261,7 +4261,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
         ExportOptions.ExportType = wwgetHTML
         ExportOptions.Options = [esoShowHeader, esoShowFooter, esoShowTitle, esoDblQuoteFields, esoBestColFit, esoShowRecordNo, esoShowAlternating]
         TitleColor = clSkyBlue
-        FixedCols = 0
+        FixedCols = 4
         ShowHorzScrollBar = True
         Align = alClient
         DataSource = dsQBrowse_rekap4
@@ -4366,7 +4366,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
         ExportOptions.ExportType = wwgetHTML
         ExportOptions.Options = [esoShowHeader, esoShowFooter, esoShowTitle, esoDblQuoteFields, esoBestColFit, esoShowRecordNo, esoShowAlternating]
         TitleColor = clSkyBlue
-        FixedCols = 0
+        FixedCols = 4
         ShowHorzScrollBar = True
         Align = alClient
         DataSource = dsQBrowse_Loom3
@@ -4470,7 +4470,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
         ExportOptions.ExportType = wwgetHTML
         ExportOptions.Options = [esoShowHeader, esoShowFooter, esoShowTitle, esoDblQuoteFields, esoBestColFit, esoShowRecordNo, esoShowAlternating]
         TitleColor = clSkyBlue
-        FixedCols = 0
+        FixedCols = 3
         ShowHorzScrollBar = True
         Align = alClient
         DataSource = dsQBrowse_Loom2
@@ -4574,7 +4574,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
         ExportOptions.ExportType = wwgetHTML
         ExportOptions.Options = [esoShowHeader, esoShowFooter, esoShowTitle, esoDblQuoteFields, esoBestColFit, esoShowRecordNo, esoShowAlternating]
         TitleColor = clSkyBlue
-        FixedCols = 0
+        FixedCols = 3
         ShowHorzScrollBar = True
         Align = alClient
         DataSource = dsQBrowse_Loom1
