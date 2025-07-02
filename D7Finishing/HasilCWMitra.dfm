@@ -7407,8 +7407,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
     BeforeEdit = QDetailBeforeEdit
     BeforePost = QMasterBeforePost
     OnNewRecord = QMasterNewRecord
-    Left = 26
-    Top = 65
+    Left = 266
+    Top = 513
     object QMasterNO_REG: TFloatField
       FieldName = 'NO_REG'
       Required = True
@@ -7847,8 +7847,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
     QBEDefinition.QBEFieldDefs = {0400000001000000070000004E4F5F4E4F5441010000000000}
     BeforeQuery = FNo_UrutBeforeQuery
     Session = DMFrm.OS
-    Left = 64
-    Top = 40
+    Left = 144
+    Top = 496
     object FNo_UrutNO_NOTA: TStringField
       FieldName = 'NO_NOTA'
       Size = 4000
@@ -9038,64 +9038,60 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       'sum(nvl(t.tgs, 0)) as tgs, --tgs'
       ''
       
-        ' round((to_number(decode(sum(t.dicabut-t.qty2-t.qty4),'#39'0'#39','#39'0'#39',su' +
-        'm(t.dicabut-t.qty2-t.qty4)))/nullif(sum(t.dicabut), 0))*100,1) a' +
-        's p_bk,'
+        '    to_number(decode(sum(t.dicabut-t.qty2-t.qty4),'#39'0'#39','#39'0'#39',sum(t.' +
+        'dicabut-t.qty2-t.qty4)))/nullif(sum(t.dicabut), 0)*100 as p_bk, '
       
-        ' round((to_number(decode(sum(t.qty4),'#39'0'#39','#39'0'#39',sum(t.qty4)))/nulli' +
-        'f(sum(t.dicabut), 0))*100,1) as p_bgrade,'
+        '    to_number(decode(sum(t.qty4),'#39'0'#39','#39'0'#39',sum(t.qty4)))/nullif(su' +
+        'm(t.dicabut), 0)*100 as p_bgrade,'
       
-        ' round((to_number(decode(sum(t.qty2),'#39'0'#39','#39'0'#39',sum(t.qty2)))/nulli' +
-        'f(sum(t.dicabut), 0))*100,1) as p_bs,'
+        '    to_number(decode(sum(t.qty2),'#39'0'#39','#39'0'#39',sum(t.qty2)))/nullif(su' +
+        'm(t.dicabut), 0)*100 as p_bs,'
       ''
       
-        ' round((to_number(decode(sum(t.flex_print),'#39'0'#39','#39'0'#39',sum(t.flex_pr' +
-        'int)))/nullif(sum(t.dicabut), 0))*100,1) as p_flex_print,'
+        '    to_number(decode(sum(t.flex_print),'#39'0'#39','#39'0'#39',sum(t.flex_print)' +
+        '))/nullif(sum(t.dicabut), 0)*100 as p_flex_print,'
       
-        ' round((to_number(decode(sum(t.flex_steam),'#39'0'#39','#39'0'#39',sum(t.flex_st' +
-        'eam)))/nullif(sum(t.dicabut), 0))*100,1) as p_flex_steam,'
+        '    to_number(decode(sum(t.flex_steam),'#39'0'#39','#39'0'#39',sum(t.flex_steam)' +
+        '))/nullif(sum(t.dicabut), 0)*100 as p_flex_steam,'
       
-        ' round((to_number(decode(sum(t.flex_stamping),'#39'0'#39','#39'0'#39',sum(t.flex' +
-        '_stamping)))/nullif(sum(t.dicabut), 0))*100,1) as p_flex_stampin' +
-        'g,'
+        '    to_number(decode(sum(t.flex_stamping),'#39'0'#39','#39'0'#39',sum(t.flex_sta' +
+        'mping)))/nullif(sum(t.dicabut), 0)*100 as p_flex_stamping,'
       
-        ' round((to_number(decode(sum(t.flex_luntur),'#39'0'#39','#39'0'#39',sum(t.flex_l' +
-        'untur)))/nullif(sum(t.dicabut), 0))*100,1) as p_flex_luntur, --t' +
-        'mbahan'
+        '    to_number(decode(sum(t.flex_luntur),'#39'0'#39','#39'0'#39',sum(t.flex_luntu' +
+        'r)))/nullif(sum(t.dicabut), 0)*100 as p_flex_luntur, --tmbahan'
       
-        ' round((to_number(decode(sum(t.wts),'#39'0'#39','#39'0'#39',sum(t.wts)))/nullif(' +
-        'sum(t.dicabut), 0))*100,1) as p_wts,'
+        '    to_number(decode(sum(t.wts),'#39'0'#39','#39'0'#39',sum(t.wts)))/nullif(sum(' +
+        't.dicabut), 0)*100 as p_wts,'
       
-        ' round((to_number(decode(sum(t.m_samar),'#39'0'#39','#39'0'#39',sum(t.m_samar)))' +
-        '/nullif(sum(t.dicabut), 0))*100,1) as p_m_samar,'
+        '    to_number(decode(sum(t.m_samar),'#39'0'#39','#39'0'#39',sum(t.m_samar)))/nul' +
+        'lif(sum(t.dicabut), 0)*100 as p_m_samar,'
       
-        ' round((to_number(decode(sum(t.m_rusak),'#39'0'#39','#39'0'#39',sum(t.m_rusak)))' +
-        '/nullif(sum(t.dicabut), 0))*100,1) as p_m_rusak,'
+        '    to_number(decode(sum(t.m_rusak),'#39'0'#39','#39'0'#39',sum(t.m_rusak)))/nul' +
+        'lif(sum(t.dicabut), 0)*100 as p_m_rusak,'
       
-        ' round((to_number(decode(sum(t.m_belang),'#39'0'#39','#39'0'#39',sum(t.m_belang)' +
-        '))/nullif(sum(t.dicabut), 0))*100,1) as p_m_belang,'
+        '    to_number(decode(sum(t.m_belang),'#39'0'#39','#39'0'#39',sum(t.m_belang)))/n' +
+        'ullif(sum(t.dicabut), 0)*100 as p_m_belang,'
       
-        ' round((to_number(decode(sum(t.o_setting),'#39'0'#39','#39'0'#39',sum(t.o_settin' +
-        'g)))/nullif(sum(t.dicabut), 0))*100,1) as p_o_setting,'
+        '    to_number(decode(sum(t.o_setting),'#39'0'#39','#39'0'#39',sum(t.o_setting)))' +
+        '/nullif(sum(t.dicabut), 0)*100 as p_o_setting,'
       
-        ' round((to_number(decode(sum(t.n_oli),'#39'0'#39','#39'0'#39',sum(t.n_oli)))/nul' +
-        'lif(sum(t.dicabut), 0))*100,1) as p_n_oli,'
+        '    to_number(decode(sum(t.n_oli),'#39'0'#39','#39'0'#39',sum(t.n_oli)))/nullif(' +
+        'sum(t.dicabut), 0)*100 as p_n_oli,'
       
-        ' round((to_number(decode(sum(t.sobek),'#39'0'#39','#39'0'#39',sum(t.sobek)))/nul' +
-        'lif(sum(t.dicabut), 0))*100,1) as p_sobek,'
+        '    to_number(decode(sum(t.sobek),'#39'0'#39','#39'0'#39',sum(t.sobek)))/nullif(' +
+        'sum(t.dicabut), 0)*100 as p_sobek,'
       
-        ' round((to_number(decode(sum(t.sobek_mt),'#39'0'#39','#39'0'#39',sum(t.sobek_mt)' +
-        '))/nullif(sum(t.dicabut), 0))*100,1) as p_sobek_mt,   --sobek_mt' +
-        ' 281223'
+        '    to_number(decode(sum(t.sobek_mt),'#39'0'#39','#39'0'#39',sum(t.sobek_mt)))/n' +
+        'ullif(sum(t.dicabut), 0)*100 as p_sobek_mt,   --sobek_mt 281223'
       
-        ' round((to_number(decode(sum(t.tgs),'#39'0'#39','#39'0'#39',sum(t.tgs)))/nullif(' +
-        'sum(t.dicabut), 0))*100,1) as p_tgs,'
+        '    to_number(decode(sum(t.tgs),'#39'0'#39','#39'0'#39',sum(t.tgs)))/nullif(sum(' +
+        't.dicabut), 0)*100 as p_tgs,'
       
-        ' round((to_number(decode(sum(t.affal),'#39'0'#39','#39'0'#39',sum(t.affal)))/nul' +
-        'lif(sum(t.dicabut), 0))*100,1) as p_affal,'
+        '    to_number(decode(sum(t.affal),'#39'0'#39','#39'0'#39',sum(t.affal)))/nullif(' +
+        'sum(t.dicabut), 0)*100 as p_affal,'
       
-        ' round((to_number(decode(sum(t.flex),'#39'0'#39','#39'0'#39',sum(t.flex)))/nulli' +
-        'f(sum(t.dicabut), 0))*100,1) as p_flex'
+        '    to_number(decode(sum(t.flex),'#39'0'#39','#39'0'#39',sum(t.flex)))/nullif(su' +
+        'm(t.dicabut), 0)*100 as p_flex'
       ''
       'from '
       ''
@@ -9372,64 +9368,64 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       'sum(nvl(t.flex, 0)) as flex,'
       ''
       
-        ' round((to_number(decode(sum(t.dicabut-t.qty2-t.qty4),'#39'0'#39','#39'0'#39',su' +
-        'm(t.dicabut-t.qty2-t.qty4)))/nullif(sum(t.dicabut), 0))*100,1) a' +
-        's p_bk,'
+        'to_number(decode(sum(t.dicabut - t.qty2 - t.qty4), '#39'0'#39', '#39'0'#39', sum' +
+        '(t.dicabut - t.qty2 - t.qty4))) / nullif(sum(t.dicabut), 0) * 10' +
+        '0 as p_bk,'
       
-        ' round((to_number(decode(sum(t.qty4),'#39'0'#39','#39'0'#39',sum(t.qty4)))/nulli' +
-        'f(sum(t.dicabut), 0))*100,1) as p_bgrade,'
+        'to_number(decode(sum(t.qty4), '#39'0'#39', '#39'0'#39', sum(t.qty4))) / nullif(s' +
+        'um(t.dicabut), 0) * 100 as p_bgrade,'
       
-        ' round((to_number(decode(sum(t.qty2),'#39'0'#39','#39'0'#39',sum(t.qty2)))/nulli' +
-        'f(sum(t.dicabut), 0))*100,1) as p_bs,'
+        'to_number(decode(sum(t.qty2), '#39'0'#39', '#39'0'#39', sum(t.qty2))) / nullif(s' +
+        'um(t.dicabut), 0) * 100 as p_bs,'
       ''
       
-        ' round((to_number(decode(sum(t.flex_print),'#39'0'#39','#39'0'#39',sum(t.flex_pr' +
-        'int)))/nullif(sum(t.dicabut), 0))*100,1) as p_flex_print,'
+        'to_number(decode(sum(t.flex_print), '#39'0'#39', '#39'0'#39', sum(t.flex_print))' +
+        ') / nullif(sum(t.dicabut), 0) * 100 as p_flex_print,'
       
-        ' round((to_number(decode(sum(t.flex_steam),'#39'0'#39','#39'0'#39',sum(t.flex_st' +
-        'eam)))/nullif(sum(t.dicabut), 0))*100,1) as p_flex_steam,'
+        'to_number(decode(sum(t.flex_steam), '#39'0'#39', '#39'0'#39', sum(t.flex_steam))' +
+        ') / nullif(sum(t.dicabut), 0) * 100 as p_flex_steam,'
       
-        ' round((to_number(decode(sum(t.flex_stamping),'#39'0'#39','#39'0'#39',sum(t.flex' +
-        '_stamping)))/nullif(sum(t.dicabut), 0))*100,1) as p_flex_stampin' +
-        'g,'
+        'to_number(decode(sum(t.flex_stamping), '#39'0'#39', '#39'0'#39', sum(t.flex_stam' +
+        'ping))) / nullif(sum(t.dicabut), 0) * 100 as p_flex_stamping,'
       
-        ' round((to_number(decode(sum(t.flex_luntur),'#39'0'#39','#39'0'#39',sum(t.flex_l' +
-        'untur)))/nullif(sum(t.dicabut), 0))*100,1) as p_flex_luntur, --t' +
-        'mbahan'
+        'to_number(decode(sum(t.flex_luntur), '#39'0'#39', '#39'0'#39', sum(t.flex_luntur' +
+        '))) / nullif(sum(t.dicabut), 0) * 100 as p_flex_luntur, --tmbaha' +
+        'n'
       
-        ' round((to_number(decode(sum(t.wts),'#39'0'#39','#39'0'#39',sum(t.wts)))/nullif(' +
-        'sum(t.dicabut), 0))*100,1) as p_wts,'
+        'to_number(decode(sum(t.wts), '#39'0'#39', '#39'0'#39', sum(t.wts))) / nullif(sum' +
+        '(t.dicabut), 0) * 100 as p_wts,'
       
-        ' round((to_number(decode(sum(t.m_samar),'#39'0'#39','#39'0'#39',sum(t.m_samar)))' +
-        '/nullif(sum(t.dicabut), 0))*100,1) as p_m_samar,'
+        'to_number(decode(sum(t.m_samar), '#39'0'#39', '#39'0'#39', sum(t.m_samar))) / nu' +
+        'llif(sum(t.dicabut), 0) * 100 as p_m_samar,'
       
-        ' round((to_number(decode(sum(t.m_rusak),'#39'0'#39','#39'0'#39',sum(t.m_rusak)))' +
-        '/nullif(sum(t.dicabut), 0))*100,1) as p_m_rusak,'
+        'to_number(decode(sum(t.m_rusak), '#39'0'#39', '#39'0'#39', sum(t.m_rusak))) / nu' +
+        'llif(sum(t.dicabut), 0) * 100 as p_m_rusak,'
       
-        ' round((to_number(decode(sum(t.m_belang),'#39'0'#39','#39'0'#39',sum(t.m_belang)' +
-        '))/nullif(sum(t.dicabut), 0))*100,1) as p_m_belang,'
+        'to_number(decode(sum(t.m_belang), '#39'0'#39', '#39'0'#39', sum(t.m_belang))) / ' +
+        'nullif(sum(t.dicabut), 0) * 100 as p_m_belang,'
       
-        ' round((to_number(decode(sum(t.o_setting),'#39'0'#39','#39'0'#39',sum(t.o_settin' +
-        'g)))/nullif(sum(t.dicabut), 0))*100,1) as p_o_setting,'
+        'to_number(decode(sum(t.o_setting), '#39'0'#39', '#39'0'#39', sum(t.o_setting))) ' +
+        '/ nullif(sum(t.dicabut), 0) * 100 as p_o_setting,'
       
-        ' round((to_number(decode(sum(t.n_oli),'#39'0'#39','#39'0'#39',sum(t.n_oli)))/nul' +
-        'lif(sum(t.dicabut), 0))*100,1) as p_n_oli,'
+        'to_number(decode(sum(t.n_oli), '#39'0'#39', '#39'0'#39', sum(t.n_oli))) / nullif' +
+        '(sum(t.dicabut), 0) * 100 as p_n_oli,'
       
-        ' round((to_number(decode(sum(t.sobek),'#39'0'#39','#39'0'#39',sum(t.sobek)))/nul' +
-        'lif(sum(t.dicabut), 0))*100,1) as p_sobek,'
+        'to_number(decode(sum(t.sobek), '#39'0'#39', '#39'0'#39', sum(t.sobek))) / nullif' +
+        '(sum(t.dicabut), 0) * 100 as p_sobek,'
       
-        ' round((to_number(decode(sum(t.sobek_mt),'#39'0'#39','#39'0'#39',sum(t.sobek_mt)' +
-        '))/nullif(sum(t.dicabut), 0))*100,1) as p_sobek_mt,   --sobek_mt' +
-        ' 281223'
+        'to_number(decode(sum(t.sobek_mt), '#39'0'#39', '#39'0'#39', sum(t.sobek_mt))) / ' +
+        'nullif(sum(t.dicabut), 0) * 100 as p_sobek_mt,   --sobek_mt 2812' +
+        '23'
       
-        ' round((to_number(decode(sum(t.tgs),'#39'0'#39','#39'0'#39',sum(t.tgs)))/nullif(' +
-        'sum(t.dicabut), 0))*100,1) as p_tgs,'
+        'to_number(decode(sum(t.tgs), '#39'0'#39', '#39'0'#39', sum(t.tgs))) / nullif(sum' +
+        '(t.dicabut), 0) * 100 as p_tgs,'
       
-        ' round((to_number(decode(sum(t.affal),'#39'0'#39','#39'0'#39',sum(t.affal)))/nul' +
-        'lif(sum(t.dicabut), 0))*100,1) as p_affal,'
+        'to_number(decode(sum(t.affal), '#39'0'#39', '#39'0'#39', sum(t.affal))) / nullif' +
+        '(sum(t.dicabut), 0) * 100 as p_affal,'
       
-        ' round((to_number(decode(sum(t.flex),'#39'0'#39','#39'0'#39',sum(t.flex)))/nulli' +
-        'f(sum(t.dicabut), 0))*100,1) as p_flex'
+        'to_number(decode(sum(t.flex), '#39'0'#39', '#39'0'#39', sum(t.flex))) / nullif(s' +
+        'um(t.dicabut), 0) * 100 as p_flex'
+      ''
       ''
       'from '
       ''
@@ -9656,32 +9652,33 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       ''
       ''
       
-        'round((to_number(decode(sum(t.qty5),'#39'0'#39','#39'0'#39',sum(t.qty5)))/20),2)' +
-        ' as prod_kodi,'
+        'to_number(decode(sum(t.qty5), '#39'0'#39', '#39'0'#39', sum(t.qty5)))/20 as prod' +
+        '_kodi,'
       ''
       
-        'round((to_number(decode(sum(t.dicabut-t.qty2-t.qty4),'#39'0'#39','#39'0'#39',sum' +
-        '(t.dicabut-t.qty2-t.qty4)))/20),2) as bk_kodi,'
+        'to_number(decode(sum(t.dicabut - t.qty2 - t.qty4), '#39'0'#39', '#39'0'#39', sum' +
+        '(t.dicabut - t.qty2 - t.qty4)))/20 as bk_kodi,'
       
-        'round((to_number(decode(sum(t.qty4),'#39'0'#39','#39'0'#39',sum(t.qty4)))/20),2)' +
-        ' as bgrade_kodi,'
+        'to_number(decode(sum(t.qty4), '#39'0'#39', '#39'0'#39', sum(t.qty4)))/20 as bgra' +
+        'de_kodi,'
       
-        'round((to_number(decode(sum(t.qty2),'#39'0'#39','#39'0'#39',sum(t.qty2)))/20),2)' +
-        ' as bs_kodi,'
+        'to_number(decode(sum(t.qty2), '#39'0'#39', '#39'0'#39', sum(t.qty2)))/20 as bs_k' +
+        'odi,'
       
-        'round((to_number(decode(sum(t.affal),'#39'0'#39','#39'0'#39',sum(t.affal)))/20),' +
-        '2) as affal,'
+        'to_number(decode(sum(t.affal), '#39'0'#39', '#39'0'#39', sum(t.affal)))/20 as af' +
+        'fal,'
       ''
       
-        'round((to_number(decode(sum(t.dicabut-t.qty2-t.qty4),'#39'0'#39','#39'0'#39',sum' +
-        '(t.dicabut-t.qty2-t.qty4)))/20/nullif(sum(t.dicabut), 0))*100,1)' +
+        'to_number(decode(sum(t.dicabut - t.qty2 - t.qty4), '#39'0'#39', '#39'0'#39', sum' +
+        '(t.dicabut - t.qty2 - t.qty4)))/20/nullif(sum(t.dicabut), 0)*100' +
         ' as p_bk,'
       
-        'round((to_number(decode(sum(t.qty4),'#39'0'#39','#39'0'#39',sum(t.qty4)))/20/nul' +
-        'lif(sum(t.dicabut), 0))*100,1) as p_bgrade,'
+        'to_number(decode(sum(t.qty4), '#39'0'#39', '#39'0'#39', sum(t.qty4)))/20/nullif(' +
+        'sum(t.dicabut), 0)*100 as p_bgrade,'
       
-        'round((to_number(decode(sum(t.qty2),'#39'0'#39','#39'0'#39',sum(t.qty2)))/20/nul' +
-        'lif(sum(t.dicabut), 0))*100,1) as p_bs,'
+        'to_number(decode(sum(t.qty2), '#39'0'#39', '#39'0'#39', sum(t.qty2)))/20/nullif(' +
+        'sum(t.dicabut), 0)*100 as p_bs,'
+      ''
       ''
       'sum(nvl(t.flex_print, 0)) as flex_print,'
       'sum(nvl(t.flex_steam, 0)) as flex_steam,'
@@ -9701,53 +9698,50 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       'sum(nvl(t.flex, 0)) as flex,'
       ''
       
-        'round((to_number(decode(sum(t.flex_print),'#39'0'#39','#39'0'#39',sum(t.flex_pri' +
-        'nt)))/nullif(sum(t.dicabut), 0))*100,1) as p_flex_print,'
+        'to_number(decode(sum(t.flex_print),'#39'0'#39','#39'0'#39',sum(t.flex_print)))/n' +
+        'ullif(sum(t.dicabut), 0)*100 as p_flex_print,'
       
-        'round((to_number(decode(sum(t.flex_steam),'#39'0'#39','#39'0'#39',sum(t.flex_ste' +
-        'am)))/nullif(sum(t.dicabut), 0))*100,1) as p_flex_steam,'
+        'to_number(decode(sum(t.flex_steam),'#39'0'#39','#39'0'#39',sum(t.flex_steam)))/n' +
+        'ullif(sum(t.dicabut), 0)*100 as p_flex_steam,'
       
-        'round((to_number(decode(sum(t.flex_stamping),'#39'0'#39','#39'0'#39',sum(t.flex_' +
-        'stamping)))/nullif(sum(t.dicabut), 0))*100,1) as p_flex_stamping' +
-        ','
+        'to_number(decode(sum(t.flex_stamping),'#39'0'#39','#39'0'#39',sum(t.flex_stampin' +
+        'g)))/nullif(sum(t.dicabut), 0)*100 as p_flex_stamping,'
       
-        'round((to_number(decode(sum(t.flex_luntur),'#39'0'#39','#39'0'#39',sum(t.flex_lu' +
-        'ntur)))/nullif(sum(t.dicabut), 0))*100,1) as p_flex_luntur, --tm' +
-        'bahan'
+        'to_number(decode(sum(t.flex_luntur),'#39'0'#39','#39'0'#39',sum(t.flex_luntur)))' +
+        '/nullif(sum(t.dicabut), 0)*100 as p_flex_luntur, --tmbahan'
       
-        'round((to_number(decode(sum(t.wts),'#39'0'#39','#39'0'#39',sum(t.wts)))/nullif(s' +
-        'um(t.dicabut), 0))*100,1) as p_wts,'
+        'to_number(decode(sum(t.wts),'#39'0'#39','#39'0'#39',sum(t.wts)))/nullif(sum(t.di' +
+        'cabut), 0)*100 as p_wts,'
       
-        'round((to_number(decode(sum(t.m_samar),'#39'0'#39','#39'0'#39',sum(t.m_samar)))/' +
-        'nullif(sum(t.dicabut), 0))*100,1) as p_m_samar,'
+        'to_number(decode(sum(t.m_samar),'#39'0'#39','#39'0'#39',sum(t.m_samar)))/nullif(' +
+        'sum(t.dicabut), 0)*100 as p_m_samar,'
       
-        'round((to_number(decode(sum(t.m_rusak),'#39'0'#39','#39'0'#39',sum(t.m_rusak)))/' +
-        'nullif(sum(t.dicabut), 0))*100,1) as p_m_rusak,'
+        'to_number(decode(sum(t.m_rusak),'#39'0'#39','#39'0'#39',sum(t.m_rusak)))/nullif(' +
+        'sum(t.dicabut), 0)*100 as p_m_rusak,'
       
-        'round((to_number(decode(sum(t.m_belang),'#39'0'#39','#39'0'#39',sum(t.m_belang))' +
-        ')/nullif(sum(t.dicabut), 0))*100,1) as p_m_belang,'
+        'to_number(decode(sum(t.m_belang),'#39'0'#39','#39'0'#39',sum(t.m_belang)))/nulli' +
+        'f(sum(t.dicabut), 0)*100 as p_m_belang,'
       
-        'round((to_number(decode(sum(t.o_setting),'#39'0'#39','#39'0'#39',sum(t.o_setting' +
-        ')))/nullif(sum(t.dicabut), 0))*100,1) as p_o_setting,'
+        'to_number(decode(sum(t.o_setting),'#39'0'#39','#39'0'#39',sum(t.o_setting)))/nul' +
+        'lif(sum(t.dicabut), 0)*100 as p_o_setting,'
       
-        'round((to_number(decode(sum(t.n_oli),'#39'0'#39','#39'0'#39',sum(t.n_oli)))/null' +
-        'if(sum(t.dicabut), 0))*100,1) as p_n_oli,'
+        'to_number(decode(sum(t.n_oli),'#39'0'#39','#39'0'#39',sum(t.n_oli)))/nullif(sum(' +
+        't.dicabut), 0)*100 as p_n_oli,'
       
-        'round((to_number(decode(sum(t.sobek),'#39'0'#39','#39'0'#39',sum(t.sobek)))/null' +
-        'if(sum(t.dicabut), 0))*100,1) as p_sobek,'
+        'to_number(decode(sum(t.sobek),'#39'0'#39','#39'0'#39',sum(t.sobek)))/nullif(sum(' +
+        't.dicabut), 0)*100 as p_sobek,'
       
-        'round((to_number(decode(sum(t.sobek_mt),'#39'0'#39','#39'0'#39',sum(t.sobek_mt))' +
-        ')/nullif(sum(t.dicabut), 0))*100,1) as p_sobek_mt, --% sobek_mt ' +
-        '281223'
+        'to_number(decode(sum(t.sobek_mt),'#39'0'#39','#39'0'#39',sum(t.sobek_mt)))/nulli' +
+        'f(sum(t.dicabut), 0)*100 as p_sobek_mt, --% sobek_mt 281223'
       
-        'round((to_number(decode(sum(t.tgs),'#39'0'#39','#39'0'#39',sum(t.tgs)))/nullif(s' +
-        'um(t.dicabut), 0))*100,1) as p_tgs,'
+        'to_number(decode(sum(t.tgs),'#39'0'#39','#39'0'#39',sum(t.tgs)))/nullif(sum(t.di' +
+        'cabut), 0)*100 as p_tgs,'
       
-        'round((to_number(decode(sum(t.affal),'#39'0'#39','#39'0'#39',sum(t.affal)))/null' +
-        'if(sum(t.dicabut), 0))*100,1) as p_affal,'
+        'to_number(decode(sum(t.affal),'#39'0'#39','#39'0'#39',sum(t.affal)))/nullif(sum(' +
+        't.dicabut), 0)*100 as p_affal,'
       
-        'round((to_number(decode(sum(t.flex),'#39'0'#39','#39'0'#39',sum(t.flex)))/nullif' +
-        '(sum(t.dicabut), 0))*100,1) as p_flex'
+        'to_number(decode(sum(t.flex),'#39'0'#39','#39'0'#39',sum(t.flex)))/nullif(sum(t.' +
+        'dicabut), 0)*100 as p_flex'
       ''
       'from '
       ''
@@ -9998,32 +9992,32 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       ''
       ''
       
-        'round((to_number(decode(sum(t.qty5),'#39'0'#39','#39'0'#39',sum(t.qty5)))/20),2)' +
-        ' as total,'
+        'to_number(decode(sum(t.qty5), '#39'0'#39', '#39'0'#39', sum(t.qty5))) / 20 as to' +
+        'tal,'
       ''
       
-        'round((to_number(decode(sum(t.dicabut-t.qty2-t.qty4),'#39'0'#39','#39'0'#39',sum' +
-        '(t.dicabut-t.qty2-t.qty4)))/20),2) as bk,'
+        'to_number(decode(sum(t.dicabut - t.qty2 - t.qty4), '#39'0'#39', '#39'0'#39', sum' +
+        '(t.dicabut - t.qty2 - t.qty4))) / 20 as bk,'
       
-        'round((to_number(decode(sum(t.qty4),'#39'0'#39','#39'0'#39',sum(t.qty4)))/20),2)' +
-        ' as bgrade,'
+        'to_number(decode(sum(t.qty4), '#39'0'#39', '#39'0'#39', sum(t.qty4))) / 20 as bg' +
+        'rade,'
       
-        'round((to_number(decode(sum(t.qty2),'#39'0'#39','#39'0'#39',sum(t.qty2)))/20),2)' +
-        ' as bs,'
+        'to_number(decode(sum(t.qty2), '#39'0'#39', '#39'0'#39', sum(t.qty2))) / 20 as bs' +
+        ','
       
-        'round((to_number(decode(sum(t.affal),'#39'0'#39','#39'0'#39',sum(t.affal)))/20),' +
-        '2) as affal,'
+        'to_number(decode(sum(t.affal), '#39'0'#39', '#39'0'#39', sum(t.affal))) / 20 as ' +
+        'affal,'
       ''
       
-        'round((to_number(decode(sum(t.dicabut-t.qty2-t.qty4),'#39'0'#39','#39'0'#39',sum' +
-        '(t.dicabut-t.qty2-t.qty4)))/20/nullif(sum(t.dicabut), 0))*100,1)' +
-        ' as p_bk,'
+        'to_number(decode(sum(t.dicabut - t.qty2 - t.qty4), '#39'0'#39', '#39'0'#39', sum' +
+        '(t.dicabut - t.qty2 - t.qty4))) / 20 / nullif(sum(t.dicabut), 0)' +
+        ' * 100 as p_bk,'
       
-        'round((to_number(decode(sum(t.qty4),'#39'0'#39','#39'0'#39',sum(t.qty4)))/20/nul' +
-        'lif(sum(t.dicabut), 0))*100,1) as p_bgrade,'
+        'to_number(decode(sum(t.qty4), '#39'0'#39', '#39'0'#39', sum(t.qty4))) / 20 / nul' +
+        'lif(sum(t.dicabut), 0) * 100 as p_bgrade,'
       
-        'round((to_number(decode(sum(t.qty2),'#39'0'#39','#39'0'#39',sum(t.qty2)))/20/nul' +
-        'lif(sum(t.dicabut), 0))*100,1) as p_bs,'
+        'to_number(decode(sum(t.qty2), '#39'0'#39', '#39'0'#39', sum(t.qty2))) / 20 / nul' +
+        'lif(sum(t.dicabut), 0) * 100 as p_bs,'
       ''
       'sum(nvl(t.flex_print, 0)) as flex_print,'
       'sum(nvl(t.flex_steam, 0)) as flex_steam,'
@@ -10043,53 +10037,53 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       'sum(nvl(t.flex, 0)) as flex,'
       ''
       
-        'round((to_number(decode(sum(t.flex_print),'#39'0'#39','#39'0'#39',sum(t.flex_pri' +
-        'nt)))/nullif(sum(t.dicabut), 0))*100,1) as p_flex_print,'
+        'to_number(decode(sum(t.flex_print), '#39'0'#39', '#39'0'#39', sum(t.flex_print))' +
+        ') / nullif(sum(t.dicabut), 0) * 100 as p_flex_print,'
       
-        'round((to_number(decode(sum(t.flex_steam),'#39'0'#39','#39'0'#39',sum(t.flex_ste' +
-        'am)))/nullif(sum(t.dicabut), 0))*100,1) as p_flex_steam,'
+        'to_number(decode(sum(t.flex_steam), '#39'0'#39', '#39'0'#39', sum(t.flex_steam))' +
+        ') / nullif(sum(t.dicabut), 0) * 100 as p_flex_steam,'
       
-        'round((to_number(decode(sum(t.flex_stamping),'#39'0'#39','#39'0'#39',sum(t.flex_' +
-        'stamping)))/nullif(sum(t.dicabut), 0))*100,1) as p_flex_stamping' +
-        ','
+        'to_number(decode(sum(t.flex_stamping), '#39'0'#39', '#39'0'#39', sum(t.flex_stam' +
+        'ping))) / nullif(sum(t.dicabut), 0) * 100 as p_flex_stamping,'
       
-        'round((to_number(decode(sum(t.flex_luntur),'#39'0'#39','#39'0'#39',sum(t.flex_lu' +
-        'ntur)))/nullif(sum(t.dicabut), 0))*100,1) as p_flex_luntur, --tm' +
-        'bahan'
+        'to_number(decode(sum(t.flex_luntur), '#39'0'#39', '#39'0'#39', sum(t.flex_luntur' +
+        '))) / nullif(sum(t.dicabut), 0) * 100 as p_flex_luntur, --tmbaha' +
+        'n'
       
-        'round((to_number(decode(sum(t.wts),'#39'0'#39','#39'0'#39',sum(t.wts)))/nullif(s' +
-        'um(t.dicabut), 0))*100,1) as p_wts,'
+        'to_number(decode(sum(t.wts), '#39'0'#39', '#39'0'#39', sum(t.wts))) / nullif(sum' +
+        '(t.dicabut), 0) * 100 as p_wts,'
       
-        'round((to_number(decode(sum(t.m_samar),'#39'0'#39','#39'0'#39',sum(t.m_samar)))/' +
-        'nullif(sum(t.dicabut), 0))*100,1) as p_m_samar,'
+        'to_number(decode(sum(t.m_samar), '#39'0'#39', '#39'0'#39', sum(t.m_samar))) / nu' +
+        'llif(sum(t.dicabut), 0) * 100 as p_m_samar,'
       
-        'round((to_number(decode(sum(t.m_rusak),'#39'0'#39','#39'0'#39',sum(t.m_rusak)))/' +
-        'nullif(sum(t.dicabut), 0))*100,1) as p_m_rusak,'
+        'to_number(decode(sum(t.m_rusak), '#39'0'#39', '#39'0'#39', sum(t.m_rusak))) / nu' +
+        'llif(sum(t.dicabut), 0) * 100 as p_m_rusak,'
       
-        'round((to_number(decode(sum(t.m_belang),'#39'0'#39','#39'0'#39',sum(t.m_belang))' +
-        ')/nullif(sum(t.dicabut), 0))*100,1) as p_m_belang,'
+        'to_number(decode(sum(t.m_belang), '#39'0'#39', '#39'0'#39', sum(t.m_belang))) / ' +
+        'nullif(sum(t.dicabut), 0) * 100 as p_m_belang,'
       
-        'round((to_number(decode(sum(t.o_setting),'#39'0'#39','#39'0'#39',sum(t.o_setting' +
-        ')))/nullif(sum(t.dicabut), 0))*100,1) as p_o_setting,'
+        'to_number(decode(sum(t.o_setting), '#39'0'#39', '#39'0'#39', sum(t.o_setting))) ' +
+        '/ nullif(sum(t.dicabut), 0) * 100 as p_o_setting,'
       
-        'round((to_number(decode(sum(t.n_oli),'#39'0'#39','#39'0'#39',sum(t.n_oli)))/null' +
-        'if(sum(t.dicabut), 0))*100,1) as p_n_oli,'
+        'to_number(decode(sum(t.n_oli), '#39'0'#39', '#39'0'#39', sum(t.n_oli))) / nullif' +
+        '(sum(t.dicabut), 0) * 100 as p_n_oli,'
       
-        'round((to_number(decode(sum(t.sobek),'#39'0'#39','#39'0'#39',sum(t.sobek)))/null' +
-        'if(sum(t.dicabut), 0))*100,1) as p_sobek,'
+        'to_number(decode(sum(t.sobek), '#39'0'#39', '#39'0'#39', sum(t.sobek))) / nullif' +
+        '(sum(t.dicabut), 0) * 100 as p_sobek,'
       
-        'round((to_number(decode(sum(t.sobek_mt),'#39'0'#39','#39'0'#39',sum(t.sobek_mt))' +
-        ')/nullif(sum(t.dicabut), 0))*100,1) as p_sobek_mt, --% sobek_mt ' +
-        '281223'
+        'to_number(decode(sum(t.sobek_mt), '#39'0'#39', '#39'0'#39', sum(t.sobek_mt))) / ' +
+        'nullif(sum(t.dicabut), 0) * 100 as p_sobek_mt, --% sobek_mt 2812' +
+        '23'
       
-        'round((to_number(decode(sum(t.tgs),'#39'0'#39','#39'0'#39',sum(t.tgs)))/nullif(s' +
-        'um(t.dicabut), 0))*100,1) as p_tgs,'
+        'to_number(decode(sum(t.tgs), '#39'0'#39', '#39'0'#39', sum(t.tgs))) / nullif(sum' +
+        '(t.dicabut), 0) * 100 as p_tgs,'
       
-        'round((to_number(decode(sum(t.affal),'#39'0'#39','#39'0'#39',sum(t.affal)))/null' +
-        'if(sum(t.dicabut), 0))*100,1) as p_affal,'
+        'to_number(decode(sum(t.affal), '#39'0'#39', '#39'0'#39', sum(t.affal))) / nullif' +
+        '(sum(t.dicabut), 0) * 100 as p_affal,'
       
-        'round((to_number(decode(sum(t.flex),'#39'0'#39','#39'0'#39',sum(t.flex)))/nullif' +
-        '(sum(t.dicabut), 0))*100,1) as p_flex'
+        'to_number(decode(sum(t.flex), '#39'0'#39', '#39'0'#39', sum(t.flex))) / nullif(s' +
+        'um(t.dicabut), 0) * 100 as p_flex'
+      ''
       ''
       'from '
       ''
@@ -10512,84 +10506,83 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       'sum(nvl(t.flex, 0)) as flex,'
       ''
       
-        ' round((to_number(decode(sum(case when t.keterangan2 = '#39'DICABUT ' +
-        'WARNA'#39' then nvl(t.qty5, 0) else 0 end-t.qty2-t.qty4),'#39'0'#39','#39'0'#39',sum' +
-        '(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) e' +
-        'lse 0 end-t.qty2-t.qty4)))/nullif(sum(case when t.keterangan2 = ' +
-        #39'DICABUT WARNA'#39' then nvl(t.qty5, 0) else 0 end), 0))*100,1) as p' +
-        '_bk,'
+        'to_number(decode(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' t' +
+        'hen nvl(t.qty5, 0) else 0 end - t.qty2 - t.qty4), '#39'0'#39', '#39'0'#39', sum(' +
+        'case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) el' +
+        'se 0 end - t.qty2 - t.qty4))) / nullif(sum(case when t.keteranga' +
+        'n2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) else 0 end), 0) * 100 a' +
+        's p_bk,'
       
-        ' round((to_number(decode(sum(t.qty4),'#39'0'#39','#39'0'#39',sum(t.qty4)))/nulli' +
-        'f(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5,' +
-        ' 0) else 0 end), 0))*100,1) as p_bgrade,'
+        'to_number(decode(sum(t.qty4), '#39'0'#39', '#39'0'#39', sum(t.qty4))) / nullif(s' +
+        'um(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0)' +
+        ' else 0 end), 0) * 100 as p_bgrade,'
       
-        ' round((to_number(decode(sum(t.qty2),'#39'0'#39','#39'0'#39',sum(t.qty2)))/nulli' +
-        'f(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5,' +
-        ' 0) else 0 end), 0))*100,1) as p_bs,'
+        'to_number(decode(sum(t.qty2), '#39'0'#39', '#39'0'#39', sum(t.qty2))) / nullif(s' +
+        'um(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0)' +
+        ' else 0 end), 0) * 100 as p_bs,'
       ''
       
-        ' round((to_number(decode(sum(t.flex_print),'#39'0'#39','#39'0'#39',sum(t.flex_pr' +
-        'int)))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then' +
-        ' nvl(t.qty5, 0) else 0 end), 0))*100,2) as p_flex_print,'
+        'to_number(decode(sum(t.flex_print), '#39'0'#39', '#39'0'#39', sum(t.flex_print))' +
+        ') / nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nv' +
+        'l(t.qty5, 0) else 0 end), 0) * 100 as p_flex_print,'
       
-        ' round((to_number(decode(sum(t.flex_steam),'#39'0'#39','#39'0'#39',sum(t.flex_st' +
-        'eam)))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then' +
-        ' nvl(t.qty5, 0) else 0 end), 0))*100,1) as p_flex_steam,'
+        'to_number(decode(sum(t.flex_steam), '#39'0'#39', '#39'0'#39', sum(t.flex_steam))' +
+        ') / nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nv' +
+        'l(t.qty5, 0) else 0 end), 0) * 100 as p_flex_steam,'
       
-        ' round((to_number(decode(sum(t.flex_stamping),'#39'0'#39','#39'0'#39',sum(t.flex' +
-        '_stamping)))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA' +
-        #39' then nvl(t.qty5, 0) else 0 end), 0))*100,1) as p_flex_stamping' +
-        ','
+        'to_number(decode(sum(t.flex_stamping), '#39'0'#39', '#39'0'#39', sum(t.flex_stam' +
+        'ping))) / nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' t' +
+        'hen nvl(t.qty5, 0) else 0 end), 0) * 100 as p_flex_stamping,'
       
-        ' round((to_number(decode(sum(t.flex_luntur),'#39'0'#39','#39'0'#39',sum(t.flex_l' +
-        'untur)))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' th' +
-        'en nvl(t.qty5, 0) else 0 end), 0))*100,1) as p_flex_luntur, --tm' +
-        'bahan'
+        'to_number(decode(sum(t.flex_luntur), '#39'0'#39', '#39'0'#39', sum(t.flex_luntur' +
+        '))) / nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then ' +
+        'nvl(t.qty5, 0) else 0 end), 0) * 100 as p_flex_luntur, --tmbahan'
       
-        ' round((to_number(decode(sum(t.wts),'#39'0'#39','#39'0'#39',sum(t.wts)))/nullif(' +
-        'sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0' +
-        ') else 0 end), 0))*100,1) as p_wts,'
+        'to_number(decode(sum(t.wts), '#39'0'#39', '#39'0'#39', sum(t.wts))) / nullif(sum' +
+        '(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) e' +
+        'lse 0 end), 0) * 100 as p_wts,'
       
-        ' round((to_number(decode(sum(t.m_samar),'#39'0'#39','#39'0'#39',sum(t.m_samar)))' +
-        '/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t' +
-        '.qty5, 0) else 0 end), 0))*100,1) as p_m_samar,'
+        'to_number(decode(sum(t.m_samar), '#39'0'#39', '#39'0'#39', sum(t.m_samar))) / nu' +
+        'llif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qt' +
+        'y5, 0) else 0 end), 0) * 100 as p_m_samar,'
       
-        ' round((to_number(decode(sum(t.m_rusak),'#39'0'#39','#39'0'#39',sum(t.m_rusak)))' +
-        '/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t' +
-        '.qty5, 0) else 0 end), 0))*100,1) as p_m_rusak,'
+        'to_number(decode(sum(t.m_rusak), '#39'0'#39', '#39'0'#39', sum(t.m_rusak))) / nu' +
+        'llif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qt' +
+        'y5, 0) else 0 end), 0) * 100 as p_m_rusak,'
       
-        ' round((to_number(decode(sum(t.m_belang),'#39'0'#39','#39'0'#39',sum(t.m_belang)' +
-        '))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl' +
-        '(t.qty5, 0) else 0 end), 0))*100,1) as p_m_belang,'
+        'to_number(decode(sum(t.m_belang), '#39'0'#39', '#39'0'#39', sum(t.m_belang))) / ' +
+        'nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.' +
+        'qty5, 0) else 0 end), 0) * 100 as p_m_belang,'
       
-        ' round((to_number(decode(sum(t.o_setting),'#39'0'#39','#39'0'#39',sum(t.o_settin' +
-        'g)))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then n' +
-        'vl(t.qty5, 0) else 0 end), 0))*100,1) as p_o_setting,'
+        'to_number(decode(sum(t.o_setting), '#39'0'#39', '#39'0'#39', sum(t.o_setting))) ' +
+        '/ nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(' +
+        't.qty5, 0) else 0 end), 0) * 100 as p_o_setting,'
       
-        ' round((to_number(decode(sum(t.n_oli),'#39'0'#39','#39'0'#39',sum(t.n_oli)))/nul' +
-        'lif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty' +
-        '5, 0) else 0 end), 0))*100,1) as p_n_oli,'
+        'to_number(decode(sum(t.n_oli), '#39'0'#39', '#39'0'#39', sum(t.n_oli))) / nullif' +
+        '(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, ' +
+        '0) else 0 end), 0) * 100 as p_n_oli,'
       
-        ' round((to_number(decode(sum(t.sobek),'#39'0'#39','#39'0'#39',sum(t.sobek)))/nul' +
-        'lif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty' +
-        '5, 0) else 0 end), 0))*100,1) as p_sobek,'
+        'to_number(decode(sum(t.sobek), '#39'0'#39', '#39'0'#39', sum(t.sobek))) / nullif' +
+        '(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, ' +
+        '0) else 0 end), 0) * 100 as p_sobek,'
       
-        ' round((to_number(decode(sum(t.sobek_mt),'#39'0'#39','#39'0'#39',sum(t.sobek_mt)' +
-        '))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl' +
-        '(t.qty5, 0) else 0 end), 0))*100,1) as p_sobek_mt,   --sobek_mt ' +
-        '281223'
+        'to_number(decode(sum(t.sobek_mt), '#39'0'#39', '#39'0'#39', sum(t.sobek_mt))) / ' +
+        'nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.' +
+        'qty5, 0) else 0 end), 0) * 100 as p_sobek_mt,   --sobek_mt 28122' +
+        '3'
       
-        ' round((to_number(decode(sum(t.tgs),'#39'0'#39','#39'0'#39',sum(t.tgs)))/nullif(' +
-        'sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0' +
-        ') else 0 end), 0))*100,1) as p_tgs,'
+        'to_number(decode(sum(t.tgs), '#39'0'#39', '#39'0'#39', sum(t.tgs))) / nullif(sum' +
+        '(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) e' +
+        'lse 0 end), 0) * 100 as p_tgs,'
       
-        ' round((to_number(decode(sum(t.affal),'#39'0'#39','#39'0'#39',sum(t.affal)))/nul' +
-        'lif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty' +
-        '5, 0) else 0 end), 0))*100,1) as p_affal,'
+        'to_number(decode(sum(t.affal), '#39'0'#39', '#39'0'#39', sum(t.affal))) / nullif' +
+        '(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, ' +
+        '0) else 0 end), 0) * 100 as p_affal,'
       
-        ' round((to_number(decode(sum(t.flex),'#39'0'#39','#39'0'#39',sum(t.flex)))/nulli' +
-        'f(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5,' +
-        ' 0) else 0 end), 0))*100,1) as p_flex'
+        'to_number(decode(sum(t.flex), '#39'0'#39', '#39'0'#39', sum(t.flex))) / nullif(s' +
+        'um(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0)' +
+        ' else 0 end), 0) * 100 as p_flex'
+      ''
       ''
       'from '
       ''
@@ -10866,82 +10859,81 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       'sum(nvl(t.flex, 0)) as flex,'
       ''
       
-        ' round((to_number(decode(sum(t.dicabut-t.qty2-t.qty4),'#39'0'#39','#39'0'#39',su' +
-        'm(t.dicabut-t.qty2-t.qty4)))/nullif(sum(case when t.keterangan2 ' +
-        '= '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) else 0 end), 0))*100,1) as' +
-        ' p_bk,'
+        'to_number(decode(sum(t.dicabut - t.qty2 - t.qty4), '#39'0'#39', '#39'0'#39', sum' +
+        '(t.dicabut - t.qty2 - t.qty4))) / nullif(sum(case when t.keteran' +
+        'gan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) else 0 end), 0) * 100' +
+        ' as p_bk,'
       
-        ' round((to_number(decode(sum(t.qty4),'#39'0'#39','#39'0'#39',sum(t.qty4)))/nulli' +
-        'f(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5,' +
-        ' 0) else 0 end), 0))*100,1) as p_bgrade,'
+        'to_number(decode(sum(t.qty4), '#39'0'#39', '#39'0'#39', sum(t.qty4))) / nullif(s' +
+        'um(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0)' +
+        ' else 0 end), 0) * 100 as p_bgrade,'
       
-        ' round((to_number(decode(sum(t.qty2),'#39'0'#39','#39'0'#39',sum(t.qty2)))/nulli' +
-        'f(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5,' +
-        ' 0) else 0 end), 0))*100,1) as p_bs,'
+        'to_number(decode(sum(t.qty2), '#39'0'#39', '#39'0'#39', sum(t.qty2))) / nullif(s' +
+        'um(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0)' +
+        ' else 0 end), 0) * 100 as p_bs,'
       ''
       
-        ' round((to_number(decode(sum(t.flex_print),'#39'0'#39','#39'0'#39',sum(t.flex_pr' +
-        'int)))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then' +
-        ' nvl(t.qty5, 0) else 0 end), 0))*100,1) as p_flex_print,'
+        'to_number(decode(sum(t.flex_print), '#39'0'#39', '#39'0'#39', sum(t.flex_print))' +
+        ') / nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nv' +
+        'l(t.qty5, 0) else 0 end), 0) * 100 as p_flex_print,'
       
-        ' round((to_number(decode(sum(t.flex_steam),'#39'0'#39','#39'0'#39',sum(t.flex_st' +
-        'eam)))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then' +
-        ' nvl(t.qty5, 0) else 0 end), 0))*100,1) as p_flex_steam,'
+        'to_number(decode(sum(t.flex_steam), '#39'0'#39', '#39'0'#39', sum(t.flex_steam))' +
+        ') / nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nv' +
+        'l(t.qty5, 0) else 0 end), 0) * 100 as p_flex_steam,'
       
-        ' round((to_number(decode(sum(t.flex_stamping),'#39'0'#39','#39'0'#39',sum(t.flex' +
-        '_stamping)))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA' +
-        #39' then nvl(t.qty5, 0) else 0 end), 0))*100,1) as p_flex_stamping' +
-        ','
+        'to_number(decode(sum(t.flex_stamping), '#39'0'#39', '#39'0'#39', sum(t.flex_stam' +
+        'ping))) / nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' t' +
+        'hen nvl(t.qty5, 0) else 0 end), 0) * 100 as p_flex_stamping,'
       
-        ' round((to_number(decode(sum(t.flex_luntur),'#39'0'#39','#39'0'#39',sum(t.flex_l' +
-        'untur)))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' th' +
-        'en nvl(t.qty5, 0) else 0 end), 0))*100,1) as p_flex_luntur, --tm' +
-        'bahan'
+        'to_number(decode(sum(t.flex_luntur), '#39'0'#39', '#39'0'#39', sum(t.flex_luntur' +
+        '))) / nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then ' +
+        'nvl(t.qty5, 0) else 0 end), 0) * 100 as p_flex_luntur, --tmbahan'
       
-        ' round((to_number(decode(sum(t.wts),'#39'0'#39','#39'0'#39',sum(t.wts)))/nullif(' +
-        'sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0' +
-        ') else 0 end), 0))*100,1) as p_wts,'
+        'to_number(decode(sum(t.wts), '#39'0'#39', '#39'0'#39', sum(t.wts))) / nullif(sum' +
+        '(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) e' +
+        'lse 0 end), 0) * 100 as p_wts,'
       
-        ' round((to_number(decode(sum(t.m_samar),'#39'0'#39','#39'0'#39',sum(t.m_samar)))' +
-        '/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t' +
-        '.qty5, 0) else 0 end), 0))*100,1) as p_m_samar,'
+        'to_number(decode(sum(t.m_samar), '#39'0'#39', '#39'0'#39', sum(t.m_samar))) / nu' +
+        'llif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qt' +
+        'y5, 0) else 0 end), 0) * 100 as p_m_samar,'
       
-        ' round((to_number(decode(sum(t.m_rusak),'#39'0'#39','#39'0'#39',sum(t.m_rusak)))' +
-        '/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t' +
-        '.qty5, 0) else 0 end), 0))*100,1) as p_m_rusak,'
+        'to_number(decode(sum(t.m_rusak), '#39'0'#39', '#39'0'#39', sum(t.m_rusak))) / nu' +
+        'llif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qt' +
+        'y5, 0) else 0 end), 0) * 100 as p_m_rusak,'
       
-        ' round((to_number(decode(sum(t.m_belang),'#39'0'#39','#39'0'#39',sum(t.m_belang)' +
-        '))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl' +
-        '(t.qty5, 0) else 0 end), 0))*100,1) as p_m_belang,'
+        'to_number(decode(sum(t.m_belang), '#39'0'#39', '#39'0'#39', sum(t.m_belang))) / ' +
+        'nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.' +
+        'qty5, 0) else 0 end), 0) * 100 as p_m_belang,'
       
-        ' round((to_number(decode(sum(t.o_setting),'#39'0'#39','#39'0'#39',sum(t.o_settin' +
-        'g)))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then n' +
-        'vl(t.qty5, 0) else 0 end), 0))*100,1) as p_o_setting,'
+        'to_number(decode(sum(t.o_setting), '#39'0'#39', '#39'0'#39', sum(t.o_setting))) ' +
+        '/ nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(' +
+        't.qty5, 0) else 0 end), 0) * 100 as p_o_setting,'
       
-        ' round((to_number(decode(sum(t.n_oli),'#39'0'#39','#39'0'#39',sum(t.n_oli)))/nul' +
-        'lif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty' +
-        '5, 0) else 0 end), 0))*100,1) as p_n_oli,'
+        'to_number(decode(sum(t.n_oli), '#39'0'#39', '#39'0'#39', sum(t.n_oli))) / nullif' +
+        '(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, ' +
+        '0) else 0 end), 0) * 100 as p_n_oli,'
       
-        ' round((to_number(decode(sum(t.sobek),'#39'0'#39','#39'0'#39',sum(t.sobek)))/nul' +
-        'lif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty' +
-        '5, 0) else 0 end), 0))*100,1) as p_sobek,'
+        'to_number(decode(sum(t.sobek), '#39'0'#39', '#39'0'#39', sum(t.sobek))) / nullif' +
+        '(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, ' +
+        '0) else 0 end), 0) * 100 as p_sobek,'
       
-        ' round((to_number(decode(sum(t.sobek_mt),'#39'0'#39','#39'0'#39',sum(t.sobek_mt)' +
-        '))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl' +
-        '(t.qty5, 0) else 0 end), 0))*100,1) as p_sobek_mt,   --sobek_mt ' +
-        '281223'
+        'to_number(decode(sum(t.sobek_mt), '#39'0'#39', '#39'0'#39', sum(t.sobek_mt))) / ' +
+        'nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.' +
+        'qty5, 0) else 0 end), 0) * 100 as p_sobek_mt,   --sobek_mt 28122' +
+        '3'
       
-        ' round((to_number(decode(sum(t.tgs),'#39'0'#39','#39'0'#39',sum(t.tgs)))/nullif(' +
-        'sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0' +
-        ') else 0 end), 0))*100,1) as p_tgs,'
+        'to_number(decode(sum(t.tgs), '#39'0'#39', '#39'0'#39', sum(t.tgs))) / nullif(sum' +
+        '(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) e' +
+        'lse 0 end), 0) * 100 as p_tgs,'
       
-        ' round((to_number(decode(sum(t.affal),'#39'0'#39','#39'0'#39',sum(t.affal)))/nul' +
-        'lif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty' +
-        '5, 0) else 0 end), 0))*100,1) as p_affal,'
+        'to_number(decode(sum(t.affal), '#39'0'#39', '#39'0'#39', sum(t.affal))) / nullif' +
+        '(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, ' +
+        '0) else 0 end), 0) * 100 as p_affal,'
       
-        ' round((to_number(decode(sum(t.flex),'#39'0'#39','#39'0'#39',sum(t.flex)))/nulli' +
-        'f(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5,' +
-        ' 0) else 0 end), 0))*100,1) as p_flex'
+        'to_number(decode(sum(t.flex), '#39'0'#39', '#39'0'#39', sum(t.flex))) / nullif(s' +
+        'um(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0)' +
+        ' else 0 end), 0) * 100 as p_flex'
+      ''
       ''
       'from '
       ''
@@ -11132,35 +11124,35 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       ''
       ''
       
-        'round((to_number(decode(sum(t.qty5),'#39'0'#39','#39'0'#39',sum(t.qty5)))/20),2)' +
-        ' as prod_kodi,'
+        'to_number(decode(sum(t.qty5), '#39'0'#39', '#39'0'#39', sum(t.qty5))) / 20 as pr' +
+        'od_kodi,'
       ''
       
-        'round((to_number(decode(sum(t.dicabut-t.qty2-t.qty4),'#39'0'#39','#39'0'#39',sum' +
-        '(t.dicabut-t.qty2-t.qty4)))/20),2) as bk_kodi,'
+        'to_number(decode(sum(t.dicabut - t.qty2 - t.qty4), '#39'0'#39', '#39'0'#39', sum' +
+        '(t.dicabut - t.qty2 - t.qty4))) / 20 as bk_kodi,'
       
-        'round((to_number(decode(sum(t.qty4),'#39'0'#39','#39'0'#39',sum(t.qty4)))/20),2)' +
-        ' as bgrade_kodi,'
+        'to_number(decode(sum(t.qty4), '#39'0'#39', '#39'0'#39', sum(t.qty4))) / 20 as bg' +
+        'rade_kodi,'
       
-        'round((to_number(decode(sum(t.qty2),'#39'0'#39','#39'0'#39',sum(t.qty2)))/20),2)' +
-        ' as bs_kodi,'
+        'to_number(decode(sum(t.qty2), '#39'0'#39', '#39'0'#39', sum(t.qty2))) / 20 as bs' +
+        '_kodi,'
       
-        'round((to_number(decode(sum(t.affal),'#39'0'#39','#39'0'#39',sum(t.affal)))/20),' +
-        '2) as affal,'
+        'to_number(decode(sum(t.affal), '#39'0'#39', '#39'0'#39', sum(t.affal))) / 20 as ' +
+        'affal,'
       ''
       
-        'round((to_number(decode(sum(t.dicabut-t.qty2-t.qty4),'#39'0'#39','#39'0'#39',sum' +
-        '(t.dicabut-t.qty2-t.qty4)))/20/nullif(sum(case when t.keterangan' +
-        '2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) else 0 end), 0))*100,1) ' +
-        'as p_bk,'
+        'to_number(decode(sum(t.dicabut - t.qty2 - t.qty4), '#39'0'#39', '#39'0'#39', sum' +
+        '(t.dicabut - t.qty2 - t.qty4))) / 20 / nullif(sum(case when t.ke' +
+        'terangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) else 0 end), 0) ' +
+        '* 100 as p_bk,'
       
-        'round((to_number(decode(sum(t.qty4),'#39'0'#39','#39'0'#39',sum(t.qty4)))/20/nul' +
+        'to_number(decode(sum(t.qty4), '#39'0'#39', '#39'0'#39', sum(t.qty4))) / 20 / nul' +
         'lif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty' +
-        '5, 0) else 0 end), 0))*100,1) as p_bgrade,'
+        '5, 0) else 0 end), 0) * 100 as p_bgrade,'
       
-        'round((to_number(decode(sum(t.qty2),'#39'0'#39','#39'0'#39',sum(t.qty2)))/20/nul' +
+        'to_number(decode(sum(t.qty2), '#39'0'#39', '#39'0'#39', sum(t.qty2))) / 20 / nul' +
         'lif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty' +
-        '5, 0) else 0 end), 0))*100,1) as p_bs,'
+        '5, 0) else 0 end), 0) * 100 as p_bs,'
       ''
       'sum(nvl(t.flex_print, 0)) as flex_print,'
       'sum(nvl(t.flex_steam, 0)) as flex_steam,'
@@ -11180,67 +11172,66 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       'sum(nvl(t.flex, 0)) as flex,'
       ''
       
-        'round((to_number(decode(sum(t.flex_print),'#39'0'#39','#39'0'#39',sum(t.flex_pri' +
-        'nt)))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then ' +
-        'nvl(t.qty5, 0) else 0 end), 0))*100,1) as p_flex_print,'
+        'to_number(decode(sum(t.flex_print), '#39'0'#39', '#39'0'#39', sum(t.flex_print))' +
+        ') / nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nv' +
+        'l(t.qty5, 0) else 0 end), 0) * 100 as p_flex_print,'
       
-        'round((to_number(decode(sum(t.flex_steam),'#39'0'#39','#39'0'#39',sum(t.flex_ste' +
-        'am)))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then ' +
-        'nvl(t.qty5, 0) else 0 end), 0))*100,1) as p_flex_steam,'
+        'to_number(decode(sum(t.flex_steam), '#39'0'#39', '#39'0'#39', sum(t.flex_steam))' +
+        ') / nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nv' +
+        'l(t.qty5, 0) else 0 end), 0) * 100 as p_flex_steam,'
       
-        'round((to_number(decode(sum(t.flex_stamping),'#39'0'#39','#39'0'#39',sum(t.flex_' +
-        'stamping)))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39 +
-        ' then nvl(t.qty5, 0) else 0 end), 0))*100,1) as p_flex_stamping,'
+        'to_number(decode(sum(t.flex_stamping), '#39'0'#39', '#39'0'#39', sum(t.flex_stam' +
+        'ping))) / nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' t' +
+        'hen nvl(t.qty5, 0) else 0 end), 0) * 100 as p_flex_stamping,'
       
-        'round((to_number(decode(sum(t.flex_luntur),'#39'0'#39','#39'0'#39',sum(t.flex_lu' +
-        'ntur)))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' the' +
-        'n nvl(t.qty5, 0) else 0 end), 0))*100,1) as p_flex_luntur, --tmb' +
-        'ahan'
+        'to_number(decode(sum(t.flex_luntur), '#39'0'#39', '#39'0'#39', sum(t.flex_luntur' +
+        '))) / nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then ' +
+        'nvl(t.qty5, 0) else 0 end), 0) * 100 as p_flex_luntur, --tmbahan'
       
-        'round((to_number(decode(sum(t.wts),'#39'0'#39','#39'0'#39',sum(t.wts)))/nullif(s' +
-        'um(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0)' +
-        ' else 0 end), 0))*100,1) as p_wts,'
+        'to_number(decode(sum(t.wts), '#39'0'#39', '#39'0'#39', sum(t.wts))) / nullif(sum' +
+        '(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) e' +
+        'lse 0 end), 0) * 100 as p_wts,'
       
-        'round((to_number(decode(sum(t.m_samar),'#39'0'#39','#39'0'#39',sum(t.m_samar)))/' +
+        'to_number(decode(sum(t.m_samar), '#39'0'#39', '#39'0'#39', sum(t.m_samar))) / nu' +
+        'llif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qt' +
+        'y5, 0) else 0 end), 0) * 100 as p_m_samar,'
+      
+        'to_number(decode(sum(t.m_rusak), '#39'0'#39', '#39'0'#39', sum(t.m_rusak))) / nu' +
+        'llif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qt' +
+        'y5, 0) else 0 end), 0) * 100 as p_m_rusak,'
+      
+        'to_number(decode(sum(t.m_belang), '#39'0'#39', '#39'0'#39', sum(t.m_belang))) / ' +
         'nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.' +
-        'qty5, 0) else 0 end), 0))*100,1) as p_m_samar,'
+        'qty5, 0) else 0 end), 0) * 100 as p_m_belang,'
       
-        'round((to_number(decode(sum(t.m_rusak),'#39'0'#39','#39'0'#39',sum(t.m_rusak)))/' +
-        'nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.' +
-        'qty5, 0) else 0 end), 0))*100,1) as p_m_rusak,'
+        'to_number(decode(sum(t.o_setting), '#39'0'#39', '#39'0'#39', sum(t.o_setting))) ' +
+        '/ nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(' +
+        't.qty5, 0) else 0 end), 0) * 100 as p_o_setting,'
       
-        'round((to_number(decode(sum(t.m_belang),'#39'0'#39','#39'0'#39',sum(t.m_belang))' +
-        ')/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(' +
-        't.qty5, 0) else 0 end), 0))*100,1) as p_m_belang,'
-      
-        'round((to_number(decode(sum(t.o_setting),'#39'0'#39','#39'0'#39',sum(t.o_setting' +
-        ')))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nv' +
-        'l(t.qty5, 0) else 0 end), 0))*100,1) as p_o_setting,'
-      
-        'round((to_number(decode(sum(t.n_oli),'#39'0'#39','#39'0'#39',sum(t.n_oli)))/null' +
-        'if(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5' +
-        ', 0) else 0 end), 0))*100,1) as p_n_oli,'
-      
-        'round((to_number(decode(sum(t.sobek),'#39'0'#39','#39'0'#39',sum(t.sobek)))/null' +
-        'if(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5' +
-        ', 0) else 0 end), 0))*100,1) as p_sobek,'
-      
-        'round((to_number(decode(sum(t.sobek_mt),'#39'0'#39','#39'0'#39',sum(t.sobek_mt))' +
-        ')/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(' +
-        't.qty5, 0) else 0 end), 0))*100,1) as p_sobek_mt, --% sobek_mt 2' +
-        '81223'
-      
-        'round((to_number(decode(sum(t.tgs),'#39'0'#39','#39'0'#39',sum(t.tgs)))/nullif(s' +
-        'um(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0)' +
-        ' else 0 end), 0))*100,1) as p_tgs,'
-      
-        'round((to_number(decode(sum(t.affal),'#39'0'#39','#39'0'#39',sum(t.affal)))/null' +
-        'if(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5' +
-        ', 0) else 0 end), 0))*100,1) as p_affal,'
-      
-        'round((to_number(decode(sum(t.flex),'#39'0'#39','#39'0'#39',sum(t.flex)))/nullif' +
+        'to_number(decode(sum(t.n_oli), '#39'0'#39', '#39'0'#39', sum(t.n_oli))) / nullif' +
         '(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, ' +
-        '0) else 0 end), 0))*100,1) as p_flex'
+        '0) else 0 end), 0) * 100 as p_n_oli,'
+      
+        'to_number(decode(sum(t.sobek), '#39'0'#39', '#39'0'#39', sum(t.sobek))) / nullif' +
+        '(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, ' +
+        '0) else 0 end), 0) * 100 as p_sobek,'
+      
+        'to_number(decode(sum(t.sobek_mt), '#39'0'#39', '#39'0'#39', sum(t.sobek_mt))) / ' +
+        'nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.' +
+        'qty5, 0) else 0 end), 0) * 100 as p_sobek_mt, --% sobek_mt 28122' +
+        '3'
+      
+        'to_number(decode(sum(t.tgs), '#39'0'#39', '#39'0'#39', sum(t.tgs))) / nullif(sum' +
+        '(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) e' +
+        'lse 0 end), 0) * 100 as p_tgs,'
+      
+        'to_number(decode(sum(t.affal), '#39'0'#39', '#39'0'#39', sum(t.affal))) / nullif' +
+        '(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, ' +
+        '0) else 0 end), 0) * 100 as p_affal,'
+      
+        'to_number(decode(sum(t.flex), '#39'0'#39', '#39'0'#39', sum(t.flex))) / nullif(s' +
+        'um(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0)' +
+        ' else 0 end), 0) * 100 as p_flex'
       ''
       'from '
       ''
@@ -11491,35 +11482,35 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       ''
       ''
       
-        'round((to_number(decode(sum(t.qty5),'#39'0'#39','#39'0'#39',sum(t.qty5)))/20),2)' +
-        ' as total,'
+        'to_number(decode(sum(t.qty5), '#39'0'#39', '#39'0'#39', sum(t.qty5))) / 20 as to' +
+        'tal,'
       ''
       
-        'round((to_number(decode(sum(t.dicabut-t.qty2-t.qty4),'#39'0'#39','#39'0'#39',sum' +
-        '(t.dicabut-t.qty2-t.qty4)))/20),2) as bk,'
+        'to_number(decode(sum(t.dicabut - t.qty2 - t.qty4), '#39'0'#39', '#39'0'#39', sum' +
+        '(t.dicabut - t.qty2 - t.qty4))) / 20 as bk,'
       
-        'round((to_number(decode(sum(t.qty4),'#39'0'#39','#39'0'#39',sum(t.qty4)))/20),2)' +
-        ' as bgrade,'
+        'to_number(decode(sum(t.qty4), '#39'0'#39', '#39'0'#39', sum(t.qty4))) / 20 as bg' +
+        'rade,'
       
-        'round((to_number(decode(sum(t.qty2),'#39'0'#39','#39'0'#39',sum(t.qty2)))/20),2)' +
-        ' as bs,'
+        'to_number(decode(sum(t.qty2), '#39'0'#39', '#39'0'#39', sum(t.qty2))) / 20 as bs' +
+        ','
       
-        'round((to_number(decode(sum(t.affal),'#39'0'#39','#39'0'#39',sum(t.affal)))/20),' +
-        '2) as affal,'
+        'to_number(decode(sum(t.affal), '#39'0'#39', '#39'0'#39', sum(t.affal))) / 20 as ' +
+        'affal,'
       ''
       
-        'round((to_number(decode(sum(t.dicabut-t.qty2-t.qty4),'#39'0'#39','#39'0'#39',sum' +
-        '(t.dicabut-t.qty2-t.qty4)))/20/nullif(sum(case when t.keterangan' +
-        '2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) else 0 end), 0))*100,1) ' +
-        'as p_bk,'
+        'to_number(decode(sum(t.dicabut - t.qty2 - t.qty4), '#39'0'#39', '#39'0'#39', sum' +
+        '(t.dicabut - t.qty2 - t.qty4))) / 20 / nullif(sum(case when t.ke' +
+        'terangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) else 0 end), 0) ' +
+        '* 100 as p_bk,'
       
-        'round((to_number(decode(sum(t.qty4),'#39'0'#39','#39'0'#39',sum(t.qty4)))/20/nul' +
+        'to_number(decode(sum(t.qty4), '#39'0'#39', '#39'0'#39', sum(t.qty4))) / 20 / nul' +
         'lif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty' +
-        '5, 0) else 0 end), 0))*100,1) as p_bgrade,'
+        '5, 0) else 0 end), 0) * 100 as p_bgrade,'
       
-        'round((to_number(decode(sum(t.qty2),'#39'0'#39','#39'0'#39',sum(t.qty2)))/20/nul' +
+        'to_number(decode(sum(t.qty2), '#39'0'#39', '#39'0'#39', sum(t.qty2))) / 20 / nul' +
         'lif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty' +
-        '5, 0) else 0 end), 0))*100,1) as p_bs,'
+        '5, 0) else 0 end), 0) * 100 as p_bs,'
       ''
       'sum(nvl(t.flex_print, 0)) as flex_print,'
       'sum(nvl(t.flex_steam, 0)) as flex_steam,'
@@ -11539,67 +11530,65 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       'sum(nvl(t.flex, 0)) as flex,'
       ''
       
-        'round((to_number(decode(sum(t.flex_print),'#39'0'#39','#39'0'#39',sum(t.flex_pri' +
-        'nt)))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then ' +
-        'nvl(t.qty5, 0) else 0 end), 0))*100,1) as p_flex_print,'
+        'to_number(decode(sum(t.flex_print), '#39'0'#39', '#39'0'#39', sum(t.flex_print))' +
+        ') / nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nv' +
+        'l(t.qty5, 0) else 0 end), 0) * 100 as p_flex_print,'
       
-        'round((to_number(decode(sum(t.flex_steam),'#39'0'#39','#39'0'#39',sum(t.flex_ste' +
-        'am)))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then ' +
-        'nvl(t.qty5, 0) else 0 end), 0))*100,1) as p_flex_steam,'
+        'to_number(decode(sum(t.flex_steam), '#39'0'#39', '#39'0'#39', sum(t.flex_steam))' +
+        ') / nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nv' +
+        'l(t.qty5, 0) else 0 end), 0) * 100 as p_flex_steam,'
       
-        'round((to_number(decode(sum(t.flex_stamping),'#39'0'#39','#39'0'#39',sum(t.flex_' +
-        'stamping)))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39 +
-        ' then nvl(t.qty5, 0) else 0 end), 0))*100,1) as p_flex_stamping,'
+        'to_number(decode(sum(t.flex_stamping), '#39'0'#39', '#39'0'#39', sum(t.flex_stam' +
+        'ping))) / nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' t' +
+        'hen nvl(t.qty5, 0) else 0 end), 0) * 100 as p_flex_stamping,'
       
-        'round((to_number(decode(sum(t.flex_luntur),'#39'0'#39','#39'0'#39',sum(t.flex_lu' +
-        'ntur)))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' the' +
-        'n nvl(t.qty5, 0) else 0 end), 0))*100,1) as p_flex_luntur, --tmb' +
-        'ahan'
+        'to_number(decode(sum(t.flex_luntur), '#39'0'#39', '#39'0'#39', sum(t.flex_luntur' +
+        '))) / nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then ' +
+        'nvl(t.qty5, 0) else 0 end), 0) * 100 as p_flex_luntur,'
       
-        'round((to_number(decode(sum(t.wts),'#39'0'#39','#39'0'#39',sum(t.wts)))/nullif(s' +
-        'um(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0)' +
-        ' else 0 end), 0))*100,1) as p_wts,'
+        'to_number(decode(sum(t.wts), '#39'0'#39', '#39'0'#39', sum(t.wts))) / nullif(sum' +
+        '(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) e' +
+        'lse 0 end), 0) * 100 as p_wts,'
       
-        'round((to_number(decode(sum(t.m_samar),'#39'0'#39','#39'0'#39',sum(t.m_samar)))/' +
+        'to_number(decode(sum(t.m_samar), '#39'0'#39', '#39'0'#39', sum(t.m_samar))) / nu' +
+        'llif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qt' +
+        'y5, 0) else 0 end), 0) * 100 as p_m_samar,'
+      
+        'to_number(decode(sum(t.m_rusak), '#39'0'#39', '#39'0'#39', sum(t.m_rusak))) / nu' +
+        'llif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qt' +
+        'y5, 0) else 0 end), 0) * 100 as p_m_rusak,'
+      
+        'to_number(decode(sum(t.m_belang), '#39'0'#39', '#39'0'#39', sum(t.m_belang))) / ' +
         'nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.' +
-        'qty5, 0) else 0 end), 0))*100,1) as p_m_samar,'
+        'qty5, 0) else 0 end), 0) * 100 as p_m_belang,'
       
-        'round((to_number(decode(sum(t.m_rusak),'#39'0'#39','#39'0'#39',sum(t.m_rusak)))/' +
-        'nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.' +
-        'qty5, 0) else 0 end), 0))*100,1) as p_m_rusak,'
+        'to_number(decode(sum(t.o_setting), '#39'0'#39', '#39'0'#39', sum(t.o_setting))) ' +
+        '/ nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(' +
+        't.qty5, 0) else 0 end), 0) * 100 as p_o_setting,'
       
-        'round((to_number(decode(sum(t.m_belang),'#39'0'#39','#39'0'#39',sum(t.m_belang))' +
-        ')/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(' +
-        't.qty5, 0) else 0 end), 0))*100,1) as p_m_belang,'
-      
-        'round((to_number(decode(sum(t.o_setting),'#39'0'#39','#39'0'#39',sum(t.o_setting' +
-        ')))/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nv' +
-        'l(t.qty5, 0) else 0 end), 0))*100,1) as p_o_setting,'
-      
-        'round((to_number(decode(sum(t.n_oli),'#39'0'#39','#39'0'#39',sum(t.n_oli)))/null' +
-        'if(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5' +
-        ', 0) else 0 end), 0))*100,1) as p_n_oli,'
-      
-        'round((to_number(decode(sum(t.sobek),'#39'0'#39','#39'0'#39',sum(t.sobek)))/null' +
-        'if(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5' +
-        ', 0) else 0 end), 0))*100,1) as p_sobek,'
-      
-        'round((to_number(decode(sum(t.sobek_mt),'#39'0'#39','#39'0'#39',sum(t.sobek_mt))' +
-        ')/nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(' +
-        't.qty5, 0) else 0 end), 0))*100,1) as p_sobek_mt, --% sobek_mt 2' +
-        '81223'
-      
-        'round((to_number(decode(sum(t.tgs),'#39'0'#39','#39'0'#39',sum(t.tgs)))/nullif(s' +
-        'um(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0)' +
-        ' else 0 end), 0))*100,1) as p_tgs,'
-      
-        'round((to_number(decode(sum(t.affal),'#39'0'#39','#39'0'#39',sum(t.affal)))/null' +
-        'if(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5' +
-        ', 0) else 0 end), 0))*100,1) as p_affal,'
-      
-        'round((to_number(decode(sum(t.flex),'#39'0'#39','#39'0'#39',sum(t.flex)))/nullif' +
+        'to_number(decode(sum(t.n_oli), '#39'0'#39', '#39'0'#39', sum(t.n_oli))) / nullif' +
         '(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, ' +
-        '0) else 0 end), 0))*100,1) as p_flex'
+        '0) else 0 end), 0) * 100 as p_n_oli,'
+      
+        'to_number(decode(sum(t.sobek), '#39'0'#39', '#39'0'#39', sum(t.sobek))) / nullif' +
+        '(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, ' +
+        '0) else 0 end), 0) * 100 as p_sobek,'
+      
+        'to_number(decode(sum(t.sobek_mt), '#39'0'#39', '#39'0'#39', sum(t.sobek_mt))) / ' +
+        'nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.' +
+        'qty5, 0) else 0 end), 0) * 100 as p_sobek_mt,'
+      
+        'to_number(decode(sum(t.tgs), '#39'0'#39', '#39'0'#39', sum(t.tgs))) / nullif(sum' +
+        '(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) e' +
+        'lse 0 end), 0) * 100 as p_tgs,'
+      
+        'to_number(decode(sum(t.affal), '#39'0'#39', '#39'0'#39', sum(t.affal))) / nullif' +
+        '(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, ' +
+        '0) else 0 end), 0) * 100 as p_affal,'
+      
+        'to_number(decode(sum(t.flex), '#39'0'#39', '#39'0'#39', sum(t.flex))) / nullif(s' +
+        'um(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0)' +
+        ' else 0 end), 0) * 100 as p_flex'
       ''
       'from '
       ''

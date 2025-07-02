@@ -623,6 +623,7 @@ type
     procedure WebBrowser1DocumentComplete(Sender: TObject;
       const pDisp: IDispatch; var URL: OleVariant);
     procedure TabSheet7Show(Sender: TObject);
+    procedure BitBtn12Click(Sender: TObject);
   private
     { Private declarations }
     vTab,vfilter,vorder : string;
@@ -1575,6 +1576,36 @@ begin
 
   wwDBGrid4.ColumnByName('OUT_BK').FooterValue := FormatFloat('0.0,0;(0.0,0);-', QRiwayatTransaksi_totOUT_BK.AsFloat);
   wwDBGrid4.ColumnByName('OUT_BS').FooterValue := FormatFloat('0.0,0;(0.0,0);-', QRiwayatTransaksi_totOUT_BS.AsFloat);
+end;
+
+procedure TInfoStokInspectingFrm.BitBtn12Click(Sender: TObject);
+var
+  TanggalStr: string;
+begin
+    if vTglAwal3.Date = vTglAkhir3.Date then
+      TanggalStr := FormatDateTime('dd mmmm yyyy', vTglAwal3.Date)
+    else
+      TanggalStr := FormatDateTime('dd mmmm yyyy', vTglAwal3.Date) + ' - ' + FormatDateTime('dd mmmm yyyy', vTglAkhir3.Date);
+
+          if QRiwayatTransaksi.Active then
+          begin
+             DMFrm.SaveDialog1.DefaultExt:='XLK';
+             DMFrm.SaveDialog1.Filter:='Excel files (*.XLK)|*.XLK';
+             DMFrm.SaveDialog1.FileName:=''+TabSheet7.Caption+' '+Caption+'_'+ TanggalStr +'';
+             wwDBGrid4.ExportOptions.TitleName:=''+TabSheet7.Caption+' '+Caption+'_'+ TanggalStr +'';
+               if DMFrm.SaveDialog1.Execute then
+               begin
+                 try
+                 wwDBGrid4.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
+                 wwDBGrid4.ExportOptions.Save;
+                 ShowMessage('Simpan Sukses !');
+                 except
+                 ShowMessage('Simpan Gagal !');
+                 end;
+               end;
+          end
+          else
+            ShowMessage('Tabel belum di-OPEN !');
 end;
 
 end.

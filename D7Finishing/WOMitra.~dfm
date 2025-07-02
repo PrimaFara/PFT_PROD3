@@ -726,7 +726,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewPage = False
           Size.Values = (
             214.312500000000000000
-            1772.708333333334000000)
+            1772.708333333333000000)
           BandType = rbPageHeader
           object Label22: TLabel
             Left = 28
@@ -1160,7 +1160,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewPage = False
           Size.Values = (
             275.166666666666700000
-            1772.708333333334000000)
+            1772.708333333333000000)
           BandType = rbTitle
           object QRDBText1: TQRDBText
             Left = 258
@@ -1173,10 +1173,10 @@ object WOMitraFrm: TWOMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              68.791666666666680000
+              68.791666666666670000
               682.625000000000000000
               0.000000000000000000
-              407.458333333333400000)
+              407.458333333333300000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -1496,8 +1496,8 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            60.854166666666680000
-            1772.708333333334000000)
+            60.854166666666670000
+            1772.708333333333000000)
           BandType = rbColumnHeader
           object QRLabel8: TQRLabel
             Left = 16
@@ -1616,7 +1616,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewPage = False
           Size.Values = (
             55.562500000000000000
-            1772.708333333334000000)
+            1772.708333333333000000)
           BandType = rbDetail
           object QRDBText8: TQRDBText
             Left = 64
@@ -1737,7 +1737,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewPage = False
           Size.Values = (
             497.416666666666700000
-            1772.708333333334000000)
+            1772.708333333333000000)
           BandType = rbSummary
           object QRDBText14: TQRDBText
             Left = 64
@@ -1987,7 +1987,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewPage = False
           Size.Values = (
             52.916666666666670000
-            1772.708333333334000000)
+            1772.708333333333000000)
           BandType = rbPageFooter
           object QRDBText13: TQRDBText
             Left = 0
@@ -2057,7 +2057,7 @@ object WOMitraFrm: TWOMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              791.104166666666800000
+              791.104166666666700000
               0.000000000000000000
               187.854166666666700000)
             Alignment = taCenter
@@ -2088,7 +2088,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewPage = False
           Size.Values = (
             0.000000000000000000
-            1772.708333333334000000)
+            1772.708333333333000000)
           FooterBand = QRBand1
           Master = QuickRep1
           ReprintOnNewPage = False
@@ -2109,7 +2109,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewPage = False
           Size.Values = (
             105.833333333333300000
-            1772.708333333334000000)
+            1772.708333333333000000)
           BandType = rbGroupFooter
           object QRLabel15: TQRLabel
             Left = 305
@@ -2123,7 +2123,7 @@ object WOMitraFrm: TWOMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              806.979166666666800000
+              806.979166666666700000
               21.166666666666670000
               156.104166666666700000)
             Alignment = taCenter
@@ -3236,9 +3236,9 @@ object WOMitraFrm: TWOMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333320000
+              58.208333333333330000
               269.875000000000000000
-              74.083333333333320000
+              74.083333333333330000
               365.125000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -3582,7 +3582,7 @@ object WOMitraFrm: TWOMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
+              60.854166666666670000
               330.729166666666700000
               230.187500000000000000
               1336.145833333333000000)
@@ -3619,7 +3619,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel39: TQRLabel
@@ -3743,7 +3743,7 @@ object WOMitraFrm: TWOMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              748.770833333333200000
+              748.770833333333300000
               13.229166666666670000
               222.250000000000000000)
             Alignment = taLeftJustify
@@ -3810,7 +3810,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText36: TQRDBText
@@ -3846,7 +3846,7 @@ object WOMitraFrm: TWOMitraFrm
             FontSize = 8
           end
           object QRSysData4: TQRSysData
-            Left = -54
+            Left = 687
             Top = 8
             Width = 69
             Height = 17
@@ -3983,7 +3983,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText40: TQRDBText
@@ -4165,8 +4165,8 @@ object WOMitraFrm: TWOMitraFrm
           'NAMA_MITRA'#9'25'#9'MITRA'#9'F'
           'KONSTRUKSI'#9'25'#9'KONSTRUKSI'#9'F'
           'QTY_MSN'#9'10'#9'JML GULUNG'#9'F'
-          'POTONG'#9'10'#9'POTONG'#9'F'#9'QTY'
-          'METER'#9'10'#9'METER'#9'F'#9'QTY')
+          'POTONG'#9'10'#9'POTONG'#9'F'#9'QTY KONVERSI'
+          'METER'#9'10'#9'METER'#9'F'#9'QTY KONVERSI')
         IniAttributes.Enabled = True
         IniAttributes.SaveToRegistry = True
         IniAttributes.FileName = 'Pismatex Master'
@@ -4901,7 +4901,7 @@ object WOMitraFrm: TWOMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
+              60.854166666666670000
               116.416666666666700000
               230.187500000000000000
               1357.312500000000000000)
@@ -4938,7 +4938,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             1592.791666666667000000)
           BandType = rbColumnHeader
           object QRLabel18: TQRLabel
@@ -5045,7 +5045,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             1592.791666666667000000)
           BandType = rbPageFooter
           object QRDBText21: TQRDBText
@@ -5116,7 +5116,7 @@ object WOMitraFrm: TWOMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              701.145833333333200000
+              701.145833333333300000
               21.166666666666670000
               187.854166666666700000)
             Alignment = taCenter
@@ -5192,7 +5192,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             1592.791666666667000000)
           BandType = rbDetail
           object QRDBText25: TQRDBText
@@ -5942,7 +5942,7 @@ object WOMitraFrm: TWOMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
+              60.854166666666670000
               116.416666666666700000
               230.187500000000000000
               1359.958333333333000000)
@@ -5979,7 +5979,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             1592.791666666667000000)
           BandType = rbColumnHeader
           object QRLabel24: TQRLabel
@@ -6111,7 +6111,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             1592.791666666667000000)
           BandType = rbPageFooter
           object QRDBText24: TQRDBText
@@ -6182,7 +6182,7 @@ object WOMitraFrm: TWOMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              701.145833333333200000
+              701.145833333333300000
               21.166666666666670000
               187.854166666666700000)
             Alignment = taCenter
@@ -6258,7 +6258,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             1592.791666666667000000)
           BandType = rbDetail
           object QRDBText29: TQRDBText
@@ -7113,7 +7113,7 @@ object WOMitraFrm: TWOMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
+              60.854166666666670000
               198.437500000000000000
               187.854166666666700000
               1193.270833333333000000)
@@ -7144,10 +7144,10 @@ object WOMitraFrm: TWOMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
+              60.854166666666670000
               579.437500000000000000
-              256.645833333333400000
-              431.270833333333400000)
+              256.645833333333300000
+              431.270833333333300000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -7181,7 +7181,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             1592.791666666667000000)
           BandType = rbColumnHeader
           object QRLabel35: TQRLabel
@@ -7288,7 +7288,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             1592.791666666667000000)
           BandType = rbPageFooter
           object QRDBText35: TQRDBText
@@ -7359,7 +7359,7 @@ object WOMitraFrm: TWOMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              701.145833333333200000
+              701.145833333333300000
               21.166666666666670000
               187.854166666666700000)
             Alignment = taCenter
@@ -7435,7 +7435,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             1592.791666666667000000)
           BandType = rbDetail
           object QRDBText46: TQRDBText
@@ -8185,10 +8185,10 @@ object WOMitraFrm: TWOMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
+              60.854166666666670000
               330.729166666666700000
               230.187500000000000000
-              931.333333333333500000)
+              931.333333333333300000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -8217,8 +8217,8 @@ object WOMitraFrm: TWOMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               50.270833333333330000
-              687.916666666666800000
-              296.333333333333400000
+              687.916666666666700000
+              296.333333333333300000
               214.312500000000000000)
             Alignment = taCenter
             AlignToBand = True
@@ -8247,7 +8247,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            68.791666666666680000
+            68.791666666666670000
             1592.791666666667000000)
           BandType = rbColumnHeader
           object QRLabel28: TQRLabel
@@ -8510,7 +8510,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             1592.791666666667000000)
           BandType = rbPageFooter
           object QRDBText7: TQRDBText
@@ -8581,7 +8581,7 @@ object WOMitraFrm: TWOMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              701.145833333333200000
+              701.145833333333300000
               21.166666666666670000
               187.854166666666700000)
             Alignment = taCenter
@@ -8683,7 +8683,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             1592.791666666667000000)
           BandType = rbDetail
           object QRDBText33: TQRDBText
@@ -9674,10 +9674,10 @@ object WOMitraFrm: TWOMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
+              60.854166666666670000
               521.229166666666700000
               230.187500000000000000
-              931.333333333333500000)
+              931.333333333333300000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -9706,8 +9706,8 @@ object WOMitraFrm: TWOMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               50.270833333333330000
-              899.583333333333400000
-              296.333333333333400000
+              899.583333333333300000
+              296.333333333333300000
               171.979166666666700000)
             Alignment = taCenter
             AlignToBand = True
@@ -9742,7 +9742,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            68.791666666666680000
+            68.791666666666670000
             1973.791666666667000000)
           BandType = rbColumnHeader
           object QRLabel47: TQRLabel
@@ -10245,7 +10245,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             1973.791666666667000000)
           BandType = rbPageFooter
           object QRDBText32: TQRDBText
@@ -10316,7 +10316,7 @@ object WOMitraFrm: TWOMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              891.645833333333200000
+              891.645833333333300000
               21.166666666666670000
               187.854166666666700000)
             Alignment = taCenter
@@ -10390,7 +10390,7 @@ object WOMitraFrm: TWOMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             1973.791666666667000000)
           BandType = rbDetail
           object QRDBText49: TQRDBText

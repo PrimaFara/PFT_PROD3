@@ -1654,6 +1654,7 @@ type
     QBrowse_Loom2_totP_M_BELANG2: TFloatField;
     QBrowse_Loom2_totM_RUSAK2: TFloatField;
     QBrowse_Loom2_totP_M_RUSAK2: TFloatField;
+    QBrowseTGL_TERIMA: TDateTimeField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);

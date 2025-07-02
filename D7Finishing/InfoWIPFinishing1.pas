@@ -808,22 +808,22 @@ procedure TInfoWIPFinishing1Frm.BitBtn3Click(Sender: TObject);
 var
   TanggalStr: string;
 begin
-if VTglAwal.Date = VTglAkhir.Date then
-      TanggalStr := FormatDateTime('dd mmmm yyyy', VTglAwal.Date)
+if vTglAwal7.Date = vTglAkhir7.Date then
+      TanggalStr := FormatDateTime('dd mmmm yyyy', vTglAwal7.Date)
     else
-      TanggalStr := FormatDateTime('dd mmmm yyyy', VTglAwal.Date) + ' - ' + FormatDateTime('dd mmmm yyyy', VTglAkhir.Date);
+      TanggalStr := FormatDateTime('dd mmmm yyyy', vTglAwal7.Date) + ' - ' + FormatDateTime('dd mmmm yyyy', vTglAkhir7.Date);
 
-          if QBrowse.Active then
+          if QRiwayatTransaksi.Active then
           begin
              DMFrm.SaveDialog1.DefaultExt:='XLK';
              DMFrm.SaveDialog1.Filter:='Excel files (*.XLK)|*.XLK';
-             DMFrm.SaveDialog1.FileName:=''+TabSheet1.Caption+'_'+ TanggalStr +'';
-             wwDBGrid1.ExportOptions.TitleName:=''+TabSheet1.Caption+'_'+ TanggalStr +'';
+             DMFrm.SaveDialog1.FileName:=''+TabSheet4.Caption+'_'+ TanggalStr +'';
+             wwDBGrid4.ExportOptions.TitleName:=''+TabSheet4.Caption+'_'+ TanggalStr +'';
                if DMFrm.SaveDialog1.Execute then
                begin
                  try
-                 wwDBGrid1.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
-                 wwDBGrid1.ExportOptions.Save;
+                 wwDBGrid4.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
+                 wwDBGrid4.ExportOptions.Save;
                  ShowMessage('Simpan Sukses !');
                  except
                  ShowMessage('Simpan Gagal !');

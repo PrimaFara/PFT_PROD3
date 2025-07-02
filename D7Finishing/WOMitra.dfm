@@ -50,16 +50,11 @@ object WOMitraFrm: TWOMitraFrm
           BevelWidth = 2
           Color = 10485760
           TabOrder = 3
-          DesignSize = (
-            1525
-            48)
           object DBText1: TDBText
-            Left = 1406
+            Left = 695
             Top = 7
             Width = 114
             Height = 33
-            Alignment = taRightJustify
-            Anchors = [akTop, akRight]
             AutoSize = True
             DataField = 'NO_NOTA'
             DataSource = dsQMaster
@@ -2230,16 +2225,11 @@ object WOMitraFrm: TWOMitraFrm
         BevelWidth = 2
         Color = 10485760
         TabOrder = 1
-        DesignSize = (
-          1525
-          48)
         object DBText10: TDBText
-          Left = 1295
+          Left = 695
           Top = 7
           Width = 130
           Height = 33
-          Alignment = taRightJustify
-          Anchors = [akTop, akRight]
           AutoSize = True
           DataField = 'NO_NOTA'
           DataSource = dsQMaster

@@ -5788,13 +5788,12 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
           ParentFont = False
         end
         object BitBtn1: TBitBtn
-          Left = 16
+          Left = 56
           Top = 11
-          Width = 161
+          Width = 121
           Height = 25
-          Caption = '&Export2Excel (On Proses)'
+          Caption = '&Export2Excel'
           TabOrder = 0
-          Visible = False
           OnClick = BitBtn3Click
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100

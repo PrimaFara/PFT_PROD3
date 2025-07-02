@@ -152,9 +152,9 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333330000
+              58.208333333333320000
               269.875000000000000000
-              74.083333333333330000
+              74.083333333333320000
               365.125000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -675,7 +675,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
               44.979166666666670000
               1616.604166666667000000
               216.958333333333300000
-              92.604166666666670000)
+              92.604166666666680000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -704,10 +704,10 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
-              616.479166666666700000
+              60.854166666666660000
+              616.479166666666600000
               158.750000000000000000
-              764.645833333333300000)
+              764.645833333333400000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -736,7 +736,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Frame.DrawRight = False
             Size.Values = (
               50.270833333333330000
-              804.333333333333300000
+              804.333333333333200000
               222.250000000000000000
               116.416666666666700000)
             Alignment = taLeftJustify
@@ -800,7 +800,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Size.Values = (
               52.916666666666670000
               1613.958333333333000000
-              89.958333333333330000
+              89.958333333333320000
               209.020833333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -830,7 +830,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333330000
+              58.208333333333320000
               1592.791666666667000000
               2.645833333333333000
               111.125000000000000000)
@@ -919,7 +919,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666660000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -1120,9 +1120,9 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              679.979166666666700000
+              679.979166666666800000
               190.500000000000000000
-              74.083333333333330000)
+              74.083333333333320000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -1154,7 +1154,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
               44.979166666666670000
               1230.312500000000000000
               190.500000000000000000
-              74.083333333333330000)
+              74.083333333333320000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -1216,7 +1216,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              677.333333333333300000
+              677.333333333333200000
               359.833333333333300000
               79.375000000000000000)
             Alignment = taCenter
@@ -1583,7 +1583,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            68.791666666666670000
+            68.791666666666660000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -1629,7 +1629,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              989.541666666666700000
+              989.541666666666800000
               10.583333333333330000
               140.229166666666700000)
             Alignment = taRightJustify
@@ -3620,7 +3620,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
+              60.854166666666660000
               468.312500000000000000
               201.083333333333300000
               1060.979166666667000000)
@@ -3652,7 +3652,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              923.395833333333300000
+              923.395833333333400000
               333.375000000000000000
               153.458333333333300000)
             Alignment = taCenter
@@ -3682,8 +3682,8 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
-              740.833333333333300000
+              60.854166666666660000
+              740.833333333333400000
               269.875000000000000000
               515.937500000000000000)
             Alignment = taCenter
@@ -3990,7 +3990,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666660000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText16: TQRDBText
@@ -4197,7 +4197,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              679.979166666666700000
+              679.979166666666800000
               190.500000000000000000
               74.083333333333340000)
             Alignment = taCenter
@@ -4451,7 +4451,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333330000
+            66.145833333333340000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText21: TQRDBText
@@ -5729,7 +5729,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
       'from ipisma_db4.vkode_prod_kons2 y'
       'where mutu='#39'BK'#39')) r on r.kp=t.kp_finish')
     QBEDefinition.QBEFieldDefs = {
-      04000000250000000A0000004B4F4E535452554B53490100000000000A000000
+      04000000260000000A0000004B4F4E535452554B53490100000000000A000000
       5154595F47554C554E47010000000000090000005154595F4D45544552010000
       000000060000004E4F5F5245470100000000000300000054474C010000000000
       070000004E4F5F4E4F5441010000000000040000004752555001000000000005
@@ -5745,12 +5745,12 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
       0000000A0000004B45545F44455441494C010000000000080000004B454C4F4D
       504F4B0100000000000A00000054474C5F494E534552540100000000000A0000
       004F50525F494E53455254010000000000070000005045545547415301000000
-      0000090000005354535F5445544150010000000000060000004953504F535401
-      000000000005000000544148554E010000000000090000004E414D415F495445
-      4D0100000000000E000000434F52414B5F5052494E54494E4701000000000009
-      0000004B505F46494E4953480100000000000F0000004B445F4B4F4E53545255
-      4B53495F310100000000000C0000004B4F4E535452554B53495F310100000000
-      00}
+      0000060000004953504F535401000000000005000000544148554E0100000000
+      00090000004E414D415F4954454D0100000000000E000000434F52414B5F5052
+      494E54494E47010000000000090000004B505F46494E4953480100000000000F
+      0000004B445F4B4F4E535452554B53495F310100000000000C0000004B4F4E53
+      5452554B53495F310100000000000D0000004C4F4B4153495F4D414B4C4F4E01
+      0000000000090000004E4F5F4F5244455232010000000000}
     Session = DMFrm.OS
     Left = 105
     Top = 432
@@ -5780,16 +5780,17 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
     object QAmbilBatchQTY_GULUNG: TFloatField
       DisplayWidth = 10
       FieldName = 'QTY_GULUNG'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QAmbilBatchQTY_METER: TFloatField
       DisplayWidth = 10
       FieldName = 'QTY_METER'
       Required = True
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QAmbilBatchKP_FINISH: TStringField
       DisplayWidth = 10
       FieldName = 'KP_FINISH'
-      Size = 30
     end
     object QAmbilBatchKD_KONSTRUKSI_1: TStringField
       DisplayLabel = 'KD_KONS_FINISH'
@@ -5828,6 +5829,11 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
       Visible = False
       Size = 3
     end
+    object QAmbilBatchLOKASI_MAKLON: TStringField
+      FieldName = 'LOKASI_MAKLON'
+      Visible = False
+      Size = 255
+    end
     object QAmbilBatchKD_CORAK: TStringField
       FieldName = 'KD_CORAK'
       Visible = False
@@ -5851,7 +5857,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
     object QAmbilBatchSUPLIER: TStringField
       FieldName = 'SUPLIER'
       Visible = False
-      Size = 30
+      Size = 100
     end
     object QAmbilBatchJENIS: TStringField
       FieldName = 'JENIS'
@@ -5860,6 +5866,11 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
     end
     object QAmbilBatchNO_ORDER: TStringField
       FieldName = 'NO_ORDER'
+      Visible = False
+      Size = 100
+    end
+    object QAmbilBatchNO_ORDER2: TStringField
+      FieldName = 'NO_ORDER2'
       Visible = False
       Size = 100
     end
@@ -5912,11 +5923,6 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
       Visible = False
       Size = 278
     end
-    object QAmbilBatchSTS_TETAP: TStringField
-      FieldName = 'STS_TETAP'
-      Visible = False
-      Size = 1
-    end
     object QAmbilBatchISPOST: TStringField
       FieldName = 'ISPOST'
       Visible = False
@@ -5930,6 +5936,11 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
       FieldName = 'NAMA_ITEM'
       Visible = False
       Size = 108
+    end
+    object QAmbilBatchCORAK_PRINTING: TStringField
+      FieldName = 'CORAK_PRINTING'
+      Visible = False
+      Size = 50
     end
   end
 end

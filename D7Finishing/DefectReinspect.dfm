@@ -1,8 +1,8 @@
 object DefectReinspectFrm: TDefectReinspectFrm
   Left = 211
   Top = 164
-  Width = 1300
-  Height = 704
+  Width = 1571
+  Height = 836
   ActiveControl = GroupBox1
   Caption = 'Hasil Reinspect Dalam'
   Color = clBtnFace
@@ -779,7 +779,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        66.145833333333330000
+        66.145833333333340000
         2000.250000000000000000)
       BandType = rbColumnHeader
       object QRLabel10: TQRLabel
@@ -970,7 +970,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        76.729166666666670000
+        76.729166666666680000
         2000.250000000000000000)
       BandType = rbPageFooter
       object QRDBText2: TQRDBText
@@ -1041,9 +1041,9 @@ object DefectReinspectFrm: TDefectReinspectFrm
         Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          883.708333333333300000
+          883.708333333333400000
           21.166666666666670000
-          232.833333333333300000)
+          232.833333333333400000)
         Alignment = taCenter
         AlignToBand = True
         AutoSize = False
@@ -1077,7 +1077,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        264.583333333333300000
+        264.583333333333400000
         2000.250000000000000000)
       BandType = rbGroupFooter
       object QRDBText4: TQRDBText
@@ -1092,9 +1092,9 @@ object DefectReinspectFrm: TDefectReinspectFrm
         Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          1725.083333333333000000
+          1725.083333333334000000
           108.479166666666700000
-          66.145833333333330000)
+          66.145833333333340000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True
@@ -1143,9 +1143,9 @@ object DefectReinspectFrm: TDefectReinspectFrm
         Frame.DrawRight = False
         Size.Values = (
           63.500000000000000000
-          391.583333333333300000
+          391.583333333333400000
           230.187500000000000000
-          320.145833333333300000)
+          320.145833333333400000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True
@@ -1170,7 +1170,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
           63.500000000000000000
           1214.437500000000000000
           230.187500000000000000
-          264.583333333333300000)
+          264.583333333333400000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True
@@ -1330,7 +1330,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        66.145833333333330000
+        66.145833333333340000
         2000.250000000000000000)
       BandType = rbDetail
       object QRDBText5: TQRDBText
@@ -1493,8 +1493,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 1284
-    Height = 666
+    Width = 1555
+    Height = 798
     HelpType = htKeyword
     ActivePage = TabSheet2
     Align = alClient
@@ -1505,8 +1505,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
       object PanelCenter: TPanel
         Left = 0
         Top = 0
-        Width = 1276
-        Height = 638
+        Width = 1547
+        Height = 770
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 0
@@ -1584,22 +1584,17 @@ object DefectReinspectFrm: TDefectReinspectFrm
         object PanelHeader: TPanel
           Left = 0
           Top = 0
-          Width = 1276
+          Width = 1547
           Height = 48
           Align = alTop
           BevelWidth = 2
           Color = 10485760
           TabOrder = 4
-          DesignSize = (
-            1276
-            48)
           object DBText1: TDBText
-            Left = 1934
+            Left = 678
             Top = 7
             Width = 114
             Height = 33
-            Alignment = taRightJustify
-            Anchors = [akTop, akRight]
             AutoSize = True
             DataField = 'NO_NOTA'
             DataSource = dsQMaster
@@ -1662,18 +1657,18 @@ object DefectReinspectFrm: TDefectReinspectFrm
         end
         object PanelFooter: TPanel
           Left = 0
-          Top = 584
-          Width = 1276
+          Top = 716
+          Width = 1547
           Height = 54
           Align = alBottom
           BevelWidth = 2
           Color = clSilver
           TabOrder = 2
           DesignSize = (
-            1276
+            1547
             54)
           object BitBtn1: TBitBtn
-            Left = 1983
+            Left = 2254
             Top = 16
             Width = 75
             Height = 25
@@ -1682,7 +1677,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
             Kind = bkClose
           end
           object BitBtn2: TBitBtn
-            Left = 1903
+            Left = 2174
             Top = 16
             Width = 75
             Height = 25
@@ -1742,7 +1737,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
         object PanelTop: TPanel
           Left = 0
           Top = 48
-          Width = 1276
+          Width = 1547
           Height = 144
           Align = alTop
           BevelWidth = 2
@@ -2047,7 +2042,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
         object PanelBanner: TPanel
           Left = 0
           Top = 192
-          Width = 1276
+          Width = 1547
           Height = 41
           Align = alTop
           BevelWidth = 2
@@ -2061,7 +2056,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
             Caption = 'Cari Nota'
           end
           object wwDBNavigator1: TwwDBNavigator
-            Left = 860
+            Left = 1131
             Top = 2
             Width = 414
             Height = 37
@@ -2326,8 +2321,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
         object wwDBGrid3: TwwDBGrid
           Left = 0
           Top = 233
-          Width = 1276
-          Height = 351
+          Width = 1547
+          Height = 483
           ControlType.Strings = (
             'KD_CORAK;CustomEdit;LookCorak;F'
             'SATUAN;CustomEdit;LookSatuan;F'
@@ -2430,8 +2425,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
         object wwDBGrid6: TwwDBGrid
           Left = 0
           Top = 233
-          Width = 1276
-          Height = 351
+          Width = 1547
+          Height = 483
           ControlType.Strings = (
             'KD_CORAK;CustomEdit;LookCorak;F'
             'SATUAN;CustomEdit;LookSatuan;F'
@@ -2519,8 +2514,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
         object wwDBGrid7: TwwDBGrid
           Left = 0
           Top = 233
-          Width = 1276
-          Height = 351
+          Width = 1547
+          Height = 483
           ControlType.Strings = (
             'KD_CORAK;CustomEdit;LookCorak;F'
             'SATUAN;CustomEdit;LookSatuan;F'
@@ -2610,8 +2605,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
         object wwDBGrid1: TwwDBGrid
           Left = 0
           Top = 233
-          Width = 1276
-          Height = 351
+          Width = 1547
+          Height = 483
           ControlType.Strings = (
             'KD_CORAK;CustomEdit;LookCorak;F'
             'SATUAN;CustomEdit;LookSatuan;F'
@@ -2724,7 +2719,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
       object LabelBanner: TLabel
         Left = 0
         Top = 52
-        Width = 1276
+        Width = 1547
         Height = 16
         Align = alTop
         Color = clSkyBlue
@@ -2739,7 +2734,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
       object Panel3: TPanel
         Left = 0
         Top = 0
-        Width = 1276
+        Width = 1547
         Height = 52
         Align = alTop
         BevelInner = bvLowered
@@ -2957,8 +2952,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
       object wwDBGrid4: TwwDBGrid
         Left = 0
         Top = 68
-        Width = 1276
-        Height = 570
+        Width = 1547
+        Height = 702
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -2974,7 +2969,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
         Selected.Strings = (
           'NO_NOTA'#9'15'#9'NO_NOTA'#9'F'
           'ISPOST'#9'1'#9'ISPOST'#9'F'
-          'TGL'#9'15'#9'TGL'#9'F'
+          'TGL'#9'15'#9'PROSES'#9'F'#9'TANGGAL'
+          'TGL_TERIMA'#9'15'#9'TERIMA'#9'F'#9'TANGGAL'
           'NIK'#9'15'#9'NIK'#9'F'#9'OPERATOR'
           'OPERATOR'#9'25'#9'NAMA'#9'F'#9'OPERATOR'
           'ITEM'#9'25'#9'ITEM'#9'F'
@@ -3084,8 +3080,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
       object wwDBGrid1xxxxx: TwwDBGrid
         Left = 0
         Top = 68
-        Width = 1276
-        Height = 570
+        Width = 1547
+        Height = 702
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -3101,7 +3097,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
         Selected.Strings = (
           'NO_NOTA'#9'15'#9'NO_NOTA'#9'F'
           'ISPOST'#9'1'#9'ISPOST'#9'F'
-          'TGL'#9'15'#9'TGL'#9'F'
+          'TGL'#9'15'#9'PROSES'#9'F'#9'TANGGAL'
+          'TGL_TERIMA'#9'15'#9'TERIMA'#9'F'#9'TANGGAL'
           'NIK'#9'15'#9'NIK'#9'F'#9'OPERATOR'
           'OPERATOR'#9'25'#9'NAMA'#9'F'#9'OPERATOR'
           'NO_ORDER'#9'15'#9'ORDER'#9'F'#9'NOMOR'
@@ -3217,7 +3214,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
       object Label12: TLabel
         Left = 0
         Top = 52
-        Width = 1276
+        Width = 1547
         Height = 16
         Align = alTop
         Color = clSkyBlue
@@ -3232,8 +3229,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
       object wwDBGrid5: TwwDBGrid
         Left = 0
         Top = 68
-        Width = 1276
-        Height = 570
+        Width = 1547
+        Height = 702
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -3298,8 +3295,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
       object wwDBGrid2: TwwDBGrid
         Left = 0
         Top = 68
-        Width = 1276
-        Height = 570
+        Width = 1547
+        Height = 702
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -3363,7 +3360,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 1276
+        Width = 1547
         Height = 52
         Align = alTop
         BevelInner = bvLowered
@@ -3599,7 +3596,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
       object Label17: TLabel
         Left = 0
         Top = 52
-        Width = 1276
+        Width = 1547
         Height = 16
         Align = alTop
         Color = clSkyBlue
@@ -3614,7 +3611,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
       object Panel5: TPanel
         Left = 0
         Top = 0
-        Width = 1276
+        Width = 1547
         Height = 52
         Align = alTop
         BevelInner = bvLowered
@@ -3819,8 +3816,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
       object wwDBGrid8: TwwDBGrid
         Left = 0
         Top = 68
-        Width = 1276
-        Height = 570
+        Width = 1547
+        Height = 702
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -3883,7 +3880,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
       object Label19: TLabel
         Left = 0
         Top = 52
-        Width = 1276
+        Width = 1547
         Height = 16
         Align = alTop
         Color = clSkyBlue
@@ -3898,13 +3895,13 @@ object DefectReinspectFrm: TDefectReinspectFrm
       object WebBrowser1: TWebBrowser
         Left = 0
         Top = 68
-        Width = 1276
-        Height = 570
+        Width = 1547
+        Height = 702
         Align = alClient
         TabOrder = 5
         OnDocumentComplete = WebBrowser1DocumentComplete
         ControlData = {
-          4C000000E1830000E93A00000000000000000000000000000000000000000000
+          4C000000E39F00008E4800000000000000000000000000000000000000000000
           000000004C000000000000000000000001000000E0D057007335CF11AE690800
           2B2E126208000000000000004C0000000114020000000000C000000000000046
           8000000000000000000000000000000000000000000000000000000000000000
@@ -3913,7 +3910,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
       object Panel7: TPanel
         Left = 0
         Top = 0
-        Width = 1276
+        Width = 1547
         Height = 52
         Align = alTop
         BevelInner = bvLowered
@@ -4186,8 +4183,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
       object wwDBGrid9: TwwDBGrid
         Left = 0
         Top = 68
-        Width = 1276
-        Height = 570
+        Width = 1547
+        Height = 702
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -4291,8 +4288,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
       object wwDBGrid10: TwwDBGrid
         Left = 0
         Top = 68
-        Width = 1276
-        Height = 570
+        Width = 1547
+        Height = 702
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -4396,8 +4393,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
       object wwDBGrid12: TwwDBGrid
         Left = 0
         Top = 68
-        Width = 1276
-        Height = 570
+        Width = 1547
+        Height = 702
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -4500,8 +4497,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
       object wwDBGrid11: TwwDBGrid
         Left = 0
         Top = 68
-        Width = 1276
-        Height = 570
+        Width = 1547
+        Height = 702
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -5266,8 +5263,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
       0000000007000000444F435F49534F01000000000008000000444F435F49534F
       3201000000000008000000444F435F49534F33010000000000}
     Session = DMFrm.OS
-    Left = 274
-    Top = 41
+    Left = 1266
+    Top = 169
     object QTransaksiNAMA_TRANSAKSI: TStringField
       FieldName = 'NAMA_TRANSAKSI'
       Size = 50
@@ -5386,8 +5383,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
     MaxWidth = 0
     MaxHeight = 209
     CharCase = ecNormal
-    Left = 217
-    Top = 40
+    Left = 1049
+    Top = 168
   end
   object QBrowse: TOracleDataSet
     SQL.Strings = (
@@ -5755,6 +5752,9 @@ object DefectReinspectFrm: TDefectReinspectFrm
     end
     object QBrowseM_RUSAK2: TFloatField
       FieldName = 'M_RUSAK2'
+    end
+    object QBrowseTGL_TERIMA: TDateTimeField
+      FieldName = 'TGL_TERIMA'
     end
   end
   object dsQBrowse: TwwDataSource
@@ -8998,8 +8998,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
     CountAllRecords = True
     Session = DMFrm.OS
     AfterScroll = QBrowse_rekap4AfterScroll
-    Left = 484
-    Top = 145
+    Left = 1244
+    Top = 505
     object QBrowse_rekap4LOOM: TStringField
       FieldName = 'LOOM'
       Size = 50
@@ -9362,15 +9362,19 @@ object DefectReinspectFrm: TDefectReinspectFrm
     end
     object QBrowse_rekap4M_BELANG2: TFloatField
       FieldName = 'M_BELANG2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_rekap4P_M_BELANG2: TFloatField
       FieldName = 'P_M_BELANG2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_rekap4M_RUSAK2: TFloatField
       FieldName = 'M_RUSAK2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_rekap4P_M_RUSAK2: TFloatField
       FieldName = 'P_M_RUSAK2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
   end
   object dsQBrowse_rekap4: TwwDataSource
@@ -9523,8 +9527,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
-    Left = 484
-    Top = 209
+    Left = 1244
+    Top = 569
     object QBrowse_rekap4_totHSL_PROD: TFloatField
       FieldName = 'HSL_PROD'
     end
@@ -9870,8 +9874,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
     CountAllRecords = True
     Session = DMFrm.OS
     AfterScroll = QBrowse_Loom3AfterScroll
-    Left = 660
-    Top = 161
+    Left = 1076
+    Top = 361
     object QBrowse_Loom3LOOM: TStringField
       FieldName = 'LOOM'
       Size = 50
@@ -10234,15 +10238,19 @@ object DefectReinspectFrm: TDefectReinspectFrm
     end
     object QBrowse_Loom3M_BELANG2: TFloatField
       FieldName = 'M_BELANG2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_Loom3P_M_BELANG2: TFloatField
       FieldName = 'P_M_BELANG2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_Loom3M_RUSAK2: TFloatField
       FieldName = 'M_RUSAK2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_Loom3P_M_RUSAK2: TFloatField
       FieldName = 'P_M_RUSAK2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
   end
   object QBrowse_Loom3_tot: TOracleDataSet
@@ -10390,8 +10398,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
-    Left = 660
-    Top = 225
+    Left = 1076
+    Top = 425
     object QBrowse_Loom3_totHSL_PROD: TFloatField
       FieldName = 'HSL_PROD'
     end
@@ -10837,8 +10845,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
-    Left = 668
-    Top = 369
+    Left = 1084
+    Top = 569
     object QBrowse_Loom1_totHSL_PROD: TFloatField
       FieldName = 'HSL_PROD'
     end
@@ -11167,8 +11175,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
     CountAllRecords = True
     Session = DMFrm.OS
     AfterScroll = QBrowse_Loom1AfterScroll
-    Left = 668
-    Top = 305
+    Left = 1084
+    Top = 505
     object QBrowse_Loom1LOOM: TStringField
       FieldName = 'LOOM'
       Size = 50
@@ -11527,15 +11535,19 @@ object DefectReinspectFrm: TDefectReinspectFrm
     end
     object QBrowse_Loom1M_BELANG2: TFloatField
       FieldName = 'M_BELANG2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_Loom1P_M_BELANG2: TFloatField
       FieldName = 'P_M_BELANG2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_Loom1M_RUSAK2: TFloatField
       FieldName = 'M_RUSAK2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_Loom1P_M_RUSAK2: TFloatField
       FieldName = 'P_M_RUSAK2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
   end
   object dsQBrowse_Loom2: TwwDataSource
@@ -11613,8 +11625,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
     CountAllRecords = True
     Session = DMFrm.OS
     AfterScroll = QBrowse_Loom2AfterScroll
-    Left = 492
-    Top = 305
+    Left = 1212
+    Top = 369
     object QBrowse_Loom2LOOM: TStringField
       FieldName = 'LOOM'
       Size = 50
@@ -11973,15 +11985,19 @@ object DefectReinspectFrm: TDefectReinspectFrm
     end
     object QBrowse_Loom2M_BELANG2: TFloatField
       FieldName = 'M_BELANG2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_Loom2P_M_BELANG2: TFloatField
       FieldName = 'P_M_BELANG2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_Loom2M_RUSAK2: TFloatField
       FieldName = 'M_RUSAK2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_Loom2P_M_RUSAK2: TFloatField
       FieldName = 'P_M_RUSAK2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
   end
   object QBrowse_Loom2_tot: TOracleDataSet
@@ -12129,8 +12145,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
-    Left = 492
-    Top = 369
+    Left = 1212
+    Top = 433
     object QBrowse_Loom2_totHSL_PROD: TFloatField
       FieldName = 'HSL_PROD'
     end

@@ -1937,9 +1937,9 @@ begin
                 wwDBGrid3.ColumnByName('TDKDICABUT').FooterValue := FormatFloat('#.#,#', QTotalRekapTDKDICABUT.AsFloat);
                 wwDBGrid3.ColumnByName('QTY5').FooterValue := FormatFloat('#.#,#', QTotalRekapTOTAL.AsFloat);
 
-                wwDBGrid3.ColumnByName('P_BK').FooterValue := FormatFloat('#.#,#', QTotalRekapBK.AsFloat / QTotalRekapTOTAL.AsFloat * 100);
-                wwDBGrid3.ColumnByName('P_BGRADE').FooterValue := FormatFloat('#.#,#', QTotalRekapBGRADE.AsFloat / QTotalRekapTOTAL.AsFloat * 100);
-                wwDBGrid3.ColumnByName('P_BS').FooterValue := FormatFloat('#.#,#', QTotalRekapBS.AsFloat / QTotalRekapTOTAL.AsFloat * 100);
+                wwDBGrid3.ColumnByName('P_BK').FooterValue := FormatFloat('#.#,#', QTotalRekapBK.AsFloat / QTotalRekapDICABUT.AsFloat * 100);
+                wwDBGrid3.ColumnByName('P_BGRADE').FooterValue := FormatFloat('#.#,#', QTotalRekapBGRADE.AsFloat / QTotalRekapDICABUT.AsFloat * 100);
+                wwDBGrid3.ColumnByName('P_BS').FooterValue := FormatFloat('#.#,#', QTotalRekapBS.AsFloat / QTotalRekapDICABUT.AsFloat * 100);
 
                 wwDBGrid3.ColumnByName('FLEX_PRINT').FooterValue := FormatFloat('#.#,#', QTotalRekapFLEX_PRINT.AsFloat);
                 wwDBGrid3.ColumnByName('FLEX_STEAM').FooterValue := FormatFloat('#.#,#', QTotalRekapFLEX_STEAM.AsFloat);
@@ -2000,9 +2000,9 @@ begin
                 wwDBGrid10.ColumnByName('DICABUT').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiDICABUT.AsFloat);
                 wwDBGrid10.ColumnByName('TDKDICABUT').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiTDKDICABUT.AsFloat);
 
-                wwDBGrid10.ColumnByName('P_BK').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiBK.AsFloat / QTotalRekapKodiTOTAL.AsFloat * 100);
-                wwDBGrid10.ColumnByName('P_BGRADE').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiBGRADE.AsFloat / QTotalRekapKodiTOTAL.AsFloat * 100);
-                wwDBGrid10.ColumnByName('P_BS').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiBS.AsFloat / QTotalRekapKodiTOTAL.AsFloat * 100);
+                wwDBGrid10.ColumnByName('P_BK').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiBK.AsFloat / QTotalRekapKodiDICABUT.AsFloat * 100);
+                wwDBGrid10.ColumnByName('P_BGRADE').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiBGRADE.AsFloat / QTotalRekapKodiDICABUT.AsFloat * 100);
+                wwDBGrid10.ColumnByName('P_BS').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiBS.AsFloat / QTotalRekapKodiDICABUT.AsFloat * 100);
 
                 wwDBGrid10.ColumnByName('FLEX_PRINT').FooterValue := FormatFloat('#.#,#', StrToInt(QTotalRekapKodiFLEX_PRINT.AsString));
                 wwDBGrid10.ColumnByName('FLEX_STEAM').FooterValue := FormatFloat('#.#,#', StrToInt(QTotalRekapKodiFLEX_STEAM.AsString));
@@ -2063,28 +2063,28 @@ begin
                 wwDBGrid4.ColumnByName('TDKDICABUT').FooterValue := FormatFloat('#.#,#', QTotalRekPerTDKDICABUT.AsFloat);
                 wwDBGrid4.ColumnByName('QTY5').FooterValue := FormatFloat('#.#,#', QTotalRekPerTOTAL.AsFloat);
 
-                wwDBGrid4.ColumnByName('P_BK').FooterValue := FormatFloat('#.#,#', QTotalRekPerBK.AsFloat / QTotalRekPerTOTAL.AsFloat * 100);
-                wwDBGrid4.ColumnByName('P_BGRADE').FooterValue := FormatFloat('#.#,#', QTotalRekPerBGRADE.AsFloat / QTotalRekPerTOTAL.AsFloat * 100);
-                wwDBGrid4.ColumnByName('P_BS').FooterValue := FormatFloat('#.#,#', QTotalRekPerBS.AsFloat / QTotalRekPerTOTAL.AsFloat * 100);
+                wwDBGrid4.ColumnByName('P_BK').FooterValue := FormatFloat('#.#,#', QTotalRekPerBK.AsFloat / QTotalRekPerDICABUT.AsFloat * 100);
+                wwDBGrid4.ColumnByName('P_BGRADE').FooterValue := FormatFloat('#.#,#', QTotalRekPerBGRADE.AsFloat / QTotalRekPerDICABUT.AsFloat * 100);
+                wwDBGrid4.ColumnByName('P_BS').FooterValue := FormatFloat('#.#,#', QTotalRekPerBS.AsFloat / QTotalRekPerDICABUT.AsFloat * 100);
 
                 // Persen
-                wwDBGrid4.ColumnByName('P_FLEX_PRINT').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX_PRINT.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_FLEX_STEAM').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX_STEAM.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_FLEX_STAMPING').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX_STAMPING.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_FLEX_LUNTUR').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX_LUNTUR.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_WTS').FooterValue:=FormatFloat('#.#,#',QTotalRekPerWTS.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_M_SAMAR').FooterValue:=FormatFloat('#.#,#',QTotalRekPerM_SAMAR.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_M_RUSAK').FooterValue:=FormatFloat('#.#,#',QTotalRekPerM_RUSAK.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_M_BELANG').FooterValue:=FormatFloat('#.#,#',QTotalRekPerM_BELANG.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_O_SETTING').FooterValue:=FormatFloat('#.#,#',QTotalRekPerO_SETTING.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_N_OLI').FooterValue:=FormatFloat('#.#,#',QTotalRekPerN_OLI.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_SOBEK').FooterValue:=FormatFloat('#.#,#',QTotalRekPerSOBEK.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_SOBEK_MT').FooterValue:=FormatFloat('#.#,#',QTotalRekPerSOBEK_MT.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_TGS').FooterValue:=FormatFloat('#.#,#',QTotalRekPerTGS.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_AFFAL').FooterValue:=FormatFloat('#.#,#',QTotalRekPerAFFAL.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_FLEX_PRINT').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX_PRINT.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_FLEX_STEAM').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX_STEAM.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_FLEX_STAMPING').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX_STAMPING.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_FLEX_LUNTUR').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX_LUNTUR.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_WTS').FooterValue:=FormatFloat('#.#,#',QTotalRekPerWTS.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_M_SAMAR').FooterValue:=FormatFloat('#.#,#',QTotalRekPerM_SAMAR.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_M_RUSAK').FooterValue:=FormatFloat('#.#,#',QTotalRekPerM_RUSAK.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_M_BELANG').FooterValue:=FormatFloat('#.#,#',QTotalRekPerM_BELANG.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_O_SETTING').FooterValue:=FormatFloat('#.#,#',QTotalRekPerO_SETTING.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_N_OLI').FooterValue:=FormatFloat('#.#,#',QTotalRekPerN_OLI.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_SOBEK').FooterValue:=FormatFloat('#.#,#',QTotalRekPerSOBEK.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_SOBEK_MT').FooterValue:=FormatFloat('#.#,#',QTotalRekPerSOBEK_MT.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_TGS').FooterValue:=FormatFloat('#.#,#',QTotalRekPerTGS.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_AFFAL').FooterValue:=FormatFloat('#.#,#',QTotalRekPerAFFAL.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
                 wwDBGrid4.ColumnByName('AFFAL').FooterValue := FormatFloat('#.#,#', QTotalRekPerAFFAL.AsFloat);
 
-                wwDBGrid4.ColumnByName('P_FLEX').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_FLEX').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
 
             end;
         3: begin
@@ -2129,28 +2129,28 @@ begin
                     wwDBGrid5.ColumnByName('DICABUT').FooterValue := FormatFloat('#.#,#', QTotalRekKodDICABUT.AsFloat);
                     wwDBGrid5.ColumnByName('TDKDICABUT').FooterValue := FormatFloat('#.#,#', QTotalRekKodTDKDICABUT.AsFloat);
 
-                    wwDBGrid5.ColumnByName('P_BK').FooterValue := FormatFloat('#.#,#', QTotalRekKodBK.AsFloat / QTotalRekKodTOTAL.AsFloat * 100);
-                    wwDBGrid5.ColumnByName('P_BGRADE').FooterValue := FormatFloat('#.#,#', QTotalRekKodBGRADE.AsFloat / QTotalRekKodTOTAL.AsFloat * 100);
-                    wwDBGrid5.ColumnByName('P_BS').FooterValue := FormatFloat('#.#,#', QTotalRekKodBS.AsFloat / QTotalRekKodTOTAL.AsFloat * 100);
+                    wwDBGrid5.ColumnByName('P_BK').FooterValue := FormatFloat('#.#,#', QTotalRekKodBK.AsFloat / QTotalRekKodDICABUT.AsFloat * 100);
+                    wwDBGrid5.ColumnByName('P_BGRADE').FooterValue := FormatFloat('#.#,#', QTotalRekKodBGRADE.AsFloat / QTotalRekKodDICABUT.AsFloat * 100);
+                    wwDBGrid5.ColumnByName('P_BS').FooterValue := FormatFloat('#.#,#', QTotalRekKodBS.AsFloat / QTotalRekKodDICABUT.AsFloat * 100);
 
                     // Persen
-                    wwDBGrid5.ColumnByName('P_FLEX_PRINT').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodFLEX_PRINT.AsString)/QTotalRekKodTOTAL.AsFloat*100);
-                    wwDBGrid5.ColumnByName('P_FLEX_STEAM').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodFLEX_STEAM.AsString)/QTotalRekKodTOTAL.AsFloat*100);
-                    wwDBGrid5.ColumnByName('P_FLEX_STAMPING').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodFLEX_STAMPING.AsString)/QTotalRekKodTOTAL.AsFloat*100);
-                    wwDBGrid5.ColumnByName('P_FLEX_LUNTUR').FooterValue:=FormatFloat('#.#,#',QTotalRekKodFLEX_LUNTUR.AsFloat/QTotalRekKodTOTAL.AsFloat*100);
-                    wwDBGrid5.ColumnByName('P_WTS').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodWTS.AsString)/QTotalRekKodTOTAL.AsFloat*100);
-                    wwDBGrid5.ColumnByName('P_M_SAMAR').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodM_SAMAR.AsString)/QTotalRekKodTOTAL.AsFloat*100);
-                    wwDBGrid5.ColumnByName('P_M_RUSAK').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodM_RUSAK.AsString)/QTotalRekKodTOTAL.AsFloat*100);
-                    wwDBGrid5.ColumnByName('P_M_BELANG').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodM_BELANG.AsString)/QTotalRekKodTOTAL.AsFloat*100);
-                    wwDBGrid5.ColumnByName('P_O_SETTING').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodO_SETTING.AsString)/QTotalRekKodTOTAL.AsFloat*100);
-                    wwDBGrid5.ColumnByName('P_N_OLI').FooterValue:=FormatFloat('#.#,#',QTotalRekKodN_OLI.AsFloat/QTotalRekKodTOTAL.AsFloat*100);
-                    wwDBGrid5.ColumnByName('P_SOBEK').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodSOBEK.AsString)/QTotalRekKodTOTAL.AsFloat*100);
-                    wwDBGrid5.ColumnByName('P_SOBEK_MT').FooterValue:=FormatFloat('#.#,#',QTotalRekKodSOBEK_MT.AsFloat/QTotalRekKodTOTAL.AsFloat*100);
-                    wwDBGrid5.ColumnByName('P_TGS').FooterValue:=FormatFloat('#.#,#',QTotalRekKodTGS.AsFloat/QTotalRekKodTOTAL.AsFloat*100);
-                    wwDBGrid5.ColumnByName('P_AFFAL').FooterValue:=FormatFloat('#.#,#',QTotalRekKodAFFAL.AsFloat/QTotalRekKodTOTAL.AsFloat*100);
+                    wwDBGrid5.ColumnByName('P_FLEX_PRINT').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodFLEX_PRINT.AsString)/QTotalRekKodDICABUT.AsFloat*100);
+                    wwDBGrid5.ColumnByName('P_FLEX_STEAM').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodFLEX_STEAM.AsString)/QTotalRekKodDICABUT.AsFloat*100);
+                    wwDBGrid5.ColumnByName('P_FLEX_STAMPING').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodFLEX_STAMPING.AsString)/QTotalRekKodDICABUT.AsFloat*100);
+                    wwDBGrid5.ColumnByName('P_FLEX_LUNTUR').FooterValue:=FormatFloat('#.#,#',QTotalRekKodFLEX_LUNTUR.AsFloat/QTotalRekKodDICABUT.AsFloat*100);
+                    wwDBGrid5.ColumnByName('P_WTS').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodWTS.AsString)/QTotalRekKodDICABUT.AsFloat*100);
+                    wwDBGrid5.ColumnByName('P_M_SAMAR').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodM_SAMAR.AsString)/QTotalRekKodDICABUT.AsFloat*100);
+                    wwDBGrid5.ColumnByName('P_M_RUSAK').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodM_RUSAK.AsString)/QTotalRekKodDICABUT.AsFloat*100);
+                    wwDBGrid5.ColumnByName('P_M_BELANG').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodM_BELANG.AsString)/QTotalRekKodDICABUT.AsFloat*100);
+                    wwDBGrid5.ColumnByName('P_O_SETTING').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodO_SETTING.AsString)/QTotalRekKodDICABUT.AsFloat*100);
+                    wwDBGrid5.ColumnByName('P_N_OLI').FooterValue:=FormatFloat('#.#,#',QTotalRekKodN_OLI.AsFloat/QTotalRekKodDICABUT.AsFloat*100);
+                    wwDBGrid5.ColumnByName('P_SOBEK').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodSOBEK.AsString)/QTotalRekKodDICABUT.AsFloat*100);
+                    wwDBGrid5.ColumnByName('P_SOBEK_MT').FooterValue:=FormatFloat('#.#,#',QTotalRekKodSOBEK_MT.AsFloat/QTotalRekKodDICABUT.AsFloat*100);
+                    wwDBGrid5.ColumnByName('P_TGS').FooterValue:=FormatFloat('#.#,#',QTotalRekKodTGS.AsFloat/QTotalRekKodDICABUT.AsFloat*100);
+                    wwDBGrid5.ColumnByName('P_AFFAL').FooterValue:=FormatFloat('#.#,#',QTotalRekKodAFFAL.AsFloat/QTotalRekKodDICABUT.AsFloat*100);
                     wwDBGrid5.ColumnByName('AFFAL').FooterValue := FormatFloat('#.#,#', QTotalRekKodAFFAL.AsFloat);
 
-                    wwDBGrid5.ColumnByName('P_FLEX').FooterValue:=FormatFloat('#.#,#',QTotalRekKodFLEX.AsFloat/QTotalRekKodTOTAL.AsFloat*100);
+                    wwDBGrid5.ColumnByName('P_FLEX').FooterValue:=FormatFloat('#.#,#',QTotalRekKodFLEX.AsFloat/QTotalRekKodDICABUT.AsFloat*100);
             end;
         else
             ShowMessage('Yang Anda Telusuri tidak ada');
@@ -2202,9 +2202,9 @@ begin
                 wwDBGrid3.ColumnByName('TDKDICABUT').FooterValue := FormatFloat('#.#,#', QTotalRekapTDKDICABUT.AsFloat);
                 wwDBGrid3.ColumnByName('QTY5').FooterValue := FormatFloat('#.#,#', QTotalRekapTOTAL.AsFloat);
 
-                wwDBGrid3.ColumnByName('P_BK').FooterValue := FormatFloat('#.#,#', QTotalRekapBK.AsFloat / QTotalRekapTOTAL.AsFloat * 100);
-                wwDBGrid3.ColumnByName('P_BGRADE').FooterValue := FormatFloat('#.#,#', QTotalRekapBGRADE.AsFloat / QTotalRekapTOTAL.AsFloat * 100);
-                wwDBGrid3.ColumnByName('P_BS').FooterValue := FormatFloat('#.#,#', QTotalRekapBS.AsFloat / QTotalRekapTOTAL.AsFloat * 100);
+                wwDBGrid3.ColumnByName('P_BK').FooterValue := FormatFloat('#.#,#', QTotalRekapBK.AsFloat / QTotalRekapDICABUT.AsFloat * 100);
+                wwDBGrid3.ColumnByName('P_BGRADE').FooterValue := FormatFloat('#.#,#', QTotalRekapBGRADE.AsFloat / QTotalRekapDICABUT.AsFloat * 100);
+                wwDBGrid3.ColumnByName('P_BS').FooterValue := FormatFloat('#.#,#', QTotalRekapBS.AsFloat / QTotalRekapDICABUT.AsFloat * 100);
 
                 wwDBGrid3.ColumnByName('FLEX_PRINT').FooterValue := FormatFloat('#.#,#', QTotalRekapFLEX_PRINT.AsFloat);
                 wwDBGrid3.ColumnByName('FLEX_STEAM').FooterValue := FormatFloat('#.#,#', QTotalRekapFLEX_STEAM.AsFloat);
@@ -2265,9 +2265,9 @@ begin
                 wwDBGrid10.ColumnByName('DICABUT').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiDICABUT.AsFloat);
                 wwDBGrid10.ColumnByName('TDKDICABUT').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiTDKDICABUT.AsFloat);
 
-                wwDBGrid10.ColumnByName('P_BK').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiBK.AsFloat / QTotalRekapKodiTOTAL.AsFloat * 100);
-                wwDBGrid10.ColumnByName('P_BGRADE').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiBGRADE.AsFloat / QTotalRekapKodiTOTAL.AsFloat * 100);
-                wwDBGrid10.ColumnByName('P_BS').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiBS.AsFloat / QTotalRekapKodiTOTAL.AsFloat * 100);
+                wwDBGrid10.ColumnByName('P_BK').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiBK.AsFloat / QTotalRekapKodiDICABUT.AsFloat * 100);
+                wwDBGrid10.ColumnByName('P_BGRADE').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiBGRADE.AsFloat / QTotalRekapKodiDICABUT.AsFloat * 100);
+                wwDBGrid10.ColumnByName('P_BS').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiBS.AsFloat / QTotalRekapKodiDICABUT.AsFloat * 100);
 
                 wwDBGrid10.ColumnByName('FLEX_PRINT').FooterValue := FormatFloat('#.#,#', StrToInt(QTotalRekapKodiFLEX_PRINT.AsString));
                 wwDBGrid10.ColumnByName('FLEX_STEAM').FooterValue := FormatFloat('#.#,#', StrToInt(QTotalRekapKodiFLEX_STEAM.AsString));
@@ -2328,28 +2328,28 @@ begin
                 wwDBGrid4.ColumnByName('TDKDICABUT').FooterValue := FormatFloat('#.#,#', QTotalRekPerTDKDICABUT.AsFloat);
                 wwDBGrid4.ColumnByName('QTY5').FooterValue := FormatFloat('#.#,#', QTotalRekPerTOTAL.AsFloat);
 
-                wwDBGrid4.ColumnByName('P_BK').FooterValue := FormatFloat('#.#,#', QTotalRekPerBK.AsFloat / QTotalRekPerTOTAL.AsFloat * 100);
-                wwDBGrid4.ColumnByName('P_BGRADE').FooterValue := FormatFloat('#.#,#', QTotalRekPerBGRADE.AsFloat / QTotalRekPerTOTAL.AsFloat * 100);
-                wwDBGrid4.ColumnByName('P_BS').FooterValue := FormatFloat('#.#,#', QTotalRekPerBS.AsFloat / QTotalRekPerTOTAL.AsFloat * 100);
+                wwDBGrid4.ColumnByName('P_BK').FooterValue := FormatFloat('#.#,#', QTotalRekPerBK.AsFloat / QTotalRekPerDICABUT.AsFloat * 100);
+                wwDBGrid4.ColumnByName('P_BGRADE').FooterValue := FormatFloat('#.#,#', QTotalRekPerBGRADE.AsFloat / QTotalRekPerDICABUT.AsFloat * 100);
+                wwDBGrid4.ColumnByName('P_BS').FooterValue := FormatFloat('#.#,#', QTotalRekPerBS.AsFloat / QTotalRekPerDICABUT.AsFloat * 100);
 
                 // Persen
-                wwDBGrid4.ColumnByName('P_FLEX_PRINT').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX_PRINT.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_FLEX_STEAM').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX_STEAM.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_FLEX_STAMPING').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX_STAMPING.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_FLEX_LUNTUR').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX_LUNTUR.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_WTS').FooterValue:=FormatFloat('#.#,#',QTotalRekPerWTS.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_M_SAMAR').FooterValue:=FormatFloat('#.#,#',QTotalRekPerM_SAMAR.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_M_RUSAK').FooterValue:=FormatFloat('#.#,#',QTotalRekPerM_RUSAK.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_M_BELANG').FooterValue:=FormatFloat('#.#,#',QTotalRekPerM_BELANG.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_O_SETTING').FooterValue:=FormatFloat('#.#,#',QTotalRekPerO_SETTING.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_N_OLI').FooterValue:=FormatFloat('#.#,#',QTotalRekPerN_OLI.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_SOBEK').FooterValue:=FormatFloat('#.#,#',QTotalRekPerSOBEK.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_SOBEK_MT').FooterValue:=FormatFloat('#.#,#',QTotalRekPerSOBEK_MT.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_TGS').FooterValue:=FormatFloat('#.#,#',QTotalRekPerTGS.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
-                wwDBGrid4.ColumnByName('P_AFFAL').FooterValue:=FormatFloat('#.#,#',QTotalRekPerAFFAL.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_FLEX_PRINT').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX_PRINT.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_FLEX_STEAM').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX_STEAM.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_FLEX_STAMPING').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX_STAMPING.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_FLEX_LUNTUR').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX_LUNTUR.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_WTS').FooterValue:=FormatFloat('#.#,#',QTotalRekPerWTS.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_M_SAMAR').FooterValue:=FormatFloat('#.#,#',QTotalRekPerM_SAMAR.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_M_RUSAK').FooterValue:=FormatFloat('#.#,#',QTotalRekPerM_RUSAK.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_M_BELANG').FooterValue:=FormatFloat('#.#,#',QTotalRekPerM_BELANG.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_O_SETTING').FooterValue:=FormatFloat('#.#,#',QTotalRekPerO_SETTING.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_N_OLI').FooterValue:=FormatFloat('#.#,#',QTotalRekPerN_OLI.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_SOBEK').FooterValue:=FormatFloat('#.#,#',QTotalRekPerSOBEK.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_SOBEK_MT').FooterValue:=FormatFloat('#.#,#',QTotalRekPerSOBEK_MT.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_TGS').FooterValue:=FormatFloat('#.#,#',QTotalRekPerTGS.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_AFFAL').FooterValue:=FormatFloat('#.#,#',QTotalRekPerAFFAL.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
                 wwDBGrid4.ColumnByName('AFFAL').FooterValue := FormatFloat('#.#,#', QTotalRekPerAFFAL.AsFloat);
 
-                wwDBGrid4.ColumnByName('P_FLEX').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX.AsFloat/QTotalRekPerTOTAL.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_FLEX').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
             end;
         3: begin
             wwDBGrid5.BringToFront;
@@ -2393,28 +2393,28 @@ begin
                 wwDBGrid5.ColumnByName('DICABUT').FooterValue := FormatFloat('#.#,#', QTotalRekKodDICABUT.AsFloat);
                 wwDBGrid5.ColumnByName('TDKDICABUT').FooterValue := FormatFloat('#.#,#', QTotalRekKodTDKDICABUT.AsFloat);
 
-                wwDBGrid5.ColumnByName('P_BK').FooterValue := FormatFloat('#.#,#', QTotalRekKodBK.AsFloat / QTotalRekKodTOTAL.AsFloat * 100);
-                wwDBGrid5.ColumnByName('P_BGRADE').FooterValue := FormatFloat('#.#,#', QTotalRekKodBGRADE.AsFloat / QTotalRekKodTOTAL.AsFloat * 100);
-                wwDBGrid5.ColumnByName('P_BS').FooterValue := FormatFloat('#.#,#', QTotalRekKodBS.AsFloat / QTotalRekKodTOTAL.AsFloat * 100);
+                wwDBGrid5.ColumnByName('P_BK').FooterValue := FormatFloat('#.#,#', QTotalRekKodBK.AsFloat / QTotalRekKodDICABUT.AsFloat * 100);
+                wwDBGrid5.ColumnByName('P_BGRADE').FooterValue := FormatFloat('#.#,#', QTotalRekKodBGRADE.AsFloat / QTotalRekKodDICABUT.AsFloat * 100);
+                wwDBGrid5.ColumnByName('P_BS').FooterValue := FormatFloat('#.#,#', QTotalRekKodBS.AsFloat / QTotalRekKodDICABUT.AsFloat * 100);
 
                 // Persen
-                wwDBGrid5.ColumnByName('P_FLEX_PRINT').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodFLEX_PRINT.AsString)/QTotalRekKodTOTAL.AsFloat*100);
-                wwDBGrid5.ColumnByName('P_FLEX_STEAM').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodFLEX_STEAM.AsString)/QTotalRekKodTOTAL.AsFloat*100);
-                wwDBGrid5.ColumnByName('P_FLEX_STAMPING').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodFLEX_STAMPING.AsString)/QTotalRekKodTOTAL.AsFloat*100);
-                wwDBGrid5.ColumnByName('P_FLEX_LUNTUR').FooterValue:=FormatFloat('#.#,#',QTotalRekKodFLEX_LUNTUR.AsFloat/QTotalRekKodTOTAL.AsFloat*100);
-                wwDBGrid5.ColumnByName('P_WTS').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodWTS.AsString)/QTotalRekKodTOTAL.AsFloat*100);
-                wwDBGrid5.ColumnByName('P_M_SAMAR').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodM_SAMAR.AsString)/QTotalRekKodTOTAL.AsFloat*100);
-                wwDBGrid5.ColumnByName('P_M_RUSAK').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodM_RUSAK.AsString)/QTotalRekKodTOTAL.AsFloat*100);
-                wwDBGrid5.ColumnByName('P_M_BELANG').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodM_BELANG.AsString)/QTotalRekKodTOTAL.AsFloat*100);
-                wwDBGrid5.ColumnByName('P_O_SETTING').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodO_SETTING.AsString)/QTotalRekKodTOTAL.AsFloat*100);
-                wwDBGrid5.ColumnByName('P_N_OLI').FooterValue:=FormatFloat('#.#,#',QTotalRekKodN_OLI.AsFloat/QTotalRekKodTOTAL.AsFloat*100);
-                wwDBGrid5.ColumnByName('P_SOBEK').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodSOBEK.AsString)/QTotalRekKodTOTAL.AsFloat*100);
-                wwDBGrid5.ColumnByName('P_SOBEK_MT').FooterValue:=FormatFloat('#.#,#',QTotalRekKodSOBEK_MT.AsFloat/QTotalRekKodTOTAL.AsFloat*100);
-                wwDBGrid5.ColumnByName('P_TGS').FooterValue:=FormatFloat('#.#,#',QTotalRekKodTGS.AsFloat/QTotalRekKodTOTAL.AsFloat*100);
-                wwDBGrid5.ColumnByName('P_AFFAL').FooterValue:=FormatFloat('#.#,#',QTotalRekKodAFFAL.AsFloat/QTotalRekKodTOTAL.AsFloat*100);
+                wwDBGrid5.ColumnByName('P_FLEX_PRINT').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodFLEX_PRINT.AsString)/QTotalRekKodDICABUT.AsFloat*100);
+                wwDBGrid5.ColumnByName('P_FLEX_STEAM').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodFLEX_STEAM.AsString)/QTotalRekKodDICABUT.AsFloat*100);
+                wwDBGrid5.ColumnByName('P_FLEX_STAMPING').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodFLEX_STAMPING.AsString)/QTotalRekKodDICABUT.AsFloat*100);
+                wwDBGrid5.ColumnByName('P_FLEX_LUNTUR').FooterValue:=FormatFloat('#.#,#',QTotalRekKodFLEX_LUNTUR.AsFloat/QTotalRekKodDICABUT.AsFloat*100);
+                wwDBGrid5.ColumnByName('P_WTS').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodWTS.AsString)/QTotalRekKodDICABUT.AsFloat*100);
+                wwDBGrid5.ColumnByName('P_M_SAMAR').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodM_SAMAR.AsString)/QTotalRekKodDICABUT.AsFloat*100);
+                wwDBGrid5.ColumnByName('P_M_RUSAK').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodM_RUSAK.AsString)/QTotalRekKodDICABUT.AsFloat*100);
+                wwDBGrid5.ColumnByName('P_M_BELANG').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodM_BELANG.AsString)/QTotalRekKodDICABUT.AsFloat*100);
+                wwDBGrid5.ColumnByName('P_O_SETTING').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodO_SETTING.AsString)/QTotalRekKodDICABUT.AsFloat*100);
+                wwDBGrid5.ColumnByName('P_N_OLI').FooterValue:=FormatFloat('#.#,#',QTotalRekKodN_OLI.AsFloat/QTotalRekKodDICABUT.AsFloat*100);
+                wwDBGrid5.ColumnByName('P_SOBEK').FooterValue:=FormatFloat('#.#,#',strtoint(QTotalRekKodSOBEK.AsString)/QTotalRekKodDICABUT.AsFloat*100);
+                wwDBGrid5.ColumnByName('P_SOBEK_MT').FooterValue:=FormatFloat('#.#,#',QTotalRekKodSOBEK_MT.AsFloat/QTotalRekKodDICABUT.AsFloat*100);
+                wwDBGrid5.ColumnByName('P_TGS').FooterValue:=FormatFloat('#.#,#',QTotalRekKodTGS.AsFloat/QTotalRekKodDICABUT.AsFloat*100);
+                wwDBGrid5.ColumnByName('P_AFFAL').FooterValue:=FormatFloat('#.#,#',QTotalRekKodAFFAL.AsFloat/QTotalRekKodDICABUT.AsFloat*100);
                 wwDBGrid5.ColumnByName('AFFAL').FooterValue := FormatFloat('#.#,#', QTotalRekKodAFFAL.AsFloat);
 
-                wwDBGrid5.ColumnByName('P_FLEX').FooterValue:=FormatFloat('#.#,#',QTotalRekKodFLEX.AsFloat/QTotalRekKodTOTAL.AsFloat*100);
+                wwDBGrid5.ColumnByName('P_FLEX').FooterValue:=FormatFloat('#.#,#',QTotalRekKodFLEX.AsFloat/QTotalRekKodDICABUT.AsFloat*100);
             end;
         else
             ShowMessage('Yang Anda Telusuri tidak ada');

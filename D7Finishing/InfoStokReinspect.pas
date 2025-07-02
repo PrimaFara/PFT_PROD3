@@ -826,17 +826,17 @@ if VTglAwal8.Date = VTglAkhir8.Date then
     else
       TanggalStr := FormatDateTime('dd mmmm yyyy', VTglAwal8.Date) + ' - ' + FormatDateTime('dd mmmm yyyy', VTglAkhir8.Date);
 
-if QWIPn.Active then
+if QRiwayatTransaksi.Active then
           begin
              DMFrm.SaveDialog1.DefaultExt:='XLK';
              DMFrm.SaveDialog1.Filter:='Excel files (*.XLK)|*.XLK';
-             DMFrm.SaveDialog1.FileName:='WIP REINSPECT_'+ TanggalStr +'';
-             wwDBGrid8.ExportOptions.TitleName:='WIP REINSPECT_'+ TanggalStr +'';
+             DMFrm.SaveDialog1.FileName:=''+TabSheet3.Caption+'_'+ TanggalStr +'';
+             wwDBGrid2.ExportOptions.TitleName:=''+TabSheet3.Caption+'_'+ TanggalStr +'';
                if DMFrm.SaveDialog1.Execute then
                begin
                  try
-                 wwDBGrid8.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
-                 wwDBGrid8.ExportOptions.Save;
+                 wwDBGrid2.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
+                 wwDBGrid2.ExportOptions.Save;
                  ShowMessage('Simpan Sukses !');
                  except
                  ShowMessage('Simpan Gagal !');

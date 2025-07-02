@@ -5593,7 +5593,7 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
           'OUT_BS'#9'10'#9'BS'#9'F'#9'KELUAR')
         IniAttributes.Enabled = True
         IniAttributes.SaveToRegistry = True
-        IniAttributes.FileName = 'Pismatex Master'
+        IniAttributes.FileName = 'Finishing'
         IniAttributes.Delimiter = ';;'
         IniAttributes.CheckNewFields = True
         ExportOptions.ExportType = wwgetHTML
@@ -5788,13 +5788,12 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
           ParentFont = False
         end
         object BitBtn1: TBitBtn
-          Left = 16
+          Left = 56
           Top = 11
-          Width = 161
+          Width = 121
           Height = 25
-          Caption = '&Export2Excel (On Proses)'
+          Caption = '&Export2Excel'
           TabOrder = 0
-          Visible = False
           OnClick = BitBtn3Click
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
