@@ -416,6 +416,7 @@ type
     procedure BitBtn2Click(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
     procedure TabSheet3Show(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
   private
     { Private declarations }
     vTab,vfilter,vorder : string;
@@ -826,17 +827,17 @@ if VTglAwal8.Date = VTglAkhir8.Date then
     else
       TanggalStr := FormatDateTime('dd mmmm yyyy', VTglAwal8.Date) + ' - ' + FormatDateTime('dd mmmm yyyy', VTglAkhir8.Date);
 
-if QRiwayatTransaksi.Active then
+if QWIPn.Active then
           begin
              DMFrm.SaveDialog1.DefaultExt:='XLK';
              DMFrm.SaveDialog1.Filter:='Excel files (*.XLK)|*.XLK';
-             DMFrm.SaveDialog1.FileName:=''+TabSheet3.Caption+'_'+ TanggalStr +'';
-             wwDBGrid2.ExportOptions.TitleName:=''+TabSheet3.Caption+'_'+ TanggalStr +'';
+             DMFrm.SaveDialog1.FileName:=''+TabSheet2.Caption+'_'+ TanggalStr +'';
+             wwDBGrid8.ExportOptions.TitleName:=''+TabSheet2.Caption+'_'+ TanggalStr +'';
                if DMFrm.SaveDialog1.Execute then
                begin
                  try
-                 wwDBGrid2.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
-                 wwDBGrid2.ExportOptions.Save;
+                 wwDBGrid8.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
+                 wwDBGrid8.ExportOptions.Save;
                  ShowMessage('Simpan Sukses !');
                  except
                  ShowMessage('Simpan Gagal !');
@@ -879,6 +880,36 @@ begin
 
   wwDBGrid2.ColumnByName('OUT_BK').FooterValue := FormatFloat('0.0,0;(0.0,0);-', QRiwayatTransaksi_totOUT_BK.AsFloat);
   wwDBGrid2.ColumnByName('OUT_BS').FooterValue := FormatFloat('0.0,0;(0.0,0);-', QRiwayatTransaksi_totOUT_BS.AsFloat);
+end;
+
+procedure TInfoStokReinspectFrm.BitBtn1Click(Sender: TObject);
+var
+  TanggalStr: string;
+begin
+if VTglAwal8.Date = VTglAkhir8.Date then
+      TanggalStr := FormatDateTime('dd mmmm yyyy', VTglAwal8.Date)
+    else
+      TanggalStr := FormatDateTime('dd mmmm yyyy', VTglAwal8.Date) + ' - ' + FormatDateTime('dd mmmm yyyy', VTglAkhir8.Date);
+
+if QRiwayatTransaksi.Active then
+          begin
+             DMFrm.SaveDialog1.DefaultExt:='XLK';
+             DMFrm.SaveDialog1.Filter:='Excel files (*.XLK)|*.XLK';
+             DMFrm.SaveDialog1.FileName:=''+TabSheet3.Caption+'_'+ TanggalStr +'';
+             wwDBGrid2.ExportOptions.TitleName:=''+TabSheet3.Caption+'_'+ TanggalStr +'';
+               if DMFrm.SaveDialog1.Execute then
+               begin
+                 try
+                 wwDBGrid2.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
+                 wwDBGrid2.ExportOptions.Save;
+                 ShowMessage('Simpan Sukses !');
+                 except
+                 ShowMessage('Simpan Gagal !');
+                 end;
+               end;
+          end
+          else
+            ShowMessage('Tabel belum di-OPEN !');
 end;
 
 end.

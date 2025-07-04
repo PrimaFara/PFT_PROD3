@@ -2286,7 +2286,7 @@ object InfoWIPFinishing1Frm: TInfoWIPFinishing1Frm
           Height = 25
           Caption = '&Export2Excel'
           TabOrder = 0
-          OnClick = BitBtn3Click
+          OnClick = BitBtn9Click
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
