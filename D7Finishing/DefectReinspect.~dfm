@@ -3,7 +3,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
   Top = 164
   Width = 1571
   Height = 836
-  ActiveControl = DBMemo1
+  ActiveControl = GroupBox1
   Caption = 'Hasil Reinspect Dalam'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -1496,7 +1496,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
     Width = 1555
     Height = 798
     HelpType = htKeyword
-    ActivePage = TabSheet1
+    ActivePage = TabSheet2
     Align = alClient
     TabOrder = 0
     object TabSheet1: TTabSheet
@@ -8998,8 +8998,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
     CountAllRecords = True
     Session = DMFrm.OS
     AfterScroll = QBrowse_rekap4AfterScroll
-    Left = 484
-    Top = 145
+    Left = 1244
+    Top = 505
     object QBrowse_rekap4LOOM: TStringField
       FieldName = 'LOOM'
       Size = 50
@@ -9362,15 +9362,19 @@ object DefectReinspectFrm: TDefectReinspectFrm
     end
     object QBrowse_rekap4M_BELANG2: TFloatField
       FieldName = 'M_BELANG2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_rekap4P_M_BELANG2: TFloatField
       FieldName = 'P_M_BELANG2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_rekap4M_RUSAK2: TFloatField
       FieldName = 'M_RUSAK2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_rekap4P_M_RUSAK2: TFloatField
       FieldName = 'P_M_RUSAK2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
   end
   object dsQBrowse_rekap4: TwwDataSource
@@ -9523,8 +9527,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
-    Left = 484
-    Top = 209
+    Left = 1244
+    Top = 569
     object QBrowse_rekap4_totHSL_PROD: TFloatField
       FieldName = 'HSL_PROD'
     end
@@ -9870,8 +9874,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
     CountAllRecords = True
     Session = DMFrm.OS
     AfterScroll = QBrowse_Loom3AfterScroll
-    Left = 660
-    Top = 161
+    Left = 1076
+    Top = 361
     object QBrowse_Loom3LOOM: TStringField
       FieldName = 'LOOM'
       Size = 50
@@ -10234,15 +10238,19 @@ object DefectReinspectFrm: TDefectReinspectFrm
     end
     object QBrowse_Loom3M_BELANG2: TFloatField
       FieldName = 'M_BELANG2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_Loom3P_M_BELANG2: TFloatField
       FieldName = 'P_M_BELANG2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_Loom3M_RUSAK2: TFloatField
       FieldName = 'M_RUSAK2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_Loom3P_M_RUSAK2: TFloatField
       FieldName = 'P_M_RUSAK2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
   end
   object QBrowse_Loom3_tot: TOracleDataSet
@@ -10390,8 +10398,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
-    Left = 660
-    Top = 225
+    Left = 1076
+    Top = 425
     object QBrowse_Loom3_totHSL_PROD: TFloatField
       FieldName = 'HSL_PROD'
     end
@@ -10837,8 +10845,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
-    Left = 668
-    Top = 369
+    Left = 1084
+    Top = 569
     object QBrowse_Loom1_totHSL_PROD: TFloatField
       FieldName = 'HSL_PROD'
     end
@@ -11167,8 +11175,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
     CountAllRecords = True
     Session = DMFrm.OS
     AfterScroll = QBrowse_Loom1AfterScroll
-    Left = 668
-    Top = 305
+    Left = 1084
+    Top = 505
     object QBrowse_Loom1LOOM: TStringField
       FieldName = 'LOOM'
       Size = 50
@@ -11527,15 +11535,19 @@ object DefectReinspectFrm: TDefectReinspectFrm
     end
     object QBrowse_Loom1M_BELANG2: TFloatField
       FieldName = 'M_BELANG2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_Loom1P_M_BELANG2: TFloatField
       FieldName = 'P_M_BELANG2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_Loom1M_RUSAK2: TFloatField
       FieldName = 'M_RUSAK2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_Loom1P_M_RUSAK2: TFloatField
       FieldName = 'P_M_RUSAK2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
   end
   object dsQBrowse_Loom2: TwwDataSource
@@ -11613,8 +11625,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
     CountAllRecords = True
     Session = DMFrm.OS
     AfterScroll = QBrowse_Loom2AfterScroll
-    Left = 492
-    Top = 305
+    Left = 1212
+    Top = 369
     object QBrowse_Loom2LOOM: TStringField
       FieldName = 'LOOM'
       Size = 50
@@ -11973,15 +11985,19 @@ object DefectReinspectFrm: TDefectReinspectFrm
     end
     object QBrowse_Loom2M_BELANG2: TFloatField
       FieldName = 'M_BELANG2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_Loom2P_M_BELANG2: TFloatField
       FieldName = 'P_M_BELANG2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_Loom2M_RUSAK2: TFloatField
       FieldName = 'M_RUSAK2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_Loom2P_M_RUSAK2: TFloatField
       FieldName = 'P_M_RUSAK2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
   end
   object QBrowse_Loom2_tot: TOracleDataSet
@@ -12129,8 +12145,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
-    Left = 492
-    Top = 369
+    Left = 1212
+    Top = 433
     object QBrowse_Loom2_totHSL_PROD: TFloatField
       FieldName = 'HSL_PROD'
     end

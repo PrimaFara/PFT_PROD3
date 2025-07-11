@@ -330,6 +330,14 @@ type
     QRekap_Lokasi_TotP_BGRADE: TFloatField;
     QBrowseTOTAL2: TFloatField;
     QBrowseTotalTOTAL: TFloatField;
+    QBrowseQTY1_PCS: TFloatField;
+    QBrowseQTY2_PCS: TFloatField;
+    QBrowseQTY_MITRA_PCS: TFloatField;
+    QBrowseTOTAL_PCS: TFloatField;
+    QBrowseTotalQTY1_PCS: TFloatField;
+    QBrowseTotalQTY2_PCS: TFloatField;
+    QBrowseTotalQTY_MITRA_PCS: TFloatField;
+    QBrowseTotalTOTAL_PCS: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure ColumnHeaderBand1BeforePrint(Sender: TQRCustomBand;
@@ -513,6 +521,11 @@ if Qbrowse.Active then
   wwDBGrid1xxxxx.ColumnByName('QTY_MITRA').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QBrowseTotalQTY_MITRA.AsFloat);
   wwDBGrid1xxxxx.ColumnByName('TOTAL').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QBrowseTotalTOTAL.AsFloat);
   //wwDBGrid1 xxxxx.ColumnByName('PARAH').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QBrowseTotalPARAH.AsFloat);
+
+  wwDBGrid1xxxxx.ColumnByName('QTY1_PCS').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QBrowseTotalQTY1_PCS.AsFloat);
+  wwDBGrid1xxxxx.ColumnByName('QTY2_PCS').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QBrowseTotalQTY2_PCS.AsFloat);
+  wwDBGrid1xxxxx.ColumnByName('QTY_MITRA_PCS').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QBrowseTotalQTY_MITRA_PCS.AsFloat);
+  wwDBGrid1xxxxx.ColumnByName('TOTAL_PCS').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QBrowseTotalTOTAL_PCS.AsFloat);
 end;
 
 procedure TLapProduksiFrm.BtnExportClick(Sender: TObject);
@@ -632,11 +645,11 @@ end;
 
 procedure TLapProduksiFrm.BitBtn6Click(Sender: TObject);
 begin
-DMFrm.QUserTime.Close;
- DMFrm.QUserTime.Open;
+//DMFrm.QUserTime.Close;
+ //DMFrm.QUserTime.Open;
 
  //if cbPreview.Checked then
-   QuickRep1.Preview
+   //QuickRep1.Preview
  // else
    //  QuickRep2.Print;
 end;

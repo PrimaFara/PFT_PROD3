@@ -158,9 +158,9 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333330000
+              58.208333333333320000
               269.875000000000000000
-              74.083333333333330000
+              74.083333333333320000
               365.125000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -681,7 +681,7 @@ object KoreksiFrm: TKoreksiFrm
               44.979166666666670000
               1616.604166666667000000
               216.958333333333300000
-              92.604166666666670000)
+              92.604166666666680000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -710,10 +710,10 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
-              664.104166666666700000
+              60.854166666666660000
+              664.104166666666600000
               158.750000000000000000
-              672.041666666666700000)
+              672.041666666666600000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -742,7 +742,7 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawRight = False
             Size.Values = (
               50.270833333333330000
-              804.333333333333300000
+              804.333333333333200000
               222.250000000000000000
               116.416666666666700000)
             Alignment = taLeftJustify
@@ -806,7 +806,7 @@ object KoreksiFrm: TKoreksiFrm
             Size.Values = (
               52.916666666666670000
               1613.958333333333000000
-              84.666666666666670000
+              84.666666666666680000
               209.020833333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -836,7 +836,7 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333330000
+              58.208333333333320000
               1619.250000000000000000
               2.645833333333333000
               111.125000000000000000)
@@ -925,7 +925,7 @@ object KoreksiFrm: TKoreksiFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666660000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -1068,7 +1068,7 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              981.604166666666700000
+              981.604166666666800000
               7.937500000000000000
               145.520833333333300000)
             Alignment = taRightJustify
@@ -1126,9 +1126,9 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              679.979166666666700000
+              679.979166666666800000
               190.500000000000000000
-              74.083333333333330000)
+              74.083333333333320000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -1160,7 +1160,7 @@ object KoreksiFrm: TKoreksiFrm
               44.979166666666670000
               1230.312500000000000000
               190.500000000000000000
-              74.083333333333330000)
+              74.083333333333320000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -1222,7 +1222,7 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              677.333333333333300000
+              677.333333333333200000
               359.833333333333300000
               79.375000000000000000)
             Alignment = taCenter
@@ -1589,7 +1589,7 @@ object KoreksiFrm: TKoreksiFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            68.791666666666670000
+            68.791666666666660000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -1635,7 +1635,7 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              989.541666666666700000
+              989.541666666666800000
               10.583333333333330000
               140.229166666666700000)
             Alignment = taRightJustify
@@ -3546,10 +3546,10 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              66.145833333333330000
+              66.145833333333340000
               526.520833333333300000
               179.916666666666700000
-              947.208333333333300000)
+              947.208333333333400000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -3578,7 +3578,7 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              923.395833333333300000
+              923.395833333333400000
               312.208333333333300000
               153.458333333333300000)
             Alignment = taCenter
@@ -3608,8 +3608,8 @@ object KoreksiFrm: TKoreksiFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
-              740.833333333333300000
+              60.854166666666660000
+              740.833333333333400000
               248.708333333333300000
               515.937500000000000000)
             Alignment = taCenter
@@ -3728,7 +3728,7 @@ object KoreksiFrm: TKoreksiFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666660000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText16: TQRDBText
@@ -5718,21 +5718,125 @@ object KoreksiFrm: TKoreksiFrm
   end
   object QAmbilNota: TOracleQuery
     SQL.Strings = (
-      'begin'
-      '  delete ipisma_db5.koreksi_detail where no_reg=:no_reg;'
-      '  insert into ipisma_db5.koreksi_detail'
+      'BEGIN'
+      '  -- Delete existing records for this registration number'
+      '  DELETE FROM ipisma_db5.koreksi_detail WHERE no_reg = :no_reg;'
+      '  '
+      '  -- Insert records with deduplication logic'
+      '  INSERT INTO ipisma_db5.koreksi_detail'
       
-        '  (no_reg, no_reg_detail,kd_produksi,kd_konstruksi,konstruksi,qt' +
-        'y_potong,satuan,jenis,kd_sub_lokasi,no_order,no_mesin)'
+        '  (no_reg, no_reg_detail, kd_produksi, kd_konstruksi, konstruksi' +
+        ', qty_potong, satuan, jenis, kd_sub_lokasi, no_order, no_mesin)'
+      '  ('
+      '    SELECT '
+      '      :no_reg, '
+      '      IPISMA_DB5.REG_KOREKSI_DET.nextval, '
+      '      kd_produksi,'
+      '      kd_konstruksi,'
+      '      konstruksi,'
+      '      qty,'
+      '      satuan,'
+      '      jenis, '
+      '      '#39'-'#39','
+      '      keterangan,'
+      '      mesin'
+      '    FROM ('
       
-        '  (select :no_reg, IPISMA_DB5.REG_KOREKSI_DET.nextval, kd_produk' +
-        'si,kd_konstruksi,konstruksi,qty_potong,satuan,'
+        '      -- Combined data from both sources with priority to the fi' +
+        'rst view'
+      '      SELECT '
+      '        kd_produksi,'
+      '        kd_konstruksi,'
+      '        konstruksi,'
+      '        qty_potong AS qty,'
+      '        satuan,'
+      '        jenis,'
+      '        keterangan,'
+      '        no_mesin AS mesin,'
+      '        1 AS source_priority'
+      '      FROM ipisma_db5.vkoreksi_reinspec'
+      '      WHERE no_nota = :nota'
+      '      '
+      '      UNION ALL'
+      '      '
+      '      SELECT '
       
-        '   jenis, '#39'-'#39',keterangan,no_mesin from ipisma_db5.vkoreksi_reins' +
-        'pec'
-      '   where no_nota=:nota);'
-      '  commit;'
-      'end;')
+        '        kp AS kd_produksi,  -- Changed kp to kd_produksi with al' +
+        'ias'
+      '        kd_konstruksi,'
+      '        konstruksi,'
+      '        qty_meter AS qty,'
+      '        satuan,'
+      '        jenis,'
+      '        keterangan2 AS keterangan,'
+      '        '#39'-'#39' AS mesin,'
+      '        2 AS source_priority'
+      '      FROM ipisma_db6.vkoreksi_handprint'
+      '      WHERE no_nota = :nota'
+      '    ) combined_data'
+      
+        '    WHERE (kd_produksi, kd_konstruksi, konstruksi, satuan, jenis' +
+        ', NVL(keterangan, '#39' '#39')) IN ('
+      
+        '      -- This subquery identifies the first occurrence of each u' +
+        'nique combination'
+      '      SELECT '
+      '        kd_produksi,'
+      '        kd_konstruksi,'
+      '        konstruksi,'
+      '        satuan,'
+      '        jenis,'
+      '        NVL(keterangan, '#39' '#39')'
+      '      FROM ('
+      '        SELECT '
+      '          kd_produksi,'
+      '          kd_konstruksi,'
+      '          konstruksi,'
+      '          satuan,'
+      '          jenis,'
+      '          keterangan,'
+      '          ROW_NUMBER() OVER ('
+      
+        '            PARTITION BY kd_produksi, kd_konstruksi, konstruksi,' +
+        ' satuan, jenis, NVL(keterangan, '#39' '#39')'
+      '            ORDER BY source_priority'
+      '          ) AS rn'
+      '        FROM ('
+      '          SELECT '
+      '            kd_produksi,'
+      '            kd_konstruksi,'
+      '            konstruksi,'
+      '            satuan,'
+      '            jenis,'
+      '            keterangan,'
+      '            1 AS source_priority'
+      '          FROM ipisma_db5.vkoreksi_reinspec'
+      '          WHERE no_nota = :nota'
+      '          '
+      '          UNION ALL'
+      '          '
+      '          SELECT '
+      
+        '            kp AS kd_produksi,  -- Changed kp to kd_produksi wit' +
+        'h alias'
+      '            kd_konstruksi,'
+      '            konstruksi,'
+      '            satuan,'
+      '            jenis,'
+      '            keterangan2 AS keterangan,'
+      '            2 AS source_priority'
+      '          FROM ipisma_db6.vkoreksi_handprint'
+      '          WHERE no_nota = :nota'
+      '        ) all_data'
+      '      ) ranked'
+      
+        '      WHERE rn = 1  -- Only take the first occurrence of each un' +
+        'ique combination'
+      '    )'
+      '  );'
+      ''
+      '  COMMIT;'
+      'END;')
     Session = DMFrm.OS
     Variables.Data = {
       0300000002000000070000003A4E4F5F52454705000000000000000000000005

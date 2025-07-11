@@ -102,7 +102,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
             ForceNewPage = False
             Size.Values = (
               150.812500000000000000
-              1772.708333333333000000)
+              1772.708333333334000000)
             BandType = rbPageHeader
             object QRDBText2: TQRDBText
               Left = 536
@@ -2457,7 +2457,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
             ForceNewPage = False
             Size.Values = (
               211.666666666666700000
-              1772.708333333333000000)
+              1772.708333333334000000)
             BandType = rbTitle
             object QRDBText1: TQRDBText
               Left = 258
@@ -2470,10 +2470,10 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
               Frame.DrawLeft = False
               Frame.DrawRight = False
               Size.Values = (
-                68.791666666666670000
+                68.791666666666680000
                 682.625000000000000000
                 0.000000000000000000
-                407.458333333333300000)
+                407.458333333333400000)
               Alignment = taCenter
               AlignToBand = True
               AutoSize = True
@@ -2736,8 +2736,8 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
             ForceNewColumn = False
             ForceNewPage = False
             Size.Values = (
-              60.854166666666670000
-              1772.708333333333000000)
+              60.854166666666680000
+              1772.708333333334000000)
             BandType = rbColumnHeader
             object QRLabel8: TQRLabel
               Left = 16
@@ -2911,8 +2911,8 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
             ForceNewPage = False
             ParentFont = False
             Size.Values = (
-              42.333333333333330000
-              1772.708333333333000000)
+              42.333333333333340000
+              1772.708333333334000000)
             BandType = rbDetail
             object QRDBText8: TQRDBText
               Left = 64
@@ -3113,7 +3113,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
             ForceNewPage = False
             Size.Values = (
               497.416666666666700000
-              1772.708333333333000000)
+              1772.708333333334000000)
             BandType = rbSummary
             object QRDBText14: TQRDBText
               Left = 122
@@ -3363,7 +3363,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
             ForceNewPage = False
             Size.Values = (
               52.916666666666670000
-              1772.708333333333000000)
+              1772.708333333334000000)
             BandType = rbPageFooter
             object QRDBText13: TQRDBText
               Left = 0
@@ -3438,7 +3438,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
             ForceNewPage = False
             Size.Values = (
               0.000000000000000000
-              1772.708333333333000000)
+              1772.708333333334000000)
             FooterBand = QRBand1
             Master = QuickRep1
             ReprintOnNewPage = False
@@ -3459,7 +3459,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
             ForceNewPage = False
             Size.Values = (
               105.833333333333300000
-              1772.708333333333000000)
+              1772.708333333334000000)
             BandType = rbGroupFooter
             object QRLabel15: TQRLabel
               Left = 305
@@ -3473,7 +3473,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
               Frame.DrawRight = False
               Size.Values = (
                 44.979166666666670000
-                806.979166666666700000
+                806.979166666666800000
                 21.166666666666670000
                 156.104166666666700000)
               Alignment = taCenter
@@ -4919,6 +4919,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
         Width = 1640
         Height = 766
         Selected.Strings = (
+          'NO_NOTA'#9'20'#9'NO NOTA'#9'F'
           'NO_URUT'#9'5'#9'URUT'#9'F'
           'GRUP'#9'5'#9'GRUP'#9'F'#9'OPERATOR TENUN'
           'NIK'#9'7'#9'NIK'#9'F'#9'OPERATOR TENUN'
@@ -5019,7 +5020,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
         OnTitleButtonClick = wwDBGrid18TitleButtonClick
         PaintOptions.AlternatingRowColor = clMoneyGreen
         PaintOptions.ActiveRecordColor = clGreen
-        GroupFieldName = 'NO_REG'
+        GroupFieldName = 'NO_NOTA'
       end
       object Panel6: TPanel
         Left = 0
@@ -5282,6 +5283,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
         Width = 1640
         Height = 766
         Selected.Strings = (
+          'NO_NOTA'#9'20'#9'NO NOTA'#9'F'
           'NO_URUT'#9'5'#9'URUT'#9'F'
           'GRUP'#9'5'#9'GRUP'#9'F'#9'OPERATOR TENUN'
           'NIK'#9'7'#9'NIK'#9'F'#9'OPERATOR TENUN'
@@ -5382,7 +5384,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
         OnTitleButtonClick = wwDBGrid10TitleButtonClick
         PaintOptions.AlternatingRowColor = clMoneyGreen
         PaintOptions.ActiveRecordColor = clGreen
-        GroupFieldName = 'NO_REG'
+        GroupFieldName = 'NO_NOTA'
       end
       object wwDBGrid3: TwwDBGrid
         Left = 0
@@ -5390,6 +5392,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
         Width = 1640
         Height = 766
         Selected.Strings = (
+          'NO_NOTA'#9'20'#9'NO NOTA'#9'F'
           'NO_URUT'#9'5'#9'URUT'#9'F'
           'GRUP'#9'5'#9'GRUP'#9'F'#9'OPERATOR TENUN'
           'NIK'#9'7'#9'NIK'#9'F'#9'OPERATOR TENUN'
@@ -5491,7 +5494,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
         OnEnter = wwDBGrid3Enter
         PaintOptions.AlternatingRowColor = clMoneyGreen
         PaintOptions.ActiveRecordColor = clGreen
-        GroupFieldName = 'NO_REG'
+        GroupFieldName = 'NO_NOTA'
       end
     end
     object TabSheet12: TTabSheet
@@ -5519,6 +5522,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
         Width = 1640
         Height = 766
         Selected.Strings = (
+          'NO_NOTA'#9'20'#9'NO NOTA'#9'F'
           'NO_URUT'#9'5'#9'URUT'#9'F'
           'GRUP'#9'5'#9'GRUP'#9'F'#9'OPERATOR TENUN'
           'NIK'#9'7'#9'NIK'#9'F'#9'OPERATOR TENUN'
@@ -5619,7 +5623,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
         OnTitleButtonClick = wwDBGrid19TitleButtonClick
         PaintOptions.AlternatingRowColor = clMoneyGreen
         PaintOptions.ActiveRecordColor = clGreen
-        GroupFieldName = 'NO_REG'
+        GroupFieldName = 'NO_NOTA'
       end
       object Panel20: TPanel
         Left = 0
@@ -5882,6 +5886,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
         Width = 1640
         Height = 766
         Selected.Strings = (
+          'NO_NOTA'#9'20'#9'NO NOTA'#9'F'
           'NO_URUT'#9'5'#9'URUT'#9'F'
           'GRUP'#9'5'#9'GRUP'#9'F'#9'OPERATOR TENUN'
           'NIK'#9'7'#9'NIK'#9'F'#9'OPERATOR TENUN'
@@ -5982,7 +5987,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
         OnTitleButtonClick = wwDBGrid10TitleButtonClick
         PaintOptions.AlternatingRowColor = clMoneyGreen
         PaintOptions.ActiveRecordColor = clGreen
-        GroupFieldName = 'NO_REG'
+        GroupFieldName = 'NO_NOTA'
       end
       object wwDBGrid13: TwwDBGrid
         Left = 0
@@ -5990,6 +5995,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
         Width = 1640
         Height = 766
         Selected.Strings = (
+          'NO_NOTA'#9'20'#9'NO NOTA'#9'F'
           'NO_URUT'#9'5'#9'URUT'#9'F'
           'GRUP'#9'5'#9'GRUP'#9'F'#9'OPERATOR TENUN'
           'NIK'#9'7'#9'NIK'#9'F'#9'OPERATOR TENUN'
@@ -6090,7 +6096,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
         OnTitleButtonClick = wwDBGrid3TitleButtonClick
         PaintOptions.AlternatingRowColor = clMoneyGreen
         PaintOptions.ActiveRecordColor = clGreen
-        GroupFieldName = 'NO_REG'
+        GroupFieldName = 'NO_NOTA'
       end
     end
     object TabSheet13: TTabSheet
@@ -8003,8 +8009,8 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            415.395833333333300000
-            3280.833333333333000000)
+            415.395833333333400000
+            3280.833333333334000000)
           BandType = rbSummary
           object QRLabel11: TQRLabel
             Left = 7
@@ -8244,7 +8250,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
           ForceNewPage = False
           Size.Values = (
             50.270833333333330000
-            3280.833333333333000000)
+            3280.833333333334000000)
           BandType = rbDetail
           object QRDBText21: TQRDBText
             Left = 143
@@ -10586,7 +10592,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
           ParentFont = False
           Size.Values = (
             587.375000000000000000
-            3280.833333333333000000)
+            3280.833333333334000000)
           BandType = rbTitle
           object QRShape22: TQRShape
             Left = 1
@@ -10616,7 +10622,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
+              60.854166666666680000
               1005.416666666667000000
               171.979166666666700000
               1270.000000000000000000)
@@ -14119,7 +14125,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
           ForceNewPage = False
           Size.Values = (
             63.500000000000000000
-            3280.833333333333000000)
+            3280.833333333334000000)
           BandType = rbPageFooter
           object QRDBText28: TQRDBText
             Left = 7
