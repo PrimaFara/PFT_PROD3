@@ -2786,7 +2786,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -2977,7 +2977,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -3013,7 +3013,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             FontSize = 8
           end
           object QRSysData1: TQRSysData
-            Left = -54
+            Left = 687
             Top = 8
             Width = 69
             Height = 17
@@ -3048,9 +3048,9 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              883.708333333333400000
+              883.708333333333300000
               21.166666666666670000
-              232.833333333333400000)
+              232.833333333333300000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = False
@@ -3083,7 +3083,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            320.145833333333400000
+            320.145833333333300000
             2000.250000000000000000)
           BandType = rbGroupFooter
           object QRDBText4: TQRDBText
@@ -3337,7 +3337,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText5: TQRDBText
@@ -5197,7 +5197,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
+              60.854166666666670000
               452.437500000000000000
               201.083333333333300000
               1092.729166666667000000)
@@ -5574,9 +5574,9 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333340000
-              931.333333333333400000
-              264.583333333333400000
+              58.208333333333330000
+              931.333333333333300000
+              264.583333333333300000
               137.583333333333300000)
             Alignment = taCenter
             AlignToBand = True
@@ -6033,7 +6033,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText14: TQRDBText
@@ -6140,7 +6140,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            391.583333333333400000
+            391.583333333333300000
             2000.250000000000000000)
           BandType = rbGroupFooter
           object QRLabel22: TQRLabel
@@ -6410,7 +6410,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText19: TQRDBText
@@ -7718,7 +7718,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
       'from ipisma_db5.vserah_finish_opening'
       
         'where trunc (:ptgl)>=:pawal and (:ptgl)<=:pakhir and kd_transaks' +
-        'i = '#39'900'#39' and kd_produksi NOT LIKE '#39'%PG%'#39' '
+        'i = '#39'900'#39' --and kd_produksi NOT LIKE '#39'%PG%'#39' '
       ':myparam'
       'order by kd_produksi ASC'
       '')
@@ -7760,7 +7760,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
       'from ipisma_db5.vserah_finish_opening'
       
         'where trunc (:ptgl)>=:pawal and (:ptgl)<=:pakhir and kd_transaks' +
-        'i = '#39'900'#39' and kd_produksi NOT LIKE '#39'%PG%'#39' '
+        'i = '#39'900'#39' --and kd_produksi NOT LIKE '#39'%PG%'#39' '
       ''
       ''
       '')

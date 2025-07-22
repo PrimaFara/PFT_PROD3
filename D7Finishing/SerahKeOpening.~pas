@@ -384,6 +384,8 @@ type
     QBrowseTGL_INSPECT: TDateTimeField;
     QBrowseTGL_PTG: TDateTimeField;
     QDetailTGL_PTG: TDateTimeField;
+    RTgl5: TRadioGroup;
+    RTgl6: TRadioGroup;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -678,7 +680,11 @@ begin
 QBrowse.Open;
   vpertama:=True;
   if cbTanggal.Checked then
-    vfilter:=' where (tgl>=to_date('''+FormatDateTime('dd/mm/yyyy',VTglAwal.Date)+''',''dd/mm/yyyy'') and tgl<=(to_date('''+FormatDateTime('dd/mm/yyyy',VTglAkhir.Date)+''',''dd/mm/yyyy'')+1-1/86400)) and ('
+    // vfilter:=' where (tgl>=to_date('''+FormatDateTime('dd/mm/yyyy',VTglAwal.Date)+''',''dd/mm/yyyy'') and tgl<=(to_date('''+FormatDateTime('dd/mm/yyyy',VTglAkhir.Date)+''',''dd/mm/yyyy'')+1-1/86400)) and ('
+        if RTgl5.ItemIndex=0 then
+            vfilter:=' where (tgl>=to_date('''+FormatDateTime('dd/mm/yyyy',VTglAwal.Date)+''',''dd/mm/yyyy'') and tgl<=(to_date('''+FormatDateTime('dd/mm/yyyy',VTglAkhir.Date)+''',''dd/mm/yyyy'')+1-1/86400)) and ('
+        else
+            vfilter:=' where (tgl_ptg>=to_date('''+FormatDateTime('dd/mm/yyyy',VTglAwal.Date)+''',''dd/mm/yyyy'') and tgl<=(to_date('''+FormatDateTime('dd/mm/yyyy',VTglAkhir.Date)+''',''dd/mm/yyyy'')+1-1/86400)) and ('
   else
     vfilter:=' where (';
   if (QBrowse.FieldCount>=1) then
@@ -956,10 +962,22 @@ abort;
 end
 else
   QPerKonstruksi_M.Close;
+
+                    if RTgl6.ItemIndex = 0 then
+                        QPerKonstruksi_M.SetVariable('ptgl', 'tgl')
+                    else
+                        QPerKonstruksi_M.SetVariable('ptgl', 'tgl_ptg');
+
   QPerKonstruksi_M.SetVariable('pawal',VTglAwal2.DateTime);
   QPerKonstruksi_M.SetVariable('pakhir',VTglakhir2.DateTime);
   QPerKonstruksi_M.Open;
   QPerKonstruksi_M_Tot.Close;
+
+                    if RTgl6.ItemIndex = 0 then
+                        QPerKonstruksi_M_Tot.SetVariable('ptgl', 'tgl')
+                    else
+                        QPerKonstruksi_M_Tot.SetVariable('ptgl', 'tgl_ptg');
+
   QPerKonstruksi_M_Tot.SetVariable('pawal',VTglAwal2.DateTime);
   QPerKonstruksi_M_Tot.SetVariable('pakhir',VTglakhir2.DateTime);
   QPerKonstruksi_M_Tot.Open;

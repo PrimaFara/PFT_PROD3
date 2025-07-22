@@ -1215,15 +1215,16 @@ var
 
     TotalAWAL_BK, TotalAWAL_BS, TotalDLM_BK, TotalDLM_BS: Real;
     TotalLAIN_BK, TotalLAIN_BS, TotalKORIN_BK, TotalKORIN_BS: Real;
-    TotalFINISH_BK, TotalFINISH_BS, TotalMTR_BK: Real;
-    TotalKOROUT_BK, TotalKOROUT_BS, TotalAKHIR_BK: Real; 
+    TotalFINISH_BK, TotalFINISH_BS, TotalMTR_BK, TotalMTR_BS: Real;
+    TotalKOROUT_BK, TotalKOROUT_BS, TotalAKHIR_BK: Real;
     TotalAKHIR_BS, TotalAKHIR_BK1, TotalAKHIR_BS1: Real;
 
-    AWAL_BK, AWAL_BS, DLM_BK, DLM_BS: string;
-    LAIN_BK, LAIN_BS, KORIN_BK, KORIN_BS: string;
-    FINISH_BK, FINISH_BS, MTR_BK: string;
-    KOROUT_BK, KOROUT_BS, AKHIR_BK: string; 
-    AKHIR_BS, AKHIR_BK1, AKHIR_BS1: string;
+    AWAL_BK, AWAL_BS, DLM_BK, DLM_BS: String;
+    LAIN_BK, LAIN_BS, KORIN_BK, KORIN_BS: String;
+    FINISH_BK, FINISH_BS, MTR_BK, MTR_BS: String;
+    KOROUT_BK, KOROUT_BS, AKHIR_BK: String;
+    AKHIR_BS, AKHIR_BK1, AKHIR_BS1: String;
+
 
 begin
   WebBrowser1.BringToFront;
@@ -1290,7 +1291,7 @@ begin
     '                    <th rowspan="2">KONSTRUKSI</th>' +
     '                    <th colspan="2">AWAL (PCS)</th>' +
     '                    <th colspan="6">MASUK (PCS)</th>' +
-    '                    <th colspan="5">KELUAR (PCS)</th>' +
+    '                    <th colspan="6">KELUAR (PCS)</th>' +
     '                    <th colspan="2">AKHIR (PCS)</th>' +
     '                    <th colspan="2">AKHIR (KODI)</th>' +
     '                    <th style="border: 0px; color: white;">1</th>' +
@@ -1307,6 +1308,7 @@ begin
     '                    <th>FINISH BK</th>' +
     '                    <th>FINISH BS</th>' +
     '                    <th>LAIN BK</th>' +
+    '                    <th>LAIN BS</th>' +
     '                    <th>KOROUT BK</th>' +
     '                    <th>KOROUT BS</th>' +
     '                    <th>BK</th>' +
@@ -1320,7 +1322,7 @@ begin
     TotalAWAL_BK := 0; TotalAWAL_BS := 0; TotalDLM_BK := 0; TotalDLM_BS := 0;
     TotalLAIN_BK := 0; TotalLAIN_BS := 0; TotalKORIN_BK := 0; TotalKORIN_BS := 0;
 
-    TotalFINISH_BK := 0; TotalFINISH_BS := 0; TotalMTR_BK := 0;
+    TotalFINISH_BK := 0; TotalFINISH_BS := 0; TotalMTR_BK := 0;  TotalMTR_BS := 0;
     TotalKOROUT_BK := 0; TotalKOROUT_BS := 0; TotalAKHIR_BK := 0; 
     TotalAKHIR_BS := 0; TotalAKHIR_BK1 := 0; TotalAKHIR_BS1 := 0;
 
@@ -1328,92 +1330,114 @@ begin
     while not wwDBGrid3.DataSource.DataSet.Eof do
     begin
 
-    if (wwDBGrid3.DataSource.DataSet.FieldByName('AWAL_BK').AsString = '0') or (wwDBGrid3.DataSource.DataSet.FieldByName('AWAL_BK').AsString = '') then
-      AWAL_BK := '-'
+    if wwDBGrid3.DataSource.DataSet.FieldByName('AWAL_BK').IsNull or 
+    (wwDBGrid3.DataSource.DataSet.FieldByName('AWAL_BK').AsFloat = 0) then
+    AWAL_BK := '-'
     else
-      AWAL_BK := wwDBGrid3.DataSource.DataSet.FieldByName('AWAL_BK').AsString;
+    AWAL_BK := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid3.DataSource.DataSet.FieldByName('AWAL_BK').AsFloat);
 
-    if (wwDBGrid3.DataSource.DataSet.FieldByName('AWAL_BS').AsString = '0') or (wwDBGrid3.DataSource.DataSet.FieldByName('AWAL_BS').AsString = '') then
-      AWAL_BS := '-'
+    if wwDBGrid3.DataSource.DataSet.FieldByName('AWAL_BS').IsNull or 
+    (wwDBGrid3.DataSource.DataSet.FieldByName('AWAL_BS').AsFloat = 0) then
+    AWAL_BS := '-'
     else
-      AWAL_BS := wwDBGrid3.DataSource.DataSet.FieldByName('AWAL_BS').AsString;
+    AWAL_BS := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid3.DataSource.DataSet.FieldByName('AWAL_BS').AsFloat);
 
-    if (wwDBGrid3.DataSource.DataSet.FieldByName('DLM_BK').AsString = '0') or (wwDBGrid3.DataSource.DataSet.FieldByName('DLM_BK').AsString = '') then
-      DLM_BK := '-'
+    if wwDBGrid3.DataSource.DataSet.FieldByName('DLM_BK').IsNull or 
+    (wwDBGrid3.DataSource.DataSet.FieldByName('DLM_BK').AsFloat = 0) then
+    DLM_BK := '-'
     else
-      DLM_BK := wwDBGrid3.DataSource.DataSet.FieldByName('DLM_BK').AsString;
+    DLM_BK := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid3.DataSource.DataSet.FieldByName('DLM_BK').AsFloat);
 
-    if (wwDBGrid3.DataSource.DataSet.FieldByName('DLM_BS').AsString = '0') or (wwDBGrid3.DataSource.DataSet.FieldByName('DLM_BS').AsString = '') then
-      DLM_BS := '-'
+    if wwDBGrid3.DataSource.DataSet.FieldByName('DLM_BS').IsNull or 
+    (wwDBGrid3.DataSource.DataSet.FieldByName('DLM_BS').AsFloat = 0) then
+    DLM_BS := '-'
     else
-      DLM_BS := wwDBGrid3.DataSource.DataSet.FieldByName('DLM_BS').AsString;
+    DLM_BS := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid3.DataSource.DataSet.FieldByName('DLM_BS').AsFloat);
 
-    if (wwDBGrid3.DataSource.DataSet.FieldByName('LAIN_BK').AsString = '0') or (wwDBGrid3.DataSource.DataSet.FieldByName('LAIN_BK').AsString = '') then
-      LAIN_BK := '-'
+    if wwDBGrid3.DataSource.DataSet.FieldByName('LAIN_BK').IsNull or 
+    (wwDBGrid3.DataSource.DataSet.FieldByName('LAIN_BK').AsFloat = 0) then
+    LAIN_BK := '-'
     else
-      LAIN_BK := wwDBGrid3.DataSource.DataSet.FieldByName('LAIN_BK').AsString;
+    LAIN_BK := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid3.DataSource.DataSet.FieldByName('LAIN_BK').AsFloat);
 
-    if (wwDBGrid3.DataSource.DataSet.FieldByName('LAIN_BS').AsString = '0') or (wwDBGrid3.DataSource.DataSet.FieldByName('LAIN_BS').AsString = '') then
-      LAIN_BS := '-'
+    if wwDBGrid3.DataSource.DataSet.FieldByName('LAIN_BS').IsNull or 
+    (wwDBGrid3.DataSource.DataSet.FieldByName('LAIN_BS').AsFloat = 0) then
+    LAIN_BS := '-'
     else
-      LAIN_BS := wwDBGrid3.DataSource.DataSet.FieldByName('LAIN_BS').AsString;
+    LAIN_BS := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid3.DataSource.DataSet.FieldByName('LAIN_BS').AsFloat);
 
-    if (wwDBGrid3.DataSource.DataSet.FieldByName('KORIN_BK').AsString = '0') or (wwDBGrid3.DataSource.DataSet.FieldByName('KORIN_BK').AsString = '') then
-      KORIN_BK := '-'
+    if wwDBGrid3.DataSource.DataSet.FieldByName('KORIN_BK').IsNull or 
+    (wwDBGrid3.DataSource.DataSet.FieldByName('KORIN_BK').AsFloat = 0) then
+    KORIN_BK := '-'
     else
-      KORIN_BK := wwDBGrid3.DataSource.DataSet.FieldByName('KORIN_BK').AsString;
+    KORIN_BK := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid3.DataSource.DataSet.FieldByName('KORIN_BK').AsFloat);
 
-    if (wwDBGrid3.DataSource.DataSet.FieldByName('KORIN_BS').AsString = '0') or (wwDBGrid3.DataSource.DataSet.FieldByName('KORIN_BS').AsString = '') then
-      KORIN_BS := '-'
+    if wwDBGrid3.DataSource.DataSet.FieldByName('KORIN_BS').IsNull or 
+    (wwDBGrid3.DataSource.DataSet.FieldByName('KORIN_BS').AsFloat = 0) then
+    KORIN_BS := '-'
     else
-      KORIN_BS := wwDBGrid3.DataSource.DataSet.FieldByName('KORIN_BS').AsString;
+    KORIN_BS := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid3.DataSource.DataSet.FieldByName('KORIN_BS').AsFloat);
 
-    // BATAS MASUK DAN KELUAR ----------------------------------------------------------------------------------------------------------------------------
-
-    if (wwDBGrid3.DataSource.DataSet.FieldByName('FINISH_BK').AsString = '0') or (wwDBGrid3.DataSource.DataSet.FieldByName('FINISH_BK').AsString = '') then
-      FINISH_BK := '-'
+    if wwDBGrid3.DataSource.DataSet.FieldByName('FINISH_BK').IsNull or 
+    (wwDBGrid3.DataSource.DataSet.FieldByName('FINISH_BK').AsFloat = 0) then
+    FINISH_BK := '-'
     else
-      FINISH_BK := wwDBGrid3.DataSource.DataSet.FieldByName('FINISH_BK').AsString;
+    FINISH_BK := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid3.DataSource.DataSet.FieldByName('FINISH_BK').AsFloat);
 
-    if (wwDBGrid3.DataSource.DataSet.FieldByName('FINISH_BS').AsString = '0') or (wwDBGrid3.DataSource.DataSet.FieldByName('FINISH_BS').AsString = '') then
-      FINISH_BS := '-'
+    if wwDBGrid3.DataSource.DataSet.FieldByName('FINISH_BS').IsNull or 
+    (wwDBGrid3.DataSource.DataSet.FieldByName('FINISH_BS').AsFloat = 0) then
+    FINISH_BS := '-'
     else
-      FINISH_BS := wwDBGrid3.DataSource.DataSet.FieldByName('FINISH_BS').AsString;
+    FINISH_BS := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid3.DataSource.DataSet.FieldByName('FINISH_BS').AsFloat);
 
-    if (wwDBGrid3.DataSource.DataSet.FieldByName('MTR_BK').AsString = '0') or (wwDBGrid3.DataSource.DataSet.FieldByName('MTR_BK').AsString = '') then
-      MTR_BK := '-'
+    if wwDBGrid3.DataSource.DataSet.FieldByName('MTR_BK').IsNull or 
+    (wwDBGrid3.DataSource.DataSet.FieldByName('MTR_BK').AsFloat = 0) then
+    MTR_BK := '-'
     else
-      MTR_BK := wwDBGrid3.DataSource.DataSet.FieldByName('MTR_BK').AsString;
+    MTR_BK := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid3.DataSource.DataSet.FieldByName('MTR_BK').AsFloat);
 
-    if (wwDBGrid3.DataSource.DataSet.FieldByName('KOROUT_BK').AsString = '0') or (wwDBGrid3.DataSource.DataSet.FieldByName('KOROUT_BK').AsString = '') then
-      KOROUT_BK := '-'
+    if wwDBGrid3.DataSource.DataSet.FieldByName('MTR_BS').IsNull or 
+    (wwDBGrid3.DataSource.DataSet.FieldByName('MTR_BS').AsFloat = 0) then
+    MTR_BS := '-'
     else
-      KOROUT_BK := wwDBGrid3.DataSource.DataSet.FieldByName('KOROUT_BK').AsString;
+    MTR_BS := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid3.DataSource.DataSet.FieldByName('MTR_BS').AsFloat);
 
-    if (wwDBGrid3.DataSource.DataSet.FieldByName('KOROUT_BS').AsString = '0') or (wwDBGrid3.DataSource.DataSet.FieldByName('KOROUT_BS').AsString = '') then
-      KOROUT_BS := '-'
+    if wwDBGrid3.DataSource.DataSet.FieldByName('KOROUT_BK').IsNull or 
+    (wwDBGrid3.DataSource.DataSet.FieldByName('KOROUT_BK').AsFloat = 0) then
+    KOROUT_BK := '-'
     else
-      KOROUT_BS := wwDBGrid3.DataSource.DataSet.FieldByName('KOROUT_BS').AsString;
+    KOROUT_BK := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid3.DataSource.DataSet.FieldByName('KOROUT_BK').AsFloat);
 
-    if (wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BK').AsString = '0') or (wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BK').AsString = '') then
-      AKHIR_BK := '-'
+    if wwDBGrid3.DataSource.DataSet.FieldByName('KOROUT_BS').IsNull or 
+    (wwDBGrid3.DataSource.DataSet.FieldByName('KOROUT_BS').AsFloat = 0) then
+    KOROUT_BS := '-'
     else
-      AKHIR_BK := wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BK').AsString;
+    KOROUT_BS := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid3.DataSource.DataSet.FieldByName('KOROUT_BS').AsFloat);
 
-    if (wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BS').AsString = '0') or (wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BS').AsString = '') then
-      AKHIR_BS := '-'
+    if wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BK').IsNull or 
+    (wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BK').AsFloat = 0) then
+    AKHIR_BK := '-'
     else
-      AKHIR_BS := wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BS').AsString;
+    AKHIR_BK := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BK').AsFloat);
 
-    if (wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BK1').AsString = '0') or (wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BK1').AsString = '') then
-      AKHIR_BK1 := '-'
+    if wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BS').IsNull or 
+    (wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BS').AsFloat = 0) then
+    AKHIR_BS := '-'
     else
-      AKHIR_BK1 := wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BK1').AsString;
+    AKHIR_BS := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BS').AsFloat);
 
-    if (wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BS1').AsString = '0') or (wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BS1').AsString = '') then
-      AKHIR_BS1 := '-'
+    if wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BK1').IsNull or 
+    (wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BK1').AsFloat = 0) then
+    AKHIR_BK1 := '-'
     else
-      AKHIR_BS1 := wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BS1').AsString;
+    AKHIR_BK1 := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BK1').AsFloat);
+
+    if wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BS1').IsNull or 
+    (wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BS1').AsFloat = 0) then
+    AKHIR_BS1 := '-'
+    else
+    AKHIR_BS1 := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BS1').AsFloat);
+
 
         HTMLContent := HTMLContent +
     '                <tr>' +
@@ -1431,6 +1455,7 @@ begin
     '                    <td style="text-align: right;">' + FINISH_BK + '</td>' +
     '                    <td style="text-align: right;">' + FINISH_BS + '</td>' +
     '                    <td style="text-align: right;">' + MTR_BK + '</td>' +
+    '                    <td style="text-align: right;">' + MTR_BS + '</td>' +
     '                    <td style="text-align: right;">' + KOROUT_BK + '</td>' +
     '                    <td style="text-align: right;">' + KOROUT_BS + '</td>' +
     '                    <td style="text-align: right;">' + AKHIR_BK + '</td>' +
@@ -1440,24 +1465,26 @@ begin
     '                    <td style="border: 0px; color: white;">1</td>' +
     '                </tr>';
     // Menambahkan nilai kolom POTONG ke total
-        TotalAWAL_BK :=  TotalAWAL_BK + wwDBGrid3.DataSource.DataSet.FieldByName('AWAL_BK').AsFloat;
-        TotalAWAL_BS :=  TotalAWAL_BS + wwDBGrid3.DataSource.DataSet.FieldByName('AWAL_BS').AsFloat;
-        TotalDLM_BK := TotalDLM_BK + wwDBGrid3.DataSource.DataSet.FieldByName('DLM_BK').AsFloat;
-        TotalDLM_BS := TotalDLM_BS + wwDBGrid3.DataSource.DataSet.FieldByName('DLM_BS').AsFloat;
-        TotalLAIN_BK :=  TotalLAIN_BK + wwDBGrid3.DataSource.DataSet.FieldByName('LAIN_BK').AsFloat;
-        TotalLAIN_BS :=  TotalLAIN_BS + wwDBGrid3.DataSource.DataSet.FieldByName('LAIN_BS').AsFloat;
-        TotalKORIN_BK := TotalKORIN_BK + wwDBGrid3.DataSource.DataSet.FieldByName('KORIN_BK').AsFloat; 
+        TotalAWAL_BK := TotalAWAL_BK + wwDBGrid3.DataSource.DataSet.FieldByName('AWAL_BK').AsFloat;
+        TotalAWAL_BS := TotalAWAL_BS + wwDBGrid3.DataSource.DataSet.FieldByName('AWAL_BS').AsFloat;
+        TotalDLM_BK  := TotalDLM_BK + wwDBGrid3.DataSource.DataSet.FieldByName('DLM_BK').AsFloat;
+        TotalDLM_BS  := TotalDLM_BS + wwDBGrid3.DataSource.DataSet.FieldByName('DLM_BS').AsFloat;
+        TotalLAIN_BK := TotalLAIN_BK + wwDBGrid3.DataSource.DataSet.FieldByName('LAIN_BK').AsFloat;
+        TotalLAIN_BS := TotalLAIN_BS + wwDBGrid3.DataSource.DataSet.FieldByName('LAIN_BS').AsFloat;
+        TotalKORIN_BK := TotalKORIN_BK + wwDBGrid3.DataSource.DataSet.FieldByName('KORIN_BK').AsFloat;
         TotalKORIN_BS := TotalKORIN_BS + wwDBGrid3.DataSource.DataSet.FieldByName('KORIN_BS').AsFloat;
 
-        TotalFINISH_BK := TotalFINISH_BK + wwDBGrid3.DataSource.DataSet.FieldByName('FINISH_BK').AsFloat; 
-        TotalFINISH_BS := TotalFINISH_BS + wwDBGrid3.DataSource.DataSet.FieldByName('FINISH_BS').AsFloat; 
+        TotalFINISH_BK := TotalFINISH_BK + wwDBGrid3.DataSource.DataSet.FieldByName('FINISH_BK').AsFloat;
+        TotalFINISH_BS := TotalFINISH_BS + wwDBGrid3.DataSource.DataSet.FieldByName('FINISH_BS').AsFloat;
         TotalMTR_BK :=    TotalMTR_BK + wwDBGrid3.DataSource.DataSet.FieldByName('MTR_BK').AsFloat;
-        TotalKOROUT_BK := TotalKOROUT_BK + wwDBGrid3.DataSource.DataSet.FieldByName('KOROUT_BK').AsFloat; 
+        TotalMTR_BS :=    TotalMTR_BS + wwDBGrid3.DataSource.DataSet.FieldByName('MTR_BS').AsFloat;
+        TotalKOROUT_BK := TotalKOROUT_BK + wwDBGrid3.DataSource.DataSet.FieldByName('KOROUT_BK').AsFloat;
         TotalKOROUT_BS := TotalKOROUT_BS + wwDBGrid3.DataSource.DataSet.FieldByName('KOROUT_BS').AsFloat;
         TotalAKHIR_BK :=  TotalAKHIR_BK + wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BK').AsFloat;
         TotalAKHIR_BS :=  TotalAKHIR_BS + wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BS').AsFloat;
-        TotalAKHIR_BK1 := TotalAKHIR_BK1 + wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BK1').AsFloat; 
+        TotalAKHIR_BK1 := TotalAKHIR_BK1 + wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BK1').AsFloat;
         TotalAKHIR_BS1 := TotalAKHIR_BS1 + wwDBGrid3.DataSource.DataSet.FieldByName('AKHIR_BS1').AsFloat;
+
         wwDBGrid3.DataSource.DataSet.Next;
     end;
 
@@ -1476,6 +1503,7 @@ begin
     '                    <td style="border: 1px solid black; text-align: right;"><b>' + FloatToStr(TotalFINISH_BK) + '</b></td>' +
     '                    <td style="border: 1px solid black; text-align: right;"><b>' + FloatToStr(TotalFINISH_BS) + '</b></td>' +
     '                    <td style="border: 1px solid black; text-align: right;"><b>' + FloatToStr(TotalMTR_BK) + '</b></td>' +
+    '                    <td style="border: 1px solid black; text-align: right;"><b>' + FloatToStr(TotalMTR_BS) + '</b></td>' +
     '                    <td style="border: 1px solid black; text-align: right;"><b>' + FloatToStr(TotalKOROUT_BK) + '</b></td>' +
     '                    <td style="border: 1px solid black; text-align: right;"><b>' + FloatToStr(TotalKOROUT_BS) + '</b></td>' +
     '                    <td style="border: 1px solid black; text-align: right;"><b>' + FloatToStr(TotalAKHIR_BK) + '</b></td>' +

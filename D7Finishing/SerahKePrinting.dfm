@@ -153,8 +153,8 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              756.708333333333400000
-              232.833333333333400000
+              756.708333333333300000
+              232.833333333333300000
               145.520833333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -185,7 +185,7 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
             Size.Values = (
               44.979166666666670000
               912.812500000000000000
-              232.833333333333400000
+              232.833333333333300000
               158.750000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -265,7 +265,7 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
             Frame.DrawRight = False
             Size.Values = (
               50.270833333333330000
-              828.145833333333200000
+              828.145833333333300000
               293.687500000000000000
               306.916666666666700000)
             Alignment = taLeftJustify
@@ -409,7 +409,7 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
               44.979166666666670000
               1669.520833333333000000
               169.333333333333300000
-              97.895833333333340000)
+              97.895833333333330000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -472,7 +472,7 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
               44.979166666666670000
               1669.520833333333000000
               230.187500000000000000
-              66.145833333333340000)
+              66.145833333333330000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -2751,7 +2751,7 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
             Size.Values = (
               44.979166666666670000
               150.812500000000000000
-              89.958333333333340000
+              89.958333333333330000
               190.500000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -3100,7 +3100,7 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
               44.979166666666670000
               1738.312500000000000000
               37.041666666666670000
-              66.145833333333340000)
+              66.145833333333330000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -3149,9 +3149,9 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
             Frame.DrawRight = False
             Size.Values = (
               63.500000000000000000
-              391.583333333333400000
-              97.895833333333340000
-              320.145833333333400000)
+              391.583333333333300000
+              97.895833333333330000
+              320.145833333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -3175,8 +3175,8 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
             Size.Values = (
               63.500000000000000000
               1214.437500000000000000
-              97.895833333333340000
-              264.583333333333400000)
+              97.895833333333330000
+              264.583333333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -3223,7 +3223,7 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333340000
+              58.208333333333330000
               357.187500000000000000
               248.708333333333300000
               394.229166666666700000)
@@ -3302,7 +3302,7 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
             Frame.DrawRight = False
             Size.Values = (
               50.270833333333330000
-              574.145833333333400000
+              574.145833333333300000
               7.937500000000000000
               129.645833333333300000)
             Alignment = taLeftJustify
@@ -3381,7 +3381,7 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
               44.979166666666670000
               809.625000000000000000
               7.937500000000000000
-              232.833333333333400000)
+              232.833333333333300000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -5665,7 +5665,7 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              854.604166666666800000
+              854.604166666666600000
               71.437500000000000000
               145.520833333333300000)
             Alignment = taRightJustify
@@ -5692,7 +5692,7 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
               44.979166666666670000
               1074.208333333333000000
               74.083333333333340000
-              92.604166666666680000)
+              92.604166666666660000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -5835,7 +5835,7 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
               44.979166666666670000
               1415.520833333333000000
               74.083333333333340000
-              92.604166666666680000)
+              92.604166666666660000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -6132,7 +6132,7 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
             Size.Values = (
               63.500000000000000000
               1457.854166666667000000
-              296.333333333333400000
+              296.333333333333300000
               394.229166666666700000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -6156,7 +6156,7 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
             Frame.DrawRight = False
             Size.Values = (
               50.270833333333330000
-              687.916666666666800000
+              687.916666666666600000
               7.937500000000000000
               129.645833333333300000)
             Alignment = taLeftJustify
@@ -6295,7 +6295,7 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
               44.979166666666670000
               1613.958333333333000000
               275.166666666666700000
-              68.791666666666680000)
+              68.791666666666660000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -6629,8 +6629,8 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
         Selected.Strings = (
           'KD_PRODUKSI'#9'15'#9'KODE~PRODUKSI'#9'F'
           'KONSTRUKSI'#9'40'#9'KONSTRUKSI'#9'F'
-          'QTY_POTONG'#9'10'#9'METER'#9'F'#9'QTY KONVERSIAN'
-          'QTY_METER'#9'10'#9'POTONG'#9'F'#9'QTY KONVERSIAN')
+          'QTY_POTONG'#9'10'#9'POTONG'#9'F'#9'QTY KONVERSIAN'
+          'QTY_METER'#9'10'#9'METER'#9'F'#9'QTY KONVERSIAN')
         IniAttributes.Enabled = True
         IniAttributes.SaveToRegistry = True
         IniAttributes.FileName = 'Finishing'
@@ -7240,9 +7240,7 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
   object QBrowse: TOracleDataSet
     SQL.Strings = (
       'select * from'
-      
-        '(select * from ipisma_db5.vserah_finish_opening where kd_transak' +
-        'si = '#39'993'#39')'
+      '(select * from ipisma_db5.vserah_finish_opening2)'
       ':myparam'
       '')
     Variables.Data = {
@@ -7425,7 +7423,7 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
     SQL.Strings = (
       
         'select count(qty_gulung) as gulung, sum(qty_potong) as potong fr' +
-        'om ipisma_db5.vserah_finish_opening'
+        'om ipisma_db5.vserah_finish_opening2'
       ':myparam'
       '')
     Variables.Data = {
@@ -7634,25 +7632,37 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
   end
   object QPerKonstruksi_M: TOracleDataSet
     SQL.Strings = (
-      
-        'select distinct kd_produksi, konstruksi,sum(qty_potong) as qty_p' +
-        'otong, sum(qty_potong/2.15) as qty_meter'
-      'from ipisma_db5.vserah_finish_opening'
-      
-        'where trunc (tgl)>=:pawal and (tgl)<=:pakhir and kd_transaksi = ' +
-        #39'993'#39' and kd_produksi LIKE '#39'%PG%'#39
-      ':myparam'
+      'SELECT'
+      '  kd_produksi,'
+      '  konstruksi,'
+      '  satuan,'
+      '  '
+      '  CASE'
+      '    WHEN satuan = '#39'PCS'#39' THEN SUM(qty_potong)'
+      '    WHEN satuan = '#39'METER'#39' THEN SUM(qty_potong) / 2.20'
+      '  END AS qty_potong,'
       ''
-      '')
+      '  CASE'
+      '    WHEN satuan = '#39'PCS'#39' THEN SUM(qty_potong) * 2.20'
+      '    WHEN satuan = '#39'METER'#39' THEN SUM(qty_potong)'
+      '  END AS qty_meter'
+      ''
+      'FROM'
+      '  ipisma_db5.vserah_finish_opening2'
+      'WHERE'
+      '  trunc (tgl)>=:pawal and (tgl)<=:pakhir'
+      '  AND kd_produksi LIKE '#39'%PG%'#39
+      ':myparam')
     Variables.Data = {
-      0300000003000000080000003A4D59504152414D010000002100000067726F75
-      70206279206B6F6E737472756B73692C206B645F70726F64756B736900000000
-      00060000003A504157414C0C0000000000000000000000070000003A50414B48
-      49520C0000000000000000000000}
+      0300000003000000080000003A4D59504152414D010000002800000067726F75
+      70206279206B6F6E737472756B73692C206B645F70726F64756B73692C736174
+      75616E0000000000060000003A504157414C0C00000000000000000000000700
+      00003A50414B4849520C0000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
-      04000000040000000A0000004B4F4E535452554B53490100000000000B000000
+      04000000050000000A0000004B4F4E535452554B53490100000000000B000000
       4B445F50524F44554B53490100000000000A0000005154595F504F544F4E4701
-      0000000000090000005154595F4D45544552010000000000}
+      0000000000090000005154595F4D455445520100000000000600000053415455
+      414E010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -7674,6 +7684,10 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
       FieldName = 'QTY_METER'
       DisplayFormat = '0.0,0;(0.0,0);-'
     end
+    object QPerKonstruksi_MSATUAN: TStringField
+      FieldName = 'SATUAN'
+      Size = 10
+    end
   end
   object dsQPerKonstruksi_M: TwwDataSource
     DataSet = QPerKonstruksi_M
@@ -7682,18 +7696,33 @@ object SerahKePrintingFrm: TSerahKePrintingFrm
   end
   object QPerKonstruksi_M_Tot: TOracleDataSet
     SQL.Strings = (
-      
-        'select sum(qty_potong) as qty_potong, sum(qty_potong/2.15) as qt' +
-        'y_meter'
-      'from ipisma_db5.vserah_finish_opening'
-      
-        'where trunc (tgl)>=:pawal and (tgl)<=:pakhir and kd_transaksi = ' +
-        #39'993'#39' and kd_produksi LIKE '#39'%PG%'#39
+      'SELECT'
+      '  SUM('
+      '    CASE'
+      '      WHEN satuan = '#39'PCS'#39' THEN qty_potong'
+      '      WHEN satuan = '#39'METER'#39' THEN qty_potong / 2.20'
+      '    END'
+      '  ) AS qty_potong,'
+      ''
+      '  SUM('
+      '    CASE'
+      '      WHEN satuan = '#39'PCS'#39' THEN qty_potong * 2.20'
+      '      WHEN satuan = '#39'METER'#39' THEN qty_potong'
+      '    END'
+      '  ) AS qty_meter'
+      'FROM'
+      '  ipisma_db5.vserah_finish_opening2'
+      'WHERE'
+      '  trunc(tgl) >= :pawal'
+      '  AND trunc(tgl) <= :pakhir'
+      '  AND kd_produksi LIKE '#39'%PG%'#39
+      ''
       ''
       '')
     Variables.Data = {
-      0300000002000000060000003A504157414C0C00000000000000000000000700
-      00003A50414B4849520C0000000000000000000000}
+      0300000002000000060000003A504157414C0C00000007000000787D070E0101
+      0100000000070000003A50414B4849520C00000007000000787D070E01010100
+      000000}
     QBEDefinition.QBEFieldDefs = {
       04000000020000000A0000005154595F504F544F4E4701000000000009000000
       5154595F4D45544552010000000000}

@@ -359,6 +359,9 @@ type
     wwDBLookupComboDlg2: TwwDBLookupComboDlg;
     Button1: TButton;
     QUnpost: TOracleQuery;
+    LookKereta: TwwDBLookupCombo;
+    QBrowseKereta2: TOracleDataSet;
+    QBrowseKeretaKD_KERETA: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -441,6 +444,7 @@ type
     procedure wwDBLookupComboDlg2CloseUp(Sender: TObject; LookupTable,
       FillTable: TDataSet; modified: Boolean);
     procedure Button1Click(Sender: TObject);
+    procedure LookKeretaEnter(Sender: TObject);
   private
     { Private declarations }
     vTab,vfilter,vorder : string;
@@ -544,7 +548,7 @@ QDetailTGL_INSERT.AsDateTime:=DMFrm.QUserTimeVTGL.AsDateTime;
 QDetailOPR_INSERT.AsString:=DMFrm.QUserTimeUSER_OPR.AsString; }
 
    
-  //QDetailSATUAN.AsString:='KODI';
+  QDetailSATUAN.AsString:='PCS';
 //  QDetailMUTU.AsString:='KW1';
   //QDetailJENIS.AsString:='PALEKAT';
 {AZMI}
@@ -1186,6 +1190,12 @@ if QBrowse.Active= true then
   ShowMessage(E.Message);
   end;
 end;
+end;
+
+procedure TSerahKeKemasFrm.LookKeretaEnter(Sender: TObject);
+begin
+  QBrowseKereta2.Close;
+  QBrowseKereta2.Open;
 end;
 
 end.

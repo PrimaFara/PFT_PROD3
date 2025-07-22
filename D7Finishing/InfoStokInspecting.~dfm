@@ -1,6 +1,6 @@
 object InfoStokInspectingFrm: TInfoStokInspectingFrm
-  Left = 269
-  Top = 134
+  Left = 370
+  Top = 141
   Width = 1146
   Height = 613
   Caption = 'Info Stok Inspecting'
@@ -16530,6 +16530,7 @@ object InfoStokInspectingFrm: TInfoStokInspectingFrm
           'FINISH_BK'#9'10'#9'FINISH_BK'#9'F'#9'KELUAR (PCS)'
           'FINISH_BS'#9'10'#9'FINISH_BS'#9'F'#9'KELUAR (PCS)'
           'MTR_BK'#9'10'#9'LAIN_BK'#9'F'#9'KELUAR (PCS)'
+          'MTR_BS'#9'10'#9'LAIN_BS'#9'F'#9'KELUAR (PCS)'
           'KOROUT_BK'#9'10'#9'KOROUT_BK'#9'F'#9'KELUAR (PCS)'
           'KOROUT_BS'#9'10'#9'KOROUT_BS'#9'F'#9'KELUAR (PCS)'
           'AKHIR_BK'#9'10'#9'BK'#9'F'#9'AKHIR (PCS)'
@@ -17609,7 +17610,7 @@ object InfoStokInspectingFrm: TInfoStokInspectingFrm
   object QProcWIPn2: TOracleQuery
     SQL.Strings = (
       'begin'
-      '  ipisma_db5.proc_wip_inspecting_new3(:pawal,:pakhir);'
+      '  ipisma_db5.proc_wip_inspecting_new4(:pawal,:pakhir);'
       'end;')
     Session = DMFrm.OS
     Variables.Data = {

@@ -9606,7 +9606,6 @@ object MainFrm: TMainFrm
         end
         object SerahKeKemas1: TMenuItem
           Caption = '995. Kirim Ke Kemas'
-          Visible = False
           OnClick = SerahKeKemas1Click
         end
         object N996KirimExCWKeFinishing1: TMenuItem

@@ -2785,7 +2785,7 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -2976,7 +2976,7 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -3012,7 +3012,7 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
             FontSize = 8
           end
           object QRSysData1: TQRSysData
-            Left = -54
+            Left = 687
             Top = 8
             Width = 69
             Height = 17
@@ -3047,9 +3047,9 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              883.708333333333400000
+              883.708333333333300000
               21.166666666666670000
-              232.833333333333400000)
+              232.833333333333300000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = False
@@ -3082,7 +3082,7 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            320.145833333333400000
+            320.145833333333300000
             2000.250000000000000000)
           BandType = rbGroupFooter
           object QRDBText4: TQRDBText
@@ -3336,7 +3336,7 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText5: TQRDBText
@@ -4512,11 +4512,14 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
             'GRUP;CustomEdit;LookGrup;F'
             'MESIN;CustomEdit;LookMesin;F'
             'NO_RESEP;CustomEdit;LookAmbil;F'
-            'KD_PRODUKSI;CustomEdit;LookAmbil;F')
+            'KD_PRODUKSI;CustomEdit;LookAmbil;F'
+            'KETERANGAN;CustomEdit;LookKereta;F')
           Selected.Strings = (
+            'KETERANGAN'#9'10'#9'KERETA'#9'F'
             'KD_PRODUKSI'#9'10'#9'KODE~PRODUKSI'#9'F'
             'KONSTRUKSI'#9'40'#9'KONSTRUKSI'#9'T'
-            'QTY_GULUNG'#9'10'#9'QTY KODI'#9'F')
+            'QTY_GULUNG'#9'10'#9'QTY'#9'F'
+            'SATUAN'#9'10'#9'SATUAN'#9'F')
           IniAttributes.Delimiter = ';;'
           TitleColor = clSkyBlue
           FixedCols = 0
@@ -4617,7 +4620,6 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
           ItemHeight = 0
           Items.Strings = (
             'PCS'
-            'POTONG'
             'METER')
           Sorted = False
           TabOrder = 10
@@ -4672,6 +4674,26 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
           Sorted = False
           TabOrder = 12
           UnboundDataType = wwDefault
+        end
+        object LookKereta: TwwDBLookupCombo
+          Left = 48
+          Top = 299
+          Width = 121
+          Height = 21
+          DropDownAlignment = taLeftJustify
+          Selected.Strings = (
+            'KD_KERETA'#9'10'#9'KD_KERETA'#9'F')
+          DataField = 'KETERANGAN'
+          DataSource = dsQDetail
+          LookupTable = QBrowseKereta2
+          LookupField = 'KD_KERETA'
+          Options = [loColLines, loRowLines, loTitles]
+          TabOrder = 13
+          AutoDropDown = True
+          ShowButton = True
+          PreciseEditRegion = False
+          AllowClearKey = False
+          OnEnter = LookKeretaEnter
         end
       end
     end
@@ -4942,14 +4964,14 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
           'ISPOST'#9'1'#9'ISPOST'#9#9
           'TGL_INSERT'#9'18'#9'TGL INSERT'#9'F'
           'OPR_INSERT'#9'30'#9'OPR INSERT'#9'F'
-          'KET_DETAIL'#9'20'#9'KETERANGAN'#9'F'
+          'KET_DETAIL'#9'20'#9'KERETA DET'#9'F'
           'JENIS'#9'10'#9'JENIS'#9'F'
-          'KERETA'#9'5'#9'KERETA'#9'F'
           'CORAK'#9'30'#9'CORAK'#9'F'
           'GROUP_DET'#9'3'#9'GROUP_DET'#9'F'
           'KD_CORAK'#9'6'#9'KD_CORAK'#9'F'
           'KD_TRANSAKSI'#9'3'#9'KD_TRANSAKSI'#9'F'
-          'KETERANGAN'#9'20'#9'KETERANGAN'#9'F'
+          'KERETA'#9'6'#9'KERETA'#9'F'
+          'KETERANGAN'#9'10'#9'KETERANGAN'#9'F'
           'MESIN'#9'30'#9'MESIN'#9'F'
           'NO_ORDER'#9'30'#9'NO_ORDER'#9'F'
           'NO_REFF'#9'20'#9'NO_REFF'#9'F'
@@ -5111,7 +5133,7 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
+              60.854166666666670000
               452.437500000000000000
               201.083333333333300000
               1092.729166666667000000)
@@ -5142,9 +5164,9 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333340000
+              58.208333333333330000
               269.875000000000000000
-              74.083333333333340000
+              74.083333333333330000
               365.125000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -5488,9 +5510,9 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333340000
-              931.333333333333500000
-              264.583333333333400000
+              58.208333333333330000
+              931.333333333333300000
+              264.583333333333300000
               137.583333333333300000)
             Alignment = taCenter
             AlignToBand = True
@@ -5553,7 +5575,7 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
               44.979166666666670000
               1664.229166666667000000
               23.812500000000000000
-              66.145833333333340000)
+              66.145833333333330000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -5603,8 +5625,8 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              336.020833333333400000
-              42.333333333333340000
+              336.020833333333300000
+              42.333333333333330000
               222.250000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -5628,7 +5650,7 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              854.604166666666800000
+              854.604166666666700000
               71.437500000000000000
               145.520833333333300000)
             Alignment = taRightJustify
@@ -5654,8 +5676,8 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
             Size.Values = (
               44.979166666666670000
               1074.208333333333000000
-              74.083333333333340000
-              92.604166666666680000)
+              74.083333333333330000
+              92.604166666666670000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -5797,8 +5819,8 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
             Size.Values = (
               44.979166666666670000
               1415.520833333333000000
-              74.083333333333340000
-              92.604166666666680000)
+              74.083333333333330000
+              92.604166666666670000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -5881,7 +5903,7 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
             Size.Values = (
               44.979166666666670000
               1669.520833333333000000
-              42.333333333333340000
+              42.333333333333330000
               238.125000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -5947,7 +5969,7 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText14: TQRDBText
@@ -5983,7 +6005,7 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
             FontSize = 8
           end
           object QRSysData2: TQRSysData
-            Left = -54
+            Left = 687
             Top = 8
             Width = 69
             Height = 17
@@ -6054,7 +6076,7 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            391.583333333333400000
+            391.583333333333300000
             2000.250000000000000000)
           BandType = rbGroupFooter
           object QRLabel22: TQRLabel
@@ -6070,7 +6092,7 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
             Size.Values = (
               63.500000000000000000
               1547.812500000000000000
-              97.895833333333340000
+              97.895833333333330000
               201.083333333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -6095,7 +6117,7 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
             Size.Values = (
               63.500000000000000000
               1457.854166666667000000
-              296.333333333333400000
+              296.333333333333300000
               394.229166666666700000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -6119,7 +6141,7 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
             Frame.DrawRight = False
             Size.Values = (
               50.270833333333330000
-              687.916666666666800000
+              687.916666666666700000
               7.937500000000000000
               129.645833333333300000)
             Alignment = taLeftJustify
@@ -6258,7 +6280,7 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
               44.979166666666670000
               1613.958333333333000000
               275.166666666666700000
-              68.791666666666680000)
+              68.791666666666670000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -6324,7 +6346,7 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText19: TQRDBText
@@ -6992,7 +7014,7 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
     SequenceField.Sequence = 'ipisma_db5.REG_SERAH_OPENING_DET'
     SequenceField.ApplyMoment = amOnNewRecord
     QBEDefinition.QBEFieldDefs = {
-      04000000170000000D0000004E4F5F5245475F44455441494C01000000000006
+      04000000190000000D0000004E4F5F5245475F44455441494C01000000000006
       0000004E4F5F5245470100000000000A00000054474C5F494E53455254010000
       0000000A0000004F50525F494E534552540100000000000A0000004B45544552
       414E47414E0100000000000A0000005154595F47554C554E470100000000000A
@@ -7005,7 +7027,8 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
       00000000080000004E4F5F52455345500100000000000B0000004B445F50524F
       44554B53490100000000000B0000004D4553494E5F54454E554E010000000000
       0B00000054474C5F494E5350454354010000000000050000004E4F5F504F0100
-      00000000090000004E4F5F44455341494E010000000000}
+      00000000090000004E4F5F44455341494E010000000000050000004D49545241
+      0100000000000700000054474C5F505447010000000000}
     Master = QMaster
     MasterFields = 'NO_REG'
     DetailFields = 'NO_REG'
@@ -7486,7 +7509,16 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
   end
   object QAmbil: TOracleDataSet
     SQL.Strings = (
-      'select * from ipisma_db5.kd_produksi_mitra')
+      
+        'select distinct kp as kd_produksi, kd_konstruksi as kd_konstruks' +
+        'i, konstruksi as sub_kelompok from ('
+      'select distinct y.kp, y.KD_KONSTRUKSI, '
+      
+        'substr(y.NAMA_KONSTRUKSI,0,LENGTH(y.NAMA_KONSTRUKSI) - 3) as kon' +
+        'struksi'
+      'from ipisma_db4.vkode_prod_kons2 y'
+      'where mutu='#39'BK'#39')'
+      'order by kp')
     Variables.Data = {
       0300000001000000080000003A4D59504152414D010000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
@@ -7634,5 +7666,20 @@ object SerahKeKemasFrm: TSerahKeKemasFrm
       0300000001000000080000003A4E4F5F4E4F5441050000000000000000000000}
     Left = 500
     Top = 264
+  end
+  object QBrowseKereta2: TOracleDataSet
+    SQL.Strings = (
+      'select a.* from ipisma_db5.kereta a'
+      'order by kd_kereta asc')
+    QBEDefinition.QBEFieldDefs = {0400000001000000090000004B445F4B4552455441010000000000}
+    QueryAllRecords = False
+    Session = DMFrm.OS
+    Left = 352
+    Top = 416
+    object QBrowseKeretaKD_KERETA: TStringField
+      DisplayWidth = 10
+      FieldName = 'KD_KERETA'
+      Size = 10
+    end
   end
 end

@@ -4919,6 +4919,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
         Width = 1640
         Height = 766
         Selected.Strings = (
+          'NO_NOTA'#9'20'#9'NO NOTA'#9'F'
           'NO_URUT'#9'5'#9'URUT'#9'F'
           'GRUP'#9'5'#9'GRUP'#9'F'#9'OPERATOR TENUN'
           'NIK'#9'7'#9'NIK'#9'F'#9'OPERATOR TENUN'
@@ -5019,7 +5020,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
         OnTitleButtonClick = wwDBGrid18TitleButtonClick
         PaintOptions.AlternatingRowColor = clMoneyGreen
         PaintOptions.ActiveRecordColor = clGreen
-        GroupFieldName = 'NO_REG'
+        GroupFieldName = 'NO_NOTA'
       end
       object Panel6: TPanel
         Left = 0
@@ -5282,6 +5283,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
         Width = 1640
         Height = 766
         Selected.Strings = (
+          'NO_NOTA'#9'20'#9'NO NOTA'#9'F'
           'NO_URUT'#9'5'#9'URUT'#9'F'
           'GRUP'#9'5'#9'GRUP'#9'F'#9'OPERATOR TENUN'
           'NIK'#9'7'#9'NIK'#9'F'#9'OPERATOR TENUN'
@@ -5382,7 +5384,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
         OnTitleButtonClick = wwDBGrid10TitleButtonClick
         PaintOptions.AlternatingRowColor = clMoneyGreen
         PaintOptions.ActiveRecordColor = clGreen
-        GroupFieldName = 'NO_REG'
+        GroupFieldName = 'NO_NOTA'
       end
       object wwDBGrid3: TwwDBGrid
         Left = 0
@@ -5520,6 +5522,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
         Width = 1640
         Height = 766
         Selected.Strings = (
+          'NO_NOTA'#9'20'#9'NO NOTA'#9'F'
           'NO_URUT'#9'5'#9'URUT'#9'F'
           'GRUP'#9'5'#9'GRUP'#9'F'#9'OPERATOR TENUN'
           'NIK'#9'7'#9'NIK'#9'F'#9'OPERATOR TENUN'
@@ -5620,7 +5623,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
         OnTitleButtonClick = wwDBGrid19TitleButtonClick
         PaintOptions.AlternatingRowColor = clMoneyGreen
         PaintOptions.ActiveRecordColor = clGreen
-        GroupFieldName = 'NO_REG'
+        GroupFieldName = 'NO_NOTA'
       end
       object Panel20: TPanel
         Left = 0
@@ -5883,6 +5886,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
         Width = 1640
         Height = 766
         Selected.Strings = (
+          'NO_NOTA'#9'20'#9'NO NOTA'#9'F'
           'NO_URUT'#9'5'#9'URUT'#9'F'
           'GRUP'#9'5'#9'GRUP'#9'F'#9'OPERATOR TENUN'
           'NIK'#9'7'#9'NIK'#9'F'#9'OPERATOR TENUN'
@@ -5983,7 +5987,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
         OnTitleButtonClick = wwDBGrid10TitleButtonClick
         PaintOptions.AlternatingRowColor = clMoneyGreen
         PaintOptions.ActiveRecordColor = clGreen
-        GroupFieldName = 'NO_REG'
+        GroupFieldName = 'NO_NOTA'
       end
       object wwDBGrid13: TwwDBGrid
         Left = 0

@@ -380,6 +380,7 @@ type
     QBrowseNO_BATCH: TStringField;
     QPerKonstruksi_MQTY_METER: TFloatField;
     QPerKonstruksi_M_TotQTY_METER: TFloatField;
+    QPerKonstruksi_MSATUAN: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -716,7 +717,7 @@ QBrowse.Open;
   QBrowse.SetVariable('myparam',vfilter+vorder);
   QBrowse.Open;
   QBrowseTotal.Close;
-  QBrowseTotal.SetVariable('myparam',vfilter);
+  QBrowseTotal.SetVariable('myparam',vfilter+vorder);
   QBrowseTotal.Open;
   QBrowse.EnableControls;
   wwDBGrid1xxxxx.ColumnByName('QTY_GULUNG').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QBrowseTotalGULUNG.AsFloat);

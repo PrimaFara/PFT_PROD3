@@ -9788,7 +9788,7 @@ object foldinginspFrm: TfoldinginspFrm
             Left = 208
             Top = 15
             Width = 75
-            Height = 25
+            Height = 26
             Anchors = [akTop, akRight]
             Caption = '&Print'
             TabOrder = 2

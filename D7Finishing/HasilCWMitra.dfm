@@ -7226,6 +7226,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
               'PPC (Potrait)')
             ParentFont = False
             TabOrder = 5
+            Visible = False
           end
         end
       end

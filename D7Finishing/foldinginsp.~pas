@@ -1375,10 +1375,12 @@ begin
   FilePath := ExtractFilePath(Application.ExeName) + 'Laporan Produksi Folding.html';
   HTMLFile := TStringList.Create;
   try
+  
     if VTglAwal11.Date = VTglAkhir11.Date then
       TanggalStr := FormatDateTime('dd mmmm yyyy', VTglAwal11.Date)
     else
       TanggalStr := FormatDateTime('dd mmmm yyyy', VTglAwal11.Date) + ' - ' + FormatDateTime('dd mmmm yyyy', VTglAkhir11.Date);
+
     HTMLContent := 
       '<!DOCTYPE html>' +
       '<html lang="id">' +
