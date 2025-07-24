@@ -716,11 +716,11 @@ end;
 
 procedure TReinspecPajitexFrm.QDetailBeforeEdit(DataSet: TDataSet);
 begin
-  if QMasterISPOST.AsString='1' then
-  begin
-    ShowMessage('Maaf, sudah di-POSTING, tidak bisa diedit !...');
+  //if QMasterISPOST.AsString='1' then
+  //begin
+  //  ShowMessage('Maaf, sudah di-POSTING, tidak bisa diedit !...');
     //Abort;
-    Dataset.Cancel;
+  //  Dataset.Cancel;
   end;
 
 end;

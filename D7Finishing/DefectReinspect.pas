@@ -177,7 +177,6 @@ type
     QMasterNO_BUKTI: TStringField;
     QMasterNO_ORDER: TStringField;
     QMasterTGL_INSPECT: TDateTimeField;
-    QDetailNO_REG_DETAIL: TFloatField;
     QDetailNO_REG: TFloatField;
     QDetailNIK: TStringField;
     QDetailNO_SERI_BEAM: TStringField;
@@ -1655,6 +1654,7 @@ type
     QBrowse_Loom2_totM_RUSAK2: TFloatField;
     QBrowse_Loom2_totP_M_RUSAK2: TFloatField;
     QBrowseTGL_TERIMA: TDateTimeField;
+    QDetailNO_REG_DETAIL: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);

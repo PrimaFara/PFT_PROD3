@@ -515,6 +515,8 @@ type
     QBrowseWARNA: TStringField;
     QBrowseTGL_INSERT: TDateTimeField;
     QBrowseOPR_INSERT: TStringField;
+    QPerShiftLELANG: TFloatField;
+    QPerShiftLELANG_KODI: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -1616,7 +1618,7 @@ QPerShift.Open;
   QPerShift.Open;
   QPerShift.EnableControls;
 
-  t1 := 0; t2 := 0; t3 := 0; t4 := 0; t5 := 0; t6 := 0; // t7 := 0; t8 := 0;
+  t1 := 0; t2 := 0; t3 := 0; t4 := 0; t5 := 0; t6 := 0;  t7 := 0; t8 := 0;
 
   while not QPerShift.Eof do
   begin
@@ -1629,8 +1631,8 @@ QPerShift.Open;
         t5 := t5 + QPerShiftBS.AsFloat;
         t6 := t6 + QPerShiftBS_KODI.AsFloat;
         
-        //t7 := t7 + QPerShiftLELANG.AsFloat;
-        //t8 := t8 + QPerShiftLELANG_KODI.AsFloat;
+        t7 := t7 + QPerShiftLELANG.AsFloat;
+        t8 := t8 + QPerShiftLELANG_KODI.AsFloat;
 
         QPerShift.Next;
   end;
@@ -1646,8 +1648,8 @@ QPerShift.Open;
   wwDBGrid2.ColumnByName('BS_KODI').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',t6);
 
   //BELUM DIGUNAKAN
-  //wwDBGrid2.ColumnByName('LELANG').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',t7);
-  //wwDBGrid2.ColumnByName('LELANG_KODI').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',t8);
+  wwDBGrid2.ColumnByName('LELANG').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',t7);
+  wwDBGrid2.ColumnByName('LELANG_KODI').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',t8);
 
 end;
 
@@ -1680,8 +1682,8 @@ var
   i: Integer;
   FieldName: String;
   FileName: string;
-  TotalQtyTot, TotalBk, TotalBs: Real;
-  TotalQtyTotKodi, TotalBkKodi, TotalBsKodi: Real;
+  TotalQtyTot, TotalBk, TotalBs, TotalLelang: Real;
+  TotalQtyTotKodi, TotalBkKodi, TotalBsKodi, TotalLelangKodi: Real;
 begin
   WebBrowser1.BringToFront;
   HTMLContent := TStringList.Create;
@@ -1693,6 +1695,9 @@ begin
     TotalQtyTotKodi := 0;
     TotalBkKodi := 0;
     TotalBsKodi := 0;
+
+    TotalLelang := 0;
+    TotalLelangKodi := 0;
 
     // Membuat bagian awal HTML
     HTMLContent.Add('<html><head><style>@page {size: A4; margin: 10mm;}');
@@ -1731,6 +1736,8 @@ begin
     HTMLContent.Add('<th>GRADE A KODI</th>');
     HTMLContent.Add('<th>GRADE B PCS</th>');
     HTMLContent.Add('<th>GRADE B KODI</th>');
+    HTMLContent.Add('<th>LELANG PCS</th>');
+    HTMLContent.Add('<th>LELANG KODI</th>');
     HTMLContent.Add('</tr>');
 
     // Menambahkan baris data dari wwDBGrid2
@@ -1755,7 +1762,12 @@ begin
         else if FieldName = 'BS' then
           TotalBs := TotalBs + wwDBGrid2.DataSource.DataSet.FieldByName(FieldName).AsFloat
         else if FieldName = 'BS_KODI' then
-          TotalBsKodi := TotalBsKodi + wwDBGrid2.DataSource.DataSet.FieldByName(FieldName).AsFloat;
+          TotalBsKodi := TotalBsKodi + wwDBGrid2.DataSource.DataSet.FieldByName(FieldName).AsFloat
+
+        else if FieldName = 'LELANG' then
+          TotalLelang := TotalLelang + wwDBGrid2.DataSource.DataSet.FieldByName(FieldName).AsFloat
+        else if FieldName = 'LELANG_KODI' then
+          TotalLelangKodi := TotalLelangKodi + wwDBGrid2.DataSource.DataSet.FieldByName(FieldName).AsFloat;
       end;
       HTMLContent.Add('</tr>');
       wwDBGrid2.DataSource.DataSet.Next;
@@ -1778,6 +1790,12 @@ begin
         HTMLContent.Add('<td><b>' + FormatFloat('0.00', TotalBs) + '</b></td>')
       else if FieldName = 'BS_KODI' then
         HTMLContent.Add('<td><b>' + FormatFloat('0.00', TotalBsKodi) + '</b></td>')
+
+      else if FieldName = 'LELANG' then
+        HTMLContent.Add('<td><b>' + FormatFloat('0.00', TotalLelang) + '</b></td>')
+      else if FieldName = 'LELANG_KODI' then
+        HTMLContent.Add('<td><b>' + FormatFloat('0.00', TotalLelangKodi) + '</b></td>')
+
       else
         HTMLContent.Add('<td></td>'); // Kolom lain yang tidak perlu dijumlahkan
     end;
@@ -1907,8 +1925,8 @@ var
   i: Integer;
   FieldName: String;
   FileName: string;
-  TotalQtyTot, TotalBk, TotalBs: Real;
-  TotalQtyTotKodi, TotalBkKodi, TotalBsKodi: Real;
+  TotalQtyTot, TotalBk, TotalBs, TotalLelang: Real;
+  TotalQtyTotKodi, TotalBkKodi, TotalBsKodi, TotalLelangKodi: Real;
 begin
   WebBrowser2.BringToFront;
   HTMLContent := TStringList.Create;
@@ -1957,6 +1975,8 @@ begin
     HTMLContent.Add('<th>GRADE A KODI</th>');
     HTMLContent.Add('<th>GRADE B PCS</th>');
     HTMLContent.Add('<th>GRADE B KODI</th>');
+    HTMLContent.Add('<th>LELANG PCS</th>');
+    HTMLContent.Add('<th>LELANG KODI</th>');
     HTMLContent.Add('</tr>');
 
     // Menambahkan baris data dari wwDBGrid3
@@ -1981,7 +2001,11 @@ begin
         else if FieldName = 'BS' then
           TotalBs := TotalBs + wwDBGrid3.DataSource.DataSet.FieldByName(FieldName).AsFloat
         else if FieldName = 'BS_KODI' then
-          TotalBsKodi := TotalBsKodi + wwDBGrid3.DataSource.DataSet.FieldByName(FieldName).AsFloat;
+          TotalBsKodi := TotalBsKodi + wwDBGrid3.DataSource.DataSet.FieldByName(FieldName).AsFloat
+        else if FieldName = 'LELANG' then
+          TotalLelang := TotalLelang + wwDBGrid3.DataSource.DataSet.FieldByName(FieldName).AsFloat
+        else if FieldName = 'LELANG_KODI' then
+          TotalLelangKodi := TotalLelangKodi + wwDBGrid3.DataSource.DataSet.FieldByName(FieldName).AsFloat;
       end;
       HTMLContent.Add('</tr>');
       wwDBGrid3.DataSource.DataSet.Next;
@@ -2003,7 +2027,12 @@ begin
       else if FieldName = 'BS' then
         HTMLContent.Add('<td><b>' + FormatFloat('0.00', TotalBs) + '</b></td>')
       else if FieldName = 'BS_KODI' then
-        HTMLContent.Add('<td><b>' + FormatFloat('0.00', TotalBsKodi) + '</b></td>')
+        HTMLContent.Add('<td><b>' + FormatFloat('0.00', TotalBsKodi) + '</b></td>')  
+      else if FieldName = 'LELANG' then
+        HTMLContent.Add('<td><b>' + FormatFloat('0.00', TotalLelang) + '</b></td>')
+      else if FieldName = 'LELANG_KODI' then
+        HTMLContent.Add('<td><b>' + FormatFloat('0.00', TotalLelangKodi) + '</b></td>')
+
       else
         HTMLContent.Add('<td></td>'); // Kolom lain yang tidak perlu dijumlahkan
     end;
@@ -2066,8 +2095,8 @@ begin
   wwDBGrid3.ColumnByName('BS_KODI').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QPerKonstruksiKemas_TotBS_KODI.AsFloat);
 
   //BELUM DIGUNAKAN
-  //wwDBGrid3.ColumnByName('LELANG').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QPerKonstruksiKemas_TotLELANG.AsFloat);
-  //wwDBGrid3.ColumnByName('LELANG_KODI').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QPerKonstruksiKemas_TotLELANG_KODI.AsFloat);
+  wwDBGrid3.ColumnByName('LELANG').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QPerKonstruksiKemas_TotLELANG.AsFloat);
+  wwDBGrid3.ColumnByName('LELANG_KODI').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QPerKonstruksiKemas_TotLELANG_KODI.AsFloat);
 
 
 end;

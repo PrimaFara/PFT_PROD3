@@ -501,6 +501,8 @@ type
     QProc_PerMitra: TOracleQuery;
     QNota_LPBNOTA_PRINT: TStringField;
     FNo_Urut_LPB2NO_LPB: TStringField;
+    CekUnpost: TOracleDataSet;
+    CekUnpostVCOUNT: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -718,10 +720,23 @@ procedure TReinspecPajitexFrm.QDetailBeforeEdit(DataSet: TDataSet);
 begin
   if QMasterISPOST.AsString='1' then
   begin
-    ShowMessage('Maaf, sudah di-POSTING, tidak bisa diedit !...');
+    CekUnpost.Close;
+    CekUnpost.SetVariable('no_reg', QMasterNO_REG.AsInteger);
+    CekUnpost.Open;
+
+ if CekUnpostVCOUNT.AsInteger > 0 then
+ begin
+    showmessage('Maaf, tidak dapat diedit karena sudah ditarik Dept Reinspect !');
+    Abort;
+ end;
+
+
+    //ShowMessage('Maaf, sudah di-POSTING, tidak bisa diedit !...');
     //Abort;
-    Dataset.Cancel;
+    //Dataset.Cancel;
   end;
+
+
 
 end;
 

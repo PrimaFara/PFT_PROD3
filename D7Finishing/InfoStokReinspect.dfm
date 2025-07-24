@@ -154,7 +154,7 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
               ForceNewPage = False
               Size.Values = (
                 500.062500000000000000
-                3122.083333333333000000)
+                3122.083333333334000000)
               BandType = rbSummary
               object QRLabel175: TQRLabel
                 Left = 7
@@ -1189,8 +1189,8 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
               ForceNewColumn = False
               ForceNewPage = False
               Size.Values = (
-                68.791666666666670000
-                3122.083333333333000000)
+                68.791666666666680000
+                3122.083333333334000000)
               BandType = rbDetail
               object QRDBText133: TQRDBText
                 Left = 314
@@ -2565,8 +2565,8 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
               ForceNewPage = False
               ParentFont = False
               Size.Values = (
-                597.958333333333300000
-                3122.083333333333000000)
+                597.958333333333400000
+                3122.083333333334000000)
               BandType = rbTitle
               object QRShape1: TQRShape
                 Left = 0
@@ -2596,10 +2596,10 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
                 Frame.DrawLeft = False
                 Frame.DrawRight = False
                 Size.Values = (
-                  60.854166666666670000
+                  60.854166666666680000
                   1148.291666666667000000
                   161.395833333333300000
-                  822.854166666666700000)
+                  822.854166666666800000)
                 Alignment = taCenter
                 AlignToBand = True
                 AutoSize = True
@@ -4945,7 +4945,7 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
               ForceNewPage = False
               Size.Values = (
                 63.500000000000000000
-                3122.083333333333000000)
+                3122.083333333334000000)
               BandType = rbPageFooter
               object QRDBText141: TQRDBText
                 Left = 7
@@ -5512,6 +5512,7 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
           'KORIN_BS'#9'10'#9'KOREKSI~BS'#9'F'#9'PEMASUKAN'
           'SSUAI_OUT'#9'10'#9'PENYESUAIAN~BK'#9'F'#9'PENGELUARAN'
           'JAHIT_BK'#9'10'#9'JAHIT~BK'#9'F'#9'PENGELUARAN'
+          'JAHIT_BS'#9'10'#9'JAHIT~BS'#9'F'#9'PENGELUARAN'
           'LNOUT_BK'#9'10'#9'LAIN~BK'#9'F'#9'PENGELUARAN'
           'LNOUT_BS'#9'10'#9'LAIN~BS'#9'F'#9'PENGELUARAN'
           'KOROUT_BK'#9'10'#9'KOREKSI~BK'#9'F'#9'PENGELUARAN'
@@ -6226,7 +6227,7 @@ object InfoStokReinspectFrm: TInfoStokReinspectFrm
   object QProcWIPn: TOracleQuery
     SQL.Strings = (
       'begin'
-      '  ipisma_db5.proc_wip_reinspect_new(:pawal,:pakhir);'
+      '  ipisma_db5.proc_wip_reinspect_new2(:pawal,:pakhir);'
       'end;')
     Session = DMFrm.OS
     Variables.Data = {

@@ -956,7 +956,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             FontSize = 9
           end
           object QRLabel6: TQRLabel
-            Left = 251
+            Left = -119
             Top = 60
             Width = 254
             Height = 23
@@ -3496,7 +3496,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             FontSize = 8
           end
           object QRSysData1: TQRSysData
-            Left = 687
+            Left = -54
             Top = 8
             Width = 69
             Height = 17
@@ -6118,10 +6118,10 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              66.145833333333330000
-              526.520833333333300000
+              66.145833333333340000
+              526.520833333333400000
               179.916666666666700000
-              947.208333333333300000)
+              947.208333333333400000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -6150,8 +6150,8 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              923.395833333333300000
-              312.208333333333300000
+              923.395833333333400000
+              312.208333333333400000
               153.458333333333300000)
             Alignment = taCenter
             AlignToBand = True
@@ -6336,7 +6336,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             FontSize = 8
           end
           object QRSysData2: TQRSysData
-            Left = 687
+            Left = -54
             Top = 8
             Width = 69
             Height = 17
@@ -7803,10 +7803,10 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              66.145833333333330000
-              526.520833333333300000
+              66.145833333333340000
+              526.520833333333400000
               179.916666666666700000
-              947.208333333333300000)
+              947.208333333333400000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -7835,8 +7835,8 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              923.395833333333300000
-              312.208333333333300000
+              923.395833333333400000
+              312.208333333333400000
               153.458333333333300000)
             Alignment = taCenter
             AlignToBand = True
@@ -8021,7 +8021,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             FontSize = 8
           end
           object QRSysData3: TQRSysData
-            Left = 687
+            Left = -54
             Top = 8
             Width = 69
             Height = 17
@@ -10542,5 +10542,23 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
       000000}
     Left = 933
     Top = 184
+  end
+  object CekUnpost: TOracleDataSet
+    SQL.Strings = (
+      'SELECT COUNT(*) as vcount'
+      'from ipisma_db5.BUKTI3_DETAIL'
+      
+        'where no_desain in (select distinct no_order from ipisma_db5.PEM' +
+        'ASUKAN_PAJITEX_DET WHERE no_reg = :no_reg)')
+    Variables.Data = {0300000001000000070000003A4E4F5F524547030000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {04000000010000000600000056434F554E54010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 356
+    Top = 211
+    object CekUnpostVCOUNT: TFloatField
+      FieldName = 'VCOUNT'
+    end
   end
 end
