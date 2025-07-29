@@ -779,7 +779,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        66.145833333333330000
+        66.145833333333340000
         2000.250000000000000000)
       BandType = rbColumnHeader
       object QRLabel10: TQRLabel
@@ -970,7 +970,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        76.729166666666670000
+        76.729166666666680000
         2000.250000000000000000)
       BandType = rbPageFooter
       object QRDBText2: TQRDBText
@@ -1041,9 +1041,9 @@ object DefectReinspectFrm: TDefectReinspectFrm
         Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          883.708333333333300000
+          883.708333333333400000
           21.166666666666670000
-          232.833333333333300000)
+          232.833333333333400000)
         Alignment = taCenter
         AlignToBand = True
         AutoSize = False
@@ -1077,7 +1077,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        264.583333333333300000
+        264.583333333333400000
         2000.250000000000000000)
       BandType = rbGroupFooter
       object QRDBText4: TQRDBText
@@ -1092,9 +1092,9 @@ object DefectReinspectFrm: TDefectReinspectFrm
         Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          1725.083333333333000000
+          1725.083333333334000000
           108.479166666666700000
-          66.145833333333330000)
+          66.145833333333340000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True
@@ -1143,9 +1143,9 @@ object DefectReinspectFrm: TDefectReinspectFrm
         Frame.DrawRight = False
         Size.Values = (
           63.500000000000000000
-          391.583333333333300000
+          391.583333333333400000
           230.187500000000000000
-          320.145833333333300000)
+          320.145833333333400000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True
@@ -1170,7 +1170,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
           63.500000000000000000
           1214.437500000000000000
           230.187500000000000000
-          264.583333333333300000)
+          264.583333333333400000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True
@@ -1330,7 +1330,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        66.145833333333330000
+        66.145833333333340000
         2000.250000000000000000)
       BandType = rbDetail
       object QRDBText5: TQRDBText
@@ -4916,7 +4916,6 @@ object DefectReinspectFrm: TDefectReinspectFrm
     end
     object QDetailNO_MESIN: TStringField
       FieldName = 'NO_MESIN'
-      Required = True
     end
     object QDetailNO_RESEP: TStringField
       FieldName = 'NO_RESEP'
@@ -5230,7 +5229,6 @@ object DefectReinspectFrm: TDefectReinspectFrm
     end
     object QDetailMITRA: TStringField
       FieldName = 'MITRA'
-      Required = True
       Size = 100
     end
   end

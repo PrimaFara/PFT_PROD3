@@ -14730,7 +14730,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
     object QDetailKONSTRUKSI: TStringField
       DisplayWidth = 50
       FieldName = 'KONSTRUKSI'
-      Size = 50
+      Size = 100
     end
     object QDetailCORAK: TStringField
       DisplayWidth = 6

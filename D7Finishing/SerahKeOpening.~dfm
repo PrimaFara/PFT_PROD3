@@ -7760,7 +7760,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
       'from ipisma_db5.vserah_finish_opening'
       
         'where trunc (:ptgl)>=:pawal and (:ptgl)<=:pakhir and kd_transaks' +
-        'i = '#39'900'#39' and kd_produksi NOT LIKE '#39'%PG%'#39' '
+        'i = '#39'900'#39' --and kd_produksi NOT LIKE '#39'%PG%'#39' '
       ''
       ''
       '')

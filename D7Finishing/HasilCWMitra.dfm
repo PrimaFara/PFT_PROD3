@@ -2785,7 +2785,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -2976,7 +2976,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -3012,7 +3012,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             FontSize = 8
           end
           object QRSysData1: TQRSysData
-            Left = -54
+            Left = 687
             Top = 8
             Width = 69
             Height = 17
@@ -3047,9 +3047,9 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              883.708333333333400000
+              883.708333333333300000
               21.166666666666670000
-              232.833333333333400000)
+              232.833333333333300000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = False
@@ -3082,7 +3082,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            320.145833333333400000
+            320.145833333333300000
             2000.250000000000000000)
           BandType = rbGroupFooter
           object QRDBText4: TQRDBText
@@ -3336,7 +3336,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText5: TQRDBText
@@ -5130,7 +5130,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
+              60.854166666666670000
               452.437500000000000000
               201.083333333333300000
               1092.729166666667000000)
@@ -5507,9 +5507,9 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333340000
-              931.333333333333500000
-              264.583333333333400000
+              58.208333333333330000
+              931.333333333333300000
+              264.583333333333300000
               137.583333333333300000)
             Alignment = taCenter
             AlignToBand = True
@@ -5966,7 +5966,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText14: TQRDBText
@@ -6002,7 +6002,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             FontSize = 8
           end
           object QRSysData2: TQRSysData
-            Left = -54
+            Left = 687
             Top = 8
             Width = 69
             Height = 17
@@ -6073,7 +6073,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            391.583333333333400000
+            391.583333333333300000
             2000.250000000000000000)
           BandType = rbGroupFooter
           object QRLabel22: TQRLabel
@@ -6343,7 +6343,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText19: TQRDBText
