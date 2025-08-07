@@ -146,9 +146,6 @@ type
     QSuplierKOTA: TStringField;
     DsQLookWarna: TwwDataSource;
     QLookWarna: TOracleDataSet;
-    QLookWarnaWARNA: TStringField;
-    QLookWarnaKD_WARNA: TStringField;
-    QLookWarnaJNS_WARNA: TStringField;
     QLookOperator: TOracleDataSet;
     DsQLookOperator: TwwDataSource;
     QLookOperatorNIK: TStringField;
@@ -177,6 +174,13 @@ type
     MGDKD_PERK: TStringField;
     Satuan: TOracleDataSet;
     SatuanSATUAN: TStringField;
+    QLookWarnaWARNA: TStringField;
+    QLookWarnaKD_WARNA: TStringField;
+    QLookWarnaJNS_WARNA: TStringField;
+    QLookWarnaCW: TStringField;
+    QLookWarnaISFIXED: TStringField;
+    QLookWarnaTGL_INSERT: TDateTimeField;
+    QLookWarnaOPR_INSERT: TStringField;
   private
     { Private declarations }
   public

@@ -96,7 +96,10 @@ object DMFrm: TDMFrm
     Top = 8
   end
   object OS: TOracleSession
+    LogonUsername = 'ANGGIT'
+    LogonPassword = 'YOGI'
     LogonDatabase = 'PFPROD'
+    Connected = True
     Left = 32
     Top = 16
   end
@@ -1089,27 +1092,51 @@ object DMFrm: TDMFrm
       'select * from ipisma_db3.WARNA_BARU t'
       'order by kd_warna')
     QBEDefinition.QBEFieldDefs = {
-      0400000005000000050000005741524E41010000000000080000004B445F5741
+      0400000007000000050000005741524E41010000000000080000004B445F5741
       524E41010000000000090000004A4E535F5741524E4101000000000002000000
-      43570100000000000700000049534649584544010000000000}
+      435701000000000007000000495346495845440100000000000A00000054474C
+      5F494E534552540100000000000A0000004F50525F494E534552540100000000
+      00}
     Session = OS
     Left = 304
     Top = 384
+    object QLookWarnaWARNA: TStringField
+      DisplayWidth = 15
+      FieldName = 'WARNA'
+      Size = 50
+    end
     object QLookWarnaKD_WARNA: TStringField
       DisplayWidth = 6
       FieldName = 'KD_WARNA'
       Required = True
+      Visible = False
       Size = 6
-    end
-    object QLookWarnaWARNA: TStringField
-      DisplayWidth = 20
-      FieldName = 'WARNA'
-      Size = 50
     end
     object QLookWarnaJNS_WARNA: TStringField
       DisplayWidth = 10
       FieldName = 'JNS_WARNA'
+      Visible = False
       Size = 10
+    end
+    object QLookWarnaCW: TStringField
+      FieldName = 'CW'
+      Visible = False
+      Size = 1
+    end
+    object QLookWarnaISFIXED: TStringField
+      FieldName = 'ISFIXED'
+      Required = True
+      Visible = False
+      Size = 1
+    end
+    object QLookWarnaTGL_INSERT: TDateTimeField
+      FieldName = 'TGL_INSERT'
+      Visible = False
+    end
+    object QLookWarnaOPR_INSERT: TStringField
+      FieldName = 'OPR_INSERT'
+      Visible = False
+      Size = 30
     end
   end
   object QLookOperator: TOracleDataSet

@@ -1,6 +1,6 @@
 object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
-  Left = 202
-  Top = 135
+  Left = 230
+  Top = 139
   Width = 1138
   Height = 579
   Caption = 'Serah Ke Jahit'
@@ -214,7 +214,7 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              68.791666666666660000
+              68.791666666666670000
               682.625000000000000000
               0.000000000000000000
               407.458333333333300000)
@@ -480,7 +480,7 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            60.854166666666660000
+            60.854166666666670000
             1772.708333333333000000)
           BandType = rbColumnHeader
           object QRLabel8: TQRLabel
@@ -1193,7 +1193,7 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              791.104166666666600000
+              791.104166666666700000
               0.000000000000000000
               187.854166666666700000)
             Alignment = taCenter
@@ -1259,7 +1259,7 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              806.979166666666600000
+              806.979166666666700000
               21.166666666666670000
               156.104166666666700000)
             Alignment = taCenter
@@ -3176,10 +3176,10 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666660000
+              60.854166666666670000
               571.500000000000000000
               185.208333333333300000
-              775.229166666666600000)
+              775.229166666666700000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -5028,10 +5028,10 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666660000
+              60.854166666666670000
               571.500000000000000000
               185.208333333333300000
-              775.229166666666600000)
+              775.229166666666700000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -7201,10 +7201,10 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666660000
+              60.854166666666670000
               571.500000000000000000
               185.208333333333300000
-              775.229166666666600000)
+              775.229166666666700000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True

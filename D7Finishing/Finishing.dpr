@@ -90,7 +90,8 @@ uses
   InputanHipo in 'InputanHipo.pas' {InputanHipoFrm},
   DefectReinspect in 'DefectReinspect.pas' {DefectReinspectFrm},
   ReinspecPajitex in 'ReinspecPajitex.pas' {ReinspecPajitexFrm},
-  foldinginsp in 'foldinginsp.pas' {foldinginspFrm};
+  foldinginsp in 'foldinginsp.pas' {foldinginspFrm},
+  PackingListKirimMitra in 'PackingListKirimMitra.pas' {PackingListMitraFrm};
 
 {$R *.res}
 

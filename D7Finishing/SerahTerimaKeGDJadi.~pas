@@ -699,7 +699,8 @@ begin
   if QMasterISPOST.AsString='1' then
   begin
     ShowMessage('Maaf, sudah di-POSTING, tidak bisa diedit !...');
-    DataSet.Cancel;
+    //DataSet.Cancel;
+    Abort;
   end;
 
 end;
@@ -1682,8 +1683,8 @@ var
   i: Integer;
   FieldName: String;
   FileName: string;
-  TotalQtyTot, TotalBk, TotalBs: Real;
-  TotalQtyTotKodi, TotalBkKodi, TotalBsKodi: Real;
+  TotalQtyTot, TotalBk, TotalBs, TotalLelang: Real;
+  TotalQtyTotKodi, TotalBkKodi, TotalBsKodi, TotalLelangKodi: Real;
 begin
   WebBrowser1.BringToFront;
   HTMLContent := TStringList.Create;
@@ -1695,6 +1696,9 @@ begin
     TotalQtyTotKodi := 0;
     TotalBkKodi := 0;
     TotalBsKodi := 0;
+
+    TotalLelang := 0;
+    TotalLelangKodi := 0;
 
     // Membuat bagian awal HTML
     HTMLContent.Add('<html><head><style>@page {size: A4; margin: 10mm;}');
@@ -1733,6 +1737,8 @@ begin
     HTMLContent.Add('<th>GRADE A KODI</th>');
     HTMLContent.Add('<th>GRADE B PCS</th>');
     HTMLContent.Add('<th>GRADE B KODI</th>');
+    HTMLContent.Add('<th>LELANG PCS</th>');
+    HTMLContent.Add('<th>LELANG KODI</th>');
     HTMLContent.Add('</tr>');
 
     // Menambahkan baris data dari wwDBGrid2
@@ -1757,7 +1763,12 @@ begin
         else if FieldName = 'BS' then
           TotalBs := TotalBs + wwDBGrid2.DataSource.DataSet.FieldByName(FieldName).AsFloat
         else if FieldName = 'BS_KODI' then
-          TotalBsKodi := TotalBsKodi + wwDBGrid2.DataSource.DataSet.FieldByName(FieldName).AsFloat;
+          TotalBsKodi := TotalBsKodi + wwDBGrid2.DataSource.DataSet.FieldByName(FieldName).AsFloat
+
+        else if FieldName = 'LELANG' then
+          TotalLelang := TotalLelang + wwDBGrid2.DataSource.DataSet.FieldByName(FieldName).AsFloat
+        else if FieldName = 'LELANG_KODI' then
+          TotalLelangKodi := TotalLelangKodi + wwDBGrid2.DataSource.DataSet.FieldByName(FieldName).AsFloat;
       end;
       HTMLContent.Add('</tr>');
       wwDBGrid2.DataSource.DataSet.Next;
@@ -1780,6 +1791,12 @@ begin
         HTMLContent.Add('<td><b>' + FormatFloat('0.00', TotalBs) + '</b></td>')
       else if FieldName = 'BS_KODI' then
         HTMLContent.Add('<td><b>' + FormatFloat('0.00', TotalBsKodi) + '</b></td>')
+
+      else if FieldName = 'LELANG' then
+        HTMLContent.Add('<td><b>' + FormatFloat('0.00', TotalLelang) + '</b></td>')
+      else if FieldName = 'LELANG_KODI' then
+        HTMLContent.Add('<td><b>' + FormatFloat('0.00', TotalLelangKodi) + '</b></td>')
+
       else
         HTMLContent.Add('<td></td>'); // Kolom lain yang tidak perlu dijumlahkan
     end;

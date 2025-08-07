@@ -1,6 +1,6 @@
 object MainFrm: TMainFrm
-  Left = 259
-  Top = 132
+  Left = 296
+  Top = 136
   Width = 1122
   Height = 738
   Caption = 'Produksi 3'
@@ -9730,6 +9730,10 @@ object MainFrm: TMainFrm
           object HasilStenter1: TMenuItem
             Caption = '896. Hasil Stenter'
             OnClick = HasilStenter1Click
+          end
+          object PackingListMitra: TMenuItem
+            Caption = 'M06. Packing List Mitra'
+            OnClick = PackingListMitraClick
           end
           object SerahHasilStenter: TMenuItem
             Caption = '907. Serah Hasil Stenter'

@@ -729,7 +729,8 @@ begin
   if QMasterISPOST.AsString='1' then
   begin
     ShowMessage('Maaf, sudah di-POSTING, tidak bisa diedit !...');
-    DataSet.Cancel;
+    //DataSet.Cancel;
+   abort;
   end;
 
 end;

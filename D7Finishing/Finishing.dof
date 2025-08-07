@@ -137,7 +137,7 @@ Comments=
 [Excluded Packages]
 C:\Program Files\Borland\Delphi7\Bin\indy70.bpl=Internet Direct (Indy) for D7
 C:\Program Files\Borland\Delphi7\Bin\lmd70_d7.bpl=LMD-Tools 7.0 Components
-C:\Program Files\Borland\Delphi7\Bin\lmdbar10_d7.bpl=LMD BarPack 1.0 Components
+C:\Program Files\Borland\Delphi7\Bin\lmdbar10_d7.bpl=LMD BarPack 1.0 Components 
 C:\Program Files\Borland\Delphi7\Bin\lmd70db_d7.bpl=LMD-Tools 7.0 Database Components
 C:\Program Files\Borland\Delphi7\Bin\lmddsg20_d7.bpl=LMD-Tools DesignPack 2.0 Runtime Package
 C:\Program Files\Borland\Delphi7\Bin\lmdfx10_d7.bpl=LMD FxPack Runtime Package

@@ -89,7 +89,9 @@ uses
   InspectingHipo in 'InspectingHipo.pas' {InspectingHipoFrm},
   InputanHipo in 'InputanHipo.pas' {InputanHipoFrm},
   DefectReinspect in 'DefectReinspect.pas' {DefectReinspectFrm},
-  ReinspecPajitex in 'ReinspecPajitex.pas' {ReinspecPajitexFrm};
+  ReinspecPajitex in 'ReinspecPajitex.pas' {ReinspecPajitexFrm},
+  foldinginsp in 'foldinginsp.pas' {foldinginspFrm},
+  PackingListKirimMitra in 'PackingListKirimMitra.pas' {PackingListMitraFrm};
 
 {$R *.res}
 
@@ -97,5 +99,6 @@ begin
   Application.Initialize;
   Application.CreateForm(TDMFrm, DMFrm);
   Application.CreateForm(TMainFrm, MainFrm);
+  Application.CreateForm(TPackingListMitraFrm, PackingListMitraFrm);
   Application.Run;
 end.

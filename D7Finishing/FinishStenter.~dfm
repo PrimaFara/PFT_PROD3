@@ -1,6 +1,6 @@
 object FinishStenterFrm: TFinishStenterFrm
-  Left = 223
-  Top = 122
+  Left = 335
+  Top = 172
   Width = 1096
   Height = 602
   ActiveControl = GroupBox1
