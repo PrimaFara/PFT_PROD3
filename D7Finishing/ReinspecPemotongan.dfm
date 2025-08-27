@@ -3931,6 +3931,7 @@ object ReinspecPemotonganFrm: TReinspecPemotonganFrm
             Anchors = [akTop, akRight]
             Caption = '&Print'
             TabOrder = 1
+            Visible = False
             OnClick = BitBtn2Click
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100

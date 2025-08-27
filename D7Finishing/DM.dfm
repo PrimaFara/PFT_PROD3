@@ -1097,17 +1097,17 @@ object DMFrm: TDMFrm
     Session = OS
     Left = 304
     Top = 384
-    object QLookWarnaWARNA: TStringField
-      DisplayWidth = 15
-      FieldName = 'WARNA'
-      Size = 50
-    end
     object QLookWarnaKD_WARNA: TStringField
+      DisplayLabel = 'KODE'
       DisplayWidth = 6
       FieldName = 'KD_WARNA'
       Required = True
-      Visible = False
       Size = 6
+    end
+    object QLookWarnaWARNA: TStringField
+      DisplayWidth = 10
+      FieldName = 'WARNA'
+      Size = 50
     end
     object QLookWarnaJNS_WARNA: TStringField
       DisplayWidth = 10
@@ -1249,9 +1249,9 @@ object DMFrm: TDMFrm
     Left = 520
     Top = 304
     object QLookJenisPROSES: TStringField
-      DisplayWidth = 10
+      DisplayWidth = 50
       FieldName = 'PROSES'
-      Size = 10
+      Size = 50
     end
   end
   object dsQKonstruksi_finish: TwwDataSource

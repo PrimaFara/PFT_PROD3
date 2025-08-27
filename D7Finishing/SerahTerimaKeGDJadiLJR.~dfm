@@ -393,7 +393,7 @@ object SerahTerimaKeGDJadiLJRFrm: TSerahTerimaKeGDJadiLJRFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              42.333333333333340000
+              42.333333333333330000
               63.500000000000000000
               269.875000000000000000)
             Alignment = taLeftJustify
@@ -452,7 +452,7 @@ object SerahTerimaKeGDJadiLJRFrm: TSerahTerimaKeGDJadiLJRFrm
               44.979166666666670000
               1418.166666666667000000
               127.000000000000000000
-              76.729166666666680000)
+              76.729166666666670000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -494,7 +494,7 @@ object SerahTerimaKeGDJadiLJRFrm: TSerahTerimaKeGDJadiLJRFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              42.333333333333340000
+              42.333333333333330000
               0.000000000000000000
               44.979166666666670000)
             Alignment = taLeftJustify
@@ -587,7 +587,7 @@ object SerahTerimaKeGDJadiLJRFrm: TSerahTerimaKeGDJadiLJRFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              902.229166666666800000
+              902.229166666666700000
               0.000000000000000000
               113.770833333333300000)
             Alignment = taCenter
@@ -856,7 +856,7 @@ object SerahTerimaKeGDJadiLJRFrm: TSerahTerimaKeGDJadiLJRFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              902.229166666666800000
+              902.229166666666700000
               0.000000000000000000
               113.770833333333300000)
             Alignment = taCenter
@@ -951,7 +951,7 @@ object SerahTerimaKeGDJadiLJRFrm: TSerahTerimaKeGDJadiLJRFrm
               44.979166666666670000
               1283.229166666667000000
               0.000000000000000000
-              68.791666666666680000)
+              68.791666666666670000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -983,7 +983,7 @@ object SerahTerimaKeGDJadiLJRFrm: TSerahTerimaKeGDJadiLJRFrm
               44.979166666666670000
               1706.562500000000000000
               0.000000000000000000
-              68.791666666666680000)
+              68.791666666666670000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -1047,7 +1047,7 @@ object SerahTerimaKeGDJadiLJRFrm: TSerahTerimaKeGDJadiLJRFrm
               44.979166666666670000
               1508.125000000000000000
               0.000000000000000000
-              68.791666666666680000)
+              68.791666666666670000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -1303,7 +1303,7 @@ object SerahTerimaKeGDJadiLJRFrm: TSerahTerimaKeGDJadiLJRFrm
               44.979166666666670000
               1291.166666666667000000
               13.229166666666670000
-              66.145833333333340000)
+              66.145833333333330000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True

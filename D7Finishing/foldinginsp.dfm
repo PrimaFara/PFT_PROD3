@@ -365,10 +365,10 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
-              664.104166666666800000
+              60.854166666666670000
+              664.104166666666700000
               158.750000000000000000
-              672.041666666666800000)
+              672.041666666666700000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -2859,7 +2859,7 @@ object foldinginspFrm: TfoldinginspFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -3523,7 +3523,7 @@ object foldinginspFrm: TfoldinginspFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            68.791666666666680000
+            68.791666666666670000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -3932,6 +3932,7 @@ object foldinginspFrm: TfoldinginspFrm
             Anchors = [akTop, akRight]
             Caption = '&Print'
             TabOrder = 1
+            Visible = False
             OnClick = BitBtn2Click
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
@@ -4185,7 +4186,7 @@ object foldinginspFrm: TfoldinginspFrm
           Selected.Strings = (
             'OPR_INSP'#9'30'#9'NAMA OPR'#9'F'
             'GRUP_DET'#9'3'#9'GROUP'#9'F'
-            'SHUTTLE'#9'10'#9'SHUTTLE'#9'F'
+            'SHUTTLE'#9'10'#9'FOLDING SHUTTLE'#9'F'
             'IHRAM'#9'10'#9'IHRAM'#9'F'
             'FOLDING_SKT'#9'10'#9'FOLDING_SKT'#9'F'
             'FOLDING_SHUT'#9'10'#9'INSP. PUTIHAN'#9'F')
@@ -4823,7 +4824,7 @@ object foldinginspFrm: TfoldinginspFrm
           'TGL'#9'18'#9'TANGGAL'#9'F'
           'OPR_INSP'#9'30'#9'OPR INSP'#9'F'
           'IHRAM'#9'10'#9'IHRAM'#9'F'
-          'SHUTTLE'#9'10'#9'SHUTTLE'#9'F'
+          'SHUTTLE'#9'10'#9'FOLDING SHUTTLE'#9'F'
           'FOLDING_SKT'#9'10'#9'FOLDING_SKT'#9'F'
           'FOLDING_SHUT'#9'10'#9'INSP. PUTIHAN'#9'F'
           'QTY_POTONG'#9'10'#9'TOTAL'#9'F')
@@ -5375,8 +5376,8 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
-              740.833333333333200000
+              60.854166666666670000
+              740.833333333333300000
               248.708333333333300000
               515.937500000000000000)
             Alignment = taCenter
@@ -5495,7 +5496,7 @@ object foldinginspFrm: TfoldinginspFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText16: TQRDBText
@@ -6630,7 +6631,7 @@ object foldinginspFrm: TfoldinginspFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText40: TQRDBText
@@ -6774,7 +6775,7 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              971.020833333333200000
+              971.020833333333400000
               10.583333333333330000
               108.479166666666700000)
             Alignment = taLeftJustify
@@ -6837,9 +6838,9 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              679.979166666666800000
+              679.979166666666700000
               190.500000000000000000
-              74.083333333333320000)
+              74.083333333333340000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -6871,7 +6872,7 @@ object foldinginspFrm: TfoldinginspFrm
               44.979166666666670000
               1230.312500000000000000
               190.500000000000000000
-              74.083333333333320000)
+              74.083333333333340000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -6933,8 +6934,8 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              677.333333333333200000
-              359.833333333333300000
+              677.333333333333400000
+              359.833333333333400000
               79.375000000000000000)
             Alignment = taCenter
             AlignToBand = False
@@ -6966,7 +6967,7 @@ object foldinginspFrm: TfoldinginspFrm
             Size.Values = (
               44.979166666666670000
               1227.666666666667000000
-              359.833333333333300000
+              359.833333333333400000
               79.375000000000000000)
             Alignment = taCenter
             AlignToBand = False
@@ -7024,7 +7025,7 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              724.958333333333200000
+              724.958333333333400000
               134.937500000000000000
               261.937500000000000000)
             Alignment = taLeftJustify
@@ -7055,9 +7056,9 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              994.833333333333200000
+              994.833333333333400000
               134.937500000000000000
-              89.958333333333320000)
+              89.958333333333340000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -7477,7 +7478,7 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333320000
+              58.208333333333340000
               269.875000000000000000
               60.854166666666680000
               365.125000000000000000)
@@ -7885,8 +7886,8 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
-              740.833333333333200000
+              60.854166666666670000
+              740.833333333333300000
               248.708333333333300000
               515.937500000000000000)
             Alignment = taCenter
@@ -7916,7 +7917,7 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333320000
+              58.208333333333340000
               1619.250000000000000000
               2.645833333333333000
               111.125000000000000000)
@@ -7989,7 +7990,7 @@ object foldinginspFrm: TfoldinginspFrm
         Selected.Strings = (
           'OPR_INSP'#9'20'#9'OPERATOR'#9'F'
           'GRUP_DET'#9'6'#9'GRUP'#9'F'
-          'SHUTTLE'#9'10'#9'SHUTTLE'#9'F'
+          'SHUTTLE'#9'10'#9'FOLDING SHUTTLE'#9'F'
           'IHRAM'#9'10'#9'IHRAM'#9'F'
           'FOLDING_SKT'#9'10'#9'FOLDING_SKT'#9'F'
           'FOLDING_SHUT'#9'10'#9'INSP. PUTIHAN'#9'F'
@@ -8304,7 +8305,7 @@ object foldinginspFrm: TfoldinginspFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText55: TQRDBText
@@ -8448,7 +8449,7 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              971.020833333333200000
+              971.020833333333400000
               10.583333333333330000
               108.479166666666700000)
             Alignment = taLeftJustify
@@ -8511,9 +8512,9 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              679.979166666666800000
+              679.979166666666700000
               190.500000000000000000
-              74.083333333333320000)
+              74.083333333333340000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -8545,7 +8546,7 @@ object foldinginspFrm: TfoldinginspFrm
               44.979166666666670000
               1230.312500000000000000
               190.500000000000000000
-              74.083333333333320000)
+              74.083333333333340000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -8698,7 +8699,7 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              724.958333333333200000
+              724.958333333333400000
               134.937500000000000000
               261.937500000000000000)
             Alignment = taLeftJustify
@@ -8729,9 +8730,9 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              994.833333333333200000
+              994.833333333333400000
               134.937500000000000000
-              89.958333333333320000)
+              89.958333333333340000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -9151,7 +9152,7 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333320000
+              58.208333333333340000
               269.875000000000000000
               60.854166666666680000
               365.125000000000000000)
@@ -9559,8 +9560,8 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
-              740.833333333333200000
+              60.854166666666670000
+              740.833333333333300000
               248.708333333333300000
               515.937500000000000000)
             Alignment = taCenter
@@ -9590,7 +9591,7 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333320000
+              58.208333333333340000
               1619.250000000000000000
               2.645833333333333000
               111.125000000000000000)
@@ -9827,7 +9828,7 @@ object foldinginspFrm: TfoldinginspFrm
           'KD_SATUAN'#9'#,&'#9'T'#9'T'
           'ID_USER'#9'*3{&,#}'#9'T'#9'T')
         Selected.Strings = (
-          'SHUTTLE'#9'10'#9'SHUTTLE'#9'F'
+          'SHUTTLE'#9'10'#9'FOLDING SHUTTLE'#9'F'
           'IHRAM'#9'10'#9'IHRAM'#9'F'
           'FOLDING_SKT'#9'10'#9'FOLDING_SKT'#9'F'
           'FOLDING_SHUT'#9'10'#9'INSP. PUTIHAN'#9'F'

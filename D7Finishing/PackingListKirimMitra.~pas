@@ -8,7 +8,7 @@ uses
   OracleData, wwSpeedButton, wwDBNavigator, wwclearpanel, Buttons, DBCtrls,
   wwcheckbox, wwdblook, Wwdbdlg, wwdbdatetimepicker, Mask, wwdbedit,
   Wwdotdot, Wwdbcomb, wwDialog, wwidlg, QRCtrls, QuickRpt, Printers,
-  ComCtrls,DateUtils, Oracle;
+  ComCtrls,DateUtils, Oracle, OleCtrls, SHDocVw;
 
 type
   TPackingListMitraFrm = class(TForm)
@@ -264,6 +264,10 @@ type
     QBrowseTotalQTY: TFloatField;
     QBrowseKETERANGAN: TStringField;
     DelokWarna: TwwDBLookupComboDlg;
+    QDetailKD_WARNA: TStringField;
+    QBrowseKD_WARNA: TStringField;
+    WebBrowser3: TWebBrowser;
+    BitBtn14: TBitBtn;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -309,6 +313,11 @@ type
       FillTable: TDataSet; modified: Boolean);
     procedure LookAmbilPackingEnter(Sender: TObject);
     procedure DelokWarnaEnter(Sender: TObject);
+    procedure DelokWarnaCloseUp(Sender: TObject; LookupTable,
+      FillTable: TDataSet; modified: Boolean);
+    procedure WebBrowser3DocumentComplete(Sender: TObject;
+      const pDisp: IDispatch; var URL: OleVariant);
+    procedure BitBtn14Click(Sender: TObject);
   private
     { Private declarations }
     vTab,vfilter,vorder : string;
@@ -422,13 +431,225 @@ QDetailNO_REG.AsInteger:=QMasterNO_REG.AsInteger;
 end;
 
 procedure TPackingListMitraFrm.BitBtn2Click(Sender: TObject);
+
+function NamaHariDariTanggal(ATanggal: TDateTime): string;
+const
+  NamaHari: array[1..7] of string =
+    ('Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu');
 begin
- DMFrm.QUserTime.Close;
- DMFrm.QUserTime.Open;
- if cbPreview.Checked then
-   QuickRep1.Preview
-   else
-     QuickRep1.Print;
+  Result := NamaHari[DayOfWeek(ATanggal)];
+end;
+
+var
+    HTMLFile: TStringList;
+    FilePath: string;
+    HTMLContent: string;
+    TanggalCetak: string;
+
+    TotalQTY, TotalKodi: Real;
+    QTY, KODI: String;
+begin
+  WebBrowser3.BringToFront;
+
+  TanggalCetak := 'Pekalongan, ' + FormatDateTime('dd mmmm yyyy', Date);
+
+  FilePath := ExtractFilePath(Application.ExeName) + 'PackingListMitraHandprint.html';
+  HTMLFile := TStringList.Create;
+  try
+    HTMLContent :=
+    '<!DOCTYPE html>' +
+    '<html lang="id">' +
+    '<head>' +
+    '    <meta charset="UTF-8">' +
+    '    <meta name="viewport" content="width=device-width, initial-scale=1.0">' +
+    '    <title></title>' +
+    '    <style> ' +
+    '        body { font-family: Arial, sans-serif; font-size: 12px; } ' +
+    '        .container { width: 100%; max-width: 330mm; padding: 10px; margin: auto; border: 1px solid #000; } ' +
+    '        .header { width: 100%; text-align: left; margin-bottom: 10px; } ' +
+    '        .header-table { width: 100%; border-collapse: collapse; } ' +
+    '        .header-table td { padding: 4px; vertical-align: top; } ' +
+    '        .logo { font-size: 18px; font-weight: bold; text-align: center; width: 20%; } ' +
+    '        .logo-judul { font-size: 16px; font-weight: bold; text-align: center; width: 30%; } ' +
+    '        .title { font-size: 14px; font-weight: bold; text-align: center; }' +
+    '        .label { font-weight: bold; width: 20%; } ' +
+    '        .received-from { font-weight: bold; margin-top: 10px; } ' +
+    '        .order-table { margin-top: 5px; width: 80%; border-collapse: collapse; } ' +
+    '        .order-table td { font-size: 12px; padding: 2px 5px; } ' +
+    '        .table { width: 100%; border-collapse: collapse; margin-top: 10px; } ' +
+    '        .table th, .table td { border: 1px solid #000; padding: 2px; text-align: center; } ' +
+    '        .table th { background-color: #f0f0f0; } ' +
+    '        .footer { margin-top: 15px; text-align: center; } ' +
+    '        @media print { body { margin: 0; padding: 0; } .container { border: none; } ' +
+    '        @page { size: F4 landscape; margin: 10mm; } thead { display: table-header-group; } tfoot { display: table-footer-group; } ' +
+    '        .table th { position: sticky; top: 0; background-color: #f0f0f0; } } ' +
+    '        .footer-table { width: 100%; margin-top: 15px; border-collapse: collapse; } ' +
+    '        .footer-table td { padding: 5px; border: none; font-weight: bold; } ' +
+    '        .table tr:last-child td { border-bottom: 1px solid black; } ' +
+    '    </style>' +
+    '</head>' +
+    '<body>' +
+    '    <div class="container">' +
+    '        <div class="header">' +
+    '            <table class="header-table">' +
+    '                <tr>' +
+    '                    <td rowspan="2" class="logo">PT. PRIMAFARA TEXTILE</td>' +
+    '                </tr>' +
+    '                <tr>' +
+    '                    <td class="logo-judul" colspan="2"><strong>PACKING LIST PENGIRIMAN BARANG</strong></td>' +
+    '                </tr>' +
+    '                <tr>' +
+    '                    <td class="label" align="center">Sapugarut - Pekalongan</td>' +
+    '                    <td class="label" align="center"></td>' +
+    '                </tr>' +
+    '            </table>' +
+
+    '            <p class="received-from">' +
+    '                <table class="order-table" align="left">' +
+    '                    <tr>' +
+    '                        <td>Kepada : <u><strong> </u></strong></td>' +
+    '                        <td> : ' + QMasterMITRA.AsString + '</td>' +
+    '                        <td></td>' +
+    '                        <td></td>' +
+    '                        <td>No.</td>' +
+    '                        <td> : ' + QMasterNO_NOTA.AsString + '</td>' +
+    '                    </tr>' +
+    '                    <tr>' +
+    '                        <td>Hari, Tanggal : </td>' +
+    '                        <td> : ' + NamaHariDariTanggal(QMasterTGL.AsDateTime) + '</td>' +
+    '                        <td>' + QMasterTGL.AsString + '</td>' +
+    '                        <td></td>' +
+    '                        <td>No. Pol</td>' +
+    '                        <td> : </td>' +
+    '                    </tr>' +
+    '                    <tr>' +
+    '                        <td></td>' +
+    '                        <td></td>' +
+    '                        <td></td>' +
+    '                        <td></td>' +
+    '                        <td></td>' +
+    '                        <td></td>' +
+    '                    </tr>' +
+    '                </table>' +
+    '            </p>' +
+    '        </div>' +
+    '        <table class="table">' +
+    '            <tr>' +
+    '                <th>Konstruksi</th>' +
+    '                <th>No.Kirim</th>' +
+    '                <th>Konstruksi</th>' +
+    '                <th>No.Resep</th>' +
+    '                <th>Desain</th>' +                
+    '                <th>Warna</th>' +
+    '                <th>Potong</th>' +
+    '                <th>Kodi</th>' +
+    '                <th>Keterangan</th>' +
+    '                <th style="border: 0px; color: white;">1</th>' +
+    '            </tr>';
+
+    TotalQTY := 0; TotalKODI := 0;
+
+    wwDBGrid1.DataSource.DataSet.First;
+    while not wwDBGrid1.DataSource.DataSet.Eof do
+    begin
+
+    if wwDBGrid1.DataSource.DataSet.FieldByName('QTY').IsNull or 
+    (wwDBGrid1.DataSource.DataSet.FieldByName('QTY').AsFloat = 0) then
+    QTY := '-'
+    else
+    QTY := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid1.DataSource.DataSet.FieldByName('QTY').AsFloat);
+
+    if wwDBGrid1.DataSource.DataSet.FieldByName('QTY').IsNull or 
+    (wwDBGrid1.DataSource.DataSet.FieldByName('QTY').AsFloat = 0) then
+    KODI := '-'
+    else
+    KODI := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid1.DataSource.DataSet.FieldByName('QTY').AsFloat/20);
+
+
+    HTMLContent := HTMLContent +
+    '                <tr>' +
+    '                <td>' + QDetailKONSTRUKSI.AsString + '</td>' +
+    '                <td>' + QDetailNO_KIRIM.AsString + '</td>' +
+    '                <td>' + QDetailKD_PRODUKSI.AsString + '</td>' +
+    '                <td>' + QDetailNO_RESEP.AsString + '</td>' +
+    '                <td>' + QDetailDESAIN_CW.AsString + '</td>' +
+    '                <td>' + QDetailWARNA.AsString + '</td>' +
+    '                <td>' + QTY + '</td>' +
+    '                <td>' + KODI + '</td>' +
+    '                <td>' + QMasterKETERANGAN.AsString + '</td>' +
+    '                <td style="border: 0px; color: white;">1</td>' +
+    '            </tr>';
+
+    TotalQTY := TotalQTY + wwDBGrid1.DataSource.DataSet.FieldByName('QTY').AsFloat;
+    TotalKODI := TotalKODI + wwDBGrid1.DataSource.DataSet.FieldByName('QTY').AsFloat/20;
+
+    wwDBGrid1.DataSource.DataSet.Next;
+    end;
+
+    HTMLContent := HTMLContent +
+    '            <tr>' +
+    '                <td colspan="6" style="border: 1px solid black;"><strong>Jumlah</strong></td>' +
+    '                <td style="border: 1px solid black;">' + FormatFloat('###,##0.##;(###,##0.##);-', TotalQTY) + '</td>' +
+    '                <td style="border: 1px solid black;">' + FormatFloat('###,##0.##;(###,##0.##);-', TotalKODI) + '</td>' +
+    '                <td style="border: 1px solid black;"></td>' +
+    '                <td style="border: 0px; color: white;">1</td>' +
+    '            </tr>' +
+    '        </table>' +
+    '        <div class="footer">' +
+    '            <table class="footer-table">' +
+    '                <tr>' +
+    '                    <td align="center"></td>' +
+    '                    <td align="center">' + TanggalCetak + '</td>' +
+    '                </tr>' +
+    '                <tr>' +
+    '                    <td align="center">Mengetahui,</td>' +
+    '                    <td align="center">Dibuat Oleh,</td>' +
+    '                </tr>' +
+    '                <tr>' +
+    '                    <td style="height: 20px;"></td>' +
+    '                    <td></td>' +
+    '                </tr>' +
+    '                <tr>' +
+    '                    <td align="center" style="font-size: 14px;">__________________________</td>' +
+    '                    <td align="center" style="font-size: 14px;">__________________________</td>' +
+    '                </tr>' +
+    '                <tr>' +
+    '                    <td align="center">Kemitraan</td>' +
+    '                    <td align="center">Adm Finishing</td>' +
+    '                </tr>' +
+    '            </table>' +
+    '            <p style="text-align: center;"><small>1. Dept. Kemitraan, 2. Security, 3. Mitra Kerja, 4. Arsip</small></p>' +
+    '        </div>' +
+    '    </div>' +
+    '    <script>' +
+    '        document.addEventListener("DOMContentLoaded", function() {' +
+    '            var table = document.querySelector(".table");' +
+    '            var thead = table.querySelector("thead");' +
+    '            var tbody = table.querySelector("tbody");' +
+    '            var rows = tbody.querySelectorAll("tr");' +
+    '            var pageHeight = 297; ' +
+    '            var currentHeight = 0;' +
+    '            rows.forEach(function(row) {' +
+    '                var rowHeight = row.offsetHeight;' +
+    '                if (currentHeight + rowHeight > pageHeight) {' +
+    '                    var newThead = thead.cloneNode(true);' +
+    '                    tbody.insertBefore(newThead, row);' +
+    '                    currentHeight = 0;' +
+    '                }' +
+    '                currentHeight += rowHeight;' +
+    '            });' +
+    '        });' +
+    '    </script>' +
+    '</body>' +
+    '</html>' ;
+
+
+    HTMLFile.Text := HTMLContent;
+    HTMLFile.SaveToFile(FilePath);
+    WebBrowser3.Navigate(FilePath);
+  finally
+    HTMLFile.Free;
+  end;
 end;
 
 procedure TPackingListMitraFrm.ColumnHeaderBand1BeforePrint(
@@ -727,6 +948,27 @@ end;
 procedure TPackingListMitraFrm.DelokWarnaEnter(Sender: TObject);
 begin
 dmfrm.QLookWarna.Open;
+end;
+
+procedure TPackingListMitraFrm.DelokWarnaCloseUp(Sender: TObject;
+  LookupTable, FillTable: TDataSet; modified: Boolean);
+begin
+if modified then
+ QDetailKD_WARNA.AsString:=dmfrm.QLookWarnaKD_WARNA.AsString;
+ QDetailWARNA.AsString:=dmfrm.QLookWarnaWARNA.AsString;
+end;
+
+procedure TPackingListMitraFrm.WebBrowser3DocumentComplete(Sender: TObject;
+  const pDisp: IDispatch; var URL: OleVariant);
+var
+  vaIn, vaOut: OleVariant;
+begin
+  WebBrowser3.ExecWB(OLECMDID_PRINT, OLECMDEXECOPT_PROMPTUSER, vaIn, vaOut);
+end;
+
+procedure TPackingListMitraFrm.BitBtn14Click(Sender: TObject);
+begin
+  wwDBGrid1.BringToFront;
 end;
 
 end.

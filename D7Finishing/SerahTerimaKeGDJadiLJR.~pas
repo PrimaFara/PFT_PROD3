@@ -730,7 +730,7 @@ begin
   begin
     ShowMessage('Maaf, sudah di-POSTING, tidak bisa diedit !...');
     //DataSet.Cancel;
-    Abort;
+   abort;
   end;
 
 end;

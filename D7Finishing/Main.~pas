@@ -250,7 +250,7 @@ uses DM, TerimaDariFinishing, HasilJahit, HasilKemas,
   FinishPemasukan, Refresh, LapTenunInspect, TerimaDariFinishing4,
   ReinspectPrintingProses,SerahKeReinspectNewPalapa, mending,
   ReinspecPemotongan, ReinspecKoreksi, PermintaanUnpost, Unpost, InspectingHipo,
-  DefectReinspect, ReinspecPajitex, foldinginsp;
+  DefectReinspect, ReinspecPajitex, foldinginsp, PackingListKirimMitra;
 
 {$R *.dfm}
 

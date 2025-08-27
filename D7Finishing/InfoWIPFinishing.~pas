@@ -31,7 +31,7 @@ type
     VTglAwal2: TwwDBDateTimePicker;
     VTglakhir2: TwwDBDateTimePicker;
     Panel6: TPanel;
-    Label19: TLabel;
+    vOperand2: TLabel;
     BitBtn5: TBitBtn;
     ECari2: TEdit;
     cbOtomatis2: TCheckBox;
@@ -979,6 +979,10 @@ type
     QMesen_Stenter_TotSTR2_MTR: TFloatField;
     QMesen_Stenter_TotSTR3_KD: TFloatField;
     QMesen_Stenter_TotSTR3_MTR: TFloatField;
+    QHasilWASHING_PENGERINGAN: TFloatField;
+    QHasilWASHING_PENGERINGAN_M: TFloatField;
+    QHasil_TotalWASHING_PENGERINGAN: TFloatField;
+    QHasil_TotalWASHING_PENGERINGAN_M: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure ColumnHeaderBand1BeforePrint(Sender: TQRCustomBand;
@@ -1041,6 +1045,9 @@ type
     procedure BitBtn11Click(Sender: TObject);
     procedure VTglAwal8Change(Sender: TObject);
     procedure VTglakhir8Change(Sender: TObject);
+    procedure BitBtn5Click(Sender: TObject);
+    procedure cbOtomatis2Click(Sender: TObject);
+    procedure vOperand2Click(Sender: TObject);
   private
     { Private declarations }
     vTab,vfilter,vorder : string;
@@ -1195,8 +1202,6 @@ begin
   for i:=0 to wwDBGrid2.FieldCount-1 do
     if UpperCase(wwDBGrid2.Columns[i].FieldName)<>'tgl' then
       dbcField2.Items.Add(wwDBGrid2.Columns[i].FieldName);
-
-
 end;
 
 procedure TInfoWIPFinishingFrm.TabSheet1Show(Sender: TObject);
@@ -1884,87 +1889,50 @@ else
   QHasil_Total.Open;
   //QHasil.EnableControls;
 
-  wwDBGrid2.ColumnByName('FOLDING').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalFOLDING.AsFloat);
+    wwDBGrid2.ColumnByName('FOLDING').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalFOLDING.AsFloat);
+    wwDBGrid2.ColumnByName('FOLDING_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalFOLDING_M.AsFloat);
+    wwDBGrid2.ColumnByName('FOLDING_BL').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalFOLDING_BL.AsFloat);
+    wwDBGrid2.ColumnByName('FOLDING_BL_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalFOLDING_BL_M.AsFloat);
+    wwDBGrid2.ColumnByName('SHEARING').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSHEARING.AsFloat);
+    wwDBGrid2.ColumnByName('SHEARING_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSHEARING_M.AsFloat);
+    wwDBGrid2.ColumnByName('SHEARING_BL').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSHEARING_BL.AsFloat);
+    wwDBGrid2.ColumnByName('SHEARING_BL_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSHEARING_BL_M.AsFloat);
+    wwDBGrid2.ColumnByName('BAKAR').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalBAKAR.AsFloat);
+    wwDBGrid2.ColumnByName('BAKAR_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalBAKAR_M.AsFloat);
+    wwDBGrid2.ColumnByName('BAKAR_BL').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalBAKAR_BL.AsFloat);
+    wwDBGrid2.ColumnByName('BAKAR_BL_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalBAKAR_BL_M.AsFloat);
+    wwDBGrid2.ColumnByName('BAKAR_GREY').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalBAKAR_GREY.AsFloat);
+    wwDBGrid2.ColumnByName('BAKAR_GREY_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalBAKAR_GREY_M.AsFloat);
+    wwDBGrid2.ColumnByName('BAKAR_GREY_BL').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalBAKAR_GREY_BL.AsFloat);
+    wwDBGrid2.ColumnByName('BAKAR_GREY_BL_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalBAKAR_GREY_BL_M.AsFloat);
+    wwDBGrid2.ColumnByName('DESIZING').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalDESIZING.AsFloat);
+    wwDBGrid2.ColumnByName('DESIZING_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalDESIZING_M.AsFloat);
+    wwDBGrid2.ColumnByName('DESIZING_BL').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalDESIZING_BL.AsFloat);
+    wwDBGrid2.ColumnByName('DESIZING_BL_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalDESIZING_BL_M.AsFloat);
+    wwDBGrid2.ColumnByName('WASHING').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalWASHING.AsFloat);
+    wwDBGrid2.ColumnByName('WASHING_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalWASHING_M.AsFloat);
+    wwDBGrid2.ColumnByName('WASHING_BL').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalWASHING_BL.AsFloat);
+    wwDBGrid2.ColumnByName('WASHING_BL_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalWASHING_BL_M.AsFloat);
 
-  wwDBGrid2.ColumnByName('FOLDING_M').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalFOLDING_M.AsFloat);
+    wwDBGrid2.ColumnByName('WASHING_PRE').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalWASHING_PRE.AsFloat);
+    wwDBGrid2.ColumnByName('WASHING_PRE_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalWASHING_PRE_M.AsFloat);
+    wwDBGrid2.ColumnByName('WASHING_DES').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalWASHING_DES.AsFloat);
+    wwDBGrid2.ColumnByName('WASHING_DES_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalWASHING_DES_M.AsFloat);
+    wwDBGrid2.ColumnByName('WASHING_PENGERINGAN').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalWASHING_PENGERINGAN.AsFloat);
+    wwDBGrid2.ColumnByName('WASHING_PENGERINGAN_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalWASHING_PENGERINGAN_M.AsFloat);
 
-  wwDBGrid2.ColumnByName('FOLDING_BL').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalFOLDING_BL.AsFloat);
-
-  wwDBGrid2.ColumnByName('FOLDING_BL_M').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalFOLDING_BL_M.AsFloat);
-
-  wwDBGrid2.ColumnByName('SHEARING').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalSHEARING.AsFloat);
-
-  wwDBGrid2.ColumnByName('SHEARING_M').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalSHEARING_M.AsFloat);
-
-  wwDBGrid2.ColumnByName('SHEARING_BL').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalSHEARING_BL.AsFloat);
-
-  wwDBGrid2.ColumnByName('SHEARING_BL_M').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalSHEARING_BL_M.AsFloat);
-
-  wwDBGrid2.ColumnByName('BAKAR').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalBAKAR.AsFloat);
-
-  wwDBGrid2.ColumnByName('BAKAR_M').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalBAKAR_M.AsFloat);
-
-  wwDBGrid2.ColumnByName('BAKAR_BL').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalBAKAR_BL.AsFloat);
-
-  wwDBGrid2.ColumnByName('BAKAR_BL_M').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalBAKAR_BL_M.AsFloat);
-
-  wwDBGrid2.ColumnByName('BAKAR_GREY').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalBAKAR_GREY.AsFloat);
-
-  wwDBGrid2.ColumnByName('BAKAR_GREY_M').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalBAKAR_GREY_M.AsFloat);
-
-  wwDBGrid2.ColumnByName('BAKAR_GREY_BL').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalBAKAR_GREY_BL.AsFloat);
-
-  wwDBGrid2.ColumnByName('BAKAR_GREY_BL_M').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalBAKAR_GREY_BL_M.AsFloat);
-
-  wwDBGrid2.ColumnByName('DESIZING').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalDESIZING.AsFloat);
-
-  wwDBGrid2.ColumnByName('DESIZING_M').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalDESIZING_M.AsFloat);
-
-  wwDBGrid2.ColumnByName('DESIZING_BL').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalDESIZING_BL.AsFloat);
-
-  wwDBGrid2.ColumnByName('DESIZING_BL_M').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalDESIZING_BL_M.AsFloat);
-
-  wwDBGrid2.ColumnByName('WASHING').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalWASHING.AsFloat);
-
-  wwDBGrid2.ColumnByName('WASHING_M').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalWASHING_M.AsFloat);
-
-  wwDBGrid2.ColumnByName('WASHING_BL').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalWASHING_BL.AsFloat);
-
-  wwDBGrid2.ColumnByName('WASHING_BL_M').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalWASHING_BL_M.AsFloat);
-
-
-  wwDBGrid2.ColumnByName('WASHING_PRE').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalWASHING_PRE.AsFloat);
-
-  wwDBGrid2.ColumnByName('WASHING_PRE_M').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalWASHING_PRE_M.AsFloat);
-
-  wwDBGrid2.ColumnByName('WASHING_DES').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalWASHING_DES.AsFloat);
-
-  wwDBGrid2.ColumnByName('WASHING_DES_M').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalWASHING_DES_M.AsFloat);
-
-
-  wwDBGrid2.ColumnByName('STENTER').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalSTENTER.AsFloat);
-
-  wwDBGrid2.ColumnByName('STENTER_M').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalSTENTER_M.AsFloat);
-
-  wwDBGrid2.ColumnByName('STENTER_BL').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalSTENTER_BL.AsFloat);
-
-  wwDBGrid2.ColumnByName('STENTER_BL_M').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalSTENTER_BL_M.AsFloat);
-
-  wwDBGrid2.ColumnByName('STENTER_PG').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalSTENTER_PG.AsFloat);
-
-  wwDBGrid2.ColumnByName('STENTER_PG_M').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalSTENTER_PG_M.AsFloat);
-
-  wwDBGrid2.ColumnByName('STENTER_PRE').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalSTENTER_PRE.AsFloat);
-
-  wwDBGrid2.ColumnByName('STENTER_PRE_M').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalSTENTER_PRE_M.AsFloat);
-
-  wwDBGrid2.ColumnByName('CALENDER').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalCALENDER.AsFloat);
-
-  wwDBGrid2.ColumnByName('CALENDER_M').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalCALENDER_M.AsFloat);
-
-  wwDBGrid2.ColumnByName('CALENDER_BL').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalCALENDER_BL.AsFloat);
-
-  wwDBGrid2.ColumnByName('CALENDER_BL_M').FooterValue:=FormatFloat('#.#,#;#.#,#; ',QHasil_TotalCALENDER_BL_M.AsFloat);
+    wwDBGrid2.ColumnByName('STENTER').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSTENTER.AsFloat);
+    wwDBGrid2.ColumnByName('STENTER_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSTENTER_M.AsFloat);
+    wwDBGrid2.ColumnByName('STENTER_BL').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSTENTER_BL.AsFloat);
+    wwDBGrid2.ColumnByName('STENTER_BL_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSTENTER_BL_M.AsFloat);
+    wwDBGrid2.ColumnByName('STENTER_PG').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSTENTER_PG.AsFloat);
+    wwDBGrid2.ColumnByName('STENTER_PG_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSTENTER_PG_M.AsFloat);
+    wwDBGrid2.ColumnByName('STENTER_PRE').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSTENTER_PRE.AsFloat);
+    wwDBGrid2.ColumnByName('STENTER_PRE_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSTENTER_PRE_M.AsFloat);
+    wwDBGrid2.ColumnByName('CALENDER').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalCALENDER.AsFloat);
+    wwDBGrid2.ColumnByName('CALENDER_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalCALENDER_M.AsFloat);
+    wwDBGrid2.ColumnByName('CALENDER_BL').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalCALENDER_BL.AsFloat);
+    wwDBGrid2.ColumnByName('CALENDER_BL_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalCALENDER_BL_M.AsFloat);
 
 end;
 
@@ -2085,6 +2053,129 @@ if VTglAwal8.Date>VTglAkhir8.Date then
       ShowMessage('Tanggal Akhir harus LEBIH BESAR dari Tanggal Awal !');
       VTglAkhir8.Date:=VTglAwal8.Date;
   end;
+end;
+
+procedure TInfoWIPFinishingFrm.BitBtn5Click(Sender: TObject);
+var
+  i : word;
+  vpertama : boolean;
+  vrgTanggal : String;
+begin
+    wwDBGrid2.BringToFront;
+    vpertama:=True;
+
+    vfilter:=' where (';
+    if (QHasil.FieldCount>=1) then
+    begin
+        if dbcField2.ItemIndex=0 then
+        begin
+        for i:=0 to wwDBGrid2.Selected.Count-1 do
+    //    for i:=0 to QHasil.FieldCount-1 do
+        begin
+            if (QHasil.FieldByName(wwDBGrid2.Columns[i].FieldName).FieldKind=fkData) and (UpperCase(wwDBGrid2.Columns[i].FieldName)<>'TANGGAL') then
+            begin
+            if vpertama then
+                begin
+                if vOperand2.Caption='LIKE' then
+                    vfilter:=vfilter+wwDBGrid2.Columns[i].FieldName+' like ''%'+ECari2.Text+'%'''
+                    else
+                    vfilter:=vfilter+wwDBGrid2.Columns[i].FieldName+' = '''+ECari2.Text+'''';
+                vpertama:=False;
+                end
+                else
+                if vOperand2.Caption='LIKE' then
+                    vfilter:=vfilter+' or '+wwDBGrid2.Columns[i].FieldName+' like ''%'+ECari2.Text+'%'''
+                    else
+                    vfilter:=vfilter+' or '+wwDBGrid2.Columns[i].FieldName+' = '''+ECari2.Text+''''
+            end;
+        end;
+        end
+        else
+        if vOperand2.Caption='LIKE' then
+            vfilter:=vfilter+dbcField2.Text+' like ''%'+ECari2.Text+'%'''
+            else
+            vfilter:=vfilter+dbcField2.Text+' = '''+ECari2.Text+'''';
+        vfilter:=vfilter+')';
+        if QHasil.Active then
+            vorder:=' order by '+wwDBGrid2.Columns[0].FieldName
+        else
+            vorder:=' order by kode_produksi';
+
+    end;
+    QHasil.DisableControls;
+    QHasil.Close;
+    QHasil.SetVariable('myparam',vfilter+vorder);
+    QHasil.Open;
+    QHasil_Total.Close;
+    QHasil_Total.SetVariable('myparam',vfilter+vorder);
+    QHasil_Total.Open;
+    QHasil.EnableControls;
+    
+    wwDBGrid2.ColumnByName('FOLDING').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalFOLDING.AsFloat);
+    wwDBGrid2.ColumnByName('FOLDING_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalFOLDING_M.AsFloat);
+    wwDBGrid2.ColumnByName('FOLDING_BL').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalFOLDING_BL.AsFloat);
+    wwDBGrid2.ColumnByName('FOLDING_BL_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalFOLDING_BL_M.AsFloat);
+    wwDBGrid2.ColumnByName('SHEARING').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSHEARING.AsFloat);
+    wwDBGrid2.ColumnByName('SHEARING_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSHEARING_M.AsFloat);
+    wwDBGrid2.ColumnByName('SHEARING_BL').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSHEARING_BL.AsFloat);
+    wwDBGrid2.ColumnByName('SHEARING_BL_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSHEARING_BL_M.AsFloat);
+    wwDBGrid2.ColumnByName('BAKAR').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalBAKAR.AsFloat);
+    wwDBGrid2.ColumnByName('BAKAR_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalBAKAR_M.AsFloat);
+    wwDBGrid2.ColumnByName('BAKAR_BL').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalBAKAR_BL.AsFloat);
+    wwDBGrid2.ColumnByName('BAKAR_BL_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalBAKAR_BL_M.AsFloat);
+    wwDBGrid2.ColumnByName('BAKAR_GREY').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalBAKAR_GREY.AsFloat);
+    wwDBGrid2.ColumnByName('BAKAR_GREY_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalBAKAR_GREY_M.AsFloat);
+    wwDBGrid2.ColumnByName('BAKAR_GREY_BL').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalBAKAR_GREY_BL.AsFloat);
+    wwDBGrid2.ColumnByName('BAKAR_GREY_BL_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalBAKAR_GREY_BL_M.AsFloat);
+    wwDBGrid2.ColumnByName('DESIZING').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalDESIZING.AsFloat);
+    wwDBGrid2.ColumnByName('DESIZING_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalDESIZING_M.AsFloat);
+    wwDBGrid2.ColumnByName('DESIZING_BL').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalDESIZING_BL.AsFloat);
+    wwDBGrid2.ColumnByName('DESIZING_BL_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalDESIZING_BL_M.AsFloat);
+    wwDBGrid2.ColumnByName('WASHING').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalWASHING.AsFloat);
+    wwDBGrid2.ColumnByName('WASHING_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalWASHING_M.AsFloat);
+    wwDBGrid2.ColumnByName('WASHING_BL').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalWASHING_BL.AsFloat);
+    wwDBGrid2.ColumnByName('WASHING_BL_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalWASHING_BL_M.AsFloat);
+
+    wwDBGrid2.ColumnByName('WASHING_PRE').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalWASHING_PRE.AsFloat);
+    wwDBGrid2.ColumnByName('WASHING_PRE_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalWASHING_PRE_M.AsFloat);
+    wwDBGrid2.ColumnByName('WASHING_DES').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalWASHING_DES.AsFloat);
+    wwDBGrid2.ColumnByName('WASHING_DES_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalWASHING_DES_M.AsFloat);
+    wwDBGrid2.ColumnByName('WASHING_PENGERINGAN').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalWASHING_PENGERINGAN.AsFloat);
+    wwDBGrid2.ColumnByName('WASHING_PENGERINGAN_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalWASHING_PENGERINGAN_M.AsFloat);
+
+    wwDBGrid2.ColumnByName('STENTER').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSTENTER.AsFloat);
+    wwDBGrid2.ColumnByName('STENTER_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSTENTER_M.AsFloat);
+    wwDBGrid2.ColumnByName('STENTER_BL').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSTENTER_BL.AsFloat);
+    wwDBGrid2.ColumnByName('STENTER_BL_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSTENTER_BL_M.AsFloat);
+    wwDBGrid2.ColumnByName('STENTER_PG').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSTENTER_PG.AsFloat);
+    wwDBGrid2.ColumnByName('STENTER_PG_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSTENTER_PG_M.AsFloat);
+    wwDBGrid2.ColumnByName('STENTER_PRE').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSTENTER_PRE.AsFloat);
+    wwDBGrid2.ColumnByName('STENTER_PRE_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalSTENTER_PRE_M.AsFloat);
+    wwDBGrid2.ColumnByName('CALENDER').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalCALENDER.AsFloat);
+    wwDBGrid2.ColumnByName('CALENDER_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalCALENDER_M.AsFloat);
+    wwDBGrid2.ColumnByName('CALENDER_BL').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalCALENDER_BL.AsFloat);
+    wwDBGrid2.ColumnByName('CALENDER_BL_M').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QHasil_TotalCALENDER_BL_M.AsFloat);
+  
+end;
+
+procedure TInfoWIPFinishingFrm.cbOtomatis2Click(Sender: TObject);
+begin
+  if cbOtomatis2.Checked then
+  begin
+    ShowMessage('Mencari data pada kolom paling kiri.'+#13+'Urutkan data terlebih dahulu supaya mudah mencari !');
+    wwDBGrid2.Options:=wwDBGrid2.Options+[dgAlwaysShowSelection];
+  end
+    else
+    wwDBGrid2.Options:=wwDBGrid2.Options-[dgAlwaysShowSelection];
+  ECari2.SetFocus;
+end;
+
+procedure TInfoWIPFinishingFrm.vOperand2Click(Sender: TObject);
+begin
+if vOperand2.Caption='LIKE' then
+    vOperand2.Caption:='='
+    else
+      vOperand2.Caption:='LIKE';
 end;
 
 end.

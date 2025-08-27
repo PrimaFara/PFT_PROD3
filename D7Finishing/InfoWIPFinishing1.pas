@@ -7,7 +7,7 @@ uses
   Dialogs, DB, Wwdatsrc, OracleData, Mask, wwdbedit, Wwdotdot, Wwdbcomb,
   wwdblook, Grids, Wwdbigrd, Wwdbgrid, StdCtrls, Buttons, ComCtrls,
   ExtCtrls, wwDBNavigator, wwrcdvw, Wwdbdlg, QRCtrls, QuickRpt,
-  wwdbdatetimepicker, Oracle, wwDialog, wwidlg, DBCtrls;
+  wwdbdatetimepicker, Oracle, wwDialog, wwidlg, DBCtrls, OleCtrls, SHDocVw;
 
 type
   TInfoWIPFinishing1Frm = class(TForm)
@@ -455,6 +455,7 @@ type
     QRiwayatTransaksi_totOUT_BK: TFloatField;
     QRiwayatTransaksi_totOUT_BS: TFloatField;
     dsQRiwayatTransaksi: TwwDataSource;
+    WebBrowser3: TWebBrowser;
     procedure vTglAwal7Change(Sender: TObject);
     procedure vTglAkhir7Change(Sender: TObject);
     procedure cbOtomatis7Click(Sender: TObject);
@@ -492,6 +493,8 @@ type
     procedure BitBtn6Click(Sender: TObject);
     procedure TabSheet4Show(Sender: TObject);
     procedure BitBtn9Click(Sender: TObject);
+    procedure WebBrowser3DocumentComplete(Sender: TObject;
+      const pDisp: IDispatch; var URL: OleVariant);
   private
     { Private declarations }
     vfilter, vorder, vfilter2, vorder2 : String;
@@ -556,6 +559,8 @@ procedure TInfoWIPFinishing1Frm.BitBtn7Click(Sender: TObject);
 var
   TanggalStr: string;
 begin
+    wwDBGrid2.BringToFront;
+    
     if vTglAwal7.Date = vTglAkhir7.Date then
       TanggalStr := FormatDateTime('dd mmmm yyyy', vTglAwal7.Date)
     else
@@ -583,13 +588,320 @@ if QWIP.Active then
 end;
 
 procedure TInfoWIPFinishing1Frm.BitBtn8Click(Sender: TObject);
+var
+    HTMLFile: TStringList;
+    FilePath: string;
+    HTMLContent: string;
+    TanggalCetak: string;
+    TanggalStr: string;
+
+    TotalQTYAWAL, TotalMASUK, TOTALMRETUR, TOTALMLAIN, TOTALMKOREKSI, TOTALMPENYESUAIAN: Real;
+    TotalKELUAR, TOTALKRETUR, TOTALKLAIN, TOTALKKOREKSI, TOTALKPENYESUAIAN, TOTALAKHIRPCS, TOTALAKHIRKODI: Real;
+
+    QTY_AWAL, MASUK, MRETUR, MLAIN, MKOREKSI, MPENYESUAIAN: String;
+    KELUAR, KRETUR, KLAIN, KKOREKSI, KPENYESUAIAN, AKHIRPCS, AKHIRKODI: String;
+
 begin
-// DMFrm.QUserTime.Close;
-// DMFrm.QUserTime.Open;
- //if cbPreview.Checked then
- //  QuickRep2.Preview
-   //else
-     //QuickRep1.Print;
+    WebBrowser3.BringToFront;
+
+    TanggalCetak := 'Pekalongan, ' + FormatDateTime('dd mmmm yyyy', Date);
+
+    if vTglAwal7.Date = vTglAkhir7.Date then
+        TanggalStr := FormatDateTime('dd mmmm yyyy', vTglAwal7.Date)
+    else
+        TanggalStr := FormatDateTime('dd mmmm yyyy', vTglAwal7.Date) + ' - ' + FormatDateTime('dd mmmm yyyy', vTglAkhir7.Date);
+
+    FilePath := ExtractFilePath(Application.ExeName) + 'WIPFinishing.html';
+    HTMLFile := TStringList.Create;
+    try
+        HTMLContent :=
+        
+        '<!DOCTYPE html>' +
+        '<html lang="id">' +
+        '<head>' +
+        '    <meta charset="UTF-8">' +
+        '    <meta name="viewport" content="width=device-width, initial-scale=1.0">' +
+        '    <title>Laporan WIP Finishing</title>' +
+        '    <style> ' +
+        '        body { font-family: Arial, sans-serif; font-size: 12px; } ' +
+        '        .container { width: 100%; max-width: 330mm; padding: 10px; margin: auto; border: 1px solid #000; } ' +
+        '        .header { width: 100%; text-align: left; margin-bottom: 10px; } ' +
+        '        .header-table { width: 100%; border-collapse: collapse; } ' +
+        '        .header-table td { padding: 4px; vertical-align: top; } ' +
+        '        .logo { font-size: 18px; font-weight: bold; text-align: center; width: 20%; } ' +
+        '        .logo-judul { font-size: 16px; font-weight: bold; text-align: center; width: 30%; } ' +
+        '        .title { font-size: 14px; font-weight: bold; text-align: center; } ' +
+        '        .label { font-weight: bold; width: 20%; } ' +
+        '        .received-from { font-weight: bold; margin-top: 10px; } ' +
+        '        .order-table { margin-top: 5px; width: 80%; border-collapse: collapse; } ' +
+        '        .order-table td { font-size: 12px; padding: 2px 5px; } ' +
+        '        .table { width: 100%; border-collapse: collapse; margin-top: 10px; } ' +
+        '        .table th, .table td { border: 1px solid #000; padding: 2px; text-align: center; } ' +
+        '        .table th { background-color: #f0f0f0; } ' +
+        '        .footer { margin-top: 15px; text-align: center; } ' +
+        '        @media print { body { margin: 0; padding: 0; } .container { border: none; } ' +
+        '        @page { size: F4 landscape; margin: 10mm; } thead { display: table-header-group; } tfoot { display: table-footer-group; } ' +
+        '        .table th { position: sticky; top: 0; background-color: #f0f0f0; } } ' +
+        '        .footer-table { width: 100%; margin-top: 15px; border-collapse: collapse; } ' +
+        '        .footer-table td { padding: 5px; border: none; font-weight: bold; } ' +
+        '        .table tr:last-child td { border-bottom: 1px solid black; } ' +
+        '    </style>' +
+        '</head>' +
+        '<body>' +
+        '    <div class="container">' +
+        '        <div class="header">' +
+        '            <table class="header-table">' +
+        '                <tr>' +
+        '                    <td rowspan="2" class="logo">PT. PRIMAFARA TEXTILE</td>' +
+        '                </tr>' +
+        '                <tr>' +
+        '                    <td class="logo-judul" colspan="2"><strong>LAPORAN WIP FINISHING</strong></td>' +
+        '                </tr>' +
+        '                <tr>' +
+        '                    <td class="label" align="center">Sapugarut - Pekalongan</td>' +
+        '                    <td class="label" align="center">Periode : ' + TanggalStr + ' </td>' +
+        '                </tr>' +
+        '            </table>' +
+        '        </div>' +
+        '        <table class="table">' +
+        '            <thead>' +
+        '                <tr>' +
+        '                    <th rowspan="2">KP</th>' +
+        '                    <th rowspan="2">KONSTRUKSI</th>' +
+        '                    <th rowspan="2">AWAL</th>' +
+        '                    <th colspan="5">PEMASUKAN</th>' +
+        '                    <th colspan="5">PENGELUARAN</th>' +
+        '                    <th colspan="2">AKHIR</th>' +
+        '                    <th style="border: 0px; color: white;">1</th>' +
+        '                </tr>' +
+        '                <tr>' +
+        '                    <th>MASUK</th>' +
+        '                    <th>RETUR</th>' +
+        '                    <th>LAIN-LAIN</th>' +
+        '                    <th>KOREKSI</th>' +
+        '                    <th>PENYESUAIAN</th>' +
+        '                    <th>KELUAR</th>' +
+        '                    <th>RETUR</th>' +
+        '                    <th>LAIN-LAIN</th>' +
+        '                    <th>KOREKSI</th>' +
+        '                    <th>PENYESUAIAN</th>' +
+        '                    <th>PCS</th>' +
+        '                    <th>KODI</th>' +
+        '                    <th style="border: 0px; color: white;">1</th>' +
+        '                </tr>' +
+        '            </thead>' +
+        '            <tbody>';
+
+        TotalQTYAWAL := 0; TotalMASUK := 0; TOTALMRETUR := 0; TOTALMLAIN := 0; TOTALMKOREKSI := 0; TOTALMPENYESUAIAN := 0;
+        TotalKELUAR := 0; TOTALKRETUR := 0; TOTALKLAIN := 0; TOTALKKOREKSI := 0; TOTALKPENYESUAIAN := 0; TOTALAKHIRPCS := 0; TOTALAKHIRKODI := 0;
+
+        wwDBGrid2.DataSource.DataSet.First;
+
+        while not wwDBGrid2.DataSource.DataSet.Eof do
+        begin
+
+            if wwDBGrid2.DataSource.DataSet.FieldByName('QTY_AWAL').IsNull or 
+            (wwDBGrid2.DataSource.DataSet.FieldByName('QTY_AWAL').AsFloat = 0) then
+                QTY_AWAL := '-'
+            else
+                QTY_AWAL := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid2.DataSource.DataSet.FieldByName('QTY_AWAL').AsFloat);
+
+            if wwDBGrid2.DataSource.DataSet.FieldByName('MASUK').IsNull or 
+            (wwDBGrid2.DataSource.DataSet.FieldByName('MASUK').AsFloat = 0) then
+                MASUK := '-'
+            else
+                MASUK := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid2.DataSource.DataSet.FieldByName('MASUK').AsFloat);
+
+            if wwDBGrid2.DataSource.DataSet.FieldByName('MRETUR').IsNull or 
+            (wwDBGrid2.DataSource.DataSet.FieldByName('MRETUR').AsFloat = 0) then
+                MRETUR := '-'
+            else
+                MRETUR := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid2.DataSource.DataSet.FieldByName('MRETUR').AsFloat);
+
+            if wwDBGrid2.DataSource.DataSet.FieldByName('MLAIN').IsNull or 
+            (wwDBGrid2.DataSource.DataSet.FieldByName('MLAIN').AsFloat = 0) then
+                MLAIN := '-'
+            else
+                MLAIN := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid2.DataSource.DataSet.FieldByName('MLAIN').AsFloat);
+
+            if wwDBGrid2.DataSource.DataSet.FieldByName('MKOREKSI').IsNull or 
+            (wwDBGrid2.DataSource.DataSet.FieldByName('MKOREKSI').AsFloat = 0) then
+                MKOREKSI := '-'
+            else
+                MKOREKSI := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid2.DataSource.DataSet.FieldByName('MKOREKSI').AsFloat);
+
+            if wwDBGrid2.DataSource.DataSet.FieldByName('PENYESUAIAN_MASUK').IsNull or 
+            (wwDBGrid2.DataSource.DataSet.FieldByName('PENYESUAIAN_MASUK').AsFloat = 0) then
+                MPENYESUAIAN := '-'
+            else
+                MPENYESUAIAN := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid2.DataSource.DataSet.FieldByName('PENYESUAIAN_MASUK').AsFloat);
+
+            // ---------------------------------------------------------------------------------------------------------------------------------------------------
+
+            if wwDBGrid2.DataSource.DataSet.FieldByName('KELUAR').IsNull or 
+            (wwDBGrid2.DataSource.DataSet.FieldByName('KELUAR').AsFloat = 0) then
+                KELUAR := '-'
+            else
+                KELUAR := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid2.DataSource.DataSet.FieldByName('KELUAR').AsFloat);
+
+            if wwDBGrid2.DataSource.DataSet.FieldByName('KRETUR').IsNull or 
+            (wwDBGrid2.DataSource.DataSet.FieldByName('KRETUR').AsFloat = 0) then
+                KRETUR := '-'
+            else
+                KRETUR := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid2.DataSource.DataSet.FieldByName('KRETUR').AsFloat);
+
+            if wwDBGrid2.DataSource.DataSet.FieldByName('KLAIN').IsNull or 
+            (wwDBGrid2.DataSource.DataSet.FieldByName('KLAIN').AsFloat = 0) then
+                KLAIN := '-'
+            else
+                KLAIN := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid2.DataSource.DataSet.FieldByName('KLAIN').AsFloat);
+
+            if wwDBGrid2.DataSource.DataSet.FieldByName('KKOREKSI').IsNull or 
+            (wwDBGrid2.DataSource.DataSet.FieldByName('KKOREKSI').AsFloat = 0) then
+                KKOREKSI := '-'
+            else
+                KKOREKSI := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid2.DataSource.DataSet.FieldByName('KKOREKSI').AsFloat);
+
+            if wwDBGrid2.DataSource.DataSet.FieldByName('PENYESUAIAN_KELUAR').IsNull or
+            (wwDBGrid2.DataSource.DataSet.FieldByName('PENYESUAIAN_KELUAR').AsFloat = 0) then
+                KPENYESUAIAN := '-'
+            else
+                KPENYESUAIAN := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid2.DataSource.DataSet.FieldByName('PENYESUAIAN_KELUAR').AsFloat);
+
+            // ---------------------------------------------------------------------------------------------------------------------------------------------------
+
+            if wwDBGrid2.DataSource.DataSet.FieldByName('QTY_AKHIR').IsNull or 
+            (wwDBGrid2.DataSource.DataSet.FieldByName('QTY_AKHIR').AsFloat = 0) then
+                AKHIRPCS := '-'
+            else
+                AKHIRPCS := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid2.DataSource.DataSet.FieldByName('QTY_AKHIR').AsFloat);
+
+            if wwDBGrid2.DataSource.DataSet.FieldByName('QTY_KODI').IsNull or 
+            (wwDBGrid2.DataSource.DataSet.FieldByName('QTY_KODI').AsFloat = 0) then
+                AKHIRKODI := '-'
+            else
+                AKHIRKODI := FormatFloat('0.0,0;(0.0,0);-', wwDBGrid2.DataSource.DataSet.FieldByName('QTY_KODI').AsFloat);        
+
+            // ---------------------------------------------------------------------------------------------------------------------------------------------------
+
+        HTMLContent := HTMLContent +
+        '                <tr>' +
+        '                    <td style="text-align: left;white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 150px;">' + wwDBGrid2.DataSource.DataSet.FieldByName('KD_PRODUKSI').AsString + '</td>' +
+        '                    <td style="text-align: left; overflow: hidden; text-overflow: ellipsis; max-width: 150px;">' + wwDBGrid2.DataSource.DataSet.FieldByName('KONSTRUKSI').AsString + '</td>' +
+        '                    <td style="text-align: right;">' + QTY_AWAL + '</td>' +
+        '                    <td style="text-align: right;">' + MASUK + '</td>' +
+        '                    <td style="text-align: right;">' + MRETUR + '</td>' +
+        '                    <td style="text-align: right;">' + MLAIN + '</td>' +
+        '                    <td style="text-align: right;">' + MKOREKSI + '</td>' +
+        '                    <td style="text-align: right;">' + MPENYESUAIAN + '</td>' +
+
+        '                    <td style="text-align: right;">' + KELUAR + '</td>' +
+        '                    <td style="text-align: right;">' + KRETUR + '</td>' +
+        '                    <td style="text-align: right;">' + KLAIN + '</td>' +
+        '                    <td style="text-align: right;">' + KKOREKSI + '</td>' +
+        '                    <td style="text-align: right;">' + KPENYESUAIAN + '</td>' +
+
+        '                    <td style="text-align: right;">' + AKHIRPCS + '</td>' +
+        '                    <td style="text-align: right;">' + AKHIRKODI + '</td>' +
+        '                    <td style="border: 0px; color: white;">1</td>' +
+        '                </tr>';
+
+            TotalQTYAWAL  := TotalQTYAWAL + wwDBGrid2.DataSource.DataSet.FieldByName('QTY_AWAL').AsFloat;
+
+            TotalMASUK  := TotalMASUK + wwDBGrid2.DataSource.DataSet.FieldByName('MASUK').AsFloat;
+            TOTALMRETUR  := TOTALMRETUR + wwDBGrid2.DataSource.DataSet.FieldByName('MRETUR').AsFloat;
+            TOTALMLAIN  := TOTALMLAIN + wwDBGrid2.DataSource.DataSet.FieldByName('MLAIN').AsFloat;
+            TOTALMKOREKSI  := TOTALMKOREKSI + wwDBGrid2.DataSource.DataSet.FieldByName('MKOREKSI').AsFloat;
+            TOTALMPENYESUAIAN  := TOTALMPENYESUAIAN + wwDBGrid2.DataSource.DataSet.FieldByName('PENYESUAIAN_MASUK').AsFloat;
+
+            TotalKELUAR  := TotalKELUAR + wwDBGrid2.DataSource.DataSet.FieldByName('KELUAR').AsFloat;
+            TOTALKRETUR  := TOTALKRETUR + wwDBGrid2.DataSource.DataSet.FieldByName('KRETUR').AsFloat;
+            TOTALKLAIN  := TOTALKLAIN + wwDBGrid2.DataSource.DataSet.FieldByName('KLAIN').AsFloat;
+            TOTALKKOREKSI  := TOTALKKOREKSI + wwDBGrid2.DataSource.DataSet.FieldByName('KKOREKSI').AsFloat;
+            TOTALKPENYESUAIAN  := TOTALKPENYESUAIAN + wwDBGrid2.DataSource.DataSet.FieldByName('PENYESUAIAN_KELUAR').AsFloat;
+
+            TOTALAKHIRPCS  := TOTALAKHIRPCS + wwDBGrid2.DataSource.DataSet.FieldByName('QTY_AKHIR').AsFloat;
+            TOTALAKHIRKODI := TOTALAKHIRKODI + wwDBGrid2.DataSource.DataSet.FieldByName('QTY_KODI').AsFloat;
+
+            wwDBGrid2.DataSource.DataSet.Next;
+        end;
+        HTMLContent := HTMLContent +
+        '                <tr>' +
+        '                    <td style="border: 1px solid black;" colspan="2">Jumlah</td>' +
+        '                    <td style="border: 1px solid black; text-align: right;">' + FormatFloat('0.0,0;(0.0,0);-', TotalQTYAWAL) + '</td>' +
+        '                    <td style="border: 1px solid black; text-align: right;">' + FormatFloat('0.0,0;(0.0,0);-', TotalMASUK) + '</td>' +
+        '                    <td style="border: 1px solid black; text-align: right;">' + FormatFloat('0.0,0;(0.0,0);-', TOTALMRETUR) + '</td>' +
+        '                    <td style="border: 1px solid black; text-align: right;">' + FormatFloat('0.0,0;(0.0,0);-', TOTALMLAIN) + '</td>' +
+        '                    <td style="border: 1px solid black; text-align: right;">' + FormatFloat('0.0,0;(0.0,0);-', TOTALMKOREKSI) + '</td>' +
+        '                    <td style="border: 1px solid black; text-align: right;">' + FormatFloat('0.0,0;(0.0,0);-', TOTALMPENYESUAIAN) + '</td>' +
+
+        '                    <td style="border: 1px solid black; text-align: right;">' + FormatFloat('0.0,0;(0.0,0);-', TotalKELUAR) + '</td>' +
+        '                    <td style="border: 1px solid black; text-align: right;">' + FormatFloat('0.0,0;(0.0,0);-', TOTALKRETUR) + '</td>' +
+        '                    <td style="border: 1px solid black; text-align: right;">' + FormatFloat('0.0,0;(0.0,0);-', TOTALKLAIN) + '</td>' +
+        '                    <td style="border: 1px solid black; text-align: right;">' + FormatFloat('0.0,0;(0.0,0);-', TOTALKKOREKSI) + '</td>' +
+        '                    <td style="border: 1px solid black; text-align: right;">' + FormatFloat('0.0,0;(0.0,0);-', TOTALKPENYESUAIAN) + '</td>' +
+
+        '                    <td style="border: 1px solid black; text-align: right;">' + FormatFloat('0.0,0;(0.0,0);-', TOTALAKHIRPCS) + '</td>' +
+        '                    <td style="border: 1px solid black; text-align: right;">' + FormatFloat('0.0,0;(0.0,0);-', TOTALAKHIRKODI) + '</td>' +
+        '                    <td style="border: 0px; color: white;">1</td>' +
+        '                </tr>' +
+        '            </tbody>' +
+        '        </table>' +
+        '        <div class="footer">' +
+        '            <table class="footer-table">' +
+        '                <tr>' +
+        '                    <td align="center"></td>' +
+        '                    <td align="center">' + TanggalCetak + '</td>' +
+        '                </tr>' +
+        '                <tr>' +
+        '                    <td align="center">Mengetahui,</td>' +
+        '                    <td align="center">Dibuat Oleh,</td>' +
+        '                </tr>' +
+        '                <tr>' +
+        '                    <td style="height: 15px;"></td>' +
+        '                    <td></td>' +
+        '                </tr>' +
+        '                <tr>' +
+        '                    <td align="center" style="font-size: 14px;">_______________________________</td>' +
+        '                    <td align="center" style="font-size: 14px;">_______________________________</td>' +
+        '                </tr>' +
+        '                <tr>' +
+        '                    <td align="center">SDH. Dept Finishing</td>' +
+        '                    <td align="center">Finishing</td>' +
+        '                </tr>' +
+        '            </table>' +
+        '            <p style="text-align: center;"><small>1. Arsip, 2. Finishing</small></p>' +
+        '        </div>' +
+        '    </div>' +
+        '    <script>' +
+        '        document.addEventListener("DOMContentLoaded", function() {' +
+        '            var table = document.querySelector(".table");' +
+        '            var thead = table.querySelector("thead");' +
+        '            var tbody = table.querySelector("tbody");' +
+        '            var rows = tbody.querySelectorAll("tr");' +
+        '            var pageHeight = 297; ' +
+        '            var currentHeight = 0;' +
+        '            rows.forEach(function(row) {' +
+        '                var rowHeight = row.offsetHeight;' +
+        '                if (currentHeight + rowHeight > pageHeight) {' +
+        '                    var newThead = thead.cloneNode(true);' +
+        '                    tbody.insertBefore(newThead, row);' +
+        '                    currentHeight = 0;' +
+        '                }' +
+        '                currentHeight += rowHeight;' +
+        '            });' +
+        '        });' +
+        '    </script>' +
+        '</body>' +
+        '</html>';
+
+
+        HTMLFile.Text := HTMLContent;
+        HTMLFile.SaveToFile(FilePath);
+        WebBrowser3.Navigate(FilePath);
+    finally
+        HTMLFile.Free;
+    end;
 end;
 
 procedure TInfoWIPFinishing1Frm.wwDBGrid2TitleButtonClick(Sender: TObject;
@@ -1142,6 +1454,7 @@ begin
 //if (DMFrm.QUserTimeVJAM.AsString >= QHak_JamJAM1.AsString) And (DMFrm.QUserTimeVJAM.AsString <= QHak_JamJAM2.AsString) then
 if (StrToInt(vjam) >= vjam1) And (StrToInt(vjam) <= vjam2) then
 begin
+wwDBGrid2.BringToFront;
 //ShowMessage(IntToStr(vjam1));
 ShowMessage('jam input data !!! Silahkan Browse Setelah Jam 12');
   QWIP.Close;
@@ -1150,7 +1463,7 @@ ShowMessage('jam input data !!! Silahkan Browse Setelah Jam 12');
 abort;
 end
 else
-
+  wwDBGrid2.BringToFront;
   QWIP.DisableControls;
   QWIP.Close;
   QProcWIP.Close;
@@ -1189,6 +1502,7 @@ var
   vpertama : boolean;
   vrgTanggal : String;
 begin
+  wwDBGrid2.BringToFront;
   vpertama:=True;
 
   vfilter:=' where (';
@@ -1316,6 +1630,14 @@ if vTglAwal7.Date = vTglAkhir7.Date then
           end
           else
             ShowMessage('Tabel belum di-OPEN !');
+end;
+
+procedure TInfoWIPFinishing1Frm.WebBrowser3DocumentComplete(
+  Sender: TObject; const pDisp: IDispatch; var URL: OleVariant);
+var
+  vaIn, vaOut: OleVariant;
+begin
+  WebBrowser3.ExecWB(OLECMDID_PRINT, OLECMDEXECOPT_PROMPTUSER, vaIn, vaOut);
 end;
 
 end.

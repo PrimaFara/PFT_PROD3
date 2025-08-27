@@ -122,7 +122,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Size.Values = (
               50.270833333333330000
               1447.270833333333000000
-              82.020833333333340000
+              82.020833333333330000
               158.750000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -151,9 +151,9 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333340000
+              58.208333333333330000
               269.875000000000000000
-              74.083333333333340000
+              74.083333333333330000
               365.125000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -610,7 +610,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Size.Values = (
               50.270833333333330000
               1452.562500000000000000
-              272.520833333333400000
+              272.520833333333300000
               156.104166666666700000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -673,8 +673,8 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Size.Values = (
               44.979166666666670000
               1616.604166666667000000
-              216.958333333333400000
-              92.604166666666680000)
+              216.958333333333300000
+              92.604166666666670000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -703,7 +703,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
+              60.854166666666670000
               658.812500000000000000
               158.750000000000000000
               682.625000000000000000)
@@ -735,7 +735,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               50.270833333333330000
-              804.333333333333200000
+              804.333333333333300000
               222.250000000000000000
               116.416666666666700000)
             Alignment = taLeftJustify
@@ -799,7 +799,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Size.Values = (
               52.916666666666670000
               1616.604166666667000000
-              82.020833333333340000
+              82.020833333333330000
               209.020833333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -829,7 +829,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333340000
+              58.208333333333330000
               1619.250000000000000000
               2.645833333333333000
               111.125000000000000000)
@@ -918,7 +918,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -1061,7 +1061,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              989.541666666666800000
+              989.541666666666700000
               7.937500000000000000
               145.520833333333300000)
             Alignment = taRightJustify
@@ -1119,9 +1119,9 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              679.979166666666800000
+              679.979166666666700000
               190.500000000000000000
-              74.083333333333340000)
+              74.083333333333330000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -1153,7 +1153,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
               44.979166666666670000
               1230.312500000000000000
               190.500000000000000000
-              74.083333333333340000)
+              74.083333333333330000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -1215,8 +1215,8 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              677.333333333333400000
-              359.833333333333400000
+              677.333333333333300000
+              359.833333333333300000
               79.375000000000000000)
             Alignment = taCenter
             AlignToBand = False
@@ -1248,7 +1248,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Size.Values = (
               44.979166666666670000
               1227.666666666667000000
-              359.833333333333400000
+              359.833333333333300000
               79.375000000000000000)
             Alignment = taCenter
             AlignToBand = False
@@ -1582,7 +1582,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            68.791666666666680000
+            68.791666666666670000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -1628,7 +1628,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              989.541666666666800000
+              989.541666666666700000
               10.583333333333330000
               140.229166666666700000)
             Alignment = taRightJustify
@@ -1692,7 +1692,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
               44.979166666666670000
               1688.041666666667000000
               10.583333333333330000
-              216.958333333333400000)
+              216.958333333333300000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -1883,6 +1883,21 @@ object PackingListMitraFrm: TPackingListMitraFrm
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 0
+        object WebBrowser3: TWebBrowser
+          Left = 0
+          Top = 233
+          Width = 1072
+          Height = 250
+          Align = alClient
+          TabOrder = 8
+          OnDocumentComplete = WebBrowser3DocumentComplete
+          ControlData = {
+            4C000000CB6E0000D71900000000000000000000000000000000000000000000
+            000000004C000000000000000000000001000000E0D057007335CF11AE690800
+            2B2E126208000000000000004C0000000114020000000000C000000000000046
+            8000000000000000000000000000000000000000000000000000000000000000
+            00000000000000000100000000000000000000000000000000000000}
+        end
         object PanelHeader: TPanel
           Left = 0
           Top = 0
@@ -2182,9 +2197,8 @@ object PackingListMitraFrm: TPackingListMitraFrm
             'SHIFT;CustomEdit;LookShift;F'
             'NO_ORDER;CustomEdit;LookAmbilPacking;F'
             'KD_PRODUKSI;CustomEdit;Look_KP;F'
-            'KD_WARNA;CustomEdit;LookWarna;F'
-            'KD_REKANAN;CustomEdit;LookSuplier;F'
-            'WARNA;CustomEdit;DelokWarna;F')
+            'KD_WARNA;CustomEdit;DelokWarna;F'
+            'KD_REKANAN;CustomEdit;LookSuplier;F')
           Selected.Strings = (
             'NO_ORDER'#9'20'#9'NO ORDER'#9'F'
             'NO_KIRIM'#9'15'#9'NO_KIRIM'#9'F'
@@ -2192,9 +2206,10 @@ object PackingListMitraFrm: TPackingListMitraFrm
             'KD_PRODUKSI'#9'10'#9'KP'#9'T'
             'KONSTRUKSI'#9'20'#9'KONSTRUKSI'#9'T'
             'MESIN'#9'7'#9'MESIN'#9'T'
-            'QTY'#9'10'#9'QTY'#9'T'
+            'QTY'#9'10'#9'QTY'#9'F'
             'DESAIN_CW'#9'20'#9'DESAIN'#9'F'
-            'WARNA'#9'20'#9'WARNA'#9'F')
+            'KD_WARNA'#9'6'#9'KODE'#9'F'#9'WARNA'
+            'WARNA'#9'15'#9'NAMA'#9'T'#9'WARNA')
           IniAttributes.FileName = 'Finishing'
           IniAttributes.Delimiter = ';;'
           TitleColor = clSkyBlue
@@ -2232,6 +2247,9 @@ object PackingListMitraFrm: TPackingListMitraFrm
           BevelWidth = 2
           Color = 12058623
           TabOrder = 3
+          DesignSize = (
+            1072
+            41)
           object Label1: TLabel
             Left = 8
             Top = 2
@@ -2447,6 +2465,17 @@ object PackingListMitraFrm: TPackingListMitraFrm
             DataSource = dsQMaster
             TabOrder = 2
           end
+          object BitBtn14: TBitBtn
+            Left = 228
+            Top = 8
+            Width = 69
+            Height = 25
+            Anchors = [akTop, akRight]
+            Caption = 'Grid'
+            TabOrder = 3
+            OnClick = BitBtn14Click
+            NumGlyphs = 2
+          end
         end
         object LookSarung: TwwDBLookupCombo
           Left = 16
@@ -2516,15 +2545,17 @@ object PackingListMitraFrm: TPackingListMitraFrm
           MaxHeight = 209
           UserButton1Caption = '&Refresh'
           Selected.Strings = (
-            'WARNA'#9'15'#9'WARNA'#9'F')
-          DataField = 'WARNA'
+            'KD_WARNA'#9'6'#9'KODE'#9'F'
+            'WARNA'#9'10'#9'WARNA'#9'F')
+          DataField = 'KD_WARNA'
           DataSource = dsQDetail
           LookupTable = DMFrm.QLookWarna
-          LookupField = 'WARNA'
+          LookupField = 'KD_WARNA'
           TabOrder = 7
           AutoDropDown = False
           ShowButton = True
           AllowClearKey = False
+          OnCloseUp = DelokWarnaCloseUp
           OnEnter = DelokWarnaEnter
         end
       end
@@ -2780,7 +2811,8 @@ object PackingListMitraFrm: TPackingListMitraFrm
           'NO_RESEP'#9'20'#9'NO RESEP'#9'F'
           'MESIN'#9'7'#9'MESIN'#9'F'
           'DESAIN_CW'#9'15'#9'DESAIN'#9'F'
-          'WARNA'#9'15'#9'WARNA'#9'F'
+          'KD_WARNA'#9'6'#9'KODE'#9'F'#9'WARNA'
+          'WARNA'#9'15'#9'NAMA'#9'F'#9'WARNA'
           'ISPOST'#9'1'#9'ISPOST'#9'F'
           'OPR_INSERT'#9'30'#9'OPR_INSERT'#9'F'
           'TGL_INSERT'#9'18'#9'TGL_INSERT'#9'F')
@@ -2830,7 +2862,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
       03000000020000000D0000003A4B445F5452414E53414B534905000000040000
       004D30360000000000070000003A4E4F5F524547030000000000000000000000}
     SequenceField.Field = 'NO_REG'
-    SequenceField.Sequence = 'ipisma_db5.REG_STENTER'
+    SequenceField.Sequence = 'IPISMA_DB5.REG_KIRIM_MAKLON'
     SequenceField.ApplyMoment = amOnNewRecord
     QBEDefinition.QBEFieldDefs = {
       0400000014000000060000004E4F5F5245470100000000000300000054474C01
@@ -2940,17 +2972,17 @@ object PackingListMitraFrm: TPackingListMitraFrm
       'where a.no_reg = :no_reg')
     Variables.Data = {0300000001000000070000003A4E4F5F524547040000000000000000000000}
     SequenceField.Field = 'NO_REG_DETAIL'
-    SequenceField.Sequence = 'ipisma_db5.REG_STENTER_DET'
+    SequenceField.Sequence = 'IPISMA_DB5.REG_KIRIM_MAKLON_DET'
     SequenceField.ApplyMoment = amOnNewRecord
     QBEDefinition.QBEFieldDefs = {
-      040000000C0000000D0000004E4F5F5245475F44455441494C01000000000006
+      040000000D0000000D0000004E4F5F5245475F44455441494C01000000000006
       0000004E4F5F524547010000000000080000004E4F5F4F524445520100000000
       00080000004E4F5F52455345500100000000000B0000004B445F50524F44554B
       5349010000000000050000005741524E41010000000000050000004D4553494E
       01000000000003000000515459010000000000080000004E4F5F4B4952494D01
       00000000000900000044455341494E5F43570100000000000B0000004E4F5F52
       45475F524546460100000000000A0000004B4F4E535452554B53490100000000
-      00}
+      00080000004B445F5741524E41010000000000}
     Master = QMaster
     MasterFields = 'NO_REG'
     DetailFields = 'NO_REG'
@@ -3003,6 +3035,10 @@ object PackingListMitraFrm: TPackingListMitraFrm
     object QDetailKONSTRUKSI: TStringField
       FieldName = 'KONSTRUKSI'
       Size = 100
+    end
+    object QDetailKD_WARNA: TStringField
+      FieldName = 'KD_WARNA'
+      Size = 6
     end
   end
   object dsQDetail: TwwDataSource
@@ -3158,7 +3194,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
       652074676C3D746F5F64617465287379736461746529206F7264657220627920
       4E4F5F4E4F54410000000000}
     QBEDefinition.QBEFieldDefs = {
-      0400000015000000070000004E4F5F4E4F54410100000000000A00000054474C
+      0400000016000000070000004E4F5F4E4F54410100000000000A00000054474C
       5F494E534552540100000000000A0000004F50525F494E534552540100000000
       00060000004E4F5F5245470100000000000300000054474C0100000000000400
       0000475255500100000000000500000053484946540100000000000A0000004B
@@ -3169,7 +3205,8 @@ object PackingListMitraFrm: TPackingListMitraFrm
       005741524E41010000000000050000004D495452410100000000000300000051
       5459010000000000080000004E4F5F4B4952494D010000000000090000004445
       5341494E5F43570100000000000B0000004E4F5F5245475F5245464601000000
-      00000A0000004B45544552414E47414E010000000000}
+      00000A0000004B45544552414E47414E010000000000080000004B445F574152
+      4E41010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -3256,6 +3293,10 @@ object PackingListMitraFrm: TPackingListMitraFrm
     object QBrowseKETERANGAN: TStringField
       FieldName = 'KETERANGAN'
       Size = 255
+    end
+    object QBrowseKD_WARNA: TStringField
+      FieldName = 'KD_WARNA'
+      Size = 6
     end
   end
   object dsQBrowse: TwwDataSource

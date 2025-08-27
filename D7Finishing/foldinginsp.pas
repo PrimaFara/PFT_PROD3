@@ -1432,7 +1432,7 @@ begin
       '            <tr>' +
       //'                <th>AJL</th>' +
       //'                <th>RAPIER</th>' +
-      '                <th>SHUTTLE</th>' +
+      '                <th>FOLDING SHUTTLE</th>' +
       '                <th>IHRAM</th>' +
       '                <th>FOLDING SKT JQ</th>' +
       '                <th>INSPECT PUTIHAN</th>' +

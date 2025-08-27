@@ -3932,6 +3932,7 @@ object foldinginspFrm: TfoldinginspFrm
             Anchors = [akTop, akRight]
             Caption = '&Print'
             TabOrder = 1
+            Visible = False
             OnClick = BitBtn2Click
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
@@ -6722,7 +6723,7 @@ object foldinginspFrm: TfoldinginspFrm
               44.979166666666670000
               1897.062500000000000000
               7.937500000000000000
-              84.666666666666670000)
+              84.666666666666680000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -6774,7 +6775,7 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              971.020833333333300000
+              971.020833333333200000
               10.583333333333330000
               108.479166666666700000)
             Alignment = taLeftJustify
@@ -6837,9 +6838,9 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              679.979166666666700000
+              679.979166666666800000
               190.500000000000000000
-              74.083333333333330000)
+              74.083333333333320000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -6871,7 +6872,7 @@ object foldinginspFrm: TfoldinginspFrm
               44.979166666666670000
               1230.312500000000000000
               190.500000000000000000
-              74.083333333333330000)
+              74.083333333333320000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -6933,7 +6934,7 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              677.333333333333300000
+              677.333333333333200000
               359.833333333333300000
               79.375000000000000000)
             Alignment = taCenter
@@ -7024,7 +7025,7 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              724.958333333333300000
+              724.958333333333200000
               134.937500000000000000
               261.937500000000000000)
             Alignment = taLeftJustify
@@ -7055,9 +7056,9 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              994.833333333333300000
+              994.833333333333200000
               134.937500000000000000
-              89.958333333333330000)
+              89.958333333333320000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -7108,7 +7109,7 @@ object foldinginspFrm: TfoldinginspFrm
               44.979166666666670000
               1897.062500000000000000
               7.937500000000000000
-              84.666666666666670000)
+              84.666666666666680000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -7395,7 +7396,7 @@ object foldinginspFrm: TfoldinginspFrm
               44.979166666666670000
               1809.750000000000000000
               7.937500000000000000
-              84.666666666666670000)
+              84.666666666666680000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -7477,9 +7478,9 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333330000
+              58.208333333333320000
               269.875000000000000000
-              60.854166666666670000
+              60.854166666666680000
               365.125000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -7916,7 +7917,7 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333330000
+              58.208333333333320000
               1619.250000000000000000
               2.645833333333333000
               111.125000000000000000)
@@ -8396,7 +8397,7 @@ object foldinginspFrm: TfoldinginspFrm
               44.979166666666670000
               1897.062500000000000000
               7.937500000000000000
-              84.666666666666670000)
+              84.666666666666680000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -8448,7 +8449,7 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              971.020833333333300000
+              971.020833333333200000
               10.583333333333330000
               108.479166666666700000)
             Alignment = taLeftJustify
@@ -8511,9 +8512,9 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              679.979166666666700000
+              679.979166666666800000
               190.500000000000000000
-              74.083333333333330000)
+              74.083333333333320000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -8545,7 +8546,7 @@ object foldinginspFrm: TfoldinginspFrm
               44.979166666666670000
               1230.312500000000000000
               190.500000000000000000
-              74.083333333333330000)
+              74.083333333333320000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -8698,7 +8699,7 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              724.958333333333300000
+              724.958333333333200000
               134.937500000000000000
               261.937500000000000000)
             Alignment = taLeftJustify
@@ -8729,9 +8730,9 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              994.833333333333300000
+              994.833333333333200000
               134.937500000000000000
-              89.958333333333330000)
+              89.958333333333320000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -8782,7 +8783,7 @@ object foldinginspFrm: TfoldinginspFrm
               44.979166666666670000
               1897.062500000000000000
               7.937500000000000000
-              84.666666666666670000)
+              84.666666666666680000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -9069,7 +9070,7 @@ object foldinginspFrm: TfoldinginspFrm
               44.979166666666670000
               1809.750000000000000000
               7.937500000000000000
-              84.666666666666670000)
+              84.666666666666680000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -9151,9 +9152,9 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333330000
+              58.208333333333320000
               269.875000000000000000
-              60.854166666666670000
+              60.854166666666680000
               365.125000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -9590,7 +9591,7 @@ object foldinginspFrm: TfoldinginspFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333330000
+              58.208333333333320000
               1619.250000000000000000
               2.645833333333333000
               111.125000000000000000)

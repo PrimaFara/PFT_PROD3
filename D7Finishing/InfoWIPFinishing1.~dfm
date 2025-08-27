@@ -31,6 +31,21 @@ object InfoWIPFinishing1Frm: TInfoWIPFinishing1Frm
     object TabSheet3: TTabSheet
       Caption = 'WIP Finishing'
       ImageIndex = 2
+      object WebBrowser3: TWebBrowser
+        Left = 0
+        Top = 52
+        Width = 1117
+        Height = 580
+        Align = alClient
+        TabOrder = 3
+        OnDocumentComplete = WebBrowser3DocumentComplete
+        ControlData = {
+          4C00000072730000F23B00000000000000000000000000000000000000000000
+          000000004C000000000000000000000001000000E0D057007335CF11AE690800
+          2B2E126208000000000000004C0000000114020000000000C000000000000046
+          8000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000100000000000000000000000000000000000000}
+      end
       object QuickRep2: TQuickRep
         Left = 102
         Top = -685
@@ -2051,11 +2066,10 @@ object InfoWIPFinishing1Frm: TInfoWIPFinishing1Frm
           object BitBtn8: TBitBtn
             Left = 519
             Top = 20
-            Width = 122
+            Width = 75
             Height = 25
-            Caption = '&Print (On Process)'
+            Caption = '&Print'
             TabOrder = 5
-            Visible = False
             OnClick = BitBtn8Click
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100

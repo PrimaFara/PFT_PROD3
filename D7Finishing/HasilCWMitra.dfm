@@ -153,7 +153,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Size.Values = (
               44.979166666666670000
               756.708333333333400000
-              232.833333333333300000
+              232.833333333333400000
               145.520833333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -184,7 +184,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Size.Values = (
               44.979166666666670000
               912.812500000000000000
-              232.833333333333300000
+              232.833333333333400000
               158.750000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -3148,9 +3148,9 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               63.500000000000000000
-              391.583333333333300000
+              391.583333333333400000
               97.895833333333340000
-              320.145833333333300000)
+              320.145833333333400000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -3175,7 +3175,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
               63.500000000000000000
               1214.437500000000000000
               97.895833333333340000
-              264.583333333333300000)
+              264.583333333333400000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -3301,7 +3301,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               50.270833333333330000
-              574.145833333333300000
+              574.145833333333400000
               7.937500000000000000
               129.645833333333300000)
             Alignment = taLeftJustify
@@ -3380,7 +3380,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
               44.979166666666670000
               809.625000000000000000
               7.937500000000000000
-              232.833333333333300000)
+              232.833333333333400000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -3545,7 +3545,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           Color = 10485760
           TabOrder = 4
           object DBText1: TDBText
-            Left = 560
+            Left = 520
             Top = 7
             Width = 114
             Height = 33
@@ -3720,21 +3720,21 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ParentCtl3D = False
           TabOrder = 0
           object Label3: TLabel
-            Left = 36
+            Left = 16
             Top = 77
             Width = 73
             Height = 13
             Caption = 'Keterangan     :'
           end
           object Label6: TLabel
-            Left = 457
-            Top = 62
+            Left = 465
+            Top = 54
             Width = 89
             Height = 13
             Caption = 'Tanggal  Proses   :'
           end
           object DBText4: TDBText
-            Left = 784
+            Left = 704
             Top = 17
             Width = 80
             Height = 24
@@ -3749,36 +3749,36 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             ParentFont = False
           end
           object Label2: TLabel
-            Left = 43
-            Top = 20
+            Left = 355
+            Top = 84
             Width = 23
             Height = 13
             Caption = 'Grup'
           end
           object Label4: TLabel
-            Left = 103
-            Top = 20
+            Left = 415
+            Top = 84
             Width = 21
             Height = 13
             Caption = 'Shift'
           end
           object Label9: TLabel
-            Left = 475
-            Top = 115
+            Left = 483
+            Top = 107
             Width = 71
             Height = 13
             Caption = 'Operator         :'
           end
           object Label8: TLabel
-            Left = 474
-            Top = 90
+            Left = 482
+            Top = 82
             Width = 72
             Height = 13
             Caption = 'Tanggal Input :'
           end
           object DBText5: TDBText
-            Left = 551
-            Top = 90
+            Left = 559
+            Top = 82
             Width = 60
             Height = 16
             AutoSize = True
@@ -3795,8 +3795,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Transparent = True
           end
           object DBText6: TDBText
-            Left = 551
-            Top = 115
+            Left = 559
+            Top = 107
             Width = 60
             Height = 16
             AutoSize = True
@@ -3813,22 +3813,22 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Transparent = True
           end
           object Label10: TLabel
-            Left = 475
-            Top = 31
+            Left = 483
+            Top = 23
             Width = 71
             Height = 13
             Caption = 'Jenis Mitra      :'
           end
           object Label11: TLabel
-            Left = 154
-            Top = 19
+            Left = 269
+            Top = 16
             Width = 41
             Height = 13
             Caption = 'Operator'
           end
           object DBText7: TDBText
-            Left = 236
-            Top = 36
+            Left = 269
+            Top = 60
             Width = 60
             Height = 16
             AutoSize = True
@@ -3844,9 +3844,16 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             ParentFont = False
             Transparent = True
           end
+          object Label13: TLabel
+            Left = 16
+            Top = 16
+            Width = 46
+            Height = 13
+            Caption = 'Nota ST :'
+          end
           object wwDBDateTimePicker1: TwwDBDateTimePicker
-            Left = 552
-            Top = 58
+            Left = 560
+            Top = 50
             Width = 121
             Height = 22
             TabStop = False
@@ -3869,7 +3876,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             TabOrder = 1
           end
           object DBMemo1: TDBMemo
-            Left = 36
+            Left = 16
             Top = 92
             Width = 301
             Height = 31
@@ -3879,8 +3886,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             TabOrder = 0
           end
           object wwDBComboBox1: TwwDBComboBox
-            Left = 36
-            Top = 37
+            Left = 348
+            Top = 101
             Width = 41
             Height = 19
             ShowButton = True
@@ -3902,8 +3909,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             UnboundDataType = wwDefault
           end
           object wwDBComboBox2: TwwDBComboBox
-            Left = 96
-            Top = 37
+            Left = 408
+            Top = 101
             Width = 41
             Height = 19
             ShowButton = True
@@ -3924,8 +3931,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             UnboundDataType = wwDefault
           end
           object LookBeam: TwwDBLookupCombo
-            Left = 552
-            Top = 27
+            Left = 560
+            Top = 19
             Width = 121
             Height = 19
             DropDownAlignment = taLeftJustify
@@ -3944,8 +3951,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             OnEnter = LookBeamEnter
           end
           object LookOperator: TwwDBLookupComboDlg
-            Left = 149
-            Top = 35
+            Left = 269
+            Top = 32
             Width = 84
             Height = 21
             AutoSize = False
@@ -3969,6 +3976,42 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             AllowClearKey = False
             OnCloseUp = LookOperatorCloseUp
             OnEnter = LookOperatorEnter
+          end
+          object ECari_Order: TEdit
+            Left = 16
+            Top = 32
+            Width = 121
+            Height = 19
+            TabOrder = 6
+          end
+          object BitBtn11: TBitBtn
+            Left = 144
+            Top = 29
+            Width = 97
+            Height = 25
+            Caption = '&Ambil Data'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 7
+            OnClick = BitBtn11Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000130B0000130B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              33333333333FFFFFFFFF333333000000000033333377777777773333330FFFFF
+              FFF03333337F333333373333330FFFFFFFF03333337F3FF3FFF73333330F00F0
+              00F03333F37F773777373330330FFFFFFFF03337FF7F3F3FF3F73339030F0800
+              F0F033377F7F737737373339900FFFFFFFF03FF7777F3FF3FFF70999990F00F0
+              00007777777F7737777709999990FFF0FF0377777777FF37F3730999999908F0
+              F033777777777337F73309999990FFF0033377777777FFF77333099999000000
+              3333777777777777333333399033333333333337773333333333333903333333
+              3333333773333333333333303333333333333337333333333333}
+            NumGlyphs = 2
           end
         end
         object PanelBanner: TPanel
@@ -4270,6 +4313,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           Selected.Strings = (
             'NO_BATCH'#9'10'#9'NO BATCH'#9'F'
             'NO_ORDER'#9'10'#9'NO ORDER'#9'F'
+            'NO_SPB'#9'10'#9'NO. ORDER EX CW'#9'F'
             'KD_PRINT'#9'10'#9'KD PRINT'#9'F'
             'TGL_KIRIM'#9'10'#9'TGL KIRIM'#9'F'
             'TGL_TERIMA'#9'10'#9'TGL TERIMA'#9'F'
@@ -7747,8 +7791,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
   end
   object dsQMaster: TwwDataSource
     DataSet = QMaster
-    Left = 24
-    Top = 120
+    Left = 960
+    Top = 112
   end
   object QTransaksi: TOracleDataSet
     SQL.Strings = (
@@ -10334,8 +10378,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       4D415F4D49545241010000000000}
     QueryAllRecords = False
     Session = DMFrm.OS
-    Left = 824
-    Top = 152
+    Left = 1104
+    Top = 392
     object QBrowseMitraNAMA_MITRA: TStringField
       DisplayWidth = 10
       FieldName = 'NAMA_MITRA'
@@ -10364,7 +10408,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
     SQL.Strings = (
       'select * from ipisma_db6.VREKAP_PENGIRIMAN_KEQACWMITRA')
     QBEDefinition.QBEFieldDefs = {
-      040000001A0000000D0000004B445F4B4F4E535452554B534901000000000006
+      040000001B0000000D0000004B445F4B4F4E535452554B534901000000000006
       0000004E4F5F5245470100000000000300000054474C01000000000007000000
       4E4F5F4E4F544101000000000004000000475255500100000000000500000053
       484946540100000000000B0000004B45544552414E47414E320100000000000A
@@ -10379,10 +10423,10 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       54010000000000090000005354535F5445544150010000000000070000005355
       504C49455201000000000005000000544148554E010000000000090000004E41
       4D415F4954454D0100000000000A0000004B45544552414E47414E0100000000
-      00}
+      000C0000004B445F5452414E53414B5349010000000000}
     Session = DMFrm.OS
-    Left = 457
-    Top = 176
+    Left = 145
+    Top = 376
     object QAmbilPrintKETERANGAN2: TStringField
       DisplayLabel = 'NO BATCH'
       DisplayWidth = 15
@@ -10417,6 +10461,29 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       FieldName = 'QTY_METER'
       Required = True
     end
+    object QAmbilPrintNO_REG: TFloatField
+      FieldName = 'NO_REG'
+    end
+    object QAmbilPrintKD_KONSTRUKSI: TStringField
+      FieldName = 'KD_KONSTRUKSI'
+      Size = 30
+    end
+    object QAmbilPrintNO_ORDER: TStringField
+      FieldName = 'NO_ORDER'
+      Size = 100
+    end
+    object QAmbilPrintKONSTRUKSI: TStringField
+      FieldName = 'KONSTRUKSI'
+      Size = 150
+    end
+    object QAmbilPrintNO_DESAIN: TStringField
+      FieldName = 'NO_DESAIN'
+      Size = 100
+    end
+    object QAmbilPrintKD_TRANSAKSI: TStringField
+      FieldName = 'KD_TRANSAKSI'
+      Size = 3
+    end
   end
   object Qoperator: TOracleDataSet
     SQL.Strings = (
@@ -10432,8 +10499,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
-    Left = 468
-    Top = 131
+    Left = 1172
+    Top = 419
     object QoperatorNIK: TStringField
       DisplayWidth = 15
       FieldName = 'NIK'
@@ -11773,5 +11840,115 @@ object HasilCWMitraFrm: THasilCWMitraFrm
     DataSet = QBrowRekKod
     Left = 677
     Top = 440
+  end
+  object QAmbilData: TOracleQuery
+    SQL.Strings = (
+      'begin      '
+      '  --untuk detail'
+      '    for i in '
+      '      ('
+      '         select'
+      '            :qno_reg as qno_reg,'
+      '            b.no_kirim,'
+      '            d.tgl as tgl_kirim,'
+      '            a.tgl as tgl_terima,'
+      '            a.no_nota,'
+      '            c.kd_warna,'
+      '            b.warna,'
+      '            b.qty as qty,'
+      '            '#39'DICABUT WARNA'#39' as ket_dicabut,'
+      '            a.keterangan,'
+      '            b.no_order,'
+      '            b.kd_produksi,'
+      '            b.konstruksi,'
+      '            b.desain_cw,'
+      '            b.no_reg_detail,'
+      '            b.no_resep,'
+      '            b.mitra'
+      
+        '        from ipisma_db4.wo_handprint a, ipisma_db4.wo_handprint_' +
+        'detail b, ipisma_db3.warna_baru c, ipisma_db4.vrekap_sj_handprin' +
+        't d'
+      
+        '        where a.no_reg = b.no_reg and d.no_kirim = b.no_kirim an' +
+        'd a.kd_transaksi = '#39'973'#39' and a.no_nota = :qno_nota and b.warna =' +
+        ' c.warna and b.qty > 0'
+      ''
+      '        union all'
+      ''
+      '        select'
+      '            :qno_reg as qno_reg,'
+      '            b.no_kirim,'
+      '            d.tgl as tgl_kirim,'
+      '            a.tgl as tgl_terima,'
+      '            a.no_nota,'
+      '            c.kd_warna,'
+      '            b.warna,'
+      '            b.qty_retur as qty,'
+      '            '#39'TIDAK DICABUT WARNA'#39' as ket_dicabut,'
+      '            a.keterangan,'
+      '            b.no_order,'
+      '            b.kd_produksi,'
+      '            b.konstruksi,'
+      '            b.desain_cw,'
+      '            b.no_reg_detail,'
+      '            b.no_resep,'
+      '            b.mitra'
+      
+        '        from ipisma_db4.wo_handprint a, ipisma_db4.wo_handprint_' +
+        'detail b, ipisma_db3.warna_baru c, ipisma_db4.vrekap_sj_handprin' +
+        't d'
+      
+        '        where a.no_reg = b.no_reg and d.no_kirim = b.no_kirim an' +
+        'd a.kd_transaksi = '#39'973'#39' and a.no_nota = :qno_nota and b.warna =' +
+        ' c.warna and b.qty_retur > 0'
+      '        order by no_reg_detail'
+      '      )'
+      '    loop'
+      '      insert into ipisma_db5.bukti4_detail'
+      
+        '      (no_reg, no_reg_detail, NO_BATCH, TGL_KIRIM, KD_WARNA, WAR' +
+        'NA, QTY5, KETERANGAN2, '
+      
+        '       NO_ORDER, KD_PRODUKSI, KONSTRUKSI, DESIGN, NO_BEAM, NO_RE' +
+        'SEP, MITRA, JENIS, TGL_TERIMA, JENIS_SARUNG, PROSES) '
+      '      values'
+      
+        '      (i.qno_reg, ipisma_db5.reg_bukti4_detail.nextval,i.no_kiri' +
+        'm,i.tgl_kirim,i.kd_warna,i.warna,i.qty,i.ket_dicabut,'
+      
+        '       i.no_order,i.kd_produksi,i.konstruksi,i.desain_cw,i.no_re' +
+        'g_detail,i.no_resep,i.mitra,i.no_nota, i.tgl_terima, '#39'-'#39', '#39'-'#39');'
+      '       '
+      '    end loop;   '
+      '  commit;'
+      '  '
+      '    --untuk mitra atas di master'
+      '      UPDATE ipisma_db5.bukti4 b'
+      
+        '      SET (b.jenis, b.keterangan) = (SELECT a.rekanan, a.keteran' +
+        'gan FROM ipisma_db4.wo_handprint a WHERE a.kd_transaksi = '#39'973'#39' ' +
+        'AND a.no_nota = :qno_nota)'
+      '      WHERE b.no_reg = :qno_reg;'
+      '  commit;'
+      'end;')
+    Session = DMFrm.OS
+    Variables.Data = {
+      0300000002000000080000003A514E4F5F524547030000000000000000000000
+      090000003A514E4F5F4E4F5441050000000000000000000000}
+    Left = 229
+    Top = 56
+  end
+  object QAmbilData2: TOracleQuery
+    SQL.Strings = (
+      'begin'
+      '  ipisma_db5.PROC_STCW_HANDPRINT(:qno_reg,:qno_nota);'
+      'end;')
+    Session = DMFrm.OS
+    Variables.Data = {
+      0300000002000000080000003A514E4F5F524547030000000000000000000000
+      090000003A514E4F5F4E4F5441050000000000000000000000}
+    Left = 349
+    Top = 16
   end
 end

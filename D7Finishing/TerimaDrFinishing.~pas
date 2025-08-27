@@ -758,7 +758,7 @@ end;
 
 procedure TTerimaDrFinishingFrm.BitBtn12Click(Sender: TObject);
 begin
-          if QBrowse.Active then
+          if QPerKp.Active then
           begin
              DMFrm.SaveDialog1.DefaultExt:='XLK';
              DMFrm.SaveDialog1.Filter:='Excel files (*.XLK)|*.XLK';

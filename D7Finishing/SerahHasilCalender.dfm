@@ -141,9 +141,9 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         Frame.DrawLeft = False
         Frame.DrawRight = False
         Size.Values = (
-          58.208333333333330000
+          58.208333333333340000
           246.062500000000000000
-          66.145833333333330000
+          66.145833333333340000
           365.125000000000000000)
         Alignment = taLeftJustify
         AlignToBand = False
@@ -173,7 +173,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          727.604166666666700000
+          727.604166666666600000
           232.833333333333300000
           145.520833333333300000)
         Alignment = taLeftJustify
@@ -204,7 +204,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          883.708333333333300000
+          883.708333333333400000
           232.833333333333300000
           161.395833333333300000)
         Alignment = taLeftJustify
@@ -285,7 +285,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
-          703.791666666666700000
+          703.791666666666600000
           293.687500000000000000
           534.458333333333300000)
         Alignment = taLeftJustify
@@ -650,7 +650,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
           44.979166666666670000
           1680.104166666667000000
           206.375000000000000000
-          66.145833333333330000)
+          66.145833333333340000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True
@@ -710,7 +710,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         Frame.DrawLeft = False
         Frame.DrawRight = False
         Size.Values = (
-          58.208333333333330000
+          58.208333333333340000
           1550.458333333333000000
           153.458333333333300000
           111.125000000000000000)
@@ -779,7 +779,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        66.145833333333330000
+        66.145833333333340000
         2000.250000000000000000)
       BandType = rbColumnHeader
       object QRLabel10: TQRLabel
@@ -819,7 +819,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          854.604166666666700000
+          854.604166666666600000
           13.229166666666670000
           145.520833333333300000)
         Alignment = taRightJustify
@@ -1012,7 +1012,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        76.729166666666670000
+        76.729166666666660000
         2000.250000000000000000)
       BandType = rbPageFooter
       object QRDBText2: TQRDBText
@@ -1083,7 +1083,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          883.708333333333300000
+          883.708333333333400000
           21.166666666666670000
           232.833333333333300000)
         Alignment = taCenter
@@ -1136,7 +1136,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
           44.979166666666670000
           1738.312500000000000000
           37.041666666666670000
-          66.145833333333330000)
+          66.145833333333340000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True
@@ -1186,7 +1186,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         Size.Values = (
           63.500000000000000000
           391.583333333333300000
-          97.895833333333330000
+          97.895833333333340000
           320.145833333333300000)
         Alignment = taLeftJustify
         AlignToBand = False
@@ -1211,7 +1211,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         Size.Values = (
           63.500000000000000000
           1214.437500000000000000
-          97.895833333333330000
+          97.895833333333340000
           264.583333333333300000)
         Alignment = taLeftJustify
         AlignToBand = False
@@ -1259,7 +1259,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         Frame.DrawLeft = False
         Frame.DrawRight = False
         Size.Values = (
-          58.208333333333330000
+          58.208333333333340000
           357.187500000000000000
           248.708333333333300000
           394.229166666666700000)
@@ -1312,7 +1312,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          862.541666666666700000
+          862.541666666666600000
           7.937500000000000000
           145.520833333333300000)
         Alignment = taRightJustify
@@ -1373,7 +1373,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        66.145833333333330000
+        66.145833333333340000
         2000.250000000000000000)
       BandType = rbDetail
       object QRDBText5: TQRDBText
@@ -3151,10 +3151,10 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
+              60.854166666666660000
               505.354166666666700000
               216.958333333333300000
-              986.895833333333300000)
+              986.895833333333400000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -3183,7 +3183,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              923.395833333333300000
+              923.395833333333400000
               349.250000000000000000
               153.458333333333300000)
             Alignment = taCenter
@@ -3213,8 +3213,8 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
-              740.833333333333300000
+              60.854166666666660000
+              740.833333333333400000
               285.750000000000000000
               515.937500000000000000)
             Alignment = taCenter
@@ -3521,7 +3521,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666660000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText16: TQRDBText
@@ -3982,7 +3982,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333330000
+            66.145833333333340000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText23: TQRDBText

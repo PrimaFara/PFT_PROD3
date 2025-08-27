@@ -117,7 +117,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
               Size.Values = (
                 63.500000000000000000
                 1418.166666666667000000
-                84.666666666666680000
+                84.666666666666660000
                 203.729166666666700000)
               Alignment = taLeftJustify
               AlignToBand = False
@@ -2422,7 +2422,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
               Size.Values = (
                 44.979166666666670000
                 150.812500000000000000
-                89.958333333333320000
+                89.958333333333340000
                 190.500000000000000000)
               Alignment = taLeftJustify
               AlignToBand = False
@@ -2470,7 +2470,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
               Frame.DrawLeft = False
               Frame.DrawRight = False
               Size.Values = (
-                68.791666666666670000
+                68.791666666666660000
                 682.625000000000000000
                 0.000000000000000000
                 407.458333333333300000)
@@ -2676,7 +2676,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
                 44.979166666666670000
                 1418.166666666667000000
                 105.833333333333300000
-                76.729166666666680000)
+                76.729166666666660000)
               Alignment = taLeftJustify
               AlignToBand = False
               AutoSize = True
@@ -2736,7 +2736,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
             ForceNewColumn = False
             ForceNewPage = False
             Size.Values = (
-              60.854166666666670000
+              60.854166666666660000
               1772.708333333333000000)
             BandType = rbColumnHeader
             object QRLabel8: TQRLabel
@@ -2954,7 +2954,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
                 39.687500000000000000
                 1164.166666666667000000
                 0.000000000000000000
-                76.729166666666680000)
+                76.729166666666660000)
               Alignment = taLeftJustify
               AlignToBand = False
               AutoSize = True
@@ -2980,7 +2980,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
                 39.687500000000000000
                 1333.500000000000000000
                 0.000000000000000000
-                60.854166666666680000)
+                60.854166666666660000)
               Alignment = taRightJustify
               AlignToBand = False
               AutoSize = True
@@ -3056,7 +3056,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
                 39.687500000000000000
                 1465.791666666667000000
                 0.000000000000000000
-                76.729166666666680000)
+                76.729166666666660000)
               Alignment = taRightJustify
               AlignToBand = False
               AutoSize = True
@@ -3083,7 +3083,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
                 39.687500000000000000
                 1613.958333333333000000
                 0.000000000000000000
-                76.729166666666680000)
+                76.729166666666660000)
               Alignment = taRightJustify
               AlignToBand = False
               AutoSize = True
@@ -3334,7 +3334,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
                 44.979166666666670000
                 1439.333333333333000000
                 42.333333333333330000
-                66.145833333333320000)
+                66.145833333333340000)
               Alignment = taLeftJustify
               AlignToBand = False
               AutoSize = True
@@ -3473,7 +3473,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
               Frame.DrawRight = False
               Size.Values = (
                 44.979166666666670000
-                806.979166666666700000
+                806.979166666666600000
                 21.166666666666670000
                 156.104166666666700000)
               Alignment = taCenter
@@ -10622,7 +10622,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
+              60.854166666666660000
               1005.416666666667000000
               171.979166666666700000
               1270.000000000000000000)

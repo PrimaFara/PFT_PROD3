@@ -5279,7 +5279,8 @@ object FinishStenterFrm: TFinishStenterFrm
   end
   object dsQTransaksi: TwwDataSource
     DataSet = QTransaksi
-    Left = 256
+    Left = 312
+    Top = 65528
   end
   object FNo_Urut: TOracleDataSet
     SQL.Strings = (
@@ -5313,8 +5314,8 @@ object FinishStenterFrm: TFinishStenterFrm
     MaxWidth = 0
     MaxHeight = 209
     CharCase = ecNormal
-    Left = 49
-    Top = 24
+    Left = 81
+    Top = 32
   end
   object QBrowse: TOracleDataSet
     SQL.Strings = (

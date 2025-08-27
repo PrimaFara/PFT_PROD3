@@ -1,6 +1,6 @@
 object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
-  Left = 2
-  Top = 1
+  Left = 397
+  Top = 181
   Width = 1362
   Height = 736
   Caption = 'Info WIP Finishing'
@@ -171,10 +171,10 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
+              60.854166666666660000
               904.875000000000000000
               171.979166666666700000
-              981.604166666666700000)
+              981.604166666666600000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -548,7 +548,7 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333330000
+              58.208333333333340000
               269.875000000000000000
               71.437500000000000000
               365.125000000000000000)
@@ -579,7 +579,7 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333330000
+              58.208333333333340000
               2389.187500000000000000
               7.937500000000000000
               124.354166666666700000)
@@ -610,7 +610,7 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333330000
+              58.208333333333340000
               2545.291666666667000000
               7.937500000000000000
               166.687500000000000000)
@@ -823,7 +823,7 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              941.916666666666700000
+              941.916666666666600000
               370.416666666666700000
               174.625000000000000000)
             Alignment = taLeftJustify
@@ -854,7 +854,7 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              949.854166666666700000
+              949.854166666666600000
               537.104166666666700000
               153.458333333333300000)
             Alignment = taLeftJustify
@@ -885,7 +885,7 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              859.895833333333300000
+              859.895833333333400000
               579.437500000000000000
               357.187500000000000000)
             Alignment = taLeftJustify
@@ -1424,7 +1424,7 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
             Size.Values = (
               44.979166666666670000
               18.520833333333330000
-              74.083333333333330000
+              74.083333333333340000
               193.145833333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -2087,7 +2087,7 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              600.604166666666700000
+              600.604166666666600000
               2.645833333333333000
               113.770833333333300000)
             Alignment = taRightJustify
@@ -2923,7 +2923,7 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              597.958333333333300000
+              597.958333333333400000
               71.437500000000000000
               113.770833333333300000)
             Alignment = taCenter
@@ -3174,7 +3174,7 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              648.229166666666700000
+              648.229166666666600000
               7.937500000000000000
               145.520833333333300000)
             Alignment = taLeftJustify
@@ -3524,7 +3524,7 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              743.479166666666700000
+              743.479166666666600000
               71.437500000000000000
               87.312500000000000000)
             Alignment = taCenter
@@ -4141,15 +4141,12 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
         object Panel6: TPanel
           Left = 373
           Top = 2
-          Width = 620
+          Width = 628
           Height = 48
           Align = alLeft
           BevelOuter = bvNone
           TabOrder = 1
-          DesignSize = (
-            620
-            48)
-          object Label19: TLabel
+          object vOperand2: TLabel
             Left = 150
             Top = 20
             Width = 44
@@ -4164,9 +4161,10 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
             Font.Name = 'MS Sans Serif'
             Font.Style = [fsBold]
             ParentFont = False
+            OnClick = vOperand2Click
           end
           object BitBtn5: TBitBtn
-            Left = 528
+            Left = 336
             Top = 20
             Width = 75
             Height = 25
@@ -4174,7 +4172,7 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
             Default = True
             ModalResult = 1
             TabOrder = 2
-            Visible = False
+            OnClick = BitBtn5Click
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000120B0000120B00001000000000000000000000000000
@@ -4206,6 +4204,7 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
             Height = 17
             Caption = 'Cari &Otomatis'
             TabOrder = 0
+            OnClick = cbOtomatis2Click
           end
           object dbcField2: TwwDBComboBox
             Left = 8
@@ -4228,7 +4227,7 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
             OnEnter = dbcField2Enter
           end
           object BtnExport2: TBitBtn
-            Left = 336
+            Left = 424
             Top = 20
             Width = 97
             Height = 25
@@ -4251,11 +4250,10 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
             NumGlyphs = 2
           end
           object BitBtn6: TBitBtn
-            Left = 443
+            Left = 531
             Top = 20
             Width = 75
             Height = 25
-            Anchors = [akTop, akRight]
             Caption = '&Print'
             TabOrder = 5
             Glyph.Data = {
@@ -4318,6 +4316,8 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
           'WASHING_PRE_M'#9'10'#9'PRESET (M)'#9'F'#9'WASHING'
           'WASHING_DES'#9'10'#9'DESIZING (KODI)'#9'F'#9'WASHING'
           'WASHING_DES_M'#9'10'#9'DESIZING (M)'#9'F'#9'WASHING'
+          'WASHING_PENGERINGAN'#9'10'#9'PENGERINGAN (KODI)'#9'F'#9'WASHING'
+          'WASHING_PENGERINGAN_M'#9'10'#9'PENGERINGAN (M)'#9'F'#9'WASHING'
           'STENTER'#9'10'#9'KODI'#9'F'#9'STENTER'
           'STENTER_M'#9'10'#9'METER'#9'F'#9'STENTER'
           'STENTER_BL'#9'10'#9'REPROSES  (KODI)'#9'F'#9'STENTER'
@@ -5343,7 +5343,7 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
+              60.854166666666660000
               476.250000000000000000
               185.208333333333300000
               968.375000000000000000)
@@ -7483,7 +7483,7 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
+              60.854166666666660000
               349.250000000000000000
               171.979166666666700000
               1219.729166666667000000)
@@ -11984,7 +11984,7 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
+              60.854166666666660000
               1135.062500000000000000
               185.208333333333300000
               968.375000000000000000)
@@ -15760,7 +15760,7 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
       652074676C3D746F5F64617465287379736461746529206F7264657220627920
       4B4F44455F50524F44554B53490000000000}
     QBEDefinition.QBEFieldDefs = {
-      040000002C0000000A0000004B4F4E535452554B53490100000000000D000000
+      040000002E0000000A0000004B4F4E535452554B53490100000000000D000000
       4B445F4B4F4E535452554B534901000000000007000000464F4C44494E470100
       00000000080000005348454152494E470100000000000500000042414B415201
       000000000008000000444553495A494E47010000000000070000005741534849
@@ -15788,7 +15788,9 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
       45595F424C5F4D0100000000000B00000057415348494E475F50524501000000
       00000D00000057415348494E475F5052455F4D0100000000000B000000574153
       48494E475F4445530100000000000D00000057415348494E475F4445535F4D01
-      0000000000}
+      00000000001300000057415348494E475F50454E474552494E47414E01000000
+      00001500000057415348494E475F50454E474552494E47414E5F4D0100000000
+      00}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -15971,6 +15973,14 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
       FieldName = 'WASHING_DES_M'
       DisplayFormat = '0.0,0;(0.0,0);-'
     end
+    object QHasilWASHING_PENGERINGAN: TFloatField
+      FieldName = 'WASHING_PENGERINGAN'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QHasilWASHING_PENGERINGAN_M: TFloatField
+      FieldName = 'WASHING_PENGERINGAN_M'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
   end
   object dsQHasil: TwwDataSource
     DataSet = QHasil
@@ -16007,6 +16017,9 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
       'sum(washing_des) as washing_des,'
       'sum(washing_des_m) as washing_des_m,'
       ''
+      'sum(washing_pengeringan) as washing_pengeringan,'
+      'sum(washing_pengeringan_m) as washing_pengeringan_m,'
+      ''
       'sum(stenter) as stenter,'
       'sum(stenter_m) as stenter_m,'
       'sum(stenter_bl) as stenter_bl,'
@@ -16031,7 +16044,7 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
     Variables.Data = {
       0300000001000000080000003A4D59504152414D010000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
-      0400000028000000080000005348454152494E47010000000000050000004241
+      040000002A000000080000005348454152494E47010000000000050000004241
       4B415201000000000008000000444553495A494E470100000000000700000057
       415348494E47010000000000070000005354454E544552010000000000080000
       0043414C454E44455201000000000007000000464F4C44494E47010000000000
@@ -16056,7 +16069,9 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
       00000000000F00000042414B41525F475245595F424C5F4D0100000000000B00
       000057415348494E475F5052450100000000000D00000057415348494E475F50
       52455F4D0100000000000B00000057415348494E475F4445530100000000000D
-      00000057415348494E475F4445535F4D010000000000}
+      00000057415348494E475F4445535F4D0100000000001300000057415348494E
+      475F50454E474552494E47414E0100000000001500000057415348494E475F50
+      454E474552494E47414E5F4D010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -16221,6 +16236,12 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
     object QHasil_TotalWASHING_DES_M: TFloatField
       FieldName = 'WASHING_DES_M'
       DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QHasil_TotalWASHING_PENGERINGAN: TFloatField
+      FieldName = 'WASHING_PENGERINGAN'
+    end
+    object QHasil_TotalWASHING_PENGERINGAN_M: TFloatField
+      FieldName = 'WASHING_PENGERINGAN_M'
     end
   end
   object QProcHasil: TOracleQuery
@@ -17698,21 +17719,27 @@ object InfoWIPFinishingFrm: TInfoWIPFinishingFrm
     end
     object QHasil_MesenWSG1_KD: TFloatField
       FieldName = 'WSG1_KD'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QHasil_MesenWSG1_MTR: TFloatField
       FieldName = 'WSG1_MTR'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QHasil_MesenWSG2_KD: TFloatField
       FieldName = 'WSG2_KD'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QHasil_MesenWSG2_MTR: TFloatField
       FieldName = 'WSG2_MTR'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QHasil_MesenWSG3_KD: TFloatField
       FieldName = 'WSG3_KD'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QHasil_MesenWSG3_MTR: TFloatField
       FieldName = 'WSG3_MTR'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
   end
   object QHasil_Mesen_Tot: TOracleDataSet

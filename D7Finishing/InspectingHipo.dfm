@@ -102,7 +102,7 @@ object InspectingHipoFrm: TInspectingHipoFrm
             ForceNewPage = False
             Size.Values = (
               150.812500000000000000
-              1772.708333333334000000)
+              1772.708333333333000000)
             BandType = rbPageHeader
             object QRDBText2: TQRDBText
               Left = 536
@@ -2457,7 +2457,7 @@ object InspectingHipoFrm: TInspectingHipoFrm
             ForceNewPage = False
             Size.Values = (
               211.666666666666700000
-              1772.708333333334000000)
+              1772.708333333333000000)
             BandType = rbTitle
             object QRDBText1: TQRDBText
               Left = 258
@@ -2473,7 +2473,7 @@ object InspectingHipoFrm: TInspectingHipoFrm
                 68.791666666666670000
                 682.625000000000000000
                 0.000000000000000000
-                407.458333333333400000)
+                407.458333333333300000)
               Alignment = taCenter
               AlignToBand = True
               AutoSize = True
@@ -2737,7 +2737,7 @@ object InspectingHipoFrm: TInspectingHipoFrm
             ForceNewPage = False
             Size.Values = (
               60.854166666666670000
-              1772.708333333334000000)
+              1772.708333333333000000)
             BandType = rbColumnHeader
             object QRLabel8: TQRLabel
               Left = 16
@@ -2911,8 +2911,8 @@ object InspectingHipoFrm: TInspectingHipoFrm
             ForceNewPage = False
             ParentFont = False
             Size.Values = (
-              42.333333333333340000
-              1772.708333333334000000)
+              42.333333333333330000
+              1772.708333333333000000)
             BandType = rbDetail
             object QRDBText8: TQRDBText
               Left = 64
@@ -3113,7 +3113,7 @@ object InspectingHipoFrm: TInspectingHipoFrm
             ForceNewPage = False
             Size.Values = (
               497.416666666666700000
-              1772.708333333334000000)
+              1772.708333333333000000)
             BandType = rbSummary
             object QRDBText14: TQRDBText
               Left = 256
@@ -3272,7 +3272,7 @@ object InspectingHipoFrm: TInspectingHipoFrm
             ForceNewPage = False
             Size.Values = (
               52.916666666666670000
-              1772.708333333334000000)
+              1772.708333333333000000)
             BandType = rbPageFooter
             object QRDBText13: TQRDBText
               Left = 0
@@ -3347,7 +3347,7 @@ object InspectingHipoFrm: TInspectingHipoFrm
             ForceNewPage = False
             Size.Values = (
               0.000000000000000000
-              1772.708333333334000000)
+              1772.708333333333000000)
             FooterBand = QRBand1
             Master = QuickRep1
             ReprintOnNewPage = False
@@ -3368,7 +3368,7 @@ object InspectingHipoFrm: TInspectingHipoFrm
             ForceNewPage = False
             Size.Values = (
               105.833333333333300000
-              1772.708333333334000000)
+              1772.708333333333000000)
             BandType = rbGroupFooter
             object QRLabel15: TQRLabel
               Left = 305
@@ -3626,6 +3626,7 @@ object InspectingHipoFrm: TInspectingHipoFrm
             Anchors = [akTop, akRight]
             Caption = '&Print'
             TabOrder = 1
+            Visible = False
             OnClick = BitBtn2Click
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
@@ -5657,7 +5658,7 @@ object InspectingHipoFrm: TInspectingHipoFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              66.145833333333340000
+              66.145833333333330000
               537.104166666666700000
               179.916666666666700000
               926.041666666666700000)
@@ -5689,8 +5690,8 @@ object InspectingHipoFrm: TInspectingHipoFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              923.395833333333400000
-              312.208333333333400000
+              923.395833333333300000
+              312.208333333333300000
               153.458333333333300000)
             Alignment = taCenter
             AlignToBand = True
@@ -5875,7 +5876,7 @@ object InspectingHipoFrm: TInspectingHipoFrm
             FontSize = 8
           end
           object QRSysData3: TQRSysData
-            Left = -54
+            Left = 687
             Top = 8
             Width = 69
             Height = 17

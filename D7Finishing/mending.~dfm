@@ -1,6 +1,6 @@
 object MendingFrm: TMendingFrm
-  Left = 234
-  Top = 116
+  Left = 299
+  Top = 168
   Width = 1074
   Height = 608
   ActiveControl = GroupBox1
@@ -272,7 +272,7 @@ object MendingFrm: TMendingFrm
             Size.Values = (
               50.270833333333330000
               1452.562500000000000000
-              272.520833333333400000
+              272.520833333333300000
               156.104166666666700000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -335,8 +335,8 @@ object MendingFrm: TMendingFrm
             Size.Values = (
               44.979166666666670000
               1616.604166666667000000
-              216.958333333333400000
-              92.604166666666680000)
+              216.958333333333300000
+              92.604166666666660000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -365,10 +365,10 @@ object MendingFrm: TMendingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
-              664.104166666666800000
+              60.854166666666670000
+              664.104166666666700000
               158.750000000000000000
-              672.041666666666800000)
+              672.041666666666700000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -397,7 +397,7 @@ object MendingFrm: TMendingFrm
             Frame.DrawRight = False
             Size.Values = (
               50.270833333333330000
-              804.333333333333200000
+              804.333333333333400000
               222.250000000000000000
               116.416666666666700000)
             Alignment = taLeftJustify
@@ -461,7 +461,7 @@ object MendingFrm: TMendingFrm
             Size.Values = (
               52.916666666666670000
               1613.958333333333000000
-              84.666666666666680000
+              84.666666666666660000
               209.020833333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -2859,7 +2859,7 @@ object MendingFrm: TMendingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -3002,7 +3002,7 @@ object MendingFrm: TMendingFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              981.604166666666800000
+              981.604166666666600000
               7.937500000000000000
               145.520833333333300000)
             Alignment = taRightJustify
@@ -3060,7 +3060,7 @@ object MendingFrm: TMendingFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              679.979166666666800000
+              679.979166666666600000
               190.500000000000000000
               74.083333333333340000)
             Alignment = taCenter
@@ -3157,7 +3157,7 @@ object MendingFrm: TMendingFrm
             Size.Values = (
               44.979166666666670000
               677.333333333333400000
-              359.833333333333400000
+              359.833333333333300000
               79.375000000000000000)
             Alignment = taCenter
             AlignToBand = False
@@ -3189,7 +3189,7 @@ object MendingFrm: TMendingFrm
             Size.Values = (
               44.979166666666670000
               1227.666666666667000000
-              359.833333333333400000
+              359.833333333333300000
               79.375000000000000000)
             Alignment = taCenter
             AlignToBand = False
@@ -3523,7 +3523,7 @@ object MendingFrm: TMendingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            68.791666666666680000
+            68.791666666666670000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -3569,7 +3569,7 @@ object MendingFrm: TMendingFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              989.541666666666800000
+              989.541666666666600000
               10.583333333333330000
               140.229166666666700000)
             Alignment = taRightJustify
@@ -3633,7 +3633,7 @@ object MendingFrm: TMendingFrm
               44.979166666666670000
               1688.041666666667000000
               10.583333333333330000
-              216.958333333333400000)
+              216.958333333333300000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -3932,6 +3932,7 @@ object MendingFrm: TMendingFrm
             Anchors = [akTop, akRight]
             Caption = '&Print'
             TabOrder = 1
+            Visible = False
             OnClick = BitBtn2Click
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
@@ -4217,16 +4218,11 @@ object MendingFrm: TMendingFrm
           Selected.Strings = (
             'OPR_INSP'#9'30'#9'NAMA OPR'#9'F'
             'GRUP_DET'#9'3'#9'GROUP'#9'F'
-            'INSP_SARUNG'#9'10'#9'INSP SARUNG'#9'F'
-            'INSP_PG'#9'10'#9'INSP PG'#9'F'
-            'INSP_JQ_SB'#9'10'#9'INSP JQ SB'#9'F'
-            'INSP_FINISH'#9'10'#9'INSP FINISH'#9'F'
-            'MENDING'#9'10'#9'MENDING SHUTTLE REPROSES'#9'F'
-            'TUCKIN'#9'10'#9'TUCK-IN'#9'F'
-            'HYPO'#9'10'#9'HYPO'#9'F'
-            'SONGKET_PCS'#9'15'#9'SONGKET PCS'#9'F'#9'SONGKET'
-            'SONGKET_GA'#9'15'#9'SONGKET GA'#9'F'#9'SONGKET'
-            'LAIN2'#9'10'#9'LAIN"'#9'F')
+            'SONGKET_PCS'#9'15'#9'SONGKET KEMBANG'#9'F'#9'SONGKET MANUAL'
+            'SONGKET_GA'#9'15'#9'SONGKET JQ'#9'F'#9'SONGKET MANUAL'
+            'SONGKET_MKMBG'#9'15'#9'SONGKET KEMBANG'#9'F'#9'SONGKET MESIN'
+            'SONGKET_MJQ'#9'15'#9'SONGKET JQ'#9'F'#9'SONGKET MESIN'
+            'KETERANGAN'#9'15'#9'KETERANGAN'#9'F')
           IniAttributes.FileName = 'Finishing'
           IniAttributes.Delimiter = ';;'
           TitleColor = clSkyBlue
@@ -4860,16 +4856,11 @@ object MendingFrm: TMendingFrm
           'OPR_INSERT'#9'30'#9'OPR INSERT'#9'F'
           'TGL'#9'18'#9'TANGGAL'#9'F'
           'OPR_INSP'#9'30'#9'OPR INSP'#9'F'
-          'INSP_SARUNG'#9'10'#9'INSP SARUNG'#9'F'
-          'INSP_PG'#9'10'#9'INSP PG'#9'F'
-          'INSP_JQ_SB'#9'10'#9'INSP JQ SB'#9'F'
-          'INSP_FINISH'#9'10'#9'INSP FINISH'#9'F'
-          'MENDING'#9'10'#9'MENDING SHUTTLE REPROSES'#9'F'
-          'TUCKIN'#9'10'#9'TUCK-IN'#9'F'
-          'HYPO'#9'10'#9'HYPO'#9'F'
-          'SONGKET_PCS'#9'10'#9'SONGKET PCS'#9'F'#9'SONGKET'
-          'SONGKET_GA'#9'10'#9'SONGKET GA'#9'F'#9'SONGKET'
-          'LAIN2'#9'10'#9'LAIN"'#9'F')
+          'SONGKET_PCS'#9'10'#9'SONGKET KEMBANG'#9'F'#9'SONGKET MANUAL'
+          'SONGKET_GA'#9'10'#9'SONGKET JQ'#9'F'#9'SONGKET MANUAL'
+          'SONGKET_MKMBG'#9'10'#9'SONGKET KEMBANG'#9'F'#9'SONGKET MESIN'
+          'SONGKET_MJQ'#9'10'#9'SONGKET JQ'#9'F'#9'SONGKET MESIN'
+          'KETERANGAN'#9'15'#9'KETERANGAN'#9'F')
         IniAttributes.Enabled = True
         IniAttributes.SaveToRegistry = True
         IniAttributes.FileName = 'Finishing'
@@ -5356,10 +5347,10 @@ object MendingFrm: TMendingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              66.145833333333340000
-              526.520833333333400000
+              66.145833333333330000
+              526.520833333333300000
               179.916666666666700000
-              947.208333333333400000)
+              947.208333333333300000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -5388,8 +5379,8 @@ object MendingFrm: TMendingFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              923.395833333333400000
-              312.208333333333400000
+              923.395833333333300000
+              312.208333333333300000
               153.458333333333300000)
             Alignment = taCenter
             AlignToBand = True
@@ -5418,8 +5409,8 @@ object MendingFrm: TMendingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
-              740.833333333333200000
+              60.854166666666670000
+              740.833333333333300000
               248.708333333333300000
               515.937500000000000000)
             Alignment = taCenter
@@ -5538,7 +5529,7 @@ object MendingFrm: TMendingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText16: TQRDBText
@@ -5574,7 +5565,7 @@ object MendingFrm: TMendingFrm
             FontSize = 8
           end
           object QRSysData2: TQRSysData
-            Left = -54
+            Left = 687
             Top = 8
             Width = 69
             Height = 17
@@ -6699,7 +6690,7 @@ object MendingFrm: TMendingFrm
     SequenceField.Sequence = 'IPISMA_DB5.REG_MENDING_DET'
     SequenceField.ApplyMoment = amOnNewRecord
     QBEDefinition.QBEFieldDefs = {
-      04000000260000000D0000004E4F5F5245475F44455441494C01000000000006
+      04000000280000000D0000004E4F5F5245475F44455441494C01000000000006
       0000004E4F5F5245470100000000000A00000054474C5F494E53455254010000
       0000000A0000004B45544552414E47414E0100000000000A0000005154595F47
       554C554E470100000000000A0000005154595F504F544F4E470100000000000B
@@ -6721,7 +6712,8 @@ object MendingFrm: TMendingFrm
       4E5350010000000000060000005455434B494E01000000000008000000475255
       505F4445540100000000000A000000494E53505F4A515F53420100000000000B
       000000494E53505F46494E495348010000000000050000004C41494E32010000
-      000000}
+      0000000D000000534F4E474B45545F4D4B4D42470100000000000B000000534F
+      4E474B45545F4D4A51010000000000}
     Master = QMaster
     MasterFields = 'NO_REG'
     DetailFields = 'NO_REG'
@@ -6874,6 +6866,14 @@ object MendingFrm: TMendingFrm
     end
     object QDetailSONGKET_GA: TFloatField
       FieldName = 'SONGKET_GA'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QDetailSONGKET_MKMBG: TFloatField
+      FieldName = 'SONGKET_MKMBG'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QDetailSONGKET_MJQ: TFloatField
+      FieldName = 'SONGKET_MJQ'
       DisplayFormat = '0.0,0;(0.0,0);-'
     end
   end
@@ -7051,7 +7051,7 @@ object MendingFrm: TMendingFrm
       4E4F5F4E4F544100000000000D0000003A4B445F5452414E53414B5349050000
       00040000004D30330000000000}
     QBEDefinition.QBEFieldDefs = {
-      0400000019000000070000004E4F5F4E4F54410100000000000A00000054474C
+      040000001B000000070000004E4F5F4E4F54410100000000000A00000054474C
       5F494E534552540100000000000A0000004F50525F494E534552540100000000
       00060000004E4F5F5245470100000000000300000054474C0100000000000400
       0000475255500100000000000500000053484946540100000000000A0000004B
@@ -7064,7 +7064,9 @@ object MendingFrm: TMendingFrm
       4F4E474B45545F5043530100000000000A000000534F4E474B45545F47410100
       00000000080000004F50525F494E535001000000000008000000475255505F44
       45540100000000000A000000494E53505F4A515F53420100000000000B000000
-      494E53505F46494E495348010000000000050000004C41494E32010000000000}
+      494E53505F46494E495348010000000000050000004C41494E32010000000000
+      0D000000534F4E474B45545F4D4B4D42470100000000000B000000534F4E474B
+      45545F4D4A51010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -7170,6 +7172,14 @@ object MendingFrm: TMendingFrm
       FieldName = 'SONGKET_GA'
       DisplayFormat = '0.0,0;(0.0,0);-'
     end
+    object QBrowseSONGKET_MKMBG: TFloatField
+      FieldName = 'SONGKET_MKMBG'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowseSONGKET_MJQ: TFloatField
+      FieldName = 'SONGKET_MJQ'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
   end
   object dsQBrowse: TwwDataSource
     DataSet = QBrowse
@@ -7190,7 +7200,10 @@ object MendingFrm: TMendingFrm
       '    SUM(hypo) AS hypo, '
       '    SUM(songket_pcs) AS songket_pcs,'
       '    SUM(songket_ga) AS songket_ga,'
-      '    SUM(lain2) AS lain2'
+      '    SUM(lain2) AS lain2,'
+      ''
+      '    SUM(songket_mkmbg) AS songket_mkmbg,'
+      '    SUM(songket_mjq) AS songket_mjq'
       'FROM '
       '    (SELECT * '
       '     FROM ipisma_db5.vmending '
@@ -7203,12 +7216,14 @@ object MendingFrm: TMendingFrm
       72206279204E4F5F4E4F544100000000000D0000003A4B445F5452414E53414B
       534905000000040000004D30330000000000}
     QBEDefinition.QBEFieldDefs = {
-      040000000A0000000B000000494E53505F534152554E47010000000000070000
+      040000000C0000000B000000494E53505F534152554E47010000000000070000
       00494E53505F5047010000000000070000004D454E44494E4701000000000006
       0000005455434B494E010000000000040000004859504F0100000000000B0000
       00534F4E474B45545F5043530100000000000A000000494E53505F4A515F5342
       0100000000000B000000494E53505F46494E4953480100000000000A00000053
-      4F4E474B45545F4741010000000000050000004C41494E32010000000000}
+      4F4E474B45545F4741010000000000050000004C41494E320100000000000D00
+      0000534F4E474B45545F4D4B4D42470100000000000B000000534F4E474B4554
+      5F4D4A51010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -7244,6 +7259,12 @@ object MendingFrm: TMendingFrm
     object QBrowseTotalLAIN2: TFloatField
       FieldName = 'LAIN2'
     end
+    object QBrowseTotalSONGKET_MKMBG: TFloatField
+      FieldName = 'SONGKET_MKMBG'
+    end
+    object QBrowseTotalSONGKET_MJQ: TFloatField
+      FieldName = 'SONGKET_MJQ'
+    end
   end
   object QTotal: TOracleDataSet
     SQL.Strings = (
@@ -7259,19 +7280,24 @@ object MendingFrm: TMendingFrm
       '    sum(hypo) as hypo,'
       '    sum(songket_pcs) as songket_pcs,'
       '    sum(songket_ga) as songket_ga,'
-      '    sum(lain2) as lain2'
+      '    sum(lain2) as lain2,'
+      ''
+      '    SUM(songket_mkmbg) AS songket_mkmbg,'
+      '    SUM(songket_mjq) AS songket_mjq'
       'from '
       '    ipisma_db5.mending_detail a'
       'where '
       '    a.no_reg = :no_reg')
     Variables.Data = {0300000001000000070000003A4E4F5F524547030000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
-      040000000A0000000B000000494E53505F534152554E47010000000000070000
+      040000000C0000000B000000494E53505F534152554E47010000000000070000
       00494E53505F5047010000000000070000004D454E44494E4701000000000006
       0000005455434B494E010000000000040000004859504F0100000000000B0000
       00534F4E474B45545F5043530100000000000A000000494E53505F4A515F5342
       0100000000000B000000494E53505F46494E4953480100000000000A00000053
-      4F4E474B45545F4741010000000000050000004C41494E32010000000000}
+      4F4E474B45545F4741010000000000050000004C41494E320100000000000D00
+      0000534F4E474B45545F4D4B4D42470100000000000B000000534F4E474B4554
+      5F4D4A51010000000000}
     Session = DMFrm.OS
     Left = 33
     Top = 280
@@ -7304,6 +7330,12 @@ object MendingFrm: TMendingFrm
     end
     object QTotalLAIN2: TFloatField
       FieldName = 'LAIN2'
+    end
+    object QTotalSONGKET_MKMBG: TFloatField
+      FieldName = 'SONGKET_MKMBG'
+    end
+    object QTotalSONGKET_MJQ: TFloatField
+      FieldName = 'SONGKET_MJQ'
     end
   end
   object Qkon_opening: TOracleDataSet

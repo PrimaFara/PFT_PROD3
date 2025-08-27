@@ -348,6 +348,14 @@ type
     QBrowseTotalLAIN2: TFloatField;
     QDetailSONGKET_GA: TFloatField;
     QBrowseSONGKET_GA: TFloatField;
+    QDetailSONGKET_MKMBG: TFloatField;
+    QDetailSONGKET_MJQ: TFloatField;
+    QBrowseSONGKET_MKMBG: TFloatField;
+    QBrowseSONGKET_MJQ: TFloatField;
+    QBrowseTotalSONGKET_MKMBG: TFloatField;
+    QBrowseTotalSONGKET_MJQ: TFloatField;
+    QTotalSONGKET_MKMBG: TFloatField;
+    QTotalSONGKET_MJQ: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -712,6 +720,9 @@ QBrowse.Open;
   wwDBGrid1xxxxx.ColumnByName('SONGKET_PCS').FooterValue := FormatFloat('0.0,0;(0.0,0);-', QBrowseTotalSONGKET_PCS.AsFloat);
   wwDBGrid1xxxxx.ColumnByName('SONGKET_GA').FooterValue := FormatFloat('0.0,0;(0.0,0);-', QBrowseTotalSONGKET_GA.AsFloat);
   wwDBGrid1xxxxx.ColumnByName('LAIN2').FooterValue := FormatFloat('0.0,0;(0.0,0);-', QBrowseTotalLAIN2.AsFloat);
+
+  wwDBGrid1xxxxx.ColumnByName('SONGKET_MKMBG').FooterValue := FormatFloat('0.0,0;(0.0,0);-', QBrowseTotalSONGKET_MKMBG.AsFloat);
+  wwDBGrid1xxxxx.ColumnByName('SONGKET_MJQ').FooterValue := FormatFloat('0.0,0;(0.0,0);-', QBrowseTotalSONGKET_MJQ.AsFloat);
 end;
 
 procedure TMendingFrm.BtnExportClick(Sender: TObject);
@@ -790,6 +801,9 @@ begin
   wwDBGrid1.ColumnByName('SONGKET_PCS').FooterValue := FormatFloat('0.0,0;(0.0,0);-', QTotalSONGKET_PCS.AsFloat);
   wwDBGrid1.ColumnByName('SONGKET_GA').FooterValue := FormatFloat('0.0,0;(0.0,0);-', QTotalSONGKET_GA.AsFloat);
   wwDBGrid1.ColumnByName('LAIN2').FooterValue := FormatFloat('0.0,0;(0.0,0);-', QTotalLAIN2.AsFloat);
+
+  wwDBGrid1.ColumnByName('SONGKET_MKMBG').FooterValue := FormatFloat('0.0,0;(0.0,0);-', QTotalSONGKET_MKMBG.AsFloat);
+  wwDBGrid1.ColumnByName('SONGKET_MJQ').FooterValue := FormatFloat('0.0,0;(0.0,0);-', QTotalSONGKET_MJQ.AsFloat);
 
 
 end;

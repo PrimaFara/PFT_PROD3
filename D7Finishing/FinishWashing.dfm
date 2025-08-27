@@ -705,10 +705,10 @@ object FinishWashingFrm: TFinishWashingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
-              656.166666666666800000
+              60.854166666666670000
+              656.166666666666700000
               158.750000000000000000
-              687.916666666666800000)
+              687.916666666666700000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -920,7 +920,7 @@ object FinishWashingFrm: TFinishWashingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -956,7 +956,7 @@ object FinishWashingFrm: TFinishWashingFrm
             FontSize = 8
           end
           object QRSysData1: TQRSysData
-            Left = -54
+            Left = 687
             Top = 8
             Width = 69
             Height = 17
@@ -1584,7 +1584,7 @@ object FinishWashingFrm: TFinishWashingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            68.791666666666680000
+            68.791666666666670000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -3353,7 +3353,7 @@ object FinishWashingFrm: TFinishWashingFrm
           ForceNewPage = False
           ParentFont = False
           Size.Values = (
-            463.020833333333400000
+            463.020833333333300000
             2000.250000000000000000)
           BandType = rbTitle
           object Label16: TLabel
@@ -3725,10 +3725,10 @@ object FinishWashingFrm: TFinishWashingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
+              60.854166666666670000
               521.229166666666700000
               201.083333333333300000
-              955.145833333333500000)
+              955.145833333333300000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -3757,7 +3757,7 @@ object FinishWashingFrm: TFinishWashingFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              923.395833333333400000
+              923.395833333333300000
               333.375000000000000000
               153.458333333333300000)
             Alignment = taCenter
@@ -3787,8 +3787,8 @@ object FinishWashingFrm: TFinishWashingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
-              740.833333333333400000
+              60.854166666666670000
+              740.833333333333300000
               269.875000000000000000
               515.937500000000000000)
             Alignment = taCenter
@@ -3887,7 +3887,7 @@ object FinishWashingFrm: TFinishWashingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel19: TQRLabel
@@ -4095,7 +4095,7 @@ object FinishWashingFrm: TFinishWashingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText16: TQRDBText
@@ -4131,7 +4131,7 @@ object FinishWashingFrm: TFinishWashingFrm
             FontSize = 8
           end
           object QRSysData2: TQRSysData
-            Left = -54
+            Left = 687
             Top = 8
             Width = 69
             Height = 17
@@ -4170,7 +4170,7 @@ object FinishWashingFrm: TFinishWashingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            439.208333333333400000
+            439.208333333333300000
             2000.250000000000000000)
           BandType = rbGroupFooter
           object QRDBText19: TQRDBText
@@ -4556,7 +4556,7 @@ object FinishWashingFrm: TFinishWashingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText21: TQRDBText

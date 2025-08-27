@@ -291,7 +291,6 @@ object HasilTenunFrm: THasilTenunFrm
           ControlType.Strings = (
             'KD_ITEM;CustomEdit;LookItem;F'
             'ARAH;CustomEdit;LookArah;F'
-            'KD_PRODUKSI;CustomEdit;Look_KP;F'
             'NO_SERI_BEAM;CustomEdit;LookBeam;F')
           Selected.Strings = (
             'NO_URUT'#9'5'#9'URUT'#9'T'
@@ -570,6 +569,7 @@ object HasilTenunFrm: THasilTenunFrm
           LookupTable = DMFrm.QKP_Hasil_Inspect
           LookupField = 'KP'
           TabOrder = 4
+          Visible = False
           AutoDropDown = False
           ShowButton = True
           AllowClearKey = False
@@ -738,19 +738,21 @@ object HasilTenunFrm: THasilTenunFrm
     OnNewRecord = QDetailNewRecord
     Left = 1040
     Top = 104
-    object QDetailNO_SERI_BEAM: TStringField
-      FieldName = 'NO_SERI_BEAM'
-      Size = 30
-    end
     object QDetailSATUAN: TStringField
       FieldName = 'SATUAN'
       Size = 6
     end
+    object QDetailNO_SERI_BEAM: TStringField
+      FieldName = 'NO_SERI_BEAM'
+      Size = 30
+    end
     object QDetailQTY: TFloatField
       FieldName = 'QTY'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QDetailOPR_TENUN: TStringField
       FieldName = 'OPR_TENUN'
+      Size = 50
     end
     object QDetailTGL_INSERT: TDateTimeField
       FieldName = 'TGL_INSERT'
@@ -762,16 +764,15 @@ object HasilTenunFrm: THasilTenunFrm
     object QDetailNO_REG: TFloatField
       FieldName = 'NO_REG'
     end
-    object QDetailLOKASI: TStringField
-      FieldName = 'LOKASI'
-      Size = 10
-    end
     object QDetailPROSES: TStringField
       FieldName = 'PROSES'
       Size = 30
     end
+    object QDetailLOKASI: TStringField
+      FieldName = 'LOKASI'
+      Size = 30
+    end
     object QDetailKONSTRUKSI: TStringField
-      DisplayWidth = 50
       FieldName = 'KONSTRUKSI'
       Size = 50
     end
@@ -781,21 +782,14 @@ object HasilTenunFrm: THasilTenunFrm
     end
     object QDetailTANGGAL: TDateTimeField
       FieldName = 'TANGGAL'
-      DisplayFormat = 'dd mmm yyyy'
     end
     object QDetailNIK: TStringField
       FieldName = 'NIK'
       Size = 10
     end
-    object QDetailBERAT: TFloatField
-      FieldKind = fkCalculated
-      FieldName = 'BERAT'
-      Calculated = True
-    end
-    object QDetailKODI: TFloatField
-      FieldKind = fkCalculated
-      FieldName = 'KODI'
-      Calculated = True
+    object QDetailSHIFT: TStringField
+      FieldName = 'SHIFT'
+      Size = 3
     end
     object QDetailNO_PRODUKSI: TStringField
       FieldName = 'NO_PRODUKSI'
@@ -805,244 +799,322 @@ object HasilTenunFrm: THasilTenunFrm
       FieldName = 'GRUP'
       Size = 3
     end
-    object QDetailSHIFT: TStringField
-      FieldName = 'SHIFT'
-      Size = 3
-    end
     object QDetailNO_REG_TENUN: TFloatField
       FieldName = 'NO_REG_TENUN'
     end
-    object QDetailLD: TIntegerField
+    object QDetailLD: TFloatField
       FieldName = 'LD'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailLB: TIntegerField
+    object QDetailLB: TFloatField
       FieldName = 'LB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailLT: TIntegerField
+    object QDetailLT: TFloatField
       FieldName = 'LT'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailLK: TIntegerField
+    object QDetailLK: TFloatField
       FieldName = 'LK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailLL: TIntegerField
+    object QDetailLL: TFloatField
       FieldName = 'LL'
-      LookupDataSet = DMFrm.QCorak
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailLP: TIntegerField
+    object QDetailLP: TFloatField
       FieldName = 'LP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailLR: TIntegerField
+    object QDetailLR: TFloatField
       FieldName = 'LR'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailWL: TIntegerField
+    object QDetailWL: TFloatField
       FieldName = 'WL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailCB: TIntegerField
+    object QDetailCB: TFloatField
       FieldName = 'CB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailCK: TIntegerField
+    object QDetailCK: TFloatField
       FieldName = 'CK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailCRT: TIntegerField
+    object QDetailCRT: TFloatField
       FieldName = 'CRT'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailPD: TIntegerField
+    object QDetailPD: TFloatField
       FieldName = 'PD'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailPL: TIntegerField
+    object QDetailPL: TFloatField
       FieldName = 'PL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailPP: TIntegerField
+    object QDetailPP: TFloatField
       FieldName = 'PP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailPS: TIntegerField
+    object QDetailPS: TFloatField
       FieldName = 'PS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailNG: TIntegerField
+    object QDetailNG: TFloatField
       FieldName = 'NG'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailWP: TIntegerField
+    object QDetailWP: TFloatField
       FieldName = 'WP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailSC: TIntegerField
+    object QDetailSC: TFloatField
       FieldName = 'SC'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailKS: TIntegerField
+    object QDetailKS: TFloatField
       FieldName = 'KS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailKP: TIntegerField
+    object QDetailKP: TFloatField
       FieldName = 'KP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailBO: TIntegerField
+    object QDetailBO: TFloatField
       FieldName = 'BO'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailLN: TIntegerField
+    object QDetailLN: TFloatField
       FieldName = 'LN'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QDetailQTY2: TFloatField
       FieldName = 'QTY2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QDetailQTY3: TFloatField
       FieldName = 'QTY3'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailDITERIMA: TFloatField
-      FieldKind = fkCalculated
-      FieldName = 'DITERIMA'
-      Calculated = True
+    object QDetailKD_KONSTRUKSI: TStringField
+      FieldName = 'KD_KONSTRUKSI'
+      Size = 6
+    end
+    object QDetailKD_CORAK: TStringField
+      FieldName = 'KD_CORAK'
+      Size = 6
     end
     object QDetailPR: TFloatField
       FieldName = 'PR'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailUTB: TIntegerField
+    object QDetailUTB: TFloatField
       FieldName = 'UTB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailUTK: TIntegerField
+    object QDetailUTK: TFloatField
       FieldName = 'UTK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailLBK: TIntegerField
+    object QDetailLBK: TFloatField
       FieldName = 'LBK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailSLL: TIntegerField
+    object QDetailSLL: TFloatField
       FieldName = 'SLL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailTG: TIntegerField
+    object QDetailTG: TFloatField
       FieldName = 'TG'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailTCS: TIntegerField
+    object QDetailTCS: TFloatField
       FieldName = 'TCS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailCUP: TIntegerField
+    object QDetailCUP: TFloatField
       FieldName = 'CUP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QDetailNO_URUT: TFloatField
       FieldName = 'NO_URUT'
     end
-    object QDetailLPB: TIntegerField
+    object QDetailLPB: TFloatField
       FieldName = 'LPB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailLPS: TIntegerField
+    object QDetailLPS: TFloatField
       FieldName = 'LPS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailLRB: TIntegerField
+    object QDetailLRB: TFloatField
       FieldName = 'LRB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailLRS: TIntegerField
+    object QDetailLRS: TFloatField
       FieldName = 'LRS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailLS: TIntegerField
+    object QDetailLS: TFloatField
       FieldName = 'LS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailLSB: TIntegerField
+    object QDetailLSB: TFloatField
       FieldName = 'LSB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailLSS: TIntegerField
+    object QDetailLSS: TFloatField
       FieldName = 'LSS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailOJ: TIntegerField
+    object QDetailOJ: TFloatField
       FieldName = 'OJ'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailLPT: TIntegerField
+    object QDetailLPT: TFloatField
       FieldName = 'LPT'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailLRG: TIntegerField
+    object QDetailLRG: TFloatField
       FieldName = 'LRG'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailCKK: TIntegerField
+    object QDetailCKK: TFloatField
       FieldName = 'CKK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailCAJ: TIntegerField
+    object QDetailCAJ: TFloatField
       FieldName = 'CAJ'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailPKP: TIntegerField
+    object QDetailPKP: TFloatField
       FieldName = 'PKP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailBTB: TIntegerField
+    object QDetailBTB: TFloatField
       FieldName = 'BTB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailANR: TIntegerField
+    object QDetailANR: TFloatField
       FieldName = 'ANR'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailUTS: TIntegerField
+    object QDetailUTS: TFloatField
       FieldName = 'UTS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailKBR: TIntegerField
+    object QDetailKBR: TFloatField
       FieldName = 'KBR'
-    end
-    object QDetailAFL: TIntegerField
-      FieldName = 'AFL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QDetailNO_DESAIN: TStringField
       FieldName = 'NO_DESAIN'
     end
+    object QDetailPILIH: TStringField
+      FieldName = 'PILIH'
+      Size = 1
+    end
     object QDetailMESIN: TStringField
       FieldName = 'MESIN'
+      Size = 50
     end
     object QDetailKD_PRODUKSI: TStringField
       FieldName = 'KD_PRODUKSI'
-      ReadOnly = True
-      Size = 10
     end
     object QDetailJENIS: TStringField
       FieldName = 'JENIS'
       Size = 6
     end
-    object QDetailPRA: TIntegerField
+    object QDetailAFL: TFloatField
+      FieldName = 'AFL'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QDetailPRA: TFloatField
       FieldName = 'PRA'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailFLS: TIntegerField
+    object QDetailTGL_PTG: TDateTimeField
+      FieldName = 'TGL_PTG'
+    end
+    object QDetailFLS: TFloatField
       FieldName = 'FLS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailFLP: TIntegerField
+    object QDetailFLP: TFloatField
       FieldName = 'FLP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailNEPS: TIntegerField
+    object QDetailNEPS: TFloatField
       FieldName = 'NEPS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailBTS: TIntegerField
+    object QDetailBTS: TFloatField
       FieldName = 'BTS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailKTR: TIntegerField
+    object QDetailKTR: TFloatField
       FieldName = 'KTR'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailPDK: TIntegerField
+    object QDetailPDK: TFloatField
       FieldName = 'PDK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailSBK: TIntegerField
+    object QDetailSBK: TFloatField
       FieldName = 'SBK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailKNB: TIntegerField
+    object QDetailKNB: TFloatField
       FieldName = 'KNB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
-    object QDetailBGRADE: TIntegerField
+    object QDetailBGRADE: TFloatField
       FieldName = 'BGRADE'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QDetailBS_FLS: TFloatField
       FieldName = 'BS_FLS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QDetailBS_FLP: TFloatField
       FieldName = 'BS_FLP'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QDetailBS_BTS: TFloatField
       FieldName = 'BS_BTS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QDetailBS_BTB: TFloatField
       FieldName = 'BS_BTB'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QDetailBS_TK: TFloatField
       FieldName = 'BS_TK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QDetailKECOES_BG: TFloatField
       FieldName = 'KECOES_BG'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QDetailKECOES_BS: TFloatField
       FieldName = 'KECOES_BS'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QDetailKNT: TFloatField
       FieldName = 'KNT'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QDetailKETERANGAN: TStringField
       FieldName = 'KETERANGAN'
       Size = 255
+    end
+    object QDetailDITERIMA: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'DITERIMA'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+      Calculated = True
     end
   end
   object dsDetail: TwwDataSource

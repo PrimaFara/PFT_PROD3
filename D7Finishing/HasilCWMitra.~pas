@@ -900,6 +900,17 @@ type
     QBrowse_RekapFLEX: TFloatField;
     QBrowse_RekapP_FLEX: TFloatField;
     QTotalFLEX: TFloatField;
+    QAmbilPrintNO_REG: TFloatField;
+    QAmbilPrintKD_KONSTRUKSI: TStringField;
+    QAmbilPrintNO_ORDER: TStringField;
+    QAmbilPrintKONSTRUKSI: TStringField;
+    QAmbilPrintNO_DESAIN: TStringField;
+    QAmbilPrintKD_TRANSAKSI: TStringField;
+    Label13: TLabel;
+    ECari_Order: TEdit;
+    BitBtn11: TBitBtn;
+    QAmbilData: TOracleQuery;
+    QAmbilData2: TOracleQuery;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -920,11 +931,18 @@ type
     procedure VTglAwalChange(Sender: TObject);
     procedure vTglAkhirChange(Sender: TObject);
     procedure cbOtomatisClick(Sender: TObject);
+    //procedure dbcFieldEnter(Sender: TObject);
+    //procedure dbcFieldEnter(Sender: TObject);
     procedure dbcFieldEnter(Sender: TObject);
     procedure vOperandClick(Sender: TObject);
+    //procedure cbTanggalClick(Sender: TObject);
     procedure cbTanggalClick(Sender: TObject);
+    //procedure BitBtn3Click(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
+    // procedure BtnExportClick(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
+    //procedure wwDBGrid1xxxxxTitleButtonClick(Sender: TObject;
+    //  AFieldName: String);
     procedure wwDBGrid1xxxxxTitleButtonClick(Sender: TObject;
       AFieldName: String);
     procedure TabSheet1Show(Sender: TObject);
@@ -1017,6 +1035,7 @@ type
     procedure QBrowRekKodAfterScroll(DataSet: TDataSet);
     procedure rgKonversiClick(Sender: TObject);
     procedure BitBtn10Click(Sender: TObject);
+    procedure BitBtn11Click(Sender: TObject);
     //procedure dbcField5Change(Sender: TObject);
     //procedure GroupBox3Click(Sender: TObject);
     //procedure Label12Click(Sender: TObject);
@@ -1134,6 +1153,7 @@ QDetailOPR_INSERT.AsString:=DMFrm.QUserTimeUSER_OPR.AsString;    }
   //QDetail.Close;
   //QDetail.Open;
   //QMaster.Post;
+
   QDetailFLEX_PRINT.AsFloat:=0;
   QDetailFLEX_STAMPING.AsFloat:=0;
   QDetailFLEX_STEAM.AsFloat:=0;
@@ -1526,6 +1546,7 @@ DMFrm.QUserTime.Open;
 QMasterTGL_INSERT.AsDateTime:=DMFrm.QUserTimeVTGL.AsDateTime;
 QMasterOPR_INSERT.AsString:=DMFrm.QUserTimeUSER_OPR.AsString;
 QMasterKD_TRANSAKSI.AsString:=QTransaksiKD_TRANSAKSI.AsString;
+QMasterSTATUS.AsString:='IN';
 QMasterGRUP.AsString:='E';
 QMasterSHIFT.AsString:='0';
 
@@ -2752,15 +2773,26 @@ end;
 procedure THasilCWMitraFrm.LookPrintCloseUp(Sender: TObject; LookupTable,
   FillTable: TDataSet; modified: Boolean);
 begin
- If modified then
-    QDetailNO_BATCH.AsString:=QAmbilPrintKETERANGAN2.AsString;
-    QDetailTGL_KIRIM.AsString:=QAmbilPrintTGL.AsString;
-    QDetailKD_WARNA.AsString:=QAmbilPrintKD_CORAK.AsString;
-    QDetailWARNA.AsString:=QAmbilPrintCORAK.AsString;
-    QDetailMET_LABEL.AsString:=QAmbilPrintQTY_METER.AsString;       // Total Produksi kalau QTY itu adalah BK
-    QMasterKETERANGAN.AsString:=QAmbilPrintKETERANGAN.AsString;
-end;
+  if modified then
+  begin
+    QDetailNO_BATCH.AsString := QAmbilPrintKETERANGAN2.AsString;
+    QDetailTGL_KIRIM.AsString := QAmbilPrintTGL.AsString;
+    QDetailKD_WARNA.AsString := QAmbilPrintKD_CORAK.AsString;
+    QDetailWARNA.AsString := QAmbilPrintCORAK.AsString;
 
+    if QAmbilPrintKD_TRANSAKSI.AsString = 'P18' then
+      QDetailMET_LABEL.AsString := QAmbilPrintQTY_METER.AsString
+    else
+      QDetailQTY5.AsString := QAmbilPrintQTY_METER.AsString;
+
+    QMasterKETERANGAN.AsString := QAmbilPrintKETERANGAN.AsString;
+    QDetailNO_ORDER.AsString := QAmbilPrintNO_ORDER.AsString;
+    QDetailKD_PRODUKSI.AsString := QAmbilPrintKD_KONSTRUKSI.AsString;
+    QDetailKONSTRUKSI.AsString := QAmbilPrintKONSTRUKSI.AsString;
+    QDetailDESIGN.AsString := QAmbilPrintNO_DESAIN.AsString;
+  end;
+end;
+  
 procedure THasilCWMitraFrm.BtnOk2Click(Sender: TObject);
 var
   vt1, vt2, vt3, vt4, vt5, vt6, vt7, vt8, vt9, vt10,
@@ -3745,6 +3777,21 @@ case RPrint.ItemIndex of
     else
       ShowMessage('Yang Anda Telusuri tidak ada');
     end;
+end;
+
+procedure THasilCWMitraFrm.BitBtn11Click(Sender: TObject);
+begin
+
+  QMaster.Edit;
+  QMaster.Post;
+  QAmbilData.Close;
+  QAmbilData.SetVariable('QNO_REG',QMasterNO_REG.AsInteger);
+  QAmbilData.SetVariable('QNO_NOTA',ECari_Order.Text);
+  QAmbilData.Execute;
+  QDetail.Close;
+  QDetail.Open;
+
+  
 end;
 
 end.
