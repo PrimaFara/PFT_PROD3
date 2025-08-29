@@ -911,6 +911,10 @@ type
     BitBtn11: TBitBtn;
     QAmbilData: TOracleQuery;
     QAmbilData2: TOracleQuery;
+    BitBtn12: TBitBtn;
+    QBrowseNO_SPB: TStringField;
+    QDetailKD_PRODUKSI2: TStringField;
+    QBrowseKD_PRODUKSI2: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -929,7 +933,9 @@ type
     procedure FNo_UrutBeforeQuery(Sender: TOracleDataSet);
     procedure QMasterBeforeQuery(Sender: TOracleDataSet);
     procedure VTglAwalChange(Sender: TObject);
+    //procedure vTglAkhirChange(Sender: TObject);
     procedure vTglAkhirChange(Sender: TObject);
+    //procedure cbOtomatisClick(Sender: TObject);
     procedure cbOtomatisClick(Sender: TObject);
     //procedure dbcFieldEnter(Sender: TObject);
     //procedure dbcFieldEnter(Sender: TObject);
@@ -1036,6 +1042,7 @@ type
     procedure rgKonversiClick(Sender: TObject);
     procedure BitBtn10Click(Sender: TObject);
     procedure BitBtn11Click(Sender: TObject);
+    procedure BitBtn12Click(Sender: TObject);
     //procedure dbcField5Change(Sender: TObject);
     //procedure GroupBox3Click(Sender: TObject);
     //procedure Label12Click(Sender: TObject);
@@ -3792,6 +3799,29 @@ begin
   QDetail.Open;
 
   
+end;
+
+procedure THasilCWMitraFrm.BitBtn12Click(Sender: TObject);
+var
+    tbk: string;
+    vbk: real;
+begin
+
+    if InputQuery('Masukan No_Reg_Detail','No_Reg_Detail : ',tbk) then
+
+    begin
+
+        //vbk:=StrToFloat(tbk);
+
+        QAmbilData2.Close;
+        QAmbilData2.SetVariable('no_reg_reff',tbk);
+        QAmbilData2.SetVariable('qno_reg',QMasterNO_REG.AsInteger);
+        QAmbilData2.Execute;
+
+        QDetail.Close;
+        QDetail.Open;
+        
+    end;
 end;
 
 end.

@@ -7715,8 +7715,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
   end
   object dsQBrowse_rekap: TwwDataSource
     DataSet = QBrowse_rekap
-    Left = 381
-    Top = 232
+    Left = 509
+    Top = 224
   end
   object Qoperator: TOracleDataSet
     SQL.Strings = (

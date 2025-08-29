@@ -2785,7 +2785,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333330000
+            66.145833333333340000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -2976,7 +2976,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666680000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -3012,7 +3012,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             FontSize = 8
           end
           object QRSysData1: TQRSysData
-            Left = 687
+            Left = -54
             Top = 8
             Width = 69
             Height = 17
@@ -3047,9 +3047,9 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              883.708333333333300000
+              883.708333333333400000
               21.166666666666670000
-              232.833333333333300000)
+              232.833333333333400000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = False
@@ -3082,7 +3082,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            320.145833333333300000
+            320.145833333333400000
             2000.250000000000000000)
           BandType = rbGroupFooter
           object QRDBText4: TQRDBText
@@ -3336,7 +3336,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333330000
+            66.145833333333340000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText5: TQRDBText
@@ -4238,6 +4238,15 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             DataSource = dsQMaster
             TabOrder = 2
           end
+          object BitBtn12: TBitBtn
+            Left = 408
+            Top = 8
+            Width = 75
+            Height = 25
+            Caption = 'Copy Baris'
+            TabOrder = 3
+            OnClick = BitBtn12Click
+          end
         end
         object LookGrup: TwwDBComboBox
           Left = 545
@@ -4311,12 +4320,14 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             'PROSES;CustomEdit;LookProses2;F'
             'NO_BATCH;CustomEdit;LookPrint;F')
           Selected.Strings = (
+            'NO_BEAM'#9'13'#9'NO_REG_DETAIL'#9'F'
             'NO_BATCH'#9'10'#9'NO BATCH'#9'F'
             'NO_ORDER'#9'10'#9'NO ORDER'#9'F'
             'NO_SPB'#9'10'#9'NO. ORDER EX CW'#9'F'
             'KD_PRINT'#9'10'#9'KD PRINT'#9'F'
             'TGL_KIRIM'#9'10'#9'TGL KIRIM'#9'F'
             'TGL_TERIMA'#9'10'#9'TGL TERIMA'#9'F'
+            'KD_PRODUKSI2'#9'10'#9'KD PROD ST'#9'T'
             'KD_PRODUKSI'#9'10'#9'KD_PROD'#9'F'
             'KONSTRUKSI'#9'35'#9'KONSTRUKSI'#9'T'
             'KD_WARNA'#9'10'#9'KD_WARNA'#9'F'#9'WARNA'
@@ -4962,6 +4973,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           'OPERATOR'#9'25'#9'NAMA'#9'F'#9'OPERATOR'
           'NO_BATCH'#9'15'#9'NO BATCH'#9'F'
           'NO_ORDER'#9'10'#9'NO ORDER'#9'F'
+          'NO_SPB'#9'10'#9'NO. ORDER EX CW'#9'F'
           'NO_MESIN'#9'15'#9'NO MESIN'#9'F'
           'NO_REG'#9'10'#9'NO_REG'#9#9
           'KD_TRANSAKSI'#9'3'#9'KD_TRANSAKSI'#9#9
@@ -4973,6 +4985,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           'JENIS_SARUNG'#9'15'#9'JENIS SARUNG'#9'F'
           'DESIGN'#9'20'#9'DESAIN'#9'F'
           'PROSES'#9'20'#9'PROSES'#9'F'
+          'KD_PRODUKSI2'#9'10'#9'KD_PROD ST'#9'F'
           'KD_PRODUKSI'#9'15'#9'KD_PRODUKSI'#9'F'
           'KD_PRINT'#9'20'#9'KD_PRINT'#9'F'
           'KONSTRUKSI'#9'35'#9'KONSTRUKSI'#9'F'
@@ -5174,7 +5187,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
+              60.854166666666680000
               452.437500000000000000
               201.083333333333300000
               1092.729166666667000000)
@@ -5551,9 +5564,9 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333330000
-              931.333333333333300000
-              264.583333333333300000
+              58.208333333333340000
+              931.333333333333400000
+              264.583333333333400000
               137.583333333333300000)
             Alignment = taCenter
             AlignToBand = True
@@ -6010,7 +6023,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666680000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText14: TQRDBText
@@ -6046,7 +6059,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             FontSize = 8
           end
           object QRSysData2: TQRSysData
-            Left = 687
+            Left = -54
             Top = 8
             Width = 69
             Height = 17
@@ -6117,7 +6130,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            391.583333333333300000
+            391.583333333333400000
             2000.250000000000000000)
           BandType = rbGroupFooter
           object QRLabel22: TQRLabel
@@ -6387,7 +6400,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333330000
+            66.145833333333340000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText19: TQRDBText
@@ -7531,13 +7544,13 @@ object HasilCWMitraFrm: THasilCWMitraFrm
     SQL.Strings = (
       'select a.*, a.rowid from ipisma_db5.bukti4_detail a'
       'where a.no_reg = :no_reg'
-      'order by grup')
+      'order by no_beam')
     Variables.Data = {0300000001000000070000003A4E4F5F524547040000000000000000000000}
     SequenceField.Field = 'NO_REG_DETAIL'
     SequenceField.Sequence = 'IPISMA_DB5.REG_BUKTI4_DETAIL'
     SequenceField.ApplyMoment = amOnNewRecord
     QBEDefinition.QBEFieldDefs = {
-      040000003A0000000D0000004E4F5F5245475F44455441494C01000000000006
+      040000003B0000000D0000004E4F5F5245475F44455441494C01000000000006
       0000004E4F5F5245470100000000000A0000004B45544552414E47414E010000
       0000000D0000004B445F4B4F4E535452554B53490100000000000A0000004B4F
       4E535452554B5349010000000000080000004B445F434F52414B010000000000
@@ -7568,7 +7581,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       5F544552494D410100000000000600000044455349474E010000000000060000
       0050524F5345530100000000000A00000050524F445F43414255540100000000
       000D00000050524F445F54444B4341425554010000000000090000004A454E49
-      535F444554010000000000080000004E4F5F4F52444552010000000000}
+      535F444554010000000000080000004E4F5F4F524445520100000000000C0000
+      004B445F50524F44554B534932010000000000}
     Master = QMaster
     MasterFields = 'NO_REG'
     DetailFields = 'NO_REG'
@@ -7783,6 +7797,10 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       FieldName = 'NO_ORDER'
       Size = 30
     end
+    object QDetailKD_PRODUKSI2: TStringField
+      FieldName = 'KD_PRODUKSI2'
+      ReadOnly = True
+    end
   end
   object dsQDetail: TwwDataSource
     DataSet = QDetail
@@ -7791,8 +7809,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
   end
   object dsQMaster: TwwDataSource
     DataSet = QMaster
-    Left = 960
-    Top = 112
+    Left = 1000
+    Top = 176
   end
   object QTransaksi: TOracleDataSet
     SQL.Strings = (
@@ -7931,7 +7949,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       0D0000003A4B445F5452414E53414B5349050000000400000039393200000000
       00}
     QBEDefinition.QBEFieldDefs = {
-      0400000048000000070000004E4F5F4E4F5441010000000000060000004E4F5F
+      040000004A000000070000004E4F5F4E4F5441010000000000060000004E4F5F
       5245470100000000000300000054474C01000000000004000000475255500100
       000000000500000053484946540100000000000A0000004B4F4E535452554B53
       490100000000000C0000004B445F5452414E53414B53490100000000000B0000
@@ -7971,7 +7989,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       000D00000050524F445F54444B4341425554010000000000030000004E494B01
       00000000000A0000004B45544552414E47414E010000000000080000004E4F5F
       4F5244455201000000000004000000464C455801000000000006000000505F46
-      4C4558010000000000}
+      4C4558010000000000060000004E4F5F5350420100000000000C0000004B445F
+      50524F44554B534932010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -8255,6 +8274,13 @@ object HasilCWMitraFrm: THasilCWMitraFrm
     object QBrowseP_FLEX: TFloatField
       FieldName = 'P_FLEX'
       DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowseNO_SPB: TStringField
+      FieldName = 'NO_SPB'
+      Size = 30
+    end
+    object QBrowseKD_PRODUKSI2: TStringField
+      FieldName = 'KD_PRODUKSI2'
     end
   end
   object dsQBrowse: TwwDataSource
@@ -10401,8 +10427,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
     Session = DMFrm.OS
     Variables.Data = {
       0300000001000000080000003A4E4F5F4E4F5441050000000000000000000000}
-    Left = 412
-    Top = 240
+    Left = 508
+    Top = 312
   end
   object QAmbilPrint: TOracleDataSet
     SQL.Strings = (
@@ -11844,93 +11870,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
   object QAmbilData: TOracleQuery
     SQL.Strings = (
       'begin      '
-      '  --untuk detail'
-      '    for i in '
-      '      ('
-      '         select'
-      '            :qno_reg as qno_reg,'
-      '            b.no_kirim,'
-      '            d.tgl as tgl_kirim,'
-      '            a.tgl as tgl_terima,'
-      '            a.no_nota,'
-      '            c.kd_warna,'
-      '            b.warna,'
-      '            b.qty as qty,'
-      '            '#39'DICABUT WARNA'#39' as ket_dicabut,'
-      '            a.keterangan,'
-      '            b.no_order,'
-      '            b.kd_produksi,'
-      '            b.konstruksi,'
-      '            b.desain_cw,'
-      '            b.no_reg_detail,'
-      '            b.no_resep,'
-      '            b.mitra'
-      
-        '        from ipisma_db4.wo_handprint a, ipisma_db4.wo_handprint_' +
-        'detail b, ipisma_db3.warna_baru c, ipisma_db4.vrekap_sj_handprin' +
-        't d'
-      
-        '        where a.no_reg = b.no_reg and d.no_kirim = b.no_kirim an' +
-        'd a.kd_transaksi = '#39'973'#39' and a.no_nota = :qno_nota and b.warna =' +
-        ' c.warna and b.qty > 0'
-      ''
-      '        union all'
-      ''
-      '        select'
-      '            :qno_reg as qno_reg,'
-      '            b.no_kirim,'
-      '            d.tgl as tgl_kirim,'
-      '            a.tgl as tgl_terima,'
-      '            a.no_nota,'
-      '            c.kd_warna,'
-      '            b.warna,'
-      '            b.qty_retur as qty,'
-      '            '#39'TIDAK DICABUT WARNA'#39' as ket_dicabut,'
-      '            a.keterangan,'
-      '            b.no_order,'
-      '            b.kd_produksi,'
-      '            b.konstruksi,'
-      '            b.desain_cw,'
-      '            b.no_reg_detail,'
-      '            b.no_resep,'
-      '            b.mitra'
-      
-        '        from ipisma_db4.wo_handprint a, ipisma_db4.wo_handprint_' +
-        'detail b, ipisma_db3.warna_baru c, ipisma_db4.vrekap_sj_handprin' +
-        't d'
-      
-        '        where a.no_reg = b.no_reg and d.no_kirim = b.no_kirim an' +
-        'd a.kd_transaksi = '#39'973'#39' and a.no_nota = :qno_nota and b.warna =' +
-        ' c.warna and b.qty_retur > 0'
-      '        order by no_reg_detail'
-      '      )'
-      '    loop'
-      '      insert into ipisma_db5.bukti4_detail'
-      
-        '      (no_reg, no_reg_detail, NO_BATCH, TGL_KIRIM, KD_WARNA, WAR' +
-        'NA, QTY5, KETERANGAN2, '
-      
-        '       NO_ORDER, KD_PRODUKSI, KONSTRUKSI, DESIGN, NO_BEAM, NO_RE' +
-        'SEP, MITRA, JENIS, TGL_TERIMA, JENIS_SARUNG, PROSES) '
-      '      values'
-      
-        '      (i.qno_reg, ipisma_db5.reg_bukti4_detail.nextval,i.no_kiri' +
-        'm,i.tgl_kirim,i.kd_warna,i.warna,i.qty,i.ket_dicabut,'
-      
-        '       i.no_order,i.kd_produksi,i.konstruksi,i.desain_cw,i.no_re' +
-        'g_detail,i.no_resep,i.mitra,i.no_nota, i.tgl_terima, '#39'-'#39', '#39'-'#39');'
-      '       '
-      '    end loop;   '
-      '  commit;'
-      '  '
-      '    --untuk mitra atas di master'
-      '      UPDATE ipisma_db5.bukti4 b'
-      
-        '      SET (b.jenis, b.keterangan) = (SELECT a.rekanan, a.keteran' +
-        'gan FROM ipisma_db4.wo_handprint a WHERE a.kd_transaksi = '#39'973'#39' ' +
-        'AND a.no_nota = :qno_nota)'
-      '      WHERE b.no_reg = :qno_reg;'
-      '  commit;'
+      '  ipisma_db5.PROC_STCW_HANDPRINT(:qno_reg,:qno_nota);'
       'end;')
     Session = DMFrm.OS
     Variables.Data = {
@@ -11942,12 +11882,45 @@ object HasilCWMitraFrm: THasilCWMitraFrm
   object QAmbilData2: TOracleQuery
     SQL.Strings = (
       'begin'
-      '  ipisma_db5.PROC_STCW_HANDPRINT(:qno_reg,:qno_nota);'
+      '  insert into ipisma_db5.bukti4_detail'
+      
+        '  (no_reg, no_reg_detail, no_batch, tgl_kirim, kd_warna, warna, ' +
+        'qty5, keterangan2, '
+      
+        '   no_order, kd_produksi, konstruksi, design, no_beam, no_resep,' +
+        ' mitra, jenis, tgl_terima, jenis_sarung, proses,kd_produksi2) '
+      '  select'
+      '      :qno_reg as qno_reg,'
+      '      ipisma_db5.reg_bukti4_detail.nextval,'
+      '      b.no_batch,'
+      '      b.tgl_kirim,'
+      '      b.kd_warna,'
+      '      b.warna,'
+      '      0,'
+      '      '#39'TIDAK DICABUT WARNA'#39','
+      '      b.no_order,'
+      '      b.kd_produksi,'
+      '      b.konstruksi,'
+      '      b.design,'
+      '      b.no_beam,'
+      '      b.no_resep,'
+      '      b.mitra,'
+      '      b.jenis,'
+      '      b.tgl_terima,'
+      '      b.jenis_sarung,'
+      '      b.proses,'
+      '      b.kd_produksi as kp2'
+      '  from ipisma_db5.bukti4 a, ipisma_db5.bukti4_detail b'
+      
+        '  where a.no_reg = b.no_reg and a.kd_transaksi = '#39'992'#39' and b.no_' +
+        'beam = :no_reg_reff;'
+      ''
+      '  commit;'
       'end;')
     Session = DMFrm.OS
     Variables.Data = {
-      0300000002000000080000003A514E4F5F524547030000000000000000000000
-      090000003A514E4F5F4E4F5441050000000000000000000000}
+      0300000002000000080000003A514E4F5F524547050000000000000000000000
+      0C0000003A4E4F5F5245475F52454646050000000000000000000000}
     Left = 349
     Top = 16
   end
