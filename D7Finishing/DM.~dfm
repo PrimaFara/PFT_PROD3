@@ -96,10 +96,7 @@ object DMFrm: TDMFrm
     Top = 8
   end
   object OS: TOracleSession
-    LogonUsername = 'anggit'
-    LogonPassword = 'yogi'
     LogonDatabase = 'PFPROD'
-    Connected = True
     Left = 32
     Top = 16
   end

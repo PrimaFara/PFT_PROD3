@@ -1,6 +1,6 @@
 object MainFrm: TMainFrm
-  Left = 308
-  Top = 158
+  Left = 242
+  Top = 0
   Width = 1122
   Height = 738
   Caption = 'Produksi 3'
