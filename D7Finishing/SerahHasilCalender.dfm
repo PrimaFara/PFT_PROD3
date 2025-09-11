@@ -1,8 +1,8 @@
 object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
   Left = 205
   Top = 115
-  Width = 1141
-  Height = 590
+  Width = 1516
+  Height = 786
   ActiveControl = GroupBox1
   Caption = 'Serah Ke ReInspecting'
   Color = clBtnFace
@@ -173,8 +173,8 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          727.604166666666600000
-          232.833333333333300000
+          727.604166666666800000
+          232.833333333333400000
           145.520833333333300000)
         Alignment = taLeftJustify
         AlignToBand = False
@@ -205,7 +205,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         Size.Values = (
           44.979166666666670000
           883.708333333333400000
-          232.833333333333300000
+          232.833333333333400000
           161.395833333333300000)
         Alignment = taLeftJustify
         AlignToBand = False
@@ -285,9 +285,9 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
-          703.791666666666600000
+          703.791666666666800000
           293.687500000000000000
-          534.458333333333300000)
+          534.458333333333400000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True
@@ -819,7 +819,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          854.604166666666600000
+          854.604166666666800000
           13.229166666666670000
           145.520833333333300000)
         Alignment = taRightJustify
@@ -1012,7 +1012,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        76.729166666666660000
+        76.729166666666680000
         2000.250000000000000000)
       BandType = rbPageFooter
       object QRDBText2: TQRDBText
@@ -1085,7 +1085,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
           44.979166666666670000
           883.708333333333400000
           21.166666666666670000
-          232.833333333333300000)
+          232.833333333333400000)
         Alignment = taCenter
         AlignToBand = True
         AutoSize = False
@@ -1119,7 +1119,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        320.145833333333300000
+        320.145833333333400000
         2000.250000000000000000)
       BandType = rbGroupFooter
       object QRDBText4: TQRDBText
@@ -1185,9 +1185,9 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         Frame.DrawRight = False
         Size.Values = (
           63.500000000000000000
-          391.583333333333300000
+          391.583333333333400000
           97.895833333333340000
-          320.145833333333300000)
+          320.145833333333400000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True
@@ -1212,7 +1212,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
           63.500000000000000000
           1214.437500000000000000
           97.895833333333340000
-          264.583333333333300000)
+          264.583333333333400000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True
@@ -1312,7 +1312,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          862.541666666666600000
+          862.541666666666900000
           7.937500000000000000
           145.520833333333300000)
         Alignment = taRightJustify
@@ -1544,7 +1544,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          312.208333333333300000
+          312.208333333333400000
           7.937500000000000000
           222.250000000000000000)
         Alignment = taLeftJustify
@@ -1580,8 +1580,8 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 1108
-    Height = 678
+    Width = 1500
+    Height = 748
     HelpType = htKeyword
     ActivePage = TabSheet2
     Align = alClient
@@ -1592,15 +1592,15 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
       object PanelCenter: TPanel
         Left = 0
         Top = 0
-        Width = 1100
-        Height = 650
+        Width = 1492
+        Height = 720
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 0
         object PanelHeader: TPanel
           Left = 0
           Top = 0
-          Width = 1100
+          Width = 1492
           Height = 48
           Align = alTop
           BevelWidth = 2
@@ -1674,18 +1674,18 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         end
         object PanelFooter: TPanel
           Left = 0
-          Top = 597
-          Width = 1100
+          Top = 667
+          Width = 1492
           Height = 53
           Align = alBottom
           BevelWidth = 2
           Color = clSilver
           TabOrder = 2
           DesignSize = (
-            1100
+            1492
             53)
           object BitBtn1: TBitBtn
-            Left = 1006
+            Left = 1398
             Top = 16
             Width = 75
             Height = 25
@@ -1694,7 +1694,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
             Kind = bkClose
           end
           object BitBtn2: TBitBtn
-            Left = 926
+            Left = 1318
             Top = 16
             Width = 75
             Height = 25
@@ -1754,7 +1754,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         object PanelTop: TPanel
           Left = 0
           Top = 48
-          Width = 1100
+          Width = 1492
           Height = 144
           Align = alTop
           BevelWidth = 2
@@ -2029,8 +2029,8 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         object wwDBGrid1: TwwDBGrid
           Left = 0
           Top = 233
-          Width = 1100
-          Height = 364
+          Width = 1492
+          Height = 434
           ControlType.Strings = (
             'KD_KONSTRUKSI;CustomEdit;LookKonstruksi;F'
             'KD_CORAK;CustomEdit;LookCorak;F'
@@ -2081,7 +2081,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
         object PanelBanner: TPanel
           Left = 0
           Top = 192
-          Width = 1100
+          Width = 1492
           Height = 41
           Align = alTop
           BevelWidth = 2
@@ -2095,7 +2095,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
             Caption = 'Cari Nota'
           end
           object wwDBNavigator1: TwwDBNavigator
-            Left = 684
+            Left = 1076
             Top = 2
             Width = 414
             Height = 37
@@ -2400,7 +2400,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
       object LabelBanner: TLabel
         Left = 0
         Top = 52
-        Width = 1100
+        Width = 1492
         Height = 16
         Align = alTop
         Color = clSkyBlue
@@ -2415,7 +2415,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
       object Panel3: TPanel
         Left = 0
         Top = 0
-        Width = 1100
+        Width = 1492
         Height = 52
         Align = alTop
         BevelInner = bvLowered
@@ -2636,8 +2636,8 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
       object wwDBGrid1xxxxx: TwwDBGrid
         Left = 0
         Top = 68
-        Width = 1100
-        Height = 582
+        Width = 1492
+        Height = 652
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -2711,7 +2711,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
       object Label20: TLabel
         Left = 0
         Top = 52
-        Width = 1100
+        Width = 1492
         Height = 16
         Align = alTop
         Color = clSkyBlue
@@ -3151,9 +3151,9 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666660000
+              60.854166666666680000
               505.354166666666700000
-              216.958333333333300000
+              216.958333333333400000
               986.895833333333400000)
             Alignment = taCenter
             AlignToBand = True
@@ -3213,7 +3213,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666660000
+              60.854166666666680000
               740.833333333333400000
               285.750000000000000000
               515.937500000000000000)
@@ -3521,7 +3521,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666660000
+            76.729166666666680000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText16: TQRDBText
@@ -3557,7 +3557,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
             FontSize = 8
           end
           object QRSysData2: TQRSysData
-            Left = 687
+            Left = -54
             Top = 8
             Width = 69
             Height = 17
@@ -4148,8 +4148,8 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
       object wwDBGrid2: TwwDBGrid
         Left = 0
         Top = 68
-        Width = 1100
-        Height = 582
+        Width = 1492
+        Height = 652
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -4204,7 +4204,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
       object Panel5: TPanel
         Left = 0
         Top = 0
-        Width = 1100
+        Width = 1492
         Height = 52
         Align = alTop
         BevelInner = bvLowered
@@ -4374,7 +4374,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
       object Label11: TLabel
         Left = 0
         Top = 52
-        Width = 1100
+        Width = 1492
         Height = 16
         Align = alTop
         Color = clSkyBlue
@@ -4389,8 +4389,8 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
       object wwDBGrid3: TwwDBGrid
         Left = 0
         Top = 68
-        Width = 1100
-        Height = 582
+        Width = 1492
+        Height = 652
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -4445,7 +4445,7 @@ object SerahHasilCalenderFrm: TSerahHasilCalenderFrm
       object Panel7: TPanel
         Left = 0
         Top = 0
-        Width = 1100
+        Width = 1492
         Height = 52
         Align = alTop
         BevelInner = bvLowered

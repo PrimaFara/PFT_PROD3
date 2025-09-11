@@ -927,7 +927,7 @@ object FinishCalenderFrm: TFinishCalenderFrm
             ForceNewColumn = False
             ForceNewPage = False
             Size.Values = (
-              76.729166666666670000
+              76.729166666666680000
               2000.250000000000000000)
             BandType = rbPageFooter
             object QRDBText2: TQRDBText
@@ -1591,7 +1591,7 @@ object FinishCalenderFrm: TFinishCalenderFrm
             ForceNewColumn = False
             ForceNewPage = False
             Size.Values = (
-              68.791666666666670000
+              68.791666666666680000
               2000.250000000000000000)
             BandType = rbColumnHeader
             object QRLabel10: TQRLabel
@@ -2905,7 +2905,7 @@ object FinishCalenderFrm: TFinishCalenderFrm
           DropDownCount = 8
           ItemHeight = 0
           Items.Strings = (
-            'POTONG'
+            'PCS'
             'METER')
           Sorted = False
           TabOrder = 11
@@ -4042,7 +4042,7 @@ object FinishCalenderFrm: TFinishCalenderFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666680000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText16: TQRDBText

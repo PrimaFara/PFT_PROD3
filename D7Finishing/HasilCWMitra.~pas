@@ -915,6 +915,7 @@ type
     QBrowseNO_SPB: TStringField;
     QDetailKD_PRODUKSI2: TStringField;
     QBrowseKD_PRODUKSI2: TStringField;
+    QDetailNO_MESIN: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -3352,7 +3353,7 @@ begin
         HTMLContent.Add('<th>% F Steam</th>');
         HTMLContent.Add('<th>% F Stamping</th>');
         HTMLContent.Add('<th>% F Luntur</th>');
-        HTMLContent.Add('<th>% Wts</th>');
+        HTMLContent.Add('<th>% Watermark</th>');
         HTMLContent.Add('<th>% M Samar</th>');
         HTMLContent.Add('<th>% M Rusak</th>');
         HTMLContent.Add('<th>% M Belang</th>');

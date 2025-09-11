@@ -517,6 +517,9 @@ type
     QBrowseOPR_INSERT: TStringField;
     QPerShiftLELANG: TFloatField;
     QPerShiftLELANG_KODI: TFloatField;
+    QDetailPALET: TStringField;
+    LookPalet: TwwDBLookupComboDlg;
+    QBrowsePALET: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -614,6 +617,10 @@ type
       FillTable: TDataSet; modified: Boolean);
     procedure LookWarnaEnter(Sender: TObject);
     procedure QDetailAfterScroll(DataSet: TDataSet);
+    procedure LookPaletEnter(Sender: TObject);
+    procedure LookPaletClick(Sender: TObject);
+    procedure LookPaletCloseUp(Sender: TObject; LookupTable,
+      FillTable: TDataSet; modified: Boolean);
 
   private
     { Private declarations }
@@ -2191,6 +2198,23 @@ end;
 procedure TSerahTerimaKeGDJadiFrm.LookWarnaEnter(Sender: TObject);
 begin
 DMFrm.QLookWarna.Open;
+end;
+
+procedure TSerahTerimaKeGDJadiFrm.LookPaletEnter(Sender: TObject);
+begin
+    DMFrm.QPalet.Open;
+end;
+
+procedure TSerahTerimaKeGDJadiFrm.LookPaletClick(Sender: TObject);
+begin
+DMFrm.QPalet.Open;
+end;
+
+procedure TSerahTerimaKeGDJadiFrm.LookPaletCloseUp(Sender: TObject;
+  LookupTable, FillTable: TDataSet; modified: Boolean);
+begin
+if modified then
+    QDetailPALET.AsString:=DMFrm.QPaletPALET.AsString;
 end;
 
 end.

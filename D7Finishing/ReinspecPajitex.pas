@@ -503,6 +503,7 @@ type
     FNo_Urut_LPB2NO_LPB: TStringField;
     CekUnpost: TOracleDataSet;
     CekUnpostVCOUNT: TFloatField;
+    Label28: TLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -1767,7 +1768,7 @@ begin
 
             try
                 // URL tempat file template Excel disimpan
-                ExcelTemplateURL := 'http:\\192.168.1.226\Template\TEMPLATE_PAJITEX_SARUNG.xls';
+                ExcelTemplateURL := 'http:\\192.168.10.200\Template\TEMPLATE_PAJITEX_SARUNG.xls';
 
                 // Mengunduh file Excel dari URL dan menyimpannya secara langsung
                 FileStream := TFileStream.Create(LocalFilePath, fmCreate);
@@ -1816,7 +1817,7 @@ begin
 
             try
                 // URL tempat file template Excel disimpan
-                ExcelTemplateURL := 'http:\\192.168.1.226\Template\TEMPLATE_PAJITEX_PRINTING.xls';
+                ExcelTemplateURL := 'http:\\192.168.10.200\Template\TEMPLATE_PAJITEX_PRINTING.xls';
 
                 // Mengunduh file Excel dari URL dan menyimpannya secara langsung
                 FileStream := TFileStream.Create(LocalFilePath, fmCreate);

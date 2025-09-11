@@ -4552,7 +4552,7 @@ object KoreksiInsFrm: TKoreksiInsFrm
           DropDownCount = 8
           ItemHeight = 0
           Items.Strings = (
-            'POTONG'
+            'PCS'
             'METER')
           Sorted = False
           TabOrder = 6

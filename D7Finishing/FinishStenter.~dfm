@@ -123,7 +123,7 @@ object FinishStenterFrm: TFinishStenterFrm
             Size.Values = (
               50.270833333333330000
               1447.270833333333000000
-              82.020833333333340000
+              82.020833333333330000
               158.750000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -152,9 +152,9 @@ object FinishStenterFrm: TFinishStenterFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333340000
+              58.208333333333330000
               269.875000000000000000
-              74.083333333333340000
+              74.083333333333330000
               365.125000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -611,7 +611,7 @@ object FinishStenterFrm: TFinishStenterFrm
             Size.Values = (
               50.270833333333330000
               1452.562500000000000000
-              272.520833333333400000
+              272.520833333333300000
               156.104166666666700000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -674,8 +674,8 @@ object FinishStenterFrm: TFinishStenterFrm
             Size.Values = (
               44.979166666666670000
               1616.604166666667000000
-              216.958333333333400000
-              92.604166666666680000)
+              216.958333333333300000
+              92.604166666666670000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -736,7 +736,7 @@ object FinishStenterFrm: TFinishStenterFrm
             Frame.DrawRight = False
             Size.Values = (
               50.270833333333330000
-              804.333333333333200000
+              804.333333333333300000
               222.250000000000000000
               116.416666666666700000)
             Alignment = taLeftJustify
@@ -800,7 +800,7 @@ object FinishStenterFrm: TFinishStenterFrm
             Size.Values = (
               52.916666666666670000
               1616.604166666667000000
-              82.020833333333340000
+              82.020833333333330000
               209.020833333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -830,7 +830,7 @@ object FinishStenterFrm: TFinishStenterFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333340000
+              58.208333333333330000
               1619.250000000000000000
               2.645833333333333000
               111.125000000000000000)
@@ -1062,7 +1062,7 @@ object FinishStenterFrm: TFinishStenterFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              989.541666666666800000
+              989.541666666666700000
               7.937500000000000000
               145.520833333333300000)
             Alignment = taRightJustify
@@ -1120,9 +1120,9 @@ object FinishStenterFrm: TFinishStenterFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              679.979166666666800000
+              679.979166666666700000
               190.500000000000000000
-              74.083333333333340000)
+              74.083333333333330000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -1154,7 +1154,7 @@ object FinishStenterFrm: TFinishStenterFrm
               44.979166666666670000
               1230.312500000000000000
               190.500000000000000000
-              74.083333333333340000)
+              74.083333333333330000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -1216,8 +1216,8 @@ object FinishStenterFrm: TFinishStenterFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              677.333333333333400000
-              359.833333333333400000
+              677.333333333333300000
+              359.833333333333300000
               79.375000000000000000)
             Alignment = taCenter
             AlignToBand = False
@@ -1249,7 +1249,7 @@ object FinishStenterFrm: TFinishStenterFrm
             Size.Values = (
               44.979166666666670000
               1227.666666666667000000
-              359.833333333333400000
+              359.833333333333300000
               79.375000000000000000)
             Alignment = taCenter
             AlignToBand = False
@@ -1629,7 +1629,7 @@ object FinishStenterFrm: TFinishStenterFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              989.541666666666800000
+              989.541666666666700000
               10.583333333333330000
               140.229166666666700000)
             Alignment = taRightJustify
@@ -1693,7 +1693,7 @@ object FinishStenterFrm: TFinishStenterFrm
               44.979166666666670000
               1688.041666666667000000
               10.583333333333330000
-              216.958333333333400000)
+              216.958333333333300000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True

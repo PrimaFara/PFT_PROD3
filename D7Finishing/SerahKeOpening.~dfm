@@ -4504,7 +4504,7 @@ object SerahKeOpeningFrm: TSerahKeOpeningFrm
             'CORAK'#9'15'#9'CORAK'#9'T'
             'TGL_PTG'#9'15'#9'TGL POTONG'#9'F'
             'MESIN'#9'8'#9'NO. MESIN'#9'F'
-            'MESIN_TENUN'#9'15'#9'NAMA MESIN'#9'T'
+            'MESIN_TENUN'#9'15'#9'NAMA MESIN'#9'F'
             'KETERANGAN'#9'15'#9'KETERANGAN'#9'F')
           IniAttributes.FileName = 'Finishing'
           IniAttributes.Delimiter = ';;'

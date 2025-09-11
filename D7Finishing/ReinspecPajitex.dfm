@@ -58,12 +58,10 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
           Color = 10485760
           TabOrder = 3
           object DBText7: TDBText
-            Left = 1007
+            Left = 650
             Top = 2
             Width = 114
             Height = 33
-            Align = alRight
-            Alignment = taRightJustify
             AutoSize = True
             DataField = 'NO_NOTA'
             DataSource = dsQMaster
@@ -272,6 +270,13 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             Height = 13
             Caption = 'No. Reff :'
           end
+          object Label28: TLabel
+            Left = 115
+            Top = 63
+            Width = 158
+            Height = 13
+            Caption = 'Tombol Download File Template :'
+          end
           object wwDBDateTimePicker3: TwwDBDateTimePicker
             Left = 448
             Top = 14
@@ -362,7 +367,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
           end
           object Button2: TButton
             Left = 87
-            Top = 54
+            Top = 80
             Width = 98
             Height = 27
             Caption = 'Template &Sarung'
@@ -404,7 +409,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
           end
           object Button3: TButton
             Left = 199
-            Top = 54
+            Top = 80
             Width = 98
             Height = 27
             Caption = 'Template &Printing'
@@ -956,7 +961,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             FontSize = 9
           end
           object QRLabel6: TQRLabel
-            Left = -119
+            Left = 251
             Top = 60
             Width = 254
             Height = 23
@@ -3496,7 +3501,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             FontSize = 8
           end
           object QRSysData1: TQRSysData
-            Left = -54
+            Left = 687
             Top = 8
             Width = 69
             Height = 17
@@ -4434,16 +4439,12 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
           BevelWidth = 2
           Color = 10485760
           TabOrder = 4
-          DesignSize = (
-            1123
-            48)
           object DBText1: TDBText
-            Left = 1004
+            Left = 650
             Top = 7
             Width = 114
             Height = 33
             Alignment = taRightJustify
-            Anchors = [akTop, akRight]
             AutoSize = True
             DataField = 'NO_NOTA'
             DataSource = dsQMaster
@@ -6118,10 +6119,10 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              66.145833333333340000
-              526.520833333333400000
+              66.145833333333330000
+              526.520833333333300000
               179.916666666666700000
-              947.208333333333400000)
+              947.208333333333300000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -6150,8 +6151,8 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              923.395833333333400000
-              312.208333333333400000
+              923.395833333333300000
+              312.208333333333300000
               153.458333333333300000)
             Alignment = taCenter
             AlignToBand = True
@@ -6336,7 +6337,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             FontSize = 8
           end
           object QRSysData2: TQRSysData
-            Left = -54
+            Left = 687
             Top = 8
             Width = 69
             Height = 17
@@ -7803,10 +7804,10 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              66.145833333333340000
-              526.520833333333400000
+              66.145833333333330000
+              526.520833333333300000
               179.916666666666700000
-              947.208333333333400000)
+              947.208333333333300000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -7835,8 +7836,8 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              923.395833333333400000
-              312.208333333333400000
+              923.395833333333300000
+              312.208333333333300000
               153.458333333333300000)
             Alignment = taCenter
             AlignToBand = True
@@ -8021,7 +8022,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             FontSize = 8
           end
           object QRSysData3: TQRSysData
-            Left = -54
+            Left = 687
             Top = 8
             Width = 69
             Height = 17

@@ -91,7 +91,9 @@ uses
   DefectReinspect in 'DefectReinspect.pas' {DefectReinspectFrm},
   ReinspecPajitex in 'ReinspecPajitex.pas' {ReinspecPajitexFrm},
   foldinginsp in 'foldinginsp.pas' {foldinginspFrm},
-  PackingListKirimMitra in 'PackingListKirimMitra.pas' {PackingListMitraFrm};
+  PackingListKirimMitra in 'PackingListKirimMitra.pas' {PackingListMitraFrm},
+  LapBS in 'LapBS.pas' {LapBSFrm},
+  InputBS in 'InputBS.pas' {InputBSFrm};
 
 {$R *.res}
 

@@ -2,7 +2,7 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
   Left = 220
   Top = 124
   Width = 1074
-  Height = 561
+  Height = 712
   ActiveControl = GroupBox1
   Caption = 'Koreksi'
   Color = clBtnFace
@@ -34,7 +34,7 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
     Left = 0
     Top = 0
     Width = 1058
-    Height = 523
+    Height = 674
     ActivePage = TabSheet2
     Align = alClient
     TabOrder = 0
@@ -366,9 +366,9 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
             Frame.DrawRight = False
             Size.Values = (
               60.854166666666680000
-              664.104166666666700000
+              664.104166666666800000
               158.750000000000000000
-              672.041666666666700000)
+              672.041666666666800000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -2859,7 +2859,7 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666680000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -3523,7 +3523,7 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            68.791666666666670000
+            68.791666666666680000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -3820,7 +3820,7 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
         Left = 0
         Top = 0
         Width = 1050
-        Height = 495
+        Height = 646
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 0
@@ -3905,7 +3905,7 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
         end
         object PanelFooter: TPanel
           Left = 0
-          Top = 442
+          Top = 593
           Width = 1050
           Height = 53
           Align = alBottom
@@ -4509,7 +4509,7 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
           DropDownCount = 8
           ItemHeight = 0
           Items.Strings = (
-            'POTONG'
+            'PCS'
             'METER')
           Sorted = False
           TabOrder = 6
@@ -4653,7 +4653,7 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
           Left = 0
           Top = 233
           Width = 1050
-          Height = 209
+          Height = 360
           ControlType.Strings = (
             'KD_CORAK;CustomEdit;wwDBLookupComboDlg1;F'
             'SATUAN;CustomEdit;LookSatuan;F'
@@ -4701,7 +4701,7 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
           Left = 0
           Top = 233
           Width = 1050
-          Height = 209
+          Height = 360
           ControlType.Strings = (
             'KD_CORAK;CustomEdit;wwDBLookupComboDlg1;F'
             'SATUAN;CustomEdit;LookSatuan;F'
@@ -4754,7 +4754,7 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
           Left = 0
           Top = 233
           Width = 1050
-          Height = 209
+          Height = 360
           ControlType.Strings = (
             'KD_CORAK;CustomEdit;wwDBLookupComboDlg1;F'
             'SATUAN;CustomEdit;LookSatuan;F'
@@ -4764,8 +4764,10 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
             'SHIFT;CustomEdit;LookShift;F'
             'KD_PRODUKSI;CustomEdit;LookKonstruksi;F'
             'KD_WARNA;CustomEdit;LookWarna;F'
-            'KETERANGAN;CustomEdit;Look_ket;F')
+            'KETERANGAN;CustomEdit;Look_ket;F'
+            'PALET;CustomEdit;LookPalet;F')
           Selected.Strings = (
+            'PALET'#9'20'#9'PALET'#9'F'
             'KD_PRODUKSI'#9'10'#9'KD_PRODUKSI'#9'F'
             'KD_KONSTRUKSI'#9'6'#9'KODE'#9'T'#9'KONSTRUKSI'
             'KONSTRUKSI'#9'30'#9'NAMA'#9'T'#9'KONSTRUKSI'
@@ -4803,6 +4805,33 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
           UseTFields = False
           OnEnter = wwDBGrid1Enter
           OnUpdateFooter = wwDBGrid1UpdateFooter
+        end
+        object LookPalet: TwwDBLookupComboDlg
+          Left = 753
+          Top = 324
+          Width = 48
+          Height = 21
+          AutoSize = False
+          GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
+          GridColor = clWhite
+          GridTitleAlignment = taLeftJustify
+          Caption = 'Lookup'
+          MaxWidth = 0
+          MaxHeight = 209
+          UserButton1Caption = '&Refresh'
+          Selected.Strings = (
+            'PALET'#9'20'#9'PALET'#9'F'#9)
+          DataField = 'PALET'
+          DataSource = dsQDetail
+          LookupTable = DMFrm.QPalet
+          LookupField = 'PALET'
+          TabOrder = 14
+          AutoDropDown = False
+          ShowButton = True
+          AllowClearKey = False
+          OnClick = LookPaletClick
+          OnCloseUp = LookPaletCloseUp
+          OnEnter = LookPaletEnter
         end
       end
     end
@@ -5033,7 +5062,7 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
         Left = 0
         Top = 68
         Width = 1050
-        Height = 427
+        Height = 578
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -5057,6 +5086,7 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
           'SHIFT'#9'3'#9'SHIFT'#9#9
           'TGL_INSERT'#9'18'#9'TGL_INSERT'#9#9
           'OPR_INSERT'#9'10'#9'OPR_INSERT'#9'F'
+          'PALET'#9'20'#9'PALET'#9'F'
           'KD_TRANSAKSI'#9'3'#9'KD_TRANSAKSI'#9#9
           'KD_PRODUKSI'#9'30'#9'KD_PRODUKSI'#9'F'
           'KD_KONSTRUKSI'#9'6'#9'KD_KONSTRUKSI'#9#9
@@ -5186,7 +5216,7 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            121.708333333333400000
+            121.708333333333300000
             2021.416666666667000000)
           BandType = rbPageHeader
           object QRDBText39: TQRDBText
@@ -9229,7 +9259,7 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666680000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText16: TQRDBText
@@ -10211,7 +10241,7 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
         Left = 0
         Top = 68
         Width = 1050
-        Height = 427
+        Height = 578
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -10387,7 +10417,7 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
     SequenceField.Sequence = 'IPISMA_DB5.REG_KOREKSI_DET'
     SequenceField.ApplyMoment = amOnNewRecord
     QBEDefinition.QBEFieldDefs = {
-      040000001C0000000D0000004E4F5F5245475F44455441494C01000000000006
+      040000001D0000000D0000004E4F5F5245475F44455441494C01000000000006
       0000004E4F5F5245470100000000000A00000054474C5F494E53455254010000
       0000000A0000004B45544552414E47414E0100000000000A0000005154595F47
       554C554E470100000000000A0000005154595F504F544F4E470100000000000B
@@ -10403,7 +10433,7 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
       080000004E4F5F4D4553494E0100000000000B0000004B445F50524F44554B53
       49010000000000090000004E4F5F44455341494E010000000000050000004E4F
       5F504F010000000000080000004B445F5741524E410100000000000500000057
-      41524E41010000000000}
+      41524E410100000000000500000050414C4554010000000000}
     Master = QMaster
     MasterFields = 'NO_REG'
     DetailFields = 'NO_REG'
@@ -10519,6 +10549,10 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
     object QDetailWARNA: TStringField
       FieldName = 'WARNA'
       Size = 50
+    end
+    object QDetailPALET: TStringField
+      FieldName = 'PALET'
+      Size = 100
     end
   end
   object dsQDetail: TwwDataSource
@@ -10695,7 +10729,7 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
       4E4F5F4E4F544100000000000D0000003A4B445F5452414E53414B5349050000
       00040000005230340000000000}
     QBEDefinition.QBEFieldDefs = {
-      0400000026000000070000004E4F5F4E4F54410100000000000A00000054474C
+      0400000028000000070000004E4F5F4E4F54410100000000000A00000054474C
       5F494E534552540100000000000A0000004F50525F494E534552540100000000
       00060000004E4F5F5245470100000000000300000054474C0100000000000400
       0000475255500100000000000500000053484946540100000000000A0000004B
@@ -10716,13 +10750,14 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
       004B445F50524F44554B53490100000000000B0000004A4E535F4B4F52454B53
       49010000000000050000004A454E4953010000000000090000004E4F5F444553
       41494E010000000000050000004E4F5F504F010000000000080000004B445F57
-      41524E41010000000000050000005741524E41010000000000}
+      41524E41010000000000050000005741524E410100000000000300000043454B
+      0100000000000500000050414C4554010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
     AfterScroll = QBrowseAfterScroll
-    Left = 20
-    Top = 337
+    Left = 348
+    Top = 241
     object QBrowseNO_NOTA: TStringField
       FieldName = 'NO_NOTA'
     end
@@ -10867,6 +10902,10 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
       FieldName = 'WARNA'
       Size = 50
     end
+    object QBrowsePALET: TStringField
+      FieldName = 'PALET'
+      Size = 100
+    end
   end
   object dsQBrowse: TwwDataSource
     DataSet = QBrowse
@@ -10891,8 +10930,8 @@ object ReinspecKoreksiFrm: TReinspecKoreksiFrm
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
-    Left = 52
-    Top = 425
+    Left = 492
+    Top = 233
     object QBrowseTotalGULUNG: TFloatField
       FieldName = 'GULUNG'
     end

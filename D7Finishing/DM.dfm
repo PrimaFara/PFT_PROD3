@@ -940,24 +940,22 @@ object DMFrm: TDMFrm
       0000004B445F50524F44554B53490100000000000C0000005355425F4B454C4F
       4D504F4B010000000000}
     Session = OS
-    Left = 304
+    Left = 296
     Top = 320
     object QLookKdProduksiKD_PRODUKSI: TStringField
-      DisplayWidth = 15
+      DisplayWidth = 20
       FieldName = 'KD_PRODUKSI'
       Required = True
     end
     object QLookKdProduksiKD_KONSTRUKSI: TStringField
-      DisplayLabel = 'KODE'
       DisplayWidth = 6
       FieldName = 'KD_KONSTRUKSI'
       Size = 6
     end
     object QLookKdProduksiSUB_KELOMPOK: TStringField
-      DisplayLabel = 'KONSTRUKSI'
-      DisplayWidth = 30
+      DisplayWidth = 255
       FieldName = 'SUB_KELOMPOK'
-      Size = 50
+      Size = 255
     end
   end
   object QHak_jamWIP: TOracleDataSet
@@ -1338,6 +1336,21 @@ object DMFrm: TDMFrm
     object SatuanSATUAN: TStringField
       DisplayWidth = 12
       FieldName = 'SATUAN'
+    end
+  end
+  object QPalet: TOracleDataSet
+    SQL.Strings = (
+      'select distinct palet'
+      'from ipisma_db1.palet_bs_reinspek'
+      'order by to_number(replace(palet, '#39'PALET '#39', '#39#39'))'
+      '')
+    QBEDefinition.QBEFieldDefs = {04000000010000000500000050414C4554010000000000}
+    Session = OS
+    Left = 368
+    Top = 280
+    object QPaletPALET: TStringField
+      DisplayWidth = 20
+      FieldName = 'PALET'
     end
   end
 end

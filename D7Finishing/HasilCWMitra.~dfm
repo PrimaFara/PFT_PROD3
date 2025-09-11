@@ -1,6 +1,6 @@
 object HasilCWMitraFrm: THasilCWMitraFrm
-  Left = 314
-  Top = 179
+  Left = 245
+  Top = 131
   Width = 1362
   Height = 736
   Caption = 'Hasil Cabut Warna Mitra'
@@ -2785,7 +2785,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333330000
+            66.145833333333340000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -2976,7 +2976,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666660000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -3047,7 +3047,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              883.708333333333300000
+              883.708333333333400000
               21.166666666666670000
               232.833333333333300000)
             Alignment = taCenter
@@ -3336,7 +3336,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333330000
+            66.145833333333340000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText5: TQRDBText
@@ -4335,11 +4335,12 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             'DESIGN'#9'20'#9'DESAIN'#9'F'
             'PROSES'#9'20'#9'PROSES'#9'F'
             'JENIS_SARUNG'#9'15'#9'JENIS SARUNG'#9'F'
+            'NO_MESIN'#9'20'#9'MESIN'#9'F'
             'FLEX_PRINT'#9'10'#9'FLEX PRINT'#9'F'
             'FLEX_STEAM'#9'10'#9'FLEX STEAMER'#9'F'
             'FLEX_STAMPING'#9'10'#9'FLEX STAMPING'#9'F'
             'FLEX_LUNTUR'#9'10'#9'FLEX LUNTUR'#9'F'
-            'WTS'#9'10'#9'WARNA KAIN'#9'F'
+            'WTS'#9'10'#9'WATERMARK'#9'F'
             'M_SAMAR'#9'10'#9'MOTIF SAMAR'#9'F'
             'M_RUSAK'#9'10'#9'MOTIF RUSAK'#9'F'
             'M_BELANG'#9'10'#9'MOTIF BELANG'#9'F'
@@ -4999,8 +5000,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           'P_FLEX_STAMPING'#9'10'#9'% FLEX STAMP'#9'F'#9'FLEX STAMPING'
           'FLEX_LUNTUR'#9'10'#9'FLEX LUNTUR'#9'F'#9'FLEX LUNTUR'
           'P_FLEX_LUNTUR'#9'10'#9'% FLEX LUNTUR'#9'F'#9'FLEX LUNTUR'
-          'WTS'#9'10'#9'WARNA KAIN'#9'F'#9'WTS'
-          'P_WTS'#9'10'#9'% WARNA KAIN'#9'F'#9'WTS'
+          'WTS'#9'10'#9'WATERMARK'#9'F'#9'WATERMARK'
+          'P_WTS'#9'10'#9'% WATERMARK'#9'F'#9'WATERMARK'
           'M_SAMAR'#9'10'#9'MOTIF SAMAR'#9'F'#9'MOTIF SAMAR'
           'P_M_SAMAR'#9'10'#9'% MOTIF SAMAR'#9'F'#9'MOTIF SAMAR'
           'M_RUSAK'#9'10'#9'MOTIF RUSAK'#9'F'#9'MOTIF RUSAK'
@@ -5187,7 +5188,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
+              60.854166666666660000
               452.437500000000000000
               201.083333333333300000
               1092.729166666667000000)
@@ -5564,8 +5565,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333330000
-              931.333333333333300000
+              58.208333333333340000
+              931.333333333333400000
               264.583333333333300000
               137.583333333333300000)
             Alignment = taCenter
@@ -6023,7 +6024,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666660000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText14: TQRDBText
@@ -6400,7 +6401,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333330000
+            66.145833333333340000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText19: TQRDBText
@@ -6911,7 +6912,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           'P_FLEX_STEAM'#9'10'#9'% FLEX_STEAM'#9'F'#9'BGRADE'
           'P_FLEX_STAMPING'#9'10'#9'% FLEX_STAMPING'#9'F'#9'BGRADE'
           'P_FLEX_LUNTUR'#9'10'#9'% FLEX LUNTUR'#9'F'#9'BGRADE'
-          'P_WTS'#9'10'#9'% WTS'#9'F'#9'BGRADE'
+          'P_WTS'#9'10'#9'% WATERMARK'#9'F'#9'BGRADE'
           'P_M_SAMAR'#9'10'#9'% M_SAMAR'#9'F'#9'BGRADE'
           'P_M_RUSAK'#9'10'#9'% M_RUSAK'#9'F'#9'BGRADE'
           'P_M_BELANG'#9'10'#9'% M_BELANG'#9'F'#9'BGRADE'
@@ -6986,7 +6987,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           'P_FLEX_STEAM'#9'10'#9'% FLEX STEAMER'#9'F'#9'BGRADE'
           'P_FLEX_STAMPING'#9'10'#9'% FLEX STAMPING'#9'F'#9'BGRADE'
           'P_FLEX_LUNTUR'#9'10'#9'% FLEX LUNTUR'#9'F'#9'BGRADE'
-          'P_WTS'#9'10'#9'% WTS'#9'F'#9'BGRADE'
+          'P_WTS'#9'10'#9'% WATERMARK'#9'F'#9'BGRADE'
           'P_M_SAMAR'#9'10'#9'% MOTIF SAMAR'#9'F'#9'BGRADE'
           'P_M_RUSAK'#9'10'#9'% MOTIF RUSAK'#9'F'#9'BGRADE'
           'P_M_BELANG'#9'10'#9'% MOTIF BELANG'#9'F'#9'BGRADE'
@@ -7312,7 +7313,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           'FLEX_STEAM'#9'10'#9'FLEX_STEAM'#9'F'#9'BGRADE'
           'FLEX_STAMPING'#9'10'#9'FLEX_STAMPING'#9'F'#9'BGRADE'
           'FLEX_LUNTUR'#9'10'#9'FLEX LUNTUR'#9'F'#9'BGRADE'
-          'WTS'#9'10'#9'WARNA KAIN'#9'F'#9'BGRADE'
+          'WTS'#9'10'#9'WATERMARK'#9'F'#9'BGRADE'
           'M_SAMAR'#9'10'#9'M_SAMAR'#9'F'#9'BGRADE'
           'M_RUSAK'#9'10'#9'M_RUSAK'#9'F'#9'BGRADE'
           'M_BELANG'#9'10'#9'M_BELANG'#9'F'#9'BGRADE'
@@ -7387,7 +7388,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           'FLEX_STEAM'#9'10'#9'FLEX STEAMER'#9'F'#9'BGRADE'
           'FLEX_STAMPING'#9'10'#9'FLEX STAMPING'#9'F'#9'BGRADE'
           'FLEX_LUNTUR'#9'10'#9'FLEX LUNTUR'#9'F'#9'BGRADE'
-          'WTS'#9'10'#9'WARNA KAIN'#9'F'#9'BGRADE'
+          'WTS'#9'10'#9'WATERMARK'#9'F'#9'BGRADE'
           'M_SAMAR'#9'10'#9'MOTIF SAMAR'#9'F'#9'BGRADE'
           'M_RUSAK'#9'10'#9'MOTIF RUSAK'#9'F'#9'BGRADE'
           'M_BELANG'#9'10'#9'MOTIF BELANG'#9'F'#9'BGRADE'
@@ -7800,6 +7801,10 @@ object HasilCWMitraFrm: THasilCWMitraFrm
     object QDetailKD_PRODUKSI2: TStringField
       FieldName = 'KD_PRODUKSI2'
       ReadOnly = True
+    end
+    object QDetailNO_MESIN: TStringField
+      FieldName = 'NO_MESIN'
+      Size = 25
     end
   end
   object dsQDetail: TwwDataSource

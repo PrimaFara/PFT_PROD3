@@ -824,7 +824,7 @@ begin
          QDetail.Open;
          wwDBGrid1UpdateFooter(nil);
 
-         VRep.Checked = false;
+         VRep.Checked := false;
 end;
 
 procedure TFinishCalenderFrm.wwDBGrid1UpdateFooter(Sender: TObject);

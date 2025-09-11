@@ -23,43 +23,23 @@ object CalenderGreyFrm: TCalenderGreyFrm
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
-  object PanelLeft: TPanel
-    Left = 0
-    Top = 32
-    Width = 89
-    Height = 523
-    Align = alLeft
-    BevelOuter = bvNone
-    Color = 4605440
-    TabOrder = 0
-  end
-  object PanelRight: TPanel
-    Left = 985
-    Top = 32
-    Width = 27
-    Height = 523
-    Align = alClient
-    BevelOuter = bvNone
-    Color = 4605440
-    TabOrder = 1
-  end
   object PageControl1: TPageControl
-    Left = 89
-    Top = 32
-    Width = 896
-    Height = 523
+    Left = 0
+    Top = 0
+    Width = 1012
+    Height = 587
     ActivePage = TabSheet2
-    Align = alLeft
-    TabOrder = 2
+    Align = alClient
+    TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = '&Input'
       OnShow = TabSheet1Show
       object PanelCenter: TPanel
         Left = 0
         Top = 0
-        Width = 889
-        Height = 495
-        Align = alLeft
+        Width = 1004
+        Height = 559
+        Align = alClient
         BevelOuter = bvNone
         TabOrder = 0
         object QuickRep1: TQuickRep
@@ -1907,17 +1887,17 @@ object CalenderGreyFrm: TCalenderGreyFrm
         object PanelHeader: TPanel
           Left = 0
           Top = 0
-          Width = 889
+          Width = 1004
           Height = 48
           Align = alTop
           BevelWidth = 2
           Color = 10485760
           TabOrder = 4
           DesignSize = (
-            889
+            1004
             48)
           object DBText1: TDBText
-            Left = 770
+            Left = 885
             Top = 7
             Width = 114
             Height = 33
@@ -1985,18 +1965,18 @@ object CalenderGreyFrm: TCalenderGreyFrm
         end
         object PanelFooter: TPanel
           Left = 0
-          Top = 442
-          Width = 889
+          Top = 506
+          Width = 1004
           Height = 53
           Align = alBottom
           BevelWidth = 2
           Color = clSilver
           TabOrder = 2
           DesignSize = (
-            889
+            1004
             53)
           object BitBtn1: TBitBtn
-            Left = 795
+            Left = 910
             Top = 16
             Width = 75
             Height = 25
@@ -2005,7 +1985,7 @@ object CalenderGreyFrm: TCalenderGreyFrm
             Kind = bkClose
           end
           object BitBtn2: TBitBtn
-            Left = 715
+            Left = 830
             Top = 16
             Width = 75
             Height = 25
@@ -2065,7 +2045,7 @@ object CalenderGreyFrm: TCalenderGreyFrm
         object PanelTop: TPanel
           Left = 0
           Top = 48
-          Width = 889
+          Width = 1004
           Height = 144
           Align = alTop
           BevelWidth = 2
@@ -2406,8 +2386,8 @@ object CalenderGreyFrm: TCalenderGreyFrm
         object wwDBGrid1: TwwDBGrid
           Left = 0
           Top = 233
-          Width = 889
-          Height = 209
+          Width = 1004
+          Height = 273
           ControlType.Strings = (
             'KD_KONSTRUKSI;CustomEdit;LookKonstruksi;F'
             'KD_CORAK;CustomEdit;LookCorak;F'
@@ -2470,7 +2450,7 @@ object CalenderGreyFrm: TCalenderGreyFrm
         object PanelBanner: TPanel
           Left = 0
           Top = 192
-          Width = 889
+          Width = 1004
           Height = 41
           Align = alTop
           BevelWidth = 2
@@ -2484,7 +2464,7 @@ object CalenderGreyFrm: TCalenderGreyFrm
             Caption = 'Cari Nota'
           end
           object wwDBNavigator1: TwwDBNavigator
-            Left = 473
+            Left = 588
             Top = 2
             Width = 414
             Height = 37
@@ -2892,7 +2872,7 @@ object CalenderGreyFrm: TCalenderGreyFrm
       object LabelBanner: TLabel
         Left = 0
         Top = 52
-        Width = 888
+        Width = 1004
         Height = 16
         Align = alTop
         Color = clSkyBlue
@@ -2907,7 +2887,7 @@ object CalenderGreyFrm: TCalenderGreyFrm
       object Panel3: TPanel
         Left = 0
         Top = 0
-        Width = 888
+        Width = 1004
         Height = 52
         Align = alTop
         BevelInner = bvLowered
@@ -3112,8 +3092,8 @@ object CalenderGreyFrm: TCalenderGreyFrm
       object wwDBGrid1xxxxx: TwwDBGrid
         Left = 0
         Top = 68
-        Width = 888
-        Height = 427
+        Width = 1004
+        Height = 491
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -3196,7 +3176,7 @@ object CalenderGreyFrm: TCalenderGreyFrm
       object Label20: TLabel
         Left = 0
         Top = 52
-        Width = 888
+        Width = 1004
         Height = 16
         Align = alTop
         Color = clSkyBlue
@@ -3302,9 +3282,9 @@ object CalenderGreyFrm: TCalenderGreyFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333320000
+              58.208333333333340000
               269.875000000000000000
-              74.083333333333320000
+              74.083333333333340000
               365.125000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -3700,7 +3680,7 @@ object CalenderGreyFrm: TCalenderGreyFrm
             FontSize = 10
           end
           object QRLabel13: TQRLabel
-            Left = -90
+            Left = 280
             Top = 105
             Width = 195
             Height = 23
@@ -3711,7 +3691,7 @@ object CalenderGreyFrm: TCalenderGreyFrm
             Frame.DrawRight = False
             Size.Values = (
               60.854166666666680000
-              740.833333333333200000
+              740.833333333333400000
               277.812500000000000000
               515.937500000000000000)
             Alignment = taCenter
@@ -3773,7 +3753,7 @@ object CalenderGreyFrm: TCalenderGreyFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333320000
+              58.208333333333340000
               1619.250000000000000000
               2.645833333333333000
               111.125000000000000000)
@@ -4162,7 +4142,7 @@ object CalenderGreyFrm: TCalenderGreyFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              971.020833333333200000
+              971.020833333333400000
               10.583333333333330000
               108.479166666666700000)
             Alignment = taLeftJustify
@@ -4227,7 +4207,7 @@ object CalenderGreyFrm: TCalenderGreyFrm
               44.979166666666670000
               679.979166666666800000
               190.500000000000000000
-              74.083333333333320000)
+              74.083333333333340000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -4259,7 +4239,7 @@ object CalenderGreyFrm: TCalenderGreyFrm
               44.979166666666670000
               1230.312500000000000000
               190.500000000000000000
-              74.083333333333320000)
+              74.083333333333340000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -4321,8 +4301,8 @@ object CalenderGreyFrm: TCalenderGreyFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              677.333333333333200000
-              359.833333333333300000
+              677.333333333333400000
+              359.833333333333400000
               79.375000000000000000)
             Alignment = taCenter
             AlignToBand = False
@@ -4354,7 +4334,7 @@ object CalenderGreyFrm: TCalenderGreyFrm
             Size.Values = (
               44.979166666666670000
               1227.666666666667000000
-              359.833333333333300000
+              359.833333333333400000
               79.375000000000000000)
             Alignment = taCenter
             AlignToBand = False
@@ -4412,9 +4392,9 @@ object CalenderGreyFrm: TCalenderGreyFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              994.833333333333200000
+              994.833333333333400000
               108.479166666666700000
-              89.958333333333320000)
+              89.958333333333340000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -4444,7 +4424,7 @@ object CalenderGreyFrm: TCalenderGreyFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              724.958333333333200000
+              724.958333333333400000
               108.479166666666700000
               261.937500000000000000)
             Alignment = taLeftJustify
@@ -4645,7 +4625,7 @@ object CalenderGreyFrm: TCalenderGreyFrm
       object Panel5: TPanel
         Left = 0
         Top = 0
-        Width = 888
+        Width = 1004
         Height = 52
         Align = alTop
         BevelInner = bvLowered
@@ -4811,8 +4791,8 @@ object CalenderGreyFrm: TCalenderGreyFrm
       object wwDBGrid2: TwwDBGrid
         Left = 0
         Top = 68
-        Width = 888
-        Height = 427
+        Width = 1004
+        Height = 491
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -4825,6 +4805,7 @@ object CalenderGreyFrm: TCalenderGreyFrm
           'KD_SATUAN'#9'#,&'#9'T'#9'T'
           'ID_USER'#9'*3{&,#}'#9'T'#9'T')
         Selected.Strings = (
+          'KD_PRODUKSI'#9'15'#9'KP'#9'F'
           'KONSTRUKSI'#9'50'#9'KONSTRUKSI'#9'F'
           'GULUNG'#9'10'#9'GULUNG'#9'F'#9'JUMLAH'
           'POTONG'#9'10'#9'POTONG'#9'F'#9'JUMLAH'
@@ -4866,26 +4847,6 @@ object CalenderGreyFrm: TCalenderGreyFrm
         PaintOptions.ActiveRecordColor = clGreen
       end
     end
-  end
-  object Panel1: TPanel
-    Left = 0
-    Top = 0
-    Width = 1012
-    Height = 32
-    Align = alTop
-    BevelOuter = bvNone
-    Color = 4605440
-    TabOrder = 3
-  end
-  object Panel2: TPanel
-    Left = 0
-    Top = 555
-    Width = 1012
-    Height = 32
-    Align = alBottom
-    BevelOuter = bvNone
-    Color = 4605440
-    TabOrder = 4
   end
   object QMaster: TOracleDataSet
     SQL.Strings = (
@@ -5812,6 +5773,7 @@ object CalenderGreyFrm: TCalenderGreyFrm
   object QPerKonstruksi: TOracleDataSet
     SQL.Strings = (
       'select '
+      'kd_produksi,'
       'konstruksi,'
       'sum(qty_gulung)as gulung,'
       'sum(qty_potong)as potong,'
@@ -5821,14 +5783,14 @@ object CalenderGreyFrm: TCalenderGreyFrm
       ':myparam'
       '')
     Variables.Data = {
-      0300000003000000080000003A4D59504152414D010000001400000067726F75
-      70206279206B6F6E737472756B73690000000000060000003A504157414C0C00
-      00000000000000000000070000003A50414B4849520C00000000000000000000
-      00}
+      0300000003000000080000003A4D59504152414D010000002000000067726F75
+      70206279206B6F6E737472756B73692C6B645F70726F64756B73690000000000
+      060000003A504157414C0C0000000000000000000000070000003A50414B4849
+      520C0000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
-      04000000040000000A0000004B4F4E535452554B534901000000000006000000
+      04000000050000000A0000004B4F4E535452554B534901000000000006000000
       47554C554E4701000000000006000000504F544F4E4701000000000004000000
-      4B4F4449010000000000}
+      4B4F44490100000000000B0000004B445F50524F44554B5349010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -5848,6 +5810,9 @@ object CalenderGreyFrm: TCalenderGreyFrm
     object QPerKonstruksiKODI: TFloatField
       FieldName = 'KODI'
       DisplayFormat = '0.0,0;(0.0,0);'
+    end
+    object QPerKonstruksiKD_PRODUKSI: TStringField
+      FieldName = 'KD_PRODUKSI'
     end
   end
   object QAmbilBatch: TOracleDataSet

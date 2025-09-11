@@ -127,6 +127,9 @@ type
     M04FOLDING1: TMenuItem;
     LaporanProduksiQA1: TMenuItem;
     PackingListMitra: TMenuItem;
+    LaporanBS: TMenuItem;
+    LaporanBS1: TMenuItem;
+    BSParahQA: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure Exit1Click(Sender: TObject);
     procedure GantiPassword1Click(Sender: TObject);
@@ -220,6 +223,8 @@ type
     procedure M04FOLDING1Click(Sender: TObject);
     procedure LaporanProduksiQA1Click(Sender: TObject);
     procedure PackingListMitraClick(Sender: TObject);
+    procedure LaporanBS1Click(Sender: TObject);
+    procedure BSParahQAClick(Sender: TObject);
   private
     { Private declarations }
     mychar : String;
@@ -250,7 +255,8 @@ uses DM, TerimaDariFinishing, HasilJahit, HasilKemas,
   FinishPemasukan, Refresh, LapTenunInspect, TerimaDariFinishing4,
   ReinspectPrintingProses,SerahKeReinspectNewPalapa, mending,
   ReinspecPemotongan, ReinspecKoreksi, PermintaanUnpost, Unpost, InspectingHipo,
-  DefectReinspect, ReinspecPajitex, foldinginsp, PackingListKirimMitra;
+  DefectReinspect, ReinspecPajitex, foldinginsp, PackingListKirimMitra,
+  LapBS;
 
 {$R *.dfm}
 
@@ -849,6 +855,18 @@ procedure TMainFrm.PackingListMitraClick(Sender: TObject);
 begin
   PackingListMitraFrm:=TPackingListMitraFrm.Create(Self);
   PackingListMitraFrm.Show;
+end;
+
+procedure TMainFrm.LaporanBS1Click(Sender: TObject);
+begin
+  LapBSFrm:=TLapBSFrm.Create(Self);
+  LapBSFrm.Show;
+end;
+
+procedure TMainFrm.BSParahQAClick(Sender: TObject);
+begin
+  InputBSFrm:=TInputBSFrm.Create(Self);
+  InputBSFrm.Show;
 end;
 
 end.

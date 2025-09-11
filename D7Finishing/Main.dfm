@@ -1,6 +1,6 @@
 object MainFrm: TMainFrm
-  Left = 242
-  Top = 0
+  Left = 355
+  Top = 192
   Width = 1122
   Height = 738
   Caption = 'Produksi 3'
@@ -9877,7 +9877,7 @@ object MainFrm: TMainFrm
           OnClick = N906RekapKirimReInspek1Click
         end
         object SerahGDJadiLJR: TMenuItem
-          Caption = 'Serah Terima QA -> Kemas'
+          Caption = '920. Serah Terima QA -> Kemas'
           OnClick = SerahGDJadiLJRClick
         end
         object InfoStokReinspect1: TMenuItem
@@ -9888,6 +9888,17 @@ object MainFrm: TMainFrm
       object TerimaDariMitra1: TMenuItem
         Caption = 'Penerimaan Tenun Mitra'
         OnClick = TerimaDariMitra1Click
+      end
+      object LaporanBS: TMenuItem
+        Caption = 'Laporan BS (QA, Jahit && Kemas)'
+        object BSParahQA: TMenuItem
+          Caption = 'Input BS Parah QA'
+          OnClick = BSParahQAClick
+        end
+        object LaporanBS1: TMenuItem
+          Caption = 'Laporan BS'
+          OnClick = LaporanBS1Click
+        end
       end
       object N2: TMenuItem
         Caption = '-'
@@ -9904,6 +9915,7 @@ object MainFrm: TMainFrm
       end
       object N3: TMenuItem
         Caption = '-'
+        Visible = False
       end
       object PermintaanBarangLelang1: TMenuItem
         Caption = 'Permintaan Barang Dijual/ Lelang'

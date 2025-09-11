@@ -395,7 +395,7 @@ object KoreksiInsFrm: TKoreksiInsFrm
             FontSize = 9
           end
           object QRLabel6: TQRLabel
-            Left = -119
+            Left = 251
             Top = 60
             Width = 254
             Height = 23
@@ -5427,7 +5427,7 @@ object KoreksiInsFrm: TKoreksiInsFrm
             Frame.DrawRight = False
             Size.Values = (
               60.854166666666680000
-              740.833333333333200000
+              740.833333333333400000
               248.708333333333300000
               515.937500000000000000)
             Alignment = taCenter
@@ -7159,7 +7159,7 @@ object KoreksiInsFrm: TKoreksiInsFrm
     end
     object QBrowseKD_PRODUKSI: TStringField
       FieldName = 'KD_PRODUKSI'
-      Size = 10
+      Size = 30
     end
     object QBrowseNO_DESAIN: TStringField
       FieldName = 'NO_DESAIN'

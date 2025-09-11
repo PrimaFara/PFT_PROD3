@@ -2447,7 +2447,7 @@ object TerimaDrInspectingFrm: TTerimaDrInspectingFrm
           DropDownCount = 8
           ItemHeight = 0
           Items.Strings = (
-            'POTONG'
+            'PCS'
             'METER')
           Sorted = False
           TabOrder = 9
@@ -4783,8 +4783,8 @@ object TerimaDrInspectingFrm: TTerimaDrInspectingFrm
     Session = DMFrm.OS
     AfterScroll = QBrowseAfterScroll
     OnFilterRecord = QBrowseFilterRecord
-    Left = 388
-    Top = 321
+    Left = 452
+    Top = 345
     object QBrowseNO_NOTA: TStringField
       FieldName = 'NO_NOTA'
     end
@@ -5082,8 +5082,8 @@ object TerimaDrInspectingFrm: TTerimaDrInspectingFrm
     Session = DMFrm.OS
     AfterScroll = QBrowse1AfterScroll
     OnFilterRecord = QBrowse1FilterRecord
-    Left = 580
-    Top = 329
+    Left = 620
+    Top = 313
     object StringField1: TStringField
       FieldName = 'NO_NOTA'
     end

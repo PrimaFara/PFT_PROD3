@@ -122,7 +122,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Size.Values = (
               50.270833333333330000
               1447.270833333333000000
-              82.020833333333330000
+              82.020833333333320000
               158.750000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -151,9 +151,9 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333330000
+              58.208333333333320000
               269.875000000000000000
-              74.083333333333330000
+              74.083333333333320000
               365.125000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -674,7 +674,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
               44.979166666666670000
               1616.604166666667000000
               216.958333333333300000
-              92.604166666666670000)
+              92.604166666666680000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -703,7 +703,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
+              60.854166666666660000
               658.812500000000000000
               158.750000000000000000
               682.625000000000000000)
@@ -735,7 +735,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               50.270833333333330000
-              804.333333333333300000
+              804.333333333333200000
               222.250000000000000000
               116.416666666666700000)
             Alignment = taLeftJustify
@@ -799,7 +799,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Size.Values = (
               52.916666666666670000
               1616.604166666667000000
-              82.020833333333330000
+              82.020833333333320000
               209.020833333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -829,7 +829,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333330000
+              58.208333333333320000
               1619.250000000000000000
               2.645833333333333000
               111.125000000000000000)
@@ -918,7 +918,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666660000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -1061,7 +1061,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              989.541666666666700000
+              989.541666666666800000
               7.937500000000000000
               145.520833333333300000)
             Alignment = taRightJustify
@@ -1119,9 +1119,9 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              679.979166666666700000
+              679.979166666666800000
               190.500000000000000000
-              74.083333333333330000)
+              74.083333333333320000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -1153,7 +1153,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
               44.979166666666670000
               1230.312500000000000000
               190.500000000000000000
-              74.083333333333330000)
+              74.083333333333320000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -1215,7 +1215,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              677.333333333333300000
+              677.333333333333200000
               359.833333333333300000
               79.375000000000000000)
             Alignment = taCenter
@@ -1582,7 +1582,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            68.791666666666670000
+            68.791666666666660000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -1628,7 +1628,7 @@ object PackingListMitraFrm: TPackingListMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              989.541666666666700000
+              989.541666666666800000
               10.583333333333330000
               140.229166666666700000)
             Alignment = taRightJustify
@@ -2969,7 +2969,8 @@ object PackingListMitraFrm: TPackingListMitraFrm
   object QDetail: TOracleDataSet
     SQL.Strings = (
       'select a.*, a.rowid from ipisma_db5.KIRIM_MAKLON_DETAIL a'
-      'where a.no_reg = :no_reg')
+      'where a.no_reg = :no_reg'
+      'order by a.no_kirim asc')
     Variables.Data = {0300000001000000070000003A4E4F5F524547040000000000000000000000}
     SequenceField.Field = 'NO_REG_DETAIL'
     SequenceField.Sequence = 'IPISMA_DB5.REG_KIRIM_MAKLON_DET'

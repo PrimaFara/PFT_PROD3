@@ -501,6 +501,9 @@ type
     QProc_PerMitra: TOracleQuery;
     QNota_LPBNOTA_PRINT: TStringField;
     FNo_Urut_LPB2NO_LPB: TStringField;
+    CekUnpost: TOracleDataSet;
+    CekUnpostVCOUNT: TFloatField;
+    Label28: TLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -716,12 +719,25 @@ end;
 
 procedure TReinspecPajitexFrm.QDetailBeforeEdit(DataSet: TDataSet);
 begin
-  //if QMasterISPOST.AsString='1' then
-  //begin
-  //  ShowMessage('Maaf, sudah di-POSTING, tidak bisa diedit !...');
+  if QMasterISPOST.AsString='1' then
+  begin
+    CekUnpost.Close;
+    CekUnpost.SetVariable('no_reg', QMasterNO_REG.AsInteger);
+    CekUnpost.Open;
+
+ if CekUnpostVCOUNT.AsInteger > 0 then
+ begin
+    showmessage('Maaf, tidak dapat diedit karena sudah ditarik Dept Reinspect !');
+    Abort;
+ end;
+
+
+    //ShowMessage('Maaf, sudah di-POSTING, tidak bisa diedit !...');
     //Abort;
-  //  Dataset.Cancel;
+    //Dataset.Cancel;
   end;
+
+
 
 end;
 
@@ -1752,7 +1768,7 @@ begin
 
             try
                 // URL tempat file template Excel disimpan
-                ExcelTemplateURL := 'http:\\192.168.1.226\Template\TEMPLATE_PAJITEX_SARUNG.xls';
+                ExcelTemplateURL := 'http:\\192.168.10.200\Template\TEMPLATE_PAJITEX_SARUNG.xls';
 
                 // Mengunduh file Excel dari URL dan menyimpannya secara langsung
                 FileStream := TFileStream.Create(LocalFilePath, fmCreate);
@@ -1801,7 +1817,7 @@ begin
 
             try
                 // URL tempat file template Excel disimpan
-                ExcelTemplateURL := 'http:\\192.168.1.226\Template\TEMPLATE_PAJITEX_PRINTING.xls';
+                ExcelTemplateURL := 'http:\\192.168.10.200\Template\TEMPLATE_PAJITEX_PRINTING.xls';
 
                 // Mengunduh file Excel dari URL dan menyimpannya secara langsung
                 FileStream := TFileStream.Create(LocalFilePath, fmCreate);

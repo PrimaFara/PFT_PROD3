@@ -1,8 +1,8 @@
 object BakarBuluGreyFrm: TBakarBuluGreyFrm
   Left = 284
   Top = 150
-  Width = 962
-  Height = 558
+  Width = 1323
+  Height = 695
   ActiveControl = GroupBox1
   Caption = 'Bakar Bulu Kain Grey'
   Color = clBtnFace
@@ -26,8 +26,8 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 946
-    Height = 520
+    Width = 1307
+    Height = 657
     ActivePage = TabSheet2
     Align = alClient
     TabOrder = 0
@@ -152,9 +152,9 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333320000
+              58.208333333333340000
               269.875000000000000000
-              74.083333333333320000
+              74.083333333333340000
               365.125000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -611,7 +611,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Size.Values = (
               50.270833333333330000
               1452.562500000000000000
-              272.520833333333300000
+              272.520833333333400000
               156.104166666666700000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -674,7 +674,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Size.Values = (
               44.979166666666670000
               1616.604166666667000000
-              216.958333333333300000
+              216.958333333333400000
               92.604166666666680000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -704,8 +704,8 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666660000
-              616.479166666666600000
+              60.854166666666680000
+              616.479166666666800000
               158.750000000000000000
               764.645833333333400000)
             Alignment = taCenter
@@ -800,7 +800,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Size.Values = (
               52.916666666666670000
               1613.958333333333000000
-              89.958333333333320000
+              89.958333333333340000
               209.020833333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -830,7 +830,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333320000
+              58.208333333333340000
               1592.791666666667000000
               2.645833333333333000
               111.125000000000000000)
@@ -919,7 +919,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666660000
+            76.729166666666680000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -955,7 +955,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             FontSize = 8
           end
           object QRSysData1: TQRSysData
-            Left = 687
+            Left = -54
             Top = 8
             Width = 69
             Height = 17
@@ -1122,7 +1122,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
               44.979166666666670000
               679.979166666666800000
               190.500000000000000000
-              74.083333333333320000)
+              74.083333333333340000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -1154,7 +1154,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
               44.979166666666670000
               1230.312500000000000000
               190.500000000000000000
-              74.083333333333320000)
+              74.083333333333340000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -1216,8 +1216,8 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              677.333333333333200000
-              359.833333333333300000
+              677.333333333333400000
+              359.833333333333400000
               79.375000000000000000)
             Alignment = taCenter
             AlignToBand = False
@@ -1249,7 +1249,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Size.Values = (
               44.979166666666670000
               1227.666666666667000000
-              359.833333333333300000
+              359.833333333333400000
               79.375000000000000000)
             Alignment = taCenter
             AlignToBand = False
@@ -1583,7 +1583,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            68.791666666666660000
+            68.791666666666680000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -1693,7 +1693,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
               44.979166666666670000
               1688.041666666667000000
               10.583333333333330000
-              216.958333333333300000)
+              216.958333333333400000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -1879,25 +1879,25 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
       object PanelCenter: TPanel
         Left = 0
         Top = 0
-        Width = 938
-        Height = 492
+        Width = 1299
+        Height = 629
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 0
         object PanelHeader: TPanel
           Left = 0
           Top = 0
-          Width = 938
+          Width = 1299
           Height = 48
           Align = alTop
           BevelWidth = 2
           Color = 10485760
           TabOrder = 4
           DesignSize = (
-            938
+            1299
             48)
           object DBText1: TDBText
-            Left = 819
+            Left = 1180
             Top = 7
             Width = 114
             Height = 33
@@ -1965,18 +1965,18 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
         end
         object PanelFooter: TPanel
           Left = 0
-          Top = 439
-          Width = 938
+          Top = 576
+          Width = 1299
           Height = 53
           Align = alBottom
           BevelWidth = 2
           Color = clSilver
           TabOrder = 2
           DesignSize = (
-            938
+            1299
             53)
           object BitBtn1: TBitBtn
-            Left = 844
+            Left = 1205
             Top = 16
             Width = 75
             Height = 25
@@ -1985,7 +1985,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Kind = bkClose
           end
           object BitBtn2: TBitBtn
-            Left = 764
+            Left = 1125
             Top = 16
             Width = 75
             Height = 25
@@ -2080,7 +2080,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
         object PanelTop: TPanel
           Left = 0
           Top = 48
-          Width = 938
+          Width = 1299
           Height = 144
           Align = alTop
           BevelWidth = 2
@@ -2421,8 +2421,8 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
         object wwDBGrid1: TwwDBGrid
           Left = 0
           Top = 233
-          Width = 938
-          Height = 206
+          Width = 1299
+          Height = 343
           ControlType.Strings = (
             'KD_CORAK;CustomEdit;LookCorak;F'
             'JENIS;CustomEdit;LookJenis;F'
@@ -2478,7 +2478,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
         object PanelBanner: TPanel
           Left = 0
           Top = 192
-          Width = 938
+          Width = 1299
           Height = 41
           Align = alTop
           BevelWidth = 2
@@ -2492,7 +2492,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Caption = 'Cari Nota'
           end
           object wwDBNavigator1: TwwDBNavigator
-            Left = 522
+            Left = 883
             Top = 2
             Width = 414
             Height = 37
@@ -2869,7 +2869,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
       object LabelBanner: TLabel
         Left = 0
         Top = 52
-        Width = 938
+        Width = 1299
         Height = 16
         Align = alTop
         Color = clSkyBlue
@@ -2884,7 +2884,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
       object Panel3: TPanel
         Left = 0
         Top = 0
-        Width = 938
+        Width = 1299
         Height = 52
         Align = alTop
         BevelInner = bvLowered
@@ -3089,8 +3089,8 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
       object wwDBGrid1xxxxx: TwwDBGrid
         Left = 0
         Top = 68
-        Width = 938
-        Height = 424
+        Width = 1299
+        Height = 561
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -3168,7 +3168,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
       object Label20: TLabel
         Left = 0
         Top = 52
-        Width = 938
+        Width = 1299
         Height = 16
         Align = alTop
         Color = clSkyBlue
@@ -3248,7 +3248,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
           ForceNewPage = False
           ParentFont = False
           Size.Values = (
-            463.020833333333300000
+            463.020833333333400000
             2000.250000000000000000)
           BandType = rbTitle
           object Label16: TLabel
@@ -3620,7 +3620,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666660000
+              60.854166666666680000
               468.312500000000000000
               201.083333333333300000
               1060.979166666667000000)
@@ -3682,7 +3682,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666660000
+              60.854166666666680000
               740.833333333333400000
               269.875000000000000000
               515.937500000000000000)
@@ -3990,7 +3990,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666660000
+            76.729166666666680000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText16: TQRDBText
@@ -4026,7 +4026,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
             FontSize = 8
           end
           object QRSysData2: TQRSysData
-            Left = 687
+            Left = -54
             Top = 8
             Width = 69
             Height = 17
@@ -4065,7 +4065,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            407.458333333333300000
+            407.458333333333400000
             2000.250000000000000000)
           BandType = rbGroupFooter
           object QRDBText19: TQRDBText
@@ -4617,7 +4617,7 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
       object Panel5: TPanel
         Left = 0
         Top = 0
-        Width = 938
+        Width = 1299
         Height = 52
         Align = alTop
         BevelInner = bvLowered
@@ -4783,8 +4783,8 @@ object BakarBuluGreyFrm: TBakarBuluGreyFrm
       object wwDBGrid2: TwwDBGrid
         Left = 0
         Top = 68
-        Width = 938
-        Height = 424
+        Width = 1299
+        Height = 561
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (

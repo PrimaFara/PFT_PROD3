@@ -540,6 +540,9 @@ type
     QBrowseTotalQTY_TOT: TFloatField;
     WebBrowser3: TWebBrowser;
     BitBtn14: TBitBtn;
+    QDetailPALET: TStringField;
+    LookPalet: TwwDBLookupComboDlg;
+    QBrowsePALET: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -648,6 +651,10 @@ type
     procedure WebBrowser3DocumentComplete(Sender: TObject;
       const pDisp: IDispatch; var URL: OleVariant);
     procedure BitBtn14Click(Sender: TObject);
+    procedure LookPaletCloseUp(Sender: TObject; LookupTable,
+      FillTable: TDataSet; modified: Boolean);
+    procedure LookPaletClick(Sender: TObject);
+    procedure LookPaletEnter(Sender: TObject);
 
   private
     { Private declarations }
@@ -2443,6 +2450,23 @@ end;
 procedure TSerahTerimaKeGDJadiLJRFrm.BitBtn14Click(Sender: TObject);
 begin
   wwDBGrid1.BringToFront;
+end;
+
+procedure TSerahTerimaKeGDJadiLJRFrm.LookPaletCloseUp(Sender: TObject;
+  LookupTable, FillTable: TDataSet; modified: Boolean);
+begin
+   if modified then
+    QDetailPALET.AsString:=DMFrm.QPaletPALET.AsString;
+end;
+
+procedure TSerahTerimaKeGDJadiLJRFrm.LookPaletClick(Sender: TObject);
+begin
+DMFrm.QPalet.Open;
+end;
+
+procedure TSerahTerimaKeGDJadiLJRFrm.LookPaletEnter(Sender: TObject);
+begin
+DMFrm.QPalet.Open;
 end;
 
 end.

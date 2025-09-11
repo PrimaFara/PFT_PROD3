@@ -705,10 +705,10 @@ object FinishWashingFrm: TFinishWashingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
-              656.166666666666700000
+              60.854166666666680000
+              656.166666666666800000
               158.750000000000000000
-              687.916666666666700000)
+              687.916666666666800000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -920,7 +920,7 @@ object FinishWashingFrm: TFinishWashingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666680000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -956,7 +956,7 @@ object FinishWashingFrm: TFinishWashingFrm
             FontSize = 8
           end
           object QRSysData1: TQRSysData
-            Left = 687
+            Left = -54
             Top = 8
             Width = 69
             Height = 17
@@ -1584,7 +1584,7 @@ object FinishWashingFrm: TFinishWashingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            68.791666666666670000
+            68.791666666666680000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -2483,7 +2483,8 @@ object FinishWashingFrm: TFinishWashingFrm
             'KD_WARNA'#9'6'#9'KD_WARNA'#9'F'
             'WARNA'#9'20'#9'WARNA'#9'F'
             'KD_REKANAN'#9'10'#9'KD_REKANAN'#9'F'
-            'NAMA_REKANAN'#9'20'#9'NAMA_REKANAN'#9'F')
+            'NAMA_REKANAN'#9'20'#9'NAMA_REKANAN'#9'F'
+            'KETERANGAN'#9'30'#9'KETERANGAN'#9'F')
           IniAttributes.FileName = 'Finishing'
           IniAttributes.Delimiter = ';;'
           TitleColor = clSkyBlue
@@ -2862,7 +2863,7 @@ object FinishWashingFrm: TFinishWashingFrm
           DropDownCount = 8
           ItemHeight = 0
           Items.Strings = (
-            'POTONG'
+            'PCS'
             'METER')
           Sorted = False
           TabOrder = 9
@@ -3353,7 +3354,7 @@ object FinishWashingFrm: TFinishWashingFrm
           ForceNewPage = False
           ParentFont = False
           Size.Values = (
-            463.020833333333300000
+            463.020833333333400000
             2000.250000000000000000)
           BandType = rbTitle
           object Label16: TLabel
@@ -3725,10 +3726,10 @@ object FinishWashingFrm: TFinishWashingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
+              60.854166666666680000
               521.229166666666700000
               201.083333333333300000
-              955.145833333333300000)
+              955.145833333333500000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -3757,7 +3758,7 @@ object FinishWashingFrm: TFinishWashingFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              923.395833333333300000
+              923.395833333333400000
               333.375000000000000000
               153.458333333333300000)
             Alignment = taCenter
@@ -3787,8 +3788,8 @@ object FinishWashingFrm: TFinishWashingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
-              740.833333333333300000
+              60.854166666666680000
+              740.833333333333400000
               269.875000000000000000
               515.937500000000000000)
             Alignment = taCenter
@@ -3887,7 +3888,7 @@ object FinishWashingFrm: TFinishWashingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333330000
+            66.145833333333340000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel19: TQRLabel
@@ -4095,7 +4096,7 @@ object FinishWashingFrm: TFinishWashingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666680000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText16: TQRDBText
@@ -4131,7 +4132,7 @@ object FinishWashingFrm: TFinishWashingFrm
             FontSize = 8
           end
           object QRSysData2: TQRSysData
-            Left = 687
+            Left = -54
             Top = 8
             Width = 69
             Height = 17
@@ -4170,7 +4171,7 @@ object FinishWashingFrm: TFinishWashingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            439.208333333333300000
+            439.208333333333400000
             2000.250000000000000000)
           BandType = rbGroupFooter
           object QRDBText19: TQRDBText
@@ -4398,8 +4399,8 @@ object FinishWashingFrm: TFinishWashingFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              677.333333333333200000
-              359.833333333333300000
+              677.333333333333400000
+              359.833333333333400000
               79.375000000000000000)
             Alignment = taCenter
             AlignToBand = False
@@ -4431,7 +4432,7 @@ object FinishWashingFrm: TFinishWashingFrm
             Size.Values = (
               44.979166666666670000
               1227.666666666667000000
-              359.833333333333300000
+              359.833333333333400000
               79.375000000000000000)
             Alignment = taCenter
             AlignToBand = False
@@ -4522,7 +4523,7 @@ object FinishWashingFrm: TFinishWashingFrm
               44.979166666666670000
               1016.000000000000000000
               108.479166666666700000
-              89.958333333333320000)
+              89.958333333333340000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -4556,7 +4557,7 @@ object FinishWashingFrm: TFinishWashingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333330000
+            66.145833333333340000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText21: TQRDBText
@@ -4904,9 +4905,10 @@ object FinishWashingFrm: TFinishWashingFrm
         Selected.Strings = (
           'KD_PRODUKSI'#9'15'#9'KP'#9'F'
           'KONSTRUKSI'#9'50'#9'KONSTRUKSI'#9'F'
-          'GULUNG'#9'10'#9'GULUNG'#9'F'#9'JUMLAH'
-          'POTONG'#9'10'#9'POTONG'#9'F'#9'JUMLAH'
-          'KODI'#9'10'#9'KODI'#9'F')
+          'GULUNG'#9'10'#9'GULUNG'#9'F'
+          'POTONG'#9'10'#9'POTONG'#9'F'#9'QTY KONVERSI'
+          'KODI'#9'10'#9'KODI'#9'F'#9'QTY KONVERSI'
+          'METER'#9'10'#9'METER'#9'F'#9'QTY KONVERSI')
         IniAttributes.Enabled = True
         IniAttributes.SaveToRegistry = True
         IniAttributes.FileName = 'Finishing'
@@ -5688,7 +5690,9 @@ object FinishWashingFrm: TFinishWashingFrm
       'select '
       'sum(qty_gulung)as gulung,'
       'sum(qty_potong)as potong,'
-      'sum(qty_potong)/20 as kodi'
+      'sum(qty_potong)/20 as kodi,'
+      'sum(qty_potong)*2.20 as meter'
+      ''
       'from ipisma_db5.vfinish_washing'
       'where tgl>=:pawal and tgl<=:pakhir'
       ':myparam'
@@ -5698,8 +5702,9 @@ object FinishWashingFrm: TFinishWashingFrm
       060000003A504157414C0C0000000000000000000000070000003A50414B4849
       520C0000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
-      04000000030000000600000047554C554E4701000000000006000000504F544F
-      4E47010000000000040000004B4F4449010000000000}
+      04000000040000000600000047554C554E4701000000000006000000504F544F
+      4E47010000000000040000004B4F4449010000000000050000004D4554455201
+      0000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -5716,6 +5721,9 @@ object FinishWashingFrm: TFinishWashingFrm
       FieldName = 'KODI'
       DisplayFormat = '0.0,0;(0.0,0);'
     end
+    object QPerKonstruksi_TotMETER: TFloatField
+      FieldName = 'METER'
+    end
   end
   object DsPerKonstruksi: TwwDataSource
     DataSet = QPerKonstruksi
@@ -5729,7 +5737,9 @@ object FinishWashingFrm: TFinishWashingFrm
       'konstruksi,'
       'sum(qty_gulung)as gulung,'
       'sum(qty_potong)as potong,'
-      'sum(qty_potong)/20 as kodi'
+      'sum(qty_potong)/20 as kodi,'
+      'sum(qty_potong)*2.20 as meter'
+      ''
       'from ipisma_db5.vfinish_washing'
       'where tgl>=:pawal and tgl<=:pakhir'
       ':myparam'
@@ -5740,14 +5750,15 @@ object FinishWashingFrm: TFinishWashingFrm
       060000003A504157414C0C0000000000000000000000070000003A50414B4849
       520C0000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
-      04000000050000000A0000004B4F4E535452554B534901000000000006000000
+      04000000060000000A0000004B4F4E535452554B534901000000000006000000
       47554C554E4701000000000006000000504F544F4E4701000000000004000000
-      4B4F44490100000000000B0000004B445F50524F44554B5349010000000000}
+      4B4F44490100000000000B0000004B445F50524F44554B534901000000000005
+      0000004D45544552010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
-    Left = 580
-    Top = 425
+    Left = 604
+    Top = 417
     object QPerKonstruksiKONSTRUKSI: TStringField
       FieldName = 'KONSTRUKSI'
       Size = 50
@@ -5766,6 +5777,10 @@ object FinishWashingFrm: TFinishWashingFrm
     end
     object QPerKonstruksiKD_PRODUKSI: TStringField
       FieldName = 'KD_PRODUKSI'
+    end
+    object QPerKonstruksiMETER: TFloatField
+      FieldName = 'METER'
+      DisplayFormat = '0.0,0;(0.0,0);'
     end
   end
   object QAmbil_New: TOracleDataSet

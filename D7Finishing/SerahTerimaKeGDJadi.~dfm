@@ -94,7 +94,7 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
           ForceNewPage = False
           Size.Values = (
             150.812500000000000000
-            1772.708333333333000000)
+            1772.708333333334000000)
           BandType = rbPageHeader
           object QRLabel1: TQRLabel
             Left = 0
@@ -109,7 +109,7 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
             Size.Values = (
               63.500000000000000000
               0.000000000000000000
-              42.333333333333330000
+              42.333333333333340000
               261.937500000000000000)
             Alignment = taLeftJustify
             AlignToBand = True
@@ -200,8 +200,8 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            232.833333333333300000
-            1772.708333333333000000)
+            232.833333333333400000
+            1772.708333333334000000)
           BandType = rbTitle
           object QRDBText1: TQRDBText
             Left = 258
@@ -214,10 +214,10 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              68.791666666666670000
+              68.791666666666680000
               682.625000000000000000
               0.000000000000000000
-              407.458333333333300000)
+              407.458333333333400000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -480,8 +480,8 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            60.854166666666670000
-            1772.708333333333000000)
+            60.854166666666680000
+            1772.708333333334000000)
           BandType = rbColumnHeader
           object QRLabel8: TQRLabel
             Left = 16
@@ -675,7 +675,7 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
           ForceNewPage = False
           Size.Values = (
             55.562500000000000000
-            1772.708333333333000000)
+            1772.708333333334000000)
           BandType = rbDetail
           object QRDBText8: TQRDBText
             Left = 64
@@ -873,7 +873,7 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
           ForceNewPage = False
           Size.Values = (
             497.416666666666700000
-            1772.708333333333000000)
+            1772.708333333334000000)
           BandType = rbSummary
           object QRDBText14: TQRDBText
             Left = 64
@@ -1123,7 +1123,7 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
           ForceNewPage = False
           Size.Values = (
             52.916666666666670000
-            1772.708333333333000000)
+            1772.708333333334000000)
           BandType = rbPageFooter
           object QRDBText13: TQRDBText
             Left = 0
@@ -1193,7 +1193,7 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              791.104166666666700000
+              791.104166666666800000
               0.000000000000000000
               187.854166666666700000)
             Alignment = taCenter
@@ -1224,7 +1224,7 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
           ForceNewPage = False
           Size.Values = (
             0.000000000000000000
-            1772.708333333333000000)
+            1772.708333333334000000)
           FooterBand = QRBand1
           Master = QuickRep1
           ReprintOnNewPage = False
@@ -1245,7 +1245,7 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
           ForceNewPage = False
           Size.Values = (
             105.833333333333300000
-            1772.708333333333000000)
+            1772.708333333334000000)
           BandType = rbGroupFooter
           object QRLabel15: TQRLabel
             Left = 305
@@ -1259,7 +1259,7 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              806.979166666666700000
+              806.979166666666800000
               21.166666666666670000
               156.104166666666700000)
             Alignment = taCenter
@@ -1469,6 +1469,7 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
             Anchors = [akTop, akRight]
             Caption = '&Print'
             TabOrder = 1
+            Visible = False
             OnClick = BitBtn2Click
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
@@ -1717,9 +1718,11 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
             'JENIS;CustomEdit;LookJenis;F'
             'MUTU;CustomEdit;LookMutu;F'
             'KERETA;CustomEdit;LookKereta;F'
-            'KD_WARNA;CustomEdit;LookWarna;F')
+            'KD_WARNA;CustomEdit;LookWarna;F'
+            'PALET;CustomEdit;LookPalet;F')
           Selected.Strings = (
             'KERETA'#9'15'#9'KERETA'#9'F'
+            'PALET'#9'20'#9'PALET'#9'F'
             'KD_KONSTRUKSI'#9'7'#9'KODE'#9'F'#9'KONSTRUKSI'
             'KONSTRUKSI'#9'25'#9'NAMA'#9'T'#9'KONSTRUKSI'
             'KD_CORAK'#9'7'#9'KODE'#9'F'#9'CORAK'
@@ -2148,6 +2151,33 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
           OnCloseUp = LookWarnaCloseUp
           OnEnter = LookWarnaEnter
         end
+        object LookPalet: TwwDBLookupComboDlg
+          Left = 849
+          Top = 332
+          Width = 48
+          Height = 21
+          AutoSize = False
+          GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
+          GridColor = clWhite
+          GridTitleAlignment = taLeftJustify
+          Caption = 'Lookup'
+          MaxWidth = 0
+          MaxHeight = 209
+          UserButton1Caption = '&Refresh'
+          Selected.Strings = (
+            'PALET'#9'20'#9'PALET'#9'F'#9)
+          DataField = 'PALET'
+          DataSource = dsQDetail
+          LookupTable = DMFrm.QPalet
+          LookupField = 'PALET'
+          TabOrder = 12
+          AutoDropDown = False
+          ShowButton = True
+          AllowClearKey = False
+          OnClick = LookPaletClick
+          OnCloseUp = LookPaletCloseUp
+          OnEnter = LookPaletEnter
+        end
       end
     end
     object TabSheet2: TTabSheet
@@ -2530,7 +2560,7 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            415.395833333333300000
+            415.395833333333400000
             1920.875000000000000000)
           BandType = rbSummary
           object QRLabel11: TQRLabel
@@ -3176,10 +3206,10 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
+              60.854166666666680000
               571.500000000000000000
               185.208333333333300000
-              775.229166666666700000)
+              775.229166666666800000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -4382,7 +4412,7 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            415.395833333333300000
+            415.395833333333400000
             1920.875000000000000000)
           BandType = rbSummary
           object QRLabel43: TQRLabel
@@ -5028,10 +5058,10 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
+              60.854166666666680000
               571.500000000000000000
               185.208333333333300000
-              775.229166666666700000)
+              775.229166666666800000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -6555,7 +6585,7 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            415.395833333333300000
+            415.395833333333400000
             1920.875000000000000000)
           BandType = rbSummary
           object QRLabel18: TQRLabel
@@ -7201,10 +7231,10 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
+              60.854166666666680000
               571.500000000000000000
               185.208333333333300000
-              775.229166666666700000)
+              775.229166666666800000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -8455,7 +8485,7 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
     SequenceField.Sequence = 'ipisma_db5.no_reg_kontrak'
     SequenceField.ApplyMoment = amOnNewRecord
     QBEDefinition.QBEFieldDefs = {
-      040000002B0000000D0000004E4F5F5245475F44455441494C01000000000006
+      040000002E0000000D0000004E4F5F5245475F44455441494C01000000000006
       0000004E4F5F5245470100000000000A0000004B4F4E535452554B5349010000
       00000005000000434F52414B010000000000040000004D555455010000000000
       0500000048415247410100000000000A00000054474C5F494E53455254010000
@@ -8478,7 +8508,9 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
       0100000000000400000051545934010000000000060000004247524144450100
       0000000002000000423101000000000002000000423201000000000006000000
       4B4552455441010000000000080000004B445F5741524E410100000000000500
-      00005741524E41010000000000}
+      00005741524E410100000000000B0000004A454E49535F414646414C01000000
+      0000090000005154595F414646414C0100000000000500000050414C45540100
+      00000000}
     Master = QMaster
     MasterFields = 'NO_REG'
     DetailFields = 'NO_REG'
@@ -8568,6 +8600,10 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
     object QDetailWARNA: TStringField
       FieldName = 'WARNA'
       Size = 50
+    end
+    object QDetailPALET: TStringField
+      FieldName = 'PALET'
+      Size = 100
     end
   end
   object dsQDetail: TwwDataSource
@@ -9490,7 +9526,7 @@ object SerahTerimaKeGDJadiFrm: TSerahTerimaKeGDJadiFrm
   end
   object dsQPerKp: TwwDataSource
     DataSet = QPerKp
-    Left = 485
-    Top = 248
+    Left = 565
+    Top = 96
   end
 end

@@ -123,7 +123,7 @@ object FinishStenterFrm: TFinishStenterFrm
             Size.Values = (
               50.270833333333330000
               1447.270833333333000000
-              82.020833333333330000
+              82.020833333333320000
               158.750000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -152,9 +152,9 @@ object FinishStenterFrm: TFinishStenterFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333330000
+              58.208333333333320000
               269.875000000000000000
-              74.083333333333330000
+              74.083333333333320000
               365.125000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -675,7 +675,7 @@ object FinishStenterFrm: TFinishStenterFrm
               44.979166666666670000
               1616.604166666667000000
               216.958333333333300000
-              92.604166666666670000)
+              92.604166666666680000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -694,7 +694,7 @@ object FinishStenterFrm: TFinishStenterFrm
             FontSize = 9
           end
           object QRLabel6: TQRLabel
-            Left = 249
+            Left = -121
             Top = 60
             Width = 258
             Height = 23
@@ -704,7 +704,7 @@ object FinishStenterFrm: TFinishStenterFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
+              60.854166666666680000
               658.812500000000000000
               158.750000000000000000
               682.625000000000000000)
@@ -736,7 +736,7 @@ object FinishStenterFrm: TFinishStenterFrm
             Frame.DrawRight = False
             Size.Values = (
               50.270833333333330000
-              804.333333333333300000
+              804.333333333333200000
               222.250000000000000000
               116.416666666666700000)
             Alignment = taLeftJustify
@@ -800,7 +800,7 @@ object FinishStenterFrm: TFinishStenterFrm
             Size.Values = (
               52.916666666666670000
               1616.604166666667000000
-              82.020833333333330000
+              82.020833333333320000
               209.020833333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -830,7 +830,7 @@ object FinishStenterFrm: TFinishStenterFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333330000
+              58.208333333333320000
               1619.250000000000000000
               2.645833333333333000
               111.125000000000000000)
@@ -919,7 +919,7 @@ object FinishStenterFrm: TFinishStenterFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666680000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -955,7 +955,7 @@ object FinishStenterFrm: TFinishStenterFrm
             FontSize = 8
           end
           object QRSysData1: TQRSysData
-            Left = 687
+            Left = -54
             Top = 8
             Width = 69
             Height = 17
@@ -1062,7 +1062,7 @@ object FinishStenterFrm: TFinishStenterFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              989.541666666666700000
+              989.541666666666800000
               7.937500000000000000
               145.520833333333300000)
             Alignment = taRightJustify
@@ -1120,9 +1120,9 @@ object FinishStenterFrm: TFinishStenterFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              679.979166666666700000
+              679.979166666666800000
               190.500000000000000000
-              74.083333333333330000)
+              74.083333333333320000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -1154,7 +1154,7 @@ object FinishStenterFrm: TFinishStenterFrm
               44.979166666666670000
               1230.312500000000000000
               190.500000000000000000
-              74.083333333333330000)
+              74.083333333333320000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -1216,7 +1216,7 @@ object FinishStenterFrm: TFinishStenterFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              677.333333333333300000
+              677.333333333333200000
               359.833333333333300000
               79.375000000000000000)
             Alignment = taCenter
@@ -1583,7 +1583,7 @@ object FinishStenterFrm: TFinishStenterFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            68.791666666666670000
+            68.791666666666680000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -1629,7 +1629,7 @@ object FinishStenterFrm: TFinishStenterFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              989.541666666666700000
+              989.541666666666800000
               10.583333333333330000
               140.229166666666700000)
             Alignment = taRightJustify
@@ -2756,7 +2756,7 @@ object FinishStenterFrm: TFinishStenterFrm
           DropDownCount = 8
           ItemHeight = 0
           Items.Strings = (
-            'POTONG'
+            'PCS'
             'METER')
           Sorted = False
           TabOrder = 5
@@ -3693,9 +3693,9 @@ object FinishStenterFrm: TFinishStenterFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
-              518.583333333333300000
-              216.958333333333300000
+              60.854166666666680000
+              518.583333333333400000
+              216.958333333333400000
               960.437500000000000000)
             Alignment = taCenter
             AlignToBand = True
@@ -3725,7 +3725,7 @@ object FinishStenterFrm: TFinishStenterFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              923.395833333333300000
+              923.395833333333400000
               349.250000000000000000
               153.458333333333300000)
             Alignment = taCenter
@@ -3745,7 +3745,7 @@ object FinishStenterFrm: TFinishStenterFrm
             FontSize = 10
           end
           object QRLabel13: TQRLabel
-            Left = 280
+            Left = -90
             Top = 108
             Width = 195
             Height = 23
@@ -3755,8 +3755,8 @@ object FinishStenterFrm: TFinishStenterFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
-              740.833333333333300000
+              60.854166666666680000
+              740.833333333333200000
               285.750000000000000000
               515.937500000000000000)
             Alignment = taCenter
@@ -4063,7 +4063,7 @@ object FinishStenterFrm: TFinishStenterFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666680000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText16: TQRDBText
@@ -4099,7 +4099,7 @@ object FinishStenterFrm: TFinishStenterFrm
             FontSize = 8
           end
           object QRSysData2: TQRSysData
-            Left = 687
+            Left = -54
             Top = 8
             Width = 69
             Height = 17
@@ -4524,7 +4524,7 @@ object FinishStenterFrm: TFinishStenterFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333330000
+            66.145833333333340000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText23: TQRDBText

@@ -2470,7 +2470,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
               Frame.DrawLeft = False
               Frame.DrawRight = False
               Size.Values = (
-                68.791666666666660000
+                68.791666666666670000
                 682.625000000000000000
                 0.000000000000000000
                 407.458333333333300000)
@@ -2736,7 +2736,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
             ForceNewColumn = False
             ForceNewPage = False
             Size.Values = (
-              60.854166666666660000
+              60.854166666666670000
               1772.708333333333000000)
             BandType = rbColumnHeader
             object QRLabel8: TQRLabel
@@ -3473,7 +3473,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
               Frame.DrawRight = False
               Size.Values = (
                 44.979166666666670000
-                806.979166666666600000
+                806.979166666666700000
                 21.166666666666670000
                 156.104166666666700000)
               Alignment = taCenter
@@ -10622,7 +10622,7 @@ object TerimaDariFinishingFrm: TTerimaDariFinishingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666660000
+              60.854166666666670000
               1005.416666666667000000
               171.979166666666700000
               1270.000000000000000000)

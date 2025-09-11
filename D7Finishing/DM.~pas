@@ -124,9 +124,6 @@ type
     StringField6: TStringField;
     StringField7: TStringField;
     QLookKdProduksi: TOracleDataSet;
-    QLookKdProduksiKD_PRODUKSI: TStringField;
-    QLookKdProduksiKD_KONSTRUKSI: TStringField;
-    QLookKdProduksiSUB_KELOMPOK: TStringField;
     QHak_jamWIP: TOracleDataSet;
     StringField8: TStringField;
     StringField9: TStringField;
@@ -181,6 +178,11 @@ type
     QLookWarnaISFIXED: TStringField;
     QLookWarnaTGL_INSERT: TDateTimeField;
     QLookWarnaOPR_INSERT: TStringField;
+    QPalet: TOracleDataSet;
+    QPaletPALET: TStringField;
+    QLookKdProduksiKD_PRODUKSI: TStringField;
+    QLookKdProduksiKD_KONSTRUKSI: TStringField;
+    QLookKdProduksiSUB_KELOMPOK: TStringField;
   private
     { Private declarations }
   public

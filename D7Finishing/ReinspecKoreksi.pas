@@ -407,6 +407,9 @@ type
     QRLabel40: TQRLabel;
     QRDBText46: TQRDBText;
     QRLabel41: TQRLabel;
+    QDetailPALET: TStringField;
+    LookPalet: TwwDBLookupComboDlg;
+    QBrowsePALET: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -475,6 +478,10 @@ type
     procedure LookWarnaCloseUp(Sender: TObject; LookupTable,
       FillTable: TDataSet; modified: Boolean);
     procedure LookMitraEnter(Sender: TObject);
+    procedure LookPaletCloseUp(Sender: TObject; LookupTable,
+      FillTable: TDataSet; modified: Boolean);
+    procedure LookPaletClick(Sender: TObject);
+    procedure LookPaletEnter(Sender: TObject);
   private
     { Private declarations }
     vTab,vfilter,vorder : string;
@@ -1143,6 +1150,23 @@ procedure TReinspecKoreksiFrm.LookMitraEnter(Sender: TObject);
 begin
 QBrowseMitra.Close;
 QBrowseMitra.Open;
+end;
+
+procedure TReinspecKoreksiFrm.LookPaletCloseUp(Sender: TObject;
+  LookupTable, FillTable: TDataSet; modified: Boolean);
+begin
+if modified then
+    QDetailPALET.AsString:=DMFrm.QPaletPALET.AsString;
+end;
+
+procedure TReinspecKoreksiFrm.LookPaletClick(Sender: TObject);
+begin
+DMFrm.QPalet.Open;
+end;
+
+procedure TReinspecKoreksiFrm.LookPaletEnter(Sender: TObject);
+begin
+DMFrm.QPalet.Open;
 end;
 
 end.

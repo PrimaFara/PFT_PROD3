@@ -405,6 +405,8 @@ type
     QAmbilData: TOracleQuery;
     QPerKonstruksiKD_PRODUKSI: TStringField;
     VRep: TCheckBox;
+    QPerKonstruksiMETER: TFloatField;
+    QPerKonstruksi_TotMETER: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -984,9 +986,10 @@ QPerKonstruksi.DisableControls;
   QPerKonstruksi_Tot.Open;
 
   QPerKonstruksi.EnableControls;
-  wwDBGrid2.ColumnByName('GULUNG').FooterValue:=FormatFloat('#.#,##;#.#,#; ',QPerKonstruksi_TotGULUNG.AsFloat);
-  wwDBGrid2.ColumnByName('POTONG').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QPerKonstruksi_TotPOTONG.AsFloat);
-  wwDBGrid2.ColumnByName('KODI').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QPerKonstruksi_TotKODI.AsFloat);
+  wwDBGrid2.ColumnByName('GULUNG').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QPerKonstruksi_TotGULUNG.AsFloat);
+  wwDBGrid2.ColumnByName('POTONG').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QPerKonstruksi_TotPOTONG.AsFloat);
+  wwDBGrid2.ColumnByName('KODI').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QPerKonstruksi_TotKODI.AsFloat);
+  wwDBGrid2.ColumnByName('METER').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QPerKonstruksi_TotMETER.AsFloat);
 end;
 
 procedure TFinishWashingFrm.BtnExport2Click(Sender: TObject);

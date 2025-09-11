@@ -5722,11 +5722,13 @@ object KoreksiFrm: TKoreksiFrm
       '  -- Delete existing records for this registration number'
       '  DELETE FROM ipisma_db5.koreksi_detail WHERE no_reg = :no_reg;'
       '  '
-      '  -- Insert records with deduplication logic'
+      
+        '  -- Insert records with deduplication logic and default '#39'POTONG' +
+        #39' for satuan'
       '  INSERT INTO ipisma_db5.koreksi_detail'
       
         '  (no_reg, no_reg_detail, kd_produksi, kd_konstruksi, konstruksi' +
-        ', qty_potong, satuan, jenis, kd_sub_lokasi, no_order, no_mesin)'
+        ', qty_POTONG, satuan, jenis, kd_sub_lokasi, no_order, no_mesin)'
       '  ('
       '    SELECT '
       '      :no_reg, '
@@ -5735,7 +5737,7 @@ object KoreksiFrm: TKoreksiFrm
       '      kd_konstruksi,'
       '      konstruksi,'
       '      qty,'
-      '      satuan,'
+      '      '#39'POTONG'#39' AS satuan,  -- Default value set here'
       '      jenis, '
       '      '#39'-'#39','
       '      keterangan,'
@@ -5748,8 +5750,8 @@ object KoreksiFrm: TKoreksiFrm
       '        kd_produksi,'
       '        kd_konstruksi,'
       '        konstruksi,'
-      '        qty_potong AS qty,'
-      '        satuan,'
+      '        qty_POTONG AS qty,'
+      '        '#39'POTONG'#39' AS satuan,  -- Default value set here'
       '        jenis,'
       '        keterangan,'
       '        no_mesin AS mesin,'
@@ -5760,13 +5762,11 @@ object KoreksiFrm: TKoreksiFrm
       '      UNION ALL'
       '      '
       '      SELECT '
-      
-        '        kp AS kd_produksi,  -- Changed kp to kd_produksi with al' +
-        'ias'
+      '        kp AS kd_produksi,'
       '        kd_konstruksi,'
       '        konstruksi,'
       '        qty_meter AS qty,'
-      '        satuan,'
+      '        '#39'POTONG'#39' AS satuan,  -- Default value set here'
       '        jenis,'
       '        keterangan2 AS keterangan,'
       '        '#39'-'#39' AS mesin,'
@@ -5775,8 +5775,8 @@ object KoreksiFrm: TKoreksiFrm
       '      WHERE no_nota = :nota'
       '    ) combined_data'
       
-        '    WHERE (kd_produksi, kd_konstruksi, konstruksi, satuan, jenis' +
-        ', NVL(keterangan, '#39' '#39')) IN ('
+        '    WHERE (kd_produksi, kd_konstruksi, konstruksi, '#39'POTONG'#39', jen' +
+        'is, NVL(keterangan, '#39' '#39')) IN ('
       
         '      -- This subquery identifies the first occurrence of each u' +
         'nique combination'
@@ -5784,7 +5784,7 @@ object KoreksiFrm: TKoreksiFrm
       '        kd_produksi,'
       '        kd_konstruksi,'
       '        konstruksi,'
-      '        satuan,'
+      '        '#39'POTONG'#39',  -- Default value set here'
       '        jenis,'
       '        NVL(keterangan, '#39' '#39')'
       '      FROM ('
@@ -5792,13 +5792,13 @@ object KoreksiFrm: TKoreksiFrm
       '          kd_produksi,'
       '          kd_konstruksi,'
       '          konstruksi,'
-      '          satuan,'
+      '          '#39'POTONG'#39' AS satuan,  -- Default value set here'
       '          jenis,'
       '          keterangan,'
       '          ROW_NUMBER() OVER ('
       
         '            PARTITION BY kd_produksi, kd_konstruksi, konstruksi,' +
-        ' satuan, jenis, NVL(keterangan, '#39' '#39')'
+        ' '#39'POTONG'#39', jenis, NVL(keterangan, '#39' '#39')'
       '            ORDER BY source_priority'
       '          ) AS rn'
       '        FROM ('
@@ -5806,7 +5806,7 @@ object KoreksiFrm: TKoreksiFrm
       '            kd_produksi,'
       '            kd_konstruksi,'
       '            konstruksi,'
-      '            satuan,'
+      '            '#39'POTONG'#39' AS satuan,  -- Default value set here'
       '            jenis,'
       '            keterangan,'
       '            1 AS source_priority'
@@ -5816,12 +5816,10 @@ object KoreksiFrm: TKoreksiFrm
       '          UNION ALL'
       '          '
       '          SELECT '
-      
-        '            kp AS kd_produksi,  -- Changed kp to kd_produksi wit' +
-        'h alias'
+      '            kp AS kd_produksi,'
       '            kd_konstruksi,'
       '            konstruksi,'
-      '            satuan,'
+      '            '#39'POTONG'#39' AS satuan,  -- Default value set here'
       '            jenis,'
       '            keterangan2 AS keterangan,'
       '            2 AS source_priority'

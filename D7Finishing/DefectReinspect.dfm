@@ -2391,6 +2391,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
             'E_STAMPING2'#9'8'#9'RT'#9'F'#9'BS_PARAH'
             'AFL1'#9'8'#9'PRINTING'#9'F'#9'AFFAL'
             'AFL2'#9'8'#9'NDAK CABOT'#9'F'#9'AFFAL'
+            'AFL_PJI'#9'8'#9'PAJITEX'#9'F'#9'AFFAL'
             'TK2'#9'8'#9'PANJANG'#9'F'#9'UKURAN'
             'WK2'#9'8'#9'LEBAR'#9'F'#9'UKURAN')
           IniAttributes.FileName = 'Finishing'
@@ -2509,6 +2510,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
           TitleButtons = False
           UseTFields = False
           OnEnter = wwDBGrid1Enter
+          OnUpdateFooter = wwDBGrid6UpdateFooter
           GroupFieldName = 'NO_BUKTI'
         end
         object wwDBGrid7: TwwDBGrid
@@ -2572,6 +2574,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
             'E_STAMPING2'#9'8'#9'RT'#9'F'#9'BS_PARAH'
             'AFL1'#9'8'#9'PRINTING'#9'F'#9'AFFAL'
             'AFL2'#9'8'#9'NDAK CABOT'#9'F'#9'AFFAL'
+            'AFL_PJI'#9'8'#9'PAJITEX'#9'F'#9'AFFAL'
             'TK2'#9'8'#9'PANJANG'#9'F'#9'UKURAN'
             'WK2'#9'8'#9'LEBAR'#9'F'#9'UKURAN')
           IniAttributes.FileName = 'Finishing'
@@ -2600,6 +2603,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
           TitleButtons = False
           UseTFields = False
           OnEnter = wwDBGrid1Enter
+          OnUpdateFooter = wwDBGrid7UpdateFooter
           GroupFieldName = 'NO_BUKTI'
         end
         object wwDBGrid1: TwwDBGrid
@@ -3015,7 +3019,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
           'CAJ'#9'6'#9'CAJ'#9'F'
           'KTR'#9'6'#9'KTR'#9'F'
           'PDK'#9'6'#9'PDK'#9'F'
-          'KPR'#9'6'#9'KPR'#9'F'
+          'KPR'#9'6'#9'LBR KRG'#9'F'
           'MC'#9'6'#9'MC'#9'F'
           'BOSK'#9'6'#9'BOSK'#9'F'
           'KS'#9'6'#9'KS'#9'F'
@@ -3038,8 +3042,9 @@ object DefectReinspectFrm: TDefectReinspectFrm
           'E_STAMPING2'#9'6'#9'RT'#9'F'#9'BS_PARAH'
           'TK2'#9'6'#9'PANJANG'#9'F'#9'UKURAN'
           'WK2'#9'6'#9'LEBAR'#9'F'#9'UKURAN'
+          'AFL_PRINT'#9'6'#9'PRINT'#9'F'#9'AFFAL'
           'AFL_NDAK_CABOT'#9'6'#9'NDAK CABOT'#9'F'#9'AFFAL'
-          'AFL_PRINT'#9'6'#9'PRINT'#9'F'#9'AFFAL')
+          'AFL_PJI'#9'10'#9'PAJITEX'#9'F'#9'AFFAL')
         IniAttributes.Enabled = True
         IniAttributes.SaveToRegistry = True
         IniAttributes.FileName = 'Finishing'
@@ -3145,7 +3150,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
           'CAJ'#9'6'#9'CAJ'#9'F'
           'KTR'#9'6'#9'KTR'#9'F'
           'PDK'#9'6'#9'PDK'#9'F'
-          'KPR'#9'6'#9'KPR'#9'F'
+          'KPR'#9'6'#9'LBR KRG'#9'F'
           'MC'#9'6'#9'MC'#9'F'
           'BOSK'#9'6'#9'BOSK'#9'F'
           'KS'#9'6'#9'KS'#9'F'
@@ -3168,6 +3173,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
           'E_STAMPING2'#9'6'#9'RT'#9'F'#9'BS_PARAH'
           'AFL_PRINT'#9'10'#9'PRINT'#9'F'#9'AFFAL'
           'AFL_NDAK_CABOT'#9'10'#9'NDAK DICABOT'#9'F'#9'AFFAL'
+          'AFL_PJI'#9'10'#9'PAJITEX'#9'F'#9'AFFAL'
           'TK2'#9'6'#9'PANJANG'#9'F'#9'UKURAN'
           'WK2'#9'6'#9'LEBAR'#9'F'#9'UKURAN')
         IniAttributes.Enabled = True
@@ -4229,7 +4235,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
           'P_CAJ'#9'10'#9'%'#9'F'#9'CAJ '
           'P_KTR'#9'10'#9'%'#9'F'#9'KTR '
           'P_PDK'#9'10'#9'%'#9'F'#9'PDK '
-          'P_KP'#9'10'#9'%'#9'F'#9'KPR '
+          'P_KP'#9'10'#9'%'#9'F'#9'LBR KRG'
           'P_MC'#9'10'#9'%'#9'F'#9'MC '
           'P_BOSK'#9'10'#9'%'#9'F'#9'BOSK '
           'P_KS'#9'10'#9'%'#9'F'#9'KS '
@@ -4334,7 +4340,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
           'CAJ'#9'10'#9'PCS'#9'F'#9'CAJ'
           'KTR'#9'10'#9'PCS'#9'F'#9'KTR'
           'PDK'#9'10'#9'PCS'#9'F'#9'PDK'
-          'KP'#9'10'#9'PCS'#9'F'#9'KP'
+          'KP'#9'10'#9'PCS'#9'F'#9'LBR KRG'
           'MC'#9'10'#9'PCS'#9'F'#9'MC'
           'BOSK'#9'10'#9'PCS'#9'F'#9'BOSK'
           'KS'#9'10'#9'PCS'#9'F'#9'KS'
@@ -4438,7 +4444,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
           'P_CAJ'#9'10'#9'%'#9'F'#9'CAJ '
           'P_KTR'#9'10'#9'%'#9'F'#9'KTR '
           'P_PDK'#9'10'#9'%'#9'F'#9'PDK '
-          'P_KP'#9'10'#9'%'#9'F'#9'KPR '
+          'P_KP'#9'10'#9'%'#9'F'#9'LBR KRG'
           'P_MC'#9'10'#9'%'#9'F'#9'MC '
           'P_BOSK'#9'10'#9'%'#9'F'#9'BOSK '
           'P_KS'#9'10'#9'%'#9'F'#9'KS '
@@ -4542,7 +4548,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
           'CAJ'#9'10'#9'PCS'#9'F'#9'CAJ'
           'KTR'#9'10'#9'PCS'#9'F'#9'KTR'
           'PDK'#9'10'#9'PCS'#9'F'#9'PDK'
-          'KP'#9'10'#9'PCS'#9'F'#9'KP'
+          'KP'#9'10'#9'PCS'#9'F'#9'LBR KRG'
           'MC'#9'10'#9'PCS'#9'F'#9'MC'
           'BOSK'#9'10'#9'PCS'#9'F'#9'BOSK'
           'KS'#9'10'#9'PCS'#9'F'#9'KS'
@@ -4740,7 +4746,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
     SequenceField.Sequence = 'IPISMA_DB5.REG_BUKTI3_DETAIL'
     SequenceField.ApplyMoment = amOnNewRecord
     QBEDefinition.QBEFieldDefs = {
-      04000000830000000D0000004E4F5F5245475F44455441494C01000000000006
+      04000000840000000D0000004E4F5F5245475F44455441494C01000000000006
       0000004E4F5F5245470100000000000A0000004B45544552414E47414E010000
       0000000D0000004B445F4B4F4E535452554B53490100000000000A0000004B4F
       4E535452554B5349010000000000040000004752555001000000000008000000
@@ -4801,7 +4807,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
       040000004B4F44450100000000000600000050524F5345530100000000000700
       000052454B414E414E010000000000070000004C454C414E4732010000000000
       0A000000544F545F4445464543540100000000000400000041464C3101000000
-      00000400000041464C32010000000000050000004D49545241010000000000}
+      00000400000041464C32010000000000050000004D4954524101000000000007
+      00000041464C5F504A49010000000000}
     Master = QMaster
     MasterFields = 'NO_REG'
     DetailFields = 'NO_REG'
@@ -5231,6 +5238,9 @@ object DefectReinspectFrm: TDefectReinspectFrm
       FieldName = 'MITRA'
       Size = 100
     end
+    object QDetailAFL_PJI: TFloatField
+      FieldName = 'AFL_PJI'
+    end
   end
   object dsQDetail: TwwDataSource
     DataSet = QDetail
@@ -5395,7 +5405,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
     Variables.Data = {
       0300000001000000080000003A4D59504152414D010000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
-      0400000053000000070000004E4F5F4E4F54410100000000000A0000004F5052
+      0400000054000000070000004E4F5F4E4F54410100000000000A0000004F5052
       5F494E53455254010000000000060000004E4F5F524547010000000000030000
       0054474C0100000000000A0000004B4F4E535452554B53490100000000000600
       00004953504F5354010000000000050000004D4553494E0100000000000D0000
@@ -5435,13 +5445,14 @@ object DefectReinspectFrm: TDefectReinspectFrm
       4732010000000000070000005355504C494552010000000000050000004D4954
       52410100000000000A0000004B45544552414E47414E01000000000006000000
       424152414E47010000000000090000004D5F42454C414E473201000000000008
-      0000004D5F525553414B32010000000000}
+      0000004D5F525553414B320100000000000700000041464C5F504A4901000000
+      0000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
     AfterScroll = QBrowseAfterScroll
-    Left = 396
-    Top = 361
+    Left = 444
+    Top = 449
     object QBrowseNO_REG: TFloatField
       FieldName = 'NO_REG'
       Required = True
@@ -5734,6 +5745,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
     end
     object QBrowseE_STAMPING2: TFloatField
       FieldName = 'E_STAMPING2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowseSUPLIER: TStringField
       FieldName = 'SUPLIER'
@@ -5749,12 +5761,18 @@ object DefectReinspectFrm: TDefectReinspectFrm
     end
     object QBrowseM_BELANG2: TFloatField
       FieldName = 'M_BELANG2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowseM_RUSAK2: TFloatField
       FieldName = 'M_RUSAK2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowseTGL_TERIMA: TDateTimeField
       FieldName = 'TGL_TERIMA'
+    end
+    object QBrowseAFL_PJI: TFloatField
+      FieldName = 'AFL_PJI'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
   end
   object dsQBrowse: TwwDataSource
@@ -5818,14 +5836,15 @@ object DefectReinspectFrm: TDefectReinspectFrm
       'sum(b.tk2) as tk2,'
       'sum(b.wk2) as wk2,'
       'sum(b.afl_print) as afl_print,'
-      'sum(b.afl_ndak_cabot) as afl_ndak_cabot    '
+      'sum(b.afl_ndak_cabot) as afl_ndak_cabot,'
+      'sum(b.afl_pji) as afl_pji    '
       'from ipisma_db5.vhasil_defect_dlm b'
       ':myparam')
     Variables.Data = {
       0300000001000000080000003A4D59504152414D01000000110000006F726465
       72206279204E4F5F4E4F54410000000000}
     QBEDefinition.QBEFieldDefs = {
-      04000000360000000600000047554C554E470100000000000A0000005154595F
+      04000000370000000600000047554C554E470100000000000A0000005154595F
       544552494D4101000000000003000000515459010000000000020000004C4401
       0000000000020000004C54010000000000030000004C50540100000000000300
       00004C524701000000000002000000574C01000000000003000000464C4F0100
@@ -5849,12 +5868,13 @@ object DefectReinspectFrm: TDefectReinspectFrm
       000000544B3201000000000003000000574B320100000000000900000041464C
       5F5052494E540100000000000E00000041464C5F4E44414B5F4341424F540100
       000000000B000000455F5354414D50494E4732010000000000090000004D5F42
-      454C414E4732010000000000080000004D5F525553414B32010000000000}
+      454C414E4732010000000000080000004D5F525553414B320100000000000700
+      000041464C5F504A49010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
-    Left = 332
-    Top = 161
+    Left = 452
+    Top = 529
     object QBrowseTotalGULUNG: TFloatField
       FieldName = 'GULUNG'
     end
@@ -6017,20 +6037,165 @@ object DefectReinspectFrm: TDefectReinspectFrm
     object QBrowseTotalM_RUSAK2: TFloatField
       FieldName = 'M_RUSAK2'
     end
+    object QBrowseTotalAFL_PJI: TFloatField
+      FieldName = 'AFL_PJI'
+    end
   end
   object QTotal: TOracleDataSet
     SQL.Strings = (
-      
-        'select sum(qty_terima) as qty_terima, sum(qty) as qty, sum(qty2)' +
-        ' as qty2 from ipisma_db5.bukti3_detail a'
+      'SELECT'
+      '    NVL(SUM(qty), 0) AS qty,'
+      '    NVL(SUM(harga), 0) AS harga,'
+      '    NVL(SUM(qty_terima), 0) AS qty_terima,'
+      '    NVL(SUM(qty_lalu), 0) AS qty_lalu,'
+      '    NVL(SUM(qty_org), 0) AS qty_org,'
+      '    NVL(SUM(qty2), 0) AS qty2,'
+      '    NVL(SUM(qty3), 0) AS qty3,'
+      '    NVL(SUM(bgrade), 0) AS bgrade,'
+      '    NVL(SUM(ld), 0) AS ld,'
+      '    NVL(SUM(lt), 0) AS lt,'
+      '    NVL(SUM(lpt), 0) AS lpt,'
+      '    NVL(SUM(lrg), 0) AS lrg,'
+      '    NVL(SUM(wl), 0) AS wl,'
+      '    NVL(SUM(flo), 0) AS flo,'
+      '    NVL(SUM(neps), 0) AS neps,'
+      '    NVL(SUM(pp), 0) AS pp,'
+      '    NVL(SUM(wp), 0) AS wp,'
+      '    NVL(SUM(oj), 0) AS oj,'
+      '    NVL(SUM(crt), 0) AS crt,'
+      '    NVL(SUM(bts), 0) AS bts,'
+      '    NVL(SUM(btb), 0) AS btb,'
+      '    NVL(SUM(sc), 0) AS sc,'
+      '    NVL(SUM(sll), 0) AS sll,'
+      '    NVL(SUM(ck), 0) AS ck,'
+      '    NVL(SUM(caj), 0) AS caj,'
+      '    NVL(SUM(ktr), 0) AS ktr,'
+      '    NVL(SUM(pdk), 0) AS pdk,'
+      '    NVL(SUM(kp), 0) AS kp,'
+      '    NVL(SUM(mc), 0) AS mc,'
+      '    NVL(SUM(bosk), 0) AS bosk,'
+      '    NVL(SUM(ks), 0) AS ks,'
+      '    NVL(SUM(bo), 0) AS bo,'
+      '    NVL(SUM(fc), 0) AS fc,'
+      '    NVL(SUM(hk), 0) AS hk,'
+      '    NVL(SUM(wm), 0) AS wm,'
+      '    NVL(SUM(sbk), 0) AS sbk,'
+      '    NVL(SUM(uts), 0) AS uts,'
+      '    NVL(SUM(knb), 0) AS knb,'
+      '    NVL(SUM(prod), 0) AS prod,'
+      '    NVL(SUM(bk), 0) AS bk,'
+      '    NVL(SUM(b1), 0) AS b1,'
+      '    NVL(SUM(b2), 0) AS b2,'
+      '    NVL(SUM(lelang), 0) AS lelang,'
+      '    NVL(SUM(bsparah), 0) AS bsparah,'
+      '    NVL(SUM(p_bk), 0) AS p_bk,'
+      '    NVL(SUM(p_b1), 0) AS p_b1,'
+      '    NVL(SUM(p_b2), 0) AS p_b2,'
+      '    NVL(SUM(p_lelang), 0) AS p_lelang,'
+      '    NVL(SUM(p_bsparah), 0) AS p_bsparah,'
+      '    NVL(SUM(tk), 0) AS tk,'
+      '    NVL(SUM(wk), 0) AS wk,'
+      '    NVL(SUM(m_samar), 0) AS m_samar,'
+      '    NVL(SUM(m_rusak), 0) AS m_rusak,'
+      '    NVL(SUM(m_belang), 0) AS m_belang,'
+      '    NVL(SUM(m_ouit), 0) AS m_ouit,'
+      '    NVL(SUM(e_steamer), 0) AS e_steamer,'
+      '    NVL(SUM(e_print), 0) AS e_print,'
+      '    NVL(SUM(e_stamping), 0) AS e_stamping,'
+      '    NVL(SUM(kts), 0) AS kts,'
+      '    NVL(SUM(ld2), 0) AS ld2,'
+      '    NVL(SUM(lt2), 0) AS lt2,'
+      '    NVL(SUM(lpt2), 0) AS lpt2,'
+      '    NVL(SUM(lrg2), 0) AS lrg2,'
+      '    NVL(SUM(wl2), 0) AS wl2,'
+      '    NVL(SUM(flo2), 0) AS flo2,'
+      '    NVL(SUM(neps2), 0) AS neps2,'
+      '    NVL(SUM(pp2), 0) AS pp2,'
+      '    NVL(SUM(wp2), 0) AS wp2,'
+      '    NVL(SUM(oj2), 0) AS oj2,'
+      '    NVL(SUM(crt2), 0) AS crt2,'
+      '    NVL(SUM(bts2), 0) AS bts2,'
+      '    NVL(SUM(btb2), 0) AS btb2,'
+      '    NVL(SUM(sc2), 0) AS sc2,'
+      '    NVL(SUM(sll2), 0) AS sll2,'
+      '    NVL(SUM(ck2), 0) AS ck2,'
+      '    NVL(SUM(caj2), 0) AS caj2,'
+      '    NVL(SUM(ktr2), 0) AS ktr2,'
+      '    NVL(SUM(pdk2), 0) AS pdk2,'
+      '    NVL(SUM(kp2), 0) AS kp2,'
+      '    NVL(SUM(mc2), 0) AS mc2,'
+      '    NVL(SUM(bosk2), 0) AS bosk2,'
+      '    NVL(SUM(ks2), 0) AS ks2,'
+      '    NVL(SUM(bo2), 0) AS bo2,'
+      '    NVL(SUM(fc2), 0) AS fc2,'
+      '    NVL(SUM(hk2), 0) AS hk2,'
+      '    NVL(SUM(wm2), 0) AS wm2,'
+      '    NVL(SUM(tk2), 0) AS tk2,'
+      '    NVL(SUM(wk2), 0) AS wk2,'
+      '    NVL(SUM(m_samar2), 0) AS m_samar2,'
+      '    NVL(SUM(m_rusak2), 0) AS m_rusak2,'
+      '    NVL(SUM(m_belang2), 0) AS m_belang2,'
+      '    NVL(SUM(m_ouit2), 0) AS m_ouit2,'
+      '    NVL(SUM(e_steamer2), 0) AS e_steamer2,'
+      '    NVL(SUM(e_print2), 0) AS e_print2,'
+      '    NVL(SUM(e_stamping2), 0) AS e_stamping2,'
+      '    NVL(SUM(kts2), 0) AS kts2,'
+      '    NVL(SUM(lelang2), 0) AS lelang2,'
+      '    NVL(SUM(afl1), 0) AS afl1,'
+      '    NVL(SUM(afl2), 0) AS afl2,'
+      '    NVL(SUM(afl_pji), 0) AS afl_pji'
+      'FROM ipisma_db5.bukti3_detail a'
       'where a.no_reg = :no_reg')
     Variables.Data = {0300000001000000070000003A4E4F5F524547030000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
-      04000000030000000A0000005154595F544552494D4101000000000003000000
-      5154590100000000000400000051545932010000000000}
+      04000000640000000A0000005154595F544552494D4101000000000003000000
+      5154590100000000000400000051545932010000000000050000004841524741
+      010000000000080000005154595F4C414C55010000000000070000005154595F
+      4F52470100000000000400000051545933010000000000060000004247524144
+      45010000000000020000004C44010000000000020000004C5401000000000003
+      0000004C5054010000000000030000004C524701000000000002000000574C01
+      000000000003000000464C4F010000000000040000004E455053010000000000
+      020000005050010000000000020000005750010000000000020000004F4A0100
+      0000000003000000435254010000000000030000004254530100000000000300
+      000042544201000000000002000000534301000000000003000000534C4C0100
+      0000000002000000434B0100000000000300000043414A010000000000030000
+      004B54520100000000000300000050444B010000000000020000004B50010000
+      000000020000004D4301000000000004000000424F534B010000000000020000
+      004B5301000000000002000000424F0100000000000200000046430100000000
+      0002000000484B01000000000002000000574D0100000000000300000053424B
+      01000000000003000000555453010000000000030000004B4E42010000000000
+      0400000050524F4401000000000002000000424B010000000000020000004231
+      010000000000020000004232010000000000060000004C454C414E4701000000
+      0000070000004253504152414801000000000004000000505F424B0100000000
+      0004000000505F423101000000000004000000505F4232010000000000080000
+      00505F4C454C414E4701000000000009000000505F4253504152414801000000
+      000002000000544B01000000000002000000574B010000000000070000004D5F
+      53414D4152010000000000070000004D5F525553414B01000000000008000000
+      4D5F42454C414E47010000000000060000004D5F4F5549540100000000000900
+      0000455F535445414D455201000000000007000000455F5052494E5401000000
+      00000A000000455F5354414D50494E47010000000000030000004B5453010000
+      000000030000004C4432010000000000030000004C5432010000000000040000
+      004C505432010000000000040000004C52473201000000000003000000574C32
+      01000000000004000000464C4F32010000000000050000004E45505332010000
+      0000000300000050503201000000000003000000575032010000000000030000
+      004F4A3201000000000004000000435254320100000000000400000042545332
+      0100000000000400000042544232010000000000030000005343320100000000
+      0004000000534C4C3201000000000003000000434B3201000000000004000000
+      43414A32010000000000040000004B5452320100000000000400000050444B32
+      010000000000030000004B5032010000000000030000004D4332010000000000
+      05000000424F534B32010000000000030000004B533201000000000003000000
+      424F320100000000000300000046433201000000000003000000484B32010000
+      00000003000000574D3201000000000003000000544B32010000000000030000
+      00574B32010000000000080000004D5F53414D41523201000000000008000000
+      4D5F525553414B32010000000000090000004D5F42454C414E47320100000000
+      00070000004D5F4F554954320100000000000A000000455F535445414D455232
+      01000000000008000000455F5052494E54320100000000000B000000455F5354
+      414D50494E4732010000000000040000004B545332010000000000070000004C
+      454C414E47320100000000000400000041464C31010000000000040000004146
+      4C320100000000000700000041464C5F504A49010000000000}
     Session = DMFrm.OS
-    Left = 73
-    Top = 280
+    Left = 89
+    Top = 464
     object QTotalQTY_TERIMA: TFloatField
       FieldName = 'QTY_TERIMA'
     end
@@ -6039,6 +6204,297 @@ object DefectReinspectFrm: TDefectReinspectFrm
     end
     object QTotalQTY2: TFloatField
       FieldName = 'QTY2'
+    end
+    object QTotalHARGA: TFloatField
+      FieldName = 'HARGA'
+    end
+    object QTotalQTY_LALU: TFloatField
+      FieldName = 'QTY_LALU'
+    end
+    object QTotalQTY_ORG: TFloatField
+      FieldName = 'QTY_ORG'
+    end
+    object QTotalQTY3: TFloatField
+      FieldName = 'QTY3'
+    end
+    object QTotalBGRADE: TFloatField
+      FieldName = 'BGRADE'
+    end
+    object QTotalLD: TFloatField
+      FieldName = 'LD'
+    end
+    object QTotalLT: TFloatField
+      FieldName = 'LT'
+    end
+    object QTotalLPT: TFloatField
+      FieldName = 'LPT'
+    end
+    object QTotalLRG: TFloatField
+      FieldName = 'LRG'
+    end
+    object QTotalWL: TFloatField
+      FieldName = 'WL'
+    end
+    object QTotalFLO: TFloatField
+      FieldName = 'FLO'
+    end
+    object QTotalNEPS: TFloatField
+      FieldName = 'NEPS'
+    end
+    object QTotalPP: TFloatField
+      FieldName = 'PP'
+    end
+    object QTotalWP: TFloatField
+      FieldName = 'WP'
+    end
+    object QTotalOJ: TFloatField
+      FieldName = 'OJ'
+    end
+    object QTotalCRT: TFloatField
+      FieldName = 'CRT'
+    end
+    object QTotalBTS: TFloatField
+      FieldName = 'BTS'
+    end
+    object QTotalBTB: TFloatField
+      FieldName = 'BTB'
+    end
+    object QTotalSC: TFloatField
+      FieldName = 'SC'
+    end
+    object QTotalSLL: TFloatField
+      FieldName = 'SLL'
+    end
+    object QTotalCK: TFloatField
+      FieldName = 'CK'
+    end
+    object QTotalCAJ: TFloatField
+      FieldName = 'CAJ'
+    end
+    object QTotalKTR: TFloatField
+      FieldName = 'KTR'
+    end
+    object QTotalPDK: TFloatField
+      FieldName = 'PDK'
+    end
+    object QTotalKP: TFloatField
+      FieldName = 'KP'
+    end
+    object QTotalMC: TFloatField
+      FieldName = 'MC'
+    end
+    object QTotalBOSK: TFloatField
+      FieldName = 'BOSK'
+    end
+    object QTotalKS: TFloatField
+      FieldName = 'KS'
+    end
+    object QTotalBO: TFloatField
+      FieldName = 'BO'
+    end
+    object QTotalFC: TFloatField
+      FieldName = 'FC'
+    end
+    object QTotalHK: TFloatField
+      FieldName = 'HK'
+    end
+    object QTotalWM: TFloatField
+      FieldName = 'WM'
+    end
+    object QTotalSBK: TFloatField
+      FieldName = 'SBK'
+    end
+    object QTotalUTS: TFloatField
+      FieldName = 'UTS'
+    end
+    object QTotalKNB: TFloatField
+      FieldName = 'KNB'
+    end
+    object QTotalPROD: TFloatField
+      FieldName = 'PROD'
+    end
+    object QTotalBK: TFloatField
+      FieldName = 'BK'
+    end
+    object QTotalB1: TFloatField
+      FieldName = 'B1'
+    end
+    object QTotalB2: TFloatField
+      FieldName = 'B2'
+    end
+    object QTotalLELANG: TFloatField
+      FieldName = 'LELANG'
+    end
+    object QTotalBSPARAH: TFloatField
+      FieldName = 'BSPARAH'
+    end
+    object QTotalP_BK: TFloatField
+      FieldName = 'P_BK'
+    end
+    object QTotalP_B1: TFloatField
+      FieldName = 'P_B1'
+    end
+    object QTotalP_B2: TFloatField
+      FieldName = 'P_B2'
+    end
+    object QTotalP_LELANG: TFloatField
+      FieldName = 'P_LELANG'
+    end
+    object QTotalP_BSPARAH: TFloatField
+      FieldName = 'P_BSPARAH'
+    end
+    object QTotalTK: TFloatField
+      FieldName = 'TK'
+    end
+    object QTotalWK: TFloatField
+      FieldName = 'WK'
+    end
+    object QTotalM_SAMAR: TFloatField
+      FieldName = 'M_SAMAR'
+    end
+    object QTotalM_RUSAK: TFloatField
+      FieldName = 'M_RUSAK'
+    end
+    object QTotalM_BELANG: TFloatField
+      FieldName = 'M_BELANG'
+    end
+    object QTotalM_OUIT: TFloatField
+      FieldName = 'M_OUIT'
+    end
+    object QTotalE_STEAMER: TFloatField
+      FieldName = 'E_STEAMER'
+    end
+    object QTotalE_PRINT: TFloatField
+      FieldName = 'E_PRINT'
+    end
+    object QTotalE_STAMPING: TFloatField
+      FieldName = 'E_STAMPING'
+    end
+    object QTotalKTS: TFloatField
+      FieldName = 'KTS'
+    end
+    object QTotalLD2: TFloatField
+      FieldName = 'LD2'
+    end
+    object QTotalLT2: TFloatField
+      FieldName = 'LT2'
+    end
+    object QTotalLPT2: TFloatField
+      FieldName = 'LPT2'
+    end
+    object QTotalLRG2: TFloatField
+      FieldName = 'LRG2'
+    end
+    object QTotalWL2: TFloatField
+      FieldName = 'WL2'
+    end
+    object QTotalFLO2: TFloatField
+      FieldName = 'FLO2'
+    end
+    object QTotalNEPS2: TFloatField
+      FieldName = 'NEPS2'
+    end
+    object QTotalPP2: TFloatField
+      FieldName = 'PP2'
+    end
+    object QTotalWP2: TFloatField
+      FieldName = 'WP2'
+    end
+    object QTotalOJ2: TFloatField
+      FieldName = 'OJ2'
+    end
+    object QTotalCRT2: TFloatField
+      FieldName = 'CRT2'
+    end
+    object QTotalBTS2: TFloatField
+      FieldName = 'BTS2'
+    end
+    object QTotalBTB2: TFloatField
+      FieldName = 'BTB2'
+    end
+    object QTotalSC2: TFloatField
+      FieldName = 'SC2'
+    end
+    object QTotalSLL2: TFloatField
+      FieldName = 'SLL2'
+    end
+    object QTotalCK2: TFloatField
+      FieldName = 'CK2'
+    end
+    object QTotalCAJ2: TFloatField
+      FieldName = 'CAJ2'
+    end
+    object QTotalKTR2: TFloatField
+      FieldName = 'KTR2'
+    end
+    object QTotalPDK2: TFloatField
+      FieldName = 'PDK2'
+    end
+    object QTotalKP2: TFloatField
+      FieldName = 'KP2'
+    end
+    object QTotalMC2: TFloatField
+      FieldName = 'MC2'
+    end
+    object QTotalBOSK2: TFloatField
+      FieldName = 'BOSK2'
+    end
+    object QTotalKS2: TFloatField
+      FieldName = 'KS2'
+    end
+    object QTotalBO2: TFloatField
+      FieldName = 'BO2'
+    end
+    object QTotalFC2: TFloatField
+      FieldName = 'FC2'
+    end
+    object QTotalHK2: TFloatField
+      FieldName = 'HK2'
+    end
+    object QTotalWM2: TFloatField
+      FieldName = 'WM2'
+    end
+    object QTotalTK2: TFloatField
+      FieldName = 'TK2'
+    end
+    object QTotalWK2: TFloatField
+      FieldName = 'WK2'
+    end
+    object QTotalM_SAMAR2: TFloatField
+      FieldName = 'M_SAMAR2'
+    end
+    object QTotalM_RUSAK2: TFloatField
+      FieldName = 'M_RUSAK2'
+    end
+    object QTotalM_BELANG2: TFloatField
+      FieldName = 'M_BELANG2'
+    end
+    object QTotalM_OUIT2: TFloatField
+      FieldName = 'M_OUIT2'
+    end
+    object QTotalE_STEAMER2: TFloatField
+      FieldName = 'E_STEAMER2'
+    end
+    object QTotalE_PRINT2: TFloatField
+      FieldName = 'E_PRINT2'
+    end
+    object QTotalE_STAMPING2: TFloatField
+      FieldName = 'E_STAMPING2'
+    end
+    object QTotalKTS2: TFloatField
+      FieldName = 'KTS2'
+    end
+    object QTotalLELANG2: TFloatField
+      FieldName = 'LELANG2'
+    end
+    object QTotalAFL1: TFloatField
+      FieldName = 'AFL1'
+    end
+    object QTotalAFL2: TFloatField
+      FieldName = 'AFL2'
+    end
+    object QTotalAFL_PJI: TFloatField
+      FieldName = 'AFL_PJI'
     end
   end
   object QAmbilData: TOracleQuery
@@ -7776,8 +8232,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
       0300000002000000070000003A4E4F5F52454703000000040000009F86010000
       000000090000003A4E4F5F4F52444552050000000A0000003735342F33312F31
       300000000000}
-    Left = 157
-    Top = 576
+    Left = 189
+    Top = 656
   end
   object QBrowse4: TOracleDataSet
     SQL.Strings = (
@@ -7788,7 +8244,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
     Variables.Data = {
       0300000001000000080000003A4D59504152414D010000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
-      0400000051000000070000004E4F5F4E4F54410100000000000A0000004F5052
+      0400000052000000070000004E4F5F4E4F54410100000000000A0000004F5052
       5F494E53455254010000000000060000004E4F5F524547010000000000030000
       0054474C0100000000000A0000004B4F4E535452554B53490100000000000600
       00004953504F5354010000000000050000004D4553494E0100000000000D0000
@@ -7827,13 +8283,13 @@ object DefectReinspectFrm: TDefectReinspectFrm
       44414B5F4341424F540100000000000B000000455F5354414D50494E47320100
       00000000070000005355504C494552010000000000090000004D5F42454C414E
       4732010000000000080000004D5F525553414B32010000000000060000004241
-      52414E47010000000000}
+      52414E470100000000000700000041464C5F504A49010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
     AfterScroll = QBrowse4AfterScroll
-    Left = 148
-    Top = 129
+    Left = 508
+    Top = 457
     object QBrowse4NO_REG: TFloatField
       FieldName = 'NO_REG'
       Required = True
@@ -8137,6 +8593,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
     end
     object QBrowse4E_STAMPING2: TFloatField
       FieldName = 'E_STAMPING2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse4SUPLIER: TStringField
       FieldName = 'SUPLIER'
@@ -8144,9 +8601,15 @@ object DefectReinspectFrm: TDefectReinspectFrm
     end
     object QBrowse4M_BELANG2: TFloatField
       FieldName = 'M_BELANG2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse4M_RUSAK2: TFloatField
       FieldName = 'M_RUSAK2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse4AFL_PJI: TFloatField
+      FieldName = 'AFL_PJI'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
   end
   object dsQBrowse4: TwwDataSource
@@ -8211,14 +8674,15 @@ object DefectReinspectFrm: TDefectReinspectFrm
       'sum(b.tk2) as tk2,'
       'sum(b.wk2) as wk2,'
       'sum(b.afl_print) as afl_print,'
-      'sum(b.afl_ndak_cabot) as afl_ndak_cabot  '
+      'sum(b.afl_ndak_cabot) as afl_ndak_cabot,'
+      'sum(b.afl_pji) as afl_pji    '
       'from ipisma_db5.vhasil_defect_mitra b'
       ':myparam')
     Variables.Data = {
       0300000001000000080000003A4D59504152414D01000000110000006F726465
       72206279204E4F5F4E4F54410000000000}
     QBEDefinition.QBEFieldDefs = {
-      04000000370000000600000047554C554E470100000000000A0000005154595F
+      04000000380000000600000047554C554E470100000000000A0000005154595F
       544552494D4101000000000003000000515459010000000000020000004C4401
       0000000000020000004C54010000000000030000004C50540100000000000300
       00004C524701000000000002000000574C01000000000003000000464C4F0100
@@ -8243,12 +8707,13 @@ object DefectReinspectFrm: TDefectReinspectFrm
       494C5F4D455445520100000000000900000041464C5F5052494E540100000000
       000E00000041464C5F4E44414B5F4341424F540100000000000B000000455F53
       54414D50494E4732010000000000090000004D5F42454C414E47320100000000
-      00080000004D5F525553414B32010000000000}
+      00080000004D5F525553414B320100000000000700000041464C5F504A490100
+      00000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
-    Left = 196
-    Top = 281
+    Left = 532
+    Top = 521
     object QBrowse4TotalTOT_DEFECT: TFloatField
       FieldName = 'TOT_DEFECT'
     end
@@ -8414,6 +8879,9 @@ object DefectReinspectFrm: TDefectReinspectFrm
     object QBrowse4TotalM_RUSAK2: TFloatField
       FieldName = 'M_RUSAK2'
     end
+    object QBrowse4TotalAFL_PJI: TFloatField
+      FieldName = 'AFL_PJI'
+    end
   end
   object QAmbilData3: TOracleQuery
     SQL.Strings = (
@@ -8446,8 +8914,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
       0300000002000000070000003A4E4F5F52454703000000040000009F86010000
       000000090000003A4E4F5F4F52444552050000000A0000003735342F33312F31
       300000000000}
-    Left = 253
-    Top = 576
+    Left = 277
+    Top = 656
   end
   object QBrowse_rekap2: TOracleDataSet
     SQL.Strings = (
