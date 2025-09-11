@@ -336,7 +336,7 @@ object InputBSFrm: TInputBSFrm
               44.979166666666670000
               1616.604166666667000000
               216.958333333333400000
-              92.604166666666670000)
+              92.604166666666680000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -365,10 +365,10 @@ object InputBSFrm: TInputBSFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
-              664.104166666666700000
+              60.854166666666680000
+              664.104166666666800000
               158.750000000000000000
-              672.041666666666700000)
+              672.041666666666800000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -461,7 +461,7 @@ object InputBSFrm: TInputBSFrm
             Size.Values = (
               52.916666666666670000
               1613.958333333333000000
-              84.666666666666670000
+              84.666666666666680000
               209.020833333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -2859,7 +2859,7 @@ object InputBSFrm: TInputBSFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666680000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -2895,7 +2895,7 @@ object InputBSFrm: TInputBSFrm
             FontSize = 8
           end
           object QRSysData1: TQRSysData
-            Left = 687
+            Left = -54
             Top = 8
             Width = 69
             Height = 17
@@ -3002,7 +3002,7 @@ object InputBSFrm: TInputBSFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              981.604166666666700000
+              981.604166666666800000
               7.937500000000000000
               145.520833333333300000)
             Alignment = taRightJustify
@@ -3060,7 +3060,7 @@ object InputBSFrm: TInputBSFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              679.979166666666700000
+              679.979166666666800000
               190.500000000000000000
               74.083333333333340000)
             Alignment = taCenter
@@ -3523,7 +3523,7 @@ object InputBSFrm: TInputBSFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            68.791666666666670000
+            68.791666666666680000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -3569,7 +3569,7 @@ object InputBSFrm: TInputBSFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              989.541666666666700000
+              989.541666666666800000
               10.583333333333330000
               140.229166666666700000)
             Alignment = taRightJustify
@@ -4216,12 +4216,14 @@ object InputBSFrm: TInputBSFrm
             'KD_PRODUKSI;CustomEdit;LookKonstruksi;F'
             'OPR_INSP;CustomEdit;LookKary;F'
             'KP;CustomEdit;LookKP;F'
-            'JENIS_DETAIL;CustomEdit;LookPalet;F')
+            'JENIS_DETAIL;CustomEdit;LookPalet;F'
+            'MUTU;CustomEdit;LookMutuSarung;F')
           Selected.Strings = (
             'JENIS_DETAIL'#9'20'#9'PALET'#9'F'
             'KP'#9'20'#9'KP'#9'F'
             'KONSTRUKSI'#9'40'#9'KONSTRUKSI'#9'T'
             'TOTAL_BS'#9'10'#9'QTY KODI'#9'F'
+            'MUTU'#9'15'#9'MUTU'#9'F'
             'KET_DETAIL'#9'30'#9'KETERANGAN'#9'F')
           IniAttributes.FileName = 'Finishing'
           IniAttributes.Delimiter = ';;'
@@ -4490,7 +4492,7 @@ object InputBSFrm: TInputBSFrm
           MaxHeight = 209
           UserButton1Caption = '&Refresh'
           Selected.Strings = (
-            'PALET'#9'20'#9'PALET'#9'F'#9)
+            'PALET'#9'20'#9'PALET'#9'F')
           DataField = 'JENIS_DETAIL'
           DataSource = dsQDetail
           LookupTable = DMFrm.QPalet
@@ -4531,6 +4533,26 @@ object InputBSFrm: TInputBSFrm
           OnClick = LookKPClick
           OnCloseUp = LookKPCloseUp
           OnEnter = LookKPEnter
+        end
+        object LookMutuSarung: TwwDBComboBox
+          Left = 424
+          Top = 381
+          Width = 69
+          Height = 21
+          ShowButton = True
+          Style = csDropDown
+          MapList = False
+          AllowClearKey = False
+          DataField = 'MUTU'
+          DataSource = dsQDetail
+          DropDownCount = 8
+          ItemHeight = 0
+          Items.Strings = (
+            'BS PARAH'
+            'LELANG')
+          Sorted = False
+          TabOrder = 7
+          UnboundDataType = wwDefault
         end
       end
     end
@@ -5273,10 +5295,10 @@ object InputBSFrm: TInputBSFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              66.145833333333330000
-              526.520833333333300000
+              66.145833333333340000
+              526.520833333333400000
               179.916666666666700000
-              947.208333333333300000)
+              947.208333333333400000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -5305,8 +5327,8 @@ object InputBSFrm: TInputBSFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              923.395833333333300000
-              312.208333333333300000
+              923.395833333333400000
+              312.208333333333400000
               153.458333333333300000)
             Alignment = taCenter
             AlignToBand = True
@@ -5335,8 +5357,8 @@ object InputBSFrm: TInputBSFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
-              740.833333333333300000
+              60.854166666666680000
+              740.833333333333400000
               248.708333333333300000
               515.937500000000000000)
             Alignment = taCenter
@@ -5455,7 +5477,7 @@ object InputBSFrm: TInputBSFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666680000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText16: TQRDBText
@@ -5491,7 +5513,7 @@ object InputBSFrm: TInputBSFrm
             FontSize = 8
           end
           object QRSysData2: TQRSysData
-            Left = 687
+            Left = -54
             Top = 8
             Width = 69
             Height = 17
@@ -6588,12 +6610,13 @@ object InputBSFrm: TInputBSFrm
     SequenceField.Sequence = 'IPISMA_DB5.REG_MENDING_DET'
     SequenceField.ApplyMoment = amOnNewRecord
     QBEDefinition.QBEFieldDefs = {
-      04000000090000000D0000004E4F5F5245475F44455441494C01000000000006
+      040000000A0000000D0000004E4F5F5245475F44455441494C01000000000006
       0000004E4F5F5245470100000000000A00000054474C5F494E53455254010000
       0000000A0000004B4F4E535452554B5349010000000000020000004B50010000
       00000008000000544F54414C5F42530100000000000A0000004F50525F494E53
       4552540100000000000A0000004B45545F44455441494C0100000000000C0000
-      004A454E49535F44455441494C010000000000}
+      004A454E49535F44455441494C010000000000040000004D5554550100000000
+      00}
     Master = QMaster
     MasterFields = 'NO_REG'
     DetailFields = 'NO_REG'
@@ -6636,6 +6659,10 @@ object InputBSFrm: TInputBSFrm
     object QDetailJENIS_DETAIL: TStringField
       FieldName = 'JENIS_DETAIL'
       Size = 200
+    end
+    object QDetailMUTU: TStringField
+      FieldName = 'MUTU'
+      Size = 30
     end
   end
   object dsQDetail: TwwDataSource

@@ -99,7 +99,6 @@ type
     DBText5: TDBText;
     DBText6: TDBText;
     LabelBanner: TLabel;
-    LookKonstruksi: TwwDBLookupComboDlg;
     Label11: TLabel;
     TabSheet3: TTabSheet;
     Panel5: TPanel;
@@ -287,6 +286,9 @@ type
     QBrowseKET_DETAIL: TStringField;
     QBrowseJENIS_DETAIL: TStringField;
     QBrowseTotalTOTAL_BS: TFloatField;
+    LookKP: TwwDBLookupComboDlg;
+    QDetailMUTU: TStringField;
+    LookMutuSarung: TwwDBComboBox;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -319,13 +321,9 @@ type
     procedure FormShow(Sender: TObject);
     procedure QBrowseAfterScroll(DataSet: TDataSet);
     procedure wwDBGrid1xxxxxEnter(Sender: TObject);
-    procedure LookKonstruksiCloseUp(Sender: TObject; LookupTable,
-      FillTable: TDataSet; modified: Boolean);
     procedure LookCorakCloseUp(Sender: TObject; LookupTable,
       FillTable: TDataSet; modified: Boolean);
-    procedure LookKonstruksiEnter(Sender: TObject);
     procedure LookCorakEnter(Sender: TObject);
-    procedure LookKonstruksiClick(Sender: TObject);
     procedure LookCorakClick(Sender: TObject);
     procedure QMasterNewRecord(DataSet: TDataSet);
     procedure VTglAwal2Change(Sender: TObject);
@@ -344,6 +342,10 @@ type
     procedure wwDBComboBox1CloseUp(Sender: TObject; LookupTable,
       FillTable: TDataSet; modified: Boolean);
     procedure wwDBComboBox1Enter(Sender: TObject);
+    procedure LookKPClick(Sender: TObject);
+    procedure LookKPCloseUp(Sender: TObject; LookupTable,
+      FillTable: TDataSet; modified: Boolean);
+    procedure LookKPEnter(Sender: TObject);
   private
     { Private declarations }
     vTab,vfilter,vorder : string;
@@ -698,15 +700,6 @@ begin
  
 end;
 
-procedure TInputBSFrm.LookKonstruksiCloseUp(Sender: TObject;
-  LookupTable, FillTable: TDataSet; modified: Boolean);
-begin
- if modified then
-    QDetailKP.AsString:=DMFrm.QLookKdProduksiKD_PRODUKSI.AsString;
-    QDetailKONSTRUKSI.AsString:=DMFrm.QLookKdProduksiSUB_KELOMPOK.AsString;
-    //QDetailKONSTRUKSI.AsString:=DMFrm.QLookKdProduksiSUB_KELOMPOK.AsString;
-end;
-
 procedure TInputBSFrm.LookCorakCloseUp(Sender: TObject;
   LookupTable, FillTable: TDataSet; modified: Boolean);
 begin
@@ -716,19 +709,9 @@ begin
     //QDetailCORAK.AsString:=DMFrm.QCorakNAMA_CORAK.AsString;
 end;
 
-procedure TInputBSFrm.LookKonstruksiEnter(Sender: TObject);
-begin
-  DMFrm.QLookKdProduksi.Open;
-end;
-
 procedure TInputBSFrm.LookCorakEnter(Sender: TObject);
 begin
   DMFrm.QCorak.Open;
-end;
-
-procedure TInputBSFrm.LookKonstruksiClick(Sender: TObject);
-begin
-   DMFrm.QLookKdProduksi.Open;
 end;
 
 procedure TInputBSFrm.LookCorakClick(Sender: TObject);
@@ -919,6 +902,24 @@ end;
 procedure TInputBSFrm.wwDBComboBox1Enter(Sender: TObject);
 begin
 DMFrm.QLookGrup.Open;
+end;
+
+procedure TInputBSFrm.LookKPClick(Sender: TObject);
+begin
+   DMFrm.QLookKdProduksi.Open;
+end;
+
+procedure TInputBSFrm.LookKPCloseUp(Sender: TObject; LookupTable,
+  FillTable: TDataSet; modified: Boolean);
+begin
+ if modified then
+    QDetailKP.AsString:=DMFrm.QLookKdProduksiKD_PRODUKSI.AsString;
+    QDetailKONSTRUKSI.AsString:=DMFrm.QLookKdProduksiSUB_KELOMPOK.AsString;
+end;
+
+procedure TInputBSFrm.LookKPEnter(Sender: TObject);
+begin
+  DMFrm.QLookKdProduksi.Open;
 end;
 
 end.

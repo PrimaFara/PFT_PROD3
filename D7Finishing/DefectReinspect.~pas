@@ -1757,6 +1757,8 @@ type
     QBrowse4AFL_PJI: TFloatField;
     QBrowse4TotalAFL_PJI: TFloatField;
     QBrowseTotalAFL_PJI: TFloatField;
+    QBrowse_rekap2AFL_PJI: TFloatField;
+    QBrowse_rekap2_totAFL_PJI: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -2925,6 +2927,8 @@ QBrowse_rekap2.Open;
   wwDBGrid5.ColumnByName('AFL_PRINT').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QBrowse_rekap2_totAFL_PRINT.AsFloat);
   wwDBGrid5.ColumnByName('AFL_NDAK_CABOT').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QBrowse_rekap2_totAFL_NDAK_CABOT.AsFloat);
   wwDBGrid5.ColumnByName('PENYESUAIAN').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QBrowse_rekap2_totPENYESUAIAN.AsFloat);
+
+  wwDBGrid5.ColumnByName('AFL_PJI').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QBrowse_rekap2_totAFL_PJI.AsFloat);
 
 end;
 end;

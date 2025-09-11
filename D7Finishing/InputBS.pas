@@ -287,6 +287,8 @@ type
     QBrowseJENIS_DETAIL: TStringField;
     QBrowseTotalTOTAL_BS: TFloatField;
     LookKP: TwwDBLookupComboDlg;
+    QDetailMUTU: TStringField;
+    LookMutuSarung: TwwDBComboBox;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -886,9 +888,7 @@ procedure TInputBSFrm.LookPaletCloseUp(Sender: TObject;
   LookupTable, FillTable: TDataSet; modified: Boolean);
 begin
 if modified then
-  // QMasterKONSTRUKSI.AsString:=DMFrm.QKonstruksiNAMA_KONSTRUKSI.AsString;
     QDetailJENIS_DETAIL.AsString:=DMFrm.QPaletPALET.AsString;
-    //QDetailCORAK.AsString:=DMFrm.QCorakNAMA_CORAK.AsString;
 end;
 
 procedure TInputBSFrm.wwDBComboBox1CloseUp(Sender: TObject; LookupTable,

@@ -504,6 +504,12 @@ type
     CekUnpost: TOracleDataSet;
     CekUnpostVCOUNT: TFloatField;
     Label28: TLabel;
+    QDetailAFL_PJI: TFloatField;
+    QTotalAFL_PJI: TFloatField;
+    QBrowseAFL_PJI: TFloatField;
+    QBrowseRekapTotAFL_PJI: TFloatField;
+    QBrowseRekapAFL_PJI: TFloatField;
+    QBrowseTotalAFL_PJI: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -957,6 +963,7 @@ QBrowse.Open;
   wwDBGrid1xxxxx.ColumnByName('QTY_POTONG').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QBrowseTotalPOTONG.AsFloat);
   wwDBGrid1xxxxx.ColumnByName('QTY_METER').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QBrowseTotalMETER.AsFloat);
   wwDBGrid1xxxxx.ColumnByName('QTY_KODI').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QBrowseTotalKODI.AsFloat);
+  wwDBGrid1xxxxx.ColumnByName('AFL_PJI').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QBrowseTotalAFL_PJI.AsFloat);
 
 
 
@@ -1035,6 +1042,7 @@ begin
   wwDBGrid1.ColumnByName('QTY_POTONG').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QTotalPOTONG.AsFloat);
   wwDBGrid1.ColumnByName('QTY_METER').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QTotalMETER.AsFloat);
   wwDBGrid1.ColumnByName('QTY_KODI').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QTotalKODI.AsFloat);
+  wwDBGrid1.ColumnByName('AFL_PJI').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QTotalAFL_PJI.AsFloat);
 
 end;
 
@@ -1579,7 +1587,7 @@ end;
 procedure TReinspecPajitexFrm.wwDBNavigator2PostClick(Sender: TObject);
 var
   i, Reg : Integer;
-  QTY_GULUNG, QTY_POTONG, QTY_METER : Real;
+  QTY_GULUNG, QTY_POTONG, QTY_METER, AFFAL : Real;
   NO, TGL_KIRIM, MESIN, ITEM, NO_ORDER, SATUAN, PROSES, KETERANGAN : String;
 
 begin
@@ -1649,8 +1657,10 @@ begin
             QTY_GULUNG := StrToFloatDef(ListView1.Items[i].SubItems[3], 0);
             QTY_METER := StrToFloatDef(ListView1.Items[i].SubItems[4], 0);
 
-            SATUAN := ListView1.Items[i].SubItems[5];
-            KETERANGAN := ListView1.Items[i].SubItems[6];
+            AFFAL := StrToFloatDef(ListView1.Items[i].SubItems[5], 0);
+
+            SATUAN := ListView1.Items[i].SubItems[6];
+            KETERANGAN := ListView1.Items[i].SubItems[7];
 
             // Insert data ke dalam tabel menggunakan QInsertDetail2
             QInsertDetail2.Close;
@@ -1661,6 +1671,8 @@ begin
 
             QInsertDetail2.SetVariable('QTY_GULUNG', QTY_GULUNG);
             QInsertDetail2.SetVariable('QTY_METER', QTY_METER);
+
+            QInsertDetail2.SetVariable('AFFAL', AFFAL);
 
             QInsertDetail2.SetVariable('SATUAN', SATUAN);
             QInsertDetail2.SetVariable('KETERANGAN', KETERANGAN);
@@ -2001,6 +2013,8 @@ QBrowseRekap.Open;
   wwDBGrid3.ColumnByName('POTONG').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QBrowseRekapTotPOTONG.AsFloat);
   wwDBGrid3.ColumnByName('METER').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QBrowseRekapTotMETER.AsFloat);
   wwDBGrid3.ColumnByName('KODI').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QBrowseRekapTotKODI.AsFloat);
+
+  wwDBGrid3.ColumnByName('AFL_PJI').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QBrowseRekapTotAFL_PJI.AsFloat);
 
   //  Untuk Nota Print
   //  QBrowseRekap2.DisableControls;

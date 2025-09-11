@@ -1,6 +1,6 @@
 object ReinspecPajitexFrm: TReinspecPajitexFrm
-  Left = 197
-  Top = 125
+  Left = 251
+  Top = 159
   Width = 1147
   Height = 617
   Caption = 'Reinspect Pajitex'
@@ -61,7 +61,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             Left = 650
             Top = 2
             Width = 114
-            Height = 44
+            Height = 33
             AutoSize = True
             DataField = 'NO_NOTA'
             DataSource = dsQMaster
@@ -971,10 +971,10 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
-              664.104166666666700000
+              60.854166666666660000
+              664.104166666666600000
               158.750000000000000000
-              672.041666666666700000)
+              672.041666666666600000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -3465,7 +3465,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666660000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -4129,7 +4129,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            68.791666666666670000
+            68.791666666666660000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -4855,6 +4855,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             'QTY_METER'#9'10'#9'METER'#9'F'#9'QTY KONVERSI'
             'QTY_KODI'#9'10'#9'KODI'#9'F'#9'QTY KONVERSI'
             'SATUAN'#9'6'#9'SATUAN'#9'T'
+            'AFL_PJI'#9'10'#9'AFFAL ~PAJITEX'#9'F'
             'KETERANGAN'#9'20'#9'KETERANGAN'#9'F')
           IniAttributes.FileName = 'Finishing'
           IniAttributes.Delimiter = ';;'
@@ -5623,6 +5624,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
           'QTY_METER'#9'10'#9'METER'#9'F'#9'QTY KONVERSI'
           'QTY_KODI'#9'10'#9'KODI'#9'F'#9'QTY KONVERSI'
           'SATUAN'#9'10'#9'SATUAN'#9'F'#9'QTY KONVERSI'
+          'AFL_PJI'#9'10'#9'AFFAL ~PAJITEX'#9'F'
           'JENIS'#9'10'#9'JENIS PROSES'#9'F'
           'ISPOST'#9'1'#9'ISPOST'#9#9
           'CORAK'#9'15'#9'CORAK'#9'F'
@@ -6119,10 +6121,10 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              66.145833333333330000
+              66.145833333333340000
               526.520833333333300000
               179.916666666666700000
-              947.208333333333300000)
+              947.208333333333400000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -6151,7 +6153,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              923.395833333333300000
+              923.395833333333400000
               312.208333333333300000
               153.458333333333300000)
             Alignment = taCenter
@@ -6181,8 +6183,8 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
-              740.833333333333300000
+              60.854166666666660000
+              740.833333333333400000
               248.708333333333300000
               515.937500000000000000)
             Alignment = taCenter
@@ -6301,7 +6303,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666660000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText16: TQRDBText
@@ -7804,10 +7806,10 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              66.145833333333330000
+              66.145833333333340000
               526.520833333333300000
               179.916666666666700000
-              947.208333333333300000)
+              947.208333333333400000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -7836,7 +7838,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              923.395833333333300000
+              923.395833333333400000
               312.208333333333300000
               153.458333333333300000)
             Alignment = taCenter
@@ -7866,8 +7868,8 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666670000
-              740.833333333333300000
+              60.854166666666660000
+              740.833333333333400000
               248.708333333333300000
               515.937500000000000000)
             Alignment = taCenter
@@ -7986,7 +7988,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666670000
+            76.729166666666660000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText40: TQRDBText
@@ -9343,7 +9345,8 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
           'KONSTRUKSI'#9'30'#9'KONSTRUKSI'#9'F'
           'POTONG'#9'10'#9'POTONG'#9'F'#9'JUMLAH'
           'METER'#9'10'#9'METER'#9'F'#9'JUMLAH'
-          'KODI'#9'10'#9'KODI'#9'F'#9'JUMLAH')
+          'KODI'#9'10'#9'KODI'#9'F'#9'JUMLAH'
+          'AFL_PJI'#9'10'#9'AFFAL ~PAJITEX'#9'F')
         IniAttributes.Enabled = True
         IniAttributes.SaveToRegistry = True
         IniAttributes.FileName = 'Finishing'
@@ -9508,7 +9511,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
     SequenceField.Sequence = 'IPISMA_DB5.REG_PPAJITEX_DET'
     SequenceField.ApplyMoment = amOnNewRecord
     QBEDefinition.QBEFieldDefs = {
-      04000000190000000D0000004E4F5F5245475F44455441494C01000000000006
+      040000001A0000000D0000004E4F5F5245475F44455441494C01000000000006
       0000004E4F5F5245470100000000000A00000054474C5F494E53455254010000
       0000000A0000004B45544552414E47414E0100000000000A0000005154595F47
       554C554E470100000000000A0000005154595F504F544F4E470100000000000D
@@ -9522,7 +9525,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
       5741524E41010000000000090000004B445F50524F5345530100000000000600
       000050524F534553010000000000040000004954454D01000000000009000000
       54474C5F4B4952494D010000000000040000004C4F4F4D010000000000070000
-      005355504C494552010000000000}
+      005355504C4945520100000000000700000041464C5F504A49010000000000}
     Master = QMaster
     MasterFields = 'NO_REG'
     DetailFields = 'NO_REG'
@@ -9629,6 +9632,10 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
     object QDetailSUPLIER: TStringField
       FieldName = 'SUPLIER'
       Size = 50
+    end
+    object QDetailAFL_PJI: TFloatField
+      FieldName = 'AFL_PJI'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
   end
   object dsQDetail: TwwDataSource
@@ -9814,7 +9821,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
       4E4F5F4E4F544100000000000D0000003A4B445F5452414E53414B5349050000
       000000000000000000}
     QBEDefinition.QBEFieldDefs = {
-      0400000023000000070000004E4F5F4E4F54410100000000000A00000054474C
+      0400000025000000070000004E4F5F4E4F54410100000000000A00000054474C
       5F494E534552540100000000000A0000004F50525F494E534552540100000000
       00060000004E4F5F5245470100000000000300000054474C0100000000000400
       0000475255500100000000000500000053484946540100000000000A0000004B
@@ -9833,7 +9840,8 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
       00005741524E41010000000000090000004B445F50524F534553010000000000
       0600000050524F534553010000000000040000004954454D0100000000000900
       000054474C5F4B4952494D010000000000040000004C4F4F4D01000000000007
-      0000005355504C494552010000000000}
+      0000005355504C4945520100000000000A0000004E4F54415F5052494E540100
+      000000000700000041464C5F504A49010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -9909,15 +9917,19 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
     end
     object QBrowseQTY_GULUNG: TFloatField
       FieldName = 'QTY_GULUNG'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowseQTY_POTONG: TFloatField
       FieldName = 'QTY_POTONG'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowseQTY_METER: TFloatField
       FieldName = 'QTY_METER'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowseQTY_KODI: TFloatField
       FieldName = 'QTY_KODI'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowseKET_BAWAH: TStringField
       FieldName = 'KET_BAWAH'
@@ -9973,6 +9985,10 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
       FieldName = 'SUPLIER'
       Size = 50
     end
+    object QBrowseAFL_PJI: TFloatField
+      FieldName = 'AFL_PJI'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
   end
   object dsQBrowse: TwwDataSource
     DataSet = QBrowse
@@ -9983,7 +9999,7 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
     SQL.Strings = (
       
         'select sum(qty_potong) as potong, sum(qty_meter) as meter, sum(q' +
-        'ty_kodi) as kodi '
+        'ty_kodi) as kodi, sum(afl_pji) as afl_pji '
       'from ('
       ''
       'SELECT *'
@@ -10003,8 +10019,9 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
       72206279204E4F5F4E4F544100000000000D0000003A4B445F5452414E53414B
       5349050000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
-      040000000300000006000000504F544F4E47010000000000050000004D455445
-      52010000000000040000004B4F4449010000000000}
+      040000000400000006000000504F544F4E47010000000000050000004D455445
+      52010000000000040000004B4F44490100000000000700000041464C5F504A49
+      010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -10019,19 +10036,23 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
     object QBrowseTotalKODI: TFloatField
       FieldName = 'KODI'
     end
+    object QBrowseTotalAFL_PJI: TFloatField
+      FieldName = 'AFL_PJI'
+    end
   end
   object QTotal: TOracleDataSet
     SQL.Strings = (
       
         'select sum(qty_potong) as potong, sum(qty_meter) as meter, sum(q' +
-        'ty_kodi) as kodi,  sum(qty_gulung) as gulung'
+        'ty_kodi) as kodi,  sum(qty_gulung) as gulung, sum(afl_pji) as af' +
+        'l_pji'
       'from ipisma_db5.PEMASUKAN_PAJITEX_DET a'
       'where a.no_reg = :no_reg')
     Variables.Data = {0300000001000000070000003A4E4F5F524547030000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
-      040000000400000006000000504F544F4E47010000000000050000004D455445
+      040000000500000006000000504F544F4E47010000000000050000004D455445
       52010000000000040000004B4F44490100000000000600000047554C554E4701
-      0000000000}
+      00000000000700000041464C5F504A49010000000000}
     Session = DMFrm.OS
     Left = 33
     Top = 280
@@ -10046,6 +10067,9 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
     object QTotalKODI: TFloatField
       FieldName = 'KODI'
       DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QTotalAFL_PJI: TFloatField
+      FieldName = 'AFL_PJI'
     end
   end
   object Qkon_opening: TOracleDataSet
@@ -10277,26 +10301,27 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
       '    ('
       
         '        no_reg_detail, no_reg, MESIN, ITEM, NO_ORDER, QTY_GULUNG' +
-        ', QTY_METER, SATUAN, KETERANGAN'
+        ', QTY_METER, AFL_PJI, SATUAN, KETERANGAN'
       '    ) '
       '    VALUES '
       '    ('
       
         '        IPISMA_DB5.REG_PPAJITEX_DET.nextval, :reg, :MESIN, :ITEM' +
-        ', :NO_ORDER, :QTY_GULUNG, :QTY_METER, :SATUAN, :KETERANGAN'
+        ', :NO_ORDER, :QTY_GULUNG, :QTY_METER, :AFFAL, :SATUAN, :KETERANG' +
+        'AN'
       '    );'
       ''
       '    COMMIT;'
       'END;')
     Session = DMFrm.OS
     Variables.Data = {
-      0300000008000000040000003A52454703000000000000000000000006000000
+      0300000009000000040000003A52454703000000000000000000000006000000
       3A4D4553494E050000000000000000000000050000003A4954454D0500000000
       00000000000000090000003A4E4F5F4F52444552050000000000000000000000
       0B0000003A5154595F47554C554E47040000000000000000000000070000003A
       53415455414E0500000000000000000000000B0000003A4B45544552414E4741
       4E0500000000000000000000000A0000003A5154595F4D455445520400000000
-      00000000000000}
+      00000000000000060000003A414646414C040000000000000000000000}
     Left = 456
     Top = 312
   end
@@ -10312,13 +10337,14 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
       '       konstruksi, '
       '       round(sum(nvl(qty_potong,0)),2) as potong, '
       '       round(sum(nvl(qty_meter,0)),2) as meter, '
-      '       round(sum(nvl(qty_kodi,0)),2) as kodi '
+      '       round(sum(nvl(qty_kodi,0)),2) as kodi,'
+      #9'round(sum(nvl(afl_pji,0)),2) as afl_pji'
       
         'from (select * from ipisma_db5.VPPAJITEX where ispost='#39'1'#39' and tg' +
         'l >= :pawal and tgl <= :pakhir) t'
       
-        'where nvl(qty_potong,0)+nvl(qty_meter,0)+nvl(qty_kodi,0) <> 0 an' +
-        'd kd_transaksi in (:kd_transaksi)'
+        'where nvl(qty_potong,0)+nvl(qty_meter,0)+nvl(qty_kodi,0)+nvl(afl' +
+        '_pji,0) <> 0 and kd_transaksi in (:kd_transaksi)'
       'group by kd_produksi, konstruksi'
       'order by kd_produksi) :myparam'
       '')
@@ -10331,8 +10357,8 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
     QBEDefinition.QBEFieldDefs = {
       04000000060000000A0000004B4F4E535452554B534901000000000002000000
       4B5001000000000006000000504F544F4E47010000000000050000004D455445
-      52010000000000040000004B4F44490100000000000A0000004E4F54415F5052
-      494E54010000000000}
+      52010000000000040000004B4F44490100000000000700000041464C5F504A49
+      010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -10349,12 +10375,19 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
     end
     object QBrowseRekapPOTONG: TFloatField
       FieldName = 'POTONG'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowseRekapMETER: TFloatField
       FieldName = 'METER'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowseRekapKODI: TFloatField
       FieldName = 'KODI'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowseRekapAFL_PJI: TFloatField
+      FieldName = 'AFL_PJI'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
   end
   object dsQBrowseRekap: TwwDataSource
@@ -10366,19 +10399,20 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
     SQL.Strings = (
       
         'select sum(potong) as potong, sum(meter) as meter, sum(kodi) as ' +
-        'kodi from ('
+        'kodi, sum(afl_pji) as afl_pji from ('
       'select * from ('
       'select kd_produksi as kp, '
       '       konstruksi, '
       '       round(sum(nvl(qty_potong,0)),2) as potong, '
       '       round(sum(nvl(qty_meter,0)),2) as meter, '
-      '       round(sum(nvl(qty_kodi,0)),2) as kodi '
+      '       round(sum(nvl(qty_kodi,0)),2) as kodi,'
+      #9'round(sum(nvl(afl_pji,0)),2) as afl_pji '
       
         'from (select * from ipisma_db5.VPPAJITEX where ispost='#39'1'#39' and tg' +
         'l >= :pawal and tgl <= :pakhir) t'
       
-        'where nvl(qty_potong,0)+nvl(qty_meter,0)+nvl(qty_kodi,0) <> 0 an' +
-        'd kd_transaksi in (:kd_transaksi)'
+        'where nvl(qty_potong,0)+nvl(qty_meter,0)+nvl(qty_kodi,0)+nvl(afl' +
+        '_pji,0) <> 0 and kd_transaksi in (:kd_transaksi)'
       'group by kd_produksi, konstruksi'
       'order by kd_produksi) :myparam)'
       '')
@@ -10389,8 +10423,9 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
       00787D020101010100000000070000003A50414B4849520C0000000700000078
       7D021C01010100000000}
     QBEDefinition.QBEFieldDefs = {
-      040000000300000006000000504F544F4E47010000000000050000004D455445
-      52010000000000040000004B4F4449010000000000}
+      040000000400000006000000504F544F4E47010000000000050000004D455445
+      52010000000000040000004B4F44490100000000000700000041464C5F504A49
+      010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -10404,6 +10439,9 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
     end
     object QBrowseRekapTotKODI: TFloatField
       FieldName = 'KODI'
+    end
+    object QBrowseRekapTotAFL_PJI: TFloatField
+      FieldName = 'AFL_PJI'
     end
   end
   object QSuplier: TOracleDataSet
@@ -10511,8 +10549,8 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
       00003A5054474C0C0000000000000000000000}
     QBEDefinition.QBEFieldDefs = {0400000001000000060000004E4F5F4C5042010000000000}
     Session = DMFrm.OS
-    Left = 832
-    Top = 176
+    Left = 840
+    Top = 120
     object FNo_Urut_LPB2NO_LPB: TStringField
       FieldName = 'NO_LPB'
       Size = 4000
@@ -10525,8 +10563,8 @@ object ReinspecPajitexFrm: TReinspecPajitexFrm
         'pb_pajitex t')
     QBEDefinition.QBEFieldDefs = {04000000010000000A0000004E4F54415F5052494E54010000000000}
     Session = DMFrm.OS
-    Left = 920
-    Top = 248
+    Left = 1008
+    Top = 208
     object QNota_LPBNOTA_PRINT: TStringField
       FieldName = 'NOTA_PRINT'
       Size = 100

@@ -5912,8 +5912,8 @@ object KoreksiFrm: TKoreksiFrm
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
-    Left = 420
-    Top = 299
+    Left = 500
+    Top = 315
     object QCekHandprintCEK: TFloatField
       FieldName = 'CEK'
     end

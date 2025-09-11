@@ -953,7 +953,7 @@ object DMFrm: TDMFrm
       Size = 6
     end
     object QLookKdProduksiSUB_KELOMPOK: TStringField
-      DisplayWidth = 255
+      DisplayWidth = 30
       FieldName = 'SUB_KELOMPOK'
       Size = 255
     end
@@ -1340,9 +1340,9 @@ object DMFrm: TDMFrm
   end
   object QPalet: TOracleDataSet
     SQL.Strings = (
-      'select distinct palet'
-      'from ipisma_db1.palet_bs_reinspek'
-      'order by to_number(replace(palet, '#39'PALET '#39', '#39#39'))'
+      'select palet'
+      'from ipisma_db5.palet'
+      'ORDER BY ID'
       '')
     QBEDefinition.QBEFieldDefs = {04000000010000000500000050414C4554010000000000}
     Session = OS

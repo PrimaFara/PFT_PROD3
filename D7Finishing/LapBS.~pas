@@ -33,7 +33,6 @@ type
     wwDBGrid1xxxxx: TwwDBGrid;
     Label1: TLabel;
     QDump: TOracleQuery;
-    BitBtn6: TBitBtn;
     QuickRep1: TQuickRep;
     DetailBand1: TQRBand;
     QRDBText3: TQRDBText;
@@ -317,15 +316,53 @@ type
     QBrowseTotalTOTAL_QA: TFloatField;
     QBrowseTotalTOTAL_JAHIT: TFloatField;
     QBrowseTotalTOTAL_KEMAS: TFloatField;
-    QBrowseKP: TStringField;
-    QBrowseKONSTRUKSI: TStringField;
     QBrowseTOTAL_QA: TFloatField;
     QBrowseTOTAL_JAHIT: TFloatField;
     QBrowseTOTAL_KEMAS: TFloatField;
     BitBtn11: TBitBtn;
     Label9: TLabel;
     cbOtomatis5: TCheckBox;
-    cbStok5: TCheckBox;
+    QBrowseKELOMPOK: TStringField;
+    QBrowseTOTKEMAS_LELANG: TFloatField;
+    QBrowseTotalTOTKEMAS_LELANG: TFloatField;
+    TabSheet4: TTabSheet;
+    wwDBNavigator1: TwwDBNavigator;
+    wwDBNavigator1First: TwwNavButton;
+    wwDBNavigator1PriorPage: TwwNavButton;
+    wwDBNavigator1Prior: TwwNavButton;
+    wwDBNavigator1Next: TwwNavButton;
+    wwDBNavigator1NextPage: TwwNavButton;
+    wwDBNavigator1Last: TwwNavButton;
+    wwDBNavigator1Insert: TwwNavButton;
+    wwDBNavigator1Delete: TwwNavButton;
+    wwDBNavigator1Edit: TwwNavButton;
+    wwDBNavigator1Post: TwwNavButton;
+    wwDBNavigator1Cancel: TwwNavButton;
+    wwDBNavigator1Refresh: TwwNavButton;
+    wwDBNavigator1SaveBookmark: TwwNavButton;
+    wwDBNavigator1RestoreBookmark: TwwNavButton;
+    wwDBNavigator1FilterDialog: TwwNavButton;
+    wwDBNavigator1SearchDialog: TwwNavButton;
+    wwDBGrid3: TwwDBGrid;
+    QuickRep5: TQuickRep;
+    QRBand9: TQRBand;
+    QRLabel23: TQRLabel;
+    ColumnHeaderBand1: TQRBand;
+    QRLabel39: TQRLabel;
+    QRBand10: TQRBand;
+    QRDBText38: TQRDBText;
+    QRBand11: TQRBand;
+    QRGroup1: TQRGroup;
+    QRExpr2: TQRExpr;
+    QRGroup2: TQRGroup;
+    QRLNo: TQRLabel;
+    QRExpr4: TQRExpr;
+    QRBand12: TQRBand;
+    QKelompokBarang: TOracleDataSet;
+    QKelompokBarangKP: TStringField;
+    QKelompokBarangKELOMPOK: TStringField;
+    dsQKelompokBarang: TwwDataSource;
+    LookKP: TwwDBLookupComboDlg;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure ColumnHeaderBand1BeforePrint(Sender: TQRCustomBand;
@@ -371,9 +408,12 @@ type
       var PrintBand: Boolean);
     procedure BitBtn11Click(Sender: TObject);
     procedure cbOtomatis5Click(Sender: TObject);
-    procedure cbStok5Click(Sender: TObject);
     procedure ECariChange(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
+    procedure LookKPClick(Sender: TObject);
+    procedure LookKPEnter(Sender: TObject);
+    procedure LookKPCloseUp(Sender: TObject; LookupTable,
+      FillTable: TDataSet; modified: Boolean);
   private
     { Private declarations }
     vTab,vfilter,vorder : string;
@@ -508,6 +548,8 @@ begin
   VTglAkhir3.CalendarAttributes.PopupYearOptions.StartYear:=YearOf(Date())-2;
   VTglAkhir3.Date:=Trunc(date());
 {azmi}
+
+  QKelompokBarang.Open;
 end;
 
 procedure TLapBSFrm.QBrowseAfterScroll(DataSet: TDataSet);
@@ -860,14 +902,14 @@ begin
                 end;
             end;
         end;
-
+    SHOWMESSAGE(VFILTER);
     QBrowse.Close;
 
     QDump.Close;
     QDump.SetVariable('ptgl',VTglAwal.Date);
     QDump.Execute;
 
-    vorder:=' order by kp';
+    vorder:=' order by kelompok';
 
     QBrowse.SetVariable('myparam',vfilter+vorder);
     QBrowse.Open;
@@ -879,6 +921,7 @@ begin
     wwDBGrid1xxxxx.ColumnByName('total_qa').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QBrowseTotaltotal_qa.AsFloat);
     wwDBGrid1xxxxx.ColumnByName('total_jahit').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QBrowseTotaltotal_jahit.AsFloat);
     wwDBGrid1xxxxx.ColumnByName('total_kemas').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QBrowseTotaltotal_kemas.AsFloat);
+    wwDBGrid1xxxxx.ColumnByName('totkemas_lelang').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QBrowseTotalTOTKEMAS_LELANG.AsFloat);
 
     //QBrowseTotal.Refresh;
 
@@ -893,11 +936,6 @@ if cbOtomatis5.Checked then
   end
     else
     wwDBGrid1xxxxx.Options:=wwDBGrid1xxxxx.Options-[dgAlwaysShowSelection];
-end;
-
-procedure TLapBSFrm.cbStok5Click(Sender: TObject);
-begin
-  QBrowse.Filtered:=cbStok5.Checked;
 end;
 
 procedure TLapBSFrm.ECariChange(Sender: TObject);
@@ -954,7 +992,7 @@ begin
             if QBrowse.Active then
             vorder := ' order by ' + wwDBGrid1xxxxx.Columns[0].FieldName
             else
-            vorder := ' order by kp, konstruksi';
+            vorder := ' order by kelompok';
         end;
 
         QBrowse.SetVariable('myparam', vfilter + vorder);
@@ -970,10 +1008,28 @@ begin
             wwDBGrid1xxxxx.ColumnByName('total_qa').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QBrowseTotaltotal_qa.AsFloat);
             wwDBGrid1xxxxx.ColumnByName('total_jahit').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QBrowseTotaltotal_jahit.AsFloat);
             wwDBGrid1xxxxx.ColumnByName('total_kemas').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QBrowseTotaltotal_kemas.AsFloat);
+            wwDBGrid1xxxxx.ColumnByName('totkemas_lelang').FooterValue:=FormatFloat('0.0,0;(0.0,0);-',QBrowseTotalTOTKEMAS_LELANG.AsFloat);
 
         QBrowseTotal.Refresh;
     end;
 end;
 
+
+procedure TLapBSFrm.LookKPClick(Sender: TObject);
+begin
+   DMFrm.QLookKdProduksi.Open;
+end;
+
+procedure TLapBSFrm.LookKPEnter(Sender: TObject);
+begin
+   DMFrm.QLookKdProduksi.Open;
+end;
+
+procedure TLapBSFrm.LookKPCloseUp(Sender: TObject; LookupTable,
+  FillTable: TDataSet; modified: Boolean);
+begin
+if modified then
+    QKelompokBarangKP.AsString:=DMFrm.QLookKdProduksiKD_PRODUKSI.AsString;
+end;
 
 end.

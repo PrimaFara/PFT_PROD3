@@ -970,7 +970,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        76.729166666666680000
+        76.729166666666660000
         2000.250000000000000000)
       BandType = rbPageFooter
       object QRDBText2: TQRDBText
@@ -1043,7 +1043,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
           44.979166666666670000
           883.708333333333400000
           21.166666666666670000
-          232.833333333333400000)
+          232.833333333333300000)
         Alignment = taCenter
         AlignToBand = True
         AutoSize = False
@@ -1077,7 +1077,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        264.583333333333400000
+        264.583333333333300000
         2000.250000000000000000)
       BandType = rbGroupFooter
       object QRDBText4: TQRDBText
@@ -3262,6 +3262,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
           'TOT_B2'#9'6'#9'B2'#9'F'
           'AFL_PRINT'#9'6'#9'PRINT'#9'F'#9'AFFAL'
           'AFL_NDAK_CABOT'#9'6'#9'NDAK CABOT'#9'F'#9'AFFAL'
+          'AFL_PJI'#9'10'#9'PAJITEX'#9'F'#9'AFFAL'
           'PENYESUAIAN'#9'10'#9'PENYESUAIAN'#9'F')
         IniAttributes.Enabled = True
         IniAttributes.SaveToRegistry = True
@@ -7223,8 +7224,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
-    Left = 412
-    Top = 283
+    Left = 532
+    Top = 299
     object QCekOrderCON: TFloatField
       FieldName = 'CON'
     end
@@ -8233,7 +8234,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
       000000090000003A4E4F5F4F52444552050000000A0000003735342F33312F31
       300000000000}
     Left = 189
-    Top = 656
+    Top = 560
   end
   object QBrowse4: TOracleDataSet
     SQL.Strings = (
@@ -8889,13 +8890,14 @@ object DefectReinspectFrm: TDefectReinspectFrm
       'insert into ipisma_db5.bukti3_detail'
       
         '(no_reg_detail,no_reg,no_seri_beam, konstruksi, qty, qty_terima,' +
-        'kd_konstruksi,jenis,no_desain,'
+        ' afl_pji,kd_konstruksi,jenis,no_desain,'
       
         ' mesin_tenun,kode_prod,no_po,keterangan,corak,qty_org,tgl_jth_te' +
         'mpo,proses,no_mesin,qty2,rekanan)'
       
         '(select IPISMA_DB5.REG_BUKTI3_DETAIL.nextval,:no_reg,no_reg_deta' +
-        'il,konstruksi,sisa,terima,kd_konstruksi,jenis,no_order,'
+        'il,konstruksi,sisa,terima, sisa_afl_pji,kd_konstruksi,jenis,no_o' +
+        'rder,'
       
         ' mesin,kp,warna,item,corak,gulung,tgl_terima,proses,loom,terima_' +
         'meter,suplier from ipisma_db5.VSISA_ORDER_TERIMA_MITRA2'
@@ -8915,7 +8917,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
       000000090000003A4E4F5F4F52444552050000000A0000003735342F33312F31
       300000000000}
     Left = 277
-    Top = 656
+    Top = 552
   end
   object QBrowse_rekap2: TOracleDataSet
     SQL.Strings = (
@@ -8974,7 +8976,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
         ', sum(tot_b1) as tot_b1, sum(tot_b2) as tot_b2,'
       
         '       sum(afl_print) as afl_print, sum(afl_ndak_cabot) as afl_n' +
-        'dak_cabot, sum(qty)-max(qty_terima) as penyesuaian'
+        'dak_cabot, sum(afl_pji) as afl_pji, sum(qty)-max(qty_terima) as ' +
+        'penyesuaian'
       'from (       '
       
         'select :tgl,a.kd_transaksi, a.no_seri_beam,a.no_order,a.kp,a.kon' +
@@ -8989,7 +8992,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
         ') as tot_b2,'
       
         '       sum(afl_print) as afl_print, sum(afl_ndak_cabot) as afl_n' +
-        'dak_cabot'
+        'dak_cabot, sum(afl_pji) as afl_pji'
       
         'from (select * from (select * from ipisma_db5.vhasil_defect_mitr' +
         'a where ispost = '#39'1'#39') :myparam) a'
@@ -9022,25 +9025,26 @@ object DefectReinspectFrm: TDefectReinspectFrm
       72206279206E6F5F6F726465720000000000060000003A504157414C0C000000
       07000000787C0C0101010100000000070000003A50414B4849520C0000000700
       0000787C0C1F010101000000000D0000003A4B445F5452414E53414B53490500
-      00000000000000000000040000003A54474C010000000000000000000000}
+      00000000000000000000040000003A54474C0100000006000000612E74676C00
+      00000000}
     QBEDefinition.QBEFieldDefs = {
       04000000100000000A0000004B4F4E535452554B534901000000000005000000
       4D4553494E010000000000080000004E4F5F4F52444552010000000000020000
       004B500100000000000B00000050454E594553554149414E0100000000000C00
       00004E4F5F534552495F4245414D01000000000002000000424B010000000000
       0800000042535F50415241480100000000000A0000005154595F544552494D41
-      010000000000030000005154590100000000000300000054474C010000000000
-      06000000544F545F423101000000000006000000544F545F4232010000000000
-      0900000041464C5F5052494E540100000000000E00000041464C5F4E44414B5F
-      4341424F540100000000000C0000004B445F5452414E53414B53490100000000
-      00}
+      0100000000000300000051545901000000000006000000544F545F4231010000
+      00000006000000544F545F42320100000000000900000041464C5F5052494E54
+      0100000000000E00000041464C5F4E44414B5F4341424F540100000000000C00
+      00004B445F5452414E53414B53490100000000000700000041464C5F504A4901
+      0000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
     AfterScroll = QBrowse2AfterScroll
     OnCalcFields = QBrowse2CalcFields
-    Left = 908
-    Top = 161
+    Left = 324
+    Top = 233
     object QBrowse_rekap2NO_SERI_BEAM: TStringField
       FieldName = 'NO_SERI_BEAM'
       Size = 30
@@ -9066,18 +9070,23 @@ object DefectReinspectFrm: TDefectReinspectFrm
     end
     object QBrowse_rekap2QTY: TFloatField
       FieldName = 'QTY'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_rekap2BK: TFloatField
       FieldName = 'BK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_rekap2BS_PARAH: TFloatField
       FieldName = 'BS_PARAH'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_rekap2TOT_B1: TFloatField
       FieldName = 'TOT_B1'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_rekap2TOT_B2: TFloatField
       FieldName = 'TOT_B2'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_rekap2PENYESUAIAN: TFloatField
       FieldName = 'PENYESUAIAN'
@@ -9085,14 +9094,20 @@ object DefectReinspectFrm: TDefectReinspectFrm
     end
     object QBrowse_rekap2AFL_PRINT: TFloatField
       FieldName = 'AFL_PRINT'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_rekap2AFL_NDAK_CABOT: TFloatField
       FieldName = 'AFL_NDAK_CABOT'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
     object QBrowse_rekap2KD_TRANSAKSI: TStringField
       FieldName = 'KD_TRANSAKSI'
       Required = True
       Size = 3
+    end
+    object QBrowse_rekap2AFL_PJI: TFloatField
+      FieldName = 'AFL_PJI'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
   end
   object dsQBrowse_rekap2: TwwDataSource
@@ -9160,7 +9175,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
         'b2) as tot_b2,'
       
         'sum(afl_print) as afl_print, sum(afl_ndak_cabot) as afl_ndak_cab' +
-        'ot, sum(penyesuaian) as penyesuaian from ('
+        'ot, sum(afl_pji) as afl_pji, sum(penyesuaian) as penyesuaian fro' +
+        'm ('
       
         'select kd_transaksi, no_seri_beam,no_order,kp, konstruksi,mesin,' +
         'max(qty_terima) as qty_terima, '
@@ -9169,7 +9185,8 @@ object DefectReinspectFrm: TDefectReinspectFrm
         ', sum(tot_b1) as tot_b1, sum(tot_b2) as tot_b2,'
       
         '       sum(afl_print) as afl_print, sum(afl_ndak_cabot) as afl_n' +
-        'dak_cabot, sum(qty)-max(qty_terima) as penyesuaian'
+        'dak_cabot, sum(afl_pji) as afl_pji, sum(qty)-max(qty_terima) as ' +
+        'penyesuaian'
       'from (       '
       
         'select :tgl,a.kd_transaksi, a.no_seri_beam,a.no_order,a.kp,a.kon' +
@@ -9184,7 +9201,7 @@ object DefectReinspectFrm: TDefectReinspectFrm
         ') as tot_b2,'
       
         '       sum(afl_print) as afl_print, sum(afl_ndak_cabot) as afl_n' +
-        'dak_cabot'
+        'dak_cabot, sum(afl_pji) as afl_pji'
       
         'from (select * from (select * from ipisma_db5.vhasil_defect_mitr' +
         'a where ispost = '#39'1'#39') :myparam) a'
@@ -9219,19 +9236,20 @@ object DefectReinspectFrm: TDefectReinspectFrm
       72206279206E6F5F6F726465720000000000060000003A504157414C0C000000
       07000000787C0C0101010100000000070000003A50414B4849520C0000000700
       0000787C0C1F010101000000000D0000003A4B445F5452414E53414B53490500
-      00000000000000000000040000003A54474C010000000000000000000000}
+      00000000000000000000040000003A54474C0100000006000000612E74676C00
+      00000000}
     QBEDefinition.QBEFieldDefs = {
-      04000000090000000B00000050454E594553554149414E010000000000020000
+      040000000A0000000B00000050454E594553554149414E010000000000020000
       00424B0100000000000800000042535F50415241480100000000000A00000051
       54595F544552494D410100000000000300000051545901000000000006000000
       544F545F423101000000000006000000544F545F423201000000000009000000
       41464C5F5052494E540100000000000E00000041464C5F4E44414B5F4341424F
-      54010000000000}
+      540100000000000700000041464C5F504A49010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
-    Left = 308
-    Top = 289
+    Left = 324
+    Top = 297
     object QBrowse_rekap2_totQTY_TERIMA: TFloatField
       FieldName = 'QTY_TERIMA'
     end
@@ -9258,6 +9276,9 @@ object DefectReinspectFrm: TDefectReinspectFrm
     end
     object QBrowse_rekap2_totAFL_NDAK_CABOT: TFloatField
       FieldName = 'AFL_NDAK_CABOT'
+    end
+    object QBrowse_rekap2_totAFL_PJI: TFloatField
+      FieldName = 'AFL_PJI'
     end
   end
   object QLookLoom: TOracleDataSet

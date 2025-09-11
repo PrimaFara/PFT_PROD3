@@ -542,6 +542,7 @@ type
     BitBtn14: TBitBtn;
     QDetailPALET: TStringField;
     LookPalet: TwwDBLookupComboDlg;
+    QBrowsePALET: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
