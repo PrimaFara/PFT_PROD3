@@ -86,7 +86,6 @@ type
     Label16: TLabel;
     LMDGlobalHotKey1: TLMDGlobalHotKey;
     QTotal: TOracleDataSet;
-    QTotalQTY: TFloatField;
     wwRecordViewDialog1: TwwRecordViewDialog;
     Look_KP: TwwDBLookupComboDlg;
     QBrowse: TOracleDataSet;
@@ -280,6 +279,7 @@ type
     QDetailKNT: TFloatField;
     QDetailKETERANGAN: TStringField;
     QDetailDITERIMA: TFloatField;
+    QTotalQTY: TFloatField;
     procedure QMasterBeforeEdit(DataSet: TDataSet);
     procedure QDetailNewRecord(DataSet: TDataSet);
     procedure QMasterNewRecord(DataSet: TDataSet);
@@ -476,13 +476,13 @@ begin
         QAmbilData2.SQL.Add('insert into ipisma_db5.hasil_tenun_detail (no_reg_tenun, satuan, no_seri_beam, qty, no_reg, proses, lokasi, konstruksi,');
         QAmbilData2.SQL.Add(' corak, tanggal, nik, opr_tenun, no_produksi, grup, kd_konstruksi,  kd_corak, qty3, no_desain, mesin, kd_produksi, jenis,tgl_ptg)');
         QAmbilData2.SQL.Add(' (select a.no_reg, a.satuan, a.no_seri_beam, a.qty, '+TerimaDariFinishingFrm.QMasterNO_REG.AsString+', a.proses, a.lokasi, a.konstruksi,');
-        QAmbilData2.SQL.Add(' a.corak, a.tanggal, a.nik, a.opr_tenun, a.no_produksi, a.grup, b.kd_konstruksi, c.kd_corak, a.qty, a.no_desain, a.jenis_mesin, a.kp, c.jenis, a.tgl_ptg from ipisma_db4.vdesain_hasil_tenun_detail a, ipisma_db2.konstruksi b, ipisma_db2.corak c');
+        QAmbilData2.SQL.Add(' a.corak, a.tanggal, a.nik, a.opr_tenun, a.no_produksi, a.grup, b.kd_konstruksi, c.kd_corak, a.qty, a.no_desain, a.jenis_mesin, a.kp, c.jenis, a.tgl_ptg from ipisma_db4.vdesain_hasil_tenun_detail a, ipisma_db2.konstruksi@sales b, ipisma_db2.corak c');
         QAmbilData2.SQL.Add('where a.qty>0 and TRIM(RTRIM(UPPER(a.konstruksi),'+'''BK'''+'))=TRIM(RTRIM(UPPER(b.nama_konstruksi),'+'''BK'''+')) and TRIM(UPPER(a.corak))=TRIM(UPPER(c.nama_corak)) and a.tgl_ptg=to_date('''+formatdatetime('dd/mm/yyyy',wwDBDateTimePicker2.Date)+''',''dd/mm/yyyy'')');
         //QAmbilData2.SQL.Add('where a.qty>0 and TRIM(RTRIM(UPPER(a.konstruksi),'+'''BK'''+'))=TRIM(RTRIM(UPPER(b.nama_konstruksi),'+'''BK'''+')) and a.tgl_ptg=to_date('''+formatdatetime('dd/mm/yyyy',wwDBDateTimePicker2.Date)+''',''dd/mm/yyyy'')');
         //QAmbilData2.SQL.Add(' and c.jenis LIKE '+'''S'''+' and (a.grup like '''+Edit4.Text+'%'') and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
         //QAmbilData2.SQL.Add(' and c.jenis LIKE '+'''S'''+' and (a.grup like '''+Edit4.Text+'%'') and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
         //QAmbilData2.SQL.Add(' and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
-        QAmbilData2.SQL.Add(' and c.jenis LIKE '+'''S'''+' and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
+        QAmbilData2.SQL.Add('and b.status LIKE '+'''1'''+' and c.jenis LIKE '+'''S'''+' and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
         QAmbilData2.Execute;
         QDetail.Close;
         QDetail.SetVariable('myorder',' order by proses, grup');
@@ -500,13 +500,13 @@ else if RAmbil.ItemIndex = 1 then //NON SARUNG
         QAmbilData2.SQL.Add('insert into ipisma_db5.hasil_tenun_detail (no_reg_tenun, satuan, no_seri_beam, qty, no_reg, proses, lokasi, konstruksi,');
         QAmbilData2.SQL.Add(' corak, tanggal, nik, opr_tenun, no_produksi, grup, kd_konstruksi,  kd_corak, qty3, no_desain, mesin, kd_produksi, jenis,tgl_ptg)');
         QAmbilData2.SQL.Add(' (select a.no_reg, a.satuan, a.no_seri_beam, a.qty, '+TerimaDariFinishingFrm.QMasterNO_REG.AsString+', a.proses, a.lokasi, a.konstruksi,');
-        QAmbilData2.SQL.Add(' a.corak, a.tanggal, a.nik, a.opr_tenun, a.no_produksi, a.grup, b.kd_konstruksi, c.kd_corak, a.qty, a.no_desain, a.jenis_mesin, a.kp, c.jenis, a.tgl_ptg from ipisma_db4.vdesain_hasil_tenun_detail a, ipisma_db2.konstruksi b, ipisma_db2.corak c');
+        QAmbilData2.SQL.Add(' a.corak, a.tanggal, a.nik, a.opr_tenun, a.no_produksi, a.grup, b.kd_konstruksi, c.kd_corak, a.qty, a.no_desain, a.jenis_mesin, a.kp, c.jenis, a.tgl_ptg from ipisma_db4.vdesain_hasil_tenun_detail a, ipisma_db2.konstruksi@sales b, ipisma_db2.corak c');
         QAmbilData2.SQL.Add('where a.qty>0 and TRIM(RTRIM(UPPER(a.konstruksi),'+'''BK'''+'))=TRIM(RTRIM(UPPER(b.nama_konstruksi),'+'''BK'''+')) and TRIM(UPPER(a.corak))=TRIM(UPPER(c.nama_corak)) and a.tgl_ptg=to_date('''+formatdatetime('dd/mm/yyyy',wwDBDateTimePicker2.Date)+''',''dd/mm/yyyy'')');
         //QAmbilData2.SQL.Add('where a.qty>0 and TRIM(RTRIM(UPPER(a.konstruksi),'+'''BK'''+'))=TRIM(RTRIM(UPPER(b.nama_konstruksi),'+'''BK'''+')) and a.tgl_ptg=to_date('''+formatdatetime('dd/mm/yyyy',wwDBDateTimePicker2.Date)+''',''dd/mm/yyyy'')');
         //QAmbilData2.SQL.Add(' and c.jenis LIKE '+'''S'''+' and (a.grup like '''+Edit4.Text+'%'') and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
         //QAmbilData2.SQL.Add(' and c.jenis LIKE '+'''S'''+' and (a.grup like '''+Edit4.Text+'%'') and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
         //QAmbilData2.SQL.Add(' and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
-        QAmbilData2.SQL.Add(' and c.jenis LIKE '+'''NS'''+' and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
+        QAmbilData2.SQL.Add('and b.status LIKE '+'''1'''+' and c.jenis LIKE '+'''NS'''+' and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
         QAmbilData2.Execute;
         QDetail.Close;
         QDetail.SetVariable('myorder',' order by proses, grup');
@@ -524,14 +524,14 @@ else if RAmbil.ItemIndex = 2 then //NOTA SARUNG
         QAmbilData2.SQL.Add('insert into ipisma_db5.hasil_tenun_detail (no_reg_tenun, satuan, no_seri_beam, qty, no_reg, proses, lokasi, konstruksi,');
         QAmbilData2.SQL.Add(' corak, tanggal, nik, opr_tenun, no_produksi, grup, kd_konstruksi,  kd_corak, qty3, no_desain, mesin, kd_produksi, jenis,tgl_ptg)');
         QAmbilData2.SQL.Add(' (select a.no_reg, a.satuan, a.no_seri_beam, a.qty, '+TerimaDariFinishingFrm.QMasterNO_REG.AsString+', a.proses, a.lokasi, a.konstruksi,');
-        QAmbilData2.SQL.Add(' a.corak, a.tanggal, a.nik, a.opr_tenun, a.no_produksi, a.grup, b.kd_konstruksi, c.kd_corak, a.qty, a.no_desain, a.jenis_mesin, a.kp, c.jenis, a.tgl_ptg from ipisma_db4.vdesain_hasil_tenun_detail a, ipisma_db2.konstruksi b, ipisma_db2.corak c');
+        QAmbilData2.SQL.Add(' a.corak, a.tanggal, a.nik, a.opr_tenun, a.no_produksi, a.grup, b.kd_konstruksi, c.kd_corak, a.qty, a.no_desain, a.jenis_mesin, a.kp, c.jenis, a.tgl_ptg from ipisma_db4.vdesain_hasil_tenun_detail a, ipisma_db2.konstruksi@sales b, ipisma_db2.corak c');
         QAmbilData2.SQL.Add('where a.qty>0 and TRIM(RTRIM(UPPER(a.konstruksi),'+'''BK'''+'))=TRIM(RTRIM(UPPER(b.nama_konstruksi),'+'''BK'''+')) and TRIM(UPPER(a.corak))=TRIM(UPPER(c.nama_corak)) and a.tgl_ptg=to_date('''+formatdatetime('dd/mm/yyyy',wwDBDateTimePicker2.Date)+''',''dd/mm/yyyy'')');
         //QAmbilData2.SQL.Add('where a.qty>0 and TRIM(RTRIM(UPPER(a.konstruksi),'+'''BK'''+'))=TRIM(RTRIM(UPPER(b.nama_konstruksi),'+'''BK'''+')) and a.tgl_ptg=to_date('''+formatdatetime('dd/mm/yyyy',wwDBDateTimePicker2.Date)+''',''dd/mm/yyyy'')');
         //QAmbilData2.SQL.Add(' and c.jenis LIKE '+'''S'''+' and (a.grup like '''+Edit4.Text+'%'') and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
         //QAmbilData2.SQL.Add(' and c.jenis LIKE '+'''S'''+' and (a.grup like '''+Edit4.Text+'%'') and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
         //QAmbilData2.SQL.Add(' and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
-        QAmbilData2.SQL.Add('and (a.no_reg like '''+Edit7.Text+'%'') and c.jenis LIKE '+'''S'''+' and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
-        
+        QAmbilData2.SQL.Add('and b.status LIKE '+'''1'''+' and (a.no_reg like '''+Edit7.Text+'%'') and c.jenis LIKE '+'''S'''+' and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
+
         QAmbilData2.Execute;
         QDetail.Close;
         QDetail.SetVariable('myorder',' order by proses, grup');
@@ -549,13 +549,13 @@ else if RAmbil.ItemIndex = 3 then
         QAmbilData2.SQL.Add('insert into ipisma_db5.hasil_tenun_detail (no_reg_tenun, satuan, no_seri_beam, qty, no_reg, proses, lokasi, konstruksi,');
         QAmbilData2.SQL.Add(' corak, tanggal, nik, opr_tenun, no_produksi, grup, kd_konstruksi,  kd_corak, qty3, no_desain, mesin, kd_produksi, jenis,tgl_ptg)');
         QAmbilData2.SQL.Add(' (select a.no_reg, a.satuan, a.no_seri_beam, a.qty, '+TerimaDariFinishingFrm.QMasterNO_REG.AsString+', a.proses, a.lokasi, a.konstruksi,');
-        QAmbilData2.SQL.Add(' a.corak, a.tanggal, a.nik, a.opr_tenun, a.no_produksi, a.grup, b.kd_konstruksi, c.kd_corak, a.qty, a.no_desain, a.jenis_mesin, a.kp, c.jenis, a.tgl_ptg from ipisma_db4.vdesain_hasil_tenun_detail a, ipisma_db2.konstruksi b, ipisma_db2.corak c');
+        QAmbilData2.SQL.Add(' a.corak, a.tanggal, a.nik, a.opr_tenun, a.no_produksi, a.grup, b.kd_konstruksi, c.kd_corak, a.qty, a.no_desain, a.jenis_mesin, a.kp, c.jenis, a.tgl_ptg from ipisma_db4.vdesain_hasil_tenun_detail a, ipisma_db2.konstruksi@sales b, ipisma_db2.corak c');
         QAmbilData2.SQL.Add('where a.qty>0 and TRIM(RTRIM(UPPER(a.konstruksi),'+'''BK'''+'))=TRIM(RTRIM(UPPER(b.nama_konstruksi),'+'''BK'''+')) and TRIM(UPPER(a.corak))=TRIM(UPPER(c.nama_corak)) and a.tgl_ptg=to_date('''+formatdatetime('dd/mm/yyyy',wwDBDateTimePicker2.Date)+''',''dd/mm/yyyy'')');
         //QAmbilData2.SQL.Add('where a.qty>0 and TRIM(RTRIM(UPPER(a.konstruksi),'+'''BK'''+'))=TRIM(RTRIM(UPPER(b.nama_konstruksi),'+'''BK'''+')) and a.tgl_ptg=to_date('''+formatdatetime('dd/mm/yyyy',wwDBDateTimePicker2.Date)+''',''dd/mm/yyyy'')');
         //QAmbilData2.SQL.Add(' and c.jenis LIKE '+'''S'''+' and (a.grup like '''+Edit4.Text+'%'') and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
         //QAmbilData2.SQL.Add(' and c.jenis LIKE '+'''S'''+' and (a.grup like '''+Edit4.Text+'%'') and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
         //QAmbilData2.SQL.Add(' and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
-        QAmbilData2.SQL.Add('and (a.no_reg like '''+Edit7.Text+'%'') and c.jenis LIKE '+'''NS'''+' and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
+        QAmbilData2.SQL.Add('and b.status LIKE '+'''1'''+' and (a.no_reg like '''+Edit7.Text+'%'') and c.jenis LIKE '+'''NS'''+' and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
         
         QAmbilData2.Execute;
         QDetail.Close;
@@ -574,13 +574,13 @@ else
         QAmbilData2.SQL.Add('insert into ipisma_db5.hasil_tenun_detail (no_reg_tenun, satuan, no_seri_beam, qty, no_reg, proses, lokasi, konstruksi,');
         QAmbilData2.SQL.Add(' corak, tanggal, nik, opr_tenun, no_produksi, grup, kd_konstruksi,  kd_corak, qty3, no_desain, mesin, kd_produksi, jenis,tgl_ptg)');
         QAmbilData2.SQL.Add(' (select a.no_reg, a.satuan, a.no_seri_beam, a.qty, '+TerimaDariFinishingFrm.QMasterNO_REG.AsString+', a.proses, a.lokasi, a.konstruksi,');
-        QAmbilData2.SQL.Add(' a.corak, a.tanggal, a.nik, a.opr_tenun, a.no_produksi, a.grup, b.kd_konstruksi, c.kd_corak, a.qty, a.no_desain, a.jenis_mesin, a.kp, c.jenis, a.tgl_ptg from ipisma_db4.vdesain_hasil_tenun_detail a, ipisma_db2.konstruksi b, ipisma_db2.corak c');
+        QAmbilData2.SQL.Add(' a.corak, a.tanggal, a.nik, a.opr_tenun, a.no_produksi, a.grup, b.kd_konstruksi, c.kd_corak, a.qty, a.no_desain, a.jenis_mesin, a.kp, c.jenis, a.tgl_ptg from ipisma_db4.vdesain_hasil_tenun_detail a, ipisma_db2.konstruksi@sales b, ipisma_db2.corak c');
         QAmbilData2.SQL.Add('where a.qty>0 and TRIM(RTRIM(UPPER(a.konstruksi),'+'''BK'''+'))=TRIM(RTRIM(UPPER(b.nama_konstruksi),'+'''BK'''+')) and TRIM(UPPER(a.corak))=TRIM(UPPER(c.nama_corak)) and a.tgl_ptg=to_date('''+formatdatetime('dd/mm/yyyy',wwDBDateTimePicker2.Date)+''',''dd/mm/yyyy'')');
         //QAmbilData2.SQL.Add('where a.qty>0 and TRIM(RTRIM(UPPER(a.konstruksi),'+'''BK'''+'))=TRIM(RTRIM(UPPER(b.nama_konstruksi),'+'''BK'''+')) and a.tgl_ptg=to_date('''+formatdatetime('dd/mm/yyyy',wwDBDateTimePicker2.Date)+''',''dd/mm/yyyy'')');
         //QAmbilData2.SQL.Add(' and c.jenis LIKE '+'''S'''+' and (a.grup like '''+Edit4.Text+'%'') and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
         //QAmbilData2.SQL.Add(' and c.jenis LIKE '+'''S'''+' and (a.grup like '''+Edit4.Text+'%'') and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
         //QAmbilData2.SQL.Add(' and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
-        QAmbilData2.SQL.Add(' and c.jenis is null and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
+        QAmbilData2.SQL.Add('and b.status LIKE '+'''1'''+' and c.jenis is null and (a.lokasi like '''+Edit3.Text+'%'') and (a.proses like '''+Edit5.Text+'%'') and (a.no_seri_beam like '''+Edit2.Text+'%''))');
         QAmbilData2.Execute;
         QDetail.Close;
         QDetail.SetVariable('myorder',' order by proses, grup');

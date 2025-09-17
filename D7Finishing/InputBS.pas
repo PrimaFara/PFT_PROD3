@@ -289,6 +289,7 @@ type
     LookKP: TwwDBLookupComboDlg;
     QDetailMUTU: TStringField;
     LookMutuSarung: TwwDBComboBox;
+    QBrowseMUTU: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);

@@ -72,7 +72,7 @@ object LapBSFrm: TLapBSFrm
     Align = alClient
     TabOrder = 2
     object TabSheet2: TTabSheet
-      Caption = 'Laporan BS'
+      Caption = 'Laporan BS Parah'
       ImageIndex = 1
       OnShow = TabSheet2Show
       object LabelBanner: TLabel
@@ -150,7 +150,7 @@ object LapBSFrm: TLapBSFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            415.395833333333400000
+            415.395833333333300000
             1920.875000000000000000)
           BandType = rbSummary
           object QRLabel2: TQRLabel
@@ -278,9 +278,9 @@ object LapBSFrm: TLapBSFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              764.645833333333400000
+              764.645833333333300000
               10.583333333333330000
-              74.083333333333340000)
+              74.083333333333330000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -311,7 +311,7 @@ object LapBSFrm: TLapBSFrm
               44.979166666666670000
               1801.812500000000000000
               10.583333333333330000
-              74.083333333333340000)
+              74.083333333333330000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -391,7 +391,7 @@ object LapBSFrm: TLapBSFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              947.208333333333400000
+              947.208333333333300000
               322.791666666666700000
               177.270833333333300000)
             Alignment = taCenter
@@ -423,7 +423,7 @@ object LapBSFrm: TLapBSFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              947.208333333333400000
+              947.208333333333300000
               156.104166666666700000
               193.145833333333300000)
             Alignment = taLeftJustify
@@ -518,7 +518,7 @@ object LapBSFrm: TLapBSFrm
               44.979166666666670000
               928.687500000000000000
               365.125000000000000000
-              216.958333333333400000)
+              216.958333333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -549,7 +549,7 @@ object LapBSFrm: TLapBSFrm
               44.979166666666670000
               1344.083333333333000000
               306.916666666666700000
-              84.666666666666680000)
+              84.666666666666670000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -697,7 +697,7 @@ object LapBSFrm: TLapBSFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              767.291666666666800000
+              767.291666666666700000
               2.645833333333333000
               71.437500000000000000)
             Alignment = taLeftJustify
@@ -803,7 +803,7 @@ object LapBSFrm: TLapBSFrm
           ForceNewPage = False
           ParentFont = False
           Size.Values = (
-            558.270833333333400000
+            558.270833333333300000
             1920.875000000000000000)
           BandType = rbTitle
           object Label15: TLabel
@@ -823,10 +823,10 @@ object LapBSFrm: TLapBSFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
-              574.145833333333400000
+              60.854166666666670000
+              574.145833333333300000
               214.312500000000000000
-              709.083333333333400000)
+              709.083333333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -886,7 +886,7 @@ object LapBSFrm: TLapBSFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              989.541666666666800000
+              989.541666666666700000
               505.354166666666700000
               298.979166666666700000)
             Alignment = taLeftJustify
@@ -917,8 +917,8 @@ object LapBSFrm: TLapBSFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              828.145833333333400000
-              296.333333333333400000
+              828.145833333333300000
+              296.333333333333300000
               153.458333333333300000)
             Alignment = taCenter
             AlignToBand = False
@@ -948,8 +948,8 @@ object LapBSFrm: TLapBSFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              828.145833333333400000
-              351.895833333333400000
+              828.145833333333300000
+              351.895833333333300000
               153.458333333333300000)
             Alignment = taCenter
             AlignToBand = False
@@ -978,9 +978,9 @@ object LapBSFrm: TLapBSFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333340000
+              58.208333333333330000
               261.937500000000000000
-              66.145833333333340000
+              66.145833333333330000
               365.125000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -1574,9 +1574,9 @@ object LapBSFrm: TLapBSFrm
           'ID_USER'#9'*3{&,#}'#9'T'#9'T')
         Selected.Strings = (
           'KELOMPOK'#9'30'#9'BARANG'#9'F'
-          'TOTAL_QA'#9'10'#9'QA'#9'F'#9'TOTAL DEPARTEMENT (KODI)'
-          'TOTAL_JAHIT'#9'10'#9'JAHIT'#9'F'#9'TOTAL DEPARTEMENT (KODI)'
-          'TOTAL_KEMAS'#9'10'#9'KEMAS'#9'F'#9'TOTAL DEPARTEMENT (KODI)'
+          'TOTAL_QA'#9'10'#9'BS Parah ~QA'#9'F'#9'TOTAL DEPARTEMENT (KODI)'
+          'TOTAL_JAHIT'#9'10'#9'BS Parah ~JAHIT'#9'F'#9'TOTAL DEPARTEMENT (KODI)'
+          'TOTAL_KEMAS'#9'10'#9'BS Parah ~KEMAS'#9'F'#9'TOTAL DEPARTEMENT (KODI)'
           'TOTKEMAS_LELANG'#9'10'#9'LELANG'#9'F'#9'TOTAL DEPARTEMENT (KODI)')
         IniAttributes.Enabled = True
         IniAttributes.SaveToRegistry = True
@@ -1694,7 +1694,7 @@ object LapBSFrm: TLapBSFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            415.395833333333400000
+            415.395833333333300000
             1920.875000000000000000)
           BandType = rbSummary
           object QRLabel6: TQRLabel
@@ -2387,7 +2387,7 @@ object LapBSFrm: TLapBSFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
+              60.854166666666670000
               275.166666666666700000
               185.208333333333300000
               1367.895833333333000000)
@@ -3265,7 +3265,7 @@ object LapBSFrm: TLapBSFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            415.395833333333400000
+            415.395833333333300000
             1920.875000000000000000)
           BandType = rbSummary
           object QRLabel36: TQRLabel
@@ -4008,8 +4008,8 @@ object LapBSFrm: TLapBSFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
-              336.020833333333400000
+              60.854166666666670000
+              336.020833333333300000
               185.208333333333300000
               1248.833333333333000000)
             Alignment = taCenter
@@ -5268,7 +5268,7 @@ object LapBSFrm: TLapBSFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            415.395833333333400000
+            415.395833333333300000
             1920.875000000000000000)
           BandType = rbSummary
           object QRLabel68: TQRLabel
@@ -5994,7 +5994,7 @@ object LapBSFrm: TLapBSFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
+              60.854166666666670000
               275.166666666666700000
               185.208333333333300000
               1370.541666666667000000)
@@ -7105,6 +7105,7 @@ object LapBSFrm: TLapBSFrm
     object TabSheet4: TTabSheet
       Caption = 'Master Kelompok Barang'
       ImageIndex = 3
+      TabVisible = False
       object QuickRep5: TQuickRep
         Left = 72
         Top = 148
@@ -7179,9 +7180,9 @@ object LapBSFrm: TLapBSFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
-              582.083333333333400000
-              42.333333333333340000
+              60.854166666666670000
+              582.083333333333300000
+              42.333333333333330000
               682.625000000000000000)
             Alignment = taCenter
             AlignToBand = True
@@ -7265,7 +7266,7 @@ object LapBSFrm: TLapBSFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            42.333333333333340000
+            42.333333333333330000
             460.375000000000000000)
           BandType = rbDetail
           object QRDBText38: TQRDBText
@@ -7329,7 +7330,7 @@ object LapBSFrm: TLapBSFrm
           ForceNewColumn = False
           ForceNewPage = True
           Size.Values = (
-            84.666666666666680000
+            84.666666666666670000
             460.375000000000000000)
           Expression = 'QBrowse.LOKASI'
           FooterBand = QRBand11
@@ -7384,7 +7385,7 @@ object LapBSFrm: TLapBSFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            60.854166666666680000
+            60.854166666666670000
             460.375000000000000000)
           Expression = 'QBrowse.NIK'
           FooterBand = QRBand12

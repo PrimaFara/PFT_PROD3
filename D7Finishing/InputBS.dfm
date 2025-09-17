@@ -365,10 +365,10 @@ object InputBSFrm: TInputBSFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
-              664.104166666666800000
+              60.854166666666660000
+              664.104166666666600000
               158.750000000000000000
-              672.041666666666800000)
+              672.041666666666600000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -2859,7 +2859,7 @@ object InputBSFrm: TInputBSFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666660000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -2895,7 +2895,7 @@ object InputBSFrm: TInputBSFrm
             FontSize = 8
           end
           object QRSysData1: TQRSysData
-            Left = -54
+            Left = 687
             Top = 8
             Width = 69
             Height = 17
@@ -3523,7 +3523,7 @@ object InputBSFrm: TInputBSFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            68.791666666666680000
+            68.791666666666660000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -4802,6 +4802,7 @@ object InputBSFrm: TInputBSFrm
           'KP'#9'15'#9'KP'#9'F'
           'KONSTRUKSI'#9'30'#9'KONSTRUKSI'#9'F'
           'TOTAL_BS'#9'10'#9'QTY KODI'#9'F'
+          'MUTU'#9'15'#9'MUTU'#9'F'
           'KETERANGAN'#9'15'#9'KETERANGAN'#9'F'
           'KET_DETAIL'#9'15'#9'KET_DETAIL'#9'F'
           'ISPOST'#9'3'#9'ISPOST'#9'F'
@@ -5296,7 +5297,7 @@ object InputBSFrm: TInputBSFrm
             Frame.DrawRight = False
             Size.Values = (
               66.145833333333340000
-              526.520833333333400000
+              526.520833333333300000
               179.916666666666700000
               947.208333333333400000)
             Alignment = taCenter
@@ -5328,7 +5329,7 @@ object InputBSFrm: TInputBSFrm
             Size.Values = (
               44.979166666666670000
               923.395833333333400000
-              312.208333333333400000
+              312.208333333333300000
               153.458333333333300000)
             Alignment = taCenter
             AlignToBand = True
@@ -5357,7 +5358,7 @@ object InputBSFrm: TInputBSFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
+              60.854166666666660000
               740.833333333333400000
               248.708333333333300000
               515.937500000000000000)
@@ -5477,7 +5478,7 @@ object InputBSFrm: TInputBSFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666660000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText16: TQRDBText
@@ -5513,7 +5514,7 @@ object InputBSFrm: TInputBSFrm
             FontSize = 8
           end
           object QRSysData2: TQRSysData
-            Left = -54
+            Left = 687
             Top = 8
             Width = 69
             Height = 17
@@ -6839,7 +6840,7 @@ object InputBSFrm: TInputBSFrm
       4E4F5F4E4F544100000000000D0000003A4B445F5452414E53414B5349050000
       00040000004D30320000000000}
     QBEDefinition.QBEFieldDefs = {
-      0400000014000000070000004E4F5F4E4F54410100000000000A00000054474C
+      0400000015000000070000004E4F5F4E4F54410100000000000A00000054474C
       5F494E534552540100000000000A0000004F50525F494E534552540100000000
       00060000004E4F5F5245470100000000000300000054474C0100000000000400
       0000475255500100000000000500000053484946540100000000000A0000004B
@@ -6850,7 +6851,7 @@ object InputBSFrm: TInputBSFrm
       45475F44455441494C010000000000020000004B500100000000000A0000004B
       4F4E535452554B534901000000000008000000544F54414C5F42530100000000
       000A0000004B45545F44455441494C0100000000000C0000004A454E49535F44
-      455441494C010000000000}
+      455441494C010000000000040000004D555455010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -6934,6 +6935,10 @@ object InputBSFrm: TInputBSFrm
     object QBrowseJENIS_DETAIL: TStringField
       FieldName = 'JENIS_DETAIL'
       Size = 200
+    end
+    object QBrowseMUTU: TStringField
+      FieldName = 'MUTU'
+      Size = 30
     end
   end
   object dsQBrowse: TwwDataSource

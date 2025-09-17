@@ -256,7 +256,7 @@ uses DM, TerimaDariFinishing, HasilJahit, HasilKemas,
   ReinspectPrintingProses,SerahKeReinspectNewPalapa, mending,
   ReinspecPemotongan, ReinspecKoreksi, PermintaanUnpost, Unpost, InspectingHipo,
   DefectReinspect, ReinspecPajitex, foldinginsp, PackingListKirimMitra,
-  LapBS;
+  LapBS, InputBS;
 
 {$R *.dfm}
 
@@ -861,6 +861,19 @@ procedure TMainFrm.LaporanBS1Click(Sender: TObject);
 begin
   LapBSFrm:=TLapBSFrm.Create(Self);
   LapBSFrm.Show;
+
+  if ((upperCase(DMFrm.OSUser.LogonUsername)='WILDA') or
+  (upperCase(DMFrm.OSUser.LogonUsername)='AYU') or
+  (upperCase(DMFrm.OSUser.LogonUsername)='DENNY') or
+  (upperCase(DMFrm.OSUser.LogonUsername)='ANGGIT') or
+  (upperCase(DMFrm.OSUser.LogonUsername)='DIDIN') or
+  (upperCase(DMFrm.OSUser.LogonUsername)='JUMHAN') or
+  (upperCase(DMFrm.OSUser.LogonUsername)='IQBAL') or
+  (upperCase(DMFrm.OSUser.LogonUsername)='HUSNI')) then
+  begin
+    //BAJasaPJTFrm.Button3.Visible:=True;
+    LapBSFrm.TabSheet4.TabVisible:=True;
+  end;
 end;
 
 procedure TMainFrm.BSParahQAClick(Sender: TObject);

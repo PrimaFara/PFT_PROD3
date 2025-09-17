@@ -9,7 +9,7 @@ uses
 type
   TDMFrm = class(TDataModule)
     OL: TOracleLogon;
-   OS: TOracleSession;
+    OS: TOracleSession;
     QKonstruksi: TOracleDataSet;
     QCorak: TOracleDataSet;
     QCorakKD_CORAK: TStringField;

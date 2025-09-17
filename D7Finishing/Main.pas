@@ -861,6 +861,19 @@ procedure TMainFrm.LaporanBS1Click(Sender: TObject);
 begin
   LapBSFrm:=TLapBSFrm.Create(Self);
   LapBSFrm.Show;
+
+  if ((upperCase(DMFrm.OS.LogonUsername)='WILDA') or
+  (upperCase(DMFrm.OS.LogonUsername)='AYU') or
+  (upperCase(DMFrm.OS.LogonUsername)='DENNY') or
+  (upperCase(DMFrm.OS.LogonUsername)='ANGGIT') or
+  (upperCase(DMFrm.OS.LogonUsername)='DIDIN') or
+  (upperCase(DMFrm.OS.LogonUsername)='JUMHAN') or
+  (upperCase(DMFrm.OS.LogonUsername)='IQBAL') or
+  (upperCase(DMFrm.OS.LogonUsername)='HUSNI')) then
+  begin
+    //BAJasaPJTFrm.Button3.Visible:=True;
+    LapBSFrm.TabSheet4.TabVisible:=True;
+  end;
 end;
 
 procedure TMainFrm.BSParahQAClick(Sender: TObject);

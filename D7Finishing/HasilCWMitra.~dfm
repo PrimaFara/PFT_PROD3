@@ -152,8 +152,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              756.708333333333400000
-              232.833333333333400000
+              756.708333333333300000
+              232.833333333333300000
               145.520833333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -184,7 +184,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Size.Values = (
               44.979166666666670000
               912.812500000000000000
-              232.833333333333400000
+              232.833333333333300000
               158.750000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -264,7 +264,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               50.270833333333330000
-              828.145833333333400000
+              828.145833333333300000
               293.687500000000000000
               306.916666666666700000)
             Alignment = taLeftJustify
@@ -408,7 +408,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
               44.979166666666670000
               1669.520833333333000000
               169.333333333333300000
-              97.895833333333340000)
+              97.895833333333330000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -471,7 +471,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
               44.979166666666670000
               1669.520833333333000000
               230.187500000000000000
-              66.145833333333340000)
+              66.145833333333330000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -2750,7 +2750,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Size.Values = (
               44.979166666666670000
               150.812500000000000000
-              89.958333333333340000
+              89.958333333333330000
               190.500000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -2785,7 +2785,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel10: TQRLabel
@@ -2976,7 +2976,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText2: TQRDBText
@@ -3012,7 +3012,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             FontSize = 8
           end
           object QRSysData1: TQRSysData
-            Left = -54
+            Left = 687
             Top = 8
             Width = 69
             Height = 17
@@ -3047,9 +3047,9 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              883.708333333333400000
+              883.708333333333300000
               21.166666666666670000
-              232.833333333333400000)
+              232.833333333333300000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = False
@@ -3082,7 +3082,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            320.145833333333400000
+            320.145833333333300000
             2000.250000000000000000)
           BandType = rbGroupFooter
           object QRDBText4: TQRDBText
@@ -3099,7 +3099,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
               44.979166666666670000
               1738.312500000000000000
               37.041666666666670000
-              66.145833333333340000)
+              66.145833333333330000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -3148,9 +3148,9 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               63.500000000000000000
-              391.583333333333400000
-              97.895833333333340000
-              320.145833333333400000)
+              391.583333333333300000
+              97.895833333333330000
+              320.145833333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -3174,8 +3174,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Size.Values = (
               63.500000000000000000
               1214.437500000000000000
-              97.895833333333340000
-              264.583333333333400000)
+              97.895833333333330000
+              264.583333333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -3222,7 +3222,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333340000
+              58.208333333333330000
               357.187500000000000000
               248.708333333333300000
               394.229166666666700000)
@@ -3301,7 +3301,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Frame.DrawRight = False
             Size.Values = (
               50.270833333333330000
-              574.145833333333400000
+              574.145833333333300000
               7.937500000000000000
               129.645833333333300000)
             Alignment = taLeftJustify
@@ -3336,7 +3336,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText5: TQRDBText
@@ -3380,7 +3380,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
               44.979166666666670000
               809.625000000000000000
               7.937500000000000000
-              232.833333333333400000)
+              232.833333333333300000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -4345,11 +4345,12 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             'M_BELANG'#9'10'#9'MOTIF BELANG'#9'F'
             'O_SETTING'#9'15'#9'OUT SETTING'#9'F'
             'N_OLI'#9'15'#9'KOTOR/NODA PRINT'#9'F'
+            'TGS'#9'10'#9'T. GEL & SKEWING'#9'F'
             'SOBEK'#9'10'#9'FLEX STEAMER (BS)'#9'F'
             'FLEX'#9'10'#9'FLX BRT/NODA BRT'#9'F'
             'SOBEK_MT'#9'15'#9'SOBEK/LUBANG MITRA'#9'F'
-            'SBK'#9'15'#9'RSK/SBK/~LBG KAIN'#9'F'
-            'TGS'#9'10'#9'T. GEL & SKEWING'#9'F'
+            'SBK'#9'15'#9'SBK/~LBG KAIN'#9'F'
+            'RSK_KAIN'#9'15'#9'RSK KAIN'#9'F'
             'MET_LABEL'#9'10'#9'METER LABEL'#9'F'
             'QTY'#9'10'#9'BK'#9'T'#9'QTY/POTONG'
             'QTY4'#9'10'#9'BGRADE'#9'T'#9'QTY/POTONG'
@@ -4972,6 +4973,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           'TGL_TERIMA'#9'10'#9'TGL TERIMA'#9'F'
           'NIK'#9'15'#9'NIK'#9'F'#9'OPERATOR'
           'OPERATOR'#9'25'#9'NAMA'#9'F'#9'OPERATOR'
+          'ISPOST'#9'1'#9'ISPOST'#9'F'
           'NO_BATCH'#9'15'#9'NO BATCH'#9'F'
           'NO_ORDER'#9'10'#9'NO ORDER'#9'F'
           'NO_SPB'#9'10'#9'NO. ORDER EX CW'#9'F'
@@ -5024,8 +5026,10 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           'P_FLEX'#9'10'#9'% FLX BRT/NODA BRT'#9'F'#9'FLX BRT/NODA BRT'
           'SOBEK_MT'#9'10'#9'SBK/LBG MITRA'#9'F'#9'SOBEK/LUBANG MITRA'
           'P_SOBEK_MT'#9'10'#9'% SBK/LBG MITRA'#9'F'#9'SOBEK/LUBANG MITRA'
-          'SBK'#9'10'#9'SBK'#9'F'#9'RSK/SBK/LBG KAIN'
-          'P_SBK'#9'10'#9'% RSK/SBK/LBG KAIN'#9'F'#9'RSK/SBK/LBG KAIN'
+          'SBK'#9'10'#9'SBK/LBG KAIN'#9'F'#9'SBK/LBG KAIN'
+          'P_SBK'#9'10'#9'% SBK/LBG KAIN'#9'F'#9'SBK/LBG KAIN'
+          'RSK_KAIN'#9'10'#9'RSK KAIN'#9'F'#9'RSK_KAIN'
+          'P_RSK_KAIN'#9'10'#9'% RSK_KAIN'#9'F'#9'RSK_KAIN'
           'PROD_CABUT'#9'10'#9'DICABUT'#9'F'#9'QTY/PCS'
           'PROD_TDKCABUT'#9'10'#9'TDK DICABUT'#9'F'#9'QTY/PCS'
           'QTY'#9'10'#9'BK'#9'F'#9'QTY/PCS'
@@ -5190,7 +5194,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666680000
+              60.854166666666670000
               452.437500000000000000
               201.083333333333300000
               1092.729166666667000000)
@@ -5567,9 +5571,9 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              58.208333333333340000
-              931.333333333333400000
-              264.583333333333400000
+              58.208333333333330000
+              931.333333333333300000
+              264.583333333333300000
               137.583333333333300000)
             Alignment = taCenter
             AlignToBand = True
@@ -6026,7 +6030,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText14: TQRDBText
@@ -6062,7 +6066,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
             FontSize = 8
           end
           object QRSysData2: TQRSysData
-            Left = -54
+            Left = 687
             Top = 8
             Width = 69
             Height = 17
@@ -6133,7 +6137,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            391.583333333333400000
+            391.583333333333300000
             2000.250000000000000000)
           BandType = rbGroupFooter
           object QRLabel22: TQRLabel
@@ -6403,7 +6407,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText19: TQRDBText
@@ -6924,7 +6928,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           'P_SOBEK'#9'10'#9'% FLEX STEAMER'#9'F'#9'BS'
           'P_FLEX'#9'10'#9'% FLEX BRT'#9'F'#9'BS'
           'P_SOBEK_MT'#9'10'#9'% SOBEK/LBG MITRA'#9'F'#9'BS'
-          'P_SBK'#9'10'#9'% RSK/SBK/~LBG KAIN'#9'F'#9'BS')
+          'P_SBK'#9'10'#9'% SBK/LBG KAIN'#9'F'#9'BS'
+          'P_RSK_KAIN'#9'10'#9'% RSK KAIN'#9'F'#9'BS')
         IniAttributes.Enabled = True
         IniAttributes.SaveToRegistry = True
         IniAttributes.FileName = 'Pismatex Finishing'
@@ -7000,7 +7005,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           'P_SOBEK'#9'10'#9'% FLEX STEAMER'#9'F'#9'BS'
           'P_FLEX'#9'10'#9'% FLEX BRT'#9'F'#9'BS'
           'P_SOBEK_MT'#9'10'#9'% SOBEK/LBG MITRA'#9'F'#9'BS'
-          'P_SBK'#9'10'#9'% RSK/SBK/~LBG KAIN'#9'F'#9'BS')
+          'P_SBK'#9'10'#9'% SBK/LBG KAIN'#9'F'#9'BS'
+          'P_RSK_KAIN'#9'10'#9'% RSK KAIN'#9'F'#9'BS')
         IniAttributes.Enabled = True
         IniAttributes.SaveToRegistry = True
         IniAttributes.FileName = 'Pismatex Master'
@@ -7327,7 +7333,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           'SOBEK'#9'10'#9'FLEX STEAMER'#9'F'#9'BS'
           'FLEX'#9'10'#9'FLEX BRT'#9'F'#9'BS'
           'SOBEK_MT'#9'10'#9'SOBEK/LBG MITRA'#9'F'#9'BS'
-          'SBK'#9'10'#9'RSK/SBK/~LBG KAIN'#9'F'#9'BS')
+          'SBK'#9'10'#9'SBK/LBG KAIN'#9'F'#9'BS'
+          'RSK_KAIN'#9'10'#9'RSK KAIN'#9'F'#9'BS')
         IniAttributes.Enabled = True
         IniAttributes.SaveToRegistry = True
         IniAttributes.FileName = 'Pismatex Finishing'
@@ -7403,7 +7410,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
           'SOBEK'#9'10'#9'FLEX STEAMER'#9'F'#9'BS'
           'FLEX'#9'10'#9'FLEX BRT'#9'F'#9'BS'
           'SOBEK_MT'#9'10'#9'SOBEK/LBG MITRA'#9'F'#9'BS'
-          'SBK'#9'10'#9'RSK/SBK/~LBG KAIN'#9'F'#9'BS')
+          'SBK'#9'10'#9'SBK/LBG KAIN'#9'F'#9'BS'
+          'RSK_KAIN'#9'10'#9'RSK KAIN'#9'F'#9'BS')
         IniAttributes.Enabled = True
         IniAttributes.SaveToRegistry = True
         IniAttributes.FileName = 'Pismatex Master'
@@ -7557,7 +7565,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
     SequenceField.Sequence = 'IPISMA_DB5.REG_BUKTI4_DETAIL'
     SequenceField.ApplyMoment = amOnNewRecord
     QBEDefinition.QBEFieldDefs = {
-      040000003C0000000D0000004E4F5F5245475F44455441494C01000000000006
+      040000003D0000000D0000004E4F5F5245475F44455441494C01000000000006
       0000004E4F5F5245470100000000000A0000004B45544552414E47414E010000
       0000000D0000004B445F4B4F4E535452554B53490100000000000A0000004B4F
       4E535452554B5349010000000000080000004B445F434F52414B010000000000
@@ -7589,7 +7597,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       0050524F5345530100000000000A00000050524F445F43414255540100000000
       000D00000050524F445F54444B4341425554010000000000090000004A454E49
       535F444554010000000000080000004E4F5F4F524445520100000000000C0000
-      004B445F50524F44554B5349320100000000000300000053424B010000000000}
+      004B445F50524F44554B5349320100000000000300000053424B010000000000
+      0800000052534B5F4B41494E010000000000}
     Master = QMaster
     MasterFields = 'NO_REG'
     DetailFields = 'NO_REG'
@@ -7816,6 +7825,10 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       FieldName = 'SBK'
       DisplayFormat = '0.0,0;(0.0,0);-'
     end
+    object QDetailRSK_KAIN: TFloatField
+      FieldName = 'RSK_KAIN'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
   end
   object dsQDetail: TwwDataSource
     DataSet = QDetail
@@ -7964,7 +7977,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       0D0000003A4B445F5452414E53414B5349050000000400000039393200000000
       00}
     QBEDefinition.QBEFieldDefs = {
-      040000004C000000070000004E4F5F4E4F5441010000000000060000004E4F5F
+      040000004E000000070000004E4F5F4E4F5441010000000000060000004E4F5F
       5245470100000000000300000054474C01000000000004000000475255500100
       000000000500000053484946540100000000000A0000004B4F4E535452554B53
       490100000000000C0000004B445F5452414E53414B53490100000000000B0000
@@ -8006,7 +8019,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       4F5244455201000000000004000000464C455801000000000006000000505F46
       4C4558010000000000060000004E4F5F5350420100000000000C0000004B445F
       50524F44554B5349320100000000000300000053424B01000000000005000000
-      505F53424B010000000000}
+      505F53424B0100000000000800000052534B5F4B41494E0100000000000A0000
+      00505F52534B5F4B41494E010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -8306,6 +8320,14 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       FieldName = 'P_SBK'
       DisplayFormat = '0.0,0;(0.0,0);-'
     end
+    object QBrowseRSK_KAIN: TFloatField
+      FieldName = 'RSK_KAIN'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowseP_RSK_KAIN: TFloatField
+      FieldName = 'P_RSK_KAIN'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
   end
   object dsQBrowse: TwwDataSource
     DataSet = QBrowse
@@ -8359,7 +8381,10 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       'sum(p_flex) as p_flex,'
       ''
       'sum(sbk) as sbk,'
-      'sum(p_sbk) as p_sbk'
+      'sum(p_sbk) as p_sbk,'
+      ''
+      'sum(rsk_kain) as rsk_kain,'
+      'sum(p_rsk_kain) as p_rsk_kain'
       ''
       'from ipisma_db5.VREKAP_HASIL_INSPECT_CW_MITRA'
       ':myparam'
@@ -8368,7 +8393,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       0300000001000000080000003A4D59504152414D010000001200000077686572
       652074676C3D737973646174650000000000}
     QBEDefinition.QBEFieldDefs = {
-      040000002B00000002000000424B010000000000060000004247524144450100
+      040000002D00000002000000424B010000000000060000004247524144450100
       0000000002000000425301000000000005000000544F54414C01000000000003
       000000575453010000000000070000004D5F53414D4152010000000000070000
       004D5F525553414B010000000000090000004F5F53455454494E470100000000
@@ -8391,7 +8416,9 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       000000000A0000004D45545F494E535045430100000000000B000000505F4D45
       545F4C4142454C0100000000000C000000505F4D45545F494E53504543010000
       00000004000000464C455801000000000006000000505F464C45580100000000
-      000300000053424B01000000000005000000505F53424B010000000000}
+      000300000053424B01000000000005000000505F53424B010000000000080000
+      0052534B5F4B41494E0100000000000A000000505F52534B5F4B41494E010000
+      000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -8526,6 +8553,12 @@ object HasilCWMitraFrm: THasilCWMitraFrm
     object QBrowseTotalP_SBK: TFloatField
       FieldName = 'P_SBK'
     end
+    object QBrowseTotalRSK_KAIN: TFloatField
+      FieldName = 'RSK_KAIN'
+    end
+    object QBrowseTotalP_RSK_KAIN: TFloatField
+      FieldName = 'P_RSK_KAIN'
+    end
   end
   object QTotal: TOracleDataSet
     SQL.Strings = (
@@ -8547,7 +8580,9 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       '        qty2, qty4, qty5,'
       '        flex_print, flex_steam, flex_stamping, flex_luntur, wts,'
       '        m_samar, m_rusak, m_belang, o_setting, n_oli, tgs,'
-      '        sobek, sobek_mt, affal, met_label, met_inspec,flex,sbk'
+      
+        '        sobek, sobek_mt, affal, met_label, met_inspec,flex,sbk,r' +
+        'sk_kain'
       '    FROM ipisma_db5.bukti4_detail'
       ')'
       'SELECT '
@@ -8578,14 +8613,15 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       '    SUM(flex) AS flex,'
       '    SUM(met_label) AS met_label,'
       '    SUM(met_inspec) AS met_inspec,'
-      '    SUM(sbk) AS sbk'
+      '    SUM(sbk) AS sbk,'
+      '    SUM(rsk_kain) AS rsk_kain'
       'FROM detail_data'
       
         'WHERE no_reg = :no_reg  -- Gunakan no_reg yang telah dimasukkan ' +
         'ke dalam CTE')
     Variables.Data = {0300000001000000070000003A4E4F5F524547030000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
-      040000001600000002000000424B010000000000020000004253010000000000
+      040000001700000002000000424B010000000000020000004253010000000000
       0600000042475241444501000000000005000000544F54414C01000000000003
       000000575453010000000000070000004D5F53414D4152010000000000070000
       004D5F525553414B010000000000090000004F5F53455454494E470100000000
@@ -8596,7 +8632,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       00000054475301000000000008000000534F42454B5F4D540100000000000B00
       0000464C45585F4C554E545552010000000000090000004D45545F4C4142454C
       0100000000000A0000004D45545F494E5350454301000000000004000000464C
-      45580100000000000300000053424B010000000000}
+      45580100000000000300000053424B0100000000000800000052534B5F4B4149
+      4E010000000000}
     Session = DMFrm.OS
     Left = 297
     Top = 301
@@ -8662,6 +8699,12 @@ object HasilCWMitraFrm: THasilCWMitraFrm
     end
     object QTotalFLEX: TFloatField
       FieldName = 'FLEX'
+    end
+    object QTotalSBK: TFloatField
+      FieldName = 'SBK'
+    end
+    object QTotalRSK_KAIN: TFloatField
+      FieldName = 'RSK_KAIN'
     end
   end
   object dsQPer_Hari: TwwDataSource
@@ -8829,8 +8872,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
     CountAllRecords = True
     Session = DMFrm.OS
     AfterScroll = QPer_HariAfterScroll
-    Left = 220
-    Top = 227
+    Left = 140
+    Top = 251
     object QPerKonstruksi_M_TotGULUNG_POTONG: TFloatField
       FieldName = 'GULUNG_POTONG'
     end
@@ -9201,7 +9244,12 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       '    sum(nvl(t.sbk, 0)) as sbk,'
       
         '    to_number(decode(sum(t.sbk),'#39'0'#39','#39'0'#39',sum(t.sbk)))/nullif(sum(' +
-        't.dicabut), 0)*100 as p_sbk'
+        't.dicabut), 0)*100 as p_sbk,'
+      ''
+      '    sum(nvl(t.rsk_kain, 0)) as rsk_kain,'
+      
+        '    to_number(decode(sum(t.rsk_kain),'#39'0'#39','#39'0'#39',sum(t.rsk_kain)))/n' +
+        'ullif(sum(t.dicabut), 0)*100 as p_rsk_kain'
       ''
       'from '
       ''
@@ -9240,7 +9288,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       00003A50414B4849520C0000000000000000000000050000003A5054474C0100
       000006000000612E74676C0000000000}
     QBEDefinition.QBEFieldDefs = {
-      040000002E0000000B0000004B445F50524F44554B5349010000000000030000
+      04000000300000000B0000004B445F50524F44554B5349010000000000030000
       00575453010000000000070000004D5F53414D4152010000000000070000004D
       5F525553414B010000000000090000004F5F53455454494E4701000000000005
       000000534F42454B0100000000000A0000004B4F4E535452554B534901000000
@@ -9265,7 +9313,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       0007000000505F414646414C0100000000000700000044494341425554010000
       0000000A00000054444B4449434142555401000000000004000000464C455801
       000000000006000000505F464C45580100000000000300000053424B01000000
-      000005000000505F53424B010000000000}
+      000005000000505F53424B0100000000000800000052534B5F4B41494E010000
+      0000000A000000505F52534B5F4B41494E010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -9454,6 +9503,14 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       FieldName = 'P_SBK'
       DisplayFormat = '0.0,0;(0.0,0);-'
     end
+    object QBrowse_RekapRSK_KAIN: TFloatField
+      FieldName = 'RSK_KAIN'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_RekapP_RSK_KAIN: TFloatField
+      FieldName = 'P_RSK_KAIN'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
   end
   object QTotalRekap: TOracleDataSet
     SQL.Strings = (
@@ -9548,7 +9605,12 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       '    sum(nvl(t.sbk, 0)) as sbk,'
       
         '    to_number(decode(sum(t.sbk),'#39'0'#39','#39'0'#39',sum(t.sbk)))/nullif(sum(' +
-        't.dicabut), 0)*100 as p_sbk'
+        't.dicabut), 0)*100 as p_sbk,'
+      ''
+      '    sum(nvl(t.rsk_kain, 0)) as rsk_kain,'
+      
+        '    to_number(decode(sum(t.rsk_kain),'#39'0'#39','#39'0'#39',sum(t.rsk_kain)))/n' +
+        'ullif(sum(t.dicabut), 0)*100 as p_rsk_kain'
       ''
       ''
       'from '
@@ -9580,7 +9642,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       00003A50414B4849520C0000000000000000000000050000003A5054474C0100
       000006000000612E74676C0000000000}
     QBEDefinition.QBEFieldDefs = {
-      040000002A00000003000000575453010000000000070000004D5F53414D4152
+      040000002C00000003000000575453010000000000070000004D5F53414D4152
       010000000000070000004D5F525553414B010000000000090000004F5F534554
       54494E4701000000000005000000534F42454B01000000000004000000505F42
       4B01000000000008000000505F42475241444501000000000004000000505F42
@@ -9602,7 +9664,9 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       000005000000544F54414C010000000000070000004449434142555401000000
       00000A00000054444B4449434142555401000000000004000000515459330100
       0000000004000000464C455801000000000006000000505F464C455801000000
-      00000300000053424B01000000000005000000505F53424B010000000000}
+      00000300000053424B01000000000005000000505F53424B0100000000000800
+      000052534B5F4B41494E0100000000000A000000505F52534B5F4B41494E0100
+      00000000}
     Session = DMFrm.OS
     Left = 537
     Top = 264
@@ -9770,6 +9834,14 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       FieldName = 'P_SBK'
       DisplayFormat = '0.0,0;(0.0,0);-'
     end
+    object QTotalRekapRSK_KAIN: TFloatField
+      FieldName = 'RSK_KAIN'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QTotalRekapP_RSK_KAIN: TFloatField
+      FieldName = 'P_RSK_KAIN'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
   end
   object QBrowse_RekapKodi: TOracleDataSet
     SQL.Strings = (
@@ -9878,7 +9950,12 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       'sum(nvl(t.sbk, 0)) as sbk,'
       
         'to_number(decode(sum(t.sbk),'#39'0'#39','#39'0'#39',sum(t.sbk)))/nullif(sum(t.di' +
-        'cabut), 0)*100 as p_sbk'
+        'cabut), 0)*100 as p_sbk,'
+      ''
+      'sum(nvl(t.rsk_kain, 0)) as rsk_kain,'
+      
+        'to_number(decode(sum(t.rsk_kain),'#39'0'#39','#39'0'#39',sum(t.rsk_kain)))/nulli' +
+        'f(sum(t.dicabut), 0)*100 as p_rsk_kain'
       ''
       'from '
       ''
@@ -9918,7 +9995,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       00003A50414B4849520C0000000000000000000000050000003A5054474C0100
       000006000000612E74676C0000000000}
     QBEDefinition.QBEFieldDefs = {
-      040000002D0000000B0000004B445F50524F44554B5349010000000000030000
+      040000002F0000000B0000004B445F50524F44554B5349010000000000030000
       00575453010000000000070000004D5F53414D4152010000000000070000004D
       5F525553414B010000000000090000004F5F53455454494E4701000000000005
       000000534F42454B0100000000000A0000004B4F4E535452554B534901000000
@@ -9943,7 +10020,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       415301000000000005000000414646414C010000000000070000004449434142
       55540100000000000A00000054444B4449434142555401000000000004000000
       464C455801000000000006000000505F464C4558010000000000030000005342
-      4B01000000000005000000505F53424B010000000000}
+      4B01000000000005000000505F53424B0100000000000800000052534B5F4B41
+      494E0100000000000A000000505F52534B5F4B41494E010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -10128,6 +10206,14 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       FieldName = 'P_SBK'
       DisplayFormat = '0.0,0;(0.0,0);-'
     end
+    object QBrowse_RekapKodiRSK_KAIN: TFloatField
+      FieldName = 'RSK_KAIN'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowse_RekapKodiP_RSK_KAIN: TFloatField
+      FieldName = 'P_RSK_KAIN'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
   end
   object QTotalRekapKodi: TOracleDataSet
     SQL.Strings = (
@@ -10232,8 +10318,13 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       ''
       'sum(nvl(t.sbk, 0)) as sbk,'
       
-        '    to_number(decode(sum(t.sbk),'#39'0'#39','#39'0'#39',sum(t.sbk)))/nullif(sum(' +
-        't.dicabut), 0)*100 as p_sbk'
+        'to_number(decode(sum(t.sbk),'#39'0'#39','#39'0'#39',sum(t.sbk)))/nullif(sum(t.di' +
+        'cabut), 0)*100 as p_sbk,'
+      ''
+      'sum(nvl(t.rsk_kain, 0)) as rsk_kain,'
+      
+        'to_number(decode(sum(t.rsk_kain),'#39'0'#39','#39'0'#39',sum(t.rsk_kain)))/nulli' +
+        'f(sum(t.dicabut), 0)*100 as p_rsk_kain'
       ''
       ''
       'from '
@@ -10266,7 +10357,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       00003A50414B4849520C0000000000000000000000050000003A5054474C0100
       000006000000612E74676C0000000000}
     QBEDefinition.QBEFieldDefs = {
-      040000002900000002000000425301000000000002000000424B010000000000
+      040000002B00000002000000425301000000000002000000424B010000000000
       0600000042475241444501000000000005000000544F54414C01000000000003
       000000575453010000000000070000004D5F53414D4152010000000000070000
       004D5F525553414B010000000000090000004F5F53455454494E470100000000
@@ -10288,7 +10379,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       464C45585F4C554E545552010000000000070000004449434142555401000000
       00000A00000054444B4449434142555401000000000004000000464C45580100
       0000000006000000505F464C45580100000000000300000053424B0100000000
-      0005000000505F53424B010000000000}
+      0005000000505F53424B0100000000000800000052534B5F4B41494E01000000
+      00000A000000505F52534B5F4B41494E010000000000}
     Session = DMFrm.OS
     Left = 673
     Top = 264
@@ -10454,6 +10546,14 @@ object HasilCWMitraFrm: THasilCWMitraFrm
     end
     object QTotalRekapKodiP_SBK: TFloatField
       FieldName = 'P_SBK'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QTotalRekapKodiRSK_KAIN: TFloatField
+      FieldName = 'RSK_KAIN'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QTotalRekapKodiP_RSK_KAIN: TFloatField
+      FieldName = 'P_RSK_KAIN'
       DisplayFormat = '0.0,0;(0.0,0);-'
     end
   end
@@ -10770,7 +10870,13 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       
         'to_number(decode(sum(t.sbk), '#39'0'#39', '#39'0'#39', sum(t.sbk))) / nullif(sum' +
         '(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) e' +
-        'lse 0 end), 0) * 100 as p_sbk'
+        'lse 0 end), 0) * 100 as p_sbk,'
+      ''
+      'sum(nvl(t.rsk_kain, 0)) as rsk_kain,'
+      
+        'to_number(decode(sum(t.rsk_kain), '#39'0'#39', '#39'0'#39', sum(t.rsk_kain))) / ' +
+        'nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.' +
+        'qty5, 0) else 0 end), 0) * 100 as p_rsk_kain'
       ''
       ''
       'from '
@@ -10810,7 +10916,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       00003A50414B4849520C0000000000000000000000050000003A5054474C0100
       000006000000612E74676C0000000000}
     QBEDefinition.QBEFieldDefs = {
-      040000002E0000000B0000004B445F50524F44554B5349010000000000030000
+      04000000300000000B0000004B445F50524F44554B5349010000000000030000
       00575453010000000000070000004D5F53414D4152010000000000070000004D
       5F525553414B010000000000090000004F5F53455454494E4701000000000005
       000000534F42454B0100000000000A0000004B4F4E535452554B534901000000
@@ -10835,7 +10941,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       0007000000505F414646414C0100000000000700000044494341425554010000
       0000000A00000054444B4449434142555401000000000004000000464C455801
       000000000006000000505F464C45580100000000000300000053424B01000000
-      000005000000505F53424B010000000000}
+      000005000000505F53424B0100000000000800000052534B5F4B41494E010000
+      0000000A000000505F52534B5F4B41494E010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -11024,6 +11131,14 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       FieldName = 'P_SBK'
       DisplayFormat = '0.0,0;(0.0,0);-'
     end
+    object QBrowseRekPerRSK_KAIN: TFloatField
+      FieldName = 'RSK_KAIN'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowseRekPerP_RSK_KAIN: TFloatField
+      FieldName = 'P_RSK_KAIN'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
   end
   object QTotalRekPer: TOracleDataSet
     SQL.Strings = (
@@ -11136,7 +11251,13 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       
         'to_number(decode(sum(t.sbk), '#39'0'#39', '#39'0'#39', sum(t.sbk))) / nullif(sum' +
         '(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) e' +
-        'lse 0 end), 0) * 100 as p_sbk'
+        'lse 0 end), 0) * 100 as p_sbk,'
+      ''
+      'sum(nvl(t.rsk_kain, 0)) as rsk_kain,'
+      
+        'to_number(decode(sum(t.rsk_kain), '#39'0'#39', '#39'0'#39', sum(t.rsk_kain))) / ' +
+        'nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.' +
+        'qty5, 0) else 0 end), 0) * 100 as p_rsk_kain'
       ''
       ''
       'from '
@@ -11168,7 +11289,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       00003A50414B4849520C0000000000000000000000050000003A5054474C0100
       000006000000612E74676C0000000000}
     QBEDefinition.QBEFieldDefs = {
-      040000002A00000003000000575453010000000000070000004D5F53414D4152
+      040000002C00000003000000575453010000000000070000004D5F53414D4152
       010000000000070000004D5F525553414B010000000000090000004F5F534554
       54494E4701000000000005000000534F42454B01000000000004000000505F42
       4B01000000000008000000505F42475241444501000000000004000000505F42
@@ -11190,7 +11311,9 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       000005000000544F54414C010000000000070000004449434142555401000000
       00000A00000054444B4449434142555401000000000004000000515459330100
       0000000004000000464C455801000000000006000000505F464C455801000000
-      00000300000053424B01000000000005000000505F53424B010000000000}
+      00000300000053424B01000000000005000000505F53424B0100000000000800
+      000052534B5F4B41494E0100000000000A000000505F52534B5F4B41494E0100
+      00000000}
     Session = DMFrm.OS
     Left = 545
     Top = 384
@@ -11320,6 +11443,12 @@ object HasilCWMitraFrm: THasilCWMitraFrm
     object QTotalRekPerP_SBK: TFloatField
       FieldName = 'P_SBK'
     end
+    object QTotalRekPerRSK_KAIN: TFloatField
+      FieldName = 'RSK_KAIN'
+    end
+    object QTotalRekPerP_RSK_KAIN: TFloatField
+      FieldName = 'P_RSK_KAIN'
+    end
   end
   object QBrowRekKod: TOracleDataSet
     SQL.Strings = (
@@ -11445,9 +11574,15 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       ''
       'sum(nvl(t.sbk, 0)) as sbk,'
       
-        '    to_number(decode(sum(t.sbk), '#39'0'#39', '#39'0'#39', sum(t.sbk))) / nullif' +
-        '(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, ' +
-        '0) else 0 end), 0) * 100 as p_sbk'
+        'to_number(decode(sum(t.sbk), '#39'0'#39', '#39'0'#39', sum(t.sbk))) / nullif(sum' +
+        '(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) e' +
+        'lse 0 end), 0) * 100 as p_sbk,'
+      ''
+      'sum(nvl(t.rsk_kain, 0)) as rsk_kain,'
+      
+        'to_number(decode(sum(t.rsk_kain), '#39'0'#39', '#39'0'#39', sum(t.rsk_kain))) / ' +
+        'nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.' +
+        'qty5, 0) else 0 end), 0) * 100 as p_rsk_kain'
       ''
       'from '
       ''
@@ -11487,7 +11622,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       00003A50414B4849520C0000000000000000000000050000003A5054474C0100
       000006000000612E74676C0000000000}
     QBEDefinition.QBEFieldDefs = {
-      040000002D0000000B0000004B445F50524F44554B5349010000000000030000
+      040000002F0000000B0000004B445F50524F44554B5349010000000000030000
       00575453010000000000070000004D5F53414D4152010000000000070000004D
       5F525553414B010000000000090000004F5F53455454494E4701000000000005
       000000534F42454B0100000000000A0000004B4F4E535452554B534901000000
@@ -11512,7 +11647,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       415301000000000005000000414646414C010000000000070000004449434142
       55540100000000000A00000054444B4449434142555401000000000004000000
       464C455801000000000006000000505F464C4558010000000000030000005342
-      4B01000000000005000000505F53424B010000000000}
+      4B01000000000005000000505F53424B0100000000000800000052534B5F4B41
+      494E0100000000000A000000505F52534B5F4B41494E010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -11697,6 +11833,14 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       FieldName = 'P_SBK'
       DisplayFormat = '0.0,0;(0.0,0);-'
     end
+    object QBrowRekKodRSK_KAIN: TFloatField
+      FieldName = 'RSK_KAIN'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
+    object QBrowRekKodP_RSK_KAIN: TFloatField
+      FieldName = 'P_RSK_KAIN'
+      DisplayFormat = '0.0,0;(0.0,0);-'
+    end
   end
   object QTotalRekKod: TOracleDataSet
     SQL.Strings = (
@@ -11817,9 +11961,15 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       ''
       'sum(nvl(t.sbk, 0)) as sbk,'
       
-        '    to_number(decode(sum(t.sbk), '#39'0'#39', '#39'0'#39', sum(t.sbk))) / nullif' +
-        '(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, ' +
-        '0) else 0 end), 0) * 100 as p_sbk'
+        'to_number(decode(sum(t.sbk), '#39'0'#39', '#39'0'#39', sum(t.sbk))) / nullif(sum' +
+        '(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.qty5, 0) e' +
+        'lse 0 end), 0) * 100 as p_sbk,'
+      ''
+      'sum(nvl(t.rsk_kain, 0)) as rsk_kain,'
+      
+        'to_number(decode(sum(t.rsk_kain), '#39'0'#39', '#39'0'#39', sum(t.rsk_kain))) / ' +
+        'nullif(sum(case when t.keterangan2 = '#39'DICABUT WARNA'#39' then nvl(t.' +
+        'qty5, 0) else 0 end), 0) * 100 as p_rsk_kain'
       ''
       'from '
       ''
@@ -11851,7 +12001,7 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       00003A50414B4849520C0000000000000000000000050000003A5054474C0100
       000006000000612E74676C0000000000}
     QBEDefinition.QBEFieldDefs = {
-      040000002900000002000000425301000000000002000000424B010000000000
+      040000002B00000002000000425301000000000002000000424B010000000000
       0600000042475241444501000000000005000000544F54414C01000000000003
       000000575453010000000000070000004D5F53414D4152010000000000070000
       004D5F525553414B010000000000090000004F5F53455454494E470100000000
@@ -11873,7 +12023,8 @@ object HasilCWMitraFrm: THasilCWMitraFrm
       464C45585F4C554E545552010000000000070000004449434142555401000000
       00000A00000054444B4449434142555401000000000004000000464C45580100
       0000000006000000505F464C45580100000000000300000053424B0100000000
-      0005000000505F53424B010000000000}
+      0005000000505F53424B0100000000000800000052534B5F4B41494E01000000
+      00000A000000505F52534B5F4B41494E010000000000}
     Session = DMFrm.OS
     Left = 673
     Top = 384
@@ -11999,6 +12150,12 @@ object HasilCWMitraFrm: THasilCWMitraFrm
     end
     object QTotalRekKodP_SBK: TFloatField
       FieldName = 'P_SBK'
+    end
+    object QTotalRekKodRSK_KAIN: TFloatField
+      FieldName = 'RSK_KAIN'
+    end
+    object QTotalRekKodP_RSK_KAIN: TFloatField
+      FieldName = 'P_RSK_KAIN'
     end
   end
   object dsQBrowseRekPer: TwwDataSource

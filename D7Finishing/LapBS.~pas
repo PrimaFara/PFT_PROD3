@@ -902,7 +902,7 @@ begin
                 end;
             end;
         end;
-    SHOWMESSAGE(VFILTER);
+        
     QBrowse.Close;
 
     QDump.Close;

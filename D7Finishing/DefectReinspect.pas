@@ -1759,6 +1759,7 @@ type
     QBrowseTotalAFL_PJI: TFloatField;
     QBrowse_rekap2AFL_PJI: TFloatField;
     QBrowse_rekap2_totAFL_PJI: TFloatField;
+    QBrowse_rekap2selisih: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
@@ -2912,9 +2913,9 @@ QBrowse_rekap2.Open;
   QBrowse_rekap2_tot.SetVariable('kd_transaksi','R16');
 
   if RadioGroup3.ItemIndex = 0 then
-  QBrowse_rekap2_tot.SetVariable('tgl','b.tgl')
+  QBrowse_rekap2_tot.SetVariable('tgl','b.tgl')    // tgl terima
   else
-  QBrowse_rekap2_tot.SetVariable('tgl','a.tgl');
+  QBrowse_rekap2_tot.SetVariable('tgl','a.tgl');   // tgl proses
 
   QBrowse_rekap2_tot.Open;
 
@@ -2928,6 +2929,7 @@ QBrowse_rekap2.Open;
   wwDBGrid5.ColumnByName('AFL_NDAK_CABOT').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QBrowse_rekap2_totAFL_NDAK_CABOT.AsFloat);
   wwDBGrid5.ColumnByName('PENYESUAIAN').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QBrowse_rekap2_totPENYESUAIAN.AsFloat);
 
+  wwDBGrid5.ColumnByName('SELISIH').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QBrowse_rekap2_totAFL_PJI.AsFloat - QBrowse_rekap2_totAFL_PRINT.AsFloat - QBrowse_rekap2_totAFL_NDAK_CABOT.AsFloat);
   wwDBGrid5.ColumnByName('AFL_PJI').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QBrowse_rekap2_totAFL_PJI.AsFloat);
 
 end;
@@ -3097,6 +3099,12 @@ end;
 procedure TDefectReinspectFrm.QBrowse2CalcFields(DataSet: TDataSet);
 begin
 QBrowse2BK_MULUS.AsFloat:= QBrowse2HASIL_PROSES.AsFloat- QBrowse2DEFECT.AsFloat;
+
+if QBrowse_rekap2AFL_PJI.AsFloat <> 0 then
+QBrowse_rekap2SELISIH.AsFloat := QBrowse_rekap2AFL_PJI.AsFloat - QBrowse_rekap2AFL_PRINT.AsFloat - QBrowse_rekap2AFL_NDAK_CABOT.AsFloat
+else
+QBrowse_rekap2SELISIH.AsFloat := 0;
+
   {QBrowse2B1_LD.AsFloat-QBrowse2B1_LT.AsFloat-QBrowse2B1_LPT.AsFloat-
 QBrowse2B1_LRG.AsFloat-QBrowse2B1_WL.AsFloat-QBrowse2B1_FLO.AsFloat-
 QBrowse2B1_NEPS.AsFloat-QBrowse2B1_PP.AsFloat-QBrowse2B1_WP.AsFloat-

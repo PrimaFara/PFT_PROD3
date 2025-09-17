@@ -729,7 +729,7 @@ begin
    QDetailKONSTRUKSI.AsString:=DMFrm.QKonstruksi_KpNAMA_KONSTRUKSI.AsString;
    QDetailKD_PRODUKSI.AsString:=DMFrm.QKonstruksi_KpKP.AsString;
 
-   if Pos('BK', DMFrm.QKonstruksi_KpNAMA_KONSTRUKSI.AsString) > 0 then
+  if Pos('BK', DMFrm.QKonstruksi_KpNAMA_KONSTRUKSI.AsString) > 0 then
   begin
     wwDBGrid1.Fields[10].ReadOnly:=false;
     wwDBGrid1.Fields[11].ReadOnly:=true;

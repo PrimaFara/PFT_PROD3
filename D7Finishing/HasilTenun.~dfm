@@ -1226,6 +1226,7 @@ object HasilTenunFrm: THasilTenunFrm
     Top = 49
     object QTotalQTY: TFloatField
       FieldName = 'QTY'
+      DisplayFormat = '0.0,0;(0.0,0);-'
     end
   end
   object wwRecordViewDialog1: TwwRecordViewDialog

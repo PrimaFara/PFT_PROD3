@@ -937,33 +937,47 @@ type
     QBrowRekKodP_SBK: TFloatField;
     QTotalRekKodSBK: TFloatField;
     QTotalRekKodP_SBK: TFloatField;
+    QDetailRSK_KAIN: TFloatField;
+    QTotalSBK: TFloatField;
+    QTotalRSK_KAIN: TFloatField;
+    QBrowseRSK_KAIN: TFloatField;
+    QBrowseP_RSK_KAIN: TFloatField;
+    //QBrowseTotalRSK_KAIN: TFloatField;
+    QBrowseTotalRSK_KAIN: TFloatField;
+    QBrowseTotalP_RSK_KAIN: TFloatField;
+    QBrowse_RekapRSK_KAIN: TFloatField;
+    QBrowse_RekapP_RSK_KAIN: TFloatField;
+    QTotalRekapRSK_KAIN: TFloatField;
+    QTotalRekapP_RSK_KAIN: TFloatField;
+    QBrowseRekPerRSK_KAIN: TFloatField;
+    QBrowseRekPerP_RSK_KAIN: TFloatField;
+    QTotalRekPerRSK_KAIN: TFloatField;
+    QTotalRekPerP_RSK_KAIN: TFloatField;
+    QBrowse_RekapKodiRSK_KAIN: TFloatField;
+    QBrowse_RekapKodiP_RSK_KAIN: TFloatField;
+    QBrowRekKodRSK_KAIN: TFloatField;
+    QBrowRekKodP_RSK_KAIN: TFloatField;
+    QTotalRekapKodiRSK_KAIN: TFloatField;
+    QTotalRekapKodiP_RSK_KAIN: TFloatField;
+    QTotalRekKodRSK_KAIN: TFloatField;
+    QTotalRekKodP_RSK_KAIN: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure wwDBGrid1Enter(Sender: TObject);
-    //procedure FormCreate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    //procedure LookRekananEnter(Sender: TObject);
     procedure LookRekananEnter(Sender: TObject);
     procedure LookRekananClick(Sender: TObject);
     procedure QMasterBeforePost(DataSet: TDataSet);
-    //procedure QDetailBeforeEdit(DataSet: TDataSet);
     procedure QDetailBeforeEdit(DataSet: TDataSet);
-    //procedure Edit1KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure Edit1KeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
-    //procedure wwDBNavigator1ButtonClick(Sender: TObject);
     procedure wwDBNavigator1ButtonClick(Sender: TObject);
-    //procedure QDetailNewRecord(DataSet: TDataSet);
     procedure QDetailNewRecord(DataSet: TDataSet);
     procedure BitBtn2Click(Sender: TObject);
-    //procedure ColumnHeaderBand1BeforePrint(Sender: TQRCustomBand; var PrintBand: Boolean);
     procedure ColumnHeaderBand1BeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
-    //procedure FNo_UrutBeforeQuery(Sender: TOracleDataSet);
     procedure FNo_UrutBeforeQuery(Sender: TOracleDataSet);
-    //procedure QMasterBeforeQuery(Sender: TOracleDataSet);
     procedure QMasterBeforeQuery(Sender: TOracleDataSet);
-    //procedure VTglAwalChange(Sender: TObject);
     procedure VTglAwalChange(Sender: TObject);
     procedure vTglAkhirChange(Sender: TObject);
     procedure cbOtomatisClick(Sender: TObject);
@@ -1066,10 +1080,6 @@ type
     procedure BitBtn10Click(Sender: TObject);
     procedure BitBtn11Click(Sender: TObject);
     procedure BitBtn12Click(Sender: TObject);
-    //procedure dbcField5Change(Sender: TObject);
-    //procedure GroupBox3Click(Sender: TObject);
-    //procedure Label12Click(Sender: TObject);
-    //procedure Label12Click(Sender: TObject);
   private
     { Private declarations }
     vTab,vfilter,vorder : string;
@@ -1409,6 +1419,9 @@ begin
 
     wwDBGrid1xxxxx.ColumnByName('SBK').FooterValue:=FormatFloat('#.#,#',QBrowseTotalSBK.AsFloat);
     wwDBGrid1xxxxx.ColumnByName('P_SBK').FooterValue:=FormatFloat('#.#,#',QBrowseTotalSBK.AsFloat/QBrowseTotalTOTAL.AsFloat*100);
+
+    wwDBGrid1xxxxx.ColumnByName('RSK_KAIN').FooterValue:=FormatFloat('#.#,#',QBrowseTotalRSK_KAIN.AsFloat);
+    wwDBGrid1xxxxx.ColumnByName('P_RSK_KAIN').FooterValue:=FormatFloat('#.#,#',QBrowseTotalRSK_KAIN.AsFloat/QBrowseTotalTOTAL.AsFloat*100);
 
 end;
 
@@ -2012,6 +2025,7 @@ begin
 
                 wwDBGrid3.ColumnByName('FLEX').FooterValue := FormatFloat('#.#,#', QTotalRekapFLEX.AsFloat);
                 wwDBGrid3.ColumnByName('SBK').FooterValue := FormatFloat('#.#,#', QTotalRekapSBK.AsFloat);
+                wwDBGrid3.ColumnByName('RSK_KAIN').FooterValue := FormatFloat('#.#,#', QTotalRekapRSK_KAIN.AsFloat);
             end;
         1: begin
             wwDBGrid10.BringToFront;
@@ -2076,6 +2090,7 @@ begin
 
                 wwDBGrid10.ColumnByName('FLEX').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiFLEX.AsFloat);
                 wwDBGrid10.ColumnByName('SBK').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiSBK.AsFloat);
+                wwDBGrid10.ColumnByName('RSK_KAIN').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiRSK_KAIN.AsFloat);
             end;
         2: begin
             wwDBGrid4.BringToFront;
@@ -2142,6 +2157,7 @@ begin
 
                 wwDBGrid4.ColumnByName('P_FLEX').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
                 wwDBGrid4.ColumnByName('P_SBK').FooterValue:=FormatFloat('#.#,#',QTotalRekPerSBK.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_RSK_KAIN').FooterValue:=FormatFloat('#.#,#',QTotalRekPerRSK_KAIN.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
 
             end;
         3: begin
@@ -2209,6 +2225,7 @@ begin
 
                     wwDBGrid5.ColumnByName('P_FLEX').FooterValue:=FormatFloat('#.#,#',QTotalRekKodFLEX.AsFloat/QTotalRekKodDICABUT.AsFloat*100);
                     wwDBGrid5.ColumnByName('P_SBK').FooterValue:=FormatFloat('#.#,#',QTotalRekKodSBK.AsFloat/QTotalRekKodDICABUT.AsFloat*100);
+                    wwDBGrid5.ColumnByName('P_RSK_KAIN').FooterValue:=FormatFloat('#.#,#',QTotalRekKodRSK_KAIN.AsFloat/QTotalRekKodDICABUT.AsFloat*100);
             end;
         else
             ShowMessage('Yang Anda Telusuri tidak ada');
@@ -2281,6 +2298,7 @@ begin
 
                 wwDBGrid3.ColumnByName('FLEX').FooterValue := FormatFloat('#.#,#', QTotalRekapFLEX.AsFloat);
                 wwDBGrid3.ColumnByName('SBK').FooterValue := FormatFloat('#.#,#', QTotalRekapSBK.AsFloat);
+                wwDBGrid3.ColumnByName('RSK_KAIN').FooterValue := FormatFloat('#.#,#', QTotalRekapRSK_KAIN.AsFloat);
             end;
         1: begin
             wwDBGrid10.BringToFront;
@@ -2345,6 +2363,7 @@ begin
 
                 wwDBGrid10.ColumnByName('FLEX').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiFLEX.AsFloat);
                 wwDBGrid10.ColumnByName('SBK').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiSBK.AsFloat);
+                wwDBGrid10.ColumnByName('RSK_KAIN').FooterValue := FormatFloat('#.#,#', QTotalRekapKodiRSK_KAIN.AsFloat);
             end;
         2: begin
             wwDBGrid4.BringToFront;
@@ -2411,6 +2430,7 @@ begin
 
                 wwDBGrid4.ColumnByName('P_FLEX').FooterValue:=FormatFloat('#.#,#',QTotalRekPerFLEX.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
                 wwDBGrid4.ColumnByName('P_SBK').FooterValue:=FormatFloat('#.#,#',QTotalRekPerSBK.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
+                wwDBGrid4.ColumnByName('P_RSK_KAIN').FooterValue:=FormatFloat('#.#,#',QTotalRekPerRSK_KAIN.AsFloat/QTotalRekPerDICABUT.AsFloat*100);
             end;
         3: begin
             wwDBGrid5.BringToFront;
@@ -2477,6 +2497,7 @@ begin
 
                 wwDBGrid5.ColumnByName('P_FLEX').FooterValue:=FormatFloat('#.#,#',QTotalRekKodFLEX.AsFloat/QTotalRekKodDICABUT.AsFloat*100);
                 wwDBGrid5.ColumnByName('P_SBK').FooterValue:=FormatFloat('#.#,#',QTotalRekKodSBK.AsFloat/QTotalRekKodDICABUT.AsFloat*100);
+                wwDBGrid5.ColumnByName('P_RSK_KAIN').FooterValue:=FormatFloat('#.#,#',QTotalRekKodRSK_KAIN.AsFloat/QTotalRekKodDICABUT.AsFloat*100);
             end;
         else
             ShowMessage('Yang Anda Telusuri tidak ada');
@@ -2838,7 +2859,7 @@ procedure THasilCWMitraFrm.BtnOk2Click(Sender: TObject);
 var
   vt1, vt2, vt3, vt4, vt5, vt6, vt7, vt8, vt9, vt10,
   vt11, vt12, vt13, vt14, vt15, vt16, vt17, vt18, vt19,
-  vt20, vt21, vt22, vt23: Real;
+  vt20, vt21, vt22, vt23, vt24: Real;
 
 begin
     if rgKonversi.ItemIndex = 0 then
@@ -2855,7 +2876,7 @@ begin
             vt1 := 0; vt2 := 0; vt3 := 0; vt4 := 0; vt5 := 0; vt6 := 0; vt7 := 0;
             vt8 := 0; vt9 := 0; vt10 := 0; vt11 := 0; vt12 := 0; vt13 := 0; vt14 := 0;
             vt15 := 0; vt16 := 0; vt17 := 0; vt18 := 0; vt19 := 0; vt20 := 0; vt21 := 0;
-            vt22 := 0; vt23 := 0;
+            vt22 := 0; vt23 := 0; vt24 := 0;
 
             while not QBrowse_Rekap.Eof do
             begin
@@ -2883,6 +2904,7 @@ begin
 
             vt22 := vt22 + QBrowse_RekapFLEX.AsFloat;
             vt23 := vt23 + QBrowse_RekapSBK.AsFloat;
+            vt24 := vt24 + QBrowse_RekapRSK_KAIN.AsFloat;
 
             QBrowse_Rekap.Next;
             end;
@@ -2916,6 +2938,7 @@ begin
 
             wwDBGrid3.ColumnByName('FLEX').FooterValue := FormatFloat('0.0,0;(0.0,0);-', vt22);
             wwDBGrid3.ColumnByName('SBK').FooterValue := FormatFloat('0.0,0;(0.0,0);-', vt23);
+            wwDBGrid3.ColumnByName('RSK_KAIN').FooterValue := FormatFloat('0.0,0;(0.0,0);-', vt24);
 
             // Persentase berdasarkan perhitungan
             if vt4 <> 0 then
@@ -2938,6 +2961,7 @@ begin
             wwDBGrid3.ColumnByName('P_TGS').FooterValue := FormatFloat('0.0,0;(0.0,0);-', (vt17 / vt4) * 100);
             wwDBGrid3.ColumnByName('P_FLEX').FooterValue := FormatFloat('0.0,0;(0.0,0);-', (vt22 / vt4) * 100);
             wwDBGrid3.ColumnByName('P_SBK').FooterValue := FormatFloat('0.0,0;(0.0,0);-', (vt23 / vt4) * 100);
+            wwDBGrid3.ColumnByName('P_RSK_KAIN').FooterValue := FormatFloat('0.0,0;(0.0,0);-', (vt24 / vt4) * 100);
             end;
 
         end;
@@ -2956,7 +2980,7 @@ begin
             vt1 := 0; vt2 := 0; vt3 := 0; vt4 := 0; vt5 := 0; vt6 := 0;
             vt7 := 0; vt8 := 0; vt9 := 0; vt10 := 0; vt11 := 0; vt12 := 0;
             vt13 := 0; vt14 := 0; vt15 := 0; vt16 := 0; vt17 := 0; vt18 := 0; vt19 := 0;
-            vt20 := 0; vt21 := 0; vt22 := 0; vt23 := 0;
+            vt20 := 0; vt21 := 0; vt22 := 0; vt23 := 0; vt24 := 0;
 
             // Loop untuk menghitung total nilai
             while not QBrowse_RekapKodi.Eof do
@@ -2986,6 +3010,7 @@ begin
 
                 vt22 := vt22 + QBrowse_RekapKodiFLEX.AsFloat;
                 vt23 := vt23 + QBrowse_RekapKodiSBK.AsFloat;
+                vt24 := vt24 + QBrowse_RekapKodiRSK_KAIN.AsFloat;
 
                 QBrowse_RekapKodi.Next;
             end;
@@ -3019,6 +3044,7 @@ begin
 
             wwDBGrid10.ColumnByName('FLEX').FooterValue := FormatFloat('0.0,0;(0.0,0);-', vt22);
             wwDBGrid10.ColumnByName('SBK').FooterValue := FormatFloat('0.0,0;(0.0,0);-', vt23);
+            wwDBGrid10.ColumnByName('RSK_KAIN').FooterValue := FormatFloat('0.0,0;(0.0,0);-', vt24);
 
             // Persentase berdasarkan perhitungan
             if vt4 <> 0 then
@@ -3041,6 +3067,7 @@ begin
                 wwDBGrid10.ColumnByName('P_TGS').FooterValue := FormatFloat('0.0,0;(0.0,0);-', (vt17 / vt4) * 100);
                 wwDBGrid10.ColumnByName('P_FLEX').FooterValue := FormatFloat('0.0,0;(0.0,0);-', (vt22 / vt4) * 100);
                 wwDBGrid10.ColumnByName('P_SBK').FooterValue := FormatFloat('0.0,0;(0.0,0);-', (vt23 / vt4) * 100);
+                wwDBGrid10.ColumnByName('P_RSK_KAIN').FooterValue := FormatFloat('0.0,0;(0.0,0);-', (vt24 / vt4) * 100);
             end;
         end;
     end
@@ -3058,7 +3085,7 @@ begin
                 vt1 := 0; vt2 := 0; vt3 := 0; vt4 := 0; vt5 := 0; vt6 := 0; vt7 := 0;
                 vt8 := 0; vt9 := 0; vt10 := 0; vt11 := 0; vt12 := 0; vt13 := 0; vt14 := 0;
                 vt15 := 0; vt16 := 0; vt17 := 0; vt18 := 0; vt19 := 0; vt20 := 0; vt21 := 0;
-                vt22 := 0; vt23 := 0;
+                vt22 := 0; vt23 := 0; vt24 := 0;
 
                 while not QBrowseRekPer.Eof do
                 begin
@@ -3086,6 +3113,7 @@ begin
 
                 vt22 := vt22 + QBrowseRekPerFLEX.AsFloat;
                 vt23 := vt23 + QBrowseRekPerSBK.AsFloat;
+                vt24 := vt24 + QBrowseRekPerRSK_KAIN.AsFloat;
 
                 QBrowseRekPer.Next;
                 end;
@@ -3119,6 +3147,7 @@ begin
 
                 wwDBGrid4.ColumnByName('FLEX').FooterValue := FormatFloat('0.0,0;(0.0,0);-', vt22);
                 wwDBGrid4.ColumnByName('SBK').FooterValue := FormatFloat('0.0,0;(0.0,0);-', vt23);
+                wwDBGrid4.ColumnByName('RSK_KAIN').FooterValue := FormatFloat('0.0,0;(0.0,0);-', vt24);
 
                 // Persentase berdasarkan perhitungan
                 if vt4 <> 0 then
@@ -3141,6 +3170,7 @@ begin
                 wwDBGrid4.ColumnByName('P_TGS').FooterValue := FormatFloat('0.0,0;(0.0,0);-', (vt17 / vt4) * 100);
                 wwDBGrid4.ColumnByName('P_FLEX').FooterValue := FormatFloat('0.0,0;(0.0,0);-', (vt22 / vt4) * 100);
                 wwDBGrid4.ColumnByName('P_SBK').FooterValue := FormatFloat('0.0,0;(0.0,0);-', (vt23 / vt4) * 100);
+                wwDBGrid4.ColumnByName('P_RSK_KAIN').FooterValue := FormatFloat('0.0,0;(0.0,0);-', (vt24 / vt4) * 100);
                 end;
 
             end;
@@ -3159,7 +3189,7 @@ begin
                 vt1 := 0; vt2 := 0; vt3 := 0; vt4 := 0; vt5 := 0; vt6 := 0;
                 vt7 := 0; vt8 := 0; vt9 := 0; vt10 := 0; vt11 := 0; vt12 := 0;
                 vt13 := 0; vt14 := 0; vt15 := 0; vt16 := 0; vt17 := 0; vt18 := 0; vt19 := 0;
-                vt20 := 0; vt21 := 0; vt22 := 0; vt23 := 0;
+                vt20 := 0; vt21 := 0; vt22 := 0; vt23 := 0; vt24 := 0;
 
                 // Loop untuk menghitung total nilai
                 while not QBrowRekKod.Eof do
@@ -3189,6 +3219,7 @@ begin
 
                     vt22 := vt22 + QBrowRekKodFLEX.AsFloat;
                     vt23 := vt23 + QBrowRekKodSBK.AsFloat;
+                    vt24 := vt24 + QBrowRekKodRSK_KAIN.AsFloat;
 
                     QBrowRekKod.Next;
                 end;
@@ -3222,6 +3253,7 @@ begin
 
                 wwDBGrid5.ColumnByName('FLEX').FooterValue := FormatFloat('0.0,0;(0.0,0);-', vt22);
                 wwDBGrid5.ColumnByName('SBK').FooterValue := FormatFloat('0.0,0;(0.0,0);-', vt23);
+                wwDBGrid5.ColumnByName('RSK_KAIN').FooterValue := FormatFloat('0.0,0;(0.0,0);-', vt24);
 
                 // Persentase berdasarkan perhitungan
                 if vt4 <> 0 then
@@ -3244,6 +3276,7 @@ begin
                     wwDBGrid5.ColumnByName('P_TGS').FooterValue := FormatFloat('0.0,0;(0.0,0);-', (vt17 / vt4) * 100);
                     wwDBGrid5.ColumnByName('P_FLEX').FooterValue := FormatFloat('0.0,0;(0.0,0);-', (vt22 / vt4) * 100);
                     wwDBGrid5.ColumnByName('P_SBK').FooterValue := FormatFloat('0.0,0;(0.0,0);-', (vt23 / vt4) * 100);
+                    wwDBGrid5.ColumnByName('P_RSK_KAIN').FooterValue := FormatFloat('0.0,0;(0.0,0);-', (vt24 / vt4) * 100);
                 end;
             end;
         end;
@@ -3339,7 +3372,7 @@ var
 
     TotalFLEX_PRINT, TotalFLEX_STEAM, TotalFLEX_STAMPING, TotalFLEX_LUNTUR, TotalWTS,
     TotalM_SAMAR, TotalM_RUSAK, TotalM_BELANG, TotalO_SETTING, TotalN_OLI,
-    TotalTGS, TotalSOBEK, TotalSOBEK_MT, TotalFLEX, TotalSBK: Real;
+    TotalTGS, TotalSOBEK, TotalSOBEK_MT, TotalFLEX, TotalSBK, TotalRSK_KAIN: Real;
     
 begin
     WebBrowser1.BringToFront;
@@ -3408,7 +3441,8 @@ begin
         HTMLContent.Add('<th>% F Steam (BS)</th>');
         HTMLContent.Add('<th>% F Brt</th>');
         HTMLContent.Add('<th>% Sobek Mitra</th>');
-        HTMLContent.Add('<th>% Rsk/Sbk/Lbg Kain</th>');
+        HTMLContent.Add('<th>% Sbk/Lbg Kain</th>');
+        HTMLContent.Add('<th>% Rsk dari Kain</th>');
 
         HTMLContent.Add('</tr>');
 
@@ -3589,6 +3623,14 @@ begin
             else
                 HTMLContent.Add('<td>0.0,0;(0.0,0);-</td>');
 
+            TotalRSK_KAIN := TotalRSK_KAIN + wwDBGrid4.DataSource.DataSet.FieldByName('RSK_KAIN').AsFloat;
+            if wwDBGrid4.DataSource.DataSet.FieldByName('QTY5').AsFloat > 0 then
+            begin
+                HTMLContent.Add('<td>' + FormatFloat('0.0,0;(0.0,0);-', wwDBGrid4.DataSource.DataSet.FieldByName('P_RSK_KAIN').AsFloat) + '</td>');
+            end
+            else
+                HTMLContent.Add('<td>0.0,0;(0.0,0);-</td>');
+
 
             // Lanjutkan untuk semua field tambahan...
             HTMLContent.Add('</tr>');
@@ -3625,6 +3667,7 @@ begin
         HTMLContent.Add('<td><b>' + FormatFloat('0.0,0;(0.0,0);-', (TotalFLEX / TotalProd) * 100) + '</b></td>');
         HTMLContent.Add('<td><b>' + FormatFloat('0.0,0;(0.0,0);-', (TotalSOBEK_MT / TotalProd) * 100) + '</b></td>');
         HTMLContent.Add('<td><b>' + FormatFloat('0.0,0;(0.0,0);-', (TotalSBK / TotalProd) * 100) + '</b></td>');
+        HTMLContent.Add('<td><b>' + FormatFloat('0.0,0;(0.0,0);-', (TotalRSK_KAIN / TotalProd) * 100) + '</b></td>');
 
         // Tambahkan untuk semua kolom tambahan lainnya...
         HTMLContent.Add('</tr>');

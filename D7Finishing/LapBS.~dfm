@@ -72,7 +72,7 @@ object LapBSFrm: TLapBSFrm
     Align = alClient
     TabOrder = 2
     object TabSheet2: TTabSheet
-      Caption = 'Laporan BS'
+      Caption = 'Laporan BS Parah'
       ImageIndex = 1
       OnShow = TabSheet2Show
       object LabelBanner: TLabel
@@ -1574,9 +1574,9 @@ object LapBSFrm: TLapBSFrm
           'ID_USER'#9'*3{&,#}'#9'T'#9'T')
         Selected.Strings = (
           'KELOMPOK'#9'30'#9'BARANG'#9'F'
-          'TOTAL_QA'#9'10'#9'QA'#9'F'#9'TOTAL DEPARTEMENT (KODI)'
-          'TOTAL_JAHIT'#9'10'#9'JAHIT'#9'F'#9'TOTAL DEPARTEMENT (KODI)'
-          'TOTAL_KEMAS'#9'10'#9'KEMAS'#9'F'#9'TOTAL DEPARTEMENT (KODI)'
+          'TOTAL_QA'#9'10'#9'BS Parah ~QA'#9'F'#9'TOTAL DEPARTEMENT (KODI)'
+          'TOTAL_JAHIT'#9'10'#9'BS Parah ~JAHIT'#9'F'#9'TOTAL DEPARTEMENT (KODI)'
+          'TOTAL_KEMAS'#9'10'#9'BS Parah ~KEMAS'#9'F'#9'TOTAL DEPARTEMENT (KODI)'
           'TOTKEMAS_LELANG'#9'10'#9'LELANG'#9'F'#9'TOTAL DEPARTEMENT (KODI)')
         IniAttributes.Enabled = True
         IniAttributes.SaveToRegistry = True
@@ -7179,7 +7179,7 @@ object LapBSFrm: TLapBSFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              60.854166666666660000
+              60.854166666666680000
               582.083333333333400000
               42.333333333333340000
               682.625000000000000000)
@@ -7384,7 +7384,7 @@ object LapBSFrm: TLapBSFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            60.854166666666660000
+            60.854166666666680000
             460.375000000000000000)
           Expression = 'QBrowse.NIK'
           FooterBand = QRBand12
