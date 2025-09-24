@@ -1,8 +1,8 @@
 object LapBSFrm: TLapBSFrm
   Left = 227
   Top = 137
-  Width = 1437
-  Height = 858
+  Width = 1300
+  Height = 740
   Caption = 'Laporan Produksi Produksi3'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -31,7 +31,7 @@ object LapBSFrm: TLapBSFrm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1421
+    Width = 1284
     Height = 49
     Align = alTop
     BevelOuter = bvNone
@@ -55,8 +55,8 @@ object LapBSFrm: TLapBSFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 788
-    Width = 1421
+    Top = 670
+    Width = 1284
     Height = 32
     Align = alBottom
     BevelOuter = bvNone
@@ -66,8 +66,8 @@ object LapBSFrm: TLapBSFrm
   object PageControl1: TPageControl
     Left = 0
     Top = 49
-    Width = 1421
-    Height = 739
+    Width = 1284
+    Height = 621
     ActivePage = TabSheet2
     Align = alClient
     TabOrder = 2
@@ -78,7 +78,7 @@ object LapBSFrm: TLapBSFrm
       object LabelBanner: TLabel
         Left = 0
         Top = 52
-        Width = 1413
+        Width = 1276
         Height = 16
         Align = alTop
         Color = clSkyBlue
@@ -1401,7 +1401,7 @@ object LapBSFrm: TLapBSFrm
       object Panel3: TPanel
         Left = 0
         Top = 0
-        Width = 1413
+        Width = 1276
         Height = 52
         Align = alTop
         BevelInner = bvLowered
@@ -1559,8 +1559,8 @@ object LapBSFrm: TLapBSFrm
       object wwDBGrid1xxxxx: TwwDBGrid
         Left = 0
         Top = 68
-        Width = 1413
-        Height = 643
+        Width = 1276
+        Height = 525
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -1622,7 +1622,7 @@ object LapBSFrm: TLapBSFrm
       object Label7: TLabel
         Left = 0
         Top = 64
-        Width = 1413
+        Width = 1276
         Height = 16
         Align = alTop
         Color = clSkyBlue
@@ -4877,7 +4877,7 @@ object LapBSFrm: TLapBSFrm
       object Panel7: TPanel
         Left = 0
         Top = 0
-        Width = 1413
+        Width = 1276
         Height = 64
         Align = alTop
         BevelInner = bvLowered
@@ -5129,8 +5129,8 @@ object LapBSFrm: TLapBSFrm
       object wwDBGrid1: TwwDBGrid
         Left = 0
         Top = 80
-        Width = 1413
-        Height = 631
+        Width = 1276
+        Height = 513
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -5196,7 +5196,7 @@ object LapBSFrm: TLapBSFrm
       object Label8: TLabel
         Left = 0
         Top = 64
-        Width = 1413
+        Width = 1276
         Height = 16
         Align = alTop
         Color = clSkyBlue
@@ -6815,8 +6815,8 @@ object LapBSFrm: TLapBSFrm
       object wwDBGrid2: TwwDBGrid
         Left = 0
         Top = 80
-        Width = 1413
-        Height = 631
+        Width = 1276
+        Height = 513
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -6874,7 +6874,7 @@ object LapBSFrm: TLapBSFrm
       object Panel5: TPanel
         Left = 0
         Top = 0
-        Width = 1413
+        Width = 1276
         Height = 64
         Align = alTop
         BevelInner = bvLowered
@@ -7467,7 +7467,7 @@ object LapBSFrm: TLapBSFrm
       object wwDBNavigator1: TwwDBNavigator
         Left = 0
         Top = 0
-        Width = 1413
+        Width = 1276
         Height = 33
         AutosizeStyle = asSizeNavButtons
         DataSource = dsQBrowse
@@ -7477,7 +7477,7 @@ object LapBSFrm: TLapBSFrm
         object wwDBNavigator1First: TwwNavButton
           Left = 0
           Top = 0
-          Width = 89
+          Width = 80
           Height = 33
           Hint = 'Move to first record'
           ImageIndex = -1
@@ -7492,9 +7492,9 @@ object LapBSFrm: TLapBSFrm
           Style = nbsFirst
         end
         object wwDBNavigator1PriorPage: TwwNavButton
-          Left = 89
+          Left = 80
           Top = 0
-          Width = 89
+          Width = 80
           Height = 33
           Hint = 'Move backward 10 records'
           ImageIndex = -1
@@ -7509,9 +7509,9 @@ object LapBSFrm: TLapBSFrm
           Style = nbsPriorPage
         end
         object wwDBNavigator1Prior: TwwNavButton
-          Left = 178
+          Left = 160
           Top = 0
-          Width = 89
+          Width = 80
           Height = 33
           Hint = 'Move to prior record'
           ImageIndex = -1
@@ -7526,9 +7526,9 @@ object LapBSFrm: TLapBSFrm
           Style = nbsPrior
         end
         object wwDBNavigator1Next: TwwNavButton
-          Left = 267
+          Left = 240
           Top = 0
-          Width = 89
+          Width = 80
           Height = 33
           Hint = 'Move to next record'
           ImageIndex = -1
@@ -7543,9 +7543,9 @@ object LapBSFrm: TLapBSFrm
           Style = nbsNext
         end
         object wwDBNavigator1NextPage: TwwNavButton
-          Left = 356
+          Left = 320
           Top = 0
-          Width = 89
+          Width = 80
           Height = 33
           Hint = 'Move forward 10 records'
           ImageIndex = -1
@@ -7560,9 +7560,9 @@ object LapBSFrm: TLapBSFrm
           Style = nbsNextPage
         end
         object wwDBNavigator1Last: TwwNavButton
-          Left = 445
+          Left = 400
           Top = 0
-          Width = 88
+          Width = 80
           Height = 33
           Hint = 'Move to last record'
           ImageIndex = -1
@@ -7577,9 +7577,9 @@ object LapBSFrm: TLapBSFrm
           Style = nbsLast
         end
         object wwDBNavigator1Insert: TwwNavButton
-          Left = 533
+          Left = 480
           Top = 0
-          Width = 88
+          Width = 80
           Height = 33
           Hint = 'Insert new record'
           ImageIndex = -1
@@ -7594,9 +7594,9 @@ object LapBSFrm: TLapBSFrm
           Style = nbsInsert
         end
         object wwDBNavigator1Delete: TwwNavButton
-          Left = 621
+          Left = 560
           Top = 0
-          Width = 88
+          Width = 80
           Height = 33
           Hint = 'Delete current record'
           ImageIndex = -1
@@ -7611,9 +7611,9 @@ object LapBSFrm: TLapBSFrm
           Style = nbsDelete
         end
         object wwDBNavigator1Edit: TwwNavButton
-          Left = 709
+          Left = 640
           Top = 0
-          Width = 88
+          Width = 80
           Height = 33
           Hint = 'Edit current record'
           ImageIndex = -1
@@ -7628,9 +7628,9 @@ object LapBSFrm: TLapBSFrm
           Style = nbsEdit
         end
         object wwDBNavigator1Post: TwwNavButton
-          Left = 797
+          Left = 720
           Top = 0
-          Width = 88
+          Width = 80
           Height = 33
           Hint = 'Post changes of current record'
           ImageIndex = -1
@@ -7645,9 +7645,9 @@ object LapBSFrm: TLapBSFrm
           Style = nbsPost
         end
         object wwDBNavigator1Cancel: TwwNavButton
-          Left = 885
+          Left = 800
           Top = 0
-          Width = 88
+          Width = 80
           Height = 33
           Hint = 'Cancel changes made to current record'
           ImageIndex = -1
@@ -7662,9 +7662,9 @@ object LapBSFrm: TLapBSFrm
           Style = nbsCancel
         end
         object wwDBNavigator1Refresh: TwwNavButton
-          Left = 973
+          Left = 880
           Top = 0
-          Width = 88
+          Width = 80
           Height = 33
           Hint = 'Refresh the contents of the dataset'
           ImageIndex = -1
@@ -7679,9 +7679,9 @@ object LapBSFrm: TLapBSFrm
           Style = nbsRefresh
         end
         object wwDBNavigator1SaveBookmark: TwwNavButton
-          Left = 1061
+          Left = 960
           Top = 0
-          Width = 88
+          Width = 79
           Height = 33
           Hint = 'Bookmark current record'
           ImageIndex = -1
@@ -7696,9 +7696,9 @@ object LapBSFrm: TLapBSFrm
           Style = nbsSaveBookmark
         end
         object wwDBNavigator1RestoreBookmark: TwwNavButton
-          Left = 1149
+          Left = 1039
           Top = 0
-          Width = 88
+          Width = 79
           Height = 33
           Hint = 'Go back to saved bookmark'
           ImageIndex = -1
@@ -7713,9 +7713,9 @@ object LapBSFrm: TLapBSFrm
           Style = nbsRestoreBookmark
         end
         object wwDBNavigator1FilterDialog: TwwNavButton
-          Left = 1237
+          Left = 1118
           Top = 0
-          Width = 88
+          Width = 79
           Height = 33
           Hint = 'Filter the dataset'
           ImageIndex = -1
@@ -7730,9 +7730,9 @@ object LapBSFrm: TLapBSFrm
           Style = nbsFilterDialog
         end
         object wwDBNavigator1SearchDialog: TwwNavButton
-          Left = 1325
+          Left = 1197
           Top = 0
-          Width = 88
+          Width = 79
           Height = 33
           Hint = 'Search the dataset'
           ImageIndex = -1
@@ -7750,8 +7750,8 @@ object LapBSFrm: TLapBSFrm
       object wwDBGrid3: TwwDBGrid
         Left = 0
         Top = 33
-        Width = 1413
-        Height = 678
+        Width = 1276
+        Height = 560
         ControlType.Strings = (
           'NIK;CustomEdit;LookKaryawan;F'
           'NIK2;CustomEdit;LookKaryawan2;F'
@@ -7809,6 +7809,265 @@ object LapBSFrm: TLapBSFrm
         OnClick = LookKPClick
         OnCloseUp = LookKPCloseUp
         OnEnter = LookKPEnter
+      end
+    end
+    object TabSheet5: TTabSheet
+      Caption = 'Stok Palet'
+      ImageIndex = 4
+      object Panel9: TPanel
+        Left = 0
+        Top = 0
+        Width = 1276
+        Height = 52
+        Align = alTop
+        BevelInner = bvLowered
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 0
+        object GroupBox4: TGroupBox
+          Left = 2
+          Top = 2
+          Width = 287
+          Height = 48
+          Align = alLeft
+          Caption = 'Filter Tanggal'
+          TabOrder = 0
+          TabStop = True
+          object Label5: TLabel
+            Left = 129
+            Top = 22
+            Width = 24
+            Height = 13
+            Caption = 'S/D'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object VTglAkhir4: TwwDBDateTimePicker
+            Left = 158
+            Top = 16
+            Width = 120
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 0
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAkhir4Change
+          end
+          object VTglAwal4: TwwDBDateTimePicker
+            Left = 6
+            Top = 16
+            Width = 120
+            Height = 24
+            DisableThemes = True
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Color = clGreen
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 1
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = VTglAwal4Change
+          end
+        end
+        object Panel10: TPanel
+          Left = 289
+          Top = 2
+          Width = 587
+          Height = 48
+          Align = alLeft
+          BevelOuter = bvNone
+          TabOrder = 1
+          object vOperand4: TLabel
+            Left = 150
+            Top = 20
+            Width = 44
+            Height = 24
+            Cursor = crHandPoint
+            Alignment = taCenter
+            AutoSize = False
+            Caption = 'LIKE'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clNavy
+            Font.Height = -19
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            OnClick = vOperand4Click
+          end
+          object BitBtn6: TBitBtn
+            Left = 328
+            Top = 20
+            Width = 75
+            Height = 25
+            Caption = 'Filte&r'
+            Default = True
+            ModalResult = 1
+            TabOrder = 2
+            OnClick = BitBtn6Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+              555555555555555555555555555555555555555555FF55555555555559055555
+              55555555577FF5555555555599905555555555557777F5555555555599905555
+              555555557777FF5555555559999905555555555777777F555555559999990555
+              5555557777777FF5555557990599905555555777757777F55555790555599055
+              55557775555777FF5555555555599905555555555557777F5555555555559905
+              555555555555777FF5555555555559905555555555555777FF55555555555579
+              05555555555555777FF5555555555557905555555555555777FF555555555555
+              5990555555555555577755555555555555555555555555555555}
+            NumGlyphs = 2
+          end
+          object ECari4: TEdit
+            Left = 200
+            Top = 23
+            Width = 121
+            Height = 19
+            Ctl3D = False
+            ParentCtl3D = False
+            TabOrder = 1
+          end
+          object cbOtomatis4: TCheckBox
+            Left = 7
+            Top = 5
+            Width = 98
+            Height = 17
+            Caption = 'Cari &Otomatis'
+            TabOrder = 0
+            OnClick = cbOtomatis4Click
+          end
+          object dbcField4: TwwDBComboBox
+            Left = 8
+            Top = 23
+            Width = 137
+            Height = 19
+            ShowButton = True
+            Style = csDropDown
+            MapList = False
+            AllowClearKey = False
+            Color = clYellow
+            DropDownCount = 8
+            ItemHeight = 0
+            Items.Strings = (
+              'SEMUA KOLOM')
+            ItemIndex = 0
+            Sorted = False
+            TabOrder = 3
+            UnboundDataType = wwDefault
+            OnEnter = dbcField4Enter
+          end
+          object BitBtn8: TBitBtn
+            Left = 408
+            Top = 20
+            Width = 97
+            Height = 25
+            Caption = '&Export2Excel'
+            TabOrder = 4
+            OnClick = BitBtn8Click
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+              00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+              00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+              00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+              00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+              0003737FFFFFFFFF7F7330099999999900333777777777777733}
+            NumGlyphs = 2
+          end
+        end
+      end
+      object wwDBGrid4: TwwDBGrid
+        Left = 0
+        Top = 52
+        Width = 1276
+        Height = 541
+        DisableThemes = True
+        DisableThemesInTitle = True
+        ControlType.Strings = (
+          'ISAKTIF;CheckBox;1;0'
+          'ID_SUB_BAG;CustomEdit;LookBagian;F'
+          'ID_HAK;CustomEdit;LookJnsMenu;F')
+        PictureMasks.Strings = (
+          'ID_BAG'#9'*2{#,&}'#9'T'#9'T'
+          'KD_JNS_ITEM'#9'#,&'#9'T'#9'T'
+          'KD_SATUAN'#9'#,&'#9'T'#9'T'
+          'ID_USER'#9'*3{&,#}'#9'T'#9'T')
+        Selected.Strings = (
+          'PALET'#9'15'#9'PALET'#9'F'
+          'KP'#9'25'#9'KP'#9'F'
+          'AWAL_BS'#9'10'#9'BS'#9'F'#9'AWAL'
+          'AWAL_LELANG'#9'10'#9'LELANG'#9'F'#9'AWAL'
+          'MASUK_BS'#9'10'#9'BS'#9'F'#9'MASUK'
+          'MASUK_LELANG'#9'10'#9'LELANG'#9'F'#9'MASUK'
+          'KELUAR_BS'#9'10'#9'BS'#9'F'#9'KELUAR'
+          'KELUAR_LELANG'#9'10'#9'LELANG'#9'F'#9'KELUAR'
+          'AKHIR_BS'#9'10'#9'BS'#9'F'#9'AKHIR'
+          'AKHIR_LELANG'#9'10'#9'LELANG'#9'F'#9'AKHIR')
+        IniAttributes.Enabled = True
+        IniAttributes.SaveToRegistry = True
+        IniAttributes.FileName = 'Pismatex Master'
+        IniAttributes.Delimiter = ';;'
+        IniAttributes.CheckNewFields = True
+        ExportOptions.ExportType = wwgetHTML
+        ExportOptions.Options = [esoShowHeader, esoShowFooter, esoShowTitle, esoDblQuoteFields, esoBestColFit, esoShowRecordNo, esoShowAlternating]
+        TitleColor = clSkyBlue
+        FixedCols = 4
+        ShowHorzScrollBar = True
+        Align = alClient
+        DataSource = dsQPalet
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgPerfectRowFit, dgShowFooter, dgTrailingEllipsis, dgDblClickColSizing]
+        ParentFont = False
+        ReadOnly = True
+        RowHeightPercent = 125
+        TabOrder = 1
+        TitleAlignment = taCenter
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Lucida Sans'
+        TitleFont.Style = [fsBold]
+        TitleLines = 3
+        TitleButtons = True
+        UseTFields = False
+        PaintOptions.AlternatingRowColor = clMoneyGreen
+        PaintOptions.ActiveRecordColor = clGreen
       end
     end
   end
@@ -8272,5 +8531,130 @@ object LapBSFrm: TLapBSFrm
     DataSet = QKelompokBarang
     Left = 293
     Top = 576
+  end
+  object QProcPalet: TOracleQuery
+    SQL.Strings = (
+      'BEGIN'
+      'ipisma_db5.proc_wip_palet_reinspect(:pawal, :pakhir);'
+      'END;')
+    Session = DMFrm.OS
+    Variables.Data = {
+      0300000002000000060000003A504157414C0C00000000000000000000000700
+      00003A50414B4849520C0000000000000000000000}
+    Left = 232
+    Top = 193
+  end
+  object QPalet: TOracleDataSet
+    SQL.Strings = (
+      'select * from ipisma_db5.wip_palet_reinspect '
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000C0000006F726465
+      72206279206B700000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000000A000000070000004157414C5F425301000000000008000000414B48
+      49525F42530100000000000500000050414C4554010000000000020000004B50
+      0100000000000B0000004157414C5F4C454C414E47010000000000080000004D
+      4153554B5F42530100000000000C0000004D4153554B5F4C454C414E47010000
+      000000090000004B454C5541525F42530100000000000D0000004B454C554152
+      5F4C454C414E470100000000000C000000414B4849525F4C454C414E47010000
+      000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 284
+    Top = 193
+    object QPaletPALET: TStringField
+      FieldName = 'PALET'
+      Size = 50
+    end
+    object QPaletKP: TStringField
+      FieldName = 'KP'
+      Size = 200
+    end
+    object QPaletAWAL_BS: TFloatField
+      FieldName = 'AWAL_BS'
+    end
+    object QPaletAWAL_LELANG: TFloatField
+      FieldName = 'AWAL_LELANG'
+    end
+    object QPaletMASUK_BS: TFloatField
+      FieldName = 'MASUK_BS'
+    end
+    object QPaletMASUK_LELANG: TFloatField
+      FieldName = 'MASUK_LELANG'
+    end
+    object QPaletKELUAR_BS: TFloatField
+      FieldName = 'KELUAR_BS'
+    end
+    object QPaletKELUAR_LELANG: TFloatField
+      FieldName = 'KELUAR_LELANG'
+    end
+    object QPaletAKHIR_BS: TFloatField
+      FieldName = 'AKHIR_BS'
+    end
+    object QPaletAKHIR_LELANG: TFloatField
+      FieldName = 'AKHIR_LELANG'
+    end
+  end
+  object dsQPalet: TwwDataSource
+    DataSet = QPalet
+    Left = 173
+    Top = 200
+  end
+  object QPaletTot: TOracleDataSet
+    SQL.Strings = (
+      'select '
+      'sum(awal_bs) as awal_bs,'
+      'sum(awal_lelang) as awal_lelang,'
+      'sum(masuk_bs) as masuk_bs,'
+      'sum(masuk_lelang) as masuk_lelang,'
+      'sum(keluar_bs) as keluar_bs,'
+      'sum(keluar_lelang) as keluar_lelang,'
+      'sum(akhir_bs) as akhir_bs,'
+      'sum(akhir_lelang) as akhir_lelang'
+      'from ipisma_db5.wip_palet_reinspect'
+      ':myparam'
+      '')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000C0000006F726465
+      72206279206B700000000000}
+    QBEDefinition.QBEFieldDefs = {
+      0400000008000000070000004157414C5F425301000000000008000000414B48
+      49525F42530100000000000B0000004157414C5F4C454C414E47010000000000
+      080000004D4153554B5F42530100000000000C0000004D4153554B5F4C454C41
+      4E47010000000000090000004B454C5541525F42530100000000000D0000004B
+      454C5541525F4C454C414E470100000000000C000000414B4849525F4C454C41
+      4E47010000000000}
+    QueryAllRecords = False
+    CountAllRecords = True
+    Session = DMFrm.OS
+    Left = 288
+    Top = 249
+    object QPaletTotAWAL_BS: TFloatField
+      FieldName = 'AWAL_BS'
+    end
+    object QPaletTotAWAL_LELANG: TFloatField
+      FieldName = 'AWAL_LELANG'
+    end
+    object QPaletTotMASUK_BS: TFloatField
+      FieldName = 'MASUK_BS'
+    end
+    object QPaletTotMASUK_LELANG: TFloatField
+      FieldName = 'MASUK_LELANG'
+    end
+    object QPaletTotKELUAR_BS: TFloatField
+      FieldName = 'KELUAR_BS'
+    end
+    object QPaletTotKELUAR_LELANG: TFloatField
+      FieldName = 'KELUAR_LELANG'
+    end
+    object QPaletTotAKHIR_BS: TFloatField
+      FieldName = 'AKHIR_BS'
+    end
+    object QPaletTotAKHIR_LELANG: TFloatField
+      FieldName = 'AKHIR_LELANG'
+    end
   end
 end

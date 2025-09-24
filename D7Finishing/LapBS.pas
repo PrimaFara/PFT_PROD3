@@ -363,6 +363,42 @@ type
     QKelompokBarangKELOMPOK: TStringField;
     dsQKelompokBarang: TwwDataSource;
     LookKP: TwwDBLookupComboDlg;
+    TabSheet5: TTabSheet;
+    Panel9: TPanel;
+    GroupBox4: TGroupBox;
+    Label5: TLabel;
+    VTglAkhir4: TwwDBDateTimePicker;
+    VTglAwal4: TwwDBDateTimePicker;
+    Panel10: TPanel;
+    vOperand4: TLabel;
+    BitBtn6: TBitBtn;
+    ECari4: TEdit;
+    cbOtomatis4: TCheckBox;
+    dbcField4: TwwDBComboBox;
+    BitBtn8: TBitBtn;
+    wwDBGrid4: TwwDBGrid;
+    QProcPalet: TOracleQuery;
+    QPalet: TOracleDataSet;
+    dsQPalet: TwwDataSource;
+    QPaletPALET: TStringField;
+    QPaletKP: TStringField;
+    QPaletAWAL_BS: TFloatField;
+    QPaletAWAL_LELANG: TFloatField;
+    QPaletMASUK_BS: TFloatField;
+    QPaletMASUK_LELANG: TFloatField;
+    QPaletKELUAR_BS: TFloatField;
+    QPaletKELUAR_LELANG: TFloatField;
+    QPaletAKHIR_BS: TFloatField;
+    QPaletAKHIR_LELANG: TFloatField;
+    QPaletTot: TOracleDataSet;
+    QPaletTotAWAL_BS: TFloatField;
+    QPaletTotAWAL_LELANG: TFloatField;
+    QPaletTotMASUK_BS: TFloatField;
+    QPaletTotMASUK_LELANG: TFloatField;
+    QPaletTotKELUAR_BS: TFloatField;
+    QPaletTotKELUAR_LELANG: TFloatField;
+    QPaletTotAKHIR_BS: TFloatField;
+    QPaletTotAKHIR_LELANG: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure ColumnHeaderBand1BeforePrint(Sender: TQRCustomBand;
@@ -414,6 +450,13 @@ type
     procedure LookKPEnter(Sender: TObject);
     procedure LookKPCloseUp(Sender: TObject; LookupTable,
       FillTable: TDataSet; modified: Boolean);
+    procedure VTglAwal4Change(Sender: TObject);
+    procedure VTglAkhir4Change(Sender: TObject);
+    procedure cbOtomatis4Click(Sender: TObject);
+    procedure dbcField4Enter(Sender: TObject);
+    procedure vOperand4Click(Sender: TObject);
+    procedure BitBtn6Click(Sender: TObject);
+    procedure BitBtn8Click(Sender: TObject);
   private
     { Private declarations }
     vTab,vfilter,vorder : string;
@@ -1030,6 +1073,145 @@ procedure TLapBSFrm.LookKPCloseUp(Sender: TObject; LookupTable,
 begin
 if modified then
     QKelompokBarangKP.AsString:=DMFrm.QLookKdProduksiKD_PRODUKSI.AsString;
+end;
+
+procedure TLapBSFrm.VTglAwal4Change(Sender: TObject);
+begin
+VTglAkhir4.Date:=trunc(EndOfTheMonth(VTglAwal4.Date));
+end;
+
+procedure TLapBSFrm.VTglAkhir4Change(Sender: TObject);
+begin
+if VTglAwal4.Date>VTglAkhir4.Date then
+  begin
+      ShowMessage('Tanggal Akhir harus LEBIH BESAR dari Tanggal Awal !');
+      VTglAkhir4.Date:=VTglAwal4.Date;
+  end;
+end;
+
+procedure TLapBSFrm.cbOtomatis4Click(Sender: TObject);
+begin
+if cbOtomatis4.Checked then
+  begin
+    ShowMessage('Mencari data pada kolom paling kiri.'+#13+'Urutkan data terlebih dahulu supaya mudah mencari !');
+    wwDBGrid4.Options:=wwDBGrid4.Options+[dgAlwaysShowSelection];
+  end
+    else
+    wwDBGrid4.Options:=wwDBGrid4.Options-[dgAlwaysShowSelection];
+  ECari4.SetFocus;
+end;
+
+procedure TLapBSFrm.dbcField4Enter(Sender: TObject);
+var
+  i : Word;
+begin
+  if (QPalet.Active) and (dbcField4.Items.Count=1) then
+  for i:=0 to wwDBGrid4.FieldCount-1 do
+    if UpperCase(wwDBGrid4.Columns[i].FieldName)<>'TGL' then
+      dbcField4.Items.Add(wwDBGrid4.Columns[i].FieldName);
+
+end;
+
+procedure TLapBSFrm.vOperand4Click(Sender: TObject);
+begin
+if vOperand4.Caption='LIKE' then
+    vOperand4.Caption:='='
+    else
+      vOperand4.Caption:='LIKE';
+end;
+
+procedure TLapBSFrm.BitBtn6Click(Sender: TObject);
+var
+  i : word;
+  vpertama : boolean;
+  vrgTanggal : String;
+begin
+  QProcPalet.Close;
+  QProcPalet.SetVariable('pawal',VTglAwal4.Date);
+  QProcPalet.SetVariable('pakhir',VTglAkhir4.Date);
+  QProcPalet.Execute;
+  QPalet.Close;
+  QPalet.Open;
+
+  vpertama:=True;
+  vfilter:=' where (';
+  if (QPalet.FieldCount>=1) then
+  begin
+    if dbcField4.ItemIndex=0 then
+    begin
+      for i:=0 to wwDBGrid4.Selected.Count-1 do
+  //    for i:=0 to QWIP.FieldCount-1 do
+      begin
+        if (QPalet.FieldByName(wwDBGrid4.Columns[i].FieldName).FieldKind=fkData) and (UpperCase(wwDBGrid4.Columns[i].FieldName)<>'TGL') then
+        begin
+          if vpertama then
+            begin
+              if vOperand4.Caption='LIKE' then
+                vfilter:=vfilter+wwDBGrid4.Columns[i].FieldName+' like ''%'+ECari4.Text+'%'''
+                else
+                   vfilter:=vfilter+wwDBGrid4.Columns[i].FieldName+' = '''+ECari4.Text+'''';
+              vpertama:=False;
+            end
+            else
+              if vOperand4.Caption='LIKE' then
+                vfilter:=vfilter+' or '+wwDBGrid4.Columns[i].FieldName+' like ''%'+ECari4.Text+'%'''
+                else
+                  vfilter:=vfilter+' or '+wwDBGrid4.Columns[i].FieldName+' = '''+ECari4.Text+''''
+        end;
+      end;
+    end
+    else
+      if vOperand4.Caption='LIKE' then
+         vfilter:=vfilter+dbcField4.Text+' like ''%'+ECari4.Text+'%'''
+         else
+           vfilter:=vfilter+dbcField4.Text+' = '''+ECari4.Text+'''';
+    vfilter:=vfilter+')';
+    if QPalet.Active then
+      vorder:=' order by palet,kp'
+      else
+        vorder:=' order by palet,kp';
+
+  end;
+  QPalet.DisableControls;
+  QPalet.Close;
+  QPalet.SetVariable('myparam',vfilter+vorder);
+  QPalet.Open;
+  QPaletTot.Close;
+  QPaletTot.SetVariable('myparam',vfilter+vorder);
+  QPaletTot.Open;
+  QPalet.EnableControls;
+
+  wwDBGrid4.ColumnByName('AWAL_BS').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QPaletTotAWAL_BS.AsFloat);
+  wwDBGrid4.ColumnByName('AWAL_LELANG').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QPaletTotAWAL_LELANG.AsFloat);
+  wwDBGrid4.ColumnByName('MASUK_BS').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QPaletTotMASUK_BS.AsFloat);
+  wwDBGrid4.ColumnByName('MASUK_LELANG').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QPaletTotMASUK_LELANG.AsFloat);
+  wwDBGrid4.ColumnByName('KELUAR_BS').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QPaletTotKELUAR_BS.AsFloat);
+  wwDBGrid4.ColumnByName('KELUAR_LELANG').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QPaletTotKELUAR_LELANG.AsFloat);
+  wwDBGrid4.ColumnByName('AKHIR_BS').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QPaletTotAKHIR_BS.AsFloat);
+  wwDBGrid4.ColumnByName('AKHIR_LELANG').FooterValue:=FormatFloat('0.0,0;(0.0,0); ',QPaletTotAKHIR_LELANG.AsFloat);
+end;
+
+procedure TLapBSFrm.BitBtn8Click(Sender: TObject);
+begin
+if QPalet.Active then
+          begin
+             DMFrm.SaveDialog1.DefaultExt:='XLK';
+             DMFrm.SaveDialog1.Filter:='Excel files (*.XLK)|*.XLK';
+             DMFrm.SaveDialog1.FileName:='Stok BS Per Palet Reinspect';
+             wwDBGrid4.ExportOptions.TitleName:='Stok BS Per Palet Reinspect';
+               if DMFrm.SaveDialog1.Execute then
+               begin
+                 try
+                 wwDBGrid4.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
+                 wwDBGrid4.ExportOptions.Save;
+                 ShowMessage('Simpan Sukses !');
+                 except
+                 ShowMessage('Simpan Gagal !');
+                 end;
+               end;
+          end
+          else
+            ShowMessage('Tabel belum di-OPEN !');
 end;
 
 end.

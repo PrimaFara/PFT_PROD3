@@ -94,7 +94,7 @@ object TerimaDrInspectingFrm: TTerimaDrInspectingFrm
           ForceNewPage = False
           Size.Values = (
             150.812500000000000000
-            1772.708333333334000000)
+            1772.708333333333000000)
           BandType = rbPageHeader
           object QRDBText2: TQRDBText
             Left = 534
@@ -515,8 +515,8 @@ object TerimaDrInspectingFrm: TTerimaDrInspectingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            264.583333333333400000
-            1772.708333333334000000)
+            264.583333333333300000
+            1772.708333333333000000)
           BandType = rbTitle
           object QRDBText1: TQRDBText
             Left = 258
@@ -529,10 +529,10 @@ object TerimaDrInspectingFrm: TTerimaDrInspectingFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              68.791666666666680000
+              68.791666666666670000
               682.625000000000000000
               0.000000000000000000
-              407.458333333333400000)
+              407.458333333333300000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -852,8 +852,8 @@ object TerimaDrInspectingFrm: TTerimaDrInspectingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            60.854166666666680000
-            1772.708333333334000000)
+            60.854166666666670000
+            1772.708333333333000000)
           BandType = rbColumnHeader
           object QRLabel8: TQRLabel
             Left = 16
@@ -1022,7 +1022,7 @@ object TerimaDrInspectingFrm: TTerimaDrInspectingFrm
           ForceNewPage = False
           Size.Values = (
             55.562500000000000000
-            1772.708333333334000000)
+            1772.708333333333000000)
           BandType = rbDetail
           object QRDBText8: TQRDBText
             Left = 64
@@ -1230,7 +1230,7 @@ object TerimaDrInspectingFrm: TTerimaDrInspectingFrm
           ForceNewPage = False
           Size.Values = (
             497.416666666666700000
-            1772.708333333334000000)
+            1772.708333333333000000)
           BandType = rbSummary
           object QRLabel14: TQRLabel
             Left = 79
@@ -1406,7 +1406,7 @@ object TerimaDrInspectingFrm: TTerimaDrInspectingFrm
           ForceNewPage = False
           Size.Values = (
             52.916666666666670000
-            1772.708333333334000000)
+            1772.708333333333000000)
           BandType = rbPageFooter
           object QRDBText13: TQRDBText
             Left = 0
@@ -1476,7 +1476,7 @@ object TerimaDrInspectingFrm: TTerimaDrInspectingFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              791.104166666666800000
+              791.104166666666700000
               0.000000000000000000
               187.854166666666700000)
             Alignment = taCenter
@@ -1507,7 +1507,7 @@ object TerimaDrInspectingFrm: TTerimaDrInspectingFrm
           ForceNewPage = False
           Size.Values = (
             0.000000000000000000
-            1772.708333333334000000)
+            1772.708333333333000000)
           FooterBand = QRBand1
           Master = QuickRep1
           ReprintOnNewPage = False
@@ -1528,7 +1528,7 @@ object TerimaDrInspectingFrm: TTerimaDrInspectingFrm
           ForceNewPage = False
           Size.Values = (
             254.000000000000000000
-            1772.708333333334000000)
+            1772.708333333333000000)
           BandType = rbGroupFooter
           object QRLabel15: TQRLabel
             Left = 305
@@ -1542,7 +1542,7 @@ object TerimaDrInspectingFrm: TTerimaDrInspectingFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              806.979166666666800000
+              806.979166666666700000
               190.500000000000000000
               156.104166666666700000)
             Alignment = taCenter
@@ -3475,7 +3475,7 @@ object TerimaDrInspectingFrm: TTerimaDrInspectingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             2000.250000000000000000)
           BandType = rbColumnHeader
           object QRLabel20: TQRLabel
@@ -3666,7 +3666,7 @@ object TerimaDrInspectingFrm: TTerimaDrInspectingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            76.729166666666680000
+            76.729166666666670000
             2000.250000000000000000)
           BandType = rbPageFooter
           object QRDBText22: TQRDBText
@@ -3702,7 +3702,7 @@ object TerimaDrInspectingFrm: TTerimaDrInspectingFrm
             FontSize = 8
           end
           object QRSysData3: TQRSysData
-            Left = -54
+            Left = 687
             Top = 8
             Width = 69
             Height = 17
@@ -3767,7 +3767,7 @@ object TerimaDrInspectingFrm: TTerimaDrInspectingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            320.145833333333400000
+            320.145833333333300000
             2000.250000000000000000)
           BandType = rbGroupFooter
           object QRDBText24: TQRDBText
@@ -3990,7 +3990,7 @@ object TerimaDrInspectingFrm: TTerimaDrInspectingFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            66.145833333333340000
+            66.145833333333330000
             2000.250000000000000000)
           BandType = rbDetail
           object QRDBText27: TQRDBText
